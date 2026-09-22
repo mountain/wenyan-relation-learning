@@ -1,0 +1,15 @@
+{
+  "schema": "wenyan.relation-calibration.contract.v1",
+  "question": "Can supervised constraints change candidate role assignments on new entities while preserving controlled paraphrases and distinguishing role reversal?",
+  "baseline": "mountain/wenyan@6143e22ca8319a8ebca89b59a29f20158812b63f",
+  "adva_policy": "0131: checked refutation constrains proposals; Unknown is not a refutation; reuse needs fresh verification",
+  "scope": "external language adapter, not native Adva learn; three supplied constructions, six role permutations each",
+  "training_examples": 3,
+  "held_out_entity_triples": 3,
+  "positive_pairs": 9,
+  "role_reversals": 9,
+  "budgets": {"wall_seconds": 20, "node_heap_mib": 256, "max_model_examples": 32, "max_text_utf16_units": 256, "max_candidate_checks_per_update": 192, "artifact_bytes": 131072, "automatic_restarts": 0},
+  "protected": ["legacy pipeline output without opt-in", "existing acknowledgement gate", "source occurrences", "explicit supervisor labels", "unsupported input Unknown"],
+  "success": "Held-out role assignments agree with fixture labels; nine paraphrases match; nine role reversals differ; controls pass",
+  "nonclaims": ["natural-language understanding", "historical inscription interpretation", "learning an unrestricted grammar", "six-shu/six-germ identification", "native semantic admission", "speedup over a handwritten parser"]
+}

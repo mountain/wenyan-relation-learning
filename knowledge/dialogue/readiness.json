@@ -1,0 +1,163 @@
+{
+  "schema": "wenyan.dialogue.readiness.v1",
+  "generatedAt": "2026-09-22T23:12:50.971Z",
+  "contract": {
+    "schema": "wenyan.dialogue.contract.v1",
+    "checks": [
+      {
+        "name": "schema",
+        "ok": true,
+        "detail": "wenyan.dialogue.contract.v1"
+      },
+      {
+        "name": "every invariant names its enforcement",
+        "ok": true,
+        "detail": "8 invariant(s)"
+      },
+      {
+        "name": "every question type is declared with an id and a name",
+        "ok": true,
+        "detail": "7 type(s)"
+      },
+      {
+        "name": "out-of-scope types are marked rather than omitted",
+        "ok": true,
+        "detail": "Q6"
+      },
+      {
+        "name": "undeclared types are Refused (I4)",
+        "ok": true,
+        "detail": "Q99 -> Refused"
+      },
+      {
+        "name": "FreeText answer field does not exist (I3)",
+        "ok": true,
+        "detail": "no answer schema contains a free-text field"
+      }
+    ]
+  },
+  "store": {
+    "path": "knowledge/relations/evidence.jsonl",
+    "records": 32,
+    "sha256": "35fdaa769041bdce65d4028670ea498bf32e7b0b61090bf74fcc8fbfe0f510c3"
+  },
+  "questionSets": {
+    "corpusPassages": 8208,
+    "totalQuestions": 9287
+  },
+  "perQuestionType": {
+    "Q1": {
+      "asked": 8240,
+      "Answered": 3,
+      "Unknown": 8237,
+      "Refused": 0,
+      "Inconsistent": 0,
+      "Contested": 0
+    },
+    "Q2": {
+      "asked": 1008,
+      "Answered": 6,
+      "Unknown": 1002,
+      "Refused": 0,
+      "Inconsistent": 0,
+      "Contested": 0
+    },
+    "Q3": {
+      "asked": 5,
+      "Answered": 5,
+      "Unknown": 0,
+      "Refused": 0,
+      "Inconsistent": 0
+    },
+    "Q4": {
+      "asked": 32,
+      "Answered": 32,
+      "Unknown": 0,
+      "Refused": 0,
+      "Inconsistent": 0,
+      "Contested": 0
+    },
+    "Q5": {
+      "asked": 1,
+      "Answered": 1,
+      "Unknown": 0,
+      "Refused": 0,
+      "Inconsistent": 0,
+      "Contested": 0
+    },
+    "Q6": {
+      "asked": 1,
+      "Answered": 0,
+      "Unknown": 0,
+      "Refused": 1,
+      "Inconsistent": 0,
+      "Contested": 0
+    },
+    "Q7": {
+      "asked": 5,
+      "Answered": 4,
+      "Unknown": 0,
+      "Refused": 0,
+      "Inconsistent": 0,
+      "Contested": 1
+    }
+  },
+  "corpusAnswerabilityPerGrammar": {
+    "wenyan.relations.v1": {
+      "corpusQuestions": 8208,
+      "answered": 0,
+      "rate": 0,
+      "evidenceRecords": 3,
+      "topUnknownReasons": [
+        [
+          "outside-declared-grammar",
+          8208
+        ]
+      ]
+    },
+    "wenyan.relations.reporting.v1": {
+      "corpusQuestions": 8208,
+      "answered": 367,
+      "rate": 0.044712,
+      "evidenceRecords": 29,
+      "topUnknownReasons": [
+        [
+          "outside-declared-grammar",
+          7809
+        ],
+        [
+          "ambiguous-frame-occurrence",
+          32
+        ]
+      ]
+    }
+  },
+  "contested": [
+    {
+      "label": "judgement coreference 他们",
+      "reason": "1 judgement(s) hold the claim and 1 reject it",
+      "holds": 1,
+      "fails": 1
+    }
+  ],
+  "unknownReasons": {
+    "Q1: outside-declared-grammar": 8237,
+    "Q2: right side: outside-declared-grammar": 87,
+    "Q2: left side: outside-declared-grammar": 915
+  },
+  "contractViolations": [],
+  "verdict": {
+    "answeredOnAuthoredEvidence": 32,
+    "q1AnswerRateOverall": 0.000364,
+    "q2AnswerRateOverall": 0.005952,
+    "bestGrammarOnCorpus": "wenyan.relations.reporting.v1",
+    "bestCorpusAnswerRate": 0.044712,
+    "glossIsRefusedByContract": true,
+    "note": "A high rate on authored evidence with a low rate on the corpus means the dialogue works, but mostly about the sentences it was taught. The corpus rate is now non-zero because a grammar that occurs in real text was added; it is still small, and it is per question, not a claim about understanding."
+  },
+  "limitations": [
+    "Q3 is measured only over the first few Answered answers, as a spot check, not a census.",
+    "Corpus questions are asked of every passage, which over-weights long works; rates are per question, not per work.",
+    "The contract is enforced for the declared types only; extending the type list requires editing contract.json first."
+  ]
+}

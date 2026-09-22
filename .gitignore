@@ -1,0 +1,14 @@
+# Build cache: the raw wikitext and prefix listings fetched from Wikisource.
+# Reproducible with `node tools/corpus/build.mjs` (needs network, ~15 min), so it
+# does not belong in version control.
+data/corpus/.cache/
+
+# macOS
+.DS_Store
+
+# Node
+node_modules/
+
+# Local scratch
+tmp/
+*.log

@@ -1,0 +1,277 @@
+{
+  "schema": "wenyan.relations.readiness.v1",
+  "generatedAt": "2026-09-22T22:41:11.094Z",
+  "grammar": "wenyan.relations.v1",
+  "store": {
+    "path": "knowledge/relations/evidence.jsonl",
+    "records": 32,
+    "grammarVersions": {
+      "wenyan.relations.v1": 3,
+      "wenyan.relations.reporting.v1": 29
+    },
+    "sha256": "35fdaa769041bdce65d4028670ea498bf32e7b0b61090bf74fcc8fbfe0f510c3"
+  },
+  "floors": {
+    "labelledPerConstructionForDetermination": 2,
+    "labelledPerConstructionForHoldout": 2,
+    "negativeCases": 6,
+    "corpusCoverageRate": 0.01
+  },
+  "perConstruction": [
+    {
+      "grammar": "wenyan.relations.v1",
+      "construction": "grant",
+      "labelledExamples": 1,
+      "survivingRoleMappings": 1,
+      "statusOnProbe": "KnownFiniteGrammar",
+      "distinctEntities": 3
+    },
+    {
+      "grammar": "wenyan.relations.v1",
+      "construction": "hand-over",
+      "labelledExamples": 1,
+      "survivingRoleMappings": 1,
+      "statusOnProbe": "KnownFiniteGrammar",
+      "distinctEntities": 3
+    },
+    {
+      "grammar": "wenyan.relations.v1",
+      "construction": "receive",
+      "labelledExamples": 1,
+      "survivingRoleMappings": 1,
+      "statusOnProbe": "KnownFiniteGrammar",
+      "distinctEntities": 3
+    },
+    {
+      "grammar": "wenyan.relations.reporting.v1",
+      "construction": "wei-quote",
+      "labelledExamples": 8,
+      "survivingRoleMappings": 1,
+      "statusOnProbe": "KnownFiniteGrammar",
+      "distinctEntities": 24
+    },
+    {
+      "grammar": "wenyan.relations.reporting.v1",
+      "construction": "wen-quote",
+      "labelledExamples": 8,
+      "survivingRoleMappings": 1,
+      "statusOnProbe": "KnownFiniteGrammar",
+      "distinctEntities": 24
+    },
+    {
+      "grammar": "wenyan.relations.reporting.v1",
+      "construction": "gao-quote",
+      "labelledExamples": 8,
+      "survivingRoleMappings": 1,
+      "statusOnProbe": "KnownFiniteGrammar",
+      "distinctEntities": 23
+    },
+    {
+      "grammar": "wenyan.relations.reporting.v1",
+      "construction": "yu-quote",
+      "labelledExamples": 5,
+      "survivingRoleMappings": 1,
+      "statusOnProbe": "KnownFiniteGrammar",
+      "distinctEntities": 15
+    }
+  ],
+  "leaveOneOut": {
+    "total": 3,
+    "failures": [
+      {
+        "id": "authored:train-0",
+        "reason": "held out, the reading became Unknown (ambiguous-role-mapping); the remaining 2 core record(s) do not determine this construction"
+      },
+      {
+        "id": "authored:train-1",
+        "reason": "held out, the reading became Unknown (ambiguous-role-mapping); the remaining 2 core record(s) do not determine this construction"
+      },
+      {
+        "id": "authored:train-2",
+        "reason": "held out, the reading became Unknown (ambiguous-role-mapping); the remaining 2 core record(s) do not determine this construction"
+      }
+    ],
+    "accuracy": 0
+  },
+  "negatives": [
+    {
+      "text": "「甲」未授「乙」「书」。",
+      "status": "Unknown"
+    },
+    {
+      "text": "甲给乙一本书。",
+      "status": "Unknown"
+    },
+    {
+      "text": "「甲」把「书」交给「乙」，然后离开。",
+      "status": "Unknown"
+    },
+    {
+      "text": "",
+      "status": "Unknown"
+    },
+    {
+      "text": "「甲」授「乙」。",
+      "status": "Unknown"
+    },
+    {
+      "text": "子曰：「學而時習之。」",
+      "status": "Unknown"
+    }
+  ],
+  "corpusCoverage": {
+    "passages": 8208,
+    "known": 367,
+    "rate": 0.044712,
+    "readErrors": 0,
+    "firstReadError": null,
+    "perGrammar": {
+      "wenyan.relations.v1": {
+        "known": 0,
+        "rate": 0,
+        "evidenceRecords": 3,
+        "readErrors": 0
+      },
+      "wenyan.relations.reporting.v1": {
+        "known": 367,
+        "rate": 0.044712,
+        "evidenceRecords": 8,
+        "readErrors": 0
+      }
+    },
+    "bestGrammar": "wenyan.relations.reporting.v1"
+  },
+  "sourceVerification": {
+    "checked": 29,
+    "failed": []
+  },
+  "integrity": {
+    "parseIssues": [],
+    "issues": [],
+    "notes": [
+      "authored:train-0: label has no timestamp",
+      "authored:train-1: label has no timestamp",
+      "authored:train-2: label has no timestamp",
+      "store spans multiple grammar versions: {\"wenyan.relations.v1\":3,\"wenyan.relations.reporting.v1\":29}"
+    ],
+    "replayError": null
+  },
+  "projection": {
+    "poolSize": 3,
+    "inModel": 3,
+    "droppedByCap": 0
+  },
+  "gates": [
+    {
+      "id": "G1",
+      "name": "well-formed store",
+      "required": true,
+      "pass": true,
+      "evidence": "parse issues=0, integrity issues=0, replay=ok"
+    },
+    {
+      "id": "G2",
+      "name": "role mapping determined per construction, per grammar",
+      "required": true,
+      "pass": false,
+      "evidence": "experimental/grant: survivors=1/6, labels=1 (floor 2); experimental/hand-over: survivors=1/6, labels=1 (floor 2); experimental/receive: survivors=1/6, labels=1 (floor 2); reporting/wei-quote: survivors=1/6, labels=8 (floor 2); reporting/wen-quote: survivors=1/6, labels=8 (floor 2); reporting/gao-quote: survivors=1/6, labels=8 (floor 2); reporting/yu-quote: survivors=1/6, labels=5 (floor 2)",
+      "missing": "3 construction(s) need >= 2 labels and exactly 1 surviving mapping"
+    },
+    {
+      "id": "G3",
+      "name": "generalises when its own evidence is held out, per grammar",
+      "required": true,
+      "pass": false,
+      "evidence": "experimental: core 3, accuracy=0, failures=3 (first authored:train-0: held out, the reading became Unknown (ambiguous-role-mapping); the remaining 2 core record(s) do not determine this construction); reporting: core 8, accuracy=1, failures=0",
+      "missing": "each construction needs >= 2 independent labels before this can be measured at all"
+    },
+    {
+      "id": "G4",
+      "name": "fails closed outside the grammar",
+      "required": true,
+      "pass": true,
+      "evidence": "6/6 declared negatives returned Unknown"
+    },
+    {
+      "id": "G5",
+      "name": "grounded in the target corpus",
+      "required": false,
+      "pass": true,
+      "evidence": "wenyan.relations.v1: 0/8208 (0, evidence 3); wenyan.relations.reporting.v1: 367/8208 (0.044712, evidence 8) — floor 0.01, best grammar wenyan.relations.reporting.v1"
+    },
+    {
+      "id": "G6",
+      "name": "durable and re-derivable",
+      "required": true,
+      "pass": true,
+      "evidence": "32 record(s); content hashes verified; corpus-derived sources verified=29/29"
+    },
+    {
+      "id": "G7",
+      "name": "dialogue contract exists and is enforced",
+      "required": true,
+      "pass": true,
+      "evidence": "contract=wenyan.dialogue.contract.v1, 6 question type(s), 6 invariant(s) each naming its enforcement, out-of-scope declared: Q6, recorded contract violations=0"
+    },
+    {
+      "id": "G8",
+      "name": "declared questions answer the target corpus",
+      "required": true,
+      "pass": false,
+      "evidence": "best corpus answer rate 0.044712 under wenyan.relations.reporting.v1; floor 0.5",
+      "missing": "the floor is a declared parameter and is not lowered to match the current value: answering a question about real text still fails for the large majority of passages"
+    },
+    {
+      "id": "G9",
+      "name": "every record accounted for: modelled, held out by name, or out of grammar",
+      "required": true,
+      "pass": true,
+      "evidence": "wenyan.relations.v1: core 3/32 + held out 0 + out-of-grammar 0 = 3/3; wenyan.relations.reporting.v1: core 8/32 + held out 21 + out-of-grammar 0 = 29/29"
+    }
+  ],
+  "verdict": {
+    "readyForComputation": true,
+    "readingReady": true,
+    "dialogueReady": false,
+    "readyForConversationalReasoning": false,
+    "readingReadyGrammars": [
+      "wenyan.relations.reporting.v1"
+    ],
+    "perGrammarReading": {
+      "wenyan.relations.v1": {
+        "short": "experimental",
+        "constructions": 3,
+        "determined": false,
+        "generalises": false,
+        "readingReady": false
+      },
+      "wenyan.relations.reporting.v1": {
+        "short": "reporting",
+        "constructions": 4,
+        "determined": true,
+        "generalises": true,
+        "readingReady": true
+      }
+    },
+    "gateGroups": {
+      "reading": [
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G6",
+        "G9"
+      ],
+      "dialogue": [
+        "G7",
+        "G8"
+      ]
+    },
+    "reversible": "Because the network is replay(evidence), adding contradicting evidence can raise survivors above 1 and re-open G2. Maturity is not monotone.",
+    "deficits": [
+      "G2 role mapping determined per construction, per grammar: 3 construction(s) need >= 2 labels and exactly 1 surviving mapping",
+      "G3 generalises when its own evidence is held out, per grammar: each construction needs >= 2 independent labels before this can be measured at all",
+      "G8 declared questions answer the target corpus: the floor is a declared parameter and is not lowered to match the current value: answering a question about real text still fails for the large majority of passages"
+    ]
+  }
+}

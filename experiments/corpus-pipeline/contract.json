@@ -1,0 +1,28 @@
+{
+  "schema": "wenyan.corpus-pipeline.contract.v1",
+  "question": "What does the existing inscription pipeline actually produce when fed the wenyan.corpus.v1 classical corpus, and how much of that output discriminates between passages?",
+  "corpus": "data/corpus — wenyan.corpus.v1, 16 works, 877 sections, 8208 passages, 906907 characters",
+  "baseline": "mountain/wenyan@6143e22ca8319a8ebca89b59a29f20158812b63f (the inscription modules as shipped in this bundle)",
+  "scope": "Full census over every corpus passage through the legacy path (no relationModel), default profile preset, steps=3. Plus: opt-in relation-grammar coverage, and the acknowledgement gate behaviour.",
+  "budgets": {
+    "max_pipeline_calls": 8208,
+    "steps_per_call": 3,
+    "node_heap_mib": 256,
+    "wall_seconds": 600,
+    "automatic_restarts": 0
+  },
+  "protected": [
+    "the corpus is read-only in this experiment",
+    "the acknowledgement gate keeps its documented meaning",
+    "no confidence band, score or generated sentence is treated as a philological result"
+  ],
+  "success": "Every passage is processed without error; the full output distribution is recorded, including any property that shows the output does not discriminate between inputs.",
+  "nonclaims": [
+    "no philological or historical interpretation of any passage",
+    "no claim that the pipeline understands 諸子 or 儒家 text",
+    "no claim that the inscription pipeline was designed for, or is suited to, this genre",
+    "no natural-language understanding and no semantic admission",
+    "convergence scores are internal to this experimental objective, not accuracy or quality measures",
+    "this is not an evaluation of Wikisource transcription quality"
+  ]
+}

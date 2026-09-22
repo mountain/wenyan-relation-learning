@@ -1,0 +1,394 @@
+{
+  "schema": "wenyan.corpus.manifest.v1",
+  "format": "wenyan.corpus.v1",
+  "generatedAt": "2026-09-22T23:15:25.335Z",
+  "source": {
+    "sitename": "Wikisource",
+    "api": "https://zh.wikisource.org/w/api.php",
+    "license": {
+      "siteDefault": {
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/deed.zh",
+        "text": "Creative Commons Attribution-Share Alike 4.0"
+      },
+      "note": "siteDefault is the site-wide rights statement as returned live by the MediaWiki API (siprop=rightsinfo). It is the fallback for pages that carry no license template of their own. Per-work evidence of what the pages actually declare is in works[].licenseTemplates / licenseStatus and in each work file's `license` object.",
+      "attribution": "Text retrieved from Chinese Wikisource (維基文庫). Each section records its source page and revision id; see data/corpus/works/*.json.",
+      "classicsArePublicDomain": "The classical works themselves (論語, 老子, 詩經, …) are public domain by age; that is not in question. What is taken from Wikisource is its transcription — choice of recension, modern punctuation, paragraphing and character forms — plus this build's own editorial decisions (template/commentary removal, re-segmentation, recension selection, first-reading selection)."
+    },
+    "attribution": "Text retrieved from Chinese Wikisource (維基文庫). Each section records its source page and revision id; see data/corpus/works/*.json.",
+    "ctextNotice": "ctext.org was NOT used. Its robots.txt and anti-scraping notice state that automated access is not authorized and direct researchers to subscribe; no content was retrieved from it."
+  },
+  "counts": {
+    "works": 16,
+    "sections": 877,
+    "passages": 8138,
+    "characters": 906678
+  },
+  "works": [
+    {
+      "id": "analects",
+      "zh": "論語",
+      "en": "Analects",
+      "tradition": "confucian",
+      "file": "works/analects.json",
+      "sha256": "29560a4afbc9bb8d7737ffcfe9c2b4927ebbe81c894a8e4a65166282311c38ff",
+      "counts": {
+        "sections": 20,
+        "passages": 507,
+        "characters": 21779
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "index",
+      "licenseTemplates": {
+        "先秦作品": 5,
+        "PD-old": 14
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: 先秦作品, PD-old.",
+      "limitations": []
+    },
+    {
+      "id": "mencius",
+      "zh": "孟子",
+      "en": "Mencius",
+      "tradition": "confucian",
+      "file": "works/mencius.json",
+      "sha256": "f09015ec913f739365e0312ea8b6b6c76f1f3bdc72fd75097d058c369ce92aa2",
+      "counts": {
+        "sections": 14,
+        "passages": 742,
+        "characters": 44974
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "index",
+      "licenseTemplates": {
+        "PD-old": 14
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: PD-old.",
+      "limitations": []
+    },
+    {
+      "id": "great-learning",
+      "zh": "大學",
+      "en": "The Great Learning",
+      "tradition": "confucian",
+      "textEdition": "《禮記》第四十二篇（未分經傳）",
+      "file": "works/great-learning.json",
+      "sha256": "116d2c97b681ed8d82645c253e8ad937ff52a250219cf31f47fe3850b9630963",
+      "counts": {
+        "sections": 1,
+        "passages": 11,
+        "characters": 2209
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "single",
+      "licenseTemplates": {
+        "PD-old": 1
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: PD-old.",
+      "limitations": [
+        "「大學」在站上是 {{versions}} 版本頁，正文取《禮記》該篇。"
+      ]
+    },
+    {
+      "id": "doctrine-of-the-mean",
+      "zh": "中庸",
+      "en": "The Doctrine of the Mean",
+      "tradition": "confucian",
+      "textEdition": "《禮記》第三十一篇（未分經傳）",
+      "file": "works/doctrine-of-the-mean.json",
+      "sha256": "9281ad5bc771615346d1fdb3e901415057aa213a612c77001fa1f8f7d8293bf7",
+      "counts": {
+        "sections": 1,
+        "passages": 34,
+        "characters": 4522
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "single",
+      "licenseTemplates": {
+        "PD-old": 1
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: PD-old.",
+      "limitations": [
+        "「中庸」在站上是 {{versions}} 版本頁，正文取《禮記》該篇。"
+      ]
+    },
+    {
+      "id": "classic-of-poetry",
+      "zh": "詩經",
+      "en": "Classic of Poetry",
+      "tradition": "confucian",
+      "file": "works/classic-of-poetry.json",
+      "sha256": "fe716cbc40745bfb4f09d5b6836ba9fed4f091248dd40f8c5557fbb95d4269c3",
+      "counts": {
+        "sections": 305,
+        "passages": 663,
+        "characters": 38242
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "nextChain",
+      "licenseTemplates": {},
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "收三百零五篇本文。毛詩序、章句注、三家詩說、註解均屬後人編輯材料，已排除；===詩文=== 小節為詩篇正文本身，保留。六笙詩（南陔、白華、華黍、由庚、崇丘、由儀）有目無辭，站上僅存毛詩序與「有其義而亡其辭」，無本文可收，故不收錄並記於 exclude。"
+      ]
+    },
+    {
+      "id": "book-of-documents",
+      "zh": "尚書",
+      "en": "Book of Documents",
+      "tradition": "confucian",
+      "file": "works/book-of-documents.json",
+      "sha256": "299163a5af2e80e4e47a4891c2854fa0ff578dc6972e56510fb82474f32c7462",
+      "counts": {
+        "sections": 68,
+        "passages": 412,
+        "characters": 39271
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {
+        "PD-old": 26
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: PD-old.",
+      "limitations": [
+        "尚書來源複雜：今文、偽古文與清華簡並存；本語料照錄站上篇目，未做真偽取捨。"
+      ]
+    },
+    {
+      "id": "zhouyi",
+      "zh": "周易",
+      "en": "Zhouyi (I Ching)",
+      "tradition": "confucian",
+      "file": "works/zhouyi.json",
+      "sha256": "3b2c6aeac5dcd1c0311effa40b400f86d58473a83b3fd5239a3b5dbc19fd9d3b",
+      "counts": {
+        "sections": 64,
+        "passages": 324,
+        "characters": 19863
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "nextChain",
+      "licenseTemplates": {},
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "卦頁以清單標記分層（易經／彖／象），清洗時攤平為段落，層級資訊不保留。第32卦站上作「恒」而非「恆」，若無 nextFix 鏈會在此中斷。"
+      ]
+    },
+    {
+      "id": "book-of-rites",
+      "zh": "禮記",
+      "en": "Book of Rites",
+      "tradition": "confucian",
+      "file": "works/book-of-rites.json",
+      "sha256": "7eeeaafe49c4266cfb71eeb4e016419afc41785cc1f644a232be5e479a6b717a",
+      "counts": {
+        "sections": 49,
+        "passages": 1332,
+        "characters": 123056
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {
+        "PD-old": 48
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: PD-old.",
+      "limitations": [
+        "收通行四十九篇；異本（如證釋本）與目錄頁不收。"
+      ]
+    },
+    {
+      "id": "laozi",
+      "zh": "老子",
+      "en": "Laozi (Daodejing)",
+      "tradition": "philosophers",
+      "textEdition": "王弼本（頁面另附王弼注）",
+      "file": "works/laozi.json",
+      "sha256": "54f3dbca092031fadfeeada274f7ffcd9b2f20e01b2c9517cfcdb6aa7a6d9abd",
+      "counts": {
+        "sections": 81,
+        "passages": 434,
+        "characters": 7052
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 21,
+      "discoveryRoute": "single",
+      "licenseTemplates": {
+        "曹魏作品": 1
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: 曹魏作品.",
+      "limitations": [
+        "「老子」與「道德經」皆為版本頁；取王弼本。站上經文與王弼注逐句交錯，注文已剔除，僅留經文。頁末〈道經音義〉〈德經音義〉為音義附錄，卷首題記（華亭張氏原本／晉王弼注）為版本題記，均非經文，已排除。"
+      ]
+    },
+    {
+      "id": "zhuangzi",
+      "zh": "莊子",
+      "en": "Zhuangzi",
+      "tradition": "philosophers",
+      "file": "works/zhuangzi.json",
+      "sha256": "5465254cc85dd28ab7604b0a8acc0fbbe86b00b8da3f1f107fe38e409aa47eff",
+      "counts": {
+        "sections": 33,
+        "passages": 903,
+        "characters": 80075
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "nextChain",
+      "licenseTemplates": {},
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "三十三篇（內七、外十五、雜十一）依站上 next 鏈正序排列。"
+      ]
+    },
+    {
+      "id": "xunzi",
+      "zh": "荀子",
+      "en": "Xunzi",
+      "tradition": "philosophers",
+      "file": "works/xunzi.json",
+      "sha256": "14461f9a84e369c31e64ec07a5e45dfeb3a4d295550cb6c4dcf7b6649e8d3938",
+      "counts": {
+        "sections": 32,
+        "passages": 481,
+        "characters": 90763
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "nextChain",
+      "licenseTemplates": {
+        "PD-old": 11
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: PD-old.",
+      "limitations": [
+        "站上正文夾註（{{*|…}}）為後人注解，已剔除，僅留本文。"
+      ]
+    },
+    {
+      "id": "hanfeizi",
+      "zh": "韓非子",
+      "en": "Han Feizi",
+      "tradition": "philosophers",
+      "file": "works/hanfeizi.json",
+      "sha256": "e14b65470ed7e60931a7e79ab60fb5c11204e67fe210d70193a1b468fae650f5",
+      "counts": {
+        "sections": 55,
+        "passages": 744,
+        "characters": 128553
+      },
+      "structuralMarkersRemoved": 22,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "containerChain",
+      "licenseTemplates": {},
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "站上卷頁（韓非子/01…）僅為模板嵌入目錄；本語料依卷頁順序取各篇頁正文，卷頁不重複收錄。"
+      ]
+    },
+    {
+      "id": "mozi",
+      "zh": "墨子",
+      "en": "Mozi",
+      "tradition": "philosophers",
+      "file": "works/mozi.json",
+      "sha256": "f2ae24e8be3dcc0b6e37062f69aa41a1f41a3ef3f5a3ade6de045588c2c6f546",
+      "counts": {
+        "sections": 53,
+        "passages": 650,
+        "characters": 91830
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 2,
+      "discoveryRoute": "index",
+      "licenseTemplates": {
+        "pd-old": 34
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: pd-old.",
+      "limitations": []
+    },
+    {
+      "id": "guanzi",
+      "zh": "管子",
+      "en": "Guanzi",
+      "tradition": "philosophers",
+      "file": "works/guanzi.json",
+      "sha256": "d04dd703a87b6c820877edb084779829f63120ddd85c26962e2c37226e0a950c",
+      "counts": {
+        "sections": 80,
+        "passages": 688,
+        "characters": 169106
+      },
+      "structuralMarkersRemoved": 48,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "allpages",
+      "licenseTemplates": {},
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "section order is the wiki sort order, not a verified canonical order",
+        "站上並存兩套命名（管子/第01篇牧民 與 管子/牧民）；取零填充的「第NN篇」命名，故 wiki 排序即篇序，並避免重複收錄。另有兩組異體字重複頁（權修／權脩、國準／國准），取通行字形（修、準），異體頁不收。"
+      ]
+    },
+    {
+      "id": "liezi",
+      "zh": "列子",
+      "en": "Liezi",
+      "tradition": "philosophers",
+      "file": "works/liezi.json",
+      "sha256": "8028f394c9134632f7123e20a0cb68be593ee2123b90c191249c78058621c0de",
+      "counts": {
+        "sections": 8,
+        "passages": 139,
+        "characters": 37948
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "nextChain",
+      "licenseTemplates": {},
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "八篇全收，依站上 next 鏈正序排列。"
+      ]
+    },
+    {
+      "id": "sunzi",
+      "zh": "孫子兵法",
+      "en": "The Art of War",
+      "tradition": "philosophers",
+      "textEdition": "通行十三篇本",
+      "file": "works/sunzi.json",
+      "sha256": "fad052db77681dd9fbd39aa03fb909bec4938e51c47eecd996acdf2da9707e16",
+      "counts": {
+        "sections": 13,
+        "passages": 74,
+        "characters": 7435
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "single",
+      "licenseTemplates": {},
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "「孫子」為重定向；正文取《孫子兵法》單頁，按 == 篇名 == 標題分章。站上另附〈答話〉一節，屬《吳越春秋》系統的問答佚文、非十三篇本文，已排除。"
+      ]
+    }
+  ],
+  "nonclaims": [
+    "not a critical edition: no collation against manuscripts, no variant apparatus",
+    "not verified against a print edition or against ctext.org",
+    "punctuation and paragraphing follow the Wikisource page, not a scholarly edition",
+    "text is not segmented into words, nor annotated with parts of speech or glosses",
+    "no claim that every chapter of every work was retrieved where a limitation is recorded"
+  ],
+  "limitations": [
+    "Works whose section order came from the \"allpages\" route are in wiki sort order, not a verified canonical order.",
+    "Chapter counts differing from the expected count are flagged per work rather than corrected.",
+    "Editorial material present inside the base-text region of a page (if any) is retained; only whole sub-sections named in dropSections are removed."
+  ]
+}

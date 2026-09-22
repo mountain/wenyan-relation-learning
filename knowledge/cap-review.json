@@ -1,0 +1,174 @@
+{
+  "schema": "wenyan.relations.cap-review.v1",
+  "generatedAt": "2026-09-22T22:38:58.353Z",
+  "question": "Is 32 a per-inference budget or a knowledge-base capacity, and what must the projection layer do around it?",
+  "whatTheCapIs": {
+    "enforcedIn": "src/inscription/relations.ts (and the mirrored reporting module)",
+    "learnThrowsAt": "model.examples.length >= 32 -> \"evidence capacity reached\"",
+    "replayRejectsAbove": 32,
+    "hardConclusion": "It is a hard budget on ONE model inside the verified module. This step may not change that module, so 32 stays; what must change is the projection layer."
+  },
+  "currentComposition": {
+    "wenyan.relations.v1": {
+      "records": 3,
+      "cap": 32,
+      "slack": 29,
+      "perConstruction": {
+        "grant": 1,
+        "hand-over": 1,
+        "receive": 1
+      },
+      "constructionsWithAtLeast2": 0
+    },
+    "wenyan.relations.reporting.v1": {
+      "records": 29,
+      "cap": 32,
+      "slack": 3,
+      "perConstruction": {
+        "wei-quote": 8,
+        "wen-quote": 8,
+        "gao-quote": 8,
+        "yu-quote": 5
+      },
+      "constructionsWithAtLeast2": 4
+    }
+  },
+  "minimumFalsifiableSet": {
+    "wenyan.relations.v1": {
+      "afterOneLabel": {
+        "survivors": 1,
+        "readingStatus": "KnownFiniteGrammar"
+      },
+      "afterSecondConflictingLabel": {
+        "status": "Conflict",
+        "note": "a wrong second label is DETECTED, not silently accepted"
+      },
+      "minimumForCorrectness": 1,
+      "minimumForFalsifiability": 2
+    },
+    "wenyan.relations.reporting.v1": {
+      "afterOneLabel": {
+        "survivors": 1,
+        "readingStatus": "KnownFiniteGrammar"
+      },
+      "afterSecondConflictingLabel": {
+        "status": "Conflict",
+        "note": "a wrong second label is DETECTED, not silently accepted"
+      },
+      "minimumForCorrectness": 1,
+      "minimumForFalsifiability": 2
+    }
+  },
+  "silentDropAtCap": {
+    "refuses": true,
+    "error": "projectModel would silently drop 8 of 40 record(s) for wenyan.relations.v1 (cap 32). Use selectOperationalCore() in tools/knowledge/projection.mjs to choose explicitly, or pass onOverflow: 'prefix' to accept a positional cut and receive the dropped ids.",
+    "defunctIfForced": {
+      "poolSize": 40,
+      "inModel": 32,
+      "wouldDrop": 8,
+      "droppedIds": [
+        "synth:32",
+        "synth:33",
+        "synth:34",
+        "synth:35",
+        "synth:36",
+        "synth:37",
+        "synth:38",
+        "synth:39"
+      ],
+      "note": "what the old behaviour discarded without naming it; now reachable only by explicit opt-in"
+    }
+  },
+  "fragility": {
+    "clean": {
+      "wei-quote": "KnownFiniteGrammar",
+      "wen-quote": "KnownFiniteGrammar",
+      "gao-quote": "KnownFiniteGrammar",
+      "yu-quote": "KnownFiniteGrammar"
+    },
+    "poisoned": {
+      "wei-quote": "threw: contradictory evidence",
+      "wen-quote": "threw: contradictory evidence",
+      "gao-quote": "threw: contradictory evidence",
+      "yu-quote": "threw: contradictory evidence"
+    },
+    "constructionsBrokenByOneUnrelatedBadRecord": [
+      "wen-quote",
+      "gao-quote",
+      "yu-quote"
+    ],
+    "note": "One contradicting record makes replay throw, and replay runs before every read, so ALL constructions become unreadable — including ones the bad record has nothing to do with. Evidence diversity is a liability while the model is all-or-nothing."
+  },
+  "fullLabellingDemand": {
+    "inGrammarCorpusPassages": 367,
+    "capMultiple": 11.5,
+    "note": "Labelling every in-grammar passage as evidence would need this many times the cap — and would also make one bad label fatal to everything."
+  },
+  "operationalCore": {
+    "included": [
+      "corpus:book-of-documents:38.1:gao-quote",
+      "corpus:book-of-rites:1.26:gao-quote",
+      "corpus:analects:2.21:wei-quote",
+      "corpus:book-of-rites:3.15:wei-quote",
+      "corpus:analects:1.10:wen-quote",
+      "corpus:book-of-rites:2.17:wen-quote",
+      "corpus:analects:13.18:yu-quote",
+      "corpus:book-of-rites:3.30:yu-quote"
+    ],
+    "perConstruction": {
+      "gao-quote": {
+        "available": 8,
+        "selected": 2,
+        "sufficient": true,
+        "selectedIds": [
+          "corpus:book-of-documents:38.1:gao-quote",
+          "corpus:book-of-rites:1.26:gao-quote"
+        ]
+      },
+      "wei-quote": {
+        "available": 8,
+        "selected": 2,
+        "sufficient": true,
+        "selectedIds": [
+          "corpus:analects:2.21:wei-quote",
+          "corpus:book-of-rites:3.15:wei-quote"
+        ]
+      },
+      "wen-quote": {
+        "available": 8,
+        "selected": 2,
+        "sufficient": true,
+        "selectedIds": [
+          "corpus:analects:1.10:wen-quote",
+          "corpus:book-of-rites:2.17:wen-quote"
+        ]
+      },
+      "yu-quote": {
+        "available": 5,
+        "selected": 2,
+        "sufficient": true,
+        "selectedIds": [
+          "corpus:analects:13.18:yu-quote",
+          "corpus:book-of-rites:3.30:yu-quote"
+        ]
+      }
+    },
+    "complete": true,
+    "heldOutCount": 21,
+    "poolSize": 29
+  },
+  "heldOutAudit": {
+    "batchSize": 8,
+    "batches": 3,
+    "conflicts": [],
+    "clean": 21,
+    "interpretation": "A held-out record that replays cleanly against the core agrees with it. A throw is a disagreement between two supervised labels — a finding, either a mislabelled passage or a boundary rule that fired on the wrong span. Either way it stays visible instead of being averaged away."
+  },
+  "recommendedPolicy": [
+    "Keep 32 as the module's per-model budget; change nothing in relations.ts.",
+    "Split the store by ROLE: an operational core (the minimum falsifiable set, 2 per construction) and a validation set (everything else, including corpus-labelled passages).",
+    "Projection must be explicit and deterministic: name what is included and what is excluded, and never slice a prefix silently.",
+    "Holding corpus labels OUT of the operational model is not a compromise — loading them would add no mapping information (the mapping is already pinned) while making one mislabel fatal to every construction.",
+    "Keep them as a contradiction detector instead: they can be replayed against the core in batches to find disagreements, without being part of the model that answers questions."
+  ]
+}

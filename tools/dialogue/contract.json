@@ -1,0 +1,115 @@
+{
+  "schema": "wenyan.dialogue.contract.v1",
+  "name": "Evidence-licensed dialogue",
+  "principle": "Every answer must be licensed by evidence already in the store. If no warrant exists, the only permitted answer is Unknown. An answer that cannot be recomputed from the store is a contract violation, not a mistake.",
+  "rationale": "Without this rule 'conversational reasoning' cannot be checked: fluent text can always be produced, so nothing distinguishes knowing from sounding like knowing. Licensing every answer makes the boundary between the two mechanical.",
+  "answerStates": {
+    "Answered": "A warranted answer drawn from the declared answer schema.",
+    "Unknown": "No warrant exists. MUST carry the reason and what is missing.",
+    "Refused": "The question type is outside the declared scope. Never guessed.",
+    "Inconsistent": "The store itself is contradictory, so no answer is licensed. STORE-WIDE: nothing is answerable.",
+    "Contested": "Warranted evidence exists but disagrees with itself. MUST name both sides and what they disagree about. LOCAL: it concerns one claim and must never block another question — that distinction is the whole reason it is separate from Inconsistent."
+  },
+  "invariants": [
+    { "id": "I1", "rule": "Answered implies warrant.refs is non-empty, or warrant.kind is 'store'.", "enforcedBy": "validateAnswer()" },
+    { "id": "I2", "rule": "Unknown implies both reason and missing are present.", "enforcedBy": "validateAnswer()" },
+    { "id": "I3", "rule": "No free-text answer field exists. Every Answered payload conforms to the question type's declared answer schema.", "enforcedBy": "validateAnswer()" },
+    { "id": "I4", "rule": "A question whose type is not declared here is Refused, never answered by analogy.", "enforcedBy": "ask()" },
+    { "id": "I5", "rule": "Every Answered answer must be reproducible from the store alone; the recomputation must agree with what was returned.", "enforcedBy": "verifyAnswer()" },
+    { "id": "I6", "rule": "Answers are never cached as truth. Adding or removing evidence may change an earlier answer, including turning Answered back into Unknown.", "enforcedBy": "Q4 counterfactual; readiness re-run" },
+    { "id": "I7", "rule": "Contested requires at least two disagreeing records and MUST name them, with each side's judge and basis. It may never be returned as a bare state.", "enforcedBy": "validateAnswer()" },
+    { "id": "I8", "rule": "Contested is LOCAL and Inconsistent takes precedence: a store-wide failure licenses nothing, so Contested must not be used to report one. Conversely, a contested claim must not prevent any other claim or question from being answered.", "enforcedBy": "validateAnswer() + selftest locality case" }
+  ],
+  "questionTypes": [
+    {
+      "id": "Q1",
+      "name": "reading",
+      "ask": "In this sentence, which entity is the agent, which the recipient, which the theme?",
+      "input": "{ text: string }",
+      "requires": [
+        "text parses under a declared grammar version",
+        "that construction's role mapping is determined: replay(evidence) leaves exactly 1 of 6 permutations"
+      ],
+      "answer": "{ roles: {agent, recipient, theme}, construction, grammar, occurrences[] }",
+      "warrant": "evidence — the record ids whose labels pinned the surviving mapping",
+      "verify": "re-run replay(evidence); the answer must equal candidates[0]",
+      "failClosed": "outside grammar -> Unknown(outside-controlled-grammar); >1 survivor -> Unknown(ambiguous-role-mapping)"
+    },
+    {
+      "id": "Q2",
+      "name": "comparison",
+      "ask": "Do these two sentences express the same relation, a role reversal, or different relations?",
+      "input": "{ a: string, b: string }",
+      "requires": ["Q1 is Answered for both a and b"],
+      "answer": "{ relation: 'SameRelation' | 'RoleReversal' | 'DifferentRelation' }",
+      "warrant": "evidence — the union of both readings' warrants",
+      "verify": "recompute both readings and re-derive the relation",
+      "failClosed": "either side Unknown -> Unknown carrying that side's reason"
+    },
+    {
+      "id": "Q3",
+      "name": "warrant",
+      "ask": "What licenses this conclusion, and who asserted it?",
+      "input": "{ answer: <a previously returned answer> }",
+      "requires": ["nothing beyond the store: this is the 'how do you know?' move"],
+      "answer": "{ refs: [{ id, text, expected, labelKind, labelBy, source }] }",
+      "warrant": "store — the records named by the answer",
+      "verify": "each ref must exist in the store and its contentHash must verify",
+      "failClosed": "an Answered answer with no refs cannot exist (see I1)"
+    },
+    {
+      "id": "Q4",
+      "name": "counterfactual",
+      "ask": "If evidence record E were withdrawn, would this conclusion still hold?",
+      "input": "{ text: string, removeId: string }",
+      "requires": ["the named record exists in the store"],
+      "answer": "{ status, survivingRoleMappings, changed: boolean }",
+      "warrant": "derivation — replay(evidence minus E)",
+      "verify": "recompute; must agree",
+      "failClosed": "removal that empties a construction -> Answered with survivingRoleMappings 6 and changed true, i.e. the conclusion is retracted"
+    },
+    {
+      "id": "Q5",
+      "name": "consistency",
+      "ask": "Is the store itself sound?",
+      "input": "{}",
+      "requires": ["nothing"],
+      "answer": "{ replayOk, recordCount, integrityIssues[], grammarVersions }",
+      "warrant": "store — content hashes plus replay over the whole store",
+      "verify": "re-run integrity and replay",
+      "failClosed": "contradictory evidence -> Inconsistent, and no other question type may return Answered"
+    },
+    {
+      "id": "Q7",
+      "name": "judgement",
+      "ask": "What have recorded judgements concluded about this claim?",
+      "input": "{ claim: { type, text, ...type-specific fields } } — claim types are declared in tools/semantics/contract.json",
+      "requires": [
+        "the claim type is declared in wenyan.semantics.contract.v1 and is not declared out of scope",
+        "at least one judgement recorded about that claim"
+      ],
+      "answer": "{ verdict: 'holds' | 'fails', judges: n, claimHash } or { disagreement: { holds[], fails[] } }",
+      "warrant": "judgement — the ids of every judgement recorded about this claim",
+      "verify": "reload the judgement store; recompute the claim hash; recompute agreement — no cached verdict is trusted",
+      "failClosed": "no judgement -> Unknown(no-judgement-recorded); undeclared or out-of-scope claim type -> Refused",
+      "note": "This is the only question type whose warrant is a judgement rather than a text span. Disagreement yields Contested with both sides named; no majority is taken."
+    },
+    {
+      "id": "Q6",
+      "name": "gloss",
+      "ask": "What does this sentence mean?",
+      "status": "declared-out-of-scope",
+      "reason": "Answering would require a lexicon, sense inventory or translation model. None exists in this repository, and no amount of relation evidence creates one.",
+      "behaviour": "Refused, with this reason. Declared explicitly so its absence stays visible instead of being papered over with fluent text.",
+      "wouldRequire": "a separate contract for lexical semantics, its own evidence format and its own falsification procedure"
+    }
+  ],
+  "notDeclared": "Any question type not listed above is Refused (I4). Adding a type means editing this contract first, not extending a prompt.",
+  "nonclaims": [
+    "not a chatbot: there is no natural-language understanding anywhere in this path",
+    "not generation: the system never composes prose; every answer is a structured value or Unknown/Refused",
+    "not open-domain: the declared question types are the whole of what can be asked",
+    "no claim that a warranted answer about a controlled construction says anything about a real text",
+    "Q6 gloss is out of scope by declaration, not by temporary limitation"
+  ]
+}

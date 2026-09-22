@@ -1,0 +1,772 @@
+{
+  "schema": "wenyan.relation-calibration.evidence.v1",
+  "baseline": "mountain/wenyan@6143e22ca8319a8ebca89b59a29f20158812b63f",
+  "adva_reference": "mountain/adva@79f6353511d736ae743b109f1c573b652eff170a/research-0131",
+  "status": "PassedFiniteScope",
+  "training": 3,
+  "heldOutEntities": 9,
+  "positivePairs": 9,
+  "roleReversals": 9,
+  "legacyHypothesisCollisions": 9,
+  "updates": [
+    {
+      "status": "Updated",
+      "model": {
+        "schema": "wenyan.relations.v1",
+        "examples": [
+          {
+            "id": "train-0",
+            "text": "「甲」授「乙」「书」。",
+            "expected": {
+              "agent": "甲",
+              "recipient": "乙",
+              "theme": "书"
+            }
+          }
+        ]
+      },
+      "checked": 6,
+      "refutations": [
+        {
+          "order": [
+            0,
+            2,
+            1
+          ],
+          "actual": {
+            "agent": "甲",
+            "recipient": "书",
+            "theme": "乙"
+          },
+          "expected": {
+            "agent": "甲",
+            "recipient": "乙",
+            "theme": "书"
+          }
+        },
+        {
+          "order": [
+            1,
+            0,
+            2
+          ],
+          "actual": {
+            "agent": "乙",
+            "recipient": "甲",
+            "theme": "书"
+          },
+          "expected": {
+            "agent": "甲",
+            "recipient": "乙",
+            "theme": "书"
+          }
+        },
+        {
+          "order": [
+            1,
+            2,
+            0
+          ],
+          "actual": {
+            "agent": "乙",
+            "recipient": "书",
+            "theme": "甲"
+          },
+          "expected": {
+            "agent": "甲",
+            "recipient": "乙",
+            "theme": "书"
+          }
+        },
+        {
+          "order": [
+            2,
+            0,
+            1
+          ],
+          "actual": {
+            "agent": "书",
+            "recipient": "甲",
+            "theme": "乙"
+          },
+          "expected": {
+            "agent": "甲",
+            "recipient": "乙",
+            "theme": "书"
+          }
+        },
+        {
+          "order": [
+            2,
+            1,
+            0
+          ],
+          "actual": {
+            "agent": "书",
+            "recipient": "乙",
+            "theme": "甲"
+          },
+          "expected": {
+            "agent": "甲",
+            "recipient": "乙",
+            "theme": "书"
+          }
+        }
+      ],
+      "remainingMappings": 1
+    },
+    {
+      "status": "Updated",
+      "model": {
+        "schema": "wenyan.relations.v1",
+        "examples": [
+          {
+            "id": "train-0",
+            "text": "「甲」授「乙」「书」。",
+            "expected": {
+              "agent": "甲",
+              "recipient": "乙",
+              "theme": "书"
+            }
+          },
+          {
+            "id": "train-1",
+            "text": "「甲」把「书」交给「乙」。",
+            "expected": {
+              "agent": "甲",
+              "recipient": "乙",
+              "theme": "书"
+            }
+          }
+        ]
+      },
+      "checked": 6,
+      "refutations": [
+        {
+          "order": [
+            0,
+            1,
+            2
+          ],
+          "actual": {
+            "agent": "甲",
+            "recipient": "书",
+            "theme": "乙"
+          },
+          "expected": {
+            "agent": "甲",
+            "recipient": "乙",
+            "theme": "书"
+          }
+        },
+        {
+          "order": [
+            1,
+            0,
+            2
+          ],
+          "actual": {
+            "agent": "书",
+            "recipient": "甲",
+            "theme": "乙"
+          },
+          "expected": {
+            "agent": "甲",
+            "recipient": "乙",
+            "theme": "书"
+          }
+        },
+        {
+          "order": [
+            1,
+            2,
+            0
+          ],
+          "actual": {
+            "agent": "书",
+            "recipient": "乙",
+            "theme": "甲"
+          },
+          "expected": {
+            "agent": "甲",
+            "recipient": "乙",
+            "theme": "书"
+          }
+        },
+        {
+          "order": [
+            2,
+            0,
+            1
+          ],
+          "actual": {
+            "agent": "乙",
+            "recipient": "甲",
+            "theme": "书"
+          },
+          "expected": {
+            "agent": "甲",
+            "recipient": "乙",
+            "theme": "书"
+          }
+        },
+        {
+          "order": [
+            2,
+            1,
+            0
+          ],
+          "actual": {
+            "agent": "乙",
+            "recipient": "书",
+            "theme": "甲"
+          },
+          "expected": {
+            "agent": "甲",
+            "recipient": "乙",
+            "theme": "书"
+          }
+        }
+      ],
+      "remainingMappings": 1
+    },
+    {
+      "status": "Updated",
+      "model": {
+        "schema": "wenyan.relations.v1",
+        "examples": [
+          {
+            "id": "train-0",
+            "text": "「甲」授「乙」「书」。",
+            "expected": {
+              "agent": "甲",
+              "recipient": "乙",
+              "theme": "书"
+            }
+          },
+          {
+            "id": "train-1",
+            "text": "「甲」把「书」交给「乙」。",
+            "expected": {
+              "agent": "甲",
+              "recipient": "乙",
+              "theme": "书"
+            }
+          },
+          {
+            "id": "train-2",
+            "text": "「乙」获「甲」所授「书」。",
+            "expected": {
+              "agent": "甲",
+              "recipient": "乙",
+              "theme": "书"
+            }
+          }
+        ]
+      },
+      "checked": 6,
+      "refutations": [
+        {
+          "order": [
+            0,
+            1,
+            2
+          ],
+          "actual": {
+            "agent": "乙",
+            "recipient": "甲",
+            "theme": "书"
+          },
+          "expected": {
+            "agent": "甲",
+            "recipient": "乙",
+            "theme": "书"
+          }
+        },
+        {
+          "order": [
+            0,
+            2,
+            1
+          ],
+          "actual": {
+            "agent": "乙",
+            "recipient": "书",
+            "theme": "甲"
+          },
+          "expected": {
+            "agent": "甲",
+            "recipient": "乙",
+            "theme": "书"
+          }
+        },
+        {
+          "order": [
+            1,
+            2,
+            0
+          ],
+          "actual": {
+            "agent": "甲",
+            "recipient": "书",
+            "theme": "乙"
+          },
+          "expected": {
+            "agent": "甲",
+            "recipient": "乙",
+            "theme": "书"
+          }
+        },
+        {
+          "order": [
+            2,
+            0,
+            1
+          ],
+          "actual": {
+            "agent": "书",
+            "recipient": "乙",
+            "theme": "甲"
+          },
+          "expected": {
+            "agent": "甲",
+            "recipient": "乙",
+            "theme": "书"
+          }
+        },
+        {
+          "order": [
+            2,
+            1,
+            0
+          ],
+          "actual": {
+            "agent": "书",
+            "recipient": "甲",
+            "theme": "乙"
+          },
+          "expected": {
+            "agent": "甲",
+            "recipient": "乙",
+            "theme": "书"
+          }
+        }
+      ],
+      "remainingMappings": 1
+    }
+  ],
+  "model": {
+    "schema": "wenyan.relations.v1",
+    "examples": [
+      {
+        "id": "train-0",
+        "text": "「甲」授「乙」「书」。",
+        "expected": {
+          "agent": "甲",
+          "recipient": "乙",
+          "theme": "书"
+        }
+      },
+      {
+        "id": "train-1",
+        "text": "「甲」把「书」交给「乙」。",
+        "expected": {
+          "agent": "甲",
+          "recipient": "乙",
+          "theme": "书"
+        }
+      },
+      {
+        "id": "train-2",
+        "text": "「乙」获「甲」所授「书」。",
+        "expected": {
+          "agent": "甲",
+          "recipient": "乙",
+          "theme": "书"
+        }
+      }
+    ]
+  },
+  "receipts": [
+    {
+      "source": "「丙」授「丁」「帛」。",
+      "paraphrase": "「丙」把「帛」交给「丁」。",
+      "reversed": "「丁」授「丙」「帛」。",
+      "positive": "SameRelation",
+      "negative": "RoleReversal",
+      "reading": {
+        "status": "KnownFiniteGrammar",
+        "source": "「丙」授「丁」「帛」。",
+        "construction": "grant",
+        "candidates": [
+          {
+            "agent": "丙",
+            "recipient": "丁",
+            "theme": "帛"
+          }
+        ],
+        "occurrences": [
+          {
+            "slot": 0,
+            "value": "丙",
+            "start": 1,
+            "end": 2
+          },
+          {
+            "slot": 1,
+            "value": "丁",
+            "start": 5,
+            "end": 6
+          },
+          {
+            "slot": 2,
+            "value": "帛",
+            "start": 8,
+            "end": 9
+          }
+        ]
+      }
+    },
+    {
+      "source": "「丙」把「帛」交给「丁」。",
+      "paraphrase": "「丁」获「丙」所授「帛」。",
+      "reversed": "「丁」把「帛」交给「丙」。",
+      "positive": "SameRelation",
+      "negative": "RoleReversal",
+      "reading": {
+        "status": "KnownFiniteGrammar",
+        "source": "「丙」把「帛」交给「丁」。",
+        "construction": "hand-over",
+        "candidates": [
+          {
+            "agent": "丙",
+            "recipient": "丁",
+            "theme": "帛"
+          }
+        ],
+        "occurrences": [
+          {
+            "slot": 0,
+            "value": "丙",
+            "start": 1,
+            "end": 2
+          },
+          {
+            "slot": 1,
+            "value": "帛",
+            "start": 5,
+            "end": 6
+          },
+          {
+            "slot": 2,
+            "value": "丁",
+            "start": 10,
+            "end": 11
+          }
+        ]
+      }
+    },
+    {
+      "source": "「丁」获「丙」所授「帛」。",
+      "paraphrase": "「丙」授「丁」「帛」。",
+      "reversed": "「丙」获「丁」所授「帛」。",
+      "positive": "SameRelation",
+      "negative": "RoleReversal",
+      "reading": {
+        "status": "KnownFiniteGrammar",
+        "source": "「丁」获「丙」所授「帛」。",
+        "construction": "receive",
+        "candidates": [
+          {
+            "agent": "丙",
+            "recipient": "丁",
+            "theme": "帛"
+          }
+        ],
+        "occurrences": [
+          {
+            "slot": 0,
+            "value": "丁",
+            "start": 1,
+            "end": 2
+          },
+          {
+            "slot": 1,
+            "value": "丙",
+            "start": 5,
+            "end": 6
+          },
+          {
+            "slot": 2,
+            "value": "帛",
+            "start": 10,
+            "end": 11
+          }
+        ]
+      }
+    },
+    {
+      "source": "「戊」授「己」「玉」。",
+      "paraphrase": "「戊」把「玉」交给「己」。",
+      "reversed": "「己」授「戊」「玉」。",
+      "positive": "SameRelation",
+      "negative": "RoleReversal",
+      "reading": {
+        "status": "KnownFiniteGrammar",
+        "source": "「戊」授「己」「玉」。",
+        "construction": "grant",
+        "candidates": [
+          {
+            "agent": "戊",
+            "recipient": "己",
+            "theme": "玉"
+          }
+        ],
+        "occurrences": [
+          {
+            "slot": 0,
+            "value": "戊",
+            "start": 1,
+            "end": 2
+          },
+          {
+            "slot": 1,
+            "value": "己",
+            "start": 5,
+            "end": 6
+          },
+          {
+            "slot": 2,
+            "value": "玉",
+            "start": 8,
+            "end": 9
+          }
+        ]
+      }
+    },
+    {
+      "source": "「戊」把「玉」交给「己」。",
+      "paraphrase": "「己」获「戊」所授「玉」。",
+      "reversed": "「己」把「玉」交给「戊」。",
+      "positive": "SameRelation",
+      "negative": "RoleReversal",
+      "reading": {
+        "status": "KnownFiniteGrammar",
+        "source": "「戊」把「玉」交给「己」。",
+        "construction": "hand-over",
+        "candidates": [
+          {
+            "agent": "戊",
+            "recipient": "己",
+            "theme": "玉"
+          }
+        ],
+        "occurrences": [
+          {
+            "slot": 0,
+            "value": "戊",
+            "start": 1,
+            "end": 2
+          },
+          {
+            "slot": 1,
+            "value": "玉",
+            "start": 5,
+            "end": 6
+          },
+          {
+            "slot": 2,
+            "value": "己",
+            "start": 10,
+            "end": 11
+          }
+        ]
+      }
+    },
+    {
+      "source": "「己」获「戊」所授「玉」。",
+      "paraphrase": "「戊」授「己」「玉」。",
+      "reversed": "「戊」获「己」所授「玉」。",
+      "positive": "SameRelation",
+      "negative": "RoleReversal",
+      "reading": {
+        "status": "KnownFiniteGrammar",
+        "source": "「己」获「戊」所授「玉」。",
+        "construction": "receive",
+        "candidates": [
+          {
+            "agent": "戊",
+            "recipient": "己",
+            "theme": "玉"
+          }
+        ],
+        "occurrences": [
+          {
+            "slot": 0,
+            "value": "己",
+            "start": 1,
+            "end": 2
+          },
+          {
+            "slot": 1,
+            "value": "戊",
+            "start": 5,
+            "end": 6
+          },
+          {
+            "slot": 2,
+            "value": "玉",
+            "start": 10,
+            "end": 11
+          }
+        ]
+      }
+    },
+    {
+      "source": "「庚」授「辛」「简」。",
+      "paraphrase": "「庚」把「简」交给「辛」。",
+      "reversed": "「辛」授「庚」「简」。",
+      "positive": "SameRelation",
+      "negative": "RoleReversal",
+      "reading": {
+        "status": "KnownFiniteGrammar",
+        "source": "「庚」授「辛」「简」。",
+        "construction": "grant",
+        "candidates": [
+          {
+            "agent": "庚",
+            "recipient": "辛",
+            "theme": "简"
+          }
+        ],
+        "occurrences": [
+          {
+            "slot": 0,
+            "value": "庚",
+            "start": 1,
+            "end": 2
+          },
+          {
+            "slot": 1,
+            "value": "辛",
+            "start": 5,
+            "end": 6
+          },
+          {
+            "slot": 2,
+            "value": "简",
+            "start": 8,
+            "end": 9
+          }
+        ]
+      }
+    },
+    {
+      "source": "「庚」把「简」交给「辛」。",
+      "paraphrase": "「辛」获「庚」所授「简」。",
+      "reversed": "「辛」把「简」交给「庚」。",
+      "positive": "SameRelation",
+      "negative": "RoleReversal",
+      "reading": {
+        "status": "KnownFiniteGrammar",
+        "source": "「庚」把「简」交给「辛」。",
+        "construction": "hand-over",
+        "candidates": [
+          {
+            "agent": "庚",
+            "recipient": "辛",
+            "theme": "简"
+          }
+        ],
+        "occurrences": [
+          {
+            "slot": 0,
+            "value": "庚",
+            "start": 1,
+            "end": 2
+          },
+          {
+            "slot": 1,
+            "value": "简",
+            "start": 5,
+            "end": 6
+          },
+          {
+            "slot": 2,
+            "value": "辛",
+            "start": 10,
+            "end": 11
+          }
+        ]
+      }
+    },
+    {
+      "source": "「辛」获「庚」所授「简」。",
+      "paraphrase": "「庚」授「辛」「简」。",
+      "reversed": "「庚」获「辛」所授「简」。",
+      "positive": "SameRelation",
+      "negative": "RoleReversal",
+      "reading": {
+        "status": "KnownFiniteGrammar",
+        "source": "「辛」获「庚」所授「简」。",
+        "construction": "receive",
+        "candidates": [
+          {
+            "agent": "庚",
+            "recipient": "辛",
+            "theme": "简"
+          }
+        ],
+        "occurrences": [
+          {
+            "slot": 0,
+            "value": "辛",
+            "start": 1,
+            "end": 2
+          },
+          {
+            "slot": 1,
+            "value": "庚",
+            "start": 5,
+            "end": 6
+          },
+          {
+            "slot": 2,
+            "value": "简",
+            "start": 10,
+            "end": 11
+          }
+        ]
+      }
+    }
+  ],
+  "controls": [
+    "zero-fuel",
+    "partial-fuel",
+    "conflicting-label",
+    "unseen-construction",
+    "negation",
+    "out-of-grammar",
+    "stale-version",
+    "duplicate-evidence-id",
+    "nonfinite-fuel",
+    "inconsistent-replay",
+    "existing-ack-gate",
+    "distinct-occurrences"
+  ],
+  "limitations": [
+    "controlled grammar",
+    "supervised labels",
+    "external Adva-policy adapter, not native learn",
+    "runtime transpilation only; full TypeScript/Jest and CI not run",
+    "no speedup claim against ordinary role parsing"
+  ],
+  "runtime": "v26.4.0",
+  "sha256": {
+    "src/inscription/analysis.ts": "4a3a12912e79161e2ce875a39bae292c68565dcbce6cc45086b30eb099b9f15f",
+    "src/inscription/reverse.ts": "b24931f42d683ad9c2d24309721d6bed5a8cd48b5f24b77a1f5d6a6447c0d167",
+    "src/inscription/pipeline.ts": "6386a2618c0f3f141f28a4a8cc2cb6cfaf6627a325b4951a85cb441a0a490d8a",
+    "src/inscription/relations.ts": "3b958f1a5de8124359481de14c13622f708c2ffb9815f95df3e3e2bab215307a",
+    "experiments/relations/run.cjs": "88fb9f035f80a68d26d685f0c64c933e6bf8bb65b7206a1f074ba3d4cb2b6819"
+  }
+}

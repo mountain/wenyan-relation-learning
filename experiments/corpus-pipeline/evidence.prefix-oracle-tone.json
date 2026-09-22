@@ -1,0 +1,428 @@
+{
+  "schema": "wenyan.corpus-pipeline.evidence.v1",
+  "baseline": "mountain/wenyan@6143e22ca8319a8ebca89b59a29f20158812b63f",
+  "corpus": {
+    "format": "wenyan.corpus.v1",
+    "works": 16,
+    "passagesTotal": 8208,
+    "passagesProcessed": 8208
+  },
+  "runtime": "v26.4.0",
+  "census": {
+    "errors": 0,
+    "containsThree": 1313,
+    "containsThreeRate": 0.16,
+    "meanConvergenceScore": 0.0806,
+    "meanGrowthLearningPulse": 0.2537,
+    "confidenceBands": {
+      "exploratory": 8202,
+      "working": 6,
+      "strong": 0
+    },
+    "distinctHypothesisSentences": 2,
+    "hypothesisSentences": [
+      {
+        "text": "【新假设（实验性）】贞：其事其成，用乍彝，子孙永宝用。",
+        "count": 6895
+      },
+      {
+        "text": "【新假设（实验性）】贞：三事其成，用乍彝，子孙永宝用。",
+        "count": 1313
+      }
+    ],
+    "oracleToneMarkerHits": {
+      "王在": 11,
+      "令": 615,
+      "成事": 17,
+      "用乍": 0,
+      "万年": 0,
+      "永宝用": 0,
+      "卜": 85,
+      "贞": 0
+    },
+    "analysisSignals": {
+      "completion": 17,
+      "location": 11,
+      "command": 4
+    },
+    "optimization": {
+      "acceptedSteps": 8209,
+      "rejectedSteps": 16415
+    },
+    "relationGrammarStatus": {
+      "Unknown": 8208
+    },
+    "maxConvergence": {
+      "score": 0.6139166666666668,
+      "text": "天子無妻，告人無匹也。四海之內無客禮，告無適也。足能行，待相者然後進；口能言，待官人然後詔。不視而見，不聽而聰，不言而信",
+      "zh": "荀子"
+    },
+    "minConvergence": {
+      "score": 0,
+      "text": "子曰：「學而時習之，不亦說乎？有朋自遠方來，不亦樂乎？人不知而不慍，不亦君子乎？」",
+      "zh": "論語"
+    }
+  },
+  "perWork": [
+    {
+      "id": "analects",
+      "zh": "論語",
+      "passages": 507,
+      "containsThree": 54,
+      "meanConvergenceScore": 0.0528,
+      "confidenceBands": {
+        "exploratory": 507,
+        "working": 0,
+        "strong": 0
+      },
+      "passagesWithAnySignal": 1,
+      "passagesNotMatchingRelationGrammar": 507
+    },
+    {
+      "id": "mencius",
+      "zh": "孟子",
+      "passages": 742,
+      "containsThree": 47,
+      "meanConvergenceScore": 0.0315,
+      "confidenceBands": {
+        "exploratory": 742,
+        "working": 0,
+        "strong": 0
+      },
+      "passagesWithAnySignal": 1,
+      "passagesNotMatchingRelationGrammar": 742
+    },
+    {
+      "id": "great-learning",
+      "zh": "大學",
+      "passages": 11,
+      "containsThree": 0,
+      "meanConvergenceScore": 0.0019,
+      "confidenceBands": {
+        "exploratory": 11,
+        "working": 0,
+        "strong": 0
+      },
+      "passagesWithAnySignal": 0,
+      "passagesNotMatchingRelationGrammar": 11
+    },
+    {
+      "id": "doctrine-of-the-mean",
+      "zh": "中庸",
+      "passages": 34,
+      "containsThree": 5,
+      "meanConvergenceScore": 0.0731,
+      "confidenceBands": {
+        "exploratory": 34,
+        "working": 0,
+        "strong": 0
+      },
+      "passagesWithAnySignal": 0,
+      "passagesNotMatchingRelationGrammar": 34
+    },
+    {
+      "id": "classic-of-poetry",
+      "zh": "詩經",
+      "passages": 663,
+      "containsThree": 35,
+      "meanConvergenceScore": 0.0272,
+      "confidenceBands": {
+        "exploratory": 663,
+        "working": 0,
+        "strong": 0
+      },
+      "passagesWithAnySignal": 3,
+      "passagesNotMatchingRelationGrammar": 663
+    },
+    {
+      "id": "book-of-documents",
+      "zh": "尚書",
+      "passages": 412,
+      "containsThree": 80,
+      "meanConvergenceScore": 0.0973,
+      "confidenceBands": {
+        "exploratory": 412,
+        "working": 0,
+        "strong": 0
+      },
+      "passagesWithAnySignal": 3,
+      "passagesNotMatchingRelationGrammar": 412
+    },
+    {
+      "id": "zhouyi",
+      "zh": "周易",
+      "passages": 324,
+      "containsThree": 92,
+      "meanConvergenceScore": 0.1399,
+      "confidenceBands": {
+        "exploratory": 324,
+        "working": 0,
+        "strong": 0
+      },
+      "passagesWithAnySignal": 0,
+      "passagesNotMatchingRelationGrammar": 324
+    },
+    {
+      "id": "book-of-rites",
+      "zh": "禮記",
+      "passages": 1332,
+      "containsThree": 265,
+      "meanConvergenceScore": 0.0991,
+      "confidenceBands": {
+        "exploratory": 1332,
+        "working": 0,
+        "strong": 0
+      },
+      "passagesWithAnySignal": 4,
+      "passagesNotMatchingRelationGrammar": 1332
+    },
+    {
+      "id": "laozi",
+      "zh": "老子",
+      "passages": 434,
+      "containsThree": 8,
+      "meanConvergenceScore": 0.0095,
+      "confidenceBands": {
+        "exploratory": 434,
+        "working": 0,
+        "strong": 0
+      },
+      "passagesWithAnySignal": 1,
+      "passagesNotMatchingRelationGrammar": 434
+    },
+    {
+      "id": "zhuangzi",
+      "zh": "莊子",
+      "passages": 903,
+      "containsThree": 95,
+      "meanConvergenceScore": 0.0522,
+      "confidenceBands": {
+        "exploratory": 903,
+        "working": 0,
+        "strong": 0
+      },
+      "passagesWithAnySignal": 0,
+      "passagesNotMatchingRelationGrammar": 903
+    },
+    {
+      "id": "xunzi",
+      "zh": "荀子",
+      "passages": 481,
+      "containsThree": 93,
+      "meanConvergenceScore": 0.0973,
+      "confidenceBands": {
+        "exploratory": 479,
+        "working": 2,
+        "strong": 0
+      },
+      "passagesWithAnySignal": 3,
+      "passagesNotMatchingRelationGrammar": 481
+    },
+    {
+      "id": "hanfeizi",
+      "zh": "韓非子",
+      "passages": 766,
+      "containsThree": 140,
+      "meanConvergenceScore": 0.094,
+      "confidenceBands": {
+        "exploratory": 766,
+        "working": 0,
+        "strong": 0
+      },
+      "passagesWithAnySignal": 1,
+      "passagesNotMatchingRelationGrammar": 766
+    },
+    {
+      "id": "mozi",
+      "zh": "墨子",
+      "passages": 650,
+      "containsThree": 139,
+      "meanConvergenceScore": 0.1074,
+      "confidenceBands": {
+        "exploratory": 650,
+        "working": 0,
+        "strong": 0
+      },
+      "passagesWithAnySignal": 1,
+      "passagesNotMatchingRelationGrammar": 650
+    },
+    {
+      "id": "guanzi",
+      "zh": "管子",
+      "passages": 736,
+      "containsThree": 205,
+      "meanConvergenceScore": 0.1437,
+      "confidenceBands": {
+        "exploratory": 733,
+        "working": 3,
+        "strong": 0
+      },
+      "passagesWithAnySignal": 9,
+      "passagesNotMatchingRelationGrammar": 736
+    },
+    {
+      "id": "liezi",
+      "zh": "列子",
+      "passages": 139,
+      "containsThree": 40,
+      "meanConvergenceScore": 0.1427,
+      "confidenceBands": {
+        "exploratory": 139,
+        "working": 0,
+        "strong": 0
+      },
+      "passagesWithAnySignal": 0,
+      "passagesNotMatchingRelationGrammar": 139
+    },
+    {
+      "id": "sunzi",
+      "zh": "孫子兵法",
+      "passages": 74,
+      "containsThree": 15,
+      "meanConvergenceScore": 0.1036,
+      "confidenceBands": {
+        "exploratory": 73,
+        "working": 1,
+        "strong": 0
+      },
+      "passagesWithAnySignal": 1,
+      "passagesNotMatchingRelationGrammar": 74
+    }
+  ],
+  "acknowledgementGate": {
+    "blocked": true,
+    "blockedReason": "[warning] 请先确认这不是真实故事、只是探索游戏，然后再继续。"
+  },
+  "oracleMarkerDiagnostics": {
+    "note": "scoreOracleTone() (src/inscription/reverse.ts) tests the input against a fixed 8-marker list. Three of those markers contain simplified-only characters while this corpus is traditional, so they cannot match and the score is capped at 5/8 no matter what is supplied. Counted over the whole corpus, not the sample.",
+    "perMarker": [
+      {
+        "marker": "王在",
+        "traditionalCounterpart": null,
+        "passagesAsWritten": 11,
+        "passagesAsTraditionalForm": 0
+      },
+      {
+        "marker": "令",
+        "traditionalCounterpart": null,
+        "passagesAsWritten": 615,
+        "passagesAsTraditionalForm": 0
+      },
+      {
+        "marker": "成事",
+        "traditionalCounterpart": null,
+        "passagesAsWritten": 17,
+        "passagesAsTraditionalForm": 0
+      },
+      {
+        "marker": "用乍",
+        "traditionalCounterpart": null,
+        "passagesAsWritten": 0,
+        "passagesAsTraditionalForm": 0
+      },
+      {
+        "marker": "万年",
+        "traditionalCounterpart": "萬年",
+        "passagesAsWritten": 0,
+        "passagesAsTraditionalForm": 10
+      },
+      {
+        "marker": "永宝用",
+        "traditionalCounterpart": "永寶用",
+        "passagesAsWritten": 0,
+        "passagesAsTraditionalForm": 0
+      },
+      {
+        "marker": "卜",
+        "traditionalCounterpart": null,
+        "passagesAsWritten": 85,
+        "passagesAsTraditionalForm": 0
+      },
+      {
+        "marker": "贞",
+        "traditionalCounterpart": "貞",
+        "passagesAsWritten": 0,
+        "passagesAsTraditionalForm": 154
+      }
+    ],
+    "structurallyUnmatchable": [
+      {
+        "marker": "万年",
+        "traditionalCounterpart": "萬年",
+        "occurrencesUnderTraditionalForm": 10
+      },
+      {
+        "marker": "贞",
+        "traditionalCounterpart": "貞",
+        "occurrencesUnderTraditionalForm": 154
+      }
+    ],
+    "theoreticalMaxOracleToneScore": 0.75
+  },
+  "examples": [
+    {
+      "work": "論語",
+      "id": "1.1",
+      "text": "子曰：「學而時習之，不亦說乎？有朋自遠方來，不亦樂乎？人不知而不慍，不亦君子乎？」",
+      "convergence": 0,
+      "band": "exploratory",
+      "hypothesis": "【新假设（实验性）】贞：其事其成，用乍彝，子孙永宝用。",
+      "oracleTone": 0,
+      "signals": []
+    },
+    {
+      "work": "論語",
+      "id": "1.2",
+      "text": "有子曰：「其爲人也孝弟，而好犯上者，鮮矣；不好犯上，而好作亂者，未之有也。君子務本，本立而道生；孝弟",
+      "convergence": 0,
+      "band": "exploratory",
+      "hypothesis": "【新假设（实验性）】贞：其事其成，用乍彝，子孙永宝用。",
+      "oracleTone": 0,
+      "signals": []
+    },
+    {
+      "work": "論語",
+      "id": "1.3",
+      "text": "子曰：「巧言令色，鮮矣仁。」",
+      "convergence": 0.0205,
+      "band": "exploratory",
+      "hypothesis": "【新假设（实验性）】贞：其事其成，用乍彝，子孙永宝用。",
+      "oracleTone": 0.125,
+      "signals": []
+    },
+    {
+      "work": "論語",
+      "id": "1.4",
+      "text": "曾子曰：「吾日三省吾身：爲人謀而不忠乎？與朋友交而不信乎？傳不習乎？」",
+      "convergence": 0.49277777777777776,
+      "band": "exploratory",
+      "hypothesis": "【新假设（实验性）】贞：三事其成，用乍彝，子孙永宝用。",
+      "oracleTone": 0,
+      "signals": []
+    },
+    {
+      "work": "論語",
+      "id": "1.5",
+      "text": "子曰：「道千乘之國，敬事而信，節用而愛人，使民以時。」",
+      "convergence": 0,
+      "band": "exploratory",
+      "hypothesis": "【新假设（实验性）】贞：其事其成，用乍彝，子孙永宝用。",
+      "oracleTone": 0,
+      "signals": []
+    }
+  ],
+  "sha256": {
+    "src/inscription/analysis.ts": "4a3a12912e79161e2ce875a39bae292c68565dcbce6cc45086b30eb099b9f15f",
+    "src/inscription/reverse.ts": "24777f09e0cece3021452cdb65a034ce364b5fc31fdf4847bc6a09865ffa9218",
+    "src/inscription/relations.ts": "3b958f1a5de8124359481de14c13622f708c2ffb9815f95df3e3e2bab215307a",
+    "src/inscription/pipeline.ts": "6386a2618c0f3f141f28a4a8cc2cb6cfaf6627a325b4951a85cb441a0a490d8a"
+  },
+  "limitations": [
+    "Census, not a benchmark: no accuracy measure exists for this genre under this pipeline.",
+    "The reverse hypothesis sentence is drawn from a fixed set (see hypothesisSentences); its information content about the input is therefore limited to which set member was chosen.",
+    "oracleToneScore counts bronze-inscription markers; their presence in classical prose is lexical coincidence, not evidence that the pipeline recognised an inscription.",
+    "convergenceScore mixes containsThree, channel structure and oracle tone according to the preset weights; it is not a quality or correctness measure.",
+    "Corpus text is the Wikisource transcription as built in data/corpus; transcription errors, if any, are outside this experiment."
+  ],
+  "archiveNote": "Census captured BEFORE the scoreOracleTone() variant fix in src/inscription/reverse.ts. Retained so the before/after comparison in README.md is checkable in-repo: this file shows the pre-fix oracleTone cap of 0.75 and the markers that could not match traditional text. Current results are in evidence.json."
+}

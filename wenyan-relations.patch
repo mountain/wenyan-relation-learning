@@ -1,0 +1,1303 @@
+--- a/src/inscription/pipeline.ts
++++ b/src/inscription/pipeline.ts
+@@ -1,4 +1,6 @@
+ import { analyzeInscription, InscriptionAnalysis } from "./analysis";
++import { readRelation } from "./relations";
++import type { RelationModel, RelationReading } from "./relations";
+ import {
+   forwardTriCompute,
+   reverseTriCompute,
+@@ -38,6 +40,7 @@
+ };
+ 
+ export type InscriptionPipelineSuccessResult = {
++  relation?: RelationReading;
+   blocked: false;
+   entryWarning: string;
+   analysis: InscriptionAnalysis;
+@@ -69,6 +72,7 @@
+   "[warning] 请先确认这不是真实故事、只是探索游戏，然后再继续。";
+ 
+ export type InscriptionPipelineOptions = {
++  relationModel?: RelationModel;
+   steps?: number;
+   target?: ReverseTarget;
+   optimizer?: {
+@@ -299,6 +303,7 @@
+ 
+   return {
+     blocked: false,
++    ...(options.relationModel ? { relation: readRelation(txt, options.relationModel) } : {}),
+     entryWarning: INSCRIPTION_EXPERIMENT_WARNING,
+     analysis,
+     forward,
+--- a/src/inscription/reverse.ts
++++ b/src/inscription/reverse.ts
+@@ -61,15 +61,41 @@
+   return nums.reduce((a, b) => a + b, 0) / nums.length;
+ }
+ 
++/**
++ * Markers used to score "oracle tone": characters/formulas characteristic of
++ * bronze-inscription language.
++ *
++ * Each entry is a group of spelling variants for ONE marker; the group counts as
++ * a single hit if any of its variants occurs, so the denominator stays 8 and
++ * existing profiles and thresholds remain comparable.
++ *
++ * Variants exist because the original list was written in simplified characters
++ * only, while classical corpora are normally traditional. `贞` could therefore
++ * never match `貞` — which occurs in 154 passages of the wenyan.corpus.v1
++ * classical corpus and 171 times in 周易 alone, precisely the divination
++ * vocabulary this function is meant to detect — silently capping the score at
++ * 6/8 regardless of input. Both forms are accepted so neither simplified nor
++ * traditional text is penalised.
++ */
++const ORACLE_TONE_MARKER_GROUPS: readonly (readonly string[])[] = [
++  ["王在"],
++  ["令"],
++  ["成事"],
++  ["用乍"],
++  ["万年", "萬年"],
++  ["永宝用", "永寶用"],
++  ["卜"],
++  ["贞", "貞"],
++];
++
+ function scoreOracleTone(analysis: InscriptionAnalysis) {
+-  const markers = ["王在", "令", "成事", "用乍", "万年", "永宝用", "卜", "贞"];
+   let hits = 0;
+-  for (const marker of markers) {
+-    if (analysis.normalized.includes(marker)) {
++  for (const variants of ORACLE_TONE_MARKER_GROUPS) {
++    if (variants.some((marker) => analysis.normalized.includes(marker))) {
+       hits++;
+     }
+   }
+-  return hits / markers.length;
++  return hits / ORACLE_TONE_MARKER_GROUPS.length;
+ }
+ 
+ const DEFAULT_PROFILE = {
+--- /dev/null
++++ b/src/inscription/relations.ts
+@@ -0,0 +1,136 @@
++/** Research-only language adapter of Adva 0131's evidence-bound update policy.
++ * Fixed controlled grammar, supervised role labels; not native Adva learn.
++ * Codex (OpenAI), 2026-09-22. New contribution under Unknown v0.3.
++ */
++export type Roles = { agent: string; recipient: string; theme: string };
++export type Example = { id: string; text: string; expected: Roles };
++export type RelationModel = {
++  schema: "wenyan.relations.v1";
++  examples: Example[];
++};
++export type RelationReading = {
++  status: "KnownFiniteGrammar" | "Unknown";
++  reason?: string;
++  source: string;
++  candidates: Roles[];
++  occurrences: { slot: number; value: string; start: number; end: number }[];
++  construction?: string;
++};
++const ROLE_KEYS = ["agent", "recipient", "theme"] as const;
++const ORDERS = [[0,1,2], [0,2,1], [1,0,2], [1,2,0], [2,0,1], [2,1,0]];
++const SLOT = "「([^「」\\r\\n]{1,32})」";
++const GRAMMAR = [
++  { id: "grant", pattern: new RegExp(`^${SLOT}授${SLOT}${SLOT}。?$`, "u") },
++  { id: "hand-over", pattern: new RegExp(`^${SLOT}把${SLOT}交给${SLOT}。?$`, "u") },
++  { id: "receive", pattern: new RegExp(`^${SLOT}获${SLOT}所授${SLOT}。?$`, "u") }
++];
++
++function parse(text: string) {
++  if (typeof text !== "string" || text.length > 256) return undefined;
++  for (const rule of GRAMMAR) {
++    const m = rule.pattern.exec(text);
++    if (!m) continue;
++    let cursor = 0;
++    const occurrences = m.slice(1).map((value, slot) => {
++      const start = text.indexOf("「", cursor) + 1;
++      const end = text.indexOf("」", start);
++      cursor = end + 1;
++      return { slot, value, start, end };
++    });
++    return { construction: rule.id, slots: m.slice(1), occurrences };
++  }
++  return undefined;
++}
++
++function assign(slots: string[], order: number[]): Roles {
++  return { agent: slots[order[0]], recipient: slots[order[1]], theme: slots[order[2]] };
++}
++function equal(a: Roles, b: Roles) {
++  return ROLE_KEYS.every(k => a[k] === b[k]);
++}
++function validRoles(r: Roles) {
++  return r && Object.keys(r).sort().join(",") === "agent,recipient,theme"
++    && ROLE_KEYS.every(k => typeof r[k] === "string" && r[k].length > 0);
++}
++function replay(model: RelationModel) {
++  if (!model || model.schema !== "wenyan.relations.v1"
++      || !Array.isArray(model.examples) || model.examples.length > 32) {
++    throw new Error("invalid relation model");
++  }
++  const rules: Record<string, number[][]> = {};
++  for (const rule of GRAMMAR) rules[rule.id] = ORDERS.slice();
++  const seen = new Set<string>();
++  for (const e of model.examples) {
++    if (!e || typeof e.id !== "string" || !e.id || e.id.length > 128
++        || seen.has(e.id) || !validRoles(e.expected)) throw new Error("invalid evidence");
++    seen.add(e.id);
++    const p = parse(e.text);
++    if (!p) throw new Error("out-of-grammar evidence");
++    rules[p.construction] = rules[p.construction].filter(order =>
++      equal(assign(p.slots, order), e.expected));
++    if (!rules[p.construction].length) throw new Error("contradictory evidence");
++  }
++  return rules;
++}
++export function emptyRelationModel(): RelationModel {
++  return { schema: "wenyan.relations.v1", examples: [] };
++}
++export function readRelation(text: string, model: RelationModel): RelationReading {
++  const rules = replay(model);
++  const p = parse(text);
++  if (!p) return { status: "Unknown", reason: "outside-controlled-grammar",
++    source: text, candidates: [], occurrences: [] };
++  const candidates = rules[p.construction].map(order => assign(p.slots, order));
++  return {
++    status: candidates.length === 1 ? "KnownFiniteGrammar" : "Unknown",
++    ...(candidates.length === 1 ? {} : { reason: "ambiguous-role-mapping" }),
++    source: text, construction: p.construction, candidates, occurrences: p.occurrences
++  };
++}
++
++/** Explicit invocation; no hidden process-global state and no automatic restart.
++ * A unit of fuel checks one candidate against one declared labelled example.
++ * Incomplete checks add no constraint. Call again explicitly to continue.
++ */
++export function learnRelations(model: RelationModel, example: Example, fuel: number) {
++  const rules = replay(model);
++  if (!Number.isSafeInteger(fuel) || fuel < 0 || fuel > 192) throw new Error("invalid fuel");
++  if (!example || typeof example.id !== "string" || !example.id || example.id.length > 128
++      || !validRoles(example.expected)) throw new Error("invalid training example");
++  if (model.examples.length >= 32) throw new Error("evidence capacity reached");
++  if (model.examples.some(e => e.id === example.id)) throw new Error("duplicate evidence id");
++  const p = parse(example.text);
++  if (!p) return { status: "Unknown", reason: "outside-controlled-grammar",
++    model, checked: 0, refutations: [] };
++  const candidates = rules[p.construction];
++  const refutations: { order: number[]; actual: Roles; expected: Roles }[] = [];
++  const survivors: number[][] = [];
++  let checked = 0;
++  for (const order of candidates) {
++    if (checked === fuel) return { status: "Unknown", reason: "fuel-exhausted",
++      model, checked, refutations };
++    checked++;
++    const actual = assign(p.slots, order);
++    if (equal(actual, example.expected)) survivors.push(order);
++    else refutations.push({ order: order.slice(), actual, expected: { ...example.expected } });
++  }
++  if (!survivors.length) return { status: "Conflict", reason: "contradictory-label",
++    model, checked, refutations };
++  // The label is a declared supervisor constraint, not an inferred historical fact.
++  const next: RelationModel = JSON.parse(JSON.stringify({ ...model,
++    examples: [...model.examples, example] }));
++  replay(next);
++  return { status: "Updated", model: next, checked, refutations,
++    remainingMappings: survivors.length };
++}
++
++export function compareRelations(a: string, b: string, model: RelationModel) {
++  const left = readRelation(a, model), right = readRelation(b, model);
++  if (left.status === "Unknown" || right.status === "Unknown")
++    return { status: "Unknown", left, right };
++  const x = left.candidates[0], y = right.candidates[0];
++  const status = equal(x, y) ? "SameRelation" :
++    x.agent !== x.recipient && x.agent === y.recipient && x.recipient === y.agent
++      && x.theme === y.theme ? "RoleReversal" : "DifferentRelation";
++  return { status, left, right };
++}
+--- /dev/null
++++ b/experiments/relations/contract.json
+@@ -0,0 +1,15 @@
++{
++  "schema": "wenyan.relation-calibration.contract.v1",
++  "question": "Can supervised constraints change candidate role assignments on new entities while preserving controlled paraphrases and distinguishing role reversal?",
++  "baseline": "mountain/wenyan@6143e22ca8319a8ebca89b59a29f20158812b63f",
++  "adva_policy": "0131: checked refutation constrains proposals; Unknown is not a refutation; reuse needs fresh verification",
++  "scope": "external language adapter, not native Adva learn; three supplied constructions, six role permutations each",
++  "training_examples": 3,
++  "held_out_entity_triples": 3,
++  "positive_pairs": 9,
++  "role_reversals": 9,
++  "budgets": {"wall_seconds": 20, "node_heap_mib": 256, "max_model_examples": 32, "max_text_utf16_units": 256, "max_candidate_checks_per_update": 192, "artifact_bytes": 131072, "automatic_restarts": 0},
++  "protected": ["legacy pipeline output without opt-in", "existing acknowledgement gate", "source occurrences", "explicit supervisor labels", "unsupported input Unknown"],
++  "success": "Held-out role assignments agree with fixture labels; nine paraphrases match; nine role reversals differ; controls pass",
++  "nonclaims": ["natural-language understanding", "historical inscription interpretation", "learning an unrestricted grammar", "six-shu/six-germ identification", "native semantic admission", "speedup over a handwritten parser"]
++}
+--- /dev/null
++++ b/experiments/relations/run.cjs
+@@ -0,0 +1,122 @@
++// Node 24/26 runtime-only harness for the pinned TypeScript subset.
++// Does not replace the repository TypeScript/Jest gates.
++const fs = require('node:fs');
++const path = require('node:path');
++const vm = require('node:vm');
++const assert = require('node:assert/strict');
++const { stripTypeScriptTypes } = require('node:module');
++const { createHash } = require('node:crypto');
++const root = path.resolve(__dirname, '../..');
++const cache = new Map();
++function load(file) {
++  file = path.resolve(file);
++  if (cache.has(file)) return cache.get(file);
++  const original = fs.readFileSync(file, 'utf8');
++  // 'strip' is accepted by Node 24 and 26; 'transform' was removed in Node 26.
++  let code = stripTypeScriptTypes(original, {mode: 'strip'});
++  const bindings = {};
++  code = code.replace(/import\s*\{([^}]+)\}\s*from\s*["'](.+?)["'];?/g, (_, names, relative) => {
++    const dep = load(path.resolve(path.dirname(file), relative + '.ts'));
++    // TS 4.2's ordinary imports include type-only names; no runtime binding exists.
++    for (const name of names.split(',').map(x => x.trim()).filter(Boolean)) {
++      if (Object.hasOwn(dep, name)) bindings[name] = dep[name];
++    }
++    return '';
++  });
++  const exported = Array.from(code.matchAll(/export\s+(?:function|const)\s+(\w+)/g), m => m[1]);
++  code = code.replace(/export\s+(?=function|const)/g, '');
++  const script = new vm.Script(`(function(){${code}\nreturn {${exported.join(',')}};})()`, {filename:file});
++  const out = script.runInNewContext(bindings, {timeout:1000});
++  cache.set(file, out);
++  return out;
++}
++const r = load(path.join(root,'src/inscription/relations.ts'));
++const {runInscriptionPipeline: pipeline} = load(path.join(root,'src/inscription/pipeline.ts'));
++const canonical = x => JSON.parse(JSON.stringify(x));
++const same = (a,b) => assert.deepEqual(canonical(a),canonical(b));
++const forms = (a,b,t) => [
++  `「${a}」授「${b}」「${t}」。`,
++  `「${a}」把「${t}」交给「${b}」。`,
++  `「${b}」获「${a}」所授「${t}」。`
++];
++const expected = {agent:'甲',recipient:'乙',theme:'书'};
++const training = forms('甲','乙','书').map((text,i)=>({id:`train-${i}`,text,expected}));
++const empty = r.emptyRelationModel();
++let model = empty;
++const updates = [];
++for (const e of training) {
++  const before = JSON.stringify(model);
++  const result = r.learnRelations(model,e,6);
++  assert.equal(JSON.stringify(model),before);
++  assert.equal(result.status,'Updated');
++  assert.equal(result.remainingMappings,1);
++  assert.equal(result.refutations.length,5);
++  updates.push(result);
++  model = result.model;
++}
++model = canonical(model); // saved/reloaded evidence is sufficient to rebuild constraints
++const receipts = [];
++let baselineCollisions = 0;
++for (const [a,b,t] of [['丙','丁','帛'],['戊','己','玉'],['庚','辛','简']]) {
++  const texts = forms(a,b,t), reversed = forms(b,a,t);
++  for(let i=0;i<3;i++) {
++    const target = {agent:a,recipient:b,theme:t};
++    const out = pipeline(texts[i],{steps:3,relationModel:model});
++    assert.equal(out.blocked,false);
++    assert.equal(out.relation.status,'KnownFiniteGrammar');
++    same(out.relation.candidates,[target]);
++    const baseline = pipeline(texts[i],{steps:3});
++    const withoutRelation = {...out}; delete withoutRelation.relation;
++    same(withoutRelation,baseline); // opt-in leaves legacy result unchanged
++    for(const occ of out.relation.occurrences)
++      assert.equal(texts[i].slice(occ.start,occ.end),occ.value);
++    const positive = r.compareRelations(texts[i],texts[(i+1)%3],model);
++    const negative = r.compareRelations(texts[i],reversed[i],model);
++    assert.equal(positive.status,'SameRelation');
++    assert.equal(negative.status,'RoleReversal');
++    assert.equal(r.compareRelations(texts[i],reversed[i],empty).status,'Unknown');
++    if (baseline.reverse.hypothesis === pipeline(reversed[i],{steps:3}).reverse.hypothesis)
++      baselineCollisions++;
++    receipts.push({source:texts[i],paraphrase:texts[(i+1)%3],reversed:reversed[i],
++      positive:positive.status,negative:negative.status,reading:out.relation});
++  }
++}
++assert.equal(baselineCollisions,9);
++const zero = r.learnRelations(empty,training[0],0);
++assert.equal(zero.status,'Unknown'); assert.equal(zero.checked,0); same(zero.model,empty);
++const partial = r.learnRelations(empty,training[0],2);
++assert.equal(partial.status,'Unknown'); same(partial.model,empty);
++const conflict = r.learnRelations(model,{...training[0],id:'conflict',expected:
++  {agent:'乙',recipient:'甲',theme:'书'}},6);
++assert.equal(conflict.status,'Conflict'); same(conflict.model,model);
++for(const text of ['「甲」未授「乙」「书」。','甲给乙一本书。','「甲」把「书」交给「乙」，然后离开。'])
++  assert.equal(r.readRelation(text,model).status,'Unknown');
++const stale = {...model,schema:'wenyan.relations.v0'};
++assert.throws(()=>r.readRelation(training[0].text,stale));
++assert.throws(()=>r.readRelation(training[0].text,{...model,examples:[...model.examples,model.examples[0]]}));
++assert.throws(()=>r.learnRelations(model,{...training[0],id:'new'},Infinity));
++const poisoned = canonical(model); poisoned.examples.push({...training[0],id:'poison',expected:{agent:'乙',recipient:'甲',theme:'书'}});
++assert.throws(()=>r.readRelation(training[0].text,poisoned));
++const blocked = pipeline(training[0].text,{relationModel:stale,safety:{requireAcknowledgement:true}});
++assert.equal(blocked.blocked,true); // existing gate still executes first
++// Equal values never merge two source occurrences.
++const repeat = r.readRelation(forms('甲','甲','书')[0],model);
++assert.equal(repeat.occurrences.length,3);
++assert.notEqual(repeat.occurrences[0].start,repeat.occurrences[1].start);
++// Learning one construction grants no permission to another construction.
++const oneRule = r.learnRelations(empty,training[0],6).model;
++assert.equal(r.readRelation(training[1].text,oneRule).status,'Unknown');
++const files=['src/inscription/analysis.ts','src/inscription/reverse.ts','src/inscription/pipeline.ts','src/inscription/relations.ts','experiments/relations/run.cjs'];
++const evidence = {schema:'wenyan.relation-calibration.evidence.v1',
++  baseline:'mountain/wenyan@6143e22ca8319a8ebca89b59a29f20158812b63f',
++  adva_reference:'mountain/adva@79f6353511d736ae743b109f1c573b652eff170a/research-0131',
++  status:'PassedFiniteScope',training:3,heldOutEntities:9,positivePairs:9,roleReversals:9,
++  legacyHypothesisCollisions:baselineCollisions,updates,model,receipts,
++  controls:['zero-fuel','partial-fuel','conflicting-label','unseen-construction','negation','out-of-grammar',
++    'stale-version','duplicate-evidence-id','nonfinite-fuel','inconsistent-replay','existing-ack-gate','distinct-occurrences'],
++  limitations:['controlled grammar','supervised labels','external Adva-policy adapter, not native learn',
++    'runtime transpilation only; full TypeScript/Jest and CI not run','no speedup claim against ordinary role parsing'],
++  runtime:process.version,sha256:Object.fromEntries(files.map(f=>[f,createHash('sha256').update(fs.readFileSync(path.join(root,f))).digest('hex')]))};
++fs.writeFileSync(path.join(__dirname,'evidence.json'),JSON.stringify(evidence,null,2)+'\n');
++console.log(JSON.stringify({status:evidence.status,training:3,positivePairs:9,roleReversals:9,
++  legacyHypothesisCollisions:baselineCollisions,controls:evidence.controls.length}));
+--- /dev/null
++++ b/experiments/relations/evidence.json
+@@ -0,0 +1,772 @@
++{
++  "schema": "wenyan.relation-calibration.evidence.v1",
++  "baseline": "mountain/wenyan@6143e22ca8319a8ebca89b59a29f20158812b63f",
++  "adva_reference": "mountain/adva@79f6353511d736ae743b109f1c573b652eff170a/research-0131",
++  "status": "PassedFiniteScope",
++  "training": 3,
++  "heldOutEntities": 9,
++  "positivePairs": 9,
++  "roleReversals": 9,
++  "legacyHypothesisCollisions": 9,
++  "updates": [
++    {
++      "status": "Updated",
++      "model": {
++        "schema": "wenyan.relations.v1",
++        "examples": [
++          {
++            "id": "train-0",
++            "text": "「甲」授「乙」「书」。",
++            "expected": {
++              "agent": "甲",
++              "recipient": "乙",
++              "theme": "书"
++            }
++          }
++        ]
++      },
++      "checked": 6,
++      "refutations": [
++        {
++          "order": [
++            0,
++            2,
++            1
++          ],
++          "actual": {
++            "agent": "甲",
++            "recipient": "书",
++            "theme": "乙"
++          },
++          "expected": {
++            "agent": "甲",
++            "recipient": "乙",
++            "theme": "书"
++          }
++        },
++        {
++          "order": [
++            1,
++            0,
++            2
++          ],
++          "actual": {
++            "agent": "乙",
++            "recipient": "甲",
++            "theme": "书"
++          },
++          "expected": {
++            "agent": "甲",
++            "recipient": "乙",
++            "theme": "书"
++          }
++        },
++        {
++          "order": [
++            1,
++            2,
++            0
++          ],
++          "actual": {
++            "agent": "乙",
++            "recipient": "书",
++            "theme": "甲"
++          },
++          "expected": {
++            "agent": "甲",
++            "recipient": "乙",
++            "theme": "书"
++          }
++        },
++        {
++          "order": [
++            2,
++            0,
++            1
++          ],
++          "actual": {
++            "agent": "书",
++            "recipient": "甲",
++            "theme": "乙"
++          },
++          "expected": {
++            "agent": "甲",
++            "recipient": "乙",
++            "theme": "书"
++          }
++        },
++        {
++          "order": [
++            2,
++            1,
++            0
++          ],
++          "actual": {
++            "agent": "书",
++            "recipient": "乙",
++            "theme": "甲"
++          },
++          "expected": {
++            "agent": "甲",
++            "recipient": "乙",
++            "theme": "书"
++          }
++        }
++      ],
++      "remainingMappings": 1
++    },
++    {
++      "status": "Updated",
++      "model": {
++        "schema": "wenyan.relations.v1",
++        "examples": [
++          {
++            "id": "train-0",
++            "text": "「甲」授「乙」「书」。",
++            "expected": {
++              "agent": "甲",
++              "recipient": "乙",
++              "theme": "书"
++            }
++          },
++          {
++            "id": "train-1",
++            "text": "「甲」把「书」交给「乙」。",
++            "expected": {
++              "agent": "甲",
++              "recipient": "乙",
++              "theme": "书"
++            }
++          }
++        ]
++      },
++      "checked": 6,
++      "refutations": [
++        {
++          "order": [
++            0,
++            1,
++            2
++          ],
++          "actual": {
++            "agent": "甲",
++            "recipient": "书",
++            "theme": "乙"
++          },
++          "expected": {
++            "agent": "甲",
++            "recipient": "乙",
++            "theme": "书"
++          }
++        },
++        {
++          "order": [
++            1,
++            0,
++            2
++          ],
++          "actual": {
++            "agent": "书",
++            "recipient": "甲",
++            "theme": "乙"
++          },
++          "expected": {
++            "agent": "甲",
++            "recipient": "乙",
++            "theme": "书"
++          }
++        },
++        {
++          "order": [
++            1,
++            2,
++            0
++          ],
++          "actual": {
++            "agent": "书",
++            "recipient": "乙",
++            "theme": "甲"
++          },
++          "expected": {
++            "agent": "甲",
++            "recipient": "乙",
++            "theme": "书"
++          }
++        },
++        {
++          "order": [
++            2,
++            0,
++            1
++          ],
++          "actual": {
++            "agent": "乙",
++            "recipient": "甲",
++            "theme": "书"
++          },
++          "expected": {
++            "agent": "甲",
++            "recipient": "乙",
++            "theme": "书"
++          }
++        },
++        {
++          "order": [
++            2,
++            1,
++            0
++          ],
++          "actual": {
++            "agent": "乙",
++            "recipient": "书",
++            "theme": "甲"
++          },
++          "expected": {
++            "agent": "甲",
++            "recipient": "乙",
++            "theme": "书"
++          }
++        }
++      ],
++      "remainingMappings": 1
++    },
++    {
++      "status": "Updated",
++      "model": {
++        "schema": "wenyan.relations.v1",
++        "examples": [
++          {
++            "id": "train-0",
++            "text": "「甲」授「乙」「书」。",
++            "expected": {
++              "agent": "甲",
++              "recipient": "乙",
++              "theme": "书"
++            }
++          },
++          {
++            "id": "train-1",
++            "text": "「甲」把「书」交给「乙」。",
++            "expected": {
++              "agent": "甲",
++              "recipient": "乙",
++              "theme": "书"
++            }
++          },
++          {
++            "id": "train-2",
++            "text": "「乙」获「甲」所授「书」。",
++            "expected": {
++              "agent": "甲",
++              "recipient": "乙",
++              "theme": "书"
++            }
++          }
++        ]
++      },
++      "checked": 6,
++      "refutations": [
++        {
++          "order": [
++            0,
++            1,
++            2
++          ],
++          "actual": {
++            "agent": "乙",
++            "recipient": "甲",
++            "theme": "书"
++          },
++          "expected": {
++            "agent": "甲",
++            "recipient": "乙",
++            "theme": "书"
++          }
++        },
++        {
++          "order": [
++            0,
++            2,
++            1
++          ],
++          "actual": {
++            "agent": "乙",
++            "recipient": "书",
++            "theme": "甲"
++          },
++          "expected": {
++            "agent": "甲",
++            "recipient": "乙",
++            "theme": "书"
++          }
++        },
++        {
++          "order": [
++            1,
++            2,
++            0
++          ],
++          "actual": {
++            "agent": "甲",
++            "recipient": "书",
++            "theme": "乙"
++          },
++          "expected": {
++            "agent": "甲",
++            "recipient": "乙",
++            "theme": "书"
++          }
++        },
++        {
++          "order": [
++            2,
++            0,
++            1
++          ],
++          "actual": {
++            "agent": "书",
++            "recipient": "乙",
++            "theme": "甲"
++          },
++          "expected": {
++            "agent": "甲",
++            "recipient": "乙",
++            "theme": "书"
++          }
++        },
++        {
++          "order": [
++            2,
++            1,
++            0
++          ],
++          "actual": {
++            "agent": "书",
++            "recipient": "甲",
++            "theme": "乙"
++          },
++          "expected": {
++            "agent": "甲",
++            "recipient": "乙",
++            "theme": "书"
++          }
++        }
++      ],
++      "remainingMappings": 1
++    }
++  ],
++  "model": {
++    "schema": "wenyan.relations.v1",
++    "examples": [
++      {
++        "id": "train-0",
++        "text": "「甲」授「乙」「书」。",
++        "expected": {
++          "agent": "甲",
++          "recipient": "乙",
++          "theme": "书"
++        }
++      },
++      {
++        "id": "train-1",
++        "text": "「甲」把「书」交给「乙」。",
++        "expected": {
++          "agent": "甲",
++          "recipient": "乙",
++          "theme": "书"
++        }
++      },
++      {
++        "id": "train-2",
++        "text": "「乙」获「甲」所授「书」。",
++        "expected": {
++          "agent": "甲",
++          "recipient": "乙",
++          "theme": "书"
++        }
++      }
++    ]
++  },
++  "receipts": [
++    {
++      "source": "「丙」授「丁」「帛」。",
++      "paraphrase": "「丙」把「帛」交给「丁」。",
++      "reversed": "「丁」授「丙」「帛」。",
++      "positive": "SameRelation",
++      "negative": "RoleReversal",
++      "reading": {
++        "status": "KnownFiniteGrammar",
++        "source": "「丙」授「丁」「帛」。",
++        "construction": "grant",
++        "candidates": [
++          {
++            "agent": "丙",
++            "recipient": "丁",
++            "theme": "帛"
++          }
++        ],
++        "occurrences": [
++          {
++            "slot": 0,
++            "value": "丙",
++            "start": 1,
++            "end": 2
++          },
++          {
++            "slot": 1,
++            "value": "丁",
++            "start": 5,
++            "end": 6
++          },
++          {
++            "slot": 2,
++            "value": "帛",
++            "start": 8,
++            "end": 9
++          }
++        ]
++      }
++    },
++    {
++      "source": "「丙」把「帛」交给「丁」。",
++      "paraphrase": "「丁」获「丙」所授「帛」。",
++      "reversed": "「丁」把「帛」交给「丙」。",
++      "positive": "SameRelation",
++      "negative": "RoleReversal",
++      "reading": {
++        "status": "KnownFiniteGrammar",
++        "source": "「丙」把「帛」交给「丁」。",
++        "construction": "hand-over",
++        "candidates": [
++          {
++            "agent": "丙",
++            "recipient": "丁",
++            "theme": "帛"
++          }
++        ],
++        "occurrences": [
++          {
++            "slot": 0,
++            "value": "丙",
++            "start": 1,
++            "end": 2
++          },
++          {
++            "slot": 1,
++            "value": "帛",
++            "start": 5,
++            "end": 6
++          },
++          {
++            "slot": 2,
++            "value": "丁",
++            "start": 10,
++            "end": 11
++          }
++        ]
++      }
++    },
++    {
++      "source": "「丁」获「丙」所授「帛」。",
++      "paraphrase": "「丙」授「丁」「帛」。",
++      "reversed": "「丙」获「丁」所授「帛」。",
++      "positive": "SameRelation",
++      "negative": "RoleReversal",
++      "reading": {
++        "status": "KnownFiniteGrammar",
++        "source": "「丁」获「丙」所授「帛」。",
++        "construction": "receive",
++        "candidates": [
++          {
++            "agent": "丙",
++            "recipient": "丁",
++            "theme": "帛"
++          }
++        ],
++        "occurrences": [
++          {
++            "slot": 0,
++            "value": "丁",
++            "start": 1,
++            "end": 2
++          },
++          {
++            "slot": 1,
++            "value": "丙",
++            "start": 5,
++            "end": 6
++          },
++          {
++            "slot": 2,
++            "value": "帛",
++            "start": 10,
++            "end": 11
++          }
++        ]
++      }
++    },
++    {
++      "source": "「戊」授「己」「玉」。",
++      "paraphrase": "「戊」把「玉」交给「己」。",
++      "reversed": "「己」授「戊」「玉」。",
++      "positive": "SameRelation",
++      "negative": "RoleReversal",
++      "reading": {
++        "status": "KnownFiniteGrammar",
++        "source": "「戊」授「己」「玉」。",
++        "construction": "grant",
++        "candidates": [
++          {
++            "agent": "戊",
++            "recipient": "己",
++            "theme": "玉"
++          }
++        ],
++        "occurrences": [
++          {
++            "slot": 0,
++            "value": "戊",
++            "start": 1,
++            "end": 2
++          },
++          {
++            "slot": 1,
++            "value": "己",
++            "start": 5,
++            "end": 6
++          },
++          {
++            "slot": 2,
++            "value": "玉",
++            "start": 8,
++            "end": 9
++          }
++        ]
++      }
++    },
++    {
++      "source": "「戊」把「玉」交给「己」。",
++      "paraphrase": "「己」获「戊」所授「玉」。",
++      "reversed": "「己」把「玉」交给「戊」。",
++      "positive": "SameRelation",
++      "negative": "RoleReversal",
++      "reading": {
++        "status": "KnownFiniteGrammar",
++        "source": "「戊」把「玉」交给「己」。",
++        "construction": "hand-over",
++        "candidates": [
++          {
++            "agent": "戊",
++            "recipient": "己",
++            "theme": "玉"
++          }
++        ],
++        "occurrences": [
++          {
++            "slot": 0,
++            "value": "戊",
++            "start": 1,
++            "end": 2
++          },
++          {
++            "slot": 1,
++            "value": "玉",
++            "start": 5,
++            "end": 6
++          },
++          {
++            "slot": 2,
++            "value": "己",
++            "start": 10,
++            "end": 11
++          }
++        ]
++      }
++    },
++    {
++      "source": "「己」获「戊」所授「玉」。",
++      "paraphrase": "「戊」授「己」「玉」。",
++      "reversed": "「戊」获「己」所授「玉」。",
++      "positive": "SameRelation",
++      "negative": "RoleReversal",
++      "reading": {
++        "status": "KnownFiniteGrammar",
++        "source": "「己」获「戊」所授「玉」。",
++        "construction": "receive",
++        "candidates": [
++          {
++            "agent": "戊",
++            "recipient": "己",
++            "theme": "玉"
++          }
++        ],
++        "occurrences": [
++          {
++            "slot": 0,
++            "value": "己",
++            "start": 1,
++            "end": 2
++          },
++          {
++            "slot": 1,
++            "value": "戊",
++            "start": 5,
++            "end": 6
++          },
++          {
++            "slot": 2,
++            "value": "玉",
++            "start": 10,
++            "end": 11
++          }
++        ]
++      }
++    },
++    {
++      "source": "「庚」授「辛」「简」。",
++      "paraphrase": "「庚」把「简」交给「辛」。",
++      "reversed": "「辛」授「庚」「简」。",
++      "positive": "SameRelation",
++      "negative": "RoleReversal",
++      "reading": {
++        "status": "KnownFiniteGrammar",
++        "source": "「庚」授「辛」「简」。",
++        "construction": "grant",
++        "candidates": [
++          {
++            "agent": "庚",
++            "recipient": "辛",
++            "theme": "简"
++          }
++        ],
++        "occurrences": [
++          {
++            "slot": 0,
++            "value": "庚",
++            "start": 1,
++            "end": 2
++          },
++          {
++            "slot": 1,
++            "value": "辛",
++            "start": 5,
++            "end": 6
++          },
++          {
++            "slot": 2,
++            "value": "简",
++            "start": 8,
++            "end": 9
++          }
++        ]
++      }
++    },
++    {
++      "source": "「庚」把「简」交给「辛」。",
++      "paraphrase": "「辛」获「庚」所授「简」。",
++      "reversed": "「辛」把「简」交给「庚」。",
++      "positive": "SameRelation",
++      "negative": "RoleReversal",
++      "reading": {
++        "status": "KnownFiniteGrammar",
++        "source": "「庚」把「简」交给「辛」。",
++        "construction": "hand-over",
++        "candidates": [
++          {
++            "agent": "庚",
++            "recipient": "辛",
++            "theme": "简"
++          }
++        ],
++        "occurrences": [
++          {
++            "slot": 0,
++            "value": "庚",
++            "start": 1,
++            "end": 2
++          },
++          {
++            "slot": 1,
++            "value": "简",
++            "start": 5,
++            "end": 6
++          },
++          {
++            "slot": 2,
++            "value": "辛",
++            "start": 10,
++            "end": 11
++          }
++        ]
++      }
++    },
++    {
++      "source": "「辛」获「庚」所授「简」。",
++      "paraphrase": "「庚」授「辛」「简」。",
++      "reversed": "「庚」获「辛」所授「简」。",
++      "positive": "SameRelation",
++      "negative": "RoleReversal",
++      "reading": {
++        "status": "KnownFiniteGrammar",
++        "source": "「辛」获「庚」所授「简」。",
++        "construction": "receive",
++        "candidates": [
++          {
++            "agent": "庚",
++            "recipient": "辛",
++            "theme": "简"
++          }
++        ],
++        "occurrences": [
++          {
++            "slot": 0,
++            "value": "辛",
++            "start": 1,
++            "end": 2
++          },
++          {
++            "slot": 1,
++            "value": "庚",
++            "start": 5,
++            "end": 6
++          },
++          {
++            "slot": 2,
++            "value": "简",
++            "start": 10,
++            "end": 11
++          }
++        ]
++      }
++    }
++  ],
++  "controls": [
++    "zero-fuel",
++    "partial-fuel",
++    "conflicting-label",
++    "unseen-construction",
++    "negation",
++    "out-of-grammar",
++    "stale-version",
++    "duplicate-evidence-id",
++    "nonfinite-fuel",
++    "inconsistent-replay",
++    "existing-ack-gate",
++    "distinct-occurrences"
++  ],
++  "limitations": [
++    "controlled grammar",
++    "supervised labels",
++    "external Adva-policy adapter, not native learn",
++    "runtime transpilation only; full TypeScript/Jest and CI not run",
++    "no speedup claim against ordinary role parsing"
++  ],
++  "runtime": "v26.4.0",
++  "sha256": {
++    "src/inscription/analysis.ts": "4a3a12912e79161e2ce875a39bae292c68565dcbce6cc45086b30eb099b9f15f",
++    "src/inscription/reverse.ts": "b24931f42d683ad9c2d24309721d6bed5a8cd48b5f24b77a1f5d6a6447c0d167",
++    "src/inscription/pipeline.ts": "6386a2618c0f3f141f28a4a8cc2cb6cfaf6627a325b4951a85cb441a0a490d8a",
++    "src/inscription/relations.ts": "3b958f1a5de8124359481de14c13622f708c2ffb9815f95df3e3e2bab215307a",
++    "experiments/relations/run.cjs": "88fb9f035f80a68d26d685f0c64c933e6bf8bb65b7206a1f074ba3d4cb2b6819"
++  }
++}
+--- /dev/null
++++ b/experiments/relations/README.md
+@@ -0,0 +1,162 @@
++# Evidence-bound role learning in the existing Wenyan pipeline
++
++Author/self-review: Codex (OpenAI), 2026-09-22. Direction: Mingli Yuan.
++New adapter, experiment and prose are project-original contributions under
++Unknown v0.3. Existing Wenyan source retains its upstream MIT notice; see
++`LICENSE.upstream`. No material is imported into the Adva repository.
++
++## Implementation and limits
++
++This patch adds `relationModel` as an optional argument to the existing
++`runInscriptionPipeline`. When present, its result contains an additional
++`relation` reading. When absent, the legacy API output is unchanged. The
++existing acknowledgement gate runs first. The inscription analyzer, weight
++adaptation, reverse templates and confidence labels retain their meanings.
++No new confidence label is used as a proof of a relation.
++
++`src/inscription/relations.ts` supplies an explicit, serializable evidence model:
++
++1. Begin with six candidate permutations of three roles for each construction.
++2. Check a supplied supervisor-labelled example against every candidate.
++3. Record counterexamples and retain the surviving mappings.
++4. Replay the retained examples before every read or update.
++5. Apply the surviving rule to a fresh entity tuple and check the result.
++
++This is an independent language adapter of the update discipline in Adva
++[Research 0131](https://github.com/mountain/adva/blob/79f6353511d736ae743b109f1c573b652eff170a/docs/research/0131-finite-learner-judgment-and-reuse.md).
++The arithmetic-specific F7 implementation is not imported or called. This
++does not demonstrate a native `adva learn` invocation, native admission,
++general language learning or six-germ/six-shu identification. Actual execution
++through Adva is a remaining separate interface task.
++
++The supplied controlled grammar comprises exactly:
++
++    「A」授「B」「T」。
++    「A」把「T」交给「B」。
++    「B」获「A」所授「T」。
++
++Three explicitly labelled training sentences use A=甲, B=乙, T=书. Each
++construction starts with all six role permutations. Roles are not assigned
++by the regex: it only locates three slots. Supervision selects the role
++permutation. Each construction needs its own evidence; training one grants
++no authority to the other two. The synonym relationship among these supplied
++constructions belongs to the experimental task definition, not a discovery
++of new vocabulary. The predicate is fixed to transfer throughout this grammar.
++
++Quoted entities are opaque identifiers of length 1..32 UTF-16 units. Text is
++at most 256 UTF-16 units. The final Chinese full stop is optional. Negation,
++pronouns, multiple clauses, unquoted natural text, and other constructions
++return Unknown. Distinct quoted occurrences retain their source offsets even
++when their values coincide. Offsets are UTF-16 offsets into the unmodified
++source string, not byte offsets or native Adva occurrence identities.
++
++Model evidence is bounded to 32 examples; fuel is an integer 0..192. A
++partial-fuel result records checked refutations but commits no incomplete
++update. A caller may explicitly retry with a new allowance; no continuation
++cursor or automatic retry is claimed. Conflicting labels return Conflict
++without replacing the previous model. Previous labels are assumptions, not
++historical or independently certified truths. Replay detects inconsistent
++evidence, not malicious but self-consistent replacement of the entire model.
++Authentication is outside scope.
++
++## Use
++
++```typescript
++import { runInscriptionPipeline } from "../../src/inscription/pipeline";
++import { emptyRelationModel, learnRelations, compareRelations }
++  from "../../src/inscription/relations";
++
++const update = learnRelations(emptyRelationModel(), {
++  id: "grant-1",
++  text: "「甲」授「乙」「书」。",
++  expected: { agent: "甲", recipient: "乙", theme: "书" }
++}, 6);
++
++const result = runInscriptionPipeline("「丙」授「丁」「帛」。", {
++  relationModel: update.model,
++  steps: 3
++});
++const comparison = compareRelations(
++  "「丙」授「丁」「帛」。", "「丁」授「丙」「帛」。", update.model
++); // RoleReversal
++// Persist update.model as JSON explicitly; no implicit file writes occur.
++```
++
++New exports are available directly from the relations module. They are not
++added to the top-level parser export list in this narrow patch.
++
++## Measured result
++
++One bounded run passed on Node v24.19.0. After the runtime-mode portability fix
++described under "Reproduce and integrate", a second run on Node v26.4.0
++reproduced every value in this table identically; the accompanying
++`evidence.json` records the runtime and source hashes of the run it belongs to.
++
++| Check | Result |
++|---|---|
++| Training | Three examples; five refuted maps per construction, one survivor |
++| Held-out identities | Nine fresh identities in three triples |
++| Held-out paraphrase comparisons | 9/9 SameRelation |
++| Held-out agent/recipient reversals | 9/9 RoleReversal |
++| Remove all training evidence | Reversal comparisons become Unknown |
++| Legacy output, opt-in disabled | Unchanged |
++| Legacy reverse-template output on reversed pairs | Identical in 9/9 cases |
++| Negative/control categories | 12 passed |
++
++The legacy pipeline has no equivalent typed relation judgment. Its template
++collisions are diagnostic, not a claim of zero accuracy on a comparable task:
++the original analysis still retains its input text. This experiment measures
++new task-specific discrimination, not a benchmark against general NLP.
++A conventional hand-written slot parser could also solve this tiny grammar;
++no accuracy or efficiency superiority over that baseline is claimed.
++
++Controls cover zero/partial fuel, contradictory labels, unseen constructions,
++negation, out-of-grammar sentences, stale schema, duplicate IDs, infinite fuel,
++inconsistent replay, the existing acknowledgement gate and occurrence identity.
++All held-out readings are also checked against separately specified role tuples.
++
++## Reproduce and integrate
++
++Node 24 or later, from the package/repository root:
++
++```sh
++node --max-old-space-size=256 experiments/relations/run.cjs
++```
++
++No wall-clock wrapper is used: `timeout(1)` is not portable, because macOS
++ships it only as `gtimeout` via GNU coreutils, and a single run completes in
++about a tenth of a second on the reference machine anyway.
++
++The runner executes the actual four TypeScript modules through Node's type
++stripping and a small isolated runtime loader. It requests `mode: 'strip'`,
++the only mode accepted by both Node 24 and Node 26, because `mode: 'transform'`
++was removed in Node 26. The loader removes type-only imports and collects
++function/constant exports for this fixed subset. This is a runtime integration
++check, not a TypeScript type check or execution of Jest. Node prints an
++`ExperimentalWarning` for `stripTypeScriptTypes` on stderr; it is expected and
++does not affect the result, which is the single JSON line written to stdout.
++Node heap is bounded to 256 MiB, not a bound on total process memory.
++`evidence.json` records source hashes, training updates, model, all nine
++held-out readings and eighteen comparisons. `contract.json` preceded the run.
++
++`wenyan-relations.patch` is based on upstream commit
++`6143e22ca8319a8ebca89b59a29f20158812b63f`. Check it with `git apply --check`
++against that source before applying. Full repository type checking, Jest,
++CLI/browser packaging and remote CI remain integration gates. This deliverable
++is a reviewed local patch, not a remote commit or an edit to upstream PR #717.
++
++Direct Git cloning was unavailable in the current environment; the three
++dependency modules were fetched through GitHub at the pinned commit. The
++reproduction bundle contains only this subset, the patch and experiment;
++it is not a full checkout. The inherited source is separately MIT-licensed
++and must not be copied into Adva's public-domain-only publication path.
++
++## Interpretation and next step
++
++The small result supports evidence-bound reuse across entity substitutions.
++Its real contribution is a distinction between changed scores and changed
++relation proposals, with failures and Unknown retained. It does not yet put
++the Adva runtime in Wenyan's execution path. The next integration should fix
++an explicit receiving/checking contract for these relation examples, then
++connect an appropriate existing Adva learner through a declared adapter.
++Do not encode roles as arbitrary F7 polynomials merely to claim a native call.

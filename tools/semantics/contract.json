@@ -1,0 +1,77 @@
+{
+  "schema": "wenyan.semantics.contract.v1",
+  "name": "Judgement-based semantics",
+  "principle": "A semantic answer is licensed by recorded judgements, not by the text alone. Where recorded judgements disagree, the answer is Contested — which names both sides — never a silent pick.",
+  "why": "Syntax can be witnessed by pointing at a span. Meaning cannot: different strings may mean the same, and the same string may differ by context, so the warrant chain for a semantic claim ends in a declared human judgement. That is not a weakness to hide — it is the thing to record, because a claim whose warrant is a judgement must be able to say WHOSE judgement and on what basis.",
+  "answerStates": {
+    "Answered": "Every recorded judgement agrees. The verdict is returned with the records that support it.",
+    "Contested": "Recorded judgements disagree. The answer names both sides and what they disagree about. This state is LOCAL: it concerns one claim and never blocks another question.",
+    "Unknown": "No judgement has been recorded. Must carry reason and what is missing.",
+    "Refused": "The claim type is not declared here, or is declared out of scope. Never guessed."
+  },
+  "claimTypes": [
+    {
+      "id": "coreference",
+      "ask": "Which earlier expression does this span refer to?",
+      "fields": ["text", "span", "link"],
+      "verdicts": ["holds", "fails"],
+      "verify": "reload the records and recompute agreement; a mix of holds and fails is Contested",
+      "failClosed": "no record -> Unknown(no-judgement-recorded)",
+      "note": "The text does not witness this. Two defensible readings are a CONTESTED claim, not a corrupt store."
+    },
+    {
+      "id": "construction-meaning",
+      "ask": "Does this construction carry the declared constructional meaning here?",
+      "fields": ["text", "form", "meaning"],
+      "verdicts": ["holds", "fails"],
+      "verify": "as above",
+      "failClosed": "no record -> Unknown(no-judgement-recorded)",
+      "note": "Falsifiable in the weak sense: a counterexample where the form does not carry that meaning defeats a holds verdict."
+    },
+    {
+      "id": "speech-act",
+      "ask": "Is this span's illocutionary act the declared one?",
+      "fields": ["text", "span", "act"],
+      "verdicts": ["holds", "fails"],
+      "verify": "as above",
+      "failClosed": "no record -> Unknown(no-judgement-recorded)",
+      "note": "RESTRICTED to acts the text explicitly marks (e.g. 決定的是：). Not a reading of tone or intent — those are out of scope."
+    },
+    {
+      "id": "layer-sense-relation",
+      "ask": "Between layer A and layer B, is the relation between the senses of this word the declared one?",
+      "fields": ["word", "layerA", "layerB", "relation"],
+      "verdicts": ["holds", "fails"],
+      "verify": "as above; attestation counts for each layer are recorded separately as evidence",
+      "failClosed": "no record -> Unknown(no-judgement-recorded)",
+      "note": "This is a claim ON A TRANSMISSION EDGE. Evidence for each side is separate, and a verdict may be contested when the two sides' attestations support different relations."
+    }
+  ],
+  "declaredOutOfScope": [
+    {
+      "id": "gloss",
+      "ask": "What does this sentence mean?",
+      "reason": "Answering requires a lexicon or sense inventory. Recorded judgements about coreference or constructional meaning do not create one, and a generated paraphrase cannot be verified by anything in this repository."
+    },
+    {
+      "id": "interpretation",
+      "ask": "What is the deeper meaning / significance of this passage?",
+      "reason": "Not a falsifiable claim. There is no observation that could defeat it, so it is not a claim this system may hold — it is Refused rather than answered."
+    }
+  ],
+  "invariants": [
+    { "id": "S1", "rule": "Answered requires at least one judgement record and unanimity among them.", "enforcedBy": "evaluateClaim() + validateAnswer()" },
+    { "id": "S2", "rule": "Contested requires at least two records with differing verdicts, and must name both sides with their judge and basis.", "enforcedBy": "validateAnswer()" },
+    { "id": "S3", "rule": "Contested is LOCAL: it must not prevent any other claim or question from being answered. A shared store problem is Inconsistent, not Contested.", "enforcedBy": "selftest (locality case) + evaluateClaim scope" },
+    { "id": "S4", "rule": "No judgement recorded means Unknown. The absence of a judgement is never rendered as a verdict.", "enforcedBy": "evaluateClaim()" },
+    { "id": "S5", "rule": "Every judgement names its judge and basis; a judgement without provenance cannot be stored.", "enforcedBy": "makeJudgment()" },
+    { "id": "S6", "rule": "Declared-out-of-scope claim types are Refused, never answered by analogy.", "enforcedBy": "ask()" }
+  ],
+  "nonclaims": [
+    "not understanding: this layer records and reconciles judgements; it does not derive meaning from text",
+    "not learning: every claim needs a recorded judgement, so coverage grows by human work, not by inference",
+    "not a consensus machine: a majority does not settle a claim — disagreement stays visible as Contested",
+    "no claim that a Contested verdict is a defect; on real texts it is usually the honest answer",
+    "judgements recorded by this session are declared readings with a stated basis, and carry no authority beyond that"
+  ]
+}
