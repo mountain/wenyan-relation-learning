@@ -163,6 +163,66 @@
         "occursInCorpus": 27610,
         "note": "REJECT ON THE RULE, not on gain: 后 and 後 are different words in most texts (后 = sovereign). 易 uses 后 for 後, but admitting the pair globally would rewrite every \"after\" in the corpus. This is exactly the phonetic-loan case the admission rule refuses — recorded because a real gain of 3 is otherwise tempting."
       }
-    ]
+    ],
+    "combinedMeasurement": {
+      "how": "measured twice — by an independent matcher and through tools/intertext/extract.mjs — and both give the same DELTA of +44. Absolute counts differ between the two because the independent matcher normalised one character class differently (it omitted the ASCII quotes); the delta is unaffected, and the pipeline numbers below are the authoritative ones.",
+      "baseline": {
+        "foundInCitedWork": 326,
+        "notFound": 499,
+        "total": 918,
+        "note": "with the two accepted pairs 於→于 and 无→無 already applied"
+      },
+      "withAllEightPairs": {
+        "foundInCitedWork": 370,
+        "notFound": 455,
+        "otherStatusesUnchanged": {
+          "no-quotation-follows": 45,
+          "quotation-too-short-to-verify": 37,
+          "by-declared-convention": 11
+        }
+      },
+      "delta": {
+        "absolute": 44,
+        "relative": "+13.5% of the 326 found",
+        "shareOfClassifiable": "343/825 → 41.6% by the independent matcher on its own baseline; 370/825 = 44.8% by the pipeline"
+      },
+      "overlapLoss": 0,
+      "greedyOrder": [
+        [
+          "惟→維",
+          17
+        ],
+        [
+          "爲→為",
+          7
+        ],
+        [
+          "毋→無",
+          5
+        ],
+        [
+          "雍→雝",
+          5
+        ],
+        [
+          "緡→緜",
+          3
+        ],
+        [
+          "昭→炤",
+          3
+        ],
+        [
+          "普→溥",
+          2
+        ],
+        [
+          "協→洽",
+          2
+        ]
+      ],
+      "whyOverlapIsZero": "no unmatched citation needed two pairs at once; greedy and all-at-once reach the same total, so the per-pair gains above can be read as independent",
+      "whatThisDoesNotMean": "A larger found-count is not a better reading. Each pair still has to pass the admission rule (same word written two ways, never a phonetic loan) on human judgement; 後→后 is excluded by that rule despite a real gain of +3, and a pair that is in fact a genuine recension difference would inflate this number without improving anything."
+    }
   }
 }
