@@ -140,8 +140,12 @@ Node heap is bounded to 256 MiB, not a bound on total process memory.
 held-out readings and eighteen comparisons. `contract.json` preceded the run.
 
 `wenyan-relations.patch` is based on upstream commit
-`6143e22ca8319a8ebca89b59a29f20158812b63f`. Check it with `git apply --check`
-against that source before applying. Full repository type checking, Jest,
+`bcd05ba` (the merge of `research/changes-grammar-v0.1`), which is where the
+earlier base `6143e22` has moved to. The patch was re-anchored because upstream
+added `changes?: { catalog: ChangesCatalog }` and its return-site spread at the
+SAME two places this patch adds `relationModel`, so the previous version no
+longer applied. Check it with `git apply --check` against that source before
+applying. Full repository type checking, Jest,
 CLI/browser packaging and remote CI remain integration gates. This deliverable
 is a reviewed local patch, not a remote commit or an edit to upstream PR #717.
 

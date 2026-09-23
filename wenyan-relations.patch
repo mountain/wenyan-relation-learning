@@ -1,32 +1,34 @@
 --- a/src/inscription/pipeline.ts
 +++ b/src/inscription/pipeline.ts
-@@ -1,4 +1,6 @@
+@@ -1,6 +1,8 @@
  import { analyzeInscription, InscriptionAnalysis } from "./analysis";
 +import { readRelation } from "./relations";
+ import { readChanges } from "./changes";
+ import type { ChangesCatalog } from "./changes";
 +import type { RelationModel, RelationReading } from "./relations";
  import {
    forwardTriCompute,
    reverseTriCompute,
-@@ -38,6 +40,7 @@
- };
+@@ -41,6 +43,7 @@
  
  export type InscriptionPipelineSuccessResult = {
+   changes?: ReturnType<typeof readChanges>;
 +  relation?: RelationReading;
    blocked: false;
    entryWarning: string;
    analysis: InscriptionAnalysis;
-@@ -69,6 +72,7 @@
-   "[warning] 请先确认这不是真实故事、只是探索游戏，然后再继续。";
+@@ -73,6 +76,7 @@
  
  export type InscriptionPipelineOptions = {
+   changes?: { catalog: ChangesCatalog };
 +  relationModel?: RelationModel;
    steps?: number;
    target?: ReverseTarget;
    optimizer?: {
-@@ -299,6 +303,7 @@
- 
+@@ -304,6 +308,7 @@
    return {
      blocked: false,
+     ...(options.changes ? { changes: readChanges(txt, options.changes.catalog) } : {}),
 +    ...(options.relationModel ? { relation: readRelation(txt, options.relationModel) } : {}),
      entryWarning: INSCRIPTION_EXPERIMENT_WARNING,
      analysis,
@@ -37,6 +39,8 @@
    return nums.reduce((a, b) => a + b, 0) / nums.length;
  }
  
+-function scoreOracleTone(analysis: InscriptionAnalysis) {
+-  const markers = ["王在", "令", "成事", "用乍", "万年", "永宝用", "卜", "贞"];
 +/**
 + * Markers used to score "oracle tone": characters/formulas characteristic of
 + * bronze-inscription language.
@@ -64,8 +68,7 @@
 +  ["贞", "貞"],
 +];
 +
- function scoreOracleTone(analysis: InscriptionAnalysis) {
--  const markers = ["王在", "令", "成事", "用乍", "万年", "永宝用", "卜", "贞"];
++function scoreOracleTone(analysis: InscriptionAnalysis) {
    let hits = 0;
 -  for (const marker of markers) {
 -    if (analysis.normalized.includes(marker)) {
@@ -79,6 +82,11 @@
  }
  
  const DEFAULT_PROFILE = {
+@@ -259,3 +285,4 @@
+     },
+   };
+ }
++
 --- /dev/null
 +++ b/src/inscription/relations.ts
 @@ -0,0 +1,136 @@
@@ -1138,7 +1146,7 @@
 +}
 --- /dev/null
 +++ b/experiments/relations/README.md
-@@ -0,0 +1,162 @@
+@@ -0,0 +1,166 @@
 +# Evidence-bound role learning in the existing Wenyan pipeline
 +
 +Author/self-review: Codex (OpenAI), 2026-09-22. Direction: Mingli Yuan.
@@ -1281,8 +1289,12 @@
 +held-out readings and eighteen comparisons. `contract.json` preceded the run.
 +
 +`wenyan-relations.patch` is based on upstream commit
-+`6143e22ca8319a8ebca89b59a29f20158812b63f`. Check it with `git apply --check`
-+against that source before applying. Full repository type checking, Jest,
++`bcd05ba` (the merge of `research/changes-grammar-v0.1`), which is where the
++earlier base `6143e22` has moved to. The patch was re-anchored because upstream
++added `changes?: { catalog: ChangesCatalog }` and its return-site spread at the
++SAME two places this patch adds `relationModel`, so the previous version no
++longer applied. Check it with `git apply --check` against that source before
++applying. Full repository type checking, Jest,
 +CLI/browser packaging and remote CI remain integration gates. This deliverable
 +is a reviewed local patch, not a remote commit or an edit to upstream PR #717.
 +
