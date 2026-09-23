@@ -1,0 +1,30 @@
+{
+  "schema": "wenyan.corpus-expansion.density-preregistration.v1",
+  "registeredAt": "2026-09-23T12:17:45Z",
+  "why": "Mingli Yuan suggested 大唐西域記 and 六祖壇經 as a density check. A prediction written AFTER the measurement is not a prediction, so the numbers below are stated first, with the reasoning, and the tool that measures them is appended later. If the prediction is wrong, the wrong version stays here.",
+  "measuredBy": "tools/grammar/density.mjs（direct 模式，量的是盘上文件，不依赖 manifest）",
+  "grammar": "wenyan.relations.reporting.v1（言语报告语法 A曰：「S」）",
+  "predictions": [
+    {
+      "work": "六祖壇經",
+      "tradition": "philosophers",
+      "predictedDensity": "0.60 以上",
+      "reasoning": "坛经是语录体，通篇 惠能曰／師曰／僧問曰／問曰，几乎每一段都在报告言语——按「言语报告语法」的尺度这是接近理想形态的文本。",
+      "whatWouldFalsify": "若实测远低于 0.60，说明阻碍不在「有没有言语」而在别处（引号形式、实体槽长短、段落长度上限），那就该先查这三个，而不是继续加书。"
+    },
+    {
+      "work": "大唐西域記",
+      "tradition": "historical",
+      "predictedDensity": "0.15–0.35",
+      "reasoning": "玄奘行记：叙述为主，夹大量「聞諸土俗曰」「眾咸曰」式的传说引语，也有里程／方位一类操作体描写。比 天工開物（0.0067）高得多，但不会像坛经那样密。",
+      "whatWouldFalsify": "若落到 0.05 以下，则「行记／地理书」与「技术手册」在现语法下同样稀疏，说明稀疏的原因是叙述体本身；若高于 0.50，则言语报告语法比预期覆盖更广，天工開物 的低值更该归因于那部书的体例。"
+    }
+  ],
+  "context": {
+    "天工開物": 0.0067,
+    "夢溪筆談": 0.2629,
+    "農政全書": 0.0569,
+    "全库基线pooled": 0.2381,
+    "note": "農政全書 与 天工開物 同为技术书却差 8 倍，所以「技术书稀疏」这句话本身可能就是错的——对照这两部正是为了分清是书还是类。"
+  }
+}
