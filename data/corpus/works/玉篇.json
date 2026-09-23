@@ -1,0 +1,5898 @@
+{
+  "schema": "wenyan.corpus.work.v1",
+  "id": "玉篇",
+  "title": {
+    "zh": "玉篇"
+  },
+  "tradition": "philosophers",
+  "source": {
+    "site": "zh.wikisource.org",
+    "discovery": {
+      "route": "mainPageLinks",
+      "mainPage": "玉篇 (四庫全書本)",
+      "mainRevid": 2343441,
+      "chainLength": null,
+      "notReachedByChain": [],
+      "chainStopReason": null,
+      "chainSubstitutions": [],
+      "chainExcluded": []
+    }
+  },
+  "counts": {
+    "sections": 31,
+    "passages": 848,
+    "characters": 59749
+  },
+  "license": {
+    "pageTemplates": {
+      "PD-old": 63
+    },
+    "status": "Public-domain templates present on the pages used: PD-old.",
+    "basis": "The underlying classical works are public domain by age. What is taken from Wikisource is its transcription: choice of recension, modern punctuation, paragraphing and character forms. Attribution is recorded per section via sourcePage/sourceRevid. This build also modifies the material (template and commentary removal, re-segmentation), and selects recensions and first readings — decisions recorded in textEdition, extraction and limitations."
+  },
+  "extraction": {
+    "removed": {
+      "annotationsDropped": 0,
+      "annotationsKept": 0,
+      "declaredElementsDropped": 0,
+      "declaredTemplatesDropped": 0,
+      "annotationRegionsDropped": 0,
+      "templates": 53873,
+      "contentTemplates": 7,
+      "uncertainGlyphs": 0,
+      "refFootnotes": 0,
+      "unbalancedTemplates": 0,
+      "htmlTags": 12,
+      "files": 0,
+      "externalLinks": 0,
+      "conversionMarkers": 0,
+      "licenseTemplates": {
+        "PD-old": 63
+      },
+      "anchorsLifted": 0,
+      "behaviourSwitches": 0,
+      "navigationLines": 0
+    },
+    "droppedSubsections": [],
+    "skippedNoText": [],
+    "droppedFrontMatter": [],
+    "droppedLines": 0,
+    "demotedHeadingLines": 0,
+    "structuralMarkers": [
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "text": "卷三",
+        "kind": "numbered-heading",
+        "reason": "a short label plus an ordinal — a section heading such as 參觀一/必罰二 in 韓非子/內儲說, not text (12)"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "text": "卷四",
+        "kind": "numbered-heading",
+        "reason": "a short label plus an ordinal — a section heading such as 參觀一/必罰二 in 韓非子/內儲說, not text (12)"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "text": "卷五",
+        "kind": "numbered-heading",
+        "reason": "a short label plus an ordinal — a section heading such as 參觀一/必罰二 in 韓非子/內儲說, not text (12)"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "text": "卷六",
+        "kind": "numbered-heading",
+        "reason": "a short label plus an ordinal — a section heading such as 參觀一/必罰二 in 韓非子/內儲說, not text (12)"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "text": "卷七",
+        "kind": "numbered-heading",
+        "reason": "a short label plus an ordinal — a section heading such as 參觀一/必罰二 in 韓非子/內儲說, not text (12)"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "text": "卷八",
+        "kind": "numbered-heading",
+        "reason": "a short label plus an ordinal — a section heading such as 參觀一/必罰二 in 韓非子/內儲說, not text (12)"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "text": "卷九",
+        "kind": "numbered-heading",
+        "reason": "a short label plus an ordinal — a section heading such as 參觀一/必罰二 in 韓非子/內儲說, not text (12)"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "text": "卷十",
+        "kind": "numbered-heading",
+        "reason": "a short label plus an ordinal — a section heading such as 參觀一/必罰二 in 韓非子/內儲說, not text (12)"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "text": "卷十一",
+        "kind": "numbered-heading",
+        "reason": "a short label plus an ordinal — a section heading such as 參觀一/必罰二 in 韓非子/內儲說, not text (12)"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "text": "卷十二",
+        "kind": "numbered-heading",
+        "reason": "a short label plus an ordinal — a section heading such as 參觀一/必罰二 in 韓非子/內儲說, not text (12)"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "text": "卷十三",
+        "kind": "numbered-heading",
+        "reason": "a short label plus an ordinal — a section heading such as 參觀一/必罰二 in 韓非子/內儲說, not text (12)"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "text": "卷十四",
+        "kind": "numbered-heading",
+        "reason": "a short label plus an ordinal — a section heading such as 參觀一/必罰二 in 韓非子/內儲說, not text (12)"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "text": "卷十五",
+        "kind": "numbered-heading",
+        "reason": "a short label plus an ordinal — a section heading such as 參觀一/必罰二 in 韓非子/內儲說, not text (12)"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "text": "卷十六",
+        "kind": "numbered-heading",
+        "reason": "a short label plus an ordinal — a section heading such as 參觀一/必罰二 in 韓非子/內儲說, not text (12)"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "text": "巻十七",
+        "kind": "numbered-heading",
+        "reason": "a short label plus an ordinal — a section heading such as 參觀一/必罰二 in 韓非子/內儲說, not text (12)"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "text": "卷十八",
+        "kind": "numbered-heading",
+        "reason": "a short label plus an ordinal — a section heading such as 參觀一/必罰二 in 韓非子/內儲說, not text (12)"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "text": "卷十九",
+        "kind": "numbered-heading",
+        "reason": "a short label plus an ordinal — a section heading such as 參觀一/必罰二 in 韓非子/內儲說, not text (12)"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "text": "卷二十",
+        "kind": "numbered-heading",
+        "reason": "a short label plus an ordinal — a section heading such as 參觀一/必罰二 in 韓非子/內儲說, not text (12)"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "text": "卷二十一",
+        "kind": "numbered-heading",
+        "reason": "a short label plus an ordinal — a section heading such as 參觀一/必罰二 in 韓非子/內儲說, not text (12)"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "text": "卷二十二",
+        "kind": "numbered-heading",
+        "reason": "a short label plus an ordinal — a section heading such as 參觀一/必罰二 in 韓非子/內儲說, not text (12)"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "text": "卷二十三",
+        "kind": "numbered-heading",
+        "reason": "a short label plus an ordinal — a section heading such as 參觀一/必罰二 in 韓非子/內儲說, not text (12)"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "text": "卷二十四",
+        "kind": "numbered-heading",
+        "reason": "a short label plus an ordinal — a section heading such as 參觀一/必罰二 in 韓非子/內儲說, not text (12)"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "text": "卷二十五",
+        "kind": "numbered-heading",
+        "reason": "a short label plus an ordinal — a section heading such as 參觀一/必罰二 in 韓非子/內儲說, not text (12)"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "text": "卷二十六",
+        "kind": "numbered-heading",
+        "reason": "a short label plus an ordinal — a section heading such as 參觀一/必罰二 in 韓非子/內儲說, not text (12)"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "text": "卷二十七",
+        "kind": "numbered-heading",
+        "reason": "a short label plus an ordinal — a section heading such as 參觀一/必罰二 in 韓非子/內儲說, not text (12)"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "text": "卷二十八",
+        "kind": "numbered-heading",
+        "reason": "a short label plus an ordinal — a section heading such as 參觀一/必罰二 in 韓非子/內儲說, not text (12)"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "text": "卷二十九",
+        "kind": "numbered-heading",
+        "reason": "a short label plus an ordinal — a section heading such as 參觀一/必罰二 in 韓非子/內儲說, not text (12)"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "text": "玉篇卷一",
+        "kind": "numbered-heading",
+        "reason": "a short label plus an ordinal — a section heading such as 參觀一/必罰二 in 韓非子/內儲說, not text (12)"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "text": "玉篇卷二",
+        "kind": "numbered-heading",
+        "reason": "a short label plus an ordinal — a section heading such as 參觀一/必罰二 in 韓非子/內儲說, not text (12)"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "text": "玉篇卷三",
+        "kind": "numbered-heading",
+        "reason": "a short label plus an ordinal — a section heading such as 參觀一/必罰二 in 韓非子/內儲說, not text (12)"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "text": "玉篇卷四",
+        "kind": "numbered-heading",
+        "reason": "a short label plus an ordinal — a section heading such as 參觀一/必罰二 in 韓非子/內儲說, not text (12)"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "text": "玉篇卷六",
+        "kind": "numbered-heading",
+        "reason": "a short label plus an ordinal — a section heading such as 參觀一/必罰二 in 韓非子/內儲說, not text (12)"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "text": "玉篇卷七",
+        "kind": "numbered-heading",
+        "reason": "a short label plus an ordinal — a section heading such as 參觀一/必罰二 in 韓非子/內儲說, not text (12)"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "text": "玉篇卷八",
+        "kind": "numbered-heading",
+        "reason": "a short label plus an ordinal — a section heading such as 參觀一/必罰二 in 韓非子/內儲說, not text (12)"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "text": "玉篇卷九",
+        "kind": "numbered-heading",
+        "reason": "a short label plus an ordinal — a section heading such as 參觀一/必罰二 in 韓非子/內儲說, not text (12)"
+      },
+      {
+        "section": "卷01",
+        "sourcePage": "玉篇 (四庫全書本)/卷01",
+        "text": "玉篇卷一",
+        "kind": "numbered-heading",
+        "reason": "a short label plus an ordinal — a section heading such as 參觀一/必罰二 in 韓非子/內儲說, not text (12)"
+      },
+      {
+        "section": "卷02",
+        "sourcePage": "玉篇 (四庫全書本)/卷02",
+        "text": "玉篇卷二",
+        "kind": "numbered-heading",
+        "reason": "a short label plus an ordinal — a section heading such as 參觀一/必罰二 in 韓非子/內儲說, not text (12)"
+      },
+      {
+        "section": "卷03",
+        "sourcePage": "玉篇 (四庫全書本)/卷03",
+        "text": "玉篇卷三",
+        "kind": "numbered-heading",
+        "reason": "a short label plus an ordinal — a section heading such as 參觀一/必罰二 in 韓非子/內儲說, not text (12)"
+      },
+      {
+        "section": "卷04",
+        "sourcePage": "玉篇 (四庫全書本)/卷04",
+        "text": "玉篇卷四",
+        "kind": "numbered-heading",
+        "reason": "a short label plus an ordinal — a section heading such as 參觀一/必罰二 in 韓非子/內儲說, not text (12)"
+      },
+      {
+        "section": "卷06",
+        "sourcePage": "玉篇 (四庫全書本)/卷06",
+        "text": "玉篇卷六",
+        "kind": "numbered-heading",
+        "reason": "a short label plus an ordinal — a section heading such as 參觀一/必罰二 in 韓非子/內儲說, not text (12)"
+      },
+      {
+        "section": "卷07",
+        "sourcePage": "玉篇 (四庫全書本)/卷07",
+        "text": "玉篇卷七",
+        "kind": "numbered-heading",
+        "reason": "a short label plus an ordinal — a section heading such as 參觀一/必罰二 in 韓非子/內儲說, not text (12)"
+      },
+      {
+        "section": "卷08",
+        "sourcePage": "玉篇 (四庫全書本)/卷08",
+        "text": "玉篇卷八",
+        "kind": "numbered-heading",
+        "reason": "a short label plus an ordinal — a section heading such as 參觀一/必罰二 in 韓非子/內儲說, not text (12)"
+      },
+      {
+        "section": "卷09",
+        "sourcePage": "玉篇 (四庫全書本)/卷09",
+        "text": "玉篇卷九",
+        "kind": "numbered-heading",
+        "reason": "a short label plus an ordinal — a section heading such as 參觀一/必罰二 in 韓非子/內儲說, not text (12)"
+      }
+    ],
+    "flaggedShortPassages": [
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 3,
+        "text": "要□□"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 3,
+        "text": "□□䠠"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 2,
+        "text": "□䇟"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 2,
+        "text": "勰協"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 1,
+        "text": "躳"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 4,
+        "text": "恖慮崽㥸"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 1,
+        "text": "繠"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 4,
+        "text": "□羲□乎"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 1,
+        "text": "號"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 1,
+        "text": "嚳"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 3,
+        "text": "□嵒□"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 2,
+        "text": "□□"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 4,
+        "text": "笧嗣扁□"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 3,
+        "text": "□□嘗"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 3,
+        "text": "羨盜□"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 1,
+        "text": "㽎"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 1,
+        "text": "□"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 3,
+        "text": "舞舝䑝"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 2,
+        "text": "□□"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 3,
+        "text": "並暜暜"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 3,
+        "text": "啙些㭰"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 3,
+        "text": "□韙尟"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 1,
+        "text": "營"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 2,
+        "text": "□□"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 1,
+        "text": "㯥"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 4,
+        "text": "□桑□䡦"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 2,
+        "text": "薅□"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 4,
+        "text": "□莽葬□"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 3,
+        "text": "䑞□□"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 2,
+        "text": "□□"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 3,
+        "text": "㭍䰍㯡"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 2,
+        "text": "叔敊"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 1,
+        "text": "□"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 1,
+        "text": "□"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 2,
+        "text": "来□"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 3,
+        "text": "冟即既"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 4,
+        "text": "□鬱□□"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 2,
+        "text": "全牄"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 3,
+        "text": "稟啚亶"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 4,
+        "text": "□牆廧□"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 3,
+        "text": "良□□"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 2,
+        "text": "兩䓣"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 2,
+        "text": "敝弊"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 4,
+        "text": "棄□畢□"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 3,
+        "text": "冀兾乖"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 2,
+        "text": "卤栖"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 1,
+        "text": "殷"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 3,
+        "text": "□歖嚭"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 1,
+        "text": "凱"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 1,
+        "text": "豑"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 2,
+        "text": "□豔"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 2,
+        "text": "□□"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 2,
+        "text": "量□"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 4,
+        "text": "鼐鼒鼏䵼"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 1,
+        "text": "与"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 4,
+        "text": "凥処焭凭"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 4,
+        "text": "□俎□亹"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 2,
+        "text": "□□"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 2,
+        "text": "昜□"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 1,
+        "text": "戚"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 3,
+        "text": "栔㗉□"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 2,
+        "text": "敫敖"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 3,
+        "text": "差□□"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 1,
+        "text": "□"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 4,
+        "text": "□覡靈□"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 2,
+        "text": "希棥"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 3,
+        "text": "爾爽爽"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 2,
+        "text": "汸万"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 2,
+        "text": "瀪厡"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 1,
+        "text": "□"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 3,
+        "text": "畏□禺"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 4,
+        "text": "曐曑曡曟"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 1,
+        "text": "奲"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 3,
+        "text": "□釁□"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 3,
+        "text": "喬□□"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 4,
+        "text": "□絞□□"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 4,
+        "text": "主㕻咅卞"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 3,
+        "text": "□㲳□"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 3,
+        "text": "□□嵞"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 2,
+        "text": "氂斄"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 2,
+        "text": "㺇獄"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 3,
+        "text": "□□□"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 1,
+        "text": "□"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 1,
+        "text": "豫"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 1,
+        "text": "㔮"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 2,
+        "text": "䖜贙"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 1,
+        "text": "鷰"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 2,
+        "text": "䨊雧"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 2,
+        "text": "□飜"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 4,
+        "text": "靡□靠䨿"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 3,
+        "text": "□□□"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 4,
+        "text": "緜䌛繇纛"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 1,
+        "text": "□"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 1,
+        "text": "□"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 4,
+        "text": "錦□□□"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 3,
+        "text": "□求□"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 1,
+        "text": "□"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 2,
+        "text": "□敬"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 1,
+        "text": "匏"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 4,
+        "text": "眞□□化"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 2,
+        "text": "芘毖"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 4,
+        "text": "□□□幷"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 3,
+        "text": "衆聚臮"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 2,
+        "text": "事□"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 1,
+        "text": "筆"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 3,
+        "text": "□隸隷"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 4,
+        "text": "緊堅豎竪"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 2,
+        "text": "師□"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 2,
+        "text": "虜貫"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 2,
+        "text": "□□"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 3,
+        "text": "亝□□"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 2,
+        "text": "毐□"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 3,
+        "text": "□□□"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 3,
+        "text": "㢥□□"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 2,
+        "text": "也□"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 1,
+        "text": "□"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 3,
+        "text": "□□糾"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 3,
+        "text": "□直矗"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 4,
+        "text": "□□旤□"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 3,
+        "text": "□篡厸"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 1,
+        "text": "囅"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 2,
+        "text": "□亖"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 1,
+        "text": "□"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 1,
+        "text": "□"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 1,
+        "text": "叛"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 1,
+        "text": "馗"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 3,
+        "text": "□䎠奿"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 2,
+        "text": "卌丗"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 4,
+        "text": "□□□□"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 1,
+        "text": "□"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 2,
+        "text": "成□"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 3,
+        "text": "□巹㠱"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 1,
+        "text": "□"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 2,
+        "text": "辯㸤"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 3,
+        "text": "童□妾"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 4,
+        "text": "椉□乗磔"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 1,
+        "text": "癸"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 3,
+        "text": "孱孴□"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 1,
+        "text": "□"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 2,
+        "text": "戼□"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 2,
+        "text": "啎忤"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 2,
+        "text": "尊僔"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 1,
+        "text": "□"
+      },
+      {
+        "section": "全覽",
+        "sourcePage": "玉篇 (四庫全書本)/全覽",
+        "units": 4,
+        "text": "東方喉聲"
+      },
+      {
+        "section": "卷06",
+        "sourcePage": "玉篇 (四庫全書本)/卷06",
+        "units": 3,
+        "text": "要□□"
+      },
+      {
+        "section": "卷07",
+        "sourcePage": "玉篇 (四庫全書本)/卷07",
+        "units": 3,
+        "text": "□□䠠"
+      },
+      {
+        "section": "卷07",
+        "sourcePage": "玉篇 (四庫全書本)/卷07",
+        "units": 2,
+        "text": "□䇟"
+      },
+      {
+        "section": "卷07",
+        "sourcePage": "玉篇 (四庫全書本)/卷07",
+        "units": 2,
+        "text": "勰協"
+      },
+      {
+        "section": "卷07",
+        "sourcePage": "玉篇 (四庫全書本)/卷07",
+        "units": 1,
+        "text": "躳"
+      },
+      {
+        "section": "卷08",
+        "sourcePage": "玉篇 (四庫全書本)/卷08",
+        "units": 4,
+        "text": "恖慮崽㥸"
+      },
+      {
+        "section": "卷08",
+        "sourcePage": "玉篇 (四庫全書本)/卷08",
+        "units": 1,
+        "text": "繠"
+      },
+      {
+        "section": "卷09",
+        "sourcePage": "玉篇 (四庫全書本)/卷09",
+        "units": 4,
+        "text": "□羲□乎"
+      },
+      {
+        "section": "卷09",
+        "sourcePage": "玉篇 (四庫全書本)/卷09",
+        "units": 1,
+        "text": "號"
+      },
+      {
+        "section": "卷09",
+        "sourcePage": "玉篇 (四庫全書本)/卷09",
+        "units": 1,
+        "text": "嚳"
+      },
+      {
+        "section": "卷09",
+        "sourcePage": "玉篇 (四庫全書本)/卷09",
+        "units": 3,
+        "text": "□嵒□"
+      },
+      {
+        "section": "卷09",
+        "sourcePage": "玉篇 (四庫全書本)/卷09",
+        "units": 2,
+        "text": "□□"
+      },
+      {
+        "section": "卷09",
+        "sourcePage": "玉篇 (四庫全書本)/卷09",
+        "units": 4,
+        "text": "笧嗣扁□"
+      },
+      {
+        "section": "卷09",
+        "sourcePage": "玉篇 (四庫全書本)/卷09",
+        "units": 3,
+        "text": "□□嘗"
+      },
+      {
+        "section": "卷09",
+        "sourcePage": "玉篇 (四庫全書本)/卷09",
+        "units": 3,
+        "text": "羨盜□"
+      },
+      {
+        "section": "卷10",
+        "sourcePage": "玉篇 (四庫全書本)/卷10",
+        "units": 1,
+        "text": "㽎"
+      },
+      {
+        "section": "卷10",
+        "sourcePage": "玉篇 (四庫全書本)/卷10",
+        "units": 1,
+        "text": "□"
+      },
+      {
+        "section": "卷10",
+        "sourcePage": "玉篇 (四庫全書本)/卷10",
+        "units": 3,
+        "text": "舞舝䑝"
+      },
+      {
+        "section": "卷10",
+        "sourcePage": "玉篇 (四庫全書本)/卷10",
+        "units": 2,
+        "text": "□□"
+      },
+      {
+        "section": "卷10",
+        "sourcePage": "玉篇 (四庫全書本)/卷10",
+        "units": 3,
+        "text": "並暜暜"
+      },
+      {
+        "section": "卷10",
+        "sourcePage": "玉篇 (四庫全書本)/卷10",
+        "units": 3,
+        "text": "啙些㭰"
+      },
+      {
+        "section": "卷10",
+        "sourcePage": "玉篇 (四庫全書本)/卷10",
+        "units": 3,
+        "text": "□韙尟"
+      },
+      {
+        "section": "卷11",
+        "sourcePage": "玉篇 (四庫全書本)/卷11",
+        "units": 1,
+        "text": "營"
+      },
+      {
+        "section": "卷11",
+        "sourcePage": "玉篇 (四庫全書本)/卷11",
+        "units": 2,
+        "text": "□□"
+      },
+      {
+        "section": "卷12",
+        "sourcePage": "玉篇 (四庫全書本)/卷12",
+        "units": 1,
+        "text": "㯥"
+      },
+      {
+        "section": "卷12",
+        "sourcePage": "玉篇 (四庫全書本)/卷12",
+        "units": 4,
+        "text": "□桑□䡦"
+      },
+      {
+        "section": "卷14",
+        "sourcePage": "玉篇 (四庫全書本)/卷14",
+        "units": 2,
+        "text": "薅□"
+      },
+      {
+        "section": "卷14",
+        "sourcePage": "玉篇 (四庫全書本)/卷14",
+        "units": 4,
+        "text": "□莽葬□"
+      },
+      {
+        "section": "卷14",
+        "sourcePage": "玉篇 (四庫全書本)/卷14",
+        "units": 3,
+        "text": "䑞□□"
+      },
+      {
+        "section": "卷14",
+        "sourcePage": "玉篇 (四庫全書本)/卷14",
+        "units": 2,
+        "text": "□□"
+      },
+      {
+        "section": "卷14",
+        "sourcePage": "玉篇 (四庫全書本)/卷14",
+        "units": 3,
+        "text": "㭍䰍㯡"
+      },
+      {
+        "section": "卷14",
+        "sourcePage": "玉篇 (四庫全書本)/卷14",
+        "units": 2,
+        "text": "叔敊"
+      },
+      {
+        "section": "卷14",
+        "sourcePage": "玉篇 (四庫全書本)/卷14",
+        "units": 1,
+        "text": "□"
+      },
+      {
+        "section": "卷14",
+        "sourcePage": "玉篇 (四庫全書本)/卷14",
+        "units": 1,
+        "text": "□"
+      },
+      {
+        "section": "卷14",
+        "sourcePage": "玉篇 (四庫全書本)/卷14",
+        "units": 2,
+        "text": "来□"
+      },
+      {
+        "section": "卷15",
+        "sourcePage": "玉篇 (四庫全書本)/卷15",
+        "units": 3,
+        "text": "冟即既"
+      },
+      {
+        "section": "卷15",
+        "sourcePage": "玉篇 (四庫全書本)/卷15",
+        "units": 4,
+        "text": "□鬱□□"
+      },
+      {
+        "section": "卷15",
+        "sourcePage": "玉篇 (四庫全書本)/卷15",
+        "units": 2,
+        "text": "全牄"
+      },
+      {
+        "section": "卷15",
+        "sourcePage": "玉篇 (四庫全書本)/卷15",
+        "units": 3,
+        "text": "稟啚亶"
+      },
+      {
+        "section": "卷15",
+        "sourcePage": "玉篇 (四庫全書本)/卷15",
+        "units": 4,
+        "text": "□牆廧□"
+      },
+      {
+        "section": "卷15",
+        "sourcePage": "玉篇 (四庫全書本)/卷15",
+        "units": 3,
+        "text": "良□□"
+      },
+      {
+        "section": "卷15",
+        "sourcePage": "玉篇 (四庫全書本)/卷15",
+        "units": 2,
+        "text": "兩䓣"
+      },
+      {
+        "section": "卷15",
+        "sourcePage": "玉篇 (四庫全書本)/卷15",
+        "units": 2,
+        "text": "敝弊"
+      },
+      {
+        "section": "卷15",
+        "sourcePage": "玉篇 (四庫全書本)/卷15",
+        "units": 4,
+        "text": "棄□畢□"
+      },
+      {
+        "section": "卷15",
+        "sourcePage": "玉篇 (四庫全書本)/卷15",
+        "units": 3,
+        "text": "冀兾乖"
+      },
+      {
+        "section": "卷15",
+        "sourcePage": "玉篇 (四庫全書本)/卷15",
+        "units": 2,
+        "text": "卤栖"
+      },
+      {
+        "section": "卷15",
+        "sourcePage": "玉篇 (四庫全書本)/卷15",
+        "units": 1,
+        "text": "殷"
+      },
+      {
+        "section": "卷16",
+        "sourcePage": "玉篇 (四庫全書本)/卷16",
+        "units": 3,
+        "text": "□歖嚭"
+      },
+      {
+        "section": "卷16",
+        "sourcePage": "玉篇 (四庫全書本)/卷16",
+        "units": 1,
+        "text": "凱"
+      },
+      {
+        "section": "卷16",
+        "sourcePage": "玉篇 (四庫全書本)/卷16",
+        "units": 1,
+        "text": "豑"
+      },
+      {
+        "section": "卷16",
+        "sourcePage": "玉篇 (四庫全書本)/卷16",
+        "units": 2,
+        "text": "□豔"
+      },
+      {
+        "section": "卷16",
+        "sourcePage": "玉篇 (四庫全書本)/卷16",
+        "units": 2,
+        "text": "□□"
+      },
+      {
+        "section": "卷16",
+        "sourcePage": "玉篇 (四庫全書本)/卷16",
+        "units": 2,
+        "text": "量□"
+      },
+      {
+        "section": "卷16",
+        "sourcePage": "玉篇 (四庫全書本)/卷16",
+        "units": 4,
+        "text": "鼐鼒鼏䵼"
+      },
+      {
+        "section": "卷16",
+        "sourcePage": "玉篇 (四庫全書本)/卷16",
+        "units": 1,
+        "text": "与"
+      },
+      {
+        "section": "卷16",
+        "sourcePage": "玉篇 (四庫全書本)/卷16",
+        "units": 4,
+        "text": "凥処焭凭"
+      },
+      {
+        "section": "卷16",
+        "sourcePage": "玉篇 (四庫全書本)/卷16",
+        "units": 4,
+        "text": "□俎□亹"
+      },
+      {
+        "section": "卷16",
+        "sourcePage": "玉篇 (四庫全書本)/卷16",
+        "units": 2,
+        "text": "□□"
+      },
+      {
+        "section": "卷17",
+        "sourcePage": "玉篇 (四庫全書本)/卷17",
+        "units": 2,
+        "text": "昜□"
+      },
+      {
+        "section": "卷17",
+        "sourcePage": "玉篇 (四庫全書本)/卷17",
+        "units": 1,
+        "text": "戚"
+      },
+      {
+        "section": "卷17",
+        "sourcePage": "玉篇 (四庫全書本)/卷17",
+        "units": 3,
+        "text": "栔㗉□"
+      },
+      {
+        "section": "卷18",
+        "sourcePage": "玉篇 (四庫全書本)/卷18",
+        "units": 2,
+        "text": "敫敖"
+      },
+      {
+        "section": "卷18",
+        "sourcePage": "玉篇 (四庫全書本)/卷18",
+        "units": 3,
+        "text": "差□□"
+      },
+      {
+        "section": "卷18",
+        "sourcePage": "玉篇 (四庫全書本)/卷18",
+        "units": 1,
+        "text": "□"
+      },
+      {
+        "section": "卷18",
+        "sourcePage": "玉篇 (四庫全書本)/卷18",
+        "units": 4,
+        "text": "□覡靈□"
+      },
+      {
+        "section": "卷18",
+        "sourcePage": "玉篇 (四庫全書本)/卷18",
+        "units": 2,
+        "text": "希棥"
+      },
+      {
+        "section": "卷18",
+        "sourcePage": "玉篇 (四庫全書本)/卷18",
+        "units": 3,
+        "text": "爾爽爽"
+      },
+      {
+        "section": "卷18",
+        "sourcePage": "玉篇 (四庫全書本)/卷18",
+        "units": 2,
+        "text": "汸万"
+      },
+      {
+        "section": "卷20",
+        "sourcePage": "玉篇 (四庫全書本)/卷20",
+        "units": 2,
+        "text": "瀪厡"
+      },
+      {
+        "section": "卷20",
+        "sourcePage": "玉篇 (四庫全書本)/卷20",
+        "units": 1,
+        "text": "□"
+      },
+      {
+        "section": "卷20",
+        "sourcePage": "玉篇 (四庫全書本)/卷20",
+        "units": 3,
+        "text": "畏□禺"
+      },
+      {
+        "section": "卷20",
+        "sourcePage": "玉篇 (四庫全書本)/卷20",
+        "units": 4,
+        "text": "曐曑曡曟"
+      },
+      {
+        "section": "卷21",
+        "sourcePage": "玉篇 (四庫全書本)/卷21",
+        "units": 1,
+        "text": "奲"
+      },
+      {
+        "section": "卷21",
+        "sourcePage": "玉篇 (四庫全書本)/卷21",
+        "units": 3,
+        "text": "□釁□"
+      },
+      {
+        "section": "卷21",
+        "sourcePage": "玉篇 (四庫全書本)/卷21",
+        "units": 3,
+        "text": "喬□□"
+      },
+      {
+        "section": "卷21",
+        "sourcePage": "玉篇 (四庫全書本)/卷21",
+        "units": 4,
+        "text": "□絞□□"
+      },
+      {
+        "section": "卷21",
+        "sourcePage": "玉篇 (四庫全書本)/卷21",
+        "units": 4,
+        "text": "主㕻咅卞"
+      },
+      {
+        "section": "卷21",
+        "sourcePage": "玉篇 (四庫全書本)/卷21",
+        "units": 3,
+        "text": "□㲳□"
+      },
+      {
+        "section": "卷22",
+        "sourcePage": "玉篇 (四庫全書本)/卷22",
+        "units": 3,
+        "text": "□□嵞"
+      },
+      {
+        "section": "卷23",
+        "sourcePage": "玉篇 (四庫全書本)/卷23",
+        "units": 2,
+        "text": "氂斄"
+      },
+      {
+        "section": "卷23",
+        "sourcePage": "玉篇 (四庫全書本)/卷23",
+        "units": 2,
+        "text": "㺇獄"
+      },
+      {
+        "section": "卷23",
+        "sourcePage": "玉篇 (四庫全書本)/卷23",
+        "units": 3,
+        "text": "□□□"
+      },
+      {
+        "section": "卷23",
+        "sourcePage": "玉篇 (四庫全書本)/卷23",
+        "units": 1,
+        "text": "□"
+      },
+      {
+        "section": "卷23",
+        "sourcePage": "玉篇 (四庫全書本)/卷23",
+        "units": 1,
+        "text": "豫"
+      },
+      {
+        "section": "卷23",
+        "sourcePage": "玉篇 (四庫全書本)/卷23",
+        "units": 1,
+        "text": "㔮"
+      },
+      {
+        "section": "卷23",
+        "sourcePage": "玉篇 (四庫全書本)/卷23",
+        "units": 2,
+        "text": "䖜贙"
+      },
+      {
+        "section": "卷24",
+        "sourcePage": "玉篇 (四庫全書本)/卷24",
+        "units": 1,
+        "text": "鷰"
+      },
+      {
+        "section": "卷24",
+        "sourcePage": "玉篇 (四庫全書本)/卷24",
+        "units": 2,
+        "text": "䨊雧"
+      },
+      {
+        "section": "卷26",
+        "sourcePage": "玉篇 (四庫全書本)/卷26",
+        "units": 2,
+        "text": "□飜"
+      },
+      {
+        "section": "卷26",
+        "sourcePage": "玉篇 (四庫全書本)/卷26",
+        "units": 4,
+        "text": "靡□靠䨿"
+      },
+      {
+        "section": "卷26",
+        "sourcePage": "玉篇 (四庫全書本)/卷26",
+        "units": 3,
+        "text": "□□□"
+      },
+      {
+        "section": "卷27",
+        "sourcePage": "玉篇 (四庫全書本)/卷27",
+        "units": 4,
+        "text": "緜䌛繇纛"
+      },
+      {
+        "section": "卷27",
+        "sourcePage": "玉篇 (四庫全書本)/卷27",
+        "units": 1,
+        "text": "□"
+      },
+      {
+        "section": "卷28",
+        "sourcePage": "玉篇 (四庫全書本)/卷28",
+        "units": 1,
+        "text": "□"
+      },
+      {
+        "section": "卷28",
+        "sourcePage": "玉篇 (四庫全書本)/卷28",
+        "units": 4,
+        "text": "錦□□□"
+      },
+      {
+        "section": "卷28",
+        "sourcePage": "玉篇 (四庫全書本)/卷28",
+        "units": 3,
+        "text": "□求□"
+      },
+      {
+        "section": "卷28",
+        "sourcePage": "玉篇 (四庫全書本)/卷28",
+        "units": 1,
+        "text": "□"
+      },
+      {
+        "section": "卷28",
+        "sourcePage": "玉篇 (四庫全書本)/卷28",
+        "units": 2,
+        "text": "□敬"
+      },
+      {
+        "section": "卷28",
+        "sourcePage": "玉篇 (四庫全書本)/卷28",
+        "units": 1,
+        "text": "匏"
+      },
+      {
+        "section": "卷29",
+        "sourcePage": "玉篇 (四庫全書本)/卷29",
+        "units": 4,
+        "text": "眞□□化"
+      },
+      {
+        "section": "卷29",
+        "sourcePage": "玉篇 (四庫全書本)/卷29",
+        "units": 2,
+        "text": "芘毖"
+      },
+      {
+        "section": "卷29",
+        "sourcePage": "玉篇 (四庫全書本)/卷29",
+        "units": 4,
+        "text": "□□□幷"
+      },
+      {
+        "section": "卷29",
+        "sourcePage": "玉篇 (四庫全書本)/卷29",
+        "units": 3,
+        "text": "衆聚臮"
+      },
+      {
+        "section": "卷29",
+        "sourcePage": "玉篇 (四庫全書本)/卷29",
+        "units": 2,
+        "text": "事□"
+      },
+      {
+        "section": "卷29",
+        "sourcePage": "玉篇 (四庫全書本)/卷29",
+        "units": 1,
+        "text": "筆"
+      },
+      {
+        "section": "卷29",
+        "sourcePage": "玉篇 (四庫全書本)/卷29",
+        "units": 3,
+        "text": "□隸隷"
+      },
+      {
+        "section": "卷29",
+        "sourcePage": "玉篇 (四庫全書本)/卷29",
+        "units": 4,
+        "text": "緊堅豎竪"
+      },
+      {
+        "section": "卷29",
+        "sourcePage": "玉篇 (四庫全書本)/卷29",
+        "units": 2,
+        "text": "師□"
+      },
+      {
+        "section": "卷29",
+        "sourcePage": "玉篇 (四庫全書本)/卷29",
+        "units": 2,
+        "text": "虜貫"
+      },
+      {
+        "section": "卷29",
+        "sourcePage": "玉篇 (四庫全書本)/卷29",
+        "units": 2,
+        "text": "□□"
+      },
+      {
+        "section": "卷29",
+        "sourcePage": "玉篇 (四庫全書本)/卷29",
+        "units": 3,
+        "text": "亝□□"
+      },
+      {
+        "section": "卷29",
+        "sourcePage": "玉篇 (四庫全書本)/卷29",
+        "units": 2,
+        "text": "毐□"
+      },
+      {
+        "section": "卷29",
+        "sourcePage": "玉篇 (四庫全書本)/卷29",
+        "units": 3,
+        "text": "□□□"
+      },
+      {
+        "section": "卷29",
+        "sourcePage": "玉篇 (四庫全書本)/卷29",
+        "units": 3,
+        "text": "㢥□□"
+      },
+      {
+        "section": "卷29",
+        "sourcePage": "玉篇 (四庫全書本)/卷29",
+        "units": 2,
+        "text": "也□"
+      },
+      {
+        "section": "卷29",
+        "sourcePage": "玉篇 (四庫全書本)/卷29",
+        "units": 1,
+        "text": "□"
+      },
+      {
+        "section": "卷29",
+        "sourcePage": "玉篇 (四庫全書本)/卷29",
+        "units": 3,
+        "text": "□□糾"
+      },
+      {
+        "section": "卷29",
+        "sourcePage": "玉篇 (四庫全書本)/卷29",
+        "units": 3,
+        "text": "□直矗"
+      },
+      {
+        "section": "卷29",
+        "sourcePage": "玉篇 (四庫全書本)/卷29",
+        "units": 4,
+        "text": "□□旤□"
+      },
+      {
+        "section": "卷29",
+        "sourcePage": "玉篇 (四庫全書本)/卷29",
+        "units": 3,
+        "text": "□篡厸"
+      },
+      {
+        "section": "卷29",
+        "sourcePage": "玉篇 (四庫全書本)/卷29",
+        "units": 1,
+        "text": "囅"
+      },
+      {
+        "section": "卷30",
+        "sourcePage": "玉篇 (四庫全書本)/卷30",
+        "units": 2,
+        "text": "□亖"
+      },
+      {
+        "section": "卷30",
+        "sourcePage": "玉篇 (四庫全書本)/卷30",
+        "units": 1,
+        "text": "□"
+      },
+      {
+        "section": "卷30",
+        "sourcePage": "玉篇 (四庫全書本)/卷30",
+        "units": 1,
+        "text": "□"
+      },
+      {
+        "section": "卷30",
+        "sourcePage": "玉篇 (四庫全書本)/卷30",
+        "units": 1,
+        "text": "叛"
+      },
+      {
+        "section": "卷30",
+        "sourcePage": "玉篇 (四庫全書本)/卷30",
+        "units": 1,
+        "text": "馗"
+      },
+      {
+        "section": "卷30",
+        "sourcePage": "玉篇 (四庫全書本)/卷30",
+        "units": 3,
+        "text": "□䎠奿"
+      },
+      {
+        "section": "卷30",
+        "sourcePage": "玉篇 (四庫全書本)/卷30",
+        "units": 2,
+        "text": "卌丗"
+      },
+      {
+        "section": "卷30",
+        "sourcePage": "玉篇 (四庫全書本)/卷30",
+        "units": 4,
+        "text": "□□□□"
+      },
+      {
+        "section": "卷30",
+        "sourcePage": "玉篇 (四庫全書本)/卷30",
+        "units": 1,
+        "text": "□"
+      },
+      {
+        "section": "卷30",
+        "sourcePage": "玉篇 (四庫全書本)/卷30",
+        "units": 2,
+        "text": "成□"
+      },
+      {
+        "section": "卷30",
+        "sourcePage": "玉篇 (四庫全書本)/卷30",
+        "units": 3,
+        "text": "□巹㠱"
+      },
+      {
+        "section": "卷30",
+        "sourcePage": "玉篇 (四庫全書本)/卷30",
+        "units": 1,
+        "text": "□"
+      },
+      {
+        "section": "卷30",
+        "sourcePage": "玉篇 (四庫全書本)/卷30",
+        "units": 2,
+        "text": "辯㸤"
+      },
+      {
+        "section": "卷30",
+        "sourcePage": "玉篇 (四庫全書本)/卷30",
+        "units": 3,
+        "text": "童□妾"
+      },
+      {
+        "section": "卷30",
+        "sourcePage": "玉篇 (四庫全書本)/卷30",
+        "units": 4,
+        "text": "椉□乗磔"
+      },
+      {
+        "section": "卷30",
+        "sourcePage": "玉篇 (四庫全書本)/卷30",
+        "units": 1,
+        "text": "癸"
+      },
+      {
+        "section": "卷30",
+        "sourcePage": "玉篇 (四庫全書本)/卷30",
+        "units": 3,
+        "text": "孱孴□"
+      },
+      {
+        "section": "卷30",
+        "sourcePage": "玉篇 (四庫全書本)/卷30",
+        "units": 1,
+        "text": "□"
+      },
+      {
+        "section": "卷30",
+        "sourcePage": "玉篇 (四庫全書本)/卷30",
+        "units": 2,
+        "text": "戼□"
+      },
+      {
+        "section": "卷30",
+        "sourcePage": "玉篇 (四庫全書本)/卷30",
+        "units": 2,
+        "text": "啎忤"
+      },
+      {
+        "section": "卷30",
+        "sourcePage": "玉篇 (四庫全書本)/卷30",
+        "units": 2,
+        "text": "尊僔"
+      },
+      {
+        "section": "卷30",
+        "sourcePage": "玉篇 (四庫全書本)/卷30",
+        "units": 1,
+        "text": "□"
+      },
+      {
+        "section": "卷30",
+        "sourcePage": "玉篇 (四庫全書本)/卷30",
+        "units": 4,
+        "text": "東方喉聲"
+      }
+    ],
+    "untitledSections": [],
+    "notes": "Annotations ({{*|…}}) and site templates are removed; list/verse nesting is flattened; verse line breaks are preserved inside passage text."
+  },
+  "limitations": [
+    "未声明结构优先批（体裁假说：字書）。路由 mainPageLinks，31 章；授权标签 PD-old。密度与未声明结构密度实测后置。"
+  ],
+  "sections": [
+    {
+      "id": "玉篇.1",
+      "ordinal": 1,
+      "title": "全覽",
+      "sourcePage": "玉篇 (四庫全書本)/全覽",
+      "sourceRevid": 8739667,
+      "sourcePages": [
+        "玉篇 (四庫全書本)/全覽",
+        "玉篇 (四庫全書本)",
+        "玉篇 (四庫全書本)/總目",
+        "玉篇 (四庫全書本)/卷01",
+        "玉篇 (四庫全書本)/卷02",
+        "玉篇 (四庫全書本)/卷03",
+        "玉篇 (四庫全書本)/卷04",
+        "玉篇 (四庫全書本)/卷05",
+        "玉篇 (四庫全書本)/卷06",
+        "玉篇 (四庫全書本)/卷07",
+        "玉篇 (四庫全書本)/卷08",
+        "玉篇 (四庫全書本)/卷09",
+        "玉篇 (四庫全書本)/卷10",
+        "玉篇 (四庫全書本)/卷11",
+        "玉篇 (四庫全書本)/卷12",
+        "玉篇 (四庫全書本)/卷13",
+        "玉篇 (四庫全書本)/卷14",
+        "玉篇 (四庫全書本)/卷15",
+        "玉篇 (四庫全書本)/卷16",
+        "玉篇 (四庫全書本)/卷17",
+        "玉篇 (四庫全書本)/卷18",
+        "玉篇 (四庫全書本)/卷19",
+        "玉篇 (四庫全書本)/卷20",
+        "玉篇 (四庫全書本)/卷21",
+        "玉篇 (四庫全書本)/卷22",
+        "玉篇 (四庫全書本)/卷23",
+        "玉篇 (四庫全書本)/卷24",
+        "玉篇 (四庫全書本)/卷25",
+        "玉篇 (四庫全書本)/卷26",
+        "玉篇 (四庫全書本)/卷27",
+        "玉篇 (四庫全書本)/卷28",
+        "玉篇 (四庫全書本)/卷29",
+        "玉篇 (四庫全書本)/卷30"
+      ],
+      "passages": [
+        {
+          "id": "1.1",
+          "text": "欽定四庫全書　　　　經部十\n玉篇　　　　　　　　小學類二提要\n等謹案玉篇三十卷梁大同九年黄門侍兼太學博士顧野王撰唐上元元年富春孫强増加字宋大中祥符六年陳彭年呉鋭邱雍等重修凡五百四十部今世所行凡三本一為張士俊所刋前有野王序一篇啟一篇後有神珙反紐圖及分毫字樣朱彛尊序之稱上元本一為曺寅所刋與張本一字無異惟前多大中祥符勅牒一道稱重修本一為明内府所刋字數與二本同而每部之中次序不同註文稍略亦稱大中祥符重修本按文獻通攷載玉篇三十卷引晁公武讀書志曰梁顧野王撰唐孫强又嘗増字釋神珙反紐圖附于後又載重修玉篇三十卷引崇文總目曰翰林學士陳彭年與史館校刋吳鋭直集賢院邱雍等重加刋定是宋時玉篇原有二本彭年等進書表稱肅奉詔條俾從詳閲訛謬者悉加刋定敷淺者仍事討論其勅牒所列字數稱舊一十五萬六百四十一言新五萬一千一百二十九言新舊總二十萬九千七百七十言註四十萬七千五百有三十字是彭年等大有増刪已非孫强之舊故明内府本及曺本均稱重修張本既與曺本同則亦重修本矣乃刪去重修之牒詭稱上元本而大中祥符所改大廣益會之名及卷首所列字數仍未及削改可謂拙于作偽彛尊序乃謂勝于今行大廣益會本殆亦未見所刋而以意漫書歟元陸友仁硏北襍志稱顧野王玉篇惟越本最善末題會稽吳氏三一孃寫楷法殊精又考永樂大典每字之下皆引顧野王玉篇云云又引宋重修玉篇云云二書並列是明初上元本猶在而其篇字韻中所載玉篇全部乃仍收大廣益會本而不收上元舊本顧孫原帙遂不可考殆以重修本註文較繁故以多為貴耶當時編纂之無識此亦一端矣卷末所附沙門神珙五音聲論及四聲五音九弄反紐圖為言等韻者所祖近時休寧戴氏作聲韻考力辨反切始魏孫炎不始神珙其説良是至謂唐以前無字母之説神珙字母乃剽竊儒書而托詞出于西域則殊不然考隋書經籍志稱婆羅門書以十四音貫一切字漢明帝時與佛法同入中國則逺在孫炎前又釋蔵譯經字母自晉僧伽婆羅以下可考者尚十二家亦逺在神珙前盖反切生於雙聲雙聲生於字母此同出于喉吻之自然華不異梵梵不異華者也中國以雙聲取反切西域以字母統雙聲此各得於聰明之自悟華不襲梵梵不襲華者也稽其源流具有端緒特神珙以前自行于彼教神珙以後始流入中國之韻書亦如利瑪竇後推步測騐叅用西法耳豈可謂歐羅巴書全剽竊洛下鮮于之舊術哉戴氏不究其本徒知神珙在唐元和以後遂據其末而與之爭欲以求勝于彼教不知聲音之學西域實為専門儒之勝于彼者别自有在不必争之于此也乾隆四十六年十月恭校上\n總纂官臣紀昀臣陸錫熊臣孫士毅\n總　校　官　臣　陸　費　墀"
+        },
+        {
+          "id": "1.2",
+          "text": "玉篇序\n梁大同九年三月二十八日黄門侍郎兼太學博士顧野王撰本唐上元元年甲戌嵗四月十三日南國處士富春孫强増加字三十卷凡五百四十二部舊一十五萬八千六百四十一言新五萬一千一百二十九言新舊總二十萬九千七百七十言\n昔在庖犧始成八卦暨乎蒼頡肇創六爻政罷結繩教興書契天粟晝零市妖夜哭由來尚矣爰至龍馬負河洛之圖赤雀素鱗摽受終之命鳳羽為字掌理成書豈但人功亦猶天授故能傳流奥典鉤探至賾揚顯聖謨耀光洪範文遺百代則禮樂可知驛宣萬里則心言可述授民軌物則縣方象魏興功命衆則誓威師旅律存三尺政仰八成聴稱責於附别執士師於兩造勒功名於鍾鼎頌美徳於神祇故百官以治萬民以察雕金鏤玉升崧岱而告平汗竹裁縑寫憲章而授政莫不以版牘施於經緯文字表於無窮者矣所以垂帷閉户而覿遐年之世藏形晦跡而識逺方之風遵覽篆素以測九垓則靡差膚寸詳觀記錄以游八裔則不謬毫釐鑒水鏡於往謨遺元於今體仰瞻景行式備昔文戒慎荒邪用存古典故設教施法無以尚兹經世治俗豈先乎此但微言既絶大㫖亦乖故五典三墳競開異義六書八體今古殊形或字各而訓同或文均而釋異百家所談差互不少字書卷軸舛錯尤多難用尋求易生疑惑猥承明命預纘過庭總會衆篇校讎羣籍以成一家之製文字之訓備矣而學慙精博聞見尤寡才非通敏理辭彌躓既謬先蹤且乖聖㫖謹當端笏擁篲以俟嘉猷"
+        },
+        {
+          "id": "1.3",
+          "text": "玉篇啟\n竊聞兩儀俶啟九皇始君情性初動有巢肇制三聖代立十紀遞興龍牒浮河書起洛八卦既陳六爻攸叙篆素之流是焉而出至於精課源妙求其本始末學敷淺誠所未詳雖復研考六經校讎百氏殊非庸菲所能與奪謹依條例同異具以上呈伏惟聖皇馭㝢膺籙受圖徳尚昊軒功超媯姒通妙廣運乃聖乃神經天曰文止戈為武百工維理庶績咸熈勸以九歌撝之八柄脩文徳以來要服舞干戚以格有苗是故仁風所扇九服䝉靈正朔可班四荒懐徳取衣雒樹則肅慎識受命之興夷波海水則越裳知聖人之徳豈但中和樂職近播岷峨徳廣所覃旁流江漢殿下天縱岳峙叡哲淵凝三善自然匪須勤學六行前哲寧以勞喻是以聲覃八表譽決九垓規範百司陶鈞萬品猶復留心圖籍俛情篆素糾先民之積謬振往古之重疑簡冊所傳莫令比盛野王沾濡聖道沐浴康衢不揆愚淺妄陳狂狷徒夢收腸終當覆瓿空思朱墨懼必無傳悚悸交心罔知攸錯謹啟"
+        },
+        {
+          "id": "1.4",
+          "text": "玉篇勅牒\n准大中祥符六年九月二十八日勅都大提舉玉篇所狀先奉勅命指揮差官校勘玉篇一部三十卷近方了畢遂裝寫淨本進呈其進呈本今欲雕印頒行伏乞特降指揮事并據翰林學士右諌議大夫知制誥兼龍圖閣學士祕書監同修國史集賢殿修撰陳彭年等狀昨據屯田郎中史館校勘呉鋭主客員外郎直集賢院丘雍校勘玉篇一部三十卷再看詳别無差誤並得允當者竊以篇訓之文嵗月滋久雖據經而垂範終練字之未精肅奉詔條俾從詳閲訛謬者悉加刋定敷淺者仍事討論式就編聨頗為愜當儻頒行於普率庶上助於欽明事牒奉勅宜依牒至准勅故牒"
+        },
+        {
+          "id": "1.5",
+          "text": "玉篇序\n小學之重于古久矣周官保氏掌養國子教之六書漢制太史試學童能諷書九千字以上乃得為吏吏民上書字或不正輒舉劾自凡將元尚滂喜諸篇均失其傳而爰歴博學為閭里書師所合入之倉頡篇中許慎據以撰説文解字古本部分自一至亥者是已顧氏玉篇本諸許氏稍有升降損益迨唐上元之末處士孫强稍増多其字既而釋慧力撰象文道士趙利正撰解疑至宋陳彭年呉鋭丘雍輩又重修之於是廣益者衆而玉篇又非顧氏之舊矣予寓居呉下借得宋槧上元本于毛氏汲古閣張子士俊請開雕焉梨棗之材尺幅之度臨橅讎挍之勤不舍晨暮并取繫傳類篇汗簡佩觿諸書推源析流旁稽曲證逾年而後成書爰屬予序其本末以予思之學奚小大之殊哉毋亦論其終始焉可也講習文字于始窮理盡性官治民察要其終未有不識字而能通天地人之故者宋儒持論以灑埽應對進退為小學由是今之塾師説文玉篇皆置不問兔園冊子専攷稽于梅氏字彚張氏正字通所立部屬分其所不當分合其所必不可合而小學放絶焉是豈形聲文字之末與推而至于天地人之故或窒礙而不能通是學者之所深憂也孫氏玉篇雖非顧氏之舊然去古未逺猶愈于今之所行大廣益本玉篇復上元本而古之小學存焉矣秀水朱彞尊序"
+        },
+        {
+          "id": "1.6",
+          "text": "欽定四庫全書\n玉篇總目\n卷一\n一　　　上　　　示二　　　三　　　王玉　　　珏\n卷二\n土　　　垚　　　□里　　　田　　　畕黃　　　丠　　　京冂　　　□　　　邑司　　士\n卷三\n人　　儿　　父臣　　男　　民夫　　予　　　我身　　兄　　弟女\n卷四\n頁　　頻　　　　県　　　面色　　囟　　亢　　鼻　　自目　　盾　　䀠　　見　　覞苜　　耳\n卷五\n口　　谷　　舌齒　　牙　　　須彡　　彣　　文髟\n卷六\n手　　□　　舁　　　　　爪丮　　鬥　　屮又\n卷七\n足　　疋　　□骨　　血　　　肉筋　　力　　劦呂　　㝱\n卷八\n心　　思　　惢\n卷九\n言　　　誩　　曰乃　　丂　　可兮　　号　　亐云　　音　　　告凵　　吅　　品\n喿　　龠　　冊\n㗊　　只　　㕯\n欠　　食　　甘旨　　㳄　　㚔夲　　夰\n卷十\n彳　　行　　冘夂　　乆　　夊舛　　走　　辵廴　　癶　　步止　　處　　立竝　　此　　正是\n卷十一\n宀　　宫　　宁門　　戸　尸尾　　尺　履老　　疒　歹　　　死　叧凶　　穴　丨屮\n卷十二\n木　　東　林巢　　　叒\n卷十三\n艸\n卷十四\n蓐　　□　　舜竹　　箕　　才巿　　乇　　　　　蕐　　稽　　桼　　丵菐　　　　　　朿　　□　　麻　　尗韭　　　　瓠丯　　　來\n卷十五\n麥　　黍　　禾秝　　耒　香皀　　鬯　米\n毇　　　臼　　倉㐭　　　嗇　　亼會　　　亯　　畐　　　入　　冖　　　冃　　兩㡀　　　覀　　网□　　　冓　　厶去　　北　　西鹵　　鹽　　皿　　臥　　㐆\n卷十六\n琴　　喜　　壴鼓　　豈　　豆豊　　豐　　䖒重　　　鼎　　瓦缶　　鬲　　斗　　勺　　几且　　匚　　　曲壺　　巵　　□\n巻十七\n㫃　　勿　　矢弓　　弜　　斤矛　　戈　　殳殺　　戉　　刀㓞　　刃\n卷十八\n金　　攴　　放丌　　左　　工㠭　　巫　　卜兆　　用　　爻㸚　　車　　舟方\n卷十九\n水\n卷二十\n沝　　　　巜巛　　井　　泉灥　　永　　谷　　冫　　雨雲　　風　　气鬼　　甶　　白\n日　　旦　　晨\n倝　　晶　　月\n有　　明　　囧\n卷二十一\n冥　　夕　　多\n小　　幺\n丏　　大奢　　火　　炎焱　　炙　　爨囱　　黑　　赤亦　　夨　　夭交　　尢　　壹叀　　丶　　丹青　　　氏　　氐\n卷二十二\n山　　屾　嵬屵　　广　　厂髙　　危　　　石磬　　　　阜　　厽\n卷二十三\n馬　　牛　　犛羊　　　羴　　莧　　犬　　犾豕　　　　□　　嘼　　　廌鹿　　麤　　㲋兔　　　　兕象　　能　　熊龍　　虍　　虎虤　　豸\n卷二十四\n烏　　　　乙燕　　鳥　　隹奞　　萑　　瞿雔　　雥　　魚\n卷二十五\n鼠　　易　　　虫䖵　　蟲　　它\n黽　　卵\n貝\n卷二十六\n羽　　飛　　習\n卂　　非　　不\n至　　　毛　　　毳冉　　　而　　　角皮　　㼱　　革韋\n卷二十七\n糸　　系　　素絲　　黹　　率索\n卷二十八\n巾　　巿　　帛衣　　裘　　卩印　　夘　　辟茍　　勹　　包\n卷二十九\n長　　□　　匕比　　从　　乑共　　　異　　史支　　　　帇聿　　書　　隶臤　　帀　　　出之　　生　　耑毌　　束　　㯻囗　　貟　　齊干　　幵　　片牀　　毋　　克丿　　　　弋□　　　亅　　句丩　　　　亡匸　　兂　　旡皃　　　　　先秃　　厶　　單录\n卷三十\n四　　叕　亞五　　六　　　七八　　　釆　　半九　　　丸　　十卅　　　古　　寸丈　　　皕　　甲乙　　　丙　　丁戊　　　己　　　巴庚　　　辛　　辡䇂　　桀　　壬癸　　子　　了孨　　ㄊ　　　丑寅　　卯　　辰巳　　午　　未申　　酉　　酋戍　　亥"
+        },
+        {
+          "id": "1.7",
+          "text": "欽定四庫全書\n玉篇總目\n卷一\n一　　　　　　二　　　三\n卷二"
+        },
+        {
+          "id": "1.8",
+          "text": "卷三十\n四　　　五　　六　　　七八　　　　　九　　　　　十"
+        },
+        {
+          "id": "1.9",
+          "text": "欽定四庫全書\n梁　　　　顧野王　　　　撰\n一部第一　　　　　上部第二\n示部第三　　　　　二部第四\n三部第五　　　　　王部第六\n玉部第七　　　　　珏部第八"
+        },
+        {
+          "id": "1.10",
+          "text": "弌天元丕吏□\n上\n丄帝□旁雱□□下\n示\n□神祇齋□祕祗祭䃾祀禩祏禋□祡□祖祊祠礿禴祫禘祜福禧祐祺禥禄禎祉禔祥禎禠禨祪禰□祰祼䄂　祝祈禷禱□□䄟禮礼祔□社□禖禪禜䄆禳禬禕禦祴禶□禡祳祾祚祱祽䄛䄍禂祧□禓祲禊禍□□祟□\n□祙禁禲祅禫祩䄤祤䄐䄌□䄃礽□□䄉□□禗祘禉䄎□□祣䄄□䃽䄅䄁□□□䃿䄓䄜襹\n禯□祹禑䄝禟□祌禭□䄚祅祻禚祦□□祓\n二弍\n□□□亟亝竺亖凡□□□\n三"
+        },
+        {
+          "id": "1.11",
+          "text": "王\n□皇□閏\n玉\n□玉璙瓘璥琠□玘瓕□□瑾瑜璵璠玒璐瓊璚瓗璇琁□珦㻝瓄珵琳璿□□球璆㻒瑅瑭珙㻽琛環璧瑗琮瓏璜瓃琥珪琰璋玠琬瑒瓛珽瑁玥瑇琡瑞瑱珥琫珌㻫璏㺲璫瑑瓉玦璂琪珩璬珮玩瑬□璹珤珍□琚琖珈璲瑵璪瑚璉琩瑋璩璺玷琄璽□瑹璞琢琱玼理瑳璱琗琯瑮珇瑩璊玧瑛琤瑕瑲玎瑀瑝瑣玤㺿珢璅璡㻸□□㻨玽琂璶琟瑦㺨瑂璒瑶玗珣瑎琨瑻碧瓐珉瑉㻍珸璑瓔玞㻬琈瑌瑊玪玏琇璓玖璘㻞琭璄璟㻾珠珧珕玓瓅璣玟瑰瓌玭琕琅玕毋□□瑠璃珿琲珂珬玲瑴琀□璗琙□珝璯玹珫瑔璔玢㻌□璝珻珒□瑯瑘瑄珹□㺩珷瑽瑢琿瑫璼珖玸珆玻瓈□玵瑺㻓□瑡□璾玶㺭瓖珘璮㻂㻵□\n琽玳□㻑玔璨璦珨\n㺪㺷㻶玥㻠玐㺴\n璛珞珛珀瓙璀\n部第八\n斑班"
+        },
+        {
+          "id": "1.12",
+          "text": "欽定四庫全書\n梁　顧野王　撰\n土部第九　　　　　垚部第十\n□部第十二　　　　里部第十二\n田部第十三　　　　畕部第十四\n黃部第十五　　　　丠部第十六\n京部第十七　　　　冂部第十八\n□部第十九　　　　邑部第二十\n司部第二十一　　　士部第二十二\n土\n墺□□地墬坤垓壤堣坡塙坶㙁墽壚墝埴垶㙚墣圤塊凷□堚堵堛壁□堞城垣墉圪塹壍㙩堄壘塒墍堂坣㙶坫垝塾堊墀□墐㙙□□埽壎塤坃壦墼墊埝圣均坄垼□□塖基址坻□塡坴封□坎埳壐坦埻□埤型圮垸增垐堲塏垎墨坿垍壙埂毁□壓㙤壞□坱坼埃坅堀在垷塞㙠塗培垔堙□坺墢□壅堩坒埵堫堨堤堪埐埱埒堁□坏埾墇垑□圻垠㙬垢坸墠壇垽圿坷㙪垤場坥壝埸塓圭墾圯境疆壃坊埅堢壔埩□域坌坋坐□坑埯堟壣壄㙀㘲坲墆垕□堥圢䵺□堮□坳墥□壂壛堬堭埰埏壟塿埌墦墲塋墓墳瘞□圠埍堋垗□□塌□墟垂□墋堆塠垖堧坹㙊□堜圱□埿塲埋壏塔㙱墿坾埢埫塎㘨□塷埆坂圬墁壑壡坉㙏㚀埈□墤堗垺□□垘埭墱㙂㙐埨塯墑垾堈圾垛塛㙞埊垙㲄㙝㘦坩垻□堠堦堝垌坰埪㘺□㙳㙷壜墅㙴墡壈埥堶□垟垀埦㙰塘墻壆□㘱埇□圵塕壕㙎墭塉坬塵墌坨垹㙡□□塣塸遠塚㙇塢埡墏㙻□塼堰壒墜圼堉墰埁\n垚堯\n□\n□\n□䒺□難□艱□\n里\n野釐田部第十三田\n甾畬□疇□㽭㽥疁畔㽨畦畮畞町□疃畽畹㽜㽘畷界畍畛畎甽甸畿畸疄□□甿□㽩□㽤□畇畯畟留畤略畊㽦當畜□畼疅㽣□□畂□□畘\n㽡㽫㽧□\n睔□㽪□\n□□□㽝\n□□\n畕畺\n畾疊\n黃□䵌\n䵎䵋黊□斢黈黇䵐□\n□□□□□䵏□□丠部第十六丠\n㐀丘虛屔\n京\n就□□\n冂\n坰冋冊市央隺冘\n□\n□□䯬□□□□\n邑邦\n鄢酇鄰䣊郊鄙都鄭郡郵郛□窿邰郁䣝郿邠□鄠扈䢸郝酆郖□□□鄜□邮鄏鄻鄆□邙郗鄐鄩邶鄁邘邵鄇鄍邲郤□□鄈邢郉郱郇鄔鄴祁邯鄲鄃鄗□鄡郅鄚□□邟鄦郾郟郪□郙郋□鄧□鄎郹鄾□酈鄛□䣚□䣁□郢□邔鄂鄳䢵鄘鄖郫□那□邡鄱□鄨酃郘䣂鄮鄞邴□䣜□鄑郜鄄䢻鄶酁邛邧郔郠鄒鄹□郰鄅䣄邿郕䣍酄邳郎䣡鄣邗郈□郭郳郚郣郯邪郲酅鄫邞邭□郂邽郮□鄪鄕酀□邱□鄝\n□䢳□䣇□\n□□邩鄬邖䣘□邨□□□䣀䣆鄀邥邤鄟鄵鄸䢿郼䣔□鄯□□□部□䣤□□鄏□郀□□□鄌□郃郩□□郆□䣛□□□□□□鄽䣐鄺□□□䣋邸□䣕□□□□䣙郕□□\n邼郴□邒\n□□□□\n□䢾□\n䢼□䣢邾□\n司伺\n詞\n士\n壻墫壯"
+        },
+        {
+          "id": "1.13",
+          "text": "欽定四庫全書\n梁　顧野王　撰人部第二十三　　　儿部第二十四父部第二十五　　　臣部第二十六男部第二十七　　　民部第二十八夫部第二十九　　　予部第三十\n我部第三十一　　　身部第三十二兄部第三十三　　　弟部第三十四女部第三十五\n人\n僮仁傂伾弔伄儅偂仳儂㑗傑倕侳保□伭□企□俊儁仞仕俅儒仲伯佰偰倩伊□伀佂儇侅倓□僷偞份僚佖仜僝儠儦儺僓佶倭俁健俟倞傹傲仡儼俚俺侚□伴佳僴倬偲侹僗傓儆俶傭僾仿㑂佛僁㣯僟供偫儲備俻□偓佺儐㒤仢儕侔倫偕侙倂俱儹傅俌佮依佽倚佴仍侍倢伃傾側侒侐俜俠侁儃仰侳儽傫□偁付佸傆微作假侵償儥儀代傍□偈俔侣便偆任什優僖儉价㑘俗仔偭億俆㑞使伶俾傳偋倌伸僭伹㒄偄傿儔倍俴□侊倀偏佃儗侜倜僻□侈伎佁伿□僞倪伍仵佝倡俳佻儳僐㑾傜俄僛侮㑄傷俙㑵㑥僄傞僨僵偃仆倄俑係伏促催伐仇俘傴仸儡僇倃倠傛僔侂倦僂傮像偶僊㒨仙佋□伋佼佩傪㑮侗伉儷㒧僑僎傀□儋僤何佗他□　□佚值俇僆佾莅佇侑儴偪佪傖儓㑷倯伆㒓侼傃偩侀偎倅價俛俯仂傁□倇借倰傺侘佐㒌倮偟侎偷□僢住侻儢□僸儻㒠佯□傎倒侱僬侣佟□侄□俓仟㒅□□侲仉僪倥偬倱傱偡□仗伈偛㑻傄□俹低□儸□俸僦俰儰傋□佔侸偠㒟佊傌佫□儭佑僋俕佄仠㑜倖僯俈㒋佱偵□□偙儶傝但僒偯侇傰仱僥侏㑦儈僰佒侒□伻佉㑼倧偳佬侾伽倲□僧㒥㒕僧仯侉傇伔□□傟□㑎傊佲□\n傒□僝伱㒜㒇俖倘□佌佷□㑯佀似估侃偘倗倣儌□例㑋僜儱偅㐰倳㑶伷㒈僅媵儾傼□儙仛㑃傔偌□㑍□伳倛㑤傚□僕傈傕仴俗㒂傶㒔㑛□□㒊佹偉俉□俒仚僙儜儯偤件以儑俵□儚個僀僿㑉傉倔咎位偒㐴儿部第二十四儿\n兀兒允兊兌充亮兖免父部第二十五父\n爹爸㸙爺\n臣\n臦臧\n男\n□甥嬲\n民"
+        },
+        {
+          "id": "1.14",
+          "text": "夫\n㚘替規\n予舒\n予\n我成\n義羛\n身\n□□躴躿躭軁□䠿躱䠽䠸□躽躳躬䡀軄躶躰軆\n□□躸兄部第三十三兄兢\n□\n弟\n□第罤晜\n女\n姓姜姞姚嬀□好妞娸娧嬿娙㜺婉妴姛嫣姌嫋孅嫇奵婬嬛姽㚲婐㛂委妗孂婧妌姂嫙姡䶒嬥嫢媞婺娛媐娭\n娓媅妉嫡孎媕□媣嫥如嫧娕□娖嬐\n嬪□㛥妟\n嫴媻娑婆姰姷姕妓嬰㛑□媛娉娽妝□孌媟□嬻\n犗□䆯□嬖妒妬嫉媦媢妖□佞嫪婟嫭㜘婼妄妨媮娋㛆嫌妯娌婞嫸娺㜝娿妍嫳□娃妜孈㜇嫼□嫖㛗\n婎媥㛼嬬婄㜗婪嬯婱㜤嬾\n婁婁□㛍孃娘嬈□姍婓嬋媆㛪㜮嫯娩妥姤嬇嬌嫘□妺婩媓姒娣娟妦㛔孀妙嬙婿媵婘孉嬼媉嬚嬉媷娵婸㛁婍妠□妛㛃嬆娏婽娷□娝㜳妧㛒嬜䧪姴娨媽姆娒㛴□奸娗媿奻姦姧姥□娾㜷　嬭㚷姘姅妃婥娀姮娼□姣□嬣嫜妐㚰媸姬嫞嫠姿□㜪嫀㜯㛹□□㚣婋孋妋㛺媖䎟□妑□□妿娻㛻姱媈婷妔嬁㜨□□媃㚴媋㜞㛎□㚹妚嫐嫵娬孍㛚㜗□□\n婀娜㛱娞婇㛧㜌姊□嫂㛦姐她姫嫤嬶娍婭□㛶奼姹㜻婻婏嬎□□□嫎姲姩□㜣□□㛕□妰妾嬄妲妀妭媼□姪㜼妷嬳嫛婗姨婢媚媺㛄姝媰嬃嫗媲妻□㜎媧□媒始妊娠姻婣妘□婚□嫄婠艬姺媊婜媌姼嫁姎嬹嫈孁婤姶媨㛅妣□嬩娶妵娥姑嫷媠婦□娡妹嬒嫚嫽媾奴㚢嬮㜅威妁㜰嫿㚤婕妤"
+        },
+        {
+          "id": "1.15",
+          "text": "欽定四庫全書\n梁　顧野王　撰頁部第三十六　　　頻部第三十七部第三十八　　　部第三十九\n県部第四十　　　　面部第四十一色部第四十二　　　囟部第四十三部第四十四　　　亢部第四十五鼻部第四十六　　　自部第四十七目部第四十八　　　盾部第四十九\n䀠部第五十　　　　部第五十一見部第五十二　　　覞部第五十三苜部第五十四　　　耳部第五十五\n頁頭\n顔□顱頂額頟□願顚顙題額頯頰䫀頜□顄頷頤項領頸䪴顀□䫟顩頵䫡碩頒䫞顒顤顝䫨頎□䫶□□□頨顗□頑□□顆頢頲頠頍□顧頋䪾䫰顉顓頊□頫頓頣□頡䪼顥顅頛䫔䫌□䫥頗□頄頩䫵顮顫顦顇顑顲煩頪䫒頦顡䫏籲䫃䫤顴顳顬□䯪顠□頰□□䫆頏頔□□頝預領□□䫦䫖䫴□䫂顁□□□□□□䫳䫫䫉頕□頌□顯䫢□□□䪹□䫗□頽䪳□頳顋顢頇□䫜□䫚□□□顃䭭䫩䫬䫲頧□顐□頃□□□頊頮䪿䪻\n□□顟䪷䫘䫄□頙□䫷顎□順\n䫈\n頻\n□顰部第三十八脜"
+        },
+        {
+          "id": "1.16",
+          "text": "部第三十九\n首䭬□□□□□□馘\n部第四十\n縣\n面\n䩉靨靦□　□□䩌䩍䩊□□䩇䩂䩆□䩋□□靧靤蠠□□□䩏□□色部第四十二色\n艴□艵䒋䒍䒎䒊□靘䒌赩艶\n囟□\n巤\n部第四十四\n賾亢部第四十五亢䶳\n□鼻部第四十六鼻齃齅鼽□鼾齂齆□䶍䶑齇䶏□□䶎齁□䶐\n䶌鼿□齈□"
+        },
+        {
+          "id": "1.17",
+          "text": "自□□\n臭臰\n目\n□眼□䁵眥䀹睫□瞦矏\n□睅瞞䁔睴矕睔盼盰眅窅睍睆䁺瞵矔眊矘睒眮䀣瞴䀘□□䁂睨□眓□䀽眈睎眛鬅□睘䁴□□□䀛眕瞟睩睹眔睽眽眿䀩□瞤矉眢䂄矆睢䀏眴睦□䁲瞀眱眤瞻□䁈瞗相瞋□睗睊□睼䁊䁙瞫眷睠督看蒥瞚瞬䀢眙盻䀟眝睡瞑\n眠眚瞥眵□䁾䀗眯䀶䁁眜\n眺睞䀺□\n眣□睇䒅□䀼眲䀡眇睺矇盲瞽□瞍䁍眄䁝眸睿瞳䀑睉眐瞭眒瞺眳睛䀬瞲□□矎睵□\n瞶盿䁕䀨\n盯瞎□□䁓□瞪䀴□眭眻□䁱睳瞠□□□□睥\n眎眡眂□盷䁩瞸疁䁳□䁅睕矌睈□矀眆□□瞰□䁷□䁇□□䁿䁤䀸䀿睂眉□□䁎眑睟矒䂃瞛□□眗瞔□䁽□具□睚眦□䀵睃䁧䁐䁣□矑□睋盺瞹□瞘□瞇眶□瞟□□䀻眘□䁤䁗□眰眪□□䁏□睶瞜□䁥眨䀷眖盶䀯□□眀□瞌䁸睲瞨□□䀖□䁘䁢䂀□□睷□□矃矖眧□□瞼瞉眏□䁆䀙□瞖睱䂁瞱□□□䁻□瞙䀰䀫䁋□䁭䀓瞁省□\n盾\n瞂□\n䀠□\n□□瞿矍□煛□□尠□瞐\n部第五十一夐\n闅□見部第五十二見視\n□覣䚕□覶䚄□覝䚋觀䙷覽䚅□□覰覯覭覘□□覹覢䚔□□□覬覦㒻䚎□䚐䚍靚親覲覿覩覒覕覛□覺□□䙾䙼覓覔□覮䚓覸□□□覗□䚑□□□覠□覴□□□□□覫䚇䚆覑䚀瞡覱䚏䚈□□䚉□覟䙿䚂䙽□覤覨\n覞□"
+        },
+        {
+          "id": "1.18",
+          "text": "苜□\n瞢蔑蘉\n耳\n□耴耽聃□聸䏉聯職□聊聖□聦聡聽聆聒聥聞□□聲聘聾䏁聤聳聉聵□聝聅䎳䏇耹䎺䏅䏆聱□䎶䏃□耵聹䏄□耾耺聐䎷䎿□聙□䏂□耴聭□□聑耷䎼聶□□聠□聧䎻□聎聕□□䎴□聄□□□□□□□□□聻□"
+        },
+        {
+          "id": "1.19",
+          "text": "欽定四庫全書\n梁　顧野王　撰口部第五十六　　　谷部第五十七舌部第五十八　　　齒部第五十九\n牙部第六十　　　　須部第六十一彡部第六十二　　　彣部第六十三文部第六十四　　　髟部第六十五\n口\n□噣咮喙吻㖧嚨咽㖶喉嗌□喗□噭叫嘂哆啾喤咺唴哴㘈咷喑噲咳嗛咀嚵啜㗱噬嚌□噍□嚼□吮噉啖啗嗒哈嘰㗘吞含哺嚛味□噫嘽咦呬喘呼吸喟嘳嘘吹啍噋□唫噤名召吾哲喆嚞君命咨問和咊唯叶唱噱㖸咥唏听呭□咄唉噂咠嘫呷嘒嚖唪□嗔嘌嘑喅嘯嗂呈嚱嗿咸启哯咞右吉啻嚋周嗢唐啺嘾吐噎咈嚘嗜呩嘐啁嘲哇□□吺□呰\n嗻唊嗑嗙噧叴㕤呶叱噴吒咤喥噊嘮啐唇嘵吁□嘖嗸唸□㕧㘙呻吟喻嗞呝□哤嘅吪嘆喝哨噆吝□各否唁喭哀嗁啼嗀咼喎□嗼嗾□吠嘷哮喔喈嚶啄唬呦噳喁囒哰㗦嗹嘍㖪喛嘕㗔喊嚂喓嗟嗉嚇嚃叵嘺啌台唶嘈局㕣咡吂□□呫㗺咹吨囐囁嗃㕰㗲咟啀哷□噅□□呀唭嘻㘆□□哹善□嚝售嚊□啅呁吢嘇㖥㗻唆唲嘔呥㗤□□啒唼啑喋噞唵噢咻咿嘹□㗨唹□㗿吵嘶□哂㗛呣咏□叨噈嘿吷嚾吼吽□呵哈㖢嘬噮㖃□呐咋咇□㗽□□哽哊咍咰嚅呿呴嘪嗚嗕㗢叮嚀呢□喃噪□㖄呞嗤鳴㕭啉咬喧唌嚗喞咆吭哦㗓噌吰嚬哃㘇啨呤喍喂嗺㕬叿吱噥㘋吙噇唋□㖹□□嗡唩□咃咁㕱吥哸呅□啡咣□唻嗆喡□□嗊□喠喏卟呠㖦哻喕哶嚕□啞㕦叧叩□嚙□□吘㗂□呧唍㖺□□㕻咅噦唳㖑㗕囀唄嚥□唾㘐嚫□□噯㖟嗄㖆□嚜哩□□囈啈□□啃□囑㖨嗖唷□□吡□□㖅□□□喇㘀□嗝□□□呹嗋哫□㘉㘍㗵吃喢□㗫㗧唰□唎囃喫□□噱叭□唿哠□嗐哵嗒唈咭啻□哉谷部第五十七谷□\n□□\n舌舓\n舐□舚舑䑜\n齒\n□□齔齗䶦齜齞齘齺齵䶥齖齱齹□□齳□齾䶙齯□齮□齰齚齦□□䶛齩□□䶣齝□齕齨□齬齲齸䶧齡齟□䶔□□□䶗䶞\n□䶤□䶘齤䶖□□□齙\n□□□齼\n齭齴齫□\n□□齛䶩□\n䶫□䶜齷□齧䶢齶□\n□\n牙□\n□㸧\n須頾\n□□\n彡彬\n形㣎㐱修彰□彫耏弱彧影㣑□□㣒□彩□彯㣉彲\n彣彦\n□\n文斐\n辬□斒斕□斌□□\n髟髮\n䯵□鬗䰐鬈䰓□□䰈䯽髦□髳鬋鬑䯾䯸䰏髢鬄髲髺鬠䰉鬕□䰎髻䯰鬣䰕䰃䰁髶髣髴鬊鬌鬝髧髤□髼鬃□鬇□鬡鬆䯳髬鬐䰖□□䯹□髵髠鬀髽䭮□□鬉□䰆鬟□髿鬖□□䰄䯷□鬤□鬞□鬒□□□□□髹髤□□□□□□□䯿䰊□髭□髫髯"
+        },
+        {
+          "id": "1.20",
+          "text": "欽定四庫全書\n梁　顧野王　撰手部第六十六　　　□部第六十七部第六十八　　　舁部第六十九\n臼部第七十　　　　爪部第七十一丮部第七十二　　　鬥部第七十三部第七十四　　　又部第七十五"
+        },
+        {
+          "id": "1.21",
+          "text": "□□掌拳捥□搴㧬□摪挈摯擥攬拏擪㨻摰掣㧘掔擧□□㨣搫攣撆撇揅摩攠擘摹擊挐□攀扳摮擎揧承㩓揱拲拜□攕指摳揖捃攘攓攐撎拱撿捾搯拇推捘扶持拑攫操捦㩒搏據抩抪攝挾㨉捫㩜擸握撣攜把提□拈摛捨按控捋撩插措揗拍拊掇掊抔捊抱拾㨷授揜掩攩挋挏招擇接撫捉搤挻揃㧗搣掬□□摕□揣摜投挶搔擿擲拮据摽抉挑搳擖摘抲搚拹摺拉㩉摟抎掉披擢搄搖搈□揫揂擣捀攑攈揭抍撜拯氶扛扮揄捎撟擩摭拓擭拚抃擅揆擬損失擐挩挹抒擾挺探撢捼撋㨜搹㧖撼搦搑掎揮攪捁扞捍㨨抽□批撞㧢摧排擠抵扔括援捇撝扐技摍拙㧺摶㨡撮捄搰抇掘摡揟播挃㨖扤抈摎□撻□挫捲抨拼摷扱抶抰抵㨐捭擺捶㩁挨摼拂摬撲捕抗簎拫扚撚挂抴拽拕拖捈揤揙撅攎捽揾挌掤扜掍扣捷搜□換掖擗挍抑揥撤撰揔捴撙掫拭搢摝掠挴撏摫攍㧙㧾拌撈搪摏摋攤捌摙攖掜扒攄攡抆挬擽扢押掐扽挰㩋撠攇㩊捻□揈㧦抾抛㧴抮揀搙抐揞摖扭擓㧡摐擡□揊抹㩧撍□㨹㩱揬摸挮捳□搌捆揳搎㧒㩢揘掝□□擟㨒搸㨙拰扏㧨揩□拸掓□□抁□□捖撦㨋搩撨□□挸㧹揑捺㩩㩵揌□扴□擔㧔□抳扑㨟抵掋挱搷□抯擉㧆㨠摞撖挅撓擷㧶挽□担挒擯攅揨㧻□捂捒□擴㨯抦搥揕□攙□□□㧃㨳掅摵掃捅折捧摣□□攏㨑擨□挼㧣掄㧎扠攞搋抓振掀□摴擹□□㨚搓挪揎掆□撾掁搶撐挳搊搛㨄摱□攔㨏揁拎□㨂□撬□擂㩤□搒㧫□抷□㨀□□㧄揰捵□擬㧪㨊□□揇撔□㨚㨴捖拃□拆㩈拄抧□擏㩭扻採拗□拶□摻捰抌挭㨧掗㩡抖擻摥攂撛拒掟摒擋摦摲□□㨅揓□□□□□扲揍扰□搧搞搭搨揲抸㨝擮□□□㩆捔撥扎□□□托□㩹㩶□攉\n擆□□□捩㧊拔□攦□㩍搕□摑□揠扸□掏"
+        },
+        {
+          "id": "1.22",
+          "text": "□□□奉丞奐弇□□兵睪□异□弄戒龏弈具弃□弊㢣□\n部第六十八\n□□"
+        },
+        {
+          "id": "1.23",
+          "text": "□□□與□□興"
+        },
+        {
+          "id": "1.24",
+          "text": "要□□"
+        },
+        {
+          "id": "1.25",
+          "text": "爪孚□爲□"
+        },
+        {
+          "id": "1.26",
+          "text": "□埶巩孰秇踝□"
+        },
+        {
+          "id": "1.27",
+          "text": "鬭闘鬨鬩□鬮□䰘□□□\n部第七十四\n卑"
+        },
+        {
+          "id": "1.28",
+          "text": "右厷□叉㕚取父□曼叜□燮□□\n尹□夬㕞\n□□反□及\n秉□叔\n度㕛友□□彗叚□\n□"
+        },
+        {
+          "id": "1.29",
+          "text": "欽定四庫全書\n梁　顧野王　撰足部第七十六　　　疋部第七十七□部第七十八　　　骨部第七十九\n血部第八十　　　　肉部第八十一筋部第八十二　　　力部第八十三劦部第八十四　　　吕部第八十五㝱部第八十六"
+        },
+        {
+          "id": "1.30",
+          "text": "蹏蹄跟踝跖蹠跪踦跽踄踧躣踖躤□蹡躡踽䠪䟔　踰䟠蹐蹻躩跾蹌躋踊跧躍蹵蹴蹋蹈躔踐\n踔踸踵蹛䟗蹩䠟蹢躑躅䠱踶踤䠛跳蹷蹶□䟴䠧䟺趿跲跇蹎跌踼蹲踞踣跛蹇蹁䟸踒跣跂跔□躧蹝䠍䠊□跀□趽距趹趼躗蹼路䟷蹙踇蹜踕蹪蹕蹯䠯躊躇跦䠇躐跬蹞\n躄躁踆趾蹉跎蹟跡跱蹀躞䟣蹊跗趺踂□躒踉䠙踳蹣跚蹮蹃□跑趵䠡□\n跙踾跐䟟蹨跰躂䟹躟蹍跁跒跈□踥踏䟘□踡跼□䠗□䠈䟧躘蹱跉䟓蹖䠗□跮踱蹔蹂䟗踓䠢躝□踃䠆䠘䠋䠣□踁蹭□□□䟾蹸躙□跤□跕踹蹤跆跜躨䟱踟蹰□□踚跘䠕□□䟕䠓□□□蹺跠跏□踜□□□□□□䠑跓□䟨跥踴䠀踠䠏□躓趶跢□□□䠨□䟛□□□□䟻□□□□蹗䟿䟯蹘踘□□□□蹫□踛蹳□□䟮跫□跨跋蹬"
+        },
+        {
+          "id": "1.31",
+          "text": "□□䠠"
+        },
+        {
+          "id": "1.32",
+          "text": "□傘□骨部第七十九\n髑髏髃髆髀骿髁□髖髕䯏䯣骹骭骸骾髓□䯜體髍骼□髊䯤䯠䯊髂□□䯈骶骲髎□䯦骱䯓□䯞□骺䯋髇骽□□髗骰尳□□䯌䯑䯖髐□　□□□髈䯟□□□□□骻骮□□髉□□□䯇骯髒骫"
+        },
+        {
+          "id": "1.33",
+          "text": "衁衃□□衄□醓□□□衈卹衋䘓䀍盇盍衊衅□䕄"
+        },
+        {
+          "id": "1.34",
+          "text": "月腜肧胎肌膚肤肫脣䫃脰肓腎肺胃□脾肝膽腸脬膏腴肊臆膰膺膀胱胷背脅脟肋胂脢脄肩胳胠臂腝肘䏔肪臍腹胯膲脽䏐股脛腳胻胑肢腓腨肖肥□胄膻䏌䑋□脙□臠膌臞脫脀胗肒胼胝肬胅腫脪䏖臘膢朓胙肴脤隋腬膳腆䐌腯胡䏟胘膍肶胵膘膟□膋膫朐脯腊腒膊䐹胥肒脠□䏽膹臇胹䐣腥胜臊□膮膷臐脂膩膜胾䐑腌䐞脃脆膬□膎脼腏䐄肎肯肰□䐜䏙䏣膠䏍腐脡臚腍臅䐆肱䏪腠脹膂膉胖䐀膒䐨腩□胋䑎臉䑄脮腲胔臄䏿臋䐿䐈肵□脞膱膝胉腡腋□䐎臎腵膭胞脕膙䑁䐝□䐻□□胺腅䐲肨䐚□□脧䐱□□胮肛䑏腣胿□膾□□胴胓䏳肚膕䏨□䐃臗膨脝□胦胲䐷䐁□□胈臖臒䐏䐩胶䐼朏臔□䐒腽肭䏒胭朦䏵□□腱□肑膿䏤䐗脈脉肕䐺䏼㱚□\n䐅脥□□□䐕□肦□□□□䐾䐴胕胛□腛□腔□䐓□□䏏□膎膴䏵腤䐶肣䐠□朧䐫□腧□□膁腈腵□䐊□□䏬腂朣䏎䐉□䑊膅膛䏹䐵□臁□膸䑂□脘朊䐮□腰腑肔肗腿臏腦□䐟□膸䏢腀□膪□䐔□腖腕膇䏧䐢□膆腪□□□肐□䏱䏘腟□□□䐂膈䏦脻□肷䑈□炙䑇脩腄䐤膞胏□"
+        },
+        {
+          "id": "1.35",
+          "text": "□䇟"
+        },
+        {
+          "id": "1.36",
+          "text": "勲勛功助□□劼務勑勱□勍勁劭勉勗勸勝勶勠動勨㔣劣勮勊勩□勦劵劬勤\n募勬加㔡勇勃勡劫飭勵勢勘勔㔙劮劤劺䯇㔝□扐□㔞劥□勣㔗□勜劜劷劻勷勆㔦□□劾勌㔧㔠勒勎□劰勥彊勞□㘞効"
+        },
+        {
+          "id": "1.37",
+          "text": "勰協"
+        },
+        {
+          "id": "1.38",
+          "text": "躳"
+        },
+        {
+          "id": "1.39",
+          "text": "㝲寢寑寐寤□□□寎寱□□寣□□□"
+        },
+        {
+          "id": "1.40",
+          "text": "欽定四庫全書\n梁　顧野王　撰心部第八十七　　　思部第八十八惢部第八十九"
+        },
+        {
+          "id": "1.41",
+          "text": "忄性恉愼快愷忻惲惇□悃愊忼慷慨憭悰恢恬恭怡悈慬恂忱怞懷愮怙恃懼愳㥠㦃悟□忆怕慕慔悛恤懽悖㥛恌愞悒懮悗慥悍慢怭懈憜惰□怫懊慲怗憿恑懏\n惏□懤惽怋憾慟恎㤞恗懫□□悱忋悌憎憒恨憍悔悁□憤惆怩忸悵愴惻懌懠忉慅愔忧㥝惴惔愵憔悴憟慽懹怦憚慴怵㤨惶㤥悑怖忝□怽憢怍憬憐惵愎怊懾忳恲㤝㥓㥆怢□惃愅懝忬□悜情憕恔忯恮慒愃惀惟□㥞慉憀㦜愯□悚憮愐惗憺忓憸愒㦚懁慓㥒愉懱懜□忮怚惕惖慏慯恍惚憶憧悝憰怳悸忨慊怓慍㤄㥟㤱怏愾懆悽慘憯怛恫惜憫㥴怮忦惙惂㤦□忡□怲恇\n悄□愜㥦悼悿怪恠□悾慄悢恱懍㥄愧㥾㤿惝悇憛㦒忚憡㥜□㤕恜㤤慛怐懢悏㤏□□㤖憉悙恀恞悀懀戃慌㦓惈悷㥢㦎愇惸□怯㤆懶悂愖愕愋愱□憴忪懥㥽愡慺□㤴恒愲懻惿□慃懪愭恟愩慪慱怜慵慆愪㤊懅㤉慞□恾忙怔懰恈□忴□惍□㤃㥊□惺憽悕□憈愢怌□□怶□□㤚□慳愝惼悓愀□□悎悻□□㥉㥏灼㤢□㤳㦐□愰怉忏㦉怬悞忤慣憓□忕㥼慖怰悋惋惓慠懞□憱懵忭□恦□㦏□□㤈㣾□□□□憷□怟□戄懎□㦗㦢㥔恄㦅□□□忇㤸㦦恪愙惐愶㤜愺恅忖□忔恰悠態懘□□忘懣□㤮懖愆㥶慫惡懟恿悲㥋恙愁□□憌□患□□恐□慹恧慙慚㦁懲㣻愈志□㦟惹□愗□憨憑□㤎悊愍慜憥忎慶□憠㦂□怘戀憼惑忌恚忿怨□怒愬慇懃䉍悆□忒恥惎□忽㤠□急㤂憝憞□□怠恣慁㥵□忍憋悶□忠懇戁惁憗慈懬懭忞懕悹悺㦛□怤㥯愿□□息意惄恁㦌慝□惪□應念㥷㤅慰□□慾□憲□懋憊慗□㤐□懸惌㤍□㦄㤲㤻愚想□□悐□㦘恝㥣□感\n㣽□㤟悥忢慼\n㦚憃憵惷□㦣忥忍□□□戇戅憙恩憩"
+        },
+        {
+          "id": "1.42",
+          "text": "恖慮崽㥸"
+        },
+        {
+          "id": "1.43",
+          "text": "繠"
+        },
+        {
+          "id": "1.44",
+          "text": "欽定四庫全書\n梁　顧野王　撰\n言部第九十　　　　誩部九十一\n曰部九十二　　　　乃部九十三\n丂部九十四　　　　可部九十五\n兮部九十六　　　　号部九十七\n亐部九十八　　　　云部九十九\n音部第一百　　　　告部一百一\n凵部一百二　　　　吅部一百三\n品部一百四　　　　喿部一百五\n龠部一百六　　　　部一百七\n㗊部一百八　　　　只部一百九\n㕯部一百十　　　　欠部一百十一食部一百十二　　　甘部一百十三旨部一百十四　　　㳄部一百十五㚔部一百十六　　　□部一百十七夰部一百十八"
+        },
+        {
+          "id": "1.45",
+          "text": "□□語譻謦談謂諒詵請謁讖許諾諸譬詩諷誦讀訓□誨譔謜詇詖諄□訰詻誾訔謨謩諮訪詢□諏訂論誎議詳諦識訊□䚮謹諶訦誠信䚱誡譣誥詧誓詁謄譪詥証諗諫課䚻詮訢諧計調話䛡譮諈諉警誼謐謙詡諓詷譞諰設䜋託譽記謝謠訖謳諍詠諺訝詣訒講訥謯讎□諐譥謍譊譟䛕謲讇諂謷諼訹詑謘謾謺□謰謱詒謵譺誑□譖訕譏誣誹謗譸詶訄詛䛆誤誃謻誖□䜌詿誒譆詯謧訿訾詍䛖䛬䛌詜䜉誺䜚誻訮讗訇□諞誽詀譄詄諅譀□䜕□訌誕□謔□讙諠譁諣□訆□誂譌訛謈□訬謬諆誋譎訏□□讋□䜐詾□訩訟□謓\n讘䜆䛗訐訴譴謫訶諯誚讓謕誶詰□䛄詭證□詘誳詗讂詆誰諽讕譋診誅討讄□□謚諡誄諱訧謑□詬訽該諜諲詔誘䛻□□謖註䛳諑譠謇□□讃\n諻譚謏詅謌讜譡譼訡□䛭譝讑評䛅諊誯□訞□䛟謉䜜詎□詝讆□諤䛿讞詨譿譓訃譵□譈謮□誔䜃諳□譫譩䜈諵䛠譳䚴□詆䛢䜒譑誀謣䚹䚳譍訠諀訵□□訜䛥譜訑謶譒詫□訅\n䜅訋詼謟□□訞譙謀䛲䜏誇□諴\n誙䛘□讒誴□□諃\n□□詴䛏䛣□訸□□□謅諝説謞譯□䚵䛞□譭訨□□讉\n誢譇詉詃誷䛰□□諢詪□䜗□䚿□□□□□詐□諎䛍䛾䚸□䛋認誌謎諕□□誏讌□誆誜詺□譅□詋䕶訉訣□諿□□誟䛚諹䛛□誐諭諟誧䛩䚷試謼䛮□誗謋"
+        },
+        {
+          "id": "1.46",
+          "text": "譱□競讟譶"
+        },
+        {
+          "id": "1.47",
+          "text": "□□曷朁沓曹□暹曶□"
+        },
+        {
+          "id": "1.48",
+          "text": "□迺□□辸□"
+        },
+        {
+          "id": "1.49",
+          "text": "甹寧□可部第九十五\n竒哿哥"
+        },
+        {
+          "id": "1.50",
+          "text": "□羲□乎"
+        },
+        {
+          "id": "1.51",
+          "text": "號"
+        },
+        {
+          "id": "1.52",
+          "text": "于虧粤□平□云部第九十九\n□霒侌音部第一百\n響韽韶竟章韸韹䪩䪧頀韺䪫韴䪯韻"
+        },
+        {
+          "id": "1.53",
+          "text": "嚳"
+        },
+        {
+          "id": "1.54",
+          "text": "□□□嚴哭□喌咢㖾單□□□喪□"
+        },
+        {
+          "id": "1.55",
+          "text": "□嵒□"
+        },
+        {
+          "id": "1.56",
+          "text": "□□"
+        },
+        {
+          "id": "1.57",
+          "text": "䶴䶵龢龤龣□□"
+        },
+        {
+          "id": "1.58",
+          "text": "笧嗣扁□"
+        },
+        {
+          "id": "1.59",
+          "text": "嚚□囂□嘂□器噐□噩只部第一百九\n□"
+        },
+        {
+          "id": "1.60",
+          "text": "矞商□□□"
+        },
+        {
+          "id": "1.61",
+          "text": "欽㱍欨歑㰲歟欯歂歕㰟歇歡欣㰝款歀欻欲歌□欦㰹歋□歊□□歗歖歎□㰣欸歔欷歜□㰾㵣㱇□䌠㰮䯉㰱欶歁欿欱歉欭歐歍欬□歙㰶□欪次㱂欺歆欥歛弞歈㰥㰳㰰㰨㱄㰦㰤㰯歖欮㰪□□歄□□□□□㰫欹㱊㰽㰬㰭□欴㰠□□□㰢□㰿□□歅㰧□□□㱃㰴□㰝□□欳㱁\n□□□㰡□□歠□㰼□□㰵□欰□□□缼□□赥□□㱌□"
+        },
+        {
+          "id": "1.62",
+          "text": "□饙□□餾□飪餁饔飴□□䬮饊餅餱饘餥饎□饡䬤養□飯□飰□餔䭑饁饟餉饛饗飵䬯□䭓餫餬□飶飽□□䬼饒餘餀䭒餞館饕□飻餮饐䬥餲饉飢□饑餓餟䬽䭨䬴□飤飼餗餤餌䭐䭕□餣飩餛餭餦䬵□䭉餹䬾□䭢□餄餼䬧䬫䭘䭊䬷□餪䭈飦䬬□飬䭞䭖□飷䭤□□䭙餂□□□䬿□䭇飲□餩餕飧餐湌飫□□䭔□䭂餽餧飺餈□□饌籑饀䭁䭩餚□䭅餻餇□餿□饞□䬲饇□□餜□餒□□飣餖□饋□䭄□□饍饚饜飳䬨□□□䬣□䬶□□□□□□□䭦餑飭□飾餝饆饠餺飥□□䬳□饏䭃"
+        },
+        {
+          "id": "1.63",
+          "text": "□甛□猒□甙甚□㽑㽐甞"
+        },
+        {
+          "id": "1.64",
+          "text": "□□嘗"
+        },
+        {
+          "id": "1.65",
+          "text": "羨盜□"
+        },
+        {
+          "id": "1.66",
+          "text": "□執□報□□"
+        },
+        {
+          "id": "1.67",
+          "text": "□□□皋皐奏□"
+        },
+        {
+          "id": "1.68",
+          "text": "□奡臩昦昊"
+        },
+        {
+          "id": "1.69",
+          "text": "欽定四庫全書\n梁　顧野王　撰\n彳部一百十九　　　行部一百二十\n冘部一百二十一　　　攵部一百二十二久部一百二十三　　　夊部一百二十四舛部一百二十五　　　走部一百二十六辵部一百二十七　　　廴部一百二十八癶部一百二十九　　　歩部一百三十止部一百三十一　　　處部一百三十二立部一百三十三　　　竝部一百三十四此部一百三十五　　　正部一百三十六是部一百三十七"
+        },
+        {
+          "id": "1.70",
+          "text": "徎徳徑□\n復往□忂彼徼彶□循微徥徐□□□㣤徬徯待㣙徧□□徦徲後很㣫得忀□□徇徉律徂御彷徨征彽徙徝徒彴□徊徘□徠□□□㣭㒡徜□□□徭役□□彺□儳徆□□□□徸□□□□□□彾□從□彵□□徿□□□徖□□彿□□□□㣛□㣬亍行部第一百二十\n術街衢衝衕□衙□衎□衛衟衖□䡓衑□□"
+        },
+        {
+          "id": "1.71",
+          "text": "㽎"
+        },
+        {
+          "id": "1.72",
+          "text": "□夆□夅㐄"
+        },
+        {
+          "id": "1.73",
+          "text": "□"
+        },
+        {
+          "id": "1.74",
+          "text": "夋□夌愛□□□憂竷夏□□畟䕫□㚇夒夎致"
+        },
+        {
+          "id": "1.75",
+          "text": "舞舝䑝"
+        },
+        {
+          "id": "1.76",
+          "text": "趛趨趍趙趫赴趣䞚超赳趮趯越□□趁趂□趞趬□趚□□趥䟉□□□䞥䞤䞿䞗□□□起□趌□□□䟑□䟇䞞□趚䟂趉趜趑趄䟊□䟒趢䞷䞨䞾䞳䟏趡䟆□□趧䟅趒赶䞮□䞦䞽䞴趟䟎䟃□□□䞵□\n□□□□\n趗趪䞯□䟐□□□趖䟀□□赹䞪□趠□䞶赺□□趭䞡䞻赾□□□□䞣□趝趆䞧□□趏䞝□趃□䞢䟁□趐趩□䞙䞩趇□䞘□䟄赽□䞖□"
+        },
+        {
+          "id": "1.77",
+          "text": "䢦迹邁□巡□隨迋逛逝䢐□述䢤䢒過遵適遦䢱進□造䢔遝逾迮逪遄速遬迅适逆迎遭遇遘逢迪迻通遷運返還選邌送□遣邐逮遲遟迡遰逗遛逶遹䢑避遴达達逯迭迷迆連逑䢙逳逭□邋遜逋□近遺遂□邇□□逃追□逐逎遒逼迫遏遮䢭迣迾遱迁迀䢡迦逞遼逺□逖逷迥逴□迂邍道迒䢚□遽迄遁遯遐逍遾遊□迨透遡遃遫邂逅□邈迴逨退□逡□□□邅逵這□迕遌䢰迿□䢝迸迓邀□䢖逜逌迺迱迤□遳薖迍□遨迢遑違途□邎逿□迵□□□遙遞递□□䢍□□□□□□䢮逘遚□□遉邏簉□逕□遪迶□迬邊遢逽迠□□□□迼□䢌□□□迌逫□□週□䢋□"
+        },
+        {
+          "id": "1.78",
+          "text": "延廷建延㢟"
+        },
+        {
+          "id": "1.79",
+          "text": "癹登□歩部第一百三十\n歲止部第一百三十一\n□歱□歭歫歬厯□歸㱕疌□□□㱖歰歧□㱗□□□□□□□㱒"
+        },
+        {
+          "id": "1.80",
+          "text": "□□"
+        },
+        {
+          "id": "1.81",
+          "text": "䇐䇏端竱靖竫竦竢䇃竘竵䇔竭䇓□䇕竣䇎□竲䇑竛竚□□攱䇒□竴䇍□竑竜㚡□竬□□竌竎□□□□䇅□竮"
+        },
+        {
+          "id": "1.82",
+          "text": "並暜暜"
+        },
+        {
+          "id": "1.83",
+          "text": "啙些㭰"
+        },
+        {
+          "id": "1.84",
+          "text": "㱏□□□整"
+        },
+        {
+          "id": "1.85",
+          "text": "□韙尟"
+        },
+        {
+          "id": "1.86",
+          "text": "欽定四庫全書\n梁　顧野王　撰宀部一百三十八　　宮部一百三十九宁部一百四十　　　門部一百四十一戸部一百四十二　　尸部一百四十三尾部一百四十四　　尺部一百四十五履部一百四十六　　老部一百四十七疒部一百四十八　　部一百四十九歹部一百五十　　　死部一百五十一叧部一百五十二　　凶部一百五十三穴部一百五十四　　丨部一百五十五屮部一百五十六"
+        },
+        {
+          "id": "1.87",
+          "text": "家□宅□宣□室向宏宧□㝔宎奥宸寷宇㝢寏宖寪宬㝩寍定寔安宓㝣宴寂察寴□㝰完寳寚富宲實□容\n㝐宭宰□□宦宜宐□□宥寵守寫寛宿㝛寑□宵□寡宛惌□寯甯寇□塞㝑□㝝宲□寲□□寮㝞□寥□□寭㝓寘宷宑客寄寓寠㝌寒宕害□宄□□㝪宗㝮宔宙宋官寰□㝗㝯㝏㝤□□□□寀䢓寁"
+        },
+        {
+          "id": "1.88",
+          "text": "營"
+        },
+        {
+          "id": "1.89",
+          "text": "□□"
+        },
+        {
+          "id": "1.90",
+          "text": "□閘閶闔闈䦲閤閨閣閈閎闒閼閭闠閻闉闍闕閞䦏闑閾□闢□開開闓\n閜閟□□閒□闛□䦪闌閑閡閉閇關関闇闙閹闐□闚閃閽闋閱闞闊䦖□閔闖閌閫闥閍䦩閿□閮□䦒□□□□□□□□□□䦠□□□□□□□□□闆□閚䦓閕□□□䦡□䦫閥□䦮闟䦔閦□䦘□䦌□□□䦐䦳□䦝闡閬䦱□䦑閛"
+        },
+        {
+          "id": "1.91",
+          "text": "㦿扇扉房扊扂扅□□□㧁戻扃戹肁扆㧀戺扄"
+        },
+        {
+          "id": "1.92",
+          "text": "居㞐㞒屓展㞡屑㞕屆尻□□㞓尼㞚㞏□屒㞟屖屠屍屟屋□層屏□□屎□□□□□□孱届屙□□羼□□屁□□㞋屢屝"
+        },
+        {
+          "id": "1.93",
+          "text": "□□□□屬尺部第一百四十五\n咫"
+        },
+        {
+          "id": "1.94",
+          "text": "屨□屐屩㞜□□屣□□□㞛屜屧"
+        },
+        {
+          "id": "1.95",
+          "text": "□壽□耇考耆孝耋□耄者"
+        },
+        {
+          "id": "1.96",
+          "text": "疔疾□病痒癢疘㾻㾞痡痛瘣疴痾瘽瘵瘨瘼\n瘖瘏癭瘻疣□㿙□瘀疛㿒㾈痀瘚痱□痵痤疽㿛癰癕瘜癬疥㽱癎㽾痂瘤瘕癘㾐瘧痁痎痳痔痿痺□瘃□㾫□□疻痏□㾆□癑痍疢瘢痙疼痋瘦癉疹㾜疸痞㾁痬㾅疲㽺疷瘛痸痥痑痼㽽療㿄癃疫瘌癆瘥□瘳瘉痗癡㾖疚痯癙㽹瘐瘎㽸瘁瘯□瘰㽳癠㾯㿃瘙㿋□□癤瘭□㾢㿆痠㿑㾷□癖□痴㿓㽻癄痷㾹㾨□疓疙□□㿖㾽㿕□瘮㾕㾰□㾾□㾔□瘹痓㿎㾦□瘂□□㾭瘠□□痮㾙癵□㾍痌㾄痆□疳癏㿉瘡痕癀痃癥㾓痊痟㽿瘑㾋□㿘□瘊□□□㾂□□痄疨痭㾏疿□□□癗□□□㽷□□疺□□□□痢□瘴疶疱□㾒癐□㿚㾧□□□□㿇□㾑㾣癨癔□癈瘲瘍疕㾺□疝㾇□㾶\n部第一百四十九\n□㕡㕢叡□㕟"
+        },
+        {
+          "id": "1.97",
+          "text": "歺□㱪殤殰殂□□殛□㱳□殁歾殊殨殪殯肂殔殣殠㱙殃殘㱚㱯殄□殲殫殬㱻殖㱠□㱦殉殈□㱸㱤□殐□殏㱜殧殀㱥殑㱡□㱟殕㱴㱬殢□殗殜㱵㱞□□□□□□□㱫□殞□□殍□殅□㱶□□殝□□㱱㱣殆□殭□□殮□□殟□□殎㱹□"
+        },
+        {
+          "id": "1.98",
+          "text": "□薨□㰷薧□斃"
+        },
+        {
+          "id": "1.99",
+          "text": "咼㗗別凶部第一百五十三\n兇"
+        },
+        {
+          "id": "1.100",
+          "text": "竈窹窯□窐穿䆢䆕竅竇空□窠穵䆷窻窓窨窳□窊窞窌窖窵窡窬窺窋窴窒窣竄突窘窈窕邃究窱窔穾穹竀窮竆䆞窀穸竁窆□䆘窾窇窄□□□䆾䆱□□䆖䆵□䆸□窚□□□䆑䆟窟䆚竂□窪䆲䆡䆽□䆰□□䆹穻竊□䇁□□□□窂竉□䆔穽窉□䆜□□□□丨部第一百五十五\n□个中□□串"
+        },
+        {
+          "id": "1.101",
+          "text": "屯□□□□□□"
+        },
+        {
+          "id": "1.102",
+          "text": "玉篇卷十一"
+        },
+        {
+          "id": "1.103",
+          "text": "欽定四庫全書\n梁　顧野王　撰木部一百五十七　　東部一百五十八林部一百五十九　　巢部一百六十叒部一百六十一"
+        },
+        {
+          "id": "1.104",
+          "text": "橙樤條樝柤棃梨樆㮕槅柟楠梅楳柰㮏\n櫻李杍□榛桃榹㮘枆梒楷棠桂桬杜槢樿椲楢枊柜棆□\n柊楑□椆\n㰘樕㯈槲\n梣□橬□棳\n梲□椯□□\n椋檍□栵\n栲□棪㯉楀蘽櫐□桋柀\n檆杉栟楸\n榎椅椿橁杶櫄□榛梓榟杞桵\n椐樻栩□樣橡杙枇\n桔柃柞楮柠㭩榗橪欏椵楛櫅橞樲㯷㭁栺棈柅梢㰋□㮿楋椇梭枸樜枌檴樗枋檗榝楊槭檉榶柳桺□栘欒權棣栘曰枳榖楇㭕檵檀枒櫟梂棟柘檿□□橎榮梧桐榆棻樵梗松㮤樠檜樅栢机梇楰梔杒榙□栯榣櫾某槑朱樹□本㮺株末柢根枝㮨果杈槮朴枚□栞欇□栠枖枊朵朶梃標桹䯂橌柚枵柖樛朻枉杏橈枎㭂□□橚梴杕檹欃□格槸□槀槁樸楨柔榑朸杲杳㮝栽築構檥榦模橅桴棟檼極樘橕柱楹榰楶櫨枅㭓楣槉栭椽桷橑櫋榱梠㮰檐櫩橝樀槏植㯰杗樞櫙㰍楯樓櫺栜梀椳槾杅欂□槈榍□楂楗㰇柵楔桓杝楃橦杠桯榻枕楲㭘櫝樚櫛楖梳梱□㭒梩㭉枱□柌楎櫌欘□杷柫槩杚杫㮐□桮杯柶槃柈檈梋椷㮀案杓杵桱櫑榼椑櫎橢㮂檕槌㭙棏□样栚檷機□□杼椱楥楦棚核栫槶梯棖桊㮲樴椎梐枑棧槿欀梎㮃榤楱朽框櫒村㯋棤栒□椴杭柭據棴檣㮫抺□□㯮欋樢棉□㮌㮁棢橇檋楓椀楺□樟㮙桭栕柍术榏□橠㭟棝樏桄朾橋□㮴橃楫欐欚横梜㰎楟槎椓柧棱枰蘖　□　㮆　枿柮榾杌檮析棷梡㮯楪枼楄楅㮓樔休杻杽械桎梏榬校采柿㯕柛槍櫳柙檻棺棲櫬槥椈椁槨楬櫫㮪槳櫂棹槄椒□檓橭櫰櫔栱榭橜椹橧棬㮥㯲板柩棜㮛㯸㭡枻栧檡橰梑枘槤桁樎桲㭈梮㯿㯽楩㭸梌桾櫏□榽橀榏欄㭺㰊梈欓橨㰏樽㯛□栓櫭㯯椊㮧槦桅杔□樍杆㮍□檛橔□櫍枃栻□樇檞□榯桗□欈□□橄欖□櫖樌□樈㮮枔杬榞樾橏㮖橉櫗櫧檽櫞楉榴㮶檬棑桸朹枍栺□橛㯅㯕櫁榓□榲棦□□柉杺朲□楞□棎桶杋楤椶櫚樁桻极槻柁柅橿楒檰栴樶椔槐檭㯾㯊槽槙欑㭨橖枹檎橩櫯棈棡榜栝桰□樳杴□□□□椏㰁材枮□橗朷欞棸杊橒榩□桍□栶□桇檯檑榕□欆栦□棿□棯㯺㭠榘櫸□□柺栐㰌椼枓㭋棒棓梬櫓樐楮□檔梫樉榥\n□□㯆□\n柲櫃概檖□\n棅槵榪榨樺㭄柧槱栛□㮇栝□檅\n杕㯞□㰄㯠棩㯝□橓\n□椂榒栿\n棊梁渿柴\n杪棨枯牀床枷杖柯椸楘檢柆櫡櫽椌杘□槧栙柎檄柷杰梲椄㯙朳椺□寨柣棐橘"
+        },
+        {
+          "id": "1.105",
+          "text": "㯥"
+        },
+        {
+          "id": "1.106",
+          "text": "楚鬱欝□棼㭝森楙□埜麓㯟檒梵□棽㯄"
+        },
+        {
+          "id": "1.107",
+          "text": "□桑□䡦"
+        },
+        {
+          "id": "1.108",
+          "text": "玉篇卷十二"
+        },
+        {
+          "id": "1.109",
+          "text": "欽定四庫全書\n梁　顧野王　撰\n艸部第一百六十二"
+        },
+        {
+          "id": "1.110",
+          "text": "草茵蓏藿萐莆薰蕙蘼蘭蘺虈葯芷蓀□蓂蘅虋萁蔨莥□蘇莧\n□荏䕬薑茝萍蓱蒠苹薸䕯萹䔾藒芞䓘茖萇薊葪□芅芄藍蒲莓苺苷薓蔘茥蒛蒻□葦莞□䒞莐蕁菼薍蒹薕蓲藡荻萑蘆葭菔茅葖菘芥葱䓗荷蕸菡䓿莟萏芙蓉蓮\n芍薂菂蔤苾藕蕅菁荍菅菺茙薔蓷萑芣苡苢蕮□莙蒚藩藫萯芺蔩蕕藄莃茯苓葍䔰蕧蕀蒬□茈茜□蒨藐艾莣苦苞□蒯藨薽蔦䒷董蘻葑菲芴蕦蓯茦薞莿葎蓬莑萴薚薋蒺蔾藜萩蘴蔏薛□蓾□薜荔蒳芹□芐菀苑蒟蕣茱茰芽萌茁莖莛䓲蘮□䓏蘧蒢䓊□葇菈蓈萉莠芓茡䔬蘘蒜葫葷蕿藼萱□芎藭藋□□荲蕡若□䔿芑蔗藷荓□□蔞葴□□菦蒍藟荃芸蒷苜蓿蔡萃菹葅蘫䕩蒙萎薵蒘萼藇蓑葶葹藃蓇䔄茫蕤芾蓧苖蓨藣苙□薄荅□蓶茞葰□䓯芧苧蓩□䓮藎蒁荵□䖂䓞萭蘄□□藸□□□莩□□菩荌□□薏□蔁䔴芪□菎□䕼葚茮莍薾芭蕉䔟蒝□莦䓄茲蔇蔫蕪薉苛落蔽□茷茀蔎蓆蕝䕻䓛䔯䓜□□□蓴䔂萆□菷茵茹茞㪿□薶蓾苟蓸范□□□□□苳萶茸荈葆茗荼菆茠薅莀□萒萰䕇蘱薡藆藅苀藾莿□薌莘薝葐蒀䓳艻藏蔀芊蔲蘩蕭蒿薟蘞\n芩菳虉□芡䓈芰茤蔆□䔖薢茩蘥蔌藗芀苕薔蘠茢䓟蘢䓉葥□莊□蓍□菊□□蘜薠□菥䔮菋荎□葛莕荇菨蕛苵□蔓萊蘦艼葋芫荑菰蔣莨葽薖蕈荆□菌䓴菭苔萋菶蓁薿葼蓻蒔芼藥蘀□芃藴蕰菸藑荋藪蔪□菿菑䒹芟蓋苫藹茨葠芻藙莜蕢莝茭□荹蓛蔟蕘薪蒸䒱艽䒼芔卉蒮蕇莎薃蕨薻藻菉茿蘨藚䔚茆蘬□葒荺蕃葝藺蕼藘芨蒐菧苨苻蕍蒫蓼□蓫蓄藬□蘵葞芏蕎□萿虇芛茟葩荂蔈葟花菝葀□茇英蘤薳蕆蓽䓠□菴葊䕡蕓蒥蕞□□□藈菇䒲葿䓚□䕞薚藤苰薱䕹□□□□□莁□□□□□茺蔚□□□蓒葾䔷□䓱□芁䔞□□蕒苘䔛䕸荶䕾萳䓝□蓪䕍䓌蔝莋□□藖菤□葏芚菗藒葲蓊□□□著䕧䕁䓵萮蘛蘛□□苪䒨□薈□䓂莒芵□茪□莌□䔜□□䕪□蒵□□□□虂蔠苶䔹□葳蒤□蘣□䔑蓺䕈蔱薆荳□□苭□蒖□□蕫葓䓼䔶□䕺藂茳荾荽䒘□\n芘蕖□□菩□茂□□蓖薹莏蘋\n薲荄莔□□□蔕□□䒝蔯芒萄萪莪菏蘿菖藏蕄蓎莤芝虆䔲菾菠薐苸芋□□䓙䓐蘹□菕蘡□□蒢□䔀芜□苤□□□□□䕱蕔䒩葙萓莮□葁䕕□□□□□䒶□萾䒟䕊荿□䒜□葨茴菄茧□□□䕒䕔□莉□□䒧苁□□□□葔□□□芦□䒕□蓰藞䕢䕌藢□葸□藠苲□□□㲨□□□□□□蔃□芠藰□䒚萀\n□□䒴葤□\n䒡□䓍苯\n䕀荱□□□□蘟□□□\n蒼苖苾芳荒□薴葻菜䒦薙蕺苴蒩藉荐芮芤□䒛萺□莄□\n莚蔢□□菪□䔔□葺菍莡□葃□□䓭□□□蔛\n莈莯□□䔁藌䖇䔱□□\n□蔔□䕓菽薁□蒴□䕉莢莂□䒸□□䓃䓇蔋薈茬䕃蘪蘳薇莅薺菣□䖆芬蕊荀荁芿䔏蔄莬菟□䔺蒒□□□□苮□□艿蓓蕾蓘䔸□□蔧薯蕷薤苝䔇□蕂蘸虃□□□芆"
+        },
+        {
+          "id": "1.111",
+          "text": "玉篇卷十三"
+        },
+        {
+          "id": "1.112",
+          "text": "欽定四庫全書\n梁　顧野王　撰\n蓐部一百六十三　　茻部一百六十四舜部一百六十五　　竹部一百六十六箕部一百六十七　　才部一百六十八巿部一百六十九　　乇部一百七十部一百七十一　　部一百七十二蕐部一百七十三　　禾部一百七十四稽部一百七十五　　桼部一百七十六丵部一百七十七　　菐部一百七十八部一百七十九　　部一百八十部一百八十一　　朿部一百八十二部一百八十三　　部一百八十四麻部一百八十五　　尗部一百八十六韭部一百八十七　　部一百八十八瓠部一百八十九　　丯部一百九十來部一百九十一"
+        },
+        {
+          "id": "1.113",
+          "text": "薅□"
+        },
+        {
+          "id": "1.114",
+          "text": "□莽葬□"
+        },
+        {
+          "id": "1.115",
+          "text": "䑞□□"
+        },
+        {
+          "id": "1.116",
+          "text": "箭箘䇹箟簬簵筱篠簜䉠□筍箰□□簨簴箁笿䈚□□笢節筡笨䈵䉃箋䈎簡篰□䇫筴等笵符筓筟籆筳筦管篝簀笮笫筵簟籧篨籭簛篩籓䉒䉛箅䈰筲□筥簁笥箄簞□䇨箸篿筤籃籢籫籝䈀簠簋籩篅筩簏箓□箯笯笍竿篧籱箇籠筰筊䉰箑䈉䇘□䉴篼簍籚箱笭□䇿箠籣箙䇬笘簻笪笞籤□□箴筒箹箾竽笙簧䈕簫籟篎笛篴筑箏箛篍篙筄□籌簺篳䉷篽籞筭笇算籔䈹□簢□籮\n籊䉋□□□䉳笆䉧笳䇞\n□□□箶\n䈯䈛□筣\n□□□䇯䉑□□䈈\n□䈓䉈筨䈄笰□箐䉮□□篷□第箵䉶䇡䈲笈籛䇦筬䈏簈篂簹篔簃□□笡䇩筕篖簥笑□籈□䉎□篣笚□笉篪筂筐簂䈐篲□篋\n□箌筏□䈦笓䇧筁簿篙笲□筯簇䇮筀筌篹□箖箊□籉籬䇾□箆䈝䈥簝篻䈱□簪䈍笐䉚䈂篘箜箔籥簦簷篜䉄䉕□籐笎箮笅䈺篢□□篊籦□笗□筎□□篈箃□\n□䉹䉲□䈭\n□□□箂筃□䇪□筅□篬篃笌□□䇙䉊□□箒□䇜簅□䈃䈧䉝□□□笖□䇛笏筠箷筧䉣篾䉉□□筮簭□笠䇽䈗䇻篕䇸□□□䉂笶䈢篚䈠□□□□簳笴篆䈙範□箎□□□䉏箺□□筫□□簩□笊䈇筗□□䉨簉䉌䈡簣䉀䈮□䇺□□□□□䈴䉓□□□䉯□□箞䈒□□□篟□□□䈣□籋竻□□䇣䈋□筪䈳箿䉗□籰□□箻箤笜箼□䈸簶䈿䈌籜䈅䉢□□箬篛䇶䇷籍劄□筈□□箝□篸篁籀篇□䉫簊□"
+        },
+        {
+          "id": "1.117",
+          "text": "□□䇧□□簸"
+        },
+        {
+          "id": "1.118",
+          "text": "□□孛南□□□索"
+        },
+        {
+          "id": "1.119",
+          "text": "部第一百七十一\n□\n部第一百七十二\n□"
+        },
+        {
+          "id": "1.120",
+          "text": "□禾部第一百七十四\n䅩䅓"
+        },
+        {
+          "id": "1.121",
+          "text": "□□"
+        },
+        {
+          "id": "1.122",
+          "text": "㭍䰍㯡"
+        },
+        {
+          "id": "1.123",
+          "text": "叢業□□對"
+        },
+        {
+          "id": "1.124",
+          "text": "□僕䑑部第一百七十九\n圅㽕甬□□\n部第一百八十\n□□\n部第一百八十一\n□□□㮚□"
+        },
+        {
+          "id": "1.125",
+          "text": "棗棘\n部第一百八十三\n枲䢄□□□□□□□□□\n部第一百八十四\n檾"
+        },
+        {
+          "id": "1.126",
+          "text": "□䵉䵈黀□黂□□麾□□□"
+        },
+        {
+          "id": "1.127",
+          "text": "叔敊"
+        },
+        {
+          "id": "1.128",
+          "text": "齏䪥□䪤韱\n部第一百八十八\n□瓝瓞□□□瓣□□㼏□㼔㼊㼐□㼋瓢㼕瓟瓤□㼌□"
+        },
+        {
+          "id": "1.129",
+          "text": "□"
+        },
+        {
+          "id": "1.130",
+          "text": "□"
+        },
+        {
+          "id": "1.131",
+          "text": "来□"
+        },
+        {
+          "id": "1.132",
+          "text": "玉篇卷十四"
+        },
+        {
+          "id": "1.133",
+          "text": "欽定四庫全書\n梁　顧野王　撰麥部一百九十二　　黍部一百九十三禾部一百九十四　　秝部一百九十五耒部一百九十六　　香部一百九十七皀部一百九十八　　鬯部一百九十九\n米部二百　　　　　毇部二百一\n臼部二百二　　　　倉部二百三\n㐭部二百四　　　　嗇部二百五\n亼部二百六　　　　㑹部二百七\n亯部二百八　　　　部二百九\n畐部二百十　　　　入部二百十一冂部二百十二　　　部二百十三冃部二百十四　　　㒳部二百十五㡀部二百十六　　　覀部二百十七网部二百十八　　　□部二百十九冓部二百二十　　　凵部二百二十一去部二百二十二　　北部二百二十三西部二百二十四　　鹵部二百二十五鹽部二百二十六　　部二百二十七皿部二百二十八　　卧部二百二十九㐆部二百三十"
+        },
+        {
+          "id": "1.134",
+          "text": "麦麰䵀䴾麧麩麱䵂麫麵麷□麮䴳䴽□□䴻□䵅䴮䴷䴿□麳麲䴲䴹麹□□麨䴺□\n䴭□□䴵䵃䴼麯䴬□□"
+        },
+        {
+          "id": "1.135",
+          "text": "□䵖黏□□䵒䵑□䵗□□□□䵘黐□□䵜□□禾部第一百九十四\n秀稼穡穜稙稑穋稺稚䄺穊稹稠□稀穆穆䆏私稷稌秫穄稻稬穤稴穬秏秜䅘穟稗穎移䄬穗秒䄪□䅥□䅺穖秠稃秨穮□租穧穫䆅稛秩秳□□䅵秕稈秆稾科稭鞂秸䅌䅭䅣䅀□□穰秧秦秊年稔榖稅□䆃秬稍秋秌□程穌秭稱种稯□䄷秅穳□稘種稰䅂䆍秿□䅜穙秎䅑□稕䅻䆄□䄶稡□䅾秪秈秞穚䅃䆀□秛䅢穩穅穁䅝䅳穭稂䄯穢穱稸秷秣□秢\n秱穠□□䄻□□□稜䅅秂秥穔稝□䄮□□䅗秓秔䄨䅔秵□□䅡□□□□䄸□□䅚䄼□□□䅰䅙秺䅏秙稧䅄□稄䅷䅮稒穛□秡䅼□□□秴□□□稪□□□□䄩□稫䄾䅤稵□䅧□穈穲稢穥□□䅊案"
+        },
+        {
+          "id": "1.136",
+          "text": "□兼耒部第一百九十六\n耕耦耡耤□耘□耜耨䎨耩□□䎩□䎤䎧䎮□耫䎫□□□耚䎯耠□耬耰耭□□□耣□䎦耔頛耗□□□䎢□耯□□"
+        },
+        {
+          "id": "1.137",
+          "text": "馨馦馠馣馥馝馞□馛馤□□馪䭱□馧"
+        },
+        {
+          "id": "1.138",
+          "text": "冟即既"
+        },
+        {
+          "id": "1.139",
+          "text": "□鬱□□"
+        },
+        {
+          "id": "1.140",
+          "text": "粱粲糲精粗□粒粺糵糪糂糝糣䊤□麊糟糒□糗䊆糈糧粮粉粈糅䊮\n□粹氣䊠䉺粃䊎□䊝竊䊳粻粔籹□粥□籸䊟□䊊䊓粖糷□粢糠䊭粕粰□□糦䊞粘粳□□頪䊕□䊙粙□□□□糉粽䊧□糫粡䊡糖粷粠䊅糚䊄䊈□䊔□䉻糤粄粿糃糔糞糯糙□□□□籺□糏\n□籷□粞糰䊚䉾粊"
+        },
+        {
+          "id": "1.141",
+          "text": "糳臼部第二百二\n舂□舀臿□䑔臽□□□函\n□䑘□□□□□□䑗"
+        },
+        {
+          "id": "1.142",
+          "text": "全牄"
+        },
+        {
+          "id": "1.143",
+          "text": "稟啚亶"
+        },
+        {
+          "id": "1.144",
+          "text": "□牆廧□"
+        },
+        {
+          "id": "1.145",
+          "text": "合僉侖□今舎畣㑹部第二百七\n□㞧朇䢈"
+        },
+        {
+          "id": "1.146",
+          "text": "享□□䈞□\n部第二百九\n□□"
+        },
+        {
+          "id": "1.147",
+          "text": "良□□"
+        },
+        {
+          "id": "1.148",
+          "text": "糴全㒰□\n□内"
+        },
+        {
+          "id": "1.149",
+          "text": "冠□□㓃部第二百十三\n同□冡冃部第二百十四\n㒻杲胄最冕冒□冔㒽□㒾□□□"
+        },
+        {
+          "id": "1.150",
+          "text": "兩䓣"
+        },
+        {
+          "id": "1.151",
+          "text": "敝弊"
+        },
+        {
+          "id": "1.152",
+          "text": "覂覆覈䙵垔"
+        },
+        {
+          "id": "1.153",
+          "text": "□罔□□□\n罨□䍐罽䍘□䍙□罪罩罘□罾罛罶□□罜䍡罿罧\n罠羅罬罦䍖罻□罝□□□罯罷署置詈罵□羈□羇罺䍤罥羂□□罭罼䍔□□羉□罳罹罤□罞□□□䍦䍢罱䍗罣䍜□䍓□□□\n□□□羃□羄□□□"
+        },
+        {
+          "id": "1.154",
+          "text": "棄□畢□"
+        },
+        {
+          "id": "1.155",
+          "text": "爯再厶部第二百二十一"
+        },
+        {
+          "id": "1.156",
+          "text": "厺□朅□□"
+        },
+        {
+          "id": "1.157",
+          "text": "冀兾乖"
+        },
+        {
+          "id": "1.158",
+          "text": "卤栖"
+        },
+        {
+          "id": "1.159",
+          "text": "□滷鹹鹶□□□䴜□□䴛□䴝鹼鹻□□□□㔪䴚\n□□"
+        },
+        {
+          "id": "1.160",
+          "text": "□塩盬部第二百二十七\n□徵朢□□㸒重"
+        },
+        {
+          "id": "1.161",
+          "text": "䀁□盂盧□䀇□盆㿾盨盄盛盌齍盎䀊□盉益盅盈盦盡䀆盪昷□盥䀉盞䀂□㿿□㿼䀀□□盕䀈盤□\n□盝□□盂□蓋葢□盩□䀃□㿽盔盃□□䀅\n盭□䀍盍\n□"
+        },
+        {
+          "id": "1.162",
+          "text": "□監□臨□□"
+        },
+        {
+          "id": "1.163",
+          "text": "殷"
+        },
+        {
+          "id": "1.164",
+          "text": "欽定四庫全書\n梁　顧野王　撰琴部二百三十一　　喜部二百三十二壴部二百三十三　　鼓部二百三十四豈部二百三十五　　豆部二百三十六豊部二百三十七　　豐部二百三十八䖒部二百三十九　　重部二百四十鼎部二百四十一　　瓦部二百四十二缶部二百四十三　　鬲部二百四十四部二百四十五　　斗部二百四十六勺部二百四十七　　几部二百四十八且部二百四十九　　匚部二百五十曲部二百五十一　　壺部二百五十二巵部二百五十三　　部二百五十四"
+        },
+        {
+          "id": "1.165",
+          "text": "□䥅瑟□琵琶"
+        },
+        {
+          "id": "1.166",
+          "text": "□歖嚭"
+        },
+        {
+          "id": "1.167",
+          "text": "□彭尌□嘉"
+        },
+        {
+          "id": "1.168",
+          "text": "□鼛鼙鼘鼞□□䶀鼖鼗□鼟鼚䵿䵽䶁鼜䥢□□"
+        },
+        {
+          "id": "1.169",
+          "text": "凱"
+        },
+        {
+          "id": "1.170",
+          "text": "□梪□□□䝁□䜼豌䝀豍䜸□䝄豏䜺䜷䜾䜽䜴□□□□"
+        },
+        {
+          "id": "1.171",
+          "text": "豑"
+        },
+        {
+          "id": "1.172",
+          "text": "□豔"
+        },
+        {
+          "id": "1.173",
+          "text": "□□"
+        },
+        {
+          "id": "1.174",
+          "text": "量□"
+        },
+        {
+          "id": "1.175",
+          "text": "鼐鼒鼏䵼"
+        },
+        {
+          "id": "1.176",
+          "text": "瓬甄甍□瓵甗瓽瓮甕甌瓨㼝瓴甋瓿甊甂甓甈□甃㼙㼽□㼲瓪㼚甒㼻㽀㼶㼡㽈瓺甔㼴㽄㼵㼬㼳㽅㼥㼦㼤㼫㼹□㼯□瓷□瓹㽉□㼣㼠㽃瓳㼾甎㼗㽆□㽌□㼧□□㼪甉㼮□㽁㼜瓶□□㼛□甇㼺甑瓻□甖㼢甀□□□□□㽋□甐㽇㼸□瓭"
+        },
+        {
+          "id": "1.177",
+          "text": "缻䍍罌匋□□䍌罋䍃□䍄罅缺缾䍇缸罃□䍎罊缿罏䍊罍□□□□□□□\n罇□□䍉□□罄罐"
+        },
+        {
+          "id": "1.178",
+          "text": "䰛鬹鬵鬳□融□鬴䰝□□鬺□䰚□□□鬷\n部第二百四十五\n□□□□□□□□鬻□□□䰞□□□□□□斗部第二百四十六\n㪷斚料斞斠斡斟斜㪺㪵斣戽㪻斛枓□升□□□"
+        },
+        {
+          "id": "1.179",
+          "text": "与"
+        },
+        {
+          "id": "1.180",
+          "text": "凥処焭凭"
+        },
+        {
+          "id": "1.181",
+          "text": "□俎□亹"
+        },
+        {
+          "id": "1.182",
+          "text": "□匠匧匜匡匩匴□㔶匪□□㔴匬匱匵匣匫匛□匯匰匭㔳□匥□□□□□□匨□匳匲□"
+        },
+        {
+          "id": "1.183",
+          "text": "□□□壺部第二百五十二\n□□□□□□壹"
+        },
+        {
+          "id": "1.184",
+          "text": "□□"
+        },
+        {
+          "id": "1.185",
+          "text": "□□□□疀□□□□□□□□□"
+        },
+        {
+          "id": "1.186",
+          "text": "玊篇卷十六"
+        },
+        {
+          "id": "1.187",
+          "text": "欽定四庫全書\n梁　顧野王　撰㫃部二百五十五　　勿部二百五十六矢部二百五十七　　弓部二百五十八弜部二百五十九　　斤部二百六十矛部二百六十一　　戈部二百六十二殳部二百六十三　　殺部二百六十四戉部二百六十五　　刀部二百六十六㓞部二百六十七　　刃部二百六十八"
+        },
+        {
+          "id": "1.188",
+          "text": "旗旚旐旆旌旍旟㫍旖旎旂旞□旝旃旜旇施斿旒旄旋旛旅□族旓□於□□㫎□□□㫏"
+        },
+        {
+          "id": "1.189",
+          "text": "昜□"
+        },
+        {
+          "id": "1.190",
+          "text": "□侯□䠶矯短矤矧□矰□矲知矣矨□䂕矬䂐□䂑□□矩榘䂏□□"
+        },
+        {
+          "id": "1.191",
+          "text": "弭□弴弤弲弨弧□彄□張彎引□彏弸彊強弙彌瓕□弛□彀弢弩彉彍彃發□彈□□㢰㢻㢵弰彋彇㢼□弽□㢾㣂弣㢩弶㢨□□㢯□□□□□□□□㣅弫弮□弝□㣄□弡"
+        },
+        {
+          "id": "1.192",
+          "text": "□□㢸弼□"
+        },
+        {
+          "id": "1.193",
+          "text": "斧斨斫斪斸斵□釿斮所斯□斷□断□□新斬□簛□□斦□□□□□"
+        },
+        {
+          "id": "1.194",
+          "text": "□□□矠䂎□䂇矜□□□矟□□䂈□□矡□□□䂉□䂆"
+        },
+        {
+          "id": "1.195",
+          "text": "肈戎戣□戟□戛賊□戍戰戲或戜戭戕戮戡㦰□戩武戢戠□㦺□□□㦴㦻戧□□戔□□□韱㦵㦹□□□戙"
+        },
+        {
+          "id": "1.196",
+          "text": "杸㱿㱽祋□□毆毃㲀段殽殹□毅㲃㱾殿□□殾□㲅□□㲁"
+        },
+        {
+          "id": "1.197",
+          "text": "布□□□弑"
+        },
+        {
+          "id": "1.198",
+          "text": "戚"
+        },
+        {
+          "id": "1.199",
+          "text": "㓡㓵削剞□剴劂利剡初則□刻□割\n㓣刌切判㔎劌刉副疈剖列劈辨剟剫刋剈□劀□剓刷劃□刮刪刲剽\n刖剉劖劋剿㓼刜刓制□㓠釗刺劓㓷刵刳罰刑㓝剄券創劉劑刎剾㓱□□剌㔍□□剶劙剜㔒□剅㓹划㓚□㔋□刈㔏劐□㔌朷劁剗□刟劇㓽□剃㓢剔□㔊㓳剭剋剠劘劗剒□㓮劍㔆□剆剥□□㓾剴㓺刨剹剸□□□魝□㔂刕剛□□□刡刐㓴□□㓲剕刴刋□□□□□□剳㓤劅□刹□□□㔇刔劊□㔄□剰㓟剪□剮□"
+        },
+        {
+          "id": "1.200",
+          "text": "栔㗉□"
+        },
+        {
+          "id": "1.201",
+          "text": "劒□□□刅"
+        },
+        {
+          "id": "1.202",
+          "text": "玉篇卷十七"
+        },
+        {
+          "id": "1.203",
+          "text": "欽定四庫全書\n梁　顧野王　撰\n金部二百六十九　　攴部二百七十放部二百七十一　　丌部二百七十二左部二百七十三　　工部二百七十四㠭部二百七十五　　巫部二百七十六卜部二百七十七　　兆部二百七十八用部二百七十九　　爻部二百八十㸚部二百八十一　　車部二百八十二舟部二百八十三　　方部二百八十四"
+        },
+        {
+          "id": "1.204",
+          "text": "□銀鐐鋈錫鈏銅鏈鍇鐵鐵銕鍊鋚銑録鋻鑗錅鑄銷鑠鑲鋏鋌鐼鍛䥵鏡鉹□鈃鐘鍾鋞鑊鑒鑑鑴鐆鐩鍪鍑錪銼鉶鎬鏕䥝銚鐎□鋗䥩鏏鉉鋊鐪鎣錡鍤鉥鍼針鈹鑱鏨鑿□鈕銎鐅銛錢鈐䤻鏺鐮鎌鉏鋤䥯鍥䥛鉊銍鎭鉆銸鑷釱鉗鋸鐕錐鏝鑽鑢鋁銖鋝□鈀鍰錘鈴鍿鈞銞鎔\n鏞銿鐲鐃鉦鐸鑮鈁鎛鍠鎗錚鏜鍯\n鑋鐔鎩鏌釾鋣鏢鈒\n鋋鋭鉈鏦䤸錟鐏鏐鐓錞鍭鏑鍉鎧錏鍜釬銲鐧釭釳銴鑾鐊鍚銜鉣鑣鈇䥍釣鋃鐺鋂鍡鑸鎎鋪鐉鈔鍩錔□鈌鏉鍲鏃鎦鉅鎕銻鈋□鍒錭□□鈍銶䤨鑙鏵釫鍏鍵鑳釵鏷鏔鍴鍨鏸錣□錕鉀鍋鐹鍫鐰鋡鍮鋀鉐鏳鎢錥鈳鈷䥈釜釴鏀□□□鋇鈶鉿鑖鉒䥡鐴□釤䥸鈑鐇鏻鉜鏂鍝□鎜錜䤳䥀鎡錤錑䥗鉎鎒銃鉠鏆鉌釧銐鈵鏊鉟䤶鏗銵鐻钀鑈鉩鉞□钃錖鐶鍸鍔鐖鉢鐍鈘鐯鉾□鑘鑰鉍鉄鈮錎鎖鏁鏟鉵䥉鍈鋒鉷鎚鏒鋐鉤鋖鐁錀鎊銓鍗鑌鈿□鑐鏤□鐈鈱鉋□鍶鋹鋩鋼鐄鋿鎀釘䤾釚□䤹鎪銗鑨鉖鈚鈽鍷銈□銂錨鈊錓鎏鑶鑅鑇錂䥎鋑䤡銋鍖錧鏋鍽釩鎈鈰釨鋅鉙鋟䤥䥏鋙䤷鉸鏾鉃錗鏙鋄釥鑜鉼鉂□□釲鋺鍍鐌鐬錊鑛鏴□鋆鑫鋥鋠□鋇□錝鐩鉺䥨□錮銏鋽䤧鑭鋀□鑕鐱釟釛鋉鈺䥔銉□銊鉘鈅鉑鏼鈼鍎釞鉻鎉鈉䤭鑉鋜鈠鎰鐭鎘鋷鑡鍱䤮鋦鏘銆鑞鍓釙鎑钁鑺鈯□䥢鈸鏚鑯釦鈂鏇鎋錍銘錯鏶鐙錠鎞鈭"
+        },
+        {
+          "id": "1.205",
+          "text": "攵徹□敃暋敏啓肇敀敄效政敷敟□數攽敳孜敞改敕□變㪅斂敿㪉敶敵敓赦□攸斁㳊□□敉敭□救敦敗贁寇□㪤敜鼔敂攷攻㪒㪣□□斀敔□□牧敤畋敇□□□攺敘斆教□□䜴敦□㪦㪁敧㪜□□□□□□㪡䍩□㪏敡㪛□□㪆㪇□□㪑敺㪐㩿□□㪃□□㪌□㪠㪭敋敢□□□敊㪬□□㩻□䰙□□㪥□□□□㪓□敐□攼㪮□□□□□□□敼㪋敞□□□□㪨㪍㪖□㪩㪄□□□□故敒"
+        },
+        {
+          "id": "1.206",
+          "text": "敫敖"
+        },
+        {
+          "id": "1.207",
+          "text": "䢋巽巺□畀奠其亣典□"
+        },
+        {
+          "id": "1.208",
+          "text": "差□□"
+        },
+        {
+          "id": "1.209",
+          "text": "□巨□巧式"
+        },
+        {
+          "id": "1.210",
+          "text": "□"
+        },
+        {
+          "id": "1.211",
+          "text": "□覡靈□"
+        },
+        {
+          "id": "1.212",
+          "text": "□卦貞占□卟兆部第二百七十八"
+        },
+        {
+          "id": "1.213",
+          "text": "□甫□庸甯由"
+        },
+        {
+          "id": "1.214",
+          "text": "希棥"
+        },
+        {
+          "id": "1.215",
+          "text": "爾爽爽"
+        },
+        {
+          "id": "1.216",
+          "text": "□軒□輜輧輼輬軘軺輕輶輣䡴轈□䡬輿軾䡊輯較䡈轛輒䡅輴輑軨䡼軫軸□轐輻□輮輪輥轊軎軝䡋軹軑輨轅輈□□䡽軏䡇軶轙軥軜轑䡓□䡕䡾載範轉軔輸輖輩軋轢軌䡮䡮□輊軭軧輟轚軻轗䡰軵輇輲輗□轃䡔轒䡝輂□□輦□輓軖轘□輀轞輔轔□輫輰䡵䡧輾輁□軬□䡉輞□輎□轇轕□䡭轓輍□□□□輆軩䡗䡚軲輱軳□䡐□軤輚轏轍輤轆轤輡□厙轎輠轠䡲輷□轟軙\n䡘□□□䡿□軯輘□□䡒軞□䡆䡥䡩䡫䡏\n䡡䡋□輢□䡳䡤□□□轖□軓□□\n輭軟䡑輽䡢□□輐䡹軐□\n□□□□軷轥輅軴轄□輹軼□□䡜□□□□□□\n軗輳□軍□䡣轂䡙"
+        },
+        {
+          "id": "1.217",
+          "text": "俞船肜舽舡䑵䑿艖艇舼□䒀艑䑦艬艡舶䑬艛□䑡□䑴艃艀艅艎艨艟艗舷□□□□航□□舲舴艋舸艢般艐艆艚□艫䑳□䑼䑹䑻艭□□□䑯䑠艁艤艣□舵□□舫䑤□艜䒇□䑲□\n䑶□□䒆□\n舳□□□䑪□□□□䑢䑽\n艧䑽□□舠□艦"
+        },
+        {
+          "id": "1.218",
+          "text": "汸万"
+        },
+        {
+          "id": "1.219",
+          "text": "玉篇卷十八"
+        },
+        {
+          "id": "1.220",
+          "text": "欽定四庫全書\n梁　顧野王　撰\n水部第二百八十五"
+        },
+        {
+          "id": "1.221",
+          "text": "汃河涪潼渽江沱沲池湔浙沫温滇淹沮涂沅瀏濊汪漻泚況渢汎沄沖浩沆泬濞潝瀺灂潐滕瀾灡澐漣淪潏洸淙波漂浮氾汜湋潿測洞激洶涌湧洌湁涳溶渾淑澂瀓澄清湜㵓潣滲溷淈淵囦㳬漼㵏瀰□潯澹泙泏瀳洊潪□滿滑濇泆澤淫溽瀸潰淺沴□渻淖濢涅滋淐㳷浥沙瀨汻滸濆涘氿潨沼漘浦沚洔湀沸㵒派濘漥洼滎瀅潢湖汥湄□洫溝渠瀆瀶洐澗汕澳澩㶅□灘決灓滴□㳻澨注□沃津□㶇渡淜㳂泝洄泳潛淦泛汓泅游湊砅濿淒湛□湮㲻没濩滃渨泱澍溟□澬瀑湒潦涿瀧渿漊溦浞浽滖濛沈沉淊洅涵□洳㴶洽瀁\n湟汾漢㵄汧浪沔澇漆□滻洛潩汝潞澮洈沁淇蕩沇泲溠洭潓㵋灌漸泠□渒□溧湞溱湘溜汨漞深潭油瀷潕㵲滶瀙滍淮\n沾漳濯灃澧溳澺□潁潧洧㶏濄泄汴汳淩濼濮渮漷淨漯洹汍泡泗灉㴩澭澶沭洙沂洋濁溉㶟沶浯湡治汶寖浸㴲洨渚泜灅濡濟㴉済沽沛㲽浿瀤溑滱淶泥湳漹涶洵涻淔淁涺□沋涃浝㳶泈汘洍洪洚澥漠海□溥□潮濥滔㳙潒混潚漦泌汭演渙活□湝淲滮淢滂瀀濃涔渥瀌泐溓濂滯汦㶁瀱汔涸□漮消渴汀溼濕湆洿汙湫潤準沑瀵□□瀞瀎泧洝洎湯渜涾洏涗涫㶕汏淅溲滰□漉渌澱浚濬□潘泔滓滫淤淰□瀹漀湑湎涒漿□滒\n淡涼澆液灝瀋溢\n洒濈汁渳□泂滄□㵾淬漱沐頮沫湏洗澡汲□淳淋漚漬渫湩澣浣□染潎\n涑㵞汛灑㶄灒泰濺浼洟涕潸淚㴃汗涷漕渝減滅泮沜漏澒漪汨流渉洲濵瀕源浟瀼泿浹淓洱滽溾涹溹滬㴬潬□法灋潺湲潟滹涯溘漫㵩浢沕瀣湢湽㳁瀦瀍瀛淟涊漭□㵨沍澠湃□澞浰漶㳹溔渟濤□沘浘漨洬濧沌溏湓泊涖瀈□澽㵧瀲澰灩□㶆滭□流澴沰湭淍汫涏浧㵦灕□瀢㵍潗潲澻淝□濋㵐洣汮潙洺涍㴫□渶□涀□潷□溞□潠溗□□浖汒□□□涎㵁洤□泟㳧澉潶㶌浡漧漺瀿澎濠□潫□淕泯瀜㳅漴淞㴦洢濰漁泭漽溪灈瀘□浾潾洇濜瀊沺湍凛溒□淆渦溛涐涂□漡茫瀯㵗濴濚漎㵬㶀澌泑添灆□□汯浤㴘泍㵅□㴀渹洴㳜□㶎濨澊泘㳖㵢㵯渱□濍㳋□滁渘泃泩㴰汼泀湤潖漟㳾溵淐澢泇洀㴓㵃㳸□澋□□湵漜□□□□□□渼涭□㴸㶒浨濎□□□□□灦涱□□港渺汞灄□泋濖漵㵰泞滷澅湕灛㶔㵿瀉滉□渰瀠㶞澾泬㶍□□□灖淏泖溤潽潻□□瀴\n淎□浫潡灞淠□汱汰瀚澯□□淛漈涆沜淀㴐□□溴溎□浛□□渣□湴洕□㳦溍□□㳥□濾㵂□湠渲淃□汌灠灙㵑淌□㳀□澃□□滊沎漖漝灢㴧㵫□澓□濗泦淗㴼溯㵡瀥滈洷洁滵□□灍□□㴽㵠湙□潑涰㵤□淂淯浴溻□□澦滀沷㲺滐淴沏□渤澀澁澈滆滌汐㶠湱湂□□泣溭□氻湨㵊濲涷漙瀡濣□灨㵹"
+        },
+        {
+          "id": "1.222",
+          "text": "玉篇卷十九"
+        },
+        {
+          "id": "1.223",
+          "text": "欽定四庫全書\n梁　顧野王　撰沝部二百八十六　　部二百八十七巜部二百八十八　　巛部二百八十九井部二百九十　　　泉部二百九十一灥部二百九十二　　永部二百九十三部二百九十四　　谷部二百九十五冫部二百九十六　　雨部二百九十七雲部二百九十八　　風部二百九十九\n气部三百　　　　　鬼部三百一\n甶部三百二　　　　白部三百三\n日部三百四　　　　旦部三百五\n䢅部三百六　　　　倝部三百七\n晶部三百八　　　　月部三百九\n有部三百十　　　　明部三百十一囧部三百十二"
+        },
+        {
+          "id": "1.224",
+          "text": "淼□□\n部第二百八十七"
+        },
+        {
+          "id": "1.225",
+          "text": "粼巛部第二百八十九\n巠□□□□邕□州□□"
+        },
+        {
+          "id": "1.226",
+          "text": "刱阱汬□□"
+        },
+        {
+          "id": "1.227",
+          "text": "瀪厡"
+        },
+        {
+          "id": "1.228",
+          "text": "□"
+        },
+        {
+          "id": "1.229",
+          "text": "羕昶\n部第二百九十四\n覛□□衇"
+        },
+        {
+          "id": "1.230",
+          "text": "豁谸豂豅谾谹䜱䜪䜭□豄□䜯䜲谼□䜮□谽谺□㕡豃谿□冫部第二百九十六\n仌冰凛凊凘□凍凌□□凇凓冽浹□凗凒□凝㓅凔凄冶□冷□□冬□㓈□冱㓓㓖□凙□㓐冹㓗□凋㓉凚准况冲决减凉"
+        },
+        {
+          "id": "1.231",
+          "text": "□□霅靁雷□□□霣□霆電□震□䨮雪霄霰\n䨘□雹□霝零□霡霂□□□霃□䨡□䨞霑□屚霤䨣霽霩霋露霜霚雺□霧霾霓䨒霖□需䨨霏䬠雱䨦霶雭霫雴□霎䨐䨤□雰□□□霞□靀䨗雵霹□□□霷霠□霛霙□□䨥□□霦□䨝䨳霌□靊霳雸䨏□□䨜霪□□䨢䨴靃□霍□靄霈霔□□□□□□□□霯□䨵霨□䨫□□□䨰□霵䨚䨛□䨑"
+        },
+        {
+          "id": "1.232",
+          "text": "霒侌□靆靉霼曇靅䨺"
+        },
+        {
+          "id": "1.233",
+          "text": "凬飌□□飄飆颮颯□䬟䬍□□䬑颺䫻䬆颲䬅□颻□䬂颼颾飉□□□䬝䬌□颸䬞䫾□䫸䬘□飁颰颬□飋䬀飍颵□颴飀□□□□\n䫹□□□□颹□□□䫺\n□□□䬋□\n□□□颽□\n㶡䬈䬏□□\n□䬕□□䬛□□□□䫼䬉䬎□□□"
+        },
+        {
+          "id": "1.234",
+          "text": "氣氛□氲氤㡮□"
+        },
+        {
+          "id": "1.235",
+          "text": "□䰡魂魄魖魃□鬽䰨魅□□䰧䰰□□䰯□魋魍魎魊䰫魏魗□□魑□䰤鬿䰠□魔魁□魒□□□□□\n䰦□□䰢□□□□□□□□□□□□□□魙□魓䰩醜□"
+        },
+        {
+          "id": "1.236",
+          "text": "畏□禺"
+        },
+        {
+          "id": "1.237",
+          "text": "□皢晳皤㿥皚皅皦皭皔皏㿣皪皉皠皁皂的㿧皛皖皫㿟□□皧皜皥皓□\n敀□皗㿤□皣\n皟□□㿩皎日部第三百四\n旻時旹早昒曙昧晣晢㫼曉\n昭晤晃晄曠旭㬜晋昏昬晵暘\n昫晛㬗晏㬫景晧曍曅暉旰暆晷昃晚曫晻暗\n曀晦旱㫐昴曏曩昨昪暇昄暫昱昌□暀㫱暑暍㬮□㬥暴□曝映\n晞昔㫺暬暱昵㫘晐昆晜暖普曈曨晫暏暠暟昈昻曒暞□暮晲□曭暲暵㬒□暒晴曤晥□昲暅暳暡暈晊曖曜暿暶□㫓□星□□□□厯□㬤□晟暾旽晈昧昊昉春萅曛晡曃暕昢昚昺曇昇晁㫝㫵晭□㫷旲□昐曦□㫙□晅㫜暛暊□□㫰昑□曮煚㬊杲㬙暐晼曘昀暌曥□暄旼□暋□旫暚晗焸曚暰□㬉暖暪□旿晪昫昶㫥㫒㫛□□曕□㫹昪昛㫲暣□晬晙□昁□曞□㬓暓昮旺□暝曔㝵㬭昩昳昷□㫽惖□□\n昅昕旵曬旦部第三百五\n曁"
+        },
+        {
+          "id": "1.238",
+          "text": "晨䢉農□辳□"
+        },
+        {
+          "id": "1.239",
+          "text": "乾□朝幹□"
+        },
+        {
+          "id": "1.240",
+          "text": "曐曑曡曟"
+        },
+        {
+          "id": "1.241",
+          "text": "朔朗脼朏朓霸□□朒□期□朦朧朎腄臘臈㬿朠□朊䏙"
+        },
+        {
+          "id": "1.242",
+          "text": "戫龓明部第三百十一\n朙盟囧部第三百十二\n□"
+        },
+        {
+          "id": "1.243",
+          "text": "欽定四庫全書\n梁　顧野王　撰冥部三百十三　　　夕部三百十四多部三百十五　　　小部三百十六幺部三百十七　　　部三百十八部三百十九　　　丏部三百二十大部三百二十一　　奢部三百二十二火部三百二十三　　炎部三百二十四焱部三百二十五　　炙部三百二十六爨部三百二十七　　囱部三百二十八黑部三百二十九　　赤部三百三十亦部三百三十一　　夨部三百三十二夭部三百三十三　　交部三百三十四尢部三百三十五　　壹部三百三十六叀部三百三十七　　丶部三百三十八丹部三百三十九　　青部三百四十氏部三百四十一　　　氐部三百四十二"
+        },
+        {
+          "id": "1.244",
+          "text": "鼆夕部第三百十四\n夜□夢夗夝夤□夙□外□"
+        },
+        {
+          "id": "1.245",
+          "text": "□㚌□□㗬□郺㷇㚊㚉夡□夠□㩼㚋□□□□□卶㚍"
+        },
+        {
+          "id": "1.246",
+          "text": "少尐尖□㝻"
+        },
+        {
+          "id": "1.247",
+          "text": "幼麼□盭□㡫部第三百十八\n幽幾□\n部第三百十九\n□玆玈玅"
+        },
+        {
+          "id": "1.248",
+          "text": "□夾夸奄□奯奅□夽□契奃□□□□㚠夷奓□㚗奜□奒奝□□䯨㚜□太□奕奘㚖奚奰耎奫□尖□□奩□□奆□□奦奈□奪□□"
+        },
+        {
+          "id": "1.249",
+          "text": "奲"
+        },
+        {
+          "id": "1.250",
+          "text": "炟□燬燹焌燒炪□烈然燃燔熚□□熯烝炥熮□㷳熇熲炯爚熛烄□□㶣炭㷢炦燋灰炱煤煨熄烓煁烘燀齌炊烰□熷熹熺熙□煾煎熬炮炰煏㷶□爆煬□㸏爤□㷉熨□□灸灼煉㷓燭灺㶳燼焠煣熑㷮焚燌炃□燎□□□焦灾烖災□煙烟□焆燂燖煴焞煦炳焯煒照炤㶴煜焴熠燿煇炗爓煌熿焜熱煗煖熾□炕燠炔炅燥燺焅熭烕燾爟烜㷭爝燧㸂□熂㷄㷅炒煓熸焮炘煆炖爊㸊㷰煟煽㷆焲烳燷烔㸎㶧炵焪烴燫熪□爡焥爌炴㶵煝焃炬炁焷爁灹烯㸅烼炢爩烗燩燍燏㶼烠煑炈㷎烑煠灱焇炶焄焟燈□熻煪□㷷□燉爍煥爞缹熟烋烽爖灴煩爐爈烊烐熧□熡煘㶯灯炷爙熩煄□烶㶡熽炓煈燇熃燐炑㷬□㷤□爅熼爀□熆炠熦勲燘燆㷿爔炣煃㷃㷂□煍熰焵□炌□焝烇焰□灷□□焀煂"
+        },
+        {
+          "id": "1.251",
+          "text": "燄□□□㷠燅欻煔□"
+        },
+        {
+          "id": "1.252",
+          "text": "熒燊炙部第三百二十六\n□㸋爒□□□"
+        },
+        {
+          "id": "1.253",
+          "text": "□釁□"
+        },
+        {
+          "id": "1.254",
+          "text": "窗□怱忩悤"
+        },
+        {
+          "id": "1.255",
+          "text": "黸䵣□黲䵮黤黗黝黚䵵□□黦黔䵤黕黠黨黷黵黴□黜黱黛儵黟黮黭□䵱黥䵞黓䵨□□□□黰□□□□□黧□□黬黫䵴□䵬黳□□□□□□□□□□䵟點黶黯䵭□□䵳□□□□□墨黢□□□□黖"
+        },
+        {
+          "id": "1.256",
+          "text": "赨□□赧煆䞓頳□□赭赩䞕□赫䞔赥"
+        },
+        {
+          "id": "1.257",
+          "text": "㚒夨部第三百三十二\n奊□吳□□□"
+        },
+        {
+          "id": "1.258",
+          "text": "喬□□"
+        },
+        {
+          "id": "1.259",
+          "text": "□絞□□"
+        },
+        {
+          "id": "1.260",
+          "text": "尪尳㝿㝾㞁尲尬尥□□□㝼□尰□㞇㞂尯㞆□㞄□尵□□□㞅□□□□尮"
+        },
+        {
+          "id": "1.261",
+          "text": "亄懿叀部第三百三十七\n□□□□□"
+        },
+        {
+          "id": "1.262",
+          "text": "主㕻咅卞"
+        },
+        {
+          "id": "1.263",
+          "text": "目㣋雘彤蚒"
+        },
+        {
+          "id": "1.264",
+          "text": "□䨼静氏部第三百四十一\n□"
+        },
+        {
+          "id": "1.265",
+          "text": "□㲳□"
+        },
+        {
+          "id": "1.266",
+          "text": "玉篇卷二十一"
+        },
+        {
+          "id": "1.267",
+          "text": "欽定四庫全書\n梁　顧野王　撰山部三百四十三　　　屾部三百四十四嵬部三百四十五　　　屵部三百四十六广部三百四十七　　　厂部三百四十八髙部三百四十九　　　危部三百五十石部三百五十一　　　磬部三百五十二部三百五十三　　　阜部三百五十四部三百五十五　　　厽部三百五十六"
+        },
+        {
+          "id": "1.268",
+          "text": "嶽岳□□岱峱巙嶩㠀嶧嵎嶷岷㟭□㞦崋巀嶭嵕嵏崞崵岵屺嶨嶅岨岡岑崒巒宻岫嶘㟞峻嶞崟崛崇崈㠑□巁巖嵒嵯峨崝峥嶸嵤岊岪嵍岣嶁嶃峑嶚嶟岬崆□㟎㠐□巇㠔㠅豳峭㟚岐崤峞□□㞺□□□㟉巋崧嵩崴㠢嶓㠆岟嵐崥㟍岭巉岌嶫崌崐崘巘崦嵫峘嶢巃嵸嶜嶙峋岻峛崺岝峉崳嵁□□嶔嵰嶮嶼嵆嶊嵔嶉㠝岏嵃屼嵽嵲□嶰嶺崩崚嶒㟅嵣嵌㟹嶕嶣嶑㞰嵀㟇□峎㠕峴嵼峙嵿㞳嶝岠□㟽峼□□□□□㠚㟋□峒崽□崃嵦嵋﨑嶇岴嵠崠嶠㟒崷㟏□峐岯嶈□峵嵾㞥岓㠠嵢峿峸岹㟘嶗㠧岈□岍嵅㠉巔㠓崶㠦嵱嵭嶆㟿□崼㠧㠖嵄㞨□□□□岲□嵹巏□□□㠠□崹□㠍□岞崿□峪㟳嵑嶱岄㞽□屹岦嵉峇□□□㞧□㞱峯仚㠙巊㟰崱巐崔㟐"
+        },
+        {
+          "id": "1.269",
+          "text": "□□嵞"
+        },
+        {
+          "id": "1.270",
+          "text": "巍□屵部第三百四十六\n□崖岸嵟嶏"
+        },
+        {
+          "id": "1.271",
+          "text": "廙庭廇庉廬廦廱㢕府庠序㢚廣庌廡□庖廏廐□㢋庫廥庾㢏廁庰廛㡲□廉庢龐廮底□庳庇庤庻廔㢈廢庮廑□□㡿廟庿廞廫廖庥廓廂庬席廲庘㢒廝廋□㢓□廯廘廕㢖廊廈店□廜㢝庲庈庛庋庪□㡰庵庱庨□床㡼□廅□□庯庴□□□□㢍□庁□廳□□□㢗㡱□□㡵㢊庎庩□□□□庀廪廠□□□□㡸㢔□□□□廆□□□㡶㡷□㢃□庡□廨□□□□廗□㢄㢛㡺䨾㡹度□㡲□□庍座□䵇\n部第三百四十八\n厈㕋㕆厓厜㕒厬厥厎厱厤厲□厗㕇□㕊厝尨□厞□仄□□厧厭厃厒㕈□□□厇□㕍□厚㕂□㕃□□□□㓹厙㕐㕌㕅厔□厄"
+        },
+        {
+          "id": "1.272",
+          "text": "□亭亳髝髞□髛□危部第三百五\n㩻卼石部第三百五十一\n磺礦碭碝砮礜磏碣□碫䂬礫□磧䃍□碑殞硞矻硠磕礐磿硻砢磊磥□礹磽确□礒碞碎破哲礙礱硟研䃺磨磑碓䂿磻碆□砭硯䃒砠磋磷硌砥䃤砌䃀䃫□硫砬礪磫礛䃴砡磅矺磓□矸碕磯□䃊硾磭碌䃚礬磁磍碬碨□□礎磶礩磌碥礥磼礏䂳□䃓□磤礓磐磝□碻磖硨磲砊䃛□硐磟碡䃧䃔碊磃砫磂硍硥䃂磾碼碯䃸磹䂦硊硱磳砎硂碏礣䃷□砰硑硭硝砉□硜□□䃜礊硿碪砧□□磎碁硡䃶砒□碉磴砯磞䃁碖硼□□䃢䂚□硄碢□砣□礯□□碐碤□砱碽□□矼䃑□䃋䂘䃈䃌硢砂碒䂟䃡碀□□硧䂢□矷碔礧磈□䃬砲䂽䂪□□磢䂺□䃎□□磉䂹砋磣硪吸砪□磵硬硋矴□砟䂤□□䃝碃䃻砑砞砩□硉矹礤磆䃙□□䃞磩□□䂸砳碦硆䃳砝□礮□礇䃗砄䂰䂮硤□碋□□磬部第三百五十二\n殸毊㲆□□□鏧□\n部第三百五十三\n□"
+        },
+        {
+          "id": "1.273",
+          "text": "□䧰阞陵陰陽陸□阿阪陂陬隅險限阻陮阭隗□陖陗隥□陜陟陷隰□䧢隤隊降隕隉陊阤□阬防隄䧑阯阺陘阢隒阸隘隔障隩附隈□隴陝䧇䦺□□陭□隃䧊阮陚䧦□陼陳□陶陔阽除階阼䧘陛隙陾陙際陪陴隍阹隖陲院陯隌阠阰隆陀陞□□阾□阡隇䧡䧕□□□隚隝隯䧨䦽隕□□䦼□陠䧜陒陓䧁□隑䧆□陌隧隓隋墮隮陣䧞隵隁䧫隀□陑隅□□陻敶□□阷□䧅䧃□□□陫䧒䧓䧌䦻□䧋陡□䧉□□䧛□□䧠阧隢䧝□□□䧥□□□䧔䧯阣䧗\n部第三百五十五\n□□□厽部第三百五十六\n參垒"
+        },
+        {
+          "id": "1.274",
+          "text": "玉篇卷二十二"
+        },
+        {
+          "id": "1.275",
+          "text": "欽定四庫全書\n梁　顧野王　撰馬部三百五十七　　牛部三百五十八犛部三百五十九　　羊部三百六十羴部三百六十一　　部三百六十二萈部三百六十三　　犬部三百六十四犾部三百六十五　　豕部三百六十六部三百六十七　　□部三百六十八部三百六十九　　嘼部三百七十廌部三百七十一　　鹿部三百七十二麤部三百七十三　　㲋部三百七十四兔部三百七十五　　部三百七十六兕部三百七十七　　象部三百七十八能部三百七十九　　熊部三百八十龍部三百八十一　　虍部三百八十二虎部三百八十三　　虤部三百八十四豸部三百八十五"
+        },
+        {
+          "id": "1.276",
+          "text": "□□騭䭴駒駽駣□驪騩駵騢騏騅駱□駰騘驈䮇駹驃騧□驖駓䮗馰□驔騽馵驠䮧騛驁驥騵駿騋驍驕䮔□駂騜騂驓騚騇騴騝駩騄駬驌騻馻驎驩䮌騕□褭□䮤驊駜䮡駥驗駁駫駉騯䭹驤驀駕騑□駊騀□騤篤□駸馺馮□騃□驟颿驅駈馳駝駞騖駾䮋騁䭿駻馯駧驚□駐騫馴騺駗驙□□□馽騷駑駘駔驡騶驛馹□騰駮駪馭駃騠驘䯁騊駼驢驒騱䮝驝□駴駭駎騥□□駤駛□驜驨騉䮸䮹䮭䮻□□□䮾騣䮚䮴䮢□騲驫□□驂□□駍馶䮉□駏驉騮騟䯂䮄䭾□□□□駨□□□騆䮫䭵駯□□□□□駀䮊騦□□䮞□□䭺䮨駺□騳□䭸□□□□□騙□駙馸䮎□□□䮕䮙□驋䮰□䮜䮱□䮓□䮩□䮂□騔□馲䮬騞䮠□□䮷駟□□牛部第三百五十八\n牡犅牝犢特犆㸬犙牭㹑犗牻㹁□□犖㸹□犥犉㹊□㹔□□犫犨牟㹌牲牷牿牽牢犓犕㹃犂㹗牴□㹂牼□犀物牣犧㸲犘犦犤犑犩犣牰犚犈犌□㹎㸪牣犎□犍□㸰㹍犃□㹒㸷牸犐□□㹏犝□㹉牥犇□犜□□□㹆□□牨□牞□□□□㸳□□□□㸼□㹓□□□□□□㸸□牳㹙㸻□□牯□㸵□□牶犒牪□□□犔□□□□□□□□觕□"
+        },
+        {
+          "id": "1.277",
+          "text": "氂斄"
+        },
+        {
+          "id": "1.278",
+          "text": "芈羔羜羭□羝䍮羒牂羖䍽□羯羠羳□□羸䍴□羣□美羷羑□羻羌羶羬□䍺䍶羮羱䍱羫羵䍬䍨羦䍸䍫䍼䍳䍻䍲羺□□羛䍵羥羚□□□羏□□□"
+        },
+        {
+          "id": "1.279",
+          "text": "羼\n部第三百六十二\n□芇□"
+        },
+        {
+          "id": "1.280",
+          "text": "狗㺜□□狵尨□獢狡獫㹥猈猗狊猝㺌猩狌默㺖猥㺒猱獶㺑獎㹽㹪狠㺕獡狋㹞狺獷狀□獒獳□□狧狎狹狃獪犯□猜犺㹤猛獜獧狷狟□□戾□猌犮獨□□□獮獵狩獠臭猲狣獲獻獟狾□玃□狂狰獘類狄猴狻猊猶猷狙□獌狼獾犿獥狛□狐猵獺獱猨猿猫㺟猎犳獹㹱獖猰㹾□㺗㺧猾猇獦狚犽獚㺦猭□㺛獋狤㺎狒猓猋猣□狍猖玂玁狁㹿□狨㹫㹳狴獼猕□㺋㺞狸㺤㺏猍□犲獑猢猦□獂猚猯□狿狑□猧㹻□猽□㹲□□獅狳□□□㺂□猻□貕□猄□□□□㺈□□□狓㹹□㹺□□犼㺝狕□□□□狶□獬□獶猌□□猔□㹬猬猘狖㺠犹□□□□□㹟㺘□㹿□獁獍□狘□□獝㹼□□□獯狽狢□猆"
+        },
+        {
+          "id": "1.281",
+          "text": "㺇獄"
+        },
+        {
+          "id": "1.282",
+          "text": "□豬䝑□□□豰豯豵豝豶豭䝐□豛豤豷豧豢豠豲□豙豱豦豟□□□䝏□□䝒□䝕䖶□□豞䝓□䝋□豩䝅豪䝎□䝔豘□□□□□豨□□□□□䝍□□□□䝌䝈□䝆□豳\n部第三百六十七\n豚□□"
+        },
+        {
+          "id": "1.283",
+          "text": "□□□□彚□□\n部第三百六十九"
+        },
+        {
+          "id": "1.284",
+          "text": "獸廌部第三百七十一\n薦灋□□"
+        },
+        {
+          "id": "1.285",
+          "text": "麚麟□麐麒□麀□□麉□麋麔麎麇麏麕麞麃麈麑麙麢麝□麗□□丽麌麜䴟䴤䴧䴦䴠麁麆麡䴩□□麅麠麖□麍□□麂□"
+        },
+        {
+          "id": "1.286",
+          "text": "□□□"
+        },
+        {
+          "id": "1.287",
+          "text": "□㚟毚□□□"
+        },
+        {
+          "id": "1.288",
+          "text": "菟逸冤婏䨲㕙□□\n部第三百七十六\n禸离禽萬㸘禼□禹□□□"
+        },
+        {
+          "id": "1.289",
+          "text": "□"
+        },
+        {
+          "id": "1.290",
+          "text": "豫"
+        },
+        {
+          "id": "1.291",
+          "text": "㔮"
+        },
+        {
+          "id": "1.292",
+          "text": "□羆□□龍部第三百八十一\n龗靇龕䶬□龖龘"
+        },
+        {
+          "id": "1.293",
+          "text": "虙虞䖍虐□□□□□虖虘虨虑"
+        },
+        {
+          "id": "1.294",
+          "text": "□虒甝虪䖑□䖔虥彪䖊□䖐虓□䖘䖚虣□□虠號□□䖕䖎䖓□䖛"
+        },
+        {
+          "id": "1.295",
+          "text": "䖜贙"
+        },
+        {
+          "id": "1.296",
+          "text": "豹貙貔豼貚豺貜䝟貐貘□貈□□貆貁貍貛貒貗豻貂貉□貅□豾貓䝜貌貖䝢貀豽□□䝣□豿□□□□□䝤□□□□□□□□貊貋□□□□䝦□□"
+        },
+        {
+          "id": "1.297",
+          "text": "玉篇卷二十三"
+        },
+        {
+          "id": "1.298",
+          "text": "欽定四庫全書\n玉篇卷二十四　　　　　　梁　顧野王　撰烏部三百八十六　　　部三百八十七乙部三百八十八　　　燕部三百八十九\n鳥部三百九十　　　　隹部三百九十一奞部三百九十二　　　萑部三百九十三瞿部三百九十四　　　雔部三百九十五雥部三百九十六　　　魚部三百九十七部三百九十八"
+        },
+        {
+          "id": "1.299",
+          "text": "□焉舄\n部第三百八十七\n□㐱鳧乙部第三百八十八\n孔乳"
+        },
+        {
+          "id": "1.300",
+          "text": "鷰"
+        },
+        {
+          "id": "1.301",
+          "text": "鸞鳳鵬鶠鸑鷟鷺□鷫□鷞鵾鶴鶖□鴚駕鵞鴈鳫鴻鶩鴨□鵪鷖鵠鶚鷣鸇□鷐鸉鷢鶽鴿鳩鶌鶻鵃鴶鵴□䳚鴠鷚鶪鵯鸒鷽鴂鶭鴋䳀□鴛鴦鵽□□鸊鷉鸕鶿鷀鷧鳵鴺鵜鶘鶬鴰鷒鳶鴡鴝鸜□鵒□鶡鸚鵡䳇鷮鳪鴳鵧鳭□鶺鴒鴢鸀鳿鷏鴷鸄鸍鴸䳋鴖□鴗鵸䴅䲦鷔䳩䳅鷓䳑鵫鴣鸛鷤䳏鶗鶙鳲鴀䳫䳕鸁鸝鵹鵌鶤䳔鷙□鷲□䳳□□□鶹鷦□鷯鶨□□□䴌鵅□□鷸□□鴔鷗䳁鷛鳽鶂鷊□鷁鵁鶄鴜鷼□鵍鷒鷂鴧鶯鷩鵔鸃□鷕鶾鴆鷇鸓□鳴鶱鳻□鶞鳸□鴽鶢鶋鶅鷷鳼鶛□□鵗□鶼□䳤䴑䳐□鷶□□□□鵐□鶧鷱䳝□鷝鴱鵀鶝䲽□䴃鵋䳢□鵵鵩鸗鴄□鷘鸙鵺鷨□鶟□鶶鷵鵓□鶥鶈鳺䳯□鵂鶜鴟鵄鸎□□□䳦鶊鶷鷋鵛□鸆鴮鴘鵳鷹鶆鵚鵏□鴾鷄鶵鵰䳺鶕鶉□□䲨□䳴䳂鸅䳻鳹䲪鴉□梟䳧鵲鴊鵑鵊□鳷鵷䳉□䳟□□䴁□鶲鷭鴅鳱□鶇□鶓鶍鵟鷾鴯鵮□□鵨□鷡□䳷□□鴑□䳿䳪□□□鶰鴹䴇□䲼鴴□□□□□□□□□□□□鷌䲾䴐□□□□□䳎□□□□䳲鷧鴳□□□□□□□□□鳨□鵦□□䴆鸈□□䳖□鴓□□"
+        },
+        {
+          "id": "1.302",
+          "text": "雅雀雉□閵□雊雛雡□䨄□嶲□猚雗雞離雝䧹雕□雃雂□雁霍□雇□䧴□隿□雄雌䍜雋䨂隼䨁難□□□睢雜□䧲䧼雓□䧷□䧿□□□□□□□集隻□雒□□□䨈□䧳奞部第三百九十二\n奮奪萑部第三百九十三\n雚舊□蒦彠"
+        },
+        {
+          "id": "1.303",
+          "text": "矍雔部第三百九十五\n靃雙"
+        },
+        {
+          "id": "1.304",
+          "text": "䨊雧"
+        },
+        {
+          "id": "1.305",
+          "text": "䲊□鮞魼鰈鮙魶鱒□鰫䱬鮪䱎䲛鯍鰥鯀鯉鱣□□鱄鮦□鱧䱾鱺鰜䱏鯈鯾鯿魴鰟鱮魣鰱鮍䱂鮒□鱏鱨鯢鰼鰌鯇魠鮆鮎鰋□䱤鮷鯷䲚□鱖䱇鱓鮸魵䲐鰸鯜䰽魦鮮鱻䱡□鱳鰅鰂鱡鰞鱅鮊鮐鰒鮫鯨䲔鯁鱗鮏鯹鱢鮨鰭䱈□鮓□□䰼鮑魿鰕鰝□魧結鰻鰿鯽鱯魾□鱬鰩鰠魮䲃鮯鮡鱵鱤鮵鮂䱻鰦鯩鰧䲀鮤魛鱦䱆鱀鱁鮧鯤鯕鱊鮬鯞䰲□魟䱢鱍鯆魺鯪鯼□鮇䱋□鮩鱐䰴䱣䱝鮋鰑□䱐鱲䱲鯧鰲□䱺鱎鰹鯸䱌□鯔鰪鱂鯅鰬鮇鱴□鮈□鮹鯛鱟鮠鮿魽鮭□魳䲒䲓鰅鮾魡魪鱷鰐鰶䱱䰻漁鱸鯟鯬鮀䰿魤鮃鰍鰷□䲗䱵□□□鰤鰓鱕□鱑鯖鰡□□□□□鯄魨鮼鱃□□鮶□鰄䲑魜鮢鮽□□□魮□□鰢鱌□魢□□鰖□鱭鱝鰵鮌魬□鯶鰾□□䱰□魱□□魢䱿鮄□鯡□□䱞□□□鮥鯥鰴鯠鮜□䱚䲜□鮅□鮇䱜□鰏䱮鱉䱕□鯽䱒鯟□部第三百九十八\n□\n玉篇卷二十四"
+        },
+        {
+          "id": "1.306",
+          "text": "欽定四庫全書\n玉篇卷二十五　　　　　　梁　顧野王　撰鼠部三百九十九　　　易部四百\n虫部四百一　　　　　䖵部四百二\n蟲部四百三　　　　　它部四百四\n部四百五　　　　　黽部四百六\n卵部四百七　　　　　貝部四百八"
+        },
+        {
+          "id": "1.307",
+          "text": "□䶅鼢䶄鼶□鼸鼫鼨□□鼩□鼱䶃□鼷鼬䶂鼲□□鼣□鼯□□鼵鼮鼤鼭䶆鼪□□□䶈鼧□□□鼴鼦□□□□䶇□□□□易部第四百\n□"
+        },
+        {
+          "id": "1.308",
+          "text": "蝮螣蚺螼螾蚯螉䗥□蠁䖮蛁虭螝蛕蚘蛔蛹□蟯雖虺蜥蜴蠑蚖螈蝘蜓蠸螟蟘□蛖蝚蛣蠇蟫蛵蜭蛅蟴蟖蛓螆□□蚝䖯蚳蠆蝎蝤螬蟦蠀強蚚蜀蠲蛶蟣螕蠖蝝蜪螻蛄虰蟶蠪蠜蛾蚳螘蟻□□蟀蟋□蛬□蝒□蟷□蠰□螳蜋螵蜱蛸蜣□蛢蟥䗐蜆蜰蠦蜾蠃蜨蛺蚩蟠螌蝥蛑蟅䗪蛜蝛蜙蚣蝑蝗蛚蜺蟬蜩□蜻蛉螇螰蚗蛥蠓蠛蜹蝡□蠨蛸蛶蛆蚑蛂□□蚩螸蛻螫□蝁蛘螊蝕蠗蛟虯螭蜧蜦蜄蜌蛤螔蝓□蝸蛭蚌蜎蟺蚴蟉蚨蟄䗇蝦蟇蟼蠵□螹蛫蟹蜮蟈□蝄蜽蝯蚼蜼蛩蟨蝙蝠螮蝃蝀虹□蠻閩蜉螗䗡蜚蜟蜏蚅螐蠋蠾䖭蚆蜬蜠蟾蛈蜴蟒䗁蜿䖤蛒蟜蟙□䘃蝭蟧蟟䗃蚹螖蠌螲䖡蚭䗅蠟蟪螏蟍虴蛨蝍螃䗱□䗚蟭蝹蝜□蚵䖢□□蚡螪蛙□䗠蜸蚕䗘□□蜘蛛□蚤蠙蟡蝂蟞□虶蚞螔䗔蚰蝣蜒□蚸蟿螓蜈蟓䖻□蝳蜍□蚱䗗蝖蟚蟛蜝蛝蚊□蚢□□□□䗓蚿蜢蚥蝰蠍蝩蝶蜅蚟蜲蜫螒蠊螿□蝟蚍蛪□蛞□蠮䖪□蚲䗽䖺蜜蚻蟗蜷螯蟂䖳螢□□□赨□蚷蜊蠼䗏蛦□□□螚□蟮□繭蠒蛡□䗄□□□䗢□蝥□螠蝞□□蟃□□蛠䗲□螱□蟩蜡□䖩蝃蠞蜇蚇□□䗷蜐□□虳□□蚎□蛐蜶虵螺□蝌蚪蚶䗝䗵䖱螂䗧䖟蝚□□□□□□蝔□□䗛□□□䗜□䗋□䘎□䖲□虮□□蝬蚜□□□蚽□□蚾䘂□䗆□䗾□蛃□□虸蚷䗂□蟢□螞蜯蚌□□□□䖧□䘆□䗯□蟽□"
+        },
+        {
+          "id": "1.309",
+          "text": "蠶□螽□□蝨蠽蟊蠿□□□□蠭蠭螶□蟁□蝱蠹螙蠡□□□蠢□䘅䘍□□䘌䗣蠯□蟲部第四百三\n蠱□□□□□"
+        },
+        {
+          "id": "1.310",
+          "text": "蛇□\n部第四百五\n□□□□"
+        },
+        {
+          "id": "1.311",
+          "text": "□鼈黿鼃　䵷鼉鼅鼄鼂□蠅□□鼊"
+        },
+        {
+          "id": "1.312",
+          "text": "贕㲉孵毈貝部第四百八\n䞈財賄□贎貨賑䝩資賢臤賁賀賂貢賛贊賮□齎賷貸貣貱贈贛賞賚賜貤贏負貿貳賔賓□賖貰貺贅質費責□貦賈□買賤賦貧貪貶賃賕購□貲賨賣□贖賙貴䝿賻賵□貽䞀贍賭䞁貾贆□贇䞂䝹□䝮賆賝□賲賅□□䝰䝺贀□䝶賥䝧□貹賰賱䝻貯贓賳䝭□䩀䝫賟贔屓贉販贄贚□□賏賧□□□䞋□賶䝬□□䝱貼賉□賊䞄賽發贗□"
+        },
+        {
+          "id": "1.313",
+          "text": "欽定四庫全書\n梁　顧野王　撰\n羽部四百九　　　　飛部四百十\n習部四百十一　　　卂部四百十二非部四百十三　　　不部四百十四至部四百十五　　　毛部四百十六毳部四百十七　　　冉部四百十八而部四百十九　　　角部四百二十皮部四百二十一　　㼱部四百二十二革部四百二十三　　韋部四百二十四"
+        },
+        {
+          "id": "1.314",
+          "text": "翨□翡翠翰翟翁翅翤□翭翹□翮羿□翥翕翖翬翏翜翩翊□翺翔翯䍿翇□翢翪翴翿翳□□翛□翓□□羾䎉䎀翧翲□□䎕□䎗□□翷□□䎖翈□翻䎂翍□□□翼翣翽翦䎒□翳䎄䎘翎䎔□翄翀□□翗䎇□□䎐□□䍾□□□翸□䎈　䎈䎋□□□□䎌□□翐□□\n□䎎□翾"
+        },
+        {
+          "id": "1.315",
+          "text": "□飜"
+        },
+        {
+          "id": "1.316",
+          "text": "翫□卂部第四百十二\n煢"
+        },
+        {
+          "id": "1.317",
+          "text": "靡□靠䨿"
+        },
+        {
+          "id": "1.318",
+          "text": "□否至部第四百十五\n□到臻臺□□臶臸□"
+        },
+        {
+          "id": "1.319",
+          "text": "㲝氄㲦毨㲲□氈□㲖毾㲪㲢㲫氀□氍毹□㲥毦□□□□□毫㲱㲗□㲚□㲨毭㲔㲍㲬□□毼㲕毤靟毿□毬□□□㲯㲰毰毢毥㲟毻毯□氅㲡□氉㲓□□毱□□□毣□□氂□毳部第四百十七毳\n冉"
+        },
+        {
+          "id": "1.320",
+          "text": "第四百二十方云切\n䚭觻䚡觠觢□觬觭䚦觓觩□捔□觪□觸觕䚗□䚘衡□觰□觤觡觜觽觵觥觶觗□觴□觚解䚙䚫觼䚥□䚨□觳□觱觺䚢□䚣觷䚩䚧觖□䚝䚜□觟觝䚠\n□□□□□觘䚪□□□□\n□□□□□□\n□㓩□䚞□\n䚚□□䚟\n□□□䚛□\n□"
+        },
+        {
+          "id": "1.321",
+          "text": "□□皯皽\n皹皰□㿴皵㿺□㿸□㿪□㿷□皻皾皴㿮□□□□赧□皺□□㿯㿭□□□鞁㿫□□"
+        },
+        {
+          "id": "1.322",
+          "text": "□□□"
+        },
+        {
+          "id": "1.323",
+          "text": "□鞹鞄䩵鞣靼□鞼鞏靸鞶鞔鞮䩕䩡□□鞵鞋靪鞠□鞀鞉□䩩鞞鞛鞎鞃□䩑□□鞪䩛□鞥靶□韅䩶䩪□靷□靳□䩒□□鞌䩸□䩞鞈勒□□鞭鞙䩤鞅靲鞬□韇韄䪎鞚䩯鞻靾鞇鞜䪁䩐䩽□□䩖□靯䩹靫□□□□䩨□鞴䩚□鞽鞧韁靴鞾䩿□□䩭□□□□□□䩱□□□䩢䩥□靮鞗□□䪍鞕鞿□䩠鞓鞘□䪈□韉\n□靬鞲䩳□䪊□䩟□\n□䩝鞦韆䩷鞤䩼鞝□□䩬□□䩔□□□□□靿靽□□䪌□□□□靺鞨□鞁□䩚□䪋鞢□鞫□□鞊韈䩧鞳□□□□䩙"
+        },
+        {
+          "id": "1.324",
+          "text": "□韠韎□韢韜韝韘韔韣䪗䪗韤䪙韏□□韍□韐韞韗□䪏韌□□䪔□□韛□䪜䪝□䪛□□□□□韒䪒□□□䪕□□□□□□□䪐\n䪚"
+        },
+        {
+          "id": "1.325",
+          "text": "玉篇卷二十六"
+        },
+        {
+          "id": "1.326",
+          "text": "欽定四庫全書\n梁　顧野王　撰糸部四百二十五　　系部四百二十六素部四百二十七　　絲部四百二十八黹部四百二十九　　率部四百三十索部四百三十一"
+        },
+        {
+          "id": "1.327",
+          "text": "□繭絸繅繰線繹緒緬純綃□紇絓纅繀經織□綕絍䋕綜綹繢緯紀緷繦纇紿納紡絶續纘紹綤䋼縱紓繎紆□緈繙纖細緢縒紊縮級□綢緫約纏繞紾繯辮縎結締繃縛絿絅䌴給綝縪䊵䌖終□紈繒絩綺縠縑□縳綈縞練紬䌳䌤絁綮綾繡緭縵繪絢約緀䋛絹緑縹䋭絑纁綴絀絳綰縉緹綪縓紫紅繱紺綨綦緇䊷纔綟紑緂繻縟纚縰紘紭紻紞纓緌緄紳縌繟綬緺組纂□紐綸綎□絙□繐□紟□縁絝緥繜□紴絛緟纕纗縜䋐紃綅䋉縷綫線縫緁䌌紩緛繕絬纍累縭繄縿䌘徽紉繩繩縈縋絭緘縢編維絥䋊綊繁䋣繮紛紂緧䋺絆綇紖絼䊶縼□縻纆□絠紲緤□繘綆䋁□繳繴䋨緍紙絮絡䋈纊絖繫絘紨緝績纑綌絺縐\n□絟紵□緦緆緰縗絰緶䋀絜䋽\n緉絣縕紼□綍紕縊緎綏綷繼継綯絝繾綣紗繶綖緻繽綵綽䋷□□紽縺□緅□䌞繏□縙緋䌯縚紏□綑緵縀□網䋱□䋟緙繬綡䌥絎紷綼䌪䌐□䋃綄□縝䋸□□絽䌎□䌜絯䌨□綩綗縡䋙䌼絧緩顈䋌纋絻□緗纜緫縲□䋪繖綀䌦䌗繵䊹□繂絪紱□䋻縯䋂絨綿□䋿紜䋦紋縴繗繑□綱□□繆□緮䌀䌔䌮䌅絾䋥□糽絒紶\n䌡縥□絞□䋾糾□□統□繸□紁□□䋵絇綧紒□縤䌝䌁□□縖䊽\n絏䋖絉䌵□䋏\n□䌚緙絔□\n□□□纈䌟\n繣絈□䌩\n緊□䋢□□"
+        },
+        {
+          "id": "1.328",
+          "text": "緜䌛繇纛"
+        },
+        {
+          "id": "1.329",
+          "text": "□□□䋤\n□繛□□"
+        },
+        {
+          "id": "1.330",
+          "text": "□轡□□□"
+        },
+        {
+          "id": "1.331",
+          "text": "□□黺黼黻□"
+        },
+        {
+          "id": "1.332",
+          "text": "□"
+        },
+        {
+          "id": "1.333",
+          "text": "玉篇卷二十七"
+        },
+        {
+          "id": "1.334",
+          "text": "欽定四庫全書\n梁　顧野王　撰巾部四百三十二　　巿部四百三十三帛部四百三十四　　衣部四百三十五裘部四百三十六　　卩部四百三十七印部四百三十八　　卯部四百三十九辟部四百四十　　　茍部四百四十一勹部四百四十二　　包部四百四十三"
+        },
+        {
+          "id": "1.335",
+          "text": "帉帨帥帗□□幋帤幣幅㡆幘帶□㡋帔帴常㡓□□幎幂幔幬□㡘帳帷幕㠲㡜㡏帖帙幖□㠾幑□㡨幝幭幠飾幃帣帚席幐□㡒幩□帑布幏㡉㡔幦幄幢帞幧㡑帟㡊帢□□幗□㡅㡞□□□幞帊帪帾□□□□□㡦㡙□㡂□㠿□□□㠵□幰□□㠸㡚帽□□㡈□幟□□㡥㡗帺帋帍□㡟□帿幯帹幨□□□帆㠽□帬□㠺幊□□□幁□□□幜□□□㠹□㡝□□幌□□帒帓㠷□□□□□□□□"
+        },
+        {
+          "id": "1.336",
+          "text": "□"
+        },
+        {
+          "id": "1.337",
+          "text": "錦□□□"
+        },
+        {
+          "id": "1.338",
+          "text": "裁衮□䄠䄖袗裖裏表□□襁襋□褗襮裺衭衽䘳襟褸襺褋襲□褘褧袤□襘袛裯襤䙃□袪裻□□□□袖袂袥褢褱□袍袌衸襜襝裧□衧襑裾袉褰䙭襗袑䙱襩襱□褍襃□複襛褆袳袲裴裔□衯□襡□襐襦□褊袷袷襌襄□被衵褻衷䙗袾袓褽襞裨裕䘱衦□□袒□褫補□裸裎裼衺襭裝袺褿裹裛䙔裓裋□褐衰䘚卒褚袚襏衾□襚裞褮袕䘰袢褌裱襣袸襎裷䘹褹䙢䘪䘿袼䘨䘺褖褶袡襈襓製襬裂袧褣䘯袊袽䙄衪袨袀襆褯褠□䙇□裿袩䙯褈褓□䙐袜袠袟□裳裀禋襠襉□□□袲衲䘽䙏□䘾□襵裗袔□䘸䙎褾□□䘢䙕□裮袏袿襀□褑衩袣襊衿衱□衴衹衼襳衫襸裠袴襴□裒襹□衳䘴□袈裟䙈□䙅䙉□□褡裶襙䙩□褵䙤\n□襖□□衶□□祻襰□襯\n褹褟裐□襻䘻䙬䘝褥□䘼䘶"
+        },
+        {
+          "id": "1.339",
+          "text": "□求□"
+        },
+        {
+          "id": "1.340",
+          "text": "□□令□卶卲厄厀卻卷寋卸"
+        },
+        {
+          "id": "1.341",
+          "text": "□"
+        },
+        {
+          "id": "1.342",
+          "text": "卿辟部第四百四十\n䢃□"
+        },
+        {
+          "id": "1.343",
+          "text": "□敬"
+        },
+        {
+          "id": "1.344",
+          "text": "□匍匐匊勻勼勽㔪旬□匈□□□冢匌匓□匑□□□匃丐□㔩□□□匒□□㝁"
+        },
+        {
+          "id": "1.345",
+          "text": "匏"
+        },
+        {
+          "id": "1.346",
+          "text": "玉篇卷二十八"
+        },
+        {
+          "id": "1.347",
+          "text": "欽定四庫全書\n梁　顧野王　撰長部四百四十四　　□部四百四十五匕部四百四十六　　比部四百四十七从部四百四十八　　乑部四百四十九共部四百五十　　　異部四百五十一史部四百五十二　　支部四百五十三部四百五十四　　帇部四百五十五聿部四百五十六　　書部四百五十七隶部四百五十八　　臤部四百五十九帀部四百六十　　　出部四百六十一之部四百六十二　　生部四百六十三耑部四百六十四　　毌部四百六十五束部四百六十六　　㯻部四百六十七囗部四百六十八　　貟部四百六十九齊部四百七十　　　干部四百七十一幵部四百七十二　　片部四百七十三牀部四百七十四　　毋部四百七十五克部四百七十六　　丿部四百七十七部四百七十八　　弋部四百七十九□部四百八十　　　亅部四百八十一句部四百八十二　　丩部四百八十三□部四百八十四　　亡部四百八十五□部四百八十六　　兂部四百八十七旡部四百八十八　　皃部四百八十九部四百九十　　　先部四百九十一秃部四百九十二　　厶部四百九十三單部四百九十四　　录部四百九十五"
+        },
+        {
+          "id": "1.348",
+          "text": "□兵肆□镻镺□镽□䦋䦈□䦊□"
+        },
+        {
+          "id": "1.349",
+          "text": "眞□□化"
+        },
+        {
+          "id": "1.350",
+          "text": "□㔬□□□□匙㔭匘"
+        },
+        {
+          "id": "1.351",
+          "text": "芘毖"
+        },
+        {
+          "id": "1.352",
+          "text": "□□□幷"
+        },
+        {
+          "id": "1.353",
+          "text": "衆聚臮"
+        },
+        {
+          "id": "1.354",
+          "text": "□龔□異部第四百五十一\n戴□"
+        },
+        {
+          "id": "1.355",
+          "text": "事□"
+        },
+        {
+          "id": "1.356",
+          "text": "□□攲□㩽□\n部第四百五十四\n□爰受爭□□寽□□□"
+        },
+        {
+          "id": "1.357",
+          "text": "肄□□肅□"
+        },
+        {
+          "id": "1.358",
+          "text": "筆"
+        },
+        {
+          "id": "1.359",
+          "text": "□畫□畵晝□"
+        },
+        {
+          "id": "1.360",
+          "text": "□隸隷"
+        },
+        {
+          "id": "1.361",
+          "text": "緊堅豎竪"
+        },
+        {
+          "id": "1.362",
+          "text": "師□"
+        },
+        {
+          "id": "1.363",
+          "text": "□糶□□屈□□□"
+        },
+        {
+          "id": "1.364",
+          "text": "㞢□生部第四百六十三\n□産隆□□甤甡"
+        },
+        {
+          "id": "1.365",
+          "text": "虜貫"
+        },
+        {
+          "id": "1.366",
+          "text": "柬□□□□□□□"
+        },
+        {
+          "id": "1.367",
+          "text": "□櫜□㯱橐囊□□□"
+        },
+        {
+          "id": "1.368",
+          "text": "圜圎團囩㘣圌囘□圖□圛國囷圈囿□㘝園圃因囹圄囚固圁圍困圂囮㘥□□卣□圊㘠㘡园囤圝囦□□□圉□囨圚□□□□□圔□□□囶圀□"
+        },
+        {
+          "id": "1.369",
+          "text": "□□"
+        },
+        {
+          "id": "1.370",
+          "text": "亝□□"
+        },
+        {
+          "id": "1.371",
+          "text": "屰幵部第四百七十二"
+        },
+        {
+          "id": "1.372",
+          "text": "□版牘牒牑牖牏牉□牓牌□㸡□□㸣□□□㸢□□牎□牋牊□□□□□□□㸥□□㸝"
+        },
+        {
+          "id": "1.373",
+          "text": "毐□"
+        },
+        {
+          "id": "1.374",
+          "text": "□□□"
+        },
+        {
+          "id": "1.375",
+          "text": "乀弗□乂\n部第四百七十八"
+        },
+        {
+          "id": "1.376",
+          "text": "㢥□□"
+        },
+        {
+          "id": "1.377",
+          "text": "也□"
+        },
+        {
+          "id": "1.378",
+          "text": "□"
+        },
+        {
+          "id": "1.379",
+          "text": "□鉤拘□笱□□□"
+        },
+        {
+          "id": "1.380",
+          "text": "□□糾"
+        },
+        {
+          "id": "1.381",
+          "text": "□直矗"
+        },
+        {
+          "id": "1.382",
+          "text": "望□乍無无"
+        },
+        {
+          "id": "1.383",
+          "text": "㔷區匿匽医匹㔸匾兂部第四百八十七\n兓"
+        },
+        {
+          "id": "1.384",
+          "text": "□□旤□"
+        },
+        {
+          "id": "1.385",
+          "text": "貌㝸弁□□\n部第四百九十\n兜"
+        },
+        {
+          "id": "1.386",
+          "text": "□兟秃部第四百九十二\n穨"
+        },
+        {
+          "id": "1.387",
+          "text": "□篡厸"
+        },
+        {
+          "id": "1.388",
+          "text": "囅"
+        },
+        {
+          "id": "1.389",
+          "text": "玉篇卷二十九"
+        },
+        {
+          "id": "1.390",
+          "text": "欽定四庫全書\n梁　顧野王　撰四部四百九十六　　叕部四百九十七亞部四百九十八　　五部四百九十九\n六部五百　　　　　七部五百一\n八部五百二　　　　釆部五百三\n半部五百四　　　　九部五百五\n丸部五百六　　　　十部五百七\n卅部五百八　　　　古部五百九\n寸部五百十　　　　丈部五百十一皕部五百十二　　　甲部五百十三乙部五百十四　　　丙部五百十五丁部五百十六　　　戊部五百十七己部五百十八　　　巴部五百十九庚部五百二十　　　辛部五百二十一辡部五百二十二　　䇂部五百二十三桀部五百二十四　　壬部五百二十五癸部五百二十六　　子部五百二十七了部五百二十八　　孨部五百二十九ㄊ部五百三十　　　丑部五百三十一寅部五百三十二　　卯部五百三十三辰部五百三十四　　巳部五百三十五午部五百三十六　　未部五百三十七申部五百三十八　　酉部五百三十九酋部五百四十　　　戌部五百四十一亥部五百四十二"
+        },
+        {
+          "id": "1.391",
+          "text": "□亖"
+        },
+        {
+          "id": "1.392",
+          "text": "□"
+        },
+        {
+          "id": "1.393",
+          "text": "□凹□凸□"
+        },
+        {
+          "id": "1.394",
+          "text": "□"
+        },
+        {
+          "id": "1.395",
+          "text": "□分尒介曾尚公余□个必詹□"
+        },
+        {
+          "id": "1.396",
+          "text": "□番悉宷審釋"
+        },
+        {
+          "id": "1.397",
+          "text": "叛"
+        },
+        {
+          "id": "1.398",
+          "text": "馗"
+        },
+        {
+          "id": "1.399",
+          "text": "□䎠奿"
+        },
+        {
+          "id": "1.400",
+          "text": "廾千肸□卙□博"
+        },
+        {
+          "id": "1.401",
+          "text": "卌丗"
+        },
+        {
+          "id": "1.402",
+          "text": "嘏寸部第五百十\n寺㝷專射尃導尉□將"
+        },
+        {
+          "id": "1.403",
+          "text": "受□皕部第五百十二\n奭"
+        },
+        {
+          "id": "1.404",
+          "text": "□□□□"
+        },
+        {
+          "id": "1.405",
+          "text": "亂□乩乾尤丙部第五百十五"
+        },
+        {
+          "id": "1.406",
+          "text": "□"
+        },
+        {
+          "id": "1.407",
+          "text": "成□"
+        },
+        {
+          "id": "1.408",
+          "text": "□巹㠱"
+        },
+        {
+          "id": "1.409",
+          "text": "□"
+        },
+        {
+          "id": "1.410",
+          "text": "辠辜辥辤辝辭辢"
+        },
+        {
+          "id": "1.411",
+          "text": "辯㸤"
+        },
+        {
+          "id": "1.412",
+          "text": "童□妾"
+        },
+        {
+          "id": "1.413",
+          "text": "椉□乗磔"
+        },
+        {
+          "id": "1.414",
+          "text": "癸"
+        },
+        {
+          "id": "1.415",
+          "text": "㜽□孕㝃字㝅孿孺季孟□孼孳□孥孠存疑孝孡孩孷孖孾孛孜□㝂□□□學□孢㜿了部第五百二十八\n了孒孑"
+        },
+        {
+          "id": "1.416",
+          "text": "孱孴□"
+        },
+        {
+          "id": "1.417",
+          "text": "㐬育□䟽丑部第五百三十一\n羞"
+        },
+        {
+          "id": "1.418",
+          "text": "□"
+        },
+        {
+          "id": "1.419",
+          "text": "戼□"
+        },
+        {
+          "id": "1.420",
+          "text": "□辱巳部第五百三十五\n□㠯"
+        },
+        {
+          "id": "1.421",
+          "text": "啎忤"
+        },
+        {
+          "id": "1.422",
+          "text": "□□㬰曵暢□□"
+        },
+        {
+          "id": "1.423",
+          "text": "□□酒䤁釀醞□酴釃□䣺醪醴醹醇酎□醲䣵酤□□䤗酷酓醰䣪䣧配酌醮□酳酬醻醋䤉釂酣酖醧醵䣰酺醉醺醅醟䣱酗酲莤䤘酸□酨醶酢酏醬□□□醢䤅□䤎酹䣼䤔䣸醍䣽醷酪醳醆醒醩□醙□䤄醂醝醠䤕□䤙□醦□醏□䤍醛酮□酭䣿醔䤒醯䤈醊□酘酡醨醎□醐醿醽醁醡䣩□䤃醚□\n□□酑酥䤂䣫□䣻□□酐□酠□䤆醃□□醥酩酊醜䤏醑醓韽□□醼□□□䤖□醀䣮醘醭□□□"
+        },
+        {
+          "id": "1.424",
+          "text": "尊僔"
+        },
+        {
+          "id": "1.425",
+          "text": "□"
+        },
+        {
+          "id": "1.426",
+          "text": "玉篇反紐圖\n夫文物之國假以書詩七歩之才五音為首聿興文字反切為初一字有訛餘音皆失四聲之體與天地而齊生宫商角徵羽之音與五嶽而同起且天地生於混沌不同混沌之初君子生於嬰兒豈與嬰兒同夫欲反字先須紐弄為初一弄不調則宫商靡次昔有梁朝沈約創立紐字之圖皆以平書碎尋難見唐又有陽甯公南陽釋處忠此二公者又撰元和韻譜奥文約義詞理稍繁淺劣之徒尋求難顯猶如匕匕彡□之字寫人㑹有改張紐字若不列圖不肖再皆失今此列圖曉示義理易彰為於韻切之樞機亦是詩人之鈐鍵也譜曰平聲者哀而安上聲者厲而舉去聲者清而逺入聲者直而促傍紐者皆是雙聲正在一紐之中傍出四聲之外傍正之目自此而分清濁也故列五箇圓圖者即是五聲之圖每圖皆從五音字行皆左轉中有注説之又列二箇方圖者即是九弄之圖圖中取一字為頭横列為圖首目題傍正之文以别之沙門神珙撰"
+        },
+        {
+          "id": "1.427",
+          "text": "東方喉聲"
+        },
+        {
+          "id": "1.428",
+          "text": "刀刁閍閚　袖柚誄誅　　閟悶痤座　　□□台□　　揌楒槯摧　　熊羆窴寘　　謟諂滔淊　　槄掐挼桵　　雎睢緌綏　　推椎絰經　　冷泠打朾　　□屏晴睛　　否□桶桷　　凍涷竉寵　　揀棟揔楤　　楥援嵕峻　　狻猣種　　樅摐橦撞　憧幢□扼　　帷惟貽眙　　攘榱時畤　　箕萁笞苔　　纂綦□　　捐損焌煖　　潛澘筧莧　現垷綆緶　　塤㻆橪撚　　檀擅搌榐　　瑑琢梗楩　　鞕鞭奓爹　　治冶舜斚　　灺地槎搓　絮䋈歁欺　　檬橡□敗　　駇馭䁔暖　　揮禈髧髠　　根拫捾棺　　禪襌菅管　　販眅甬角　　畧晷箄箅　　杫祉杷把　　暑署褚楮　　樁椿咀□　　柱拄枸拘　　祐祜摞樏　　湎洒揩楷　　浽涹毐毒　　陪倍荀筍　　□□敞敝　　汗汘挺挻　　揣椯挑桃　　皁早杲果　　□囚䀴脛　甲曱明朋　　未末天夭　　蒲滿杳沓　　恩思竪堅　　子孑且旦　　林材東柬　　北比徂阻　　枝技辨辦　　己已"
+        }
+      ]
+    },
+    {
+      "id": "玉篇.2",
+      "ordinal": 2,
+      "title": "卷01",
+      "sourcePage": "玉篇 (四庫全書本)/卷01",
+      "sourceRevid": 743404,
+      "sourcePages": [
+        "玉篇 (四庫全書本)/卷01"
+      ],
+      "passages": [
+        {
+          "id": "2.1",
+          "text": "欽定四庫全書\n梁　　　　顧野王　　　　撰\n一部第一　　　　　上部第二\n示部第三　　　　　二部第四\n三部第五　　　　　王部第六\n玉部第七　　　　　珏部第八"
+        },
+        {
+          "id": "2.2",
+          "text": "弌天元丕吏□\n上\n丄帝□旁雱□□下\n示\n□神祇齋□祕祗祭䃾祀禩祏禋□祡□祖祊祠礿禴祫禘祜福禧祐祺禥禄禎祉禔祥禎禠禨祪禰□祰祼䄂　祝祈禷禱□□䄟禮礼祔□社□禖禪禜䄆禳禬禕禦祴禶□禡祳祾祚祱祽䄛䄍禂祧□禓祲禊禍□□祟□\n□祙禁禲祅禫祩䄤祤䄐䄌□䄃礽□□䄉□□禗祘禉䄎□□祣䄄□䃽䄅䄁□□□䃿䄓䄜襹\n禯□祹禑䄝禟□祌禭□䄚祅祻禚祦□□祓\n二弍\n□□□亟亝竺亖凡□□□\n三"
+        },
+        {
+          "id": "2.3",
+          "text": "王\n□皇□閏\n玉\n□玉璙瓘璥琠□玘瓕□□瑾瑜璵璠玒璐瓊璚瓗璇琁□珦㻝瓄珵琳璿□□球璆㻒瑅瑭珙㻽琛環璧瑗琮瓏璜瓃琥珪琰璋玠琬瑒瓛珽瑁玥瑇琡瑞瑱珥琫珌㻫璏㺲璫瑑瓉玦璂琪珩璬珮玩瑬□璹珤珍□琚琖珈璲瑵璪瑚璉琩瑋璩璺玷琄璽□瑹璞琢琱玼理瑳璱琗琯瑮珇瑩璊玧瑛琤瑕瑲玎瑀瑝瑣玤㺿珢璅璡㻸□□㻨玽琂璶琟瑦㺨瑂璒瑶玗珣瑎琨瑻碧瓐珉瑉㻍珸璑瓔玞㻬琈瑌瑊玪玏琇璓玖璘㻞琭璄璟㻾珠珧珕玓瓅璣玟瑰瓌玭琕琅玕毋□□瑠璃珿琲珂珬玲瑴琀□璗琙□珝璯玹珫瑔璔玢㻌□璝珻珒□瑯瑘瑄珹□㺩珷瑽瑢琿瑫璼珖玸珆玻瓈□玵瑺㻓□瑡□璾玶㺭瓖珘璮㻂㻵□\n琽玳□㻑玔璨璦珨\n㺪㺷㻶玥㻠玐㺴\n璛珞珛珀瓙璀\n部第八\n斑班"
+        }
+      ]
+    },
+    {
+      "id": "玉篇.3",
+      "ordinal": 3,
+      "title": "卷02",
+      "sourcePage": "玉篇 (四庫全書本)/卷02",
+      "sourceRevid": 1310480,
+      "sourcePages": [
+        "玉篇 (四庫全書本)/卷02"
+      ],
+      "passages": [
+        {
+          "id": "3.1",
+          "text": "欽定四庫全書\n梁　顧野王　撰\n土部第九　　　　　垚部第十\n□部第十二　　　　里部第十二\n田部第十三　　　　畕部第十四\n黃部第十五　　　　丠部第十六\n京部第十七　　　　冂部第十八\n□部第十九　　　　邑部第二十\n司部第二十一　　　士部第二十二\n土\n墺□□地墬坤垓壤堣坡塙坶㙁墽壚墝埴垶㙚墣圤塊凷□堚堵堛壁□堞城垣墉圪塹壍㙩堄壘塒墍堂坣㙶坫垝塾堊墀□墐㙙□□埽壎塤坃壦墼墊埝圣均坄垼□□塖基址坻□塡坴封□坎埳壐坦埻□埤型圮垸增垐堲塏垎墨坿垍壙埂毁□壓㙤壞□坱坼埃坅堀在垷塞㙠塗培垔堙□坺墢□壅堩坒埵堫堨堤堪埐埱埒堁□坏埾墇垑□圻垠㙬垢坸墠壇垽圿坷㙪垤場坥壝埸塓圭墾圯境疆壃坊埅堢壔埩□域坌坋坐□坑埯堟壣壄㙀㘲坲墆垕□堥圢䵺□堮□坳墥□壂壛堬堭埰埏壟塿埌墦墲塋墓墳瘞□圠埍堋垗□□塌□墟垂□墋堆塠垖堧坹㙊□堜圱□埿塲埋壏塔㙱墿坾埢埫塎㘨□塷埆坂圬墁壑壡坉㙏㚀埈□墤堗垺□□垘埭墱㙂㙐埨塯墑垾堈圾垛塛㙞埊垙㲄㙝㘦坩垻□堠堦堝垌坰埪㘺□㙳㙷壜墅㙴墡壈埥堶□垟垀埦㙰塘墻壆□㘱埇□圵塕壕㙎墭塉坬塵墌坨垹㙡□□塣塸遠塚㙇塢埡墏㙻□塼堰壒墜圼堉墰埁\n垚堯\n□\n□\n□䒺□難□艱□\n里\n野釐田部第十三田\n甾畬□疇□㽭㽥疁畔㽨畦畮畞町□疃畽畹㽜㽘畷界畍畛畎甽甸畿畸疄□□甿□㽩□㽤□畇畯畟留畤略畊㽦當畜□畼疅㽣□□畂□□畘\n㽡㽫㽧□\n睔□㽪□\n□□□㽝\n□□\n畕畺\n畾疊\n黃□䵌\n䵎䵋黊□斢黈黇䵐□\n□□□□□䵏□□丠部第十六丠\n㐀丘虛屔\n京\n就□□\n冂\n坰冋冊市央隺冘\n□\n□□䯬□□□□\n邑邦\n鄢酇鄰䣊郊鄙都鄭郡郵郛□窿邰郁䣝郿邠□鄠扈䢸郝酆郖□□□鄜□邮鄏鄻鄆□邙郗鄐鄩邶鄁邘邵鄇鄍邲郤□□鄈邢郉郱郇鄔鄴祁邯鄲鄃鄗□鄡郅鄚□□邟鄦郾郟郪□郙郋□鄧□鄎郹鄾□酈鄛□䣚□䣁□郢□邔鄂鄳䢵鄘鄖郫□那□邡鄱□鄨酃郘䣂鄮鄞邴□䣜□鄑郜鄄䢻鄶酁邛邧郔郠鄒鄹□郰鄅䣄邿郕䣍酄邳郎䣡鄣邗郈□郭郳郚郣郯邪郲酅鄫邞邭□郂邽郮□鄪鄕酀□邱□鄝\n□䢳□䣇□\n□□邩鄬邖䣘□邨□□□䣀䣆鄀邥邤鄟鄵鄸䢿郼䣔□鄯□□□部□䣤□□鄏□郀□□□鄌□郃郩□□郆□䣛□□□□□□鄽䣐鄺□□□䣋邸□䣕□□□□䣙郕□□\n邼郴□邒\n□□□□\n□䢾□\n䢼□䣢邾□\n司伺\n詞\n士\n壻墫壯"
+        }
+      ]
+    },
+    {
+      "id": "玉篇.4",
+      "ordinal": 4,
+      "title": "卷03",
+      "sourcePage": "玉篇 (四庫全書本)/卷03",
+      "sourceRevid": 743414,
+      "sourcePages": [
+        "玉篇 (四庫全書本)/卷03"
+      ],
+      "passages": [
+        {
+          "id": "4.1",
+          "text": "欽定四庫全書\n梁　顧野王　撰人部第二十三　　　儿部第二十四父部第二十五　　　臣部第二十六男部第二十七　　　民部第二十八夫部第二十九　　　予部第三十\n我部第三十一　　　身部第三十二兄部第三十三　　　弟部第三十四女部第三十五\n人\n僮仁傂伾弔伄儅偂仳儂㑗傑倕侳保□伭□企□俊儁仞仕俅儒仲伯佰偰倩伊□伀佂儇侅倓□僷偞份僚佖仜僝儠儦儺僓佶倭俁健俟倞傹傲仡儼俚俺侚□伴佳僴倬偲侹僗傓儆俶傭僾仿㑂佛僁㣯僟供偫儲備俻□偓佺儐㒤仢儕侔倫偕侙倂俱儹傅俌佮依佽倚佴仍侍倢伃傾側侒侐俜俠侁儃仰侳儽傫□偁付佸傆微作假侵償儥儀代傍□偈俔侣便偆任什優僖儉价㑘俗仔偭億俆㑞使伶俾傳偋倌伸僭伹㒄偄傿儔倍俴□侊倀偏佃儗侜倜僻□侈伎佁伿□僞倪伍仵佝倡俳佻儳僐㑾傜俄僛侮㑄傷俙㑵㑥僄傞僨僵偃仆倄俑係伏促催伐仇俘傴仸儡僇倃倠傛僔侂倦僂傮像偶僊㒨仙佋□伋佼佩傪㑮侗伉儷㒧僑僎傀□儋僤何佗他□　□佚值俇僆佾莅佇侑儴偪佪傖儓㑷倯伆㒓侼傃偩侀偎倅價俛俯仂傁□倇借倰傺侘佐㒌倮偟侎偷□僢住侻儢□僸儻㒠佯□傎倒侱僬侣佟□侄□俓仟㒅□□侲仉僪倥偬倱傱偡□仗伈偛㑻傄□俹低□儸□俸僦俰儰傋□佔侸偠㒟佊傌佫□儭佑僋俕佄仠㑜倖僯俈㒋佱偵□□偙儶傝但僒偯侇傰仱僥侏㑦儈僰佒侒□伻佉㑼倧偳佬侾伽倲□僧㒥㒕僧仯侉傇伔□□傟□㑎傊佲□\n傒□僝伱㒜㒇俖倘□佌佷□㑯佀似估侃偘倗倣儌□例㑋僜儱偅㐰倳㑶伷㒈僅媵儾傼□儙仛㑃傔偌□㑍□伳倛㑤傚□僕傈傕仴俗㒂傶㒔㑛□□㒊佹偉俉□俒仚僙儜儯偤件以儑俵□儚個僀僿㑉傉倔咎位偒㐴儿部第二十四儿\n兀兒允兊兌充亮兖免父部第二十五父\n爹爸㸙爺\n臣\n臦臧\n男\n□甥嬲\n民"
+        },
+        {
+          "id": "4.2",
+          "text": "夫\n㚘替規\n予舒\n予\n我成\n義羛\n身\n□□躴躿躭軁□䠿躱䠽䠸□躽躳躬䡀軄躶躰軆\n□□躸兄部第三十三兄兢\n□\n弟\n□第罤晜\n女\n姓姜姞姚嬀□好妞娸娧嬿娙㜺婉妴姛嫣姌嫋孅嫇奵婬嬛姽㚲婐㛂委妗孂婧妌姂嫙姡䶒嬥嫢媞婺娛媐娭\n娓媅妉嫡孎媕□媣嫥如嫧娕□娖嬐\n嬪□㛥妟\n嫴媻娑婆姰姷姕妓嬰㛑□媛娉娽妝□孌媟□嬻\n犗□䆯□嬖妒妬嫉媦媢妖□佞嫪婟嫭㜘婼妄妨媮娋㛆嫌妯娌婞嫸娺㜝娿妍嫳□娃妜孈㜇嫼□嫖㛗\n婎媥㛼嬬婄㜗婪嬯婱㜤嬾\n婁婁□㛍孃娘嬈□姍婓嬋媆㛪㜮嫯娩妥姤嬇嬌嫘□妺婩媓姒娣娟妦㛔孀妙嬙婿媵婘孉嬼媉嬚嬉媷娵婸㛁婍妠□妛㛃嬆娏婽娷□娝㜳妧㛒嬜䧪姴娨媽姆娒㛴□奸娗媿奻姦姧姥□娾㜷　嬭㚷姘姅妃婥娀姮娼□姣□嬣嫜妐㚰媸姬嫞嫠姿□㜪嫀㜯㛹□□㚣婋孋妋㛺媖䎟□妑□□妿娻㛻姱媈婷妔嬁㜨□□媃㚴媋㜞㛎□㚹妚嫐嫵娬孍㛚㜗□□\n婀娜㛱娞婇㛧㜌姊□嫂㛦姐她姫嫤嬶娍婭□㛶奼姹㜻婻婏嬎□□□嫎姲姩□㜣□□㛕□妰妾嬄妲妀妭媼□姪㜼妷嬳嫛婗姨婢媚媺㛄姝媰嬃嫗媲妻□㜎媧□媒始妊娠姻婣妘□婚□嫄婠艬姺媊婜媌姼嫁姎嬹嫈孁婤姶媨㛅妣□嬩娶妵娥姑嫷媠婦□娡妹嬒嫚嫽媾奴㚢嬮㜅威妁㜰嫿㚤婕妤"
+        }
+      ]
+    },
+    {
+      "id": "玉篇.5",
+      "ordinal": 5,
+      "title": "卷04",
+      "sourcePage": "玉篇 (四庫全書本)/卷04",
+      "sourceRevid": 743419,
+      "sourcePages": [
+        "玉篇 (四庫全書本)/卷04"
+      ],
+      "passages": [
+        {
+          "id": "5.1",
+          "text": "欽定四庫全書\n梁　顧野王　撰頁部第三十六　　　頻部第三十七部第三十八　　　部第三十九\n県部第四十　　　　面部第四十一色部第四十二　　　囟部第四十三部第四十四　　　亢部第四十五鼻部第四十六　　　自部第四十七目部第四十八　　　盾部第四十九\n䀠部第五十　　　　部第五十一見部第五十二　　　覞部第五十三苜部第五十四　　　耳部第五十五\n頁頭\n顔□顱頂額頟□願顚顙題額頯頰䫀頜□顄頷頤項領頸䪴顀□䫟顩頵䫡碩頒䫞顒顤顝䫨頎□䫶□□□頨顗□頑□□顆頢頲頠頍□顧頋䪾䫰顉顓頊□頫頓頣□頡䪼顥顅頛䫔䫌□䫥頗□頄頩䫵顮顫顦顇顑顲煩頪䫒頦顡䫏籲䫃䫤顴顳顬□䯪顠□頰□□䫆頏頔□□頝預領□□䫦䫖䫴□䫂顁□□□□□□䫳䫫䫉頕□頌□顯䫢□□□䪹□䫗□頽䪳□頳顋顢頇□䫜□䫚□□□顃䭭䫩䫬䫲頧□顐□頃□□□頊頮䪿䪻\n□□顟䪷䫘䫄□頙□䫷顎□順\n䫈\n頻\n□顰部第三十八脜"
+        },
+        {
+          "id": "5.2",
+          "text": "部第三十九\n首䭬□□□□□□馘\n部第四十\n縣\n面\n䩉靨靦□　□□䩌䩍䩊□□䩇䩂䩆□䩋□□靧靤蠠□□□䩏□□色部第四十二色\n艴□艵䒋䒍䒎䒊□靘䒌赩艶\n囟□\n巤\n部第四十四\n賾亢部第四十五亢䶳\n□鼻部第四十六鼻齃齅鼽□鼾齂齆□䶍䶑齇䶏□□䶎齁□䶐\n䶌鼿□齈□"
+        },
+        {
+          "id": "5.3",
+          "text": "自□□\n臭臰\n目\n□眼□䁵眥䀹睫□瞦矏\n□睅瞞䁔睴矕睔盼盰眅窅睍睆䁺瞵矔眊矘睒眮䀣瞴䀘□□䁂睨□眓□䀽眈睎眛鬅□睘䁴□□□䀛眕瞟睩睹眔睽眽眿䀩□瞤矉眢䂄矆睢䀏眴睦□䁲瞀眱眤瞻□䁈瞗相瞋□睗睊□睼䁊䁙瞫眷睠督看蒥瞚瞬䀢眙盻䀟眝睡瞑\n眠眚瞥眵□䁾䀗眯䀶䁁眜\n眺睞䀺□\n眣□睇䒅□䀼眲䀡眇睺矇盲瞽□瞍䁍眄䁝眸睿瞳䀑睉眐瞭眒瞺眳睛䀬瞲□□矎睵□\n瞶盿䁕䀨\n盯瞎□□䁓□瞪䀴□眭眻□䁱睳瞠□□□□睥\n眎眡眂□盷䁩瞸疁䁳□䁅睕矌睈□矀眆□□瞰□䁷□䁇□□䁿䁤䀸䀿睂眉□□䁎眑睟矒䂃瞛□□眗瞔□䁽□具□睚眦□䀵睃䁧䁐䁣□矑□睋盺瞹□瞘□瞇眶□瞟□□䀻眘□䁤䁗□眰眪□□䁏□睶瞜□䁥眨䀷眖盶䀯□□眀□瞌䁸睲瞨□□䀖□䁘䁢䂀□□睷□□矃矖眧□□瞼瞉眏□䁆䀙□瞖睱䂁瞱□□□䁻□瞙䀰䀫䁋□䁭䀓瞁省□\n盾\n瞂□\n䀠□\n□□瞿矍□煛□□尠□瞐\n部第五十一夐\n闅□見部第五十二見視\n□覣䚕□覶䚄□覝䚋觀䙷覽䚅□□覰覯覭覘□□覹覢䚔□□□覬覦㒻䚎□䚐䚍靚親覲覿覩覒覕覛□覺□□䙾䙼覓覔□覮䚓覸□□□覗□䚑□□□覠□覴□□□□□覫䚇䚆覑䚀瞡覱䚏䚈□□䚉□覟䙿䚂䙽□覤覨\n覞□"
+        },
+        {
+          "id": "5.4",
+          "text": "苜□\n瞢蔑蘉\n耳\n□耴耽聃□聸䏉聯職□聊聖□聦聡聽聆聒聥聞□□聲聘聾䏁聤聳聉聵□聝聅䎳䏇耹䎺䏅䏆聱□䎶䏃□耵聹䏄□耾耺聐䎷䎿□聙□䏂□耴聭□□聑耷䎼聶□□聠□聧䎻□聎聕□□䎴□聄□□□□□□□□□聻□"
+        }
+      ]
+    },
+    {
+      "id": "玉篇.6",
+      "ordinal": 6,
+      "title": "卷05",
+      "sourcePage": "玉篇 (四庫全書本)/卷05",
+      "sourceRevid": 743424,
+      "sourcePages": [
+        "玉篇 (四庫全書本)/卷05"
+      ],
+      "passages": [
+        {
+          "id": "6.1",
+          "text": "欽定四庫全書\n梁　顧野王　撰口部第五十六　　　谷部第五十七舌部第五十八　　　齒部第五十九\n牙部第六十　　　　須部第六十一彡部第六十二　　　彣部第六十三文部第六十四　　　髟部第六十五\n口\n□噣咮喙吻㖧嚨咽㖶喉嗌□喗□噭叫嘂哆啾喤咺唴哴㘈咷喑噲咳嗛咀嚵啜㗱噬嚌□噍□嚼□吮噉啖啗嗒哈嘰㗘吞含哺嚛味□噫嘽咦呬喘呼吸喟嘳嘘吹啍噋□唫噤名召吾哲喆嚞君命咨問和咊唯叶唱噱㖸咥唏听呭□咄唉噂咠嘫呷嘒嚖唪□嗔嘌嘑喅嘯嗂呈嚱嗿咸启哯咞右吉啻嚋周嗢唐啺嘾吐噎咈嚘嗜呩嘐啁嘲哇□□吺□呰\n嗻唊嗑嗙噧叴㕤呶叱噴吒咤喥噊嘮啐唇嘵吁□嘖嗸唸□㕧㘙呻吟喻嗞呝□哤嘅吪嘆喝哨噆吝□各否唁喭哀嗁啼嗀咼喎□嗼嗾□吠嘷哮喔喈嚶啄唬呦噳喁囒哰㗦嗹嘍㖪喛嘕㗔喊嚂喓嗟嗉嚇嚃叵嘺啌台唶嘈局㕣咡吂□□呫㗺咹吨囐囁嗃㕰㗲咟啀哷□噅□□呀唭嘻㘆□□哹善□嚝售嚊□啅呁吢嘇㖥㗻唆唲嘔呥㗤□□啒唼啑喋噞唵噢咻咿嘹□㗨唹□㗿吵嘶□哂㗛呣咏□叨噈嘿吷嚾吼吽□呵哈㖢嘬噮㖃□呐咋咇□㗽□□哽哊咍咰嚅呿呴嘪嗚嗕㗢叮嚀呢□喃噪□㖄呞嗤鳴㕭啉咬喧唌嚗喞咆吭哦㗓噌吰嚬哃㘇啨呤喍喂嗺㕬叿吱噥㘋吙噇唋□㖹□□嗡唩□咃咁㕱吥哸呅□啡咣□唻嗆喡□□嗊□喠喏卟呠㖦哻喕哶嚕□啞㕦叧叩□嚙□□吘㗂□呧唍㖺□□㕻咅噦唳㖑㗕囀唄嚥□唾㘐嚫□□噯㖟嗄㖆□嚜哩□□囈啈□□啃□囑㖨嗖唷□□吡□□㖅□□□喇㘀□嗝□□□呹嗋哫□㘉㘍㗵吃喢□㗫㗧唰□唎囃喫□□噱叭□唿哠□嗐哵嗒唈咭啻□哉谷部第五十七谷□\n□□\n舌舓\n舐□舚舑䑜\n齒\n□□齔齗䶦齜齞齘齺齵䶥齖齱齹□□齳□齾䶙齯□齮□齰齚齦□□䶛齩□□䶣齝□齕齨□齬齲齸䶧齡齟□䶔□□□䶗䶞\n□䶤□䶘齤䶖□□□齙\n□□□齼\n齭齴齫□\n□□齛䶩□\n䶫□䶜齷□齧䶢齶□\n□\n牙□\n□㸧\n須頾\n□□\n彡彬\n形㣎㐱修彰□彫耏弱彧影㣑□□㣒□彩□彯㣉彲\n彣彦\n□\n文斐\n辬□斒斕□斌□□\n髟髮\n䯵□鬗䰐鬈䰓□□䰈䯽髦□髳鬋鬑䯾䯸䰏髢鬄髲髺鬠䰉鬕□䰎髻䯰鬣䰕䰃䰁髶髣髴鬊鬌鬝髧髤□髼鬃□鬇□鬡鬆䯳髬鬐䰖□□䯹□髵髠鬀髽䭮□□鬉□䰆鬟□髿鬖□□䰄䯷□鬤□鬞□鬒□□□□□髹髤□□□□□□□䯿䰊□髭□髫髯"
+        }
+      ]
+    },
+    {
+      "id": "玉篇.7",
+      "ordinal": 7,
+      "title": "卷06",
+      "sourcePage": "玉篇 (四庫全書本)/卷06",
+      "sourceRevid": 743429,
+      "sourcePages": [
+        "玉篇 (四庫全書本)/卷06"
+      ],
+      "passages": [
+        {
+          "id": "7.1",
+          "text": "欽定四庫全書\n梁　顧野王　撰手部第六十六　　　□部第六十七部第六十八　　　舁部第六十九\n臼部第七十　　　　爪部第七十一丮部第七十二　　　鬥部第七十三部第七十四　　　又部第七十五"
+        },
+        {
+          "id": "7.2",
+          "text": "□□掌拳捥□搴㧬□摪挈摯擥攬拏擪㨻摰掣㧘掔擧□□㨣搫攣撆撇揅摩攠擘摹擊挐□攀扳摮擎揧承㩓揱拲拜□攕指摳揖捃攘攓攐撎拱撿捾搯拇推捘扶持拑攫操捦㩒搏據抩抪攝挾㨉捫㩜擸握撣攜把提□拈摛捨按控捋撩插措揗拍拊掇掊抔捊抱拾㨷授揜掩攩挋挏招擇接撫捉搤挻揃㧗搣掬□□摕□揣摜投挶搔擿擲拮据摽抉挑搳擖摘抲搚拹摺拉㩉摟抎掉披擢搄搖搈□揫揂擣捀攑攈揭抍撜拯氶扛扮揄捎撟擩摭拓擭拚抃擅揆擬損失擐挩挹抒擾挺探撢捼撋㨜搹㧖撼搦搑掎揮攪捁扞捍㨨抽□批撞㧢摧排擠抵扔括援捇撝扐技摍拙㧺摶㨡撮捄搰抇掘摡揟播挃㨖扤抈摎□撻□挫捲抨拼摷扱抶抰抵㨐捭擺捶㩁挨摼拂摬撲捕抗簎拫扚撚挂抴拽拕拖捈揤揙撅攎捽揾挌掤扜掍扣捷搜□換掖擗挍抑揥撤撰揔捴撙掫拭搢摝掠挴撏摫攍㧙㧾拌撈搪摏摋攤捌摙攖掜扒攄攡抆挬擽扢押掐扽挰㩋撠攇㩊捻□揈㧦抾抛㧴抮揀搙抐揞摖扭擓㧡摐擡□揊抹㩧撍□㨹㩱揬摸挮捳□搌捆揳搎㧒㩢揘掝□□擟㨒搸㨙拰扏㧨揩□拸掓□□抁□□捖撦㨋搩撨□□挸㧹揑捺㩩㩵揌□扴□擔㧔□抳扑㨟抵掋挱搷□抯擉㧆㨠摞撖挅撓擷㧶挽□担挒擯攅揨㧻□捂捒□擴㨯抦搥揕□攙□□□㧃㨳掅摵掃捅折捧摣□□攏㨑擨□挼㧣掄㧎扠攞搋抓振掀□摴擹□□㨚搓挪揎掆□撾掁搶撐挳搊搛㨄摱□攔㨏揁拎□㨂□撬□擂㩤□搒㧫□抷□㨀□□㧄揰捵□擬㧪㨊□□揇撔□㨚㨴捖拃□拆㩈拄抧□擏㩭扻採拗□拶□摻捰抌挭㨧掗㩡抖擻摥攂撛拒掟摒擋摦摲□□㨅揓□□□□□扲揍扰□搧搞搭搨揲抸㨝擮□□□㩆捔撥扎□□□托□㩹㩶□攉\n擆□□□捩㧊拔□攦□㩍搕□摑□揠扸□掏"
+        },
+        {
+          "id": "7.3",
+          "text": "□□□奉丞奐弇□□兵睪□异□弄戒龏弈具弃□弊㢣□\n部第六十八\n□□"
+        },
+        {
+          "id": "7.4",
+          "text": "□□□與□□興"
+        },
+        {
+          "id": "7.5",
+          "text": "要□□"
+        },
+        {
+          "id": "7.6",
+          "text": "爪孚□爲□"
+        },
+        {
+          "id": "7.7",
+          "text": "□埶巩孰秇踝□"
+        },
+        {
+          "id": "7.8",
+          "text": "鬭闘鬨鬩□鬮□䰘□□□\n部第七十四\n卑"
+        },
+        {
+          "id": "7.9",
+          "text": "右厷□叉㕚取父□曼叜□燮□□\n尹□夬㕞\n□□反□及\n秉□叔\n度㕛友□□彗叚□\n□"
+        }
+      ]
+    },
+    {
+      "id": "玉篇.8",
+      "ordinal": 8,
+      "title": "卷07",
+      "sourcePage": "玉篇 (四庫全書本)/卷07",
+      "sourceRevid": 743434,
+      "sourcePages": [
+        "玉篇 (四庫全書本)/卷07"
+      ],
+      "passages": [
+        {
+          "id": "8.1",
+          "text": "欽定四庫全書\n梁　顧野王　撰足部第七十六　　　疋部第七十七□部第七十八　　　骨部第七十九\n血部第八十　　　　肉部第八十一筋部第八十二　　　力部第八十三劦部第八十四　　　吕部第八十五㝱部第八十六"
+        },
+        {
+          "id": "8.2",
+          "text": "蹏蹄跟踝跖蹠跪踦跽踄踧躣踖躤□蹡躡踽䠪䟔　踰䟠蹐蹻躩跾蹌躋踊跧躍蹵蹴蹋蹈躔踐\n踔踸踵蹛䟗蹩䠟蹢躑躅䠱踶踤䠛跳蹷蹶□䟴䠧䟺趿跲跇蹎跌踼蹲踞踣跛蹇蹁䟸踒跣跂跔□躧蹝䠍䠊□跀□趽距趹趼躗蹼路䟷蹙踇蹜踕蹪蹕蹯䠯躊躇跦䠇躐跬蹞\n躄躁踆趾蹉跎蹟跡跱蹀躞䟣蹊跗趺踂□躒踉䠙踳蹣跚蹮蹃□跑趵䠡□\n跙踾跐䟟蹨跰躂䟹躟蹍跁跒跈□踥踏䟘□踡跼□䠗□䠈䟧躘蹱跉䟓蹖䠗□跮踱蹔蹂䟗踓䠢躝□踃䠆䠘䠋䠣□踁蹭□□□䟾蹸躙□跤□跕踹蹤跆跜躨䟱踟蹰□□踚跘䠕□□䟕䠓□□□蹺跠跏□踜□□□□□□䠑跓□䟨跥踴䠀踠䠏□躓趶跢□□□䠨□䟛□□□□䟻□□□□蹗䟿䟯蹘踘□□□□蹫□踛蹳□□䟮跫□跨跋蹬"
+        },
+        {
+          "id": "8.3",
+          "text": "□□䠠"
+        },
+        {
+          "id": "8.4",
+          "text": "□傘□骨部第七十九\n髑髏髃髆髀骿髁□髖髕䯏䯣骹骭骸骾髓□䯜體髍骼□髊䯤䯠䯊髂□□䯈骶骲髎□䯦骱䯓□䯞□骺䯋髇骽□□髗骰尳□□䯌䯑䯖髐□　□□□髈䯟□□□□□骻骮□□髉□□□䯇骯髒骫"
+        },
+        {
+          "id": "8.5",
+          "text": "衁衃□□衄□醓□□□衈卹衋䘓䀍盇盍衊衅□䕄"
+        },
+        {
+          "id": "8.6",
+          "text": "月腜肧胎肌膚肤肫脣䫃脰肓腎肺胃□脾肝膽腸脬膏腴肊臆膰膺膀胱胷背脅脟肋胂脢脄肩胳胠臂腝肘䏔肪臍腹胯膲脽䏐股脛腳胻胑肢腓腨肖肥□胄膻䏌䑋□脙□臠膌臞脫脀胗肒胼胝肬胅腫脪䏖臘膢朓胙肴脤隋腬膳腆䐌腯胡䏟胘膍肶胵膘膟□膋膫朐脯腊腒膊䐹胥肒脠□䏽膹臇胹䐣腥胜臊□膮膷臐脂膩膜胾䐑腌䐞脃脆膬□膎脼腏䐄肎肯肰□䐜䏙䏣膠䏍腐脡臚腍臅䐆肱䏪腠脹膂膉胖䐀膒䐨腩□胋䑎臉䑄脮腲胔臄䏿臋䐿䐈肵□脞膱膝胉腡腋□䐎臎腵膭胞脕膙䑁䐝□䐻□□胺腅䐲肨䐚□□脧䐱□□胮肛䑏腣胿□膾□□胴胓䏳肚膕䏨□䐃臗膨脝□胦胲䐷䐁□□胈臖臒䐏䐩胶䐼朏臔□䐒腽肭䏒胭朦䏵□□腱□肑膿䏤䐗脈脉肕䐺䏼㱚□\n䐅脥□□□䐕□肦□□□□䐾䐴胕胛□腛□腔□䐓□□䏏□膎膴䏵腤䐶肣䐠□朧䐫□腧□□膁腈腵□䐊□□䏬腂朣䏎䐉□䑊膅膛䏹䐵□臁□膸䑂□脘朊䐮□腰腑肔肗腿臏腦□䐟□膸䏢腀□膪□䐔□腖腕膇䏧䐢□膆腪□□□肐□䏱䏘腟□□□䐂膈䏦脻□肷䑈□炙䑇脩腄䐤膞胏□"
+        },
+        {
+          "id": "8.7",
+          "text": "□䇟"
+        },
+        {
+          "id": "8.8",
+          "text": "勲勛功助□□劼務勑勱□勍勁劭勉勗勸勝勶勠動勨㔣劣勮勊勩□勦劵劬勤\n募勬加㔡勇勃勡劫飭勵勢勘勔㔙劮劤劺䯇㔝□扐□㔞劥□勣㔗□勜劜劷劻勷勆㔦□□劾勌㔧㔠勒勎□劰勥彊勞□㘞効"
+        },
+        {
+          "id": "8.9",
+          "text": "勰協"
+        },
+        {
+          "id": "8.10",
+          "text": "躳"
+        },
+        {
+          "id": "8.11",
+          "text": "㝲寢寑寐寤□□□寎寱□□寣□□□"
+        }
+      ]
+    },
+    {
+      "id": "玉篇.9",
+      "ordinal": 9,
+      "title": "卷08",
+      "sourcePage": "玉篇 (四庫全書本)/卷08",
+      "sourceRevid": 525394,
+      "sourcePages": [
+        "玉篇 (四庫全書本)/卷08"
+      ],
+      "passages": [
+        {
+          "id": "9.1",
+          "text": "欽定四庫全書\n梁　顧野王　撰心部第八十七　　　思部第八十八惢部第八十九"
+        },
+        {
+          "id": "9.2",
+          "text": "忄性恉愼快愷忻惲惇□悃愊忼慷慨憭悰恢恬恭怡悈慬恂忱怞懷愮怙恃懼愳㥠㦃悟□忆怕慕慔悛恤懽悖㥛恌愞悒懮悗慥悍慢怭懈憜惰□怫懊慲怗憿恑懏\n惏□懤惽怋憾慟恎㤞恗懫□□悱忋悌憎憒恨憍悔悁□憤惆怩忸悵愴惻懌懠忉慅愔忧㥝惴惔愵憔悴憟慽懹怦憚慴怵㤨惶㤥悑怖忝□怽憢怍憬憐惵愎怊懾忳恲㤝㥓㥆怢□惃愅懝忬□悜情憕恔忯恮慒愃惀惟□㥞慉憀㦜愯□悚憮愐惗憺忓憸愒㦚懁慓㥒愉懱懜□忮怚惕惖慏慯恍惚憶憧悝憰怳悸忨慊怓慍㤄㥟㤱怏愾懆悽慘憯怛恫惜憫㥴怮忦惙惂㤦□忡□怲恇\n悄□愜㥦悼悿怪恠□悾慄悢恱懍㥄愧㥾㤿惝悇憛㦒忚憡㥜□㤕恜㤤慛怐懢悏㤏□□㤖憉悙恀恞悀懀戃慌㦓惈悷㥢㦎愇惸□怯㤆懶悂愖愕愋愱□憴忪懥㥽愡慺□㤴恒愲懻惿□慃懪愭恟愩慪慱怜慵慆愪㤊懅㤉慞□恾忙怔懰恈□忴□惍□㤃㥊□惺憽悕□憈愢怌□□怶□□㤚□慳愝惼悓愀□□悎悻□□㥉㥏灼㤢□㤳㦐□愰怉忏㦉怬悞忤慣憓□忕㥼慖怰悋惋惓慠懞□憱懵忭□恦□㦏□□㤈㣾□□□□憷□怟□戄懎□㦗㦢㥔恄㦅□□□忇㤸㦦恪愙惐愶㤜愺恅忖□忔恰悠態懘□□忘懣□㤮懖愆㥶慫惡懟恿悲㥋恙愁□□憌□患□□恐□慹恧慙慚㦁懲㣻愈志□㦟惹□愗□憨憑□㤎悊愍慜憥忎慶□憠㦂□怘戀憼惑忌恚忿怨□怒愬慇懃䉍悆□忒恥惎□忽㤠□急㤂憝憞□□怠恣慁㥵□忍憋悶□忠懇戁惁憗慈懬懭忞懕悹悺㦛□怤㥯愿□□息意惄恁㦌慝□惪□應念㥷㤅慰□□慾□憲□懋憊慗□㤐□懸惌㤍□㦄㤲㤻愚想□□悐□㦘恝㥣□感\n㣽□㤟悥忢慼\n㦚憃憵惷□㦣忥忍□□□戇戅憙恩憩"
+        },
+        {
+          "id": "9.3",
+          "text": "恖慮崽㥸"
+        },
+        {
+          "id": "9.4",
+          "text": "繠"
+        }
+      ]
+    },
+    {
+      "id": "玉篇.10",
+      "ordinal": 10,
+      "title": "卷09",
+      "sourcePage": "玉篇 (四庫全書本)/卷09",
+      "sourceRevid": 743439,
+      "sourcePages": [
+        "玉篇 (四庫全書本)/卷09"
+      ],
+      "passages": [
+        {
+          "id": "10.1",
+          "text": "欽定四庫全書\n梁　顧野王　撰\n言部第九十　　　　誩部九十一\n曰部九十二　　　　乃部九十三\n丂部九十四　　　　可部九十五\n兮部九十六　　　　号部九十七\n亐部九十八　　　　云部九十九\n音部第一百　　　　告部一百一\n凵部一百二　　　　吅部一百三\n品部一百四　　　　喿部一百五\n龠部一百六　　　　部一百七\n㗊部一百八　　　　只部一百九\n㕯部一百十　　　　欠部一百十一食部一百十二　　　甘部一百十三旨部一百十四　　　㳄部一百十五㚔部一百十六　　　□部一百十七夰部一百十八"
+        },
+        {
+          "id": "10.2",
+          "text": "□□語譻謦談謂諒詵請謁讖許諾諸譬詩諷誦讀訓□誨譔謜詇詖諄□訰詻誾訔謨謩諮訪詢□諏訂論誎議詳諦識訊□䚮謹諶訦誠信䚱誡譣誥詧誓詁謄譪詥証諗諫課䚻詮訢諧計調話䛡譮諈諉警誼謐謙詡諓詷譞諰設䜋託譽記謝謠訖謳諍詠諺訝詣訒講訥謯讎□諐譥謍譊譟䛕謲讇諂謷諼訹詑謘謾謺□謰謱詒謵譺誑□譖訕譏誣誹謗譸詶訄詛䛆誤誃謻誖□䜌詿誒譆詯謧訿訾詍䛖䛬䛌詜䜉誺䜚誻訮讗訇□諞誽詀譄詄諅譀□䜕□訌誕□謔□讙諠譁諣□訆□誂譌訛謈□訬謬諆誋譎訏□□讋□䜐詾□訩訟□謓\n讘䜆䛗訐訴譴謫訶諯誚讓謕誶詰□䛄詭證□詘誳詗讂詆誰諽讕譋診誅討讄□□謚諡誄諱訧謑□詬訽該諜諲詔誘䛻□□謖註䛳諑譠謇□□讃\n諻譚謏詅謌讜譡譼訡□䛭譝讑評䛅諊誯□訞□䛟謉䜜詎□詝讆□諤䛿讞詨譿譓訃譵□譈謮□誔䜃諳□譫譩䜈諵䛠譳䚴□詆䛢䜒譑誀謣䚹䚳譍訠諀訵□□訜䛥譜訑謶譒詫□訅\n䜅訋詼謟□□訞譙謀䛲䜏誇□諴\n誙䛘□讒誴□□諃\n□□詴䛏䛣□訸□□□謅諝説謞譯□䚵䛞□譭訨□□讉\n誢譇詉詃誷䛰□□諢詪□䜗□䚿□□□□□詐□諎䛍䛾䚸□䛋認誌謎諕□□誏讌□誆誜詺□譅□詋䕶訉訣□諿□□誟䛚諹䛛□誐諭諟誧䛩䚷試謼䛮□誗謋"
+        },
+        {
+          "id": "10.3",
+          "text": "譱□競讟譶"
+        },
+        {
+          "id": "10.4",
+          "text": "□□曷朁沓曹□暹曶□"
+        },
+        {
+          "id": "10.5",
+          "text": "□迺□□辸□"
+        },
+        {
+          "id": "10.6",
+          "text": "甹寧□可部第九十五\n竒哿哥"
+        },
+        {
+          "id": "10.7",
+          "text": "□羲□乎"
+        },
+        {
+          "id": "10.8",
+          "text": "號"
+        },
+        {
+          "id": "10.9",
+          "text": "于虧粤□平□云部第九十九\n□霒侌音部第一百\n響韽韶竟章韸韹䪩䪧頀韺䪫韴䪯韻"
+        },
+        {
+          "id": "10.10",
+          "text": "嚳"
+        },
+        {
+          "id": "10.11",
+          "text": "□□□嚴哭□喌咢㖾單□□□喪□"
+        },
+        {
+          "id": "10.12",
+          "text": "□嵒□"
+        },
+        {
+          "id": "10.13",
+          "text": "□□"
+        },
+        {
+          "id": "10.14",
+          "text": "䶴䶵龢龤龣□□"
+        },
+        {
+          "id": "10.15",
+          "text": "笧嗣扁□"
+        },
+        {
+          "id": "10.16",
+          "text": "嚚□囂□嘂□器噐□噩只部第一百九\n□"
+        },
+        {
+          "id": "10.17",
+          "text": "矞商□□□"
+        },
+        {
+          "id": "10.18",
+          "text": "欽㱍欨歑㰲歟欯歂歕㰟歇歡欣㰝款歀欻欲歌□欦㰹歋□歊□□歗歖歎□㰣欸歔欷歜□㰾㵣㱇□䌠㰮䯉㰱欶歁欿欱歉欭歐歍欬□歙㰶□欪次㱂欺歆欥歛弞歈㰥㰳㰰㰨㱄㰦㰤㰯歖欮㰪□□歄□□□□□㰫欹㱊㰽㰬㰭□欴㰠□□□㰢□㰿□□歅㰧□□□㱃㰴□㰝□□欳㱁\n□□□㰡□□歠□㰼□□㰵□欰□□□缼□□赥□□㱌□"
+        },
+        {
+          "id": "10.19",
+          "text": "□饙□□餾□飪餁饔飴□□䬮饊餅餱饘餥饎□饡䬤養□飯□飰□餔䭑饁饟餉饛饗飵䬯□䭓餫餬□飶飽□□䬼饒餘餀䭒餞館饕□飻餮饐䬥餲饉飢□饑餓餟䬽䭨䬴□飤飼餗餤餌䭐䭕□餣飩餛餭餦䬵□䭉餹䬾□䭢□餄餼䬧䬫䭘䭊䬷□餪䭈飦䬬□飬䭞䭖□飷䭤□□䭙餂□□□䬿□䭇飲□餩餕飧餐湌飫□□䭔□䭂餽餧飺餈□□饌籑饀䭁䭩餚□䭅餻餇□餿□饞□䬲饇□□餜□餒□□飣餖□饋□䭄□□饍饚饜飳䬨□□□䬣□䬶□□□□□□□䭦餑飭□飾餝饆饠餺飥□□䬳□饏䭃"
+        },
+        {
+          "id": "10.20",
+          "text": "□甛□猒□甙甚□㽑㽐甞"
+        },
+        {
+          "id": "10.21",
+          "text": "□□嘗"
+        },
+        {
+          "id": "10.22",
+          "text": "羨盜□"
+        },
+        {
+          "id": "10.23",
+          "text": "□執□報□□"
+        },
+        {
+          "id": "10.24",
+          "text": "□□□皋皐奏□"
+        },
+        {
+          "id": "10.25",
+          "text": "□奡臩昦昊"
+        }
+      ]
+    },
+    {
+      "id": "玉篇.11",
+      "ordinal": 11,
+      "title": "卷10",
+      "sourcePage": "玉篇 (四庫全書本)/卷10",
+      "sourceRevid": 743444,
+      "sourcePages": [
+        "玉篇 (四庫全書本)/卷10"
+      ],
+      "passages": [
+        {
+          "id": "11.1",
+          "text": "欽定四庫全書\n梁　顧野王　撰\n彳部一百十九　　　行部一百二十\n冘部一百二十一　　　攵部一百二十二久部一百二十三　　　夊部一百二十四舛部一百二十五　　　走部一百二十六辵部一百二十七　　　廴部一百二十八癶部一百二十九　　　歩部一百三十止部一百三十一　　　處部一百三十二立部一百三十三　　　竝部一百三十四此部一百三十五　　　正部一百三十六是部一百三十七"
+        },
+        {
+          "id": "11.2",
+          "text": "徎徳徑□\n復往□忂彼徼彶□循微徥徐□□□㣤徬徯待㣙徧□□徦徲後很㣫得忀□□徇徉律徂御彷徨征彽徙徝徒彴□徊徘□徠□□□㣭㒡徜□□□徭役□□彺□儳徆□□□□徸□□□□□□彾□從□彵□□徿□□□徖□□彿□□□□㣛□㣬亍行部第一百二十\n術街衢衝衕□衙□衎□衛衟衖□䡓衑□□"
+        },
+        {
+          "id": "11.3",
+          "text": "㽎"
+        },
+        {
+          "id": "11.4",
+          "text": "□夆□夅㐄"
+        },
+        {
+          "id": "11.5",
+          "text": "□"
+        },
+        {
+          "id": "11.6",
+          "text": "夋□夌愛□□□憂竷夏□□畟䕫□㚇夒夎致"
+        },
+        {
+          "id": "11.7",
+          "text": "舞舝䑝"
+        },
+        {
+          "id": "11.8",
+          "text": "趛趨趍趙趫赴趣䞚超赳趮趯越□□趁趂□趞趬□趚□□趥䟉□□□䞥䞤䞿䞗□□□起□趌□□□䟑□䟇䞞□趚䟂趉趜趑趄䟊□䟒趢䞷䞨䞾䞳䟏趡䟆□□趧䟅趒赶䞮□䞦䞽䞴趟䟎䟃□□□䞵□\n□□□□\n趗趪䞯□䟐□□□趖䟀□□赹䞪□趠□䞶赺□□趭䞡䞻赾□□□□䞣□趝趆䞧□□趏䞝□趃□䞢䟁□趐趩□䞙䞩趇□䞘□䟄赽□䞖□"
+        },
+        {
+          "id": "11.9",
+          "text": "䢦迹邁□巡□隨迋逛逝䢐□述䢤䢒過遵適遦䢱進□造䢔遝逾迮逪遄速遬迅适逆迎遭遇遘逢迪迻通遷運返還選邌送□遣邐逮遲遟迡遰逗遛逶遹䢑避遴达達逯迭迷迆連逑䢙逳逭□邋遜逋□近遺遂□邇□□逃追□逐逎遒逼迫遏遮䢭迣迾遱迁迀䢡迦逞遼逺□逖逷迥逴□迂邍道迒䢚□遽迄遁遯遐逍遾遊□迨透遡遃遫邂逅□邈迴逨退□逡□□□邅逵這□迕遌䢰迿□䢝迸迓邀□䢖逜逌迺迱迤□遳薖迍□遨迢遑違途□邎逿□迵□□□遙遞递□□䢍□□□□□□䢮逘遚□□遉邏簉□逕□遪迶□迬邊遢逽迠□□□□迼□䢌□□□迌逫□□週□䢋□"
+        },
+        {
+          "id": "11.10",
+          "text": "延廷建延㢟"
+        },
+        {
+          "id": "11.11",
+          "text": "癹登□歩部第一百三十\n歲止部第一百三十一\n□歱□歭歫歬厯□歸㱕疌□□□㱖歰歧□㱗□□□□□□□㱒"
+        },
+        {
+          "id": "11.12",
+          "text": "□□"
+        },
+        {
+          "id": "11.13",
+          "text": "䇐䇏端竱靖竫竦竢䇃竘竵䇔竭䇓□䇕竣䇎□竲䇑竛竚□□攱䇒□竴䇍□竑竜㚡□竬□□竌竎□□□□䇅□竮"
+        },
+        {
+          "id": "11.14",
+          "text": "並暜暜"
+        },
+        {
+          "id": "11.15",
+          "text": "啙些㭰"
+        },
+        {
+          "id": "11.16",
+          "text": "㱏□□□整"
+        },
+        {
+          "id": "11.17",
+          "text": "□韙尟"
+        }
+      ]
+    },
+    {
+      "id": "玉篇.12",
+      "ordinal": 12,
+      "title": "卷11",
+      "sourcePage": "玉篇 (四庫全書本)/卷11",
+      "sourceRevid": 743449,
+      "sourcePages": [
+        "玉篇 (四庫全書本)/卷11"
+      ],
+      "passages": [
+        {
+          "id": "12.1",
+          "text": "欽定四庫全書\n梁　顧野王　撰宀部一百三十八　　宮部一百三十九宁部一百四十　　　門部一百四十一戸部一百四十二　　尸部一百四十三尾部一百四十四　　尺部一百四十五履部一百四十六　　老部一百四十七疒部一百四十八　　部一百四十九歹部一百五十　　　死部一百五十一叧部一百五十二　　凶部一百五十三穴部一百五十四　　丨部一百五十五屮部一百五十六"
+        },
+        {
+          "id": "12.2",
+          "text": "家□宅□宣□室向宏宧□㝔宎奥宸寷宇㝢寏宖寪宬㝩寍定寔安宓㝣宴寂察寴□㝰完寳寚富宲實□容\n㝐宭宰□□宦宜宐□□宥寵守寫寛宿㝛寑□宵□寡宛惌□寯甯寇□塞㝑□㝝宲□寲□□寮㝞□寥□□寭㝓寘宷宑客寄寓寠㝌寒宕害□宄□□㝪宗㝮宔宙宋官寰□㝗㝯㝏㝤□□□□寀䢓寁"
+        },
+        {
+          "id": "12.3",
+          "text": "營"
+        },
+        {
+          "id": "12.4",
+          "text": "□□"
+        },
+        {
+          "id": "12.5",
+          "text": "□閘閶闔闈䦲閤閨閣閈閎闒閼閭闠閻闉闍闕閞䦏闑閾□闢□開開闓\n閜閟□□閒□闛□䦪闌閑閡閉閇關関闇闙閹闐□闚閃閽闋閱闞闊䦖□閔闖閌閫闥閍䦩閿□閮□䦒□□□□□□□□□□䦠□□□□□□□□□闆□閚䦓閕□□□䦡□䦫閥□䦮闟䦔閦□䦘□䦌□□□䦐䦳□䦝闡閬䦱□䦑閛"
+        },
+        {
+          "id": "12.6",
+          "text": "㦿扇扉房扊扂扅□□□㧁戻扃戹肁扆㧀戺扄"
+        },
+        {
+          "id": "12.7",
+          "text": "居㞐㞒屓展㞡屑㞕屆尻□□㞓尼㞚㞏□屒㞟屖屠屍屟屋□層屏□□屎□□□□□□孱届屙□□羼□□屁□□㞋屢屝"
+        },
+        {
+          "id": "12.8",
+          "text": "□□□□屬尺部第一百四十五\n咫"
+        },
+        {
+          "id": "12.9",
+          "text": "屨□屐屩㞜□□屣□□□㞛屜屧"
+        },
+        {
+          "id": "12.10",
+          "text": "□壽□耇考耆孝耋□耄者"
+        },
+        {
+          "id": "12.11",
+          "text": "疔疾□病痒癢疘㾻㾞痡痛瘣疴痾瘽瘵瘨瘼\n瘖瘏癭瘻疣□㿙□瘀疛㿒㾈痀瘚痱□痵痤疽㿛癰癕瘜癬疥㽱癎㽾痂瘤瘕癘㾐瘧痁痎痳痔痿痺□瘃□㾫□□疻痏□㾆□癑痍疢瘢痙疼痋瘦癉疹㾜疸痞㾁痬㾅疲㽺疷瘛痸痥痑痼㽽療㿄癃疫瘌癆瘥□瘳瘉痗癡㾖疚痯癙㽹瘐瘎㽸瘁瘯□瘰㽳癠㾯㿃瘙㿋□□癤瘭□㾢㿆痠㿑㾷□癖□痴㿓㽻癄痷㾹㾨□疓疙□□㿖㾽㿕□瘮㾕㾰□㾾□㾔□瘹痓㿎㾦□瘂□□㾭瘠□□痮㾙癵□㾍痌㾄痆□疳癏㿉瘡痕癀痃癥㾓痊痟㽿瘑㾋□㿘□瘊□□□㾂□□痄疨痭㾏疿□□□癗□□□㽷□□疺□□□□痢□瘴疶疱□㾒癐□㿚㾧□□□□㿇□㾑㾣癨癔□癈瘲瘍疕㾺□疝㾇□㾶\n部第一百四十九\n□㕡㕢叡□㕟"
+        },
+        {
+          "id": "12.12",
+          "text": "歺□㱪殤殰殂□□殛□㱳□殁歾殊殨殪殯肂殔殣殠㱙殃殘㱚㱯殄□殲殫殬㱻殖㱠□㱦殉殈□㱸㱤□殐□殏㱜殧殀㱥殑㱡□㱟殕㱴㱬殢□殗殜㱵㱞□□□□□□□㱫□殞□□殍□殅□㱶□□殝□□㱱㱣殆□殭□□殮□□殟□□殎㱹□"
+        },
+        {
+          "id": "12.13",
+          "text": "□薨□㰷薧□斃"
+        },
+        {
+          "id": "12.14",
+          "text": "咼㗗別凶部第一百五十三\n兇"
+        },
+        {
+          "id": "12.15",
+          "text": "竈窹窯□窐穿䆢䆕竅竇空□窠穵䆷窻窓窨窳□窊窞窌窖窵窡窬窺窋窴窒窣竄突窘窈窕邃究窱窔穾穹竀窮竆䆞窀穸竁窆□䆘窾窇窄□□□䆾䆱□□䆖䆵□䆸□窚□□□䆑䆟窟䆚竂□窪䆲䆡䆽□䆰□□䆹穻竊□䇁□□□□窂竉□䆔穽窉□䆜□□□□丨部第一百五十五\n□个中□□串"
+        },
+        {
+          "id": "12.16",
+          "text": "屯□□□□□□"
+        },
+        {
+          "id": "12.17",
+          "text": "玉篇卷十一"
+        }
+      ]
+    },
+    {
+      "id": "玉篇.13",
+      "ordinal": 13,
+      "title": "卷12",
+      "sourcePage": "玉篇 (四庫全書本)/卷12",
+      "sourceRevid": 743454,
+      "sourcePages": [
+        "玉篇 (四庫全書本)/卷12"
+      ],
+      "passages": [
+        {
+          "id": "13.1",
+          "text": "欽定四庫全書\n梁　顧野王　撰木部一百五十七　　東部一百五十八林部一百五十九　　巢部一百六十叒部一百六十一"
+        },
+        {
+          "id": "13.2",
+          "text": "橙樤條樝柤棃梨樆㮕槅柟楠梅楳柰㮏\n櫻李杍□榛桃榹㮘枆梒楷棠桂桬杜槢樿椲楢枊柜棆□\n柊楑□椆\n㰘樕㯈槲\n梣□橬□棳\n梲□椯□□\n椋檍□栵\n栲□棪㯉楀蘽櫐□桋柀\n檆杉栟楸\n榎椅椿橁杶櫄□榛梓榟杞桵\n椐樻栩□樣橡杙枇\n桔柃柞楮柠㭩榗橪欏椵楛櫅橞樲㯷㭁栺棈柅梢㰋□㮿楋椇梭枸樜枌檴樗枋檗榝楊槭檉榶柳桺□栘欒權棣栘曰枳榖楇㭕檵檀枒櫟梂棟柘檿□□橎榮梧桐榆棻樵梗松㮤樠檜樅栢机梇楰梔杒榙□栯榣櫾某槑朱樹□本㮺株末柢根枝㮨果杈槮朴枚□栞欇□栠枖枊朵朶梃標桹䯂橌柚枵柖樛朻枉杏橈枎㭂□□橚梴杕檹欃□格槸□槀槁樸楨柔榑朸杲杳㮝栽築構檥榦模橅桴棟檼極樘橕柱楹榰楶櫨枅㭓楣槉栭椽桷橑櫋榱梠㮰檐櫩橝樀槏植㯰杗樞櫙㰍楯樓櫺栜梀椳槾杅欂□槈榍□楂楗㰇柵楔桓杝楃橦杠桯榻枕楲㭘櫝樚櫛楖梳梱□㭒梩㭉枱□柌楎櫌欘□杷柫槩杚杫㮐□桮杯柶槃柈檈梋椷㮀案杓杵桱櫑榼椑櫎橢㮂檕槌㭙棏□样栚檷機□□杼椱楥楦棚核栫槶梯棖桊㮲樴椎梐枑棧槿欀梎㮃榤楱朽框櫒村㯋棤栒□椴杭柭據棴檣㮫抺□□㯮欋樢棉□㮌㮁棢橇檋楓椀楺□樟㮙桭栕柍术榏□橠㭟棝樏桄朾橋□㮴橃楫欐欚横梜㰎楟槎椓柧棱枰蘖　□　㮆　枿柮榾杌檮析棷梡㮯楪枼楄楅㮓樔休杻杽械桎梏榬校采柿㯕柛槍櫳柙檻棺棲櫬槥椈椁槨楬櫫㮪槳櫂棹槄椒□檓橭櫰櫔栱榭橜椹橧棬㮥㯲板柩棜㮛㯸㭡枻栧檡橰梑枘槤桁樎桲㭈梮㯿㯽楩㭸梌桾櫏□榽橀榏欄㭺㰊梈欓橨㰏樽㯛□栓櫭㯯椊㮧槦桅杔□樍杆㮍□檛橔□櫍枃栻□樇檞□榯桗□欈□□橄欖□櫖樌□樈㮮枔杬榞樾橏㮖橉櫗櫧檽櫞楉榴㮶檬棑桸朹枍栺□橛㯅㯕櫁榓□榲棦□□柉杺朲□楞□棎桶杋楤椶櫚樁桻极槻柁柅橿楒檰栴樶椔槐檭㯾㯊槽槙欑㭨橖枹檎橩櫯棈棡榜栝桰□樳杴□□□□椏㰁材枮□橗朷欞棸杊橒榩□桍□栶□桇檯檑榕□欆栦□棿□棯㯺㭠榘櫸□□柺栐㰌椼枓㭋棒棓梬櫓樐楮□檔梫樉榥\n□□㯆□\n柲櫃概檖□\n棅槵榪榨樺㭄柧槱栛□㮇栝□檅\n杕㯞□㰄㯠棩㯝□橓\n□椂榒栿\n棊梁渿柴\n杪棨枯牀床枷杖柯椸楘檢柆櫡櫽椌杘□槧栙柎檄柷杰梲椄㯙朳椺□寨柣棐橘"
+        },
+        {
+          "id": "13.3",
+          "text": "㯥"
+        },
+        {
+          "id": "13.4",
+          "text": "楚鬱欝□棼㭝森楙□埜麓㯟檒梵□棽㯄"
+        },
+        {
+          "id": "13.5",
+          "text": "□桑□䡦"
+        },
+        {
+          "id": "13.6",
+          "text": "玉篇卷十二"
+        }
+      ]
+    },
+    {
+      "id": "玉篇.14",
+      "ordinal": 14,
+      "title": "卷13",
+      "sourcePage": "玉篇 (四庫全書本)/卷13",
+      "sourceRevid": 743459,
+      "sourcePages": [
+        "玉篇 (四庫全書本)/卷13"
+      ],
+      "passages": [
+        {
+          "id": "14.1",
+          "text": "欽定四庫全書\n梁　顧野王　撰\n艸部第一百六十二"
+        },
+        {
+          "id": "14.2",
+          "text": "草茵蓏藿萐莆薰蕙蘼蘭蘺虈葯芷蓀□蓂蘅虋萁蔨莥□蘇莧\n□荏䕬薑茝萍蓱蒠苹薸䕯萹䔾藒芞䓘茖萇薊葪□芅芄藍蒲莓苺苷薓蔘茥蒛蒻□葦莞□䒞莐蕁菼薍蒹薕蓲藡荻萑蘆葭菔茅葖菘芥葱䓗荷蕸菡䓿莟萏芙蓉蓮\n芍薂菂蔤苾藕蕅菁荍菅菺茙薔蓷萑芣苡苢蕮□莙蒚藩藫萯芺蔩蕕藄莃茯苓葍䔰蕧蕀蒬□茈茜□蒨藐艾莣苦苞□蒯藨薽蔦䒷董蘻葑菲芴蕦蓯茦薞莿葎蓬莑萴薚薋蒺蔾藜萩蘴蔏薛□蓾□薜荔蒳芹□芐菀苑蒟蕣茱茰芽萌茁莖莛䓲蘮□䓏蘧蒢䓊□葇菈蓈萉莠芓茡䔬蘘蒜葫葷蕿藼萱□芎藭藋□□荲蕡若□䔿芑蔗藷荓□□蔞葴□□菦蒍藟荃芸蒷苜蓿蔡萃菹葅蘫䕩蒙萎薵蒘萼藇蓑葶葹藃蓇䔄茫蕤芾蓧苖蓨藣苙□薄荅□蓶茞葰□䓯芧苧蓩□䓮藎蒁荵□䖂䓞萭蘄□□藸□□□莩□□菩荌□□薏□蔁䔴芪□菎□䕼葚茮莍薾芭蕉䔟蒝□莦䓄茲蔇蔫蕪薉苛落蔽□茷茀蔎蓆蕝䕻䓛䔯䓜□□□蓴䔂萆□菷茵茹茞㪿□薶蓾苟蓸范□□□□□苳萶茸荈葆茗荼菆茠薅莀□萒萰䕇蘱薡藆藅苀藾莿□薌莘薝葐蒀䓳艻藏蔀芊蔲蘩蕭蒿薟蘞\n芩菳虉□芡䓈芰茤蔆□䔖薢茩蘥蔌藗芀苕薔蘠茢䓟蘢䓉葥□莊□蓍□菊□□蘜薠□菥䔮菋荎□葛莕荇菨蕛苵□蔓萊蘦艼葋芫荑菰蔣莨葽薖蕈荆□菌䓴菭苔萋菶蓁薿葼蓻蒔芼藥蘀□芃藴蕰菸藑荋藪蔪□菿菑䒹芟蓋苫藹茨葠芻藙莜蕢莝茭□荹蓛蔟蕘薪蒸䒱艽䒼芔卉蒮蕇莎薃蕨薻藻菉茿蘨藚䔚茆蘬□葒荺蕃葝藺蕼藘芨蒐菧苨苻蕍蒫蓼□蓫蓄藬□蘵葞芏蕎□萿虇芛茟葩荂蔈葟花菝葀□茇英蘤薳蕆蓽䓠□菴葊䕡蕓蒥蕞□□□藈菇䒲葿䓚□䕞薚藤苰薱䕹□□□□□莁□□□□□茺蔚□□□蓒葾䔷□䓱□芁䔞□□蕒苘䔛䕸荶䕾萳䓝□蓪䕍䓌蔝莋□□藖菤□葏芚菗藒葲蓊□□□著䕧䕁䓵萮蘛蘛□□苪䒨□薈□䓂莒芵□茪□莌□䔜□□䕪□蒵□□□□虂蔠苶䔹□葳蒤□蘣□䔑蓺䕈蔱薆荳□□苭□蒖□□蕫葓䓼䔶□䕺藂茳荾荽䒘□\n芘蕖□□菩□茂□□蓖薹莏蘋\n薲荄莔□□□蔕□□䒝蔯芒萄萪莪菏蘿菖藏蕄蓎莤芝虆䔲菾菠薐苸芋□□䓙䓐蘹□菕蘡□□蒢□䔀芜□苤□□□□□䕱蕔䒩葙萓莮□葁䕕□□□□□䒶□萾䒟䕊荿□䒜□葨茴菄茧□□□䕒䕔□莉□□䒧苁□□□□葔□□□芦□䒕□蓰藞䕢䕌藢□葸□藠苲□□□㲨□□□□□□蔃□芠藰□䒚萀\n□□䒴葤□\n䒡□䓍苯\n䕀荱□□□□蘟□□□\n蒼苖苾芳荒□薴葻菜䒦薙蕺苴蒩藉荐芮芤□䒛萺□莄□\n莚蔢□□菪□䔔□葺菍莡□葃□□䓭□□□蔛\n莈莯□□䔁藌䖇䔱□□\n□蔔□䕓菽薁□蒴□䕉莢莂□䒸□□䓃䓇蔋薈茬䕃蘪蘳薇莅薺菣□䖆芬蕊荀荁芿䔏蔄莬菟□䔺蒒□□□□苮□□艿蓓蕾蓘䔸□□蔧薯蕷薤苝䔇□蕂蘸虃□□□芆"
+        },
+        {
+          "id": "14.3",
+          "text": "玉篇卷十三"
+        }
+      ]
+    },
+    {
+      "id": "玉篇.15",
+      "ordinal": 15,
+      "title": "卷14",
+      "sourcePage": "玉篇 (四庫全書本)/卷14",
+      "sourceRevid": 743464,
+      "sourcePages": [
+        "玉篇 (四庫全書本)/卷14"
+      ],
+      "passages": [
+        {
+          "id": "15.1",
+          "text": "欽定四庫全書\n梁　顧野王　撰\n蓐部一百六十三　　茻部一百六十四舜部一百六十五　　竹部一百六十六箕部一百六十七　　才部一百六十八巿部一百六十九　　乇部一百七十部一百七十一　　部一百七十二蕐部一百七十三　　禾部一百七十四稽部一百七十五　　桼部一百七十六丵部一百七十七　　菐部一百七十八部一百七十九　　部一百八十部一百八十一　　朿部一百八十二部一百八十三　　部一百八十四麻部一百八十五　　尗部一百八十六韭部一百八十七　　部一百八十八瓠部一百八十九　　丯部一百九十來部一百九十一"
+        },
+        {
+          "id": "15.2",
+          "text": "薅□"
+        },
+        {
+          "id": "15.3",
+          "text": "□莽葬□"
+        },
+        {
+          "id": "15.4",
+          "text": "䑞□□"
+        },
+        {
+          "id": "15.5",
+          "text": "箭箘䇹箟簬簵筱篠簜䉠□筍箰□□簨簴箁笿䈚□□笢節筡笨䈵䉃箋䈎簡篰□䇫筴等笵符筓筟籆筳筦管篝簀笮笫筵簟籧篨籭簛篩籓䉒䉛箅䈰筲□筥簁笥箄簞□䇨箸篿筤籃籢籫籝䈀簠簋籩篅筩簏箓□箯笯笍竿篧籱箇籠筰筊䉰箑䈉䇘□䉴篼簍籚箱笭□䇿箠籣箙䇬笘簻笪笞籤□□箴筒箹箾竽笙簧䈕簫籟篎笛篴筑箏箛篍篙筄□籌簺篳䉷篽籞筭笇算籔䈹□簢□籮\n籊䉋□□□䉳笆䉧笳䇞\n□□□箶\n䈯䈛□筣\n□□□䇯䉑□□䈈\n□䈓䉈筨䈄笰□箐䉮□□篷□第箵䉶䇡䈲笈籛䇦筬䈏簈篂簹篔簃□□笡䇩筕篖簥笑□籈□䉎□篣笚□笉篪筂筐簂䈐篲□篋\n□箌筏□䈦笓䇧筁簿篙笲□筯簇䇮筀筌篹□箖箊□籉籬䇾□箆䈝䈥簝篻䈱□簪䈍笐䉚䈂篘箜箔籥簦簷篜䉄䉕□籐笎箮笅䈺篢□□篊籦□笗□筎□□篈箃□\n□䉹䉲□䈭\n□□□箂筃□䇪□筅□篬篃笌□□䇙䉊□□箒□䇜簅□䈃䈧䉝□□□笖□䇛笏筠箷筧䉣篾䉉□□筮簭□笠䇽䈗䇻篕䇸□□□䉂笶䈢篚䈠□□□□簳笴篆䈙範□箎□□□䉏箺□□筫□□簩□笊䈇筗□□䉨簉䉌䈡簣䉀䈮□䇺□□□□□䈴䉓□□□䉯□□箞䈒□□□篟□□□䈣□籋竻□□䇣䈋□筪䈳箿䉗□籰□□箻箤笜箼□䈸簶䈿䈌籜䈅䉢□□箬篛䇶䇷籍劄□筈□□箝□篸篁籀篇□䉫簊□"
+        },
+        {
+          "id": "15.6",
+          "text": "□□䇧□□簸"
+        },
+        {
+          "id": "15.7",
+          "text": "□□孛南□□□索"
+        },
+        {
+          "id": "15.8",
+          "text": "部第一百七十一\n□\n部第一百七十二\n□"
+        },
+        {
+          "id": "15.9",
+          "text": "□禾部第一百七十四\n䅩䅓"
+        },
+        {
+          "id": "15.10",
+          "text": "□□"
+        },
+        {
+          "id": "15.11",
+          "text": "㭍䰍㯡"
+        },
+        {
+          "id": "15.12",
+          "text": "叢業□□對"
+        },
+        {
+          "id": "15.13",
+          "text": "□僕䑑部第一百七十九\n圅㽕甬□□\n部第一百八十\n□□\n部第一百八十一\n□□□㮚□"
+        },
+        {
+          "id": "15.14",
+          "text": "棗棘\n部第一百八十三\n枲䢄□□□□□□□□□\n部第一百八十四\n檾"
+        },
+        {
+          "id": "15.15",
+          "text": "□䵉䵈黀□黂□□麾□□□"
+        },
+        {
+          "id": "15.16",
+          "text": "叔敊"
+        },
+        {
+          "id": "15.17",
+          "text": "齏䪥□䪤韱\n部第一百八十八\n□瓝瓞□□□瓣□□㼏□㼔㼊㼐□㼋瓢㼕瓟瓤□㼌□"
+        },
+        {
+          "id": "15.18",
+          "text": "□"
+        },
+        {
+          "id": "15.19",
+          "text": "□"
+        },
+        {
+          "id": "15.20",
+          "text": "来□"
+        },
+        {
+          "id": "15.21",
+          "text": "玉篇卷十四"
+        }
+      ]
+    },
+    {
+      "id": "玉篇.16",
+      "ordinal": 16,
+      "title": "卷15",
+      "sourcePage": "玉篇 (四庫全書本)/卷15",
+      "sourceRevid": 743469,
+      "sourcePages": [
+        "玉篇 (四庫全書本)/卷15"
+      ],
+      "passages": [
+        {
+          "id": "16.1",
+          "text": "欽定四庫全書\n梁　顧野王　撰麥部一百九十二　　黍部一百九十三禾部一百九十四　　秝部一百九十五耒部一百九十六　　香部一百九十七皀部一百九十八　　鬯部一百九十九\n米部二百　　　　　毇部二百一\n臼部二百二　　　　倉部二百三\n㐭部二百四　　　　嗇部二百五\n亼部二百六　　　　㑹部二百七\n亯部二百八　　　　部二百九\n畐部二百十　　　　入部二百十一冂部二百十二　　　部二百十三冃部二百十四　　　㒳部二百十五㡀部二百十六　　　覀部二百十七网部二百十八　　　□部二百十九冓部二百二十　　　凵部二百二十一去部二百二十二　　北部二百二十三西部二百二十四　　鹵部二百二十五鹽部二百二十六　　部二百二十七皿部二百二十八　　卧部二百二十九㐆部二百三十"
+        },
+        {
+          "id": "16.2",
+          "text": "麦麰䵀䴾麧麩麱䵂麫麵麷□麮䴳䴽□□䴻□䵅䴮䴷䴿□麳麲䴲䴹麹□□麨䴺□\n䴭□□䴵䵃䴼麯䴬□□"
+        },
+        {
+          "id": "16.3",
+          "text": "□䵖黏□□䵒䵑□䵗□□□□䵘黐□□䵜□□禾部第一百九十四\n秀稼穡穜稙稑穋稺稚䄺穊稹稠□稀穆穆䆏私稷稌秫穄稻稬穤稴穬秏秜䅘穟稗穎移䄬穗秒䄪□䅥□䅺穖秠稃秨穮□租穧穫䆅稛秩秳□□䅵秕稈秆稾科稭鞂秸䅌䅭䅣䅀□□穰秧秦秊年稔榖稅□䆃秬稍秋秌□程穌秭稱种稯□䄷秅穳□稘種稰䅂䆍秿□䅜穙秎䅑□稕䅻䆄□䄶稡□䅾秪秈秞穚䅃䆀□秛䅢穩穅穁䅝䅳穭稂䄯穢穱稸秷秣□秢\n秱穠□□䄻□□□稜䅅秂秥穔稝□䄮□□䅗秓秔䄨䅔秵□□䅡□□□□䄸□□䅚䄼□□□䅰䅙秺䅏秙稧䅄□稄䅷䅮稒穛□秡䅼□□□秴□□□稪□□□□䄩□稫䄾䅤稵□䅧□穈穲稢穥□□䅊案"
+        },
+        {
+          "id": "16.4",
+          "text": "□兼耒部第一百九十六\n耕耦耡耤□耘□耜耨䎨耩□□䎩□䎤䎧䎮□耫䎫□□□耚䎯耠□耬耰耭□□□耣□䎦耔頛耗□□□䎢□耯□□"
+        },
+        {
+          "id": "16.5",
+          "text": "馨馦馠馣馥馝馞□馛馤□□馪䭱□馧"
+        },
+        {
+          "id": "16.6",
+          "text": "冟即既"
+        },
+        {
+          "id": "16.7",
+          "text": "□鬱□□"
+        },
+        {
+          "id": "16.8",
+          "text": "粱粲糲精粗□粒粺糵糪糂糝糣䊤□麊糟糒□糗䊆糈糧粮粉粈糅䊮\n□粹氣䊠䉺粃䊎□䊝竊䊳粻粔籹□粥□籸䊟□䊊䊓粖糷□粢糠䊭粕粰□□糦䊞粘粳□□頪䊕□䊙粙□□□□糉粽䊧□糫粡䊡糖粷粠䊅糚䊄䊈□䊔□䉻糤粄粿糃糔糞糯糙□□□□籺□糏\n□籷□粞糰䊚䉾粊"
+        },
+        {
+          "id": "16.9",
+          "text": "糳臼部第二百二\n舂□舀臿□䑔臽□□□函\n□䑘□□□□□□䑗"
+        },
+        {
+          "id": "16.10",
+          "text": "全牄"
+        },
+        {
+          "id": "16.11",
+          "text": "稟啚亶"
+        },
+        {
+          "id": "16.12",
+          "text": "□牆廧□"
+        },
+        {
+          "id": "16.13",
+          "text": "合僉侖□今舎畣㑹部第二百七\n□㞧朇䢈"
+        },
+        {
+          "id": "16.14",
+          "text": "享□□䈞□\n部第二百九\n□□"
+        },
+        {
+          "id": "16.15",
+          "text": "良□□"
+        },
+        {
+          "id": "16.16",
+          "text": "糴全㒰□\n□内"
+        },
+        {
+          "id": "16.17",
+          "text": "冠□□㓃部第二百十三\n同□冡冃部第二百十四\n㒻杲胄最冕冒□冔㒽□㒾□□□"
+        },
+        {
+          "id": "16.18",
+          "text": "兩䓣"
+        },
+        {
+          "id": "16.19",
+          "text": "敝弊"
+        },
+        {
+          "id": "16.20",
+          "text": "覂覆覈䙵垔"
+        },
+        {
+          "id": "16.21",
+          "text": "□罔□□□\n罨□䍐罽䍘□䍙□罪罩罘□罾罛罶□□罜䍡罿罧\n罠羅罬罦䍖罻□罝□□□罯罷署置詈罵□羈□羇罺䍤罥羂□□罭罼䍔□□羉□罳罹罤□罞□□□䍦䍢罱䍗罣䍜□䍓□□□\n□□□羃□羄□□□"
+        },
+        {
+          "id": "16.22",
+          "text": "棄□畢□"
+        },
+        {
+          "id": "16.23",
+          "text": "爯再厶部第二百二十一"
+        },
+        {
+          "id": "16.24",
+          "text": "厺□朅□□"
+        },
+        {
+          "id": "16.25",
+          "text": "冀兾乖"
+        },
+        {
+          "id": "16.26",
+          "text": "卤栖"
+        },
+        {
+          "id": "16.27",
+          "text": "□滷鹹鹶□□□䴜□□䴛□䴝鹼鹻□□□□㔪䴚\n□□"
+        },
+        {
+          "id": "16.28",
+          "text": "□塩盬部第二百二十七\n□徵朢□□㸒重"
+        },
+        {
+          "id": "16.29",
+          "text": "䀁□盂盧□䀇□盆㿾盨盄盛盌齍盎䀊□盉益盅盈盦盡䀆盪昷□盥䀉盞䀂□㿿□㿼䀀□□盕䀈盤□\n□盝□□盂□蓋葢□盩□䀃□㿽盔盃□□䀅\n盭□䀍盍\n□"
+        },
+        {
+          "id": "16.30",
+          "text": "□監□臨□□"
+        },
+        {
+          "id": "16.31",
+          "text": "殷"
+        }
+      ]
+    },
+    {
+      "id": "玉篇.17",
+      "ordinal": 17,
+      "title": "卷16",
+      "sourcePage": "玉篇 (四庫全書本)/卷16",
+      "sourceRevid": 743474,
+      "sourcePages": [
+        "玉篇 (四庫全書本)/卷16"
+      ],
+      "passages": [
+        {
+          "id": "17.1",
+          "text": "欽定四庫全書\n梁　顧野王　撰琴部二百三十一　　喜部二百三十二壴部二百三十三　　鼓部二百三十四豈部二百三十五　　豆部二百三十六豊部二百三十七　　豐部二百三十八䖒部二百三十九　　重部二百四十鼎部二百四十一　　瓦部二百四十二缶部二百四十三　　鬲部二百四十四部二百四十五　　斗部二百四十六勺部二百四十七　　几部二百四十八且部二百四十九　　匚部二百五十曲部二百五十一　　壺部二百五十二巵部二百五十三　　部二百五十四"
+        },
+        {
+          "id": "17.2",
+          "text": "□䥅瑟□琵琶"
+        },
+        {
+          "id": "17.3",
+          "text": "□歖嚭"
+        },
+        {
+          "id": "17.4",
+          "text": "□彭尌□嘉"
+        },
+        {
+          "id": "17.5",
+          "text": "□鼛鼙鼘鼞□□䶀鼖鼗□鼟鼚䵿䵽䶁鼜䥢□□"
+        },
+        {
+          "id": "17.6",
+          "text": "凱"
+        },
+        {
+          "id": "17.7",
+          "text": "□梪□□□䝁□䜼豌䝀豍䜸□䝄豏䜺䜷䜾䜽䜴□□□□"
+        },
+        {
+          "id": "17.8",
+          "text": "豑"
+        },
+        {
+          "id": "17.9",
+          "text": "□豔"
+        },
+        {
+          "id": "17.10",
+          "text": "□□"
+        },
+        {
+          "id": "17.11",
+          "text": "量□"
+        },
+        {
+          "id": "17.12",
+          "text": "鼐鼒鼏䵼"
+        },
+        {
+          "id": "17.13",
+          "text": "瓬甄甍□瓵甗瓽瓮甕甌瓨㼝瓴甋瓿甊甂甓甈□甃㼙㼽□㼲瓪㼚甒㼻㽀㼶㼡㽈瓺甔㼴㽄㼵㼬㼳㽅㼥㼦㼤㼫㼹□㼯□瓷□瓹㽉□㼣㼠㽃瓳㼾甎㼗㽆□㽌□㼧□□㼪甉㼮□㽁㼜瓶□□㼛□甇㼺甑瓻□甖㼢甀□□□□□㽋□甐㽇㼸□瓭"
+        },
+        {
+          "id": "17.14",
+          "text": "缻䍍罌匋□□䍌罋䍃□䍄罅缺缾䍇缸罃□䍎罊缿罏䍊罍□□□□□□□\n罇□□䍉□□罄罐"
+        },
+        {
+          "id": "17.15",
+          "text": "䰛鬹鬵鬳□融□鬴䰝□□鬺□䰚□□□鬷\n部第二百四十五\n□□□□□□□□鬻□□□䰞□□□□□□斗部第二百四十六\n㪷斚料斞斠斡斟斜㪺㪵斣戽㪻斛枓□升□□□"
+        },
+        {
+          "id": "17.16",
+          "text": "与"
+        },
+        {
+          "id": "17.17",
+          "text": "凥処焭凭"
+        },
+        {
+          "id": "17.18",
+          "text": "□俎□亹"
+        },
+        {
+          "id": "17.19",
+          "text": "□匠匧匜匡匩匴□㔶匪□□㔴匬匱匵匣匫匛□匯匰匭㔳□匥□□□□□□匨□匳匲□"
+        },
+        {
+          "id": "17.20",
+          "text": "□□□壺部第二百五十二\n□□□□□□壹"
+        },
+        {
+          "id": "17.21",
+          "text": "□□"
+        },
+        {
+          "id": "17.22",
+          "text": "□□□□疀□□□□□□□□□"
+        },
+        {
+          "id": "17.23",
+          "text": "玊篇卷十六"
+        }
+      ]
+    },
+    {
+      "id": "玉篇.18",
+      "ordinal": 18,
+      "title": "卷17",
+      "sourcePage": "玉篇 (四庫全書本)/卷17",
+      "sourceRevid": 743479,
+      "sourcePages": [
+        "玉篇 (四庫全書本)/卷17"
+      ],
+      "passages": [
+        {
+          "id": "18.1",
+          "text": "欽定四庫全書\n梁　顧野王　撰㫃部二百五十五　　勿部二百五十六矢部二百五十七　　弓部二百五十八弜部二百五十九　　斤部二百六十矛部二百六十一　　戈部二百六十二殳部二百六十三　　殺部二百六十四戉部二百六十五　　刀部二百六十六㓞部二百六十七　　刃部二百六十八"
+        },
+        {
+          "id": "18.2",
+          "text": "旗旚旐旆旌旍旟㫍旖旎旂旞□旝旃旜旇施斿旒旄旋旛旅□族旓□於□□㫎□□□㫏"
+        },
+        {
+          "id": "18.3",
+          "text": "昜□"
+        },
+        {
+          "id": "18.4",
+          "text": "□侯□䠶矯短矤矧□矰□矲知矣矨□䂕矬䂐□䂑□□矩榘䂏□□"
+        },
+        {
+          "id": "18.5",
+          "text": "弭□弴弤弲弨弧□彄□張彎引□彏弸彊強弙彌瓕□弛□彀弢弩彉彍彃發□彈□□㢰㢻㢵弰彋彇㢼□弽□㢾㣂弣㢩弶㢨□□㢯□□□□□□□□㣅弫弮□弝□㣄□弡"
+        },
+        {
+          "id": "18.6",
+          "text": "□□㢸弼□"
+        },
+        {
+          "id": "18.7",
+          "text": "斧斨斫斪斸斵□釿斮所斯□斷□断□□新斬□簛□□斦□□□□□"
+        },
+        {
+          "id": "18.8",
+          "text": "□□□矠䂎□䂇矜□□□矟□□䂈□□矡□□□䂉□䂆"
+        },
+        {
+          "id": "18.9",
+          "text": "肈戎戣□戟□戛賊□戍戰戲或戜戭戕戮戡㦰□戩武戢戠□㦺□□□㦴㦻戧□□戔□□□韱㦵㦹□□□戙"
+        },
+        {
+          "id": "18.10",
+          "text": "杸㱿㱽祋□□毆毃㲀段殽殹□毅㲃㱾殿□□殾□㲅□□㲁"
+        },
+        {
+          "id": "18.11",
+          "text": "布□□□弑"
+        },
+        {
+          "id": "18.12",
+          "text": "戚"
+        },
+        {
+          "id": "18.13",
+          "text": "㓡㓵削剞□剴劂利剡初則□刻□割\n㓣刌切判㔎劌刉副疈剖列劈辨剟剫刋剈□劀□剓刷劃□刮刪刲剽\n刖剉劖劋剿㓼刜刓制□㓠釗刺劓㓷刵刳罰刑㓝剄券創劉劑刎剾㓱□□剌㔍□□剶劙剜㔒□剅㓹划㓚□㔋□刈㔏劐□㔌朷劁剗□刟劇㓽□剃㓢剔□㔊㓳剭剋剠劘劗剒□㓮劍㔆□剆剥□□㓾剴㓺刨剹剸□□□魝□㔂刕剛□□□刡刐㓴□□㓲剕刴刋□□□□□□剳㓤劅□刹□□□㔇刔劊□㔄□剰㓟剪□剮□"
+        },
+        {
+          "id": "18.14",
+          "text": "栔㗉□"
+        },
+        {
+          "id": "18.15",
+          "text": "劒□□□刅"
+        },
+        {
+          "id": "18.16",
+          "text": "玉篇卷十七"
+        }
+      ]
+    },
+    {
+      "id": "玉篇.19",
+      "ordinal": 19,
+      "title": "卷18",
+      "sourcePage": "玉篇 (四庫全書本)/卷18",
+      "sourceRevid": 743484,
+      "sourcePages": [
+        "玉篇 (四庫全書本)/卷18"
+      ],
+      "passages": [
+        {
+          "id": "19.1",
+          "text": "欽定四庫全書\n梁　顧野王　撰\n金部二百六十九　　攴部二百七十放部二百七十一　　丌部二百七十二左部二百七十三　　工部二百七十四㠭部二百七十五　　巫部二百七十六卜部二百七十七　　兆部二百七十八用部二百七十九　　爻部二百八十㸚部二百八十一　　車部二百八十二舟部二百八十三　　方部二百八十四"
+        },
+        {
+          "id": "19.2",
+          "text": "□銀鐐鋈錫鈏銅鏈鍇鐵鐵銕鍊鋚銑録鋻鑗錅鑄銷鑠鑲鋏鋌鐼鍛䥵鏡鉹□鈃鐘鍾鋞鑊鑒鑑鑴鐆鐩鍪鍑錪銼鉶鎬鏕䥝銚鐎□鋗䥩鏏鉉鋊鐪鎣錡鍤鉥鍼針鈹鑱鏨鑿□鈕銎鐅銛錢鈐䤻鏺鐮鎌鉏鋤䥯鍥䥛鉊銍鎭鉆銸鑷釱鉗鋸鐕錐鏝鑽鑢鋁銖鋝□鈀鍰錘鈴鍿鈞銞鎔\n鏞銿鐲鐃鉦鐸鑮鈁鎛鍠鎗錚鏜鍯\n鑋鐔鎩鏌釾鋣鏢鈒\n鋋鋭鉈鏦䤸錟鐏鏐鐓錞鍭鏑鍉鎧錏鍜釬銲鐧釭釳銴鑾鐊鍚銜鉣鑣鈇䥍釣鋃鐺鋂鍡鑸鎎鋪鐉鈔鍩錔□鈌鏉鍲鏃鎦鉅鎕銻鈋□鍒錭□□鈍銶䤨鑙鏵釫鍏鍵鑳釵鏷鏔鍴鍨鏸錣□錕鉀鍋鐹鍫鐰鋡鍮鋀鉐鏳鎢錥鈳鈷䥈釜釴鏀□□□鋇鈶鉿鑖鉒䥡鐴□釤䥸鈑鐇鏻鉜鏂鍝□鎜錜䤳䥀鎡錤錑䥗鉎鎒銃鉠鏆鉌釧銐鈵鏊鉟䤶鏗銵鐻钀鑈鉩鉞□钃錖鐶鍸鍔鐖鉢鐍鈘鐯鉾□鑘鑰鉍鉄鈮錎鎖鏁鏟鉵䥉鍈鋒鉷鎚鏒鋐鉤鋖鐁錀鎊銓鍗鑌鈿□鑐鏤□鐈鈱鉋□鍶鋹鋩鋼鐄鋿鎀釘䤾釚□䤹鎪銗鑨鉖鈚鈽鍷銈□銂錨鈊錓鎏鑶鑅鑇錂䥎鋑䤡銋鍖錧鏋鍽釩鎈鈰釨鋅鉙鋟䤥䥏鋙䤷鉸鏾鉃錗鏙鋄釥鑜鉼鉂□□釲鋺鍍鐌鐬錊鑛鏴□鋆鑫鋥鋠□鋇□錝鐩鉺䥨□錮銏鋽䤧鑭鋀□鑕鐱釟釛鋉鈺䥔銉□銊鉘鈅鉑鏼鈼鍎釞鉻鎉鈉䤭鑉鋜鈠鎰鐭鎘鋷鑡鍱䤮鋦鏘銆鑞鍓釙鎑钁鑺鈯□䥢鈸鏚鑯釦鈂鏇鎋錍銘錯鏶鐙錠鎞鈭"
+        },
+        {
+          "id": "19.3",
+          "text": "攵徹□敃暋敏啓肇敀敄效政敷敟□數攽敳孜敞改敕□變㪅斂敿㪉敶敵敓赦□攸斁㳊□□敉敭□救敦敗贁寇□㪤敜鼔敂攷攻㪒㪣□□斀敔□□牧敤畋敇□□□攺敘斆教□□䜴敦□㪦㪁敧㪜□□□□□□㪡䍩□㪏敡㪛□□㪆㪇□□㪑敺㪐㩿□□㪃□□㪌□㪠㪭敋敢□□□敊㪬□□㩻□䰙□□㪥□□□□㪓□敐□攼㪮□□□□□□□敼㪋敞□□□□㪨㪍㪖□㪩㪄□□□□故敒"
+        },
+        {
+          "id": "19.4",
+          "text": "敫敖"
+        },
+        {
+          "id": "19.5",
+          "text": "䢋巽巺□畀奠其亣典□"
+        },
+        {
+          "id": "19.6",
+          "text": "差□□"
+        },
+        {
+          "id": "19.7",
+          "text": "□巨□巧式"
+        },
+        {
+          "id": "19.8",
+          "text": "□"
+        },
+        {
+          "id": "19.9",
+          "text": "□覡靈□"
+        },
+        {
+          "id": "19.10",
+          "text": "□卦貞占□卟兆部第二百七十八"
+        },
+        {
+          "id": "19.11",
+          "text": "□甫□庸甯由"
+        },
+        {
+          "id": "19.12",
+          "text": "希棥"
+        },
+        {
+          "id": "19.13",
+          "text": "爾爽爽"
+        },
+        {
+          "id": "19.14",
+          "text": "□軒□輜輧輼輬軘軺輕輶輣䡴轈□䡬輿軾䡊輯較䡈轛輒䡅輴輑軨䡼軫軸□轐輻□輮輪輥轊軎軝䡋軹軑輨轅輈□□䡽軏䡇軶轙軥軜轑䡓□䡕䡾載範轉軔輸輖輩軋轢軌䡮䡮□輊軭軧輟轚軻轗䡰軵輇輲輗□轃䡔轒䡝輂□□輦□輓軖轘□輀轞輔轔□輫輰䡵䡧輾輁□軬□䡉輞□輎□轇轕□䡭轓輍□□□□輆軩䡗䡚軲輱軳□䡐□軤輚轏轍輤轆轤輡□厙轎輠轠䡲輷□轟軙\n䡘□□□䡿□軯輘□□䡒軞□䡆䡥䡩䡫䡏\n䡡䡋□輢□䡳䡤□□□轖□軓□□\n輭軟䡑輽䡢□□輐䡹軐□\n□□□□軷轥輅軴轄□輹軼□□䡜□□□□□□\n軗輳□軍□䡣轂䡙"
+        },
+        {
+          "id": "19.15",
+          "text": "俞船肜舽舡䑵䑿艖艇舼□䒀艑䑦艬艡舶䑬艛□䑡□䑴艃艀艅艎艨艟艗舷□□□□航□□舲舴艋舸艢般艐艆艚□艫䑳□䑼䑹䑻艭□□□䑯䑠艁艤艣□舵□□舫䑤□艜䒇□䑲□\n䑶□□䒆□\n舳□□□䑪□□□□䑢䑽\n艧䑽□□舠□艦"
+        },
+        {
+          "id": "19.16",
+          "text": "汸万"
+        },
+        {
+          "id": "19.17",
+          "text": "玉篇卷十八"
+        }
+      ]
+    },
+    {
+      "id": "玉篇.20",
+      "ordinal": 20,
+      "title": "卷19",
+      "sourcePage": "玉篇 (四庫全書本)/卷19",
+      "sourceRevid": 525416,
+      "sourcePages": [
+        "玉篇 (四庫全書本)/卷19"
+      ],
+      "passages": [
+        {
+          "id": "20.1",
+          "text": "欽定四庫全書\n梁　顧野王　撰\n水部第二百八十五"
+        },
+        {
+          "id": "20.2",
+          "text": "汃河涪潼渽江沱沲池湔浙沫温滇淹沮涂沅瀏濊汪漻泚況渢汎沄沖浩沆泬濞潝瀺灂潐滕瀾灡澐漣淪潏洸淙波漂浮氾汜湋潿測洞激洶涌湧洌湁涳溶渾淑澂瀓澄清湜㵓潣滲溷淈淵囦㳬漼㵏瀰□潯澹泙泏瀳洊潪□滿滑濇泆澤淫溽瀸潰淺沴□渻淖濢涅滋淐㳷浥沙瀨汻滸濆涘氿潨沼漘浦沚洔湀沸㵒派濘漥洼滎瀅潢湖汥湄□洫溝渠瀆瀶洐澗汕澳澩㶅□灘決灓滴□㳻澨注□沃津□㶇渡淜㳂泝洄泳潛淦泛汓泅游湊砅濿淒湛□湮㲻没濩滃渨泱澍溟□澬瀑湒潦涿瀧渿漊溦浞浽滖濛沈沉淊洅涵□洳㴶洽瀁\n湟汾漢㵄汧浪沔澇漆□滻洛潩汝潞澮洈沁淇蕩沇泲溠洭潓㵋灌漸泠□渒□溧湞溱湘溜汨漞深潭油瀷潕㵲滶瀙滍淮\n沾漳濯灃澧溳澺□潁潧洧㶏濄泄汴汳淩濼濮渮漷淨漯洹汍泡泗灉㴩澭澶沭洙沂洋濁溉㶟沶浯湡治汶寖浸㴲洨渚泜灅濡濟㴉済沽沛㲽浿瀤溑滱淶泥湳漹涶洵涻淔淁涺□沋涃浝㳶泈汘洍洪洚澥漠海□溥□潮濥滔㳙潒混潚漦泌汭演渙活□湝淲滮淢滂瀀濃涔渥瀌泐溓濂滯汦㶁瀱汔涸□漮消渴汀溼濕湆洿汙湫潤準沑瀵□□瀞瀎泧洝洎湯渜涾洏涗涫㶕汏淅溲滰□漉渌澱浚濬□潘泔滓滫淤淰□瀹漀湑湎涒漿□滒\n淡涼澆液灝瀋溢\n洒濈汁渳□泂滄□㵾淬漱沐頮沫湏洗澡汲□淳淋漚漬渫湩澣浣□染潎\n涑㵞汛灑㶄灒泰濺浼洟涕潸淚㴃汗涷漕渝減滅泮沜漏澒漪汨流渉洲濵瀕源浟瀼泿浹淓洱滽溾涹溹滬㴬潬□法灋潺湲潟滹涯溘漫㵩浢沕瀣湢湽㳁瀦瀍瀛淟涊漭□㵨沍澠湃□澞浰漶㳹溔渟濤□沘浘漨洬濧沌溏湓泊涖瀈□澽㵧瀲澰灩□㶆滭□流澴沰湭淍汫涏浧㵦灕□瀢㵍潗潲澻淝□濋㵐洣汮潙洺涍㴫□渶□涀□潷□溞□潠溗□□浖汒□□□涎㵁洤□泟㳧澉潶㶌浡漧漺瀿澎濠□潫□淕泯瀜㳅漴淞㴦洢濰漁泭漽溪灈瀘□浾潾洇濜瀊沺湍凛溒□淆渦溛涐涂□漡茫瀯㵗濴濚漎㵬㶀澌泑添灆□□汯浤㴘泍㵅□㴀渹洴㳜□㶎濨澊泘㳖㵢㵯渱□濍㳋□滁渘泃泩㴰汼泀湤潖漟㳾溵淐澢泇洀㴓㵃㳸□澋□□湵漜□□□□□□渼涭□㴸㶒浨濎□□□□□灦涱□□港渺汞灄□泋濖漵㵰泞滷澅湕灛㶔㵿瀉滉□渰瀠㶞澾泬㶍□□□灖淏泖溤潽潻□□瀴\n淎□浫潡灞淠□汱汰瀚澯□□淛漈涆沜淀㴐□□溴溎□浛□□渣□湴洕□㳦溍□□㳥□濾㵂□湠渲淃□汌灠灙㵑淌□㳀□澃□□滊沎漖漝灢㴧㵫□澓□濗泦淗㴼溯㵡瀥滈洷洁滵□□灍□□㴽㵠湙□潑涰㵤□淂淯浴溻□□澦滀沷㲺滐淴沏□渤澀澁澈滆滌汐㶠湱湂□□泣溭□氻湨㵊濲涷漙瀡濣□灨㵹"
+        },
+        {
+          "id": "20.3",
+          "text": "玉篇卷十九"
+        }
+      ]
+    },
+    {
+      "id": "玉篇.21",
+      "ordinal": 21,
+      "title": "卷20",
+      "sourcePage": "玉篇 (四庫全書本)/卷20",
+      "sourceRevid": 743489,
+      "sourcePages": [
+        "玉篇 (四庫全書本)/卷20"
+      ],
+      "passages": [
+        {
+          "id": "21.1",
+          "text": "欽定四庫全書\n梁　顧野王　撰沝部二百八十六　　部二百八十七巜部二百八十八　　巛部二百八十九井部二百九十　　　泉部二百九十一灥部二百九十二　　永部二百九十三部二百九十四　　谷部二百九十五冫部二百九十六　　雨部二百九十七雲部二百九十八　　風部二百九十九\n气部三百　　　　　鬼部三百一\n甶部三百二　　　　白部三百三\n日部三百四　　　　旦部三百五\n䢅部三百六　　　　倝部三百七\n晶部三百八　　　　月部三百九\n有部三百十　　　　明部三百十一囧部三百十二"
+        },
+        {
+          "id": "21.2",
+          "text": "淼□□\n部第二百八十七"
+        },
+        {
+          "id": "21.3",
+          "text": "粼巛部第二百八十九\n巠□□□□邕□州□□"
+        },
+        {
+          "id": "21.4",
+          "text": "刱阱汬□□"
+        },
+        {
+          "id": "21.5",
+          "text": "瀪厡"
+        },
+        {
+          "id": "21.6",
+          "text": "□"
+        },
+        {
+          "id": "21.7",
+          "text": "羕昶\n部第二百九十四\n覛□□衇"
+        },
+        {
+          "id": "21.8",
+          "text": "豁谸豂豅谾谹䜱䜪䜭□豄□䜯䜲谼□䜮□谽谺□㕡豃谿□冫部第二百九十六\n仌冰凛凊凘□凍凌□□凇凓冽浹□凗凒□凝㓅凔凄冶□冷□□冬□㓈□冱㓓㓖□凙□㓐冹㓗□凋㓉凚准况冲决减凉"
+        },
+        {
+          "id": "21.9",
+          "text": "□□霅靁雷□□□霣□霆電□震□䨮雪霄霰\n䨘□雹□霝零□霡霂□□□霃□䨡□䨞霑□屚霤䨣霽霩霋露霜霚雺□霧霾霓䨒霖□需䨨霏䬠雱䨦霶雭霫雴□霎䨐䨤□雰□□□霞□靀䨗雵霹□□□霷霠□霛霙□□䨥□□霦□䨝䨳霌□靊霳雸䨏□□䨜霪□□䨢䨴靃□霍□靄霈霔□□□□□□□□霯□䨵霨□䨫□□□䨰□霵䨚䨛□䨑"
+        },
+        {
+          "id": "21.10",
+          "text": "霒侌□靆靉霼曇靅䨺"
+        },
+        {
+          "id": "21.11",
+          "text": "凬飌□□飄飆颮颯□䬟䬍□□䬑颺䫻䬆颲䬅□颻□䬂颼颾飉□□□䬝䬌□颸䬞䫾□䫸䬘□飁颰颬□飋䬀飍颵□颴飀□□□□\n䫹□□□□颹□□□䫺\n□□□䬋□\n□□□颽□\n㶡䬈䬏□□\n□䬕□□䬛□□□□䫼䬉䬎□□□"
+        },
+        {
+          "id": "21.12",
+          "text": "氣氛□氲氤㡮□"
+        },
+        {
+          "id": "21.13",
+          "text": "□䰡魂魄魖魃□鬽䰨魅□□䰧䰰□□䰯□魋魍魎魊䰫魏魗□□魑□䰤鬿䰠□魔魁□魒□□□□□\n䰦□□䰢□□□□□□□□□□□□□□魙□魓䰩醜□"
+        },
+        {
+          "id": "21.14",
+          "text": "畏□禺"
+        },
+        {
+          "id": "21.15",
+          "text": "□皢晳皤㿥皚皅皦皭皔皏㿣皪皉皠皁皂的㿧皛皖皫㿟□□皧皜皥皓□\n敀□皗㿤□皣\n皟□□㿩皎日部第三百四\n旻時旹早昒曙昧晣晢㫼曉\n昭晤晃晄曠旭㬜晋昏昬晵暘\n昫晛㬗晏㬫景晧曍曅暉旰暆晷昃晚曫晻暗\n曀晦旱㫐昴曏曩昨昪暇昄暫昱昌□暀㫱暑暍㬮□㬥暴□曝映\n晞昔㫺暬暱昵㫘晐昆晜暖普曈曨晫暏暠暟昈昻曒暞□暮晲□曭暲暵㬒□暒晴曤晥□昲暅暳暡暈晊曖曜暿暶□㫓□星□□□□厯□㬤□晟暾旽晈昧昊昉春萅曛晡曃暕昢昚昺曇昇晁㫝㫵晭□㫷旲□昐曦□㫙□晅㫜暛暊□□㫰昑□曮煚㬊杲㬙暐晼曘昀暌曥□暄旼□暋□旫暚晗焸曚暰□㬉暖暪□旿晪昫昶㫥㫒㫛□□曕□㫹昪昛㫲暣□晬晙□昁□曞□㬓暓昮旺□暝曔㝵㬭昩昳昷□㫽惖□□\n昅昕旵曬旦部第三百五\n曁"
+        },
+        {
+          "id": "21.16",
+          "text": "晨䢉農□辳□"
+        },
+        {
+          "id": "21.17",
+          "text": "乾□朝幹□"
+        },
+        {
+          "id": "21.18",
+          "text": "曐曑曡曟"
+        },
+        {
+          "id": "21.19",
+          "text": "朔朗脼朏朓霸□□朒□期□朦朧朎腄臘臈㬿朠□朊䏙"
+        },
+        {
+          "id": "21.20",
+          "text": "戫龓明部第三百十一\n朙盟囧部第三百十二\n□"
+        }
+      ]
+    },
+    {
+      "id": "玉篇.22",
+      "ordinal": 22,
+      "title": "卷21",
+      "sourcePage": "玉篇 (四庫全書本)/卷21",
+      "sourceRevid": 743494,
+      "sourcePages": [
+        "玉篇 (四庫全書本)/卷21"
+      ],
+      "passages": [
+        {
+          "id": "22.1",
+          "text": "欽定四庫全書\n梁　顧野王　撰冥部三百十三　　　夕部三百十四多部三百十五　　　小部三百十六幺部三百十七　　　部三百十八部三百十九　　　丏部三百二十大部三百二十一　　奢部三百二十二火部三百二十三　　炎部三百二十四焱部三百二十五　　炙部三百二十六爨部三百二十七　　囱部三百二十八黑部三百二十九　　赤部三百三十亦部三百三十一　　夨部三百三十二夭部三百三十三　　交部三百三十四尢部三百三十五　　壹部三百三十六叀部三百三十七　　丶部三百三十八丹部三百三十九　　青部三百四十氏部三百四十一　　　氐部三百四十二"
+        },
+        {
+          "id": "22.2",
+          "text": "鼆夕部第三百十四\n夜□夢夗夝夤□夙□外□"
+        },
+        {
+          "id": "22.3",
+          "text": "□㚌□□㗬□郺㷇㚊㚉夡□夠□㩼㚋□□□□□卶㚍"
+        },
+        {
+          "id": "22.4",
+          "text": "少尐尖□㝻"
+        },
+        {
+          "id": "22.5",
+          "text": "幼麼□盭□㡫部第三百十八\n幽幾□\n部第三百十九\n□玆玈玅"
+        },
+        {
+          "id": "22.6",
+          "text": "□夾夸奄□奯奅□夽□契奃□□□□㚠夷奓□㚗奜□奒奝□□䯨㚜□太□奕奘㚖奚奰耎奫□尖□□奩□□奆□□奦奈□奪□□"
+        },
+        {
+          "id": "22.7",
+          "text": "奲"
+        },
+        {
+          "id": "22.8",
+          "text": "炟□燬燹焌燒炪□烈然燃燔熚□□熯烝炥熮□㷳熇熲炯爚熛烄□□㶣炭㷢炦燋灰炱煤煨熄烓煁烘燀齌炊烰□熷熹熺熙□煾煎熬炮炰煏㷶□爆煬□㸏爤□㷉熨□□灸灼煉㷓燭灺㶳燼焠煣熑㷮焚燌炃□燎□□□焦灾烖災□煙烟□焆燂燖煴焞煦炳焯煒照炤㶴煜焴熠燿煇炗爓煌熿焜熱煗煖熾□炕燠炔炅燥燺焅熭烕燾爟烜㷭爝燧㸂□熂㷄㷅炒煓熸焮炘煆炖爊㸊㷰煟煽㷆焲烳燷烔㸎㶧炵焪烴燫熪□爡焥爌炴㶵煝焃炬炁焷爁灹烯㸅烼炢爩烗燩燍燏㶼烠煑炈㷎烑煠灱焇炶焄焟燈□熻煪□㷷□燉爍煥爞缹熟烋烽爖灴煩爐爈烊烐熧□熡煘㶯灯炷爙熩煄□烶㶡熽炓煈燇熃燐炑㷬□㷤□爅熼爀□熆炠熦勲燘燆㷿爔炣煃㷃㷂□煍熰焵□炌□焝烇焰□灷□□焀煂"
+        },
+        {
+          "id": "22.9",
+          "text": "燄□□□㷠燅欻煔□"
+        },
+        {
+          "id": "22.10",
+          "text": "熒燊炙部第三百二十六\n□㸋爒□□□"
+        },
+        {
+          "id": "22.11",
+          "text": "□釁□"
+        },
+        {
+          "id": "22.12",
+          "text": "窗□怱忩悤"
+        },
+        {
+          "id": "22.13",
+          "text": "黸䵣□黲䵮黤黗黝黚䵵□□黦黔䵤黕黠黨黷黵黴□黜黱黛儵黟黮黭□䵱黥䵞黓䵨□□□□黰□□□□□黧□□黬黫䵴□䵬黳□□□□□□□□□□䵟點黶黯䵭□□䵳□□□□□墨黢□□□□黖"
+        },
+        {
+          "id": "22.14",
+          "text": "赨□□赧煆䞓頳□□赭赩䞕□赫䞔赥"
+        },
+        {
+          "id": "22.15",
+          "text": "㚒夨部第三百三十二\n奊□吳□□□"
+        },
+        {
+          "id": "22.16",
+          "text": "喬□□"
+        },
+        {
+          "id": "22.17",
+          "text": "□絞□□"
+        },
+        {
+          "id": "22.18",
+          "text": "尪尳㝿㝾㞁尲尬尥□□□㝼□尰□㞇㞂尯㞆□㞄□尵□□□㞅□□□□尮"
+        },
+        {
+          "id": "22.19",
+          "text": "亄懿叀部第三百三十七\n□□□□□"
+        },
+        {
+          "id": "22.20",
+          "text": "主㕻咅卞"
+        },
+        {
+          "id": "22.21",
+          "text": "目㣋雘彤蚒"
+        },
+        {
+          "id": "22.22",
+          "text": "□䨼静氏部第三百四十一\n□"
+        },
+        {
+          "id": "22.23",
+          "text": "□㲳□"
+        },
+        {
+          "id": "22.24",
+          "text": "玉篇卷二十一"
+        }
+      ]
+    },
+    {
+      "id": "玉篇.23",
+      "ordinal": 23,
+      "title": "卷22",
+      "sourcePage": "玉篇 (四庫全書本)/卷22",
+      "sourceRevid": 743499,
+      "sourcePages": [
+        "玉篇 (四庫全書本)/卷22"
+      ],
+      "passages": [
+        {
+          "id": "23.1",
+          "text": "欽定四庫全書\n梁　顧野王　撰山部三百四十三　　　屾部三百四十四嵬部三百四十五　　　屵部三百四十六广部三百四十七　　　厂部三百四十八髙部三百四十九　　　危部三百五十石部三百五十一　　　磬部三百五十二部三百五十三　　　阜部三百五十四部三百五十五　　　厽部三百五十六"
+        },
+        {
+          "id": "23.2",
+          "text": "嶽岳□□岱峱巙嶩㠀嶧嵎嶷岷㟭□㞦崋巀嶭嵕嵏崞崵岵屺嶨嶅岨岡岑崒巒宻岫嶘㟞峻嶞崟崛崇崈㠑□巁巖嵒嵯峨崝峥嶸嵤岊岪嵍岣嶁嶃峑嶚嶟岬崆□㟎㠐□巇㠔㠅豳峭㟚岐崤峞□□㞺□□□㟉巋崧嵩崴㠢嶓㠆岟嵐崥㟍岭巉岌嶫崌崐崘巘崦嵫峘嶢巃嵸嶜嶙峋岻峛崺岝峉崳嵁□□嶔嵰嶮嶼嵆嶊嵔嶉㠝岏嵃屼嵽嵲□嶰嶺崩崚嶒㟅嵣嵌㟹嶕嶣嶑㞰嵀㟇□峎㠕峴嵼峙嵿㞳嶝岠□㟽峼□□□□□㠚㟋□峒崽□崃嵦嵋﨑嶇岴嵠崠嶠㟒崷㟏□峐岯嶈□峵嵾㞥岓㠠嵢峿峸岹㟘嶗㠧岈□岍嵅㠉巔㠓崶㠦嵱嵭嶆㟿□崼㠧㠖嵄㞨□□□□岲□嵹巏□□□㠠□崹□㠍□岞崿□峪㟳嵑嶱岄㞽□屹岦嵉峇□□□㞧□㞱峯仚㠙巊㟰崱巐崔㟐"
+        },
+        {
+          "id": "23.3",
+          "text": "□□嵞"
+        },
+        {
+          "id": "23.4",
+          "text": "巍□屵部第三百四十六\n□崖岸嵟嶏"
+        },
+        {
+          "id": "23.5",
+          "text": "廙庭廇庉廬廦廱㢕府庠序㢚廣庌廡□庖廏廐□㢋庫廥庾㢏廁庰廛㡲□廉庢龐廮底□庳庇庤庻廔㢈廢庮廑□□㡿廟庿廞廫廖庥廓廂庬席廲庘㢒廝廋□㢓□廯廘廕㢖廊廈店□廜㢝庲庈庛庋庪□㡰庵庱庨□床㡼□廅□□庯庴□□□□㢍□庁□廳□□□㢗㡱□□㡵㢊庎庩□□□□庀廪廠□□□□㡸㢔□□□□廆□□□㡶㡷□㢃□庡□廨□□□□廗□㢄㢛㡺䨾㡹度□㡲□□庍座□䵇\n部第三百四十八\n厈㕋㕆厓厜㕒厬厥厎厱厤厲□厗㕇□㕊厝尨□厞□仄□□厧厭厃厒㕈□□□厇□㕍□厚㕂□㕃□□□□㓹厙㕐㕌㕅厔□厄"
+        },
+        {
+          "id": "23.6",
+          "text": "□亭亳髝髞□髛□危部第三百五\n㩻卼石部第三百五十一\n磺礦碭碝砮礜磏碣□碫䂬礫□磧䃍□碑殞硞矻硠磕礐磿硻砢磊磥□礹磽确□礒碞碎破哲礙礱硟研䃺磨磑碓䂿磻碆□砭硯䃒砠磋磷硌砥䃤砌䃀䃫□硫砬礪磫礛䃴砡磅矺磓□矸碕磯□䃊硾磭碌䃚礬磁磍碬碨□□礎磶礩磌碥礥磼礏䂳□䃓□磤礓磐磝□碻磖硨磲砊䃛□硐磟碡䃧䃔碊磃砫磂硍硥䃂磾碼碯䃸磹䂦硊硱磳砎硂碏礣䃷□砰硑硭硝砉□硜□□䃜礊硿碪砧□□磎碁硡䃶砒□碉磴砯磞䃁碖硼□□䃢䂚□硄碢□砣□礯□□碐碤□砱碽□□矼䃑□䃋䂘䃈䃌硢砂碒䂟䃡碀□□硧䂢□矷碔礧磈□䃬砲䂽䂪□□磢䂺□䃎□□磉䂹砋磣硪吸砪□磵硬硋矴□砟䂤□□䃝碃䃻砑砞砩□硉矹礤磆䃙□□䃞磩□□䂸砳碦硆䃳砝□礮□礇䃗砄䂰䂮硤□碋□□磬部第三百五十二\n殸毊㲆□□□鏧□\n部第三百五十三\n□"
+        },
+        {
+          "id": "23.7",
+          "text": "□䧰阞陵陰陽陸□阿阪陂陬隅險限阻陮阭隗□陖陗隥□陜陟陷隰□䧢隤隊降隕隉陊阤□阬防隄䧑阯阺陘阢隒阸隘隔障隩附隈□隴陝䧇䦺□□陭□隃䧊阮陚䧦□陼陳□陶陔阽除階阼䧘陛隙陾陙際陪陴隍阹隖陲院陯隌阠阰隆陀陞□□阾□阡隇䧡䧕□□□隚隝隯䧨䦽隕□□䦼□陠䧜陒陓䧁□隑䧆□陌隧隓隋墮隮陣䧞隵隁䧫隀□陑隅□□陻敶□□阷□䧅䧃□□□陫䧒䧓䧌䦻□䧋陡□䧉□□䧛□□䧠阧隢䧝□□□䧥□□□䧔䧯阣䧗\n部第三百五十五\n□□□厽部第三百五十六\n參垒"
+        },
+        {
+          "id": "23.8",
+          "text": "玉篇卷二十二"
+        }
+      ]
+    },
+    {
+      "id": "玉篇.24",
+      "ordinal": 24,
+      "title": "卷23",
+      "sourcePage": "玉篇 (四庫全書本)/卷23",
+      "sourceRevid": 743504,
+      "sourcePages": [
+        "玉篇 (四庫全書本)/卷23"
+      ],
+      "passages": [
+        {
+          "id": "24.1",
+          "text": "欽定四庫全書\n梁　顧野王　撰馬部三百五十七　　牛部三百五十八犛部三百五十九　　羊部三百六十羴部三百六十一　　部三百六十二萈部三百六十三　　犬部三百六十四犾部三百六十五　　豕部三百六十六部三百六十七　　□部三百六十八部三百六十九　　嘼部三百七十廌部三百七十一　　鹿部三百七十二麤部三百七十三　　㲋部三百七十四兔部三百七十五　　部三百七十六兕部三百七十七　　象部三百七十八能部三百七十九　　熊部三百八十龍部三百八十一　　虍部三百八十二虎部三百八十三　　虤部三百八十四豸部三百八十五"
+        },
+        {
+          "id": "24.2",
+          "text": "□□騭䭴駒駽駣□驪騩駵騢騏騅駱□駰騘驈䮇駹驃騧□驖駓䮗馰□驔騽馵驠䮧騛驁驥騵駿騋驍驕䮔□駂騜騂驓騚騇騴騝駩騄駬驌騻馻驎驩䮌騕□褭□䮤驊駜䮡駥驗駁駫駉騯䭹驤驀駕騑□駊騀□騤篤□駸馺馮□騃□驟颿驅駈馳駝駞騖駾䮋騁䭿駻馯駧驚□駐騫馴騺駗驙□□□馽騷駑駘駔驡騶驛馹□騰駮駪馭駃騠驘䯁騊駼驢驒騱䮝驝□駴駭駎騥□□駤駛□驜驨騉䮸䮹䮭䮻□□□䮾騣䮚䮴䮢□騲驫□□驂□□駍馶䮉□駏驉騮騟䯂䮄䭾□□□□駨□□□騆䮫䭵駯□□□□□駀䮊騦□□䮞□□䭺䮨駺□騳□䭸□□□□□騙□駙馸䮎□□□䮕䮙□驋䮰□䮜䮱□䮓□䮩□䮂□騔□馲䮬騞䮠□□䮷駟□□牛部第三百五十八\n牡犅牝犢特犆㸬犙牭㹑犗牻㹁□□犖㸹□犥犉㹊□㹔□□犫犨牟㹌牲牷牿牽牢犓犕㹃犂㹗牴□㹂牼□犀物牣犧㸲犘犦犤犑犩犣牰犚犈犌□㹎㸪牣犎□犍□㸰㹍犃□㹒㸷牸犐□□㹏犝□㹉牥犇□犜□□□㹆□□牨□牞□□□□㸳□□□□㸼□㹓□□□□□□㸸□牳㹙㸻□□牯□㸵□□牶犒牪□□□犔□□□□□□□□觕□"
+        },
+        {
+          "id": "24.3",
+          "text": "氂斄"
+        },
+        {
+          "id": "24.4",
+          "text": "芈羔羜羭□羝䍮羒牂羖䍽□羯羠羳□□羸䍴□羣□美羷羑□羻羌羶羬□䍺䍶羮羱䍱羫羵䍬䍨羦䍸䍫䍼䍳䍻䍲羺□□羛䍵羥羚□□□羏□□□"
+        },
+        {
+          "id": "24.5",
+          "text": "羼\n部第三百六十二\n□芇□"
+        },
+        {
+          "id": "24.6",
+          "text": "狗㺜□□狵尨□獢狡獫㹥猈猗狊猝㺌猩狌默㺖猥㺒猱獶㺑獎㹽㹪狠㺕獡狋㹞狺獷狀□獒獳□□狧狎狹狃獪犯□猜犺㹤猛獜獧狷狟□□戾□猌犮獨□□□獮獵狩獠臭猲狣獲獻獟狾□玃□狂狰獘類狄猴狻猊猶猷狙□獌狼獾犿獥狛□狐猵獺獱猨猿猫㺟猎犳獹㹱獖猰㹾□㺗㺧猾猇獦狚犽獚㺦猭□㺛獋狤㺎狒猓猋猣□狍猖玂玁狁㹿□狨㹫㹳狴獼猕□㺋㺞狸㺤㺏猍□犲獑猢猦□獂猚猯□狿狑□猧㹻□猽□㹲□□獅狳□□□㺂□猻□貕□猄□□□□㺈□□□狓㹹□㹺□□犼㺝狕□□□□狶□獬□獶猌□□猔□㹬猬猘狖㺠犹□□□□□㹟㺘□㹿□獁獍□狘□□獝㹼□□□獯狽狢□猆"
+        },
+        {
+          "id": "24.7",
+          "text": "㺇獄"
+        },
+        {
+          "id": "24.8",
+          "text": "□豬䝑□□□豰豯豵豝豶豭䝐□豛豤豷豧豢豠豲□豙豱豦豟□□□䝏□□䝒□䝕䖶□□豞䝓□䝋□豩䝅豪䝎□䝔豘□□□□□豨□□□□□䝍□□□□䝌䝈□䝆□豳\n部第三百六十七\n豚□□"
+        },
+        {
+          "id": "24.9",
+          "text": "□□□□彚□□\n部第三百六十九"
+        },
+        {
+          "id": "24.10",
+          "text": "獸廌部第三百七十一\n薦灋□□"
+        },
+        {
+          "id": "24.11",
+          "text": "麚麟□麐麒□麀□□麉□麋麔麎麇麏麕麞麃麈麑麙麢麝□麗□□丽麌麜䴟䴤䴧䴦䴠麁麆麡䴩□□麅麠麖□麍□□麂□"
+        },
+        {
+          "id": "24.12",
+          "text": "□□□"
+        },
+        {
+          "id": "24.13",
+          "text": "□㚟毚□□□"
+        },
+        {
+          "id": "24.14",
+          "text": "菟逸冤婏䨲㕙□□\n部第三百七十六\n禸离禽萬㸘禼□禹□□□"
+        },
+        {
+          "id": "24.15",
+          "text": "□"
+        },
+        {
+          "id": "24.16",
+          "text": "豫"
+        },
+        {
+          "id": "24.17",
+          "text": "㔮"
+        },
+        {
+          "id": "24.18",
+          "text": "□羆□□龍部第三百八十一\n龗靇龕䶬□龖龘"
+        },
+        {
+          "id": "24.19",
+          "text": "虙虞䖍虐□□□□□虖虘虨虑"
+        },
+        {
+          "id": "24.20",
+          "text": "□虒甝虪䖑□䖔虥彪䖊□䖐虓□䖘䖚虣□□虠號□□䖕䖎䖓□䖛"
+        },
+        {
+          "id": "24.21",
+          "text": "䖜贙"
+        },
+        {
+          "id": "24.22",
+          "text": "豹貙貔豼貚豺貜䝟貐貘□貈□□貆貁貍貛貒貗豻貂貉□貅□豾貓䝜貌貖䝢貀豽□□䝣□豿□□□□□䝤□□□□□□□□貊貋□□□□䝦□□"
+        },
+        {
+          "id": "24.23",
+          "text": "玉篇卷二十三"
+        }
+      ]
+    },
+    {
+      "id": "玉篇.25",
+      "ordinal": 25,
+      "title": "卷24",
+      "sourcePage": "玉篇 (四庫全書本)/卷24",
+      "sourceRevid": 743510,
+      "sourcePages": [
+        "玉篇 (四庫全書本)/卷24"
+      ],
+      "passages": [
+        {
+          "id": "25.1",
+          "text": "欽定四庫全書\n玉篇卷二十四　　　　　　梁　顧野王　撰烏部三百八十六　　　部三百八十七乙部三百八十八　　　燕部三百八十九\n鳥部三百九十　　　　隹部三百九十一奞部三百九十二　　　萑部三百九十三瞿部三百九十四　　　雔部三百九十五雥部三百九十六　　　魚部三百九十七部三百九十八"
+        },
+        {
+          "id": "25.2",
+          "text": "□焉舄\n部第三百八十七\n□㐱鳧乙部第三百八十八\n孔乳"
+        },
+        {
+          "id": "25.3",
+          "text": "鷰"
+        },
+        {
+          "id": "25.4",
+          "text": "鸞鳳鵬鶠鸑鷟鷺□鷫□鷞鵾鶴鶖□鴚駕鵞鴈鳫鴻鶩鴨□鵪鷖鵠鶚鷣鸇□鷐鸉鷢鶽鴿鳩鶌鶻鵃鴶鵴□䳚鴠鷚鶪鵯鸒鷽鴂鶭鴋䳀□鴛鴦鵽□□鸊鷉鸕鶿鷀鷧鳵鴺鵜鶘鶬鴰鷒鳶鴡鴝鸜□鵒□鶡鸚鵡䳇鷮鳪鴳鵧鳭□鶺鴒鴢鸀鳿鷏鴷鸄鸍鴸䳋鴖□鴗鵸䴅䲦鷔䳩䳅鷓䳑鵫鴣鸛鷤䳏鶗鶙鳲鴀䳫䳕鸁鸝鵹鵌鶤䳔鷙□鷲□䳳□□□鶹鷦□鷯鶨□□□䴌鵅□□鷸□□鴔鷗䳁鷛鳽鶂鷊□鷁鵁鶄鴜鷼□鵍鷒鷂鴧鶯鷩鵔鸃□鷕鶾鴆鷇鸓□鳴鶱鳻□鶞鳸□鴽鶢鶋鶅鷷鳼鶛□□鵗□鶼□䳤䴑䳐□鷶□□□□鵐□鶧鷱䳝□鷝鴱鵀鶝䲽□䴃鵋䳢□鵵鵩鸗鴄□鷘鸙鵺鷨□鶟□鶶鷵鵓□鶥鶈鳺䳯□鵂鶜鴟鵄鸎□□□䳦鶊鶷鷋鵛□鸆鴮鴘鵳鷹鶆鵚鵏□鴾鷄鶵鵰䳺鶕鶉□□䲨□䳴䳂鸅䳻鳹䲪鴉□梟䳧鵲鴊鵑鵊□鳷鵷䳉□䳟□□䴁□鶲鷭鴅鳱□鶇□鶓鶍鵟鷾鴯鵮□□鵨□鷡□䳷□□鴑□䳿䳪□□□鶰鴹䴇□䲼鴴□□□□□□□□□□□□鷌䲾䴐□□□□□䳎□□□□䳲鷧鴳□□□□□□□□□鳨□鵦□□䴆鸈□□䳖□鴓□□"
+        },
+        {
+          "id": "25.5",
+          "text": "雅雀雉□閵□雊雛雡□䨄□嶲□猚雗雞離雝䧹雕□雃雂□雁霍□雇□䧴□隿□雄雌䍜雋䨂隼䨁難□□□睢雜□䧲䧼雓□䧷□䧿□□□□□□□集隻□雒□□□䨈□䧳奞部第三百九十二\n奮奪萑部第三百九十三\n雚舊□蒦彠"
+        },
+        {
+          "id": "25.6",
+          "text": "矍雔部第三百九十五\n靃雙"
+        },
+        {
+          "id": "25.7",
+          "text": "䨊雧"
+        },
+        {
+          "id": "25.8",
+          "text": "䲊□鮞魼鰈鮙魶鱒□鰫䱬鮪䱎䲛鯍鰥鯀鯉鱣□□鱄鮦□鱧䱾鱺鰜䱏鯈鯾鯿魴鰟鱮魣鰱鮍䱂鮒□鱏鱨鯢鰼鰌鯇魠鮆鮎鰋□䱤鮷鯷䲚□鱖䱇鱓鮸魵䲐鰸鯜䰽魦鮮鱻䱡□鱳鰅鰂鱡鰞鱅鮊鮐鰒鮫鯨䲔鯁鱗鮏鯹鱢鮨鰭䱈□鮓□□䰼鮑魿鰕鰝□魧結鰻鰿鯽鱯魾□鱬鰩鰠魮䲃鮯鮡鱵鱤鮵鮂䱻鰦鯩鰧䲀鮤魛鱦䱆鱀鱁鮧鯤鯕鱊鮬鯞䰲□魟䱢鱍鯆魺鯪鯼□鮇䱋□鮩鱐䰴䱣䱝鮋鰑□䱐鱲䱲鯧鰲□䱺鱎鰹鯸䱌□鯔鰪鱂鯅鰬鮇鱴□鮈□鮹鯛鱟鮠鮿魽鮭□魳䲒䲓鰅鮾魡魪鱷鰐鰶䱱䰻漁鱸鯟鯬鮀䰿魤鮃鰍鰷□䲗䱵□□□鰤鰓鱕□鱑鯖鰡□□□□□鯄魨鮼鱃□□鮶□鰄䲑魜鮢鮽□□□魮□□鰢鱌□魢□□鰖□鱭鱝鰵鮌魬□鯶鰾□□䱰□魱□□魢䱿鮄□鯡□□䱞□□□鮥鯥鰴鯠鮜□䱚䲜□鮅□鮇䱜□鰏䱮鱉䱕□鯽䱒鯟□部第三百九十八\n□\n玉篇卷二十四"
+        }
+      ]
+    },
+    {
+      "id": "玉篇.26",
+      "ordinal": 26,
+      "title": "卷25",
+      "sourcePage": "玉篇 (四庫全書本)/卷25",
+      "sourceRevid": 743514,
+      "sourcePages": [
+        "玉篇 (四庫全書本)/卷25"
+      ],
+      "passages": [
+        {
+          "id": "26.1",
+          "text": "欽定四庫全書\n玉篇卷二十五　　　　　　梁　顧野王　撰鼠部三百九十九　　　易部四百\n虫部四百一　　　　　䖵部四百二\n蟲部四百三　　　　　它部四百四\n部四百五　　　　　黽部四百六\n卵部四百七　　　　　貝部四百八"
+        },
+        {
+          "id": "26.2",
+          "text": "□䶅鼢䶄鼶□鼸鼫鼨□□鼩□鼱䶃□鼷鼬䶂鼲□□鼣□鼯□□鼵鼮鼤鼭䶆鼪□□□䶈鼧□□□鼴鼦□□□□䶇□□□□易部第四百\n□"
+        },
+        {
+          "id": "26.3",
+          "text": "蝮螣蚺螼螾蚯螉䗥□蠁䖮蛁虭螝蛕蚘蛔蛹□蟯雖虺蜥蜴蠑蚖螈蝘蜓蠸螟蟘□蛖蝚蛣蠇蟫蛵蜭蛅蟴蟖蛓螆□□蚝䖯蚳蠆蝎蝤螬蟦蠀強蚚蜀蠲蛶蟣螕蠖蝝蜪螻蛄虰蟶蠪蠜蛾蚳螘蟻□□蟀蟋□蛬□蝒□蟷□蠰□螳蜋螵蜱蛸蜣□蛢蟥䗐蜆蜰蠦蜾蠃蜨蛺蚩蟠螌蝥蛑蟅䗪蛜蝛蜙蚣蝑蝗蛚蜺蟬蜩□蜻蛉螇螰蚗蛥蠓蠛蜹蝡□蠨蛸蛶蛆蚑蛂□□蚩螸蛻螫□蝁蛘螊蝕蠗蛟虯螭蜧蜦蜄蜌蛤螔蝓□蝸蛭蚌蜎蟺蚴蟉蚨蟄䗇蝦蟇蟼蠵□螹蛫蟹蜮蟈□蝄蜽蝯蚼蜼蛩蟨蝙蝠螮蝃蝀虹□蠻閩蜉螗䗡蜚蜟蜏蚅螐蠋蠾䖭蚆蜬蜠蟾蛈蜴蟒䗁蜿䖤蛒蟜蟙□䘃蝭蟧蟟䗃蚹螖蠌螲䖡蚭䗅蠟蟪螏蟍虴蛨蝍螃䗱□䗚蟭蝹蝜□蚵䖢□□蚡螪蛙□䗠蜸蚕䗘□□蜘蛛□蚤蠙蟡蝂蟞□虶蚞螔䗔蚰蝣蜒□蚸蟿螓蜈蟓䖻□蝳蜍□蚱䗗蝖蟚蟛蜝蛝蚊□蚢□□□□䗓蚿蜢蚥蝰蠍蝩蝶蜅蚟蜲蜫螒蠊螿□蝟蚍蛪□蛞□蠮䖪□蚲䗽䖺蜜蚻蟗蜷螯蟂䖳螢□□□赨□蚷蜊蠼䗏蛦□□□螚□蟮□繭蠒蛡□䗄□□□䗢□蝥□螠蝞□□蟃□□蛠䗲□螱□蟩蜡□䖩蝃蠞蜇蚇□□䗷蜐□□虳□□蚎□蛐蜶虵螺□蝌蚪蚶䗝䗵䖱螂䗧䖟蝚□□□□□□蝔□□䗛□□□䗜□䗋□䘎□䖲□虮□□蝬蚜□□□蚽□□蚾䘂□䗆□䗾□蛃□□虸蚷䗂□蟢□螞蜯蚌□□□□䖧□䘆□䗯□蟽□"
+        },
+        {
+          "id": "26.4",
+          "text": "蠶□螽□□蝨蠽蟊蠿□□□□蠭蠭螶□蟁□蝱蠹螙蠡□□□蠢□䘅䘍□□䘌䗣蠯□蟲部第四百三\n蠱□□□□□"
+        },
+        {
+          "id": "26.5",
+          "text": "蛇□\n部第四百五\n□□□□"
+        },
+        {
+          "id": "26.6",
+          "text": "□鼈黿鼃　䵷鼉鼅鼄鼂□蠅□□鼊"
+        },
+        {
+          "id": "26.7",
+          "text": "贕㲉孵毈貝部第四百八\n䞈財賄□贎貨賑䝩資賢臤賁賀賂貢賛贊賮□齎賷貸貣貱贈贛賞賚賜貤贏負貿貳賔賓□賖貰貺贅質費責□貦賈□買賤賦貧貪貶賃賕購□貲賨賣□贖賙貴䝿賻賵□貽䞀贍賭䞁貾贆□贇䞂䝹□䝮賆賝□賲賅□□䝰䝺贀□䝶賥䝧□貹賰賱䝻貯贓賳䝭□䩀䝫賟贔屓贉販贄贚□□賏賧□□□䞋□賶䝬□□䝱貼賉□賊䞄賽發贗□"
+        }
+      ]
+    },
+    {
+      "id": "玉篇.27",
+      "ordinal": 27,
+      "title": "卷26",
+      "sourcePage": "玉篇 (四庫全書本)/卷26",
+      "sourceRevid": 743519,
+      "sourcePages": [
+        "玉篇 (四庫全書本)/卷26"
+      ],
+      "passages": [
+        {
+          "id": "27.1",
+          "text": "欽定四庫全書\n梁　顧野王　撰\n羽部四百九　　　　飛部四百十\n習部四百十一　　　卂部四百十二非部四百十三　　　不部四百十四至部四百十五　　　毛部四百十六毳部四百十七　　　冉部四百十八而部四百十九　　　角部四百二十皮部四百二十一　　㼱部四百二十二革部四百二十三　　韋部四百二十四"
+        },
+        {
+          "id": "27.2",
+          "text": "翨□翡翠翰翟翁翅翤□翭翹□翮羿□翥翕翖翬翏翜翩翊□翺翔翯䍿翇□翢翪翴翿翳□□翛□翓□□羾䎉䎀翧翲□□䎕□䎗□□翷□□䎖翈□翻䎂翍□□□翼翣翽翦䎒□翳䎄䎘翎䎔□翄翀□□翗䎇□□䎐□□䍾□□□翸□䎈　䎈䎋□□□□䎌□□翐□□\n□䎎□翾"
+        },
+        {
+          "id": "27.3",
+          "text": "□飜"
+        },
+        {
+          "id": "27.4",
+          "text": "翫□卂部第四百十二\n煢"
+        },
+        {
+          "id": "27.5",
+          "text": "靡□靠䨿"
+        },
+        {
+          "id": "27.6",
+          "text": "□否至部第四百十五\n□到臻臺□□臶臸□"
+        },
+        {
+          "id": "27.7",
+          "text": "㲝氄㲦毨㲲□氈□㲖毾㲪㲢㲫氀□氍毹□㲥毦□□□□□毫㲱㲗□㲚□㲨毭㲔㲍㲬□□毼㲕毤靟毿□毬□□□㲯㲰毰毢毥㲟毻毯□氅㲡□氉㲓□□毱□□□毣□□氂□毳部第四百十七毳\n冉"
+        },
+        {
+          "id": "27.8",
+          "text": "第四百二十方云切\n䚭觻䚡觠觢□觬觭䚦觓觩□捔□觪□觸觕䚗□䚘衡□觰□觤觡觜觽觵觥觶觗□觴□觚解䚙䚫觼䚥□䚨□觳□觱觺䚢□䚣觷䚩䚧觖□䚝䚜□觟觝䚠\n□□□□□觘䚪□□□□\n□□□□□□\n□㓩□䚞□\n䚚□□䚟\n□□□䚛□\n□"
+        },
+        {
+          "id": "27.9",
+          "text": "□□皯皽\n皹皰□㿴皵㿺□㿸□㿪□㿷□皻皾皴㿮□□□□赧□皺□□㿯㿭□□□鞁㿫□□"
+        },
+        {
+          "id": "27.10",
+          "text": "□□□"
+        },
+        {
+          "id": "27.11",
+          "text": "□鞹鞄䩵鞣靼□鞼鞏靸鞶鞔鞮䩕䩡□□鞵鞋靪鞠□鞀鞉□䩩鞞鞛鞎鞃□䩑□□鞪䩛□鞥靶□韅䩶䩪□靷□靳□䩒□□鞌䩸□䩞鞈勒□□鞭鞙䩤鞅靲鞬□韇韄䪎鞚䩯鞻靾鞇鞜䪁䩐䩽□□䩖□靯䩹靫□□□□䩨□鞴䩚□鞽鞧韁靴鞾䩿□□䩭□□□□□□䩱□□□䩢䩥□靮鞗□□䪍鞕鞿□䩠鞓鞘□䪈□韉\n□靬鞲䩳□䪊□䩟□\n□䩝鞦韆䩷鞤䩼鞝□□䩬□□䩔□□□□□靿靽□□䪌□□□□靺鞨□鞁□䩚□䪋鞢□鞫□□鞊韈䩧鞳□□□□䩙"
+        },
+        {
+          "id": "27.12",
+          "text": "□韠韎□韢韜韝韘韔韣䪗䪗韤䪙韏□□韍□韐韞韗□䪏韌□□䪔□□韛□䪜䪝□䪛□□□□□韒䪒□□□䪕□□□□□□□䪐\n䪚"
+        },
+        {
+          "id": "27.13",
+          "text": "玉篇卷二十六"
+        }
+      ]
+    },
+    {
+      "id": "玉篇.28",
+      "ordinal": 28,
+      "title": "卷27",
+      "sourcePage": "玉篇 (四庫全書本)/卷27",
+      "sourceRevid": 743524,
+      "sourcePages": [
+        "玉篇 (四庫全書本)/卷27"
+      ],
+      "passages": [
+        {
+          "id": "28.1",
+          "text": "欽定四庫全書\n梁　顧野王　撰糸部四百二十五　　系部四百二十六素部四百二十七　　絲部四百二十八黹部四百二十九　　率部四百三十索部四百三十一"
+        },
+        {
+          "id": "28.2",
+          "text": "□繭絸繅繰線繹緒緬純綃□紇絓纅繀經織□綕絍䋕綜綹繢緯紀緷繦纇紿納紡絶續纘紹綤䋼縱紓繎紆□緈繙纖細緢縒紊縮級□綢緫約纏繞紾繯辮縎結締繃縛絿絅䌴給綝縪䊵䌖終□紈繒絩綺縠縑□縳綈縞練紬䌳䌤絁綮綾繡緭縵繪絢約緀䋛絹緑縹䋭絑纁綴絀絳綰縉緹綪縓紫紅繱紺綨綦緇䊷纔綟紑緂繻縟纚縰紘紭紻紞纓緌緄紳縌繟綬緺組纂□紐綸綎□絙□繐□紟□縁絝緥繜□紴絛緟纕纗縜䋐紃綅䋉縷綫線縫緁䌌紩緛繕絬纍累縭繄縿䌘徽紉繩繩縈縋絭緘縢編維絥䋊綊繁䋣繮紛紂緧䋺絆綇紖絼䊶縼□縻纆□絠紲緤□繘綆䋁□繳繴䋨緍紙絮絡䋈纊絖繫絘紨緝績纑綌絺縐\n□絟紵□緦緆緰縗絰緶䋀絜䋽\n緉絣縕紼□綍紕縊緎綏綷繼継綯絝繾綣紗繶綖緻繽綵綽䋷□□紽縺□緅□䌞繏□縙緋䌯縚紏□綑緵縀□網䋱□䋟緙繬綡䌥絎紷綼䌪䌐□䋃綄□縝䋸□□絽䌎□䌜絯䌨□綩綗縡䋙䌼絧緩顈䋌纋絻□緗纜緫縲□䋪繖綀䌦䌗繵䊹□繂絪紱□䋻縯䋂絨綿□䋿紜䋦紋縴繗繑□綱□□繆□緮䌀䌔䌮䌅絾䋥□糽絒紶\n䌡縥□絞□䋾糾□□統□繸□紁□□䋵絇綧紒□縤䌝䌁□□縖䊽\n絏䋖絉䌵□䋏\n□䌚緙絔□\n□□□纈䌟\n繣絈□䌩\n緊□䋢□□"
+        },
+        {
+          "id": "28.3",
+          "text": "緜䌛繇纛"
+        },
+        {
+          "id": "28.4",
+          "text": "□□□䋤\n□繛□□"
+        },
+        {
+          "id": "28.5",
+          "text": "□轡□□□"
+        },
+        {
+          "id": "28.6",
+          "text": "□□黺黼黻□"
+        },
+        {
+          "id": "28.7",
+          "text": "□"
+        },
+        {
+          "id": "28.8",
+          "text": "玉篇卷二十七"
+        }
+      ]
+    },
+    {
+      "id": "玉篇.29",
+      "ordinal": 29,
+      "title": "卷28",
+      "sourcePage": "玉篇 (四庫全書本)/卷28",
+      "sourceRevid": 743529,
+      "sourcePages": [
+        "玉篇 (四庫全書本)/卷28"
+      ],
+      "passages": [
+        {
+          "id": "29.1",
+          "text": "欽定四庫全書\n梁　顧野王　撰巾部四百三十二　　巿部四百三十三帛部四百三十四　　衣部四百三十五裘部四百三十六　　卩部四百三十七印部四百三十八　　卯部四百三十九辟部四百四十　　　茍部四百四十一勹部四百四十二　　包部四百四十三"
+        },
+        {
+          "id": "29.2",
+          "text": "帉帨帥帗□□幋帤幣幅㡆幘帶□㡋帔帴常㡓□□幎幂幔幬□㡘帳帷幕㠲㡜㡏帖帙幖□㠾幑□㡨幝幭幠飾幃帣帚席幐□㡒幩□帑布幏㡉㡔幦幄幢帞幧㡑帟㡊帢□□幗□㡅㡞□□□幞帊帪帾□□□□□㡦㡙□㡂□㠿□□□㠵□幰□□㠸㡚帽□□㡈□幟□□㡥㡗帺帋帍□㡟□帿幯帹幨□□□帆㠽□帬□㠺幊□□□幁□□□幜□□□㠹□㡝□□幌□□帒帓㠷□□□□□□□□"
+        },
+        {
+          "id": "29.3",
+          "text": "□"
+        },
+        {
+          "id": "29.4",
+          "text": "錦□□□"
+        },
+        {
+          "id": "29.5",
+          "text": "裁衮□䄠䄖袗裖裏表□□襁襋□褗襮裺衭衽䘳襟褸襺褋襲□褘褧袤□襘袛裯襤䙃□袪裻□□□□袖袂袥褢褱□袍袌衸襜襝裧□衧襑裾袉褰䙭襗袑䙱襩襱□褍襃□複襛褆袳袲裴裔□衯□襡□襐襦□褊袷袷襌襄□被衵褻衷䙗袾袓褽襞裨裕䘱衦□□袒□褫補□裸裎裼衺襭裝袺褿裹裛䙔裓裋□褐衰䘚卒褚袚襏衾□襚裞褮袕䘰袢褌裱襣袸襎裷䘹褹䙢䘪䘿袼䘨䘺褖褶袡襈襓製襬裂袧褣䘯袊袽䙄衪袨袀襆褯褠□䙇□裿袩䙯褈褓□䙐袜袠袟□裳裀禋襠襉□□□袲衲䘽䙏□䘾□襵裗袔□䘸䙎褾□□䘢䙕□裮袏袿襀□褑衩袣襊衿衱□衴衹衼襳衫襸裠袴襴□裒襹□衳䘴□袈裟䙈□䙅䙉□□褡裶襙䙩□褵䙤\n□襖□□衶□□祻襰□襯\n褹褟裐□襻䘻䙬䘝褥□䘼䘶"
+        },
+        {
+          "id": "29.6",
+          "text": "□求□"
+        },
+        {
+          "id": "29.7",
+          "text": "□□令□卶卲厄厀卻卷寋卸"
+        },
+        {
+          "id": "29.8",
+          "text": "□"
+        },
+        {
+          "id": "29.9",
+          "text": "卿辟部第四百四十\n䢃□"
+        },
+        {
+          "id": "29.10",
+          "text": "□敬"
+        },
+        {
+          "id": "29.11",
+          "text": "□匍匐匊勻勼勽㔪旬□匈□□□冢匌匓□匑□□□匃丐□㔩□□□匒□□㝁"
+        },
+        {
+          "id": "29.12",
+          "text": "匏"
+        },
+        {
+          "id": "29.13",
+          "text": "玉篇卷二十八"
+        }
+      ]
+    },
+    {
+      "id": "玉篇.30",
+      "ordinal": 30,
+      "title": "卷29",
+      "sourcePage": "玉篇 (四庫全書本)/卷29",
+      "sourceRevid": 743534,
+      "sourcePages": [
+        "玉篇 (四庫全書本)/卷29"
+      ],
+      "passages": [
+        {
+          "id": "30.1",
+          "text": "欽定四庫全書\n梁　顧野王　撰長部四百四十四　　□部四百四十五匕部四百四十六　　比部四百四十七从部四百四十八　　乑部四百四十九共部四百五十　　　異部四百五十一史部四百五十二　　支部四百五十三部四百五十四　　帇部四百五十五聿部四百五十六　　書部四百五十七隶部四百五十八　　臤部四百五十九帀部四百六十　　　出部四百六十一之部四百六十二　　生部四百六十三耑部四百六十四　　毌部四百六十五束部四百六十六　　㯻部四百六十七囗部四百六十八　　貟部四百六十九齊部四百七十　　　干部四百七十一幵部四百七十二　　片部四百七十三牀部四百七十四　　毋部四百七十五克部四百七十六　　丿部四百七十七部四百七十八　　弋部四百七十九□部四百八十　　　亅部四百八十一句部四百八十二　　丩部四百八十三□部四百八十四　　亡部四百八十五□部四百八十六　　兂部四百八十七旡部四百八十八　　皃部四百八十九部四百九十　　　先部四百九十一秃部四百九十二　　厶部四百九十三單部四百九十四　　录部四百九十五"
+        },
+        {
+          "id": "30.2",
+          "text": "□兵肆□镻镺□镽□䦋䦈□䦊□"
+        },
+        {
+          "id": "30.3",
+          "text": "眞□□化"
+        },
+        {
+          "id": "30.4",
+          "text": "□㔬□□□□匙㔭匘"
+        },
+        {
+          "id": "30.5",
+          "text": "芘毖"
+        },
+        {
+          "id": "30.6",
+          "text": "□□□幷"
+        },
+        {
+          "id": "30.7",
+          "text": "衆聚臮"
+        },
+        {
+          "id": "30.8",
+          "text": "□龔□異部第四百五十一\n戴□"
+        },
+        {
+          "id": "30.9",
+          "text": "事□"
+        },
+        {
+          "id": "30.10",
+          "text": "□□攲□㩽□\n部第四百五十四\n□爰受爭□□寽□□□"
+        },
+        {
+          "id": "30.11",
+          "text": "肄□□肅□"
+        },
+        {
+          "id": "30.12",
+          "text": "筆"
+        },
+        {
+          "id": "30.13",
+          "text": "□畫□畵晝□"
+        },
+        {
+          "id": "30.14",
+          "text": "□隸隷"
+        },
+        {
+          "id": "30.15",
+          "text": "緊堅豎竪"
+        },
+        {
+          "id": "30.16",
+          "text": "師□"
+        },
+        {
+          "id": "30.17",
+          "text": "□糶□□屈□□□"
+        },
+        {
+          "id": "30.18",
+          "text": "㞢□生部第四百六十三\n□産隆□□甤甡"
+        },
+        {
+          "id": "30.19",
+          "text": "虜貫"
+        },
+        {
+          "id": "30.20",
+          "text": "柬□□□□□□□"
+        },
+        {
+          "id": "30.21",
+          "text": "□櫜□㯱橐囊□□□"
+        },
+        {
+          "id": "30.22",
+          "text": "圜圎團囩㘣圌囘□圖□圛國囷圈囿□㘝園圃因囹圄囚固圁圍困圂囮㘥□□卣□圊㘠㘡园囤圝囦□□□圉□囨圚□□□□□圔□□□囶圀□"
+        },
+        {
+          "id": "30.23",
+          "text": "□□"
+        },
+        {
+          "id": "30.24",
+          "text": "亝□□"
+        },
+        {
+          "id": "30.25",
+          "text": "屰幵部第四百七十二"
+        },
+        {
+          "id": "30.26",
+          "text": "□版牘牒牑牖牏牉□牓牌□㸡□□㸣□□□㸢□□牎□牋牊□□□□□□□㸥□□㸝"
+        },
+        {
+          "id": "30.27",
+          "text": "毐□"
+        },
+        {
+          "id": "30.28",
+          "text": "□□□"
+        },
+        {
+          "id": "30.29",
+          "text": "乀弗□乂\n部第四百七十八"
+        },
+        {
+          "id": "30.30",
+          "text": "㢥□□"
+        },
+        {
+          "id": "30.31",
+          "text": "也□"
+        },
+        {
+          "id": "30.32",
+          "text": "□"
+        },
+        {
+          "id": "30.33",
+          "text": "□鉤拘□笱□□□"
+        },
+        {
+          "id": "30.34",
+          "text": "□□糾"
+        },
+        {
+          "id": "30.35",
+          "text": "□直矗"
+        },
+        {
+          "id": "30.36",
+          "text": "望□乍無无"
+        },
+        {
+          "id": "30.37",
+          "text": "㔷區匿匽医匹㔸匾兂部第四百八十七\n兓"
+        },
+        {
+          "id": "30.38",
+          "text": "□□旤□"
+        },
+        {
+          "id": "30.39",
+          "text": "貌㝸弁□□\n部第四百九十\n兜"
+        },
+        {
+          "id": "30.40",
+          "text": "□兟秃部第四百九十二\n穨"
+        },
+        {
+          "id": "30.41",
+          "text": "□篡厸"
+        },
+        {
+          "id": "30.42",
+          "text": "囅"
+        },
+        {
+          "id": "30.43",
+          "text": "玉篇卷二十九"
+        }
+      ]
+    },
+    {
+      "id": "玉篇.31",
+      "ordinal": 31,
+      "title": "卷30",
+      "sourcePage": "玉篇 (四庫全書本)/卷30",
+      "sourceRevid": 743539,
+      "sourcePages": [
+        "玉篇 (四庫全書本)/卷30"
+      ],
+      "passages": [
+        {
+          "id": "31.1",
+          "text": "欽定四庫全書\n梁　顧野王　撰四部四百九十六　　叕部四百九十七亞部四百九十八　　五部四百九十九\n六部五百　　　　　七部五百一\n八部五百二　　　　釆部五百三\n半部五百四　　　　九部五百五\n丸部五百六　　　　十部五百七\n卅部五百八　　　　古部五百九\n寸部五百十　　　　丈部五百十一皕部五百十二　　　甲部五百十三乙部五百十四　　　丙部五百十五丁部五百十六　　　戊部五百十七己部五百十八　　　巴部五百十九庚部五百二十　　　辛部五百二十一辡部五百二十二　　䇂部五百二十三桀部五百二十四　　壬部五百二十五癸部五百二十六　　子部五百二十七了部五百二十八　　孨部五百二十九ㄊ部五百三十　　　丑部五百三十一寅部五百三十二　　卯部五百三十三辰部五百三十四　　巳部五百三十五午部五百三十六　　未部五百三十七申部五百三十八　　酉部五百三十九酋部五百四十　　　戌部五百四十一亥部五百四十二"
+        },
+        {
+          "id": "31.2",
+          "text": "□亖"
+        },
+        {
+          "id": "31.3",
+          "text": "□"
+        },
+        {
+          "id": "31.4",
+          "text": "□凹□凸□"
+        },
+        {
+          "id": "31.5",
+          "text": "□"
+        },
+        {
+          "id": "31.6",
+          "text": "□分尒介曾尚公余□个必詹□"
+        },
+        {
+          "id": "31.7",
+          "text": "□番悉宷審釋"
+        },
+        {
+          "id": "31.8",
+          "text": "叛"
+        },
+        {
+          "id": "31.9",
+          "text": "馗"
+        },
+        {
+          "id": "31.10",
+          "text": "□䎠奿"
+        },
+        {
+          "id": "31.11",
+          "text": "廾千肸□卙□博"
+        },
+        {
+          "id": "31.12",
+          "text": "卌丗"
+        },
+        {
+          "id": "31.13",
+          "text": "嘏寸部第五百十\n寺㝷專射尃導尉□將"
+        },
+        {
+          "id": "31.14",
+          "text": "受□皕部第五百十二\n奭"
+        },
+        {
+          "id": "31.15",
+          "text": "□□□□"
+        },
+        {
+          "id": "31.16",
+          "text": "亂□乩乾尤丙部第五百十五"
+        },
+        {
+          "id": "31.17",
+          "text": "□"
+        },
+        {
+          "id": "31.18",
+          "text": "成□"
+        },
+        {
+          "id": "31.19",
+          "text": "□巹㠱"
+        },
+        {
+          "id": "31.20",
+          "text": "□"
+        },
+        {
+          "id": "31.21",
+          "text": "辠辜辥辤辝辭辢"
+        },
+        {
+          "id": "31.22",
+          "text": "辯㸤"
+        },
+        {
+          "id": "31.23",
+          "text": "童□妾"
+        },
+        {
+          "id": "31.24",
+          "text": "椉□乗磔"
+        },
+        {
+          "id": "31.25",
+          "text": "癸"
+        },
+        {
+          "id": "31.26",
+          "text": "㜽□孕㝃字㝅孿孺季孟□孼孳□孥孠存疑孝孡孩孷孖孾孛孜□㝂□□□學□孢㜿了部第五百二十八\n了孒孑"
+        },
+        {
+          "id": "31.27",
+          "text": "孱孴□"
+        },
+        {
+          "id": "31.28",
+          "text": "㐬育□䟽丑部第五百三十一\n羞"
+        },
+        {
+          "id": "31.29",
+          "text": "□"
+        },
+        {
+          "id": "31.30",
+          "text": "戼□"
+        },
+        {
+          "id": "31.31",
+          "text": "□辱巳部第五百三十五\n□㠯"
+        },
+        {
+          "id": "31.32",
+          "text": "啎忤"
+        },
+        {
+          "id": "31.33",
+          "text": "□□㬰曵暢□□"
+        },
+        {
+          "id": "31.34",
+          "text": "□□酒䤁釀醞□酴釃□䣺醪醴醹醇酎□醲䣵酤□□䤗酷酓醰䣪䣧配酌醮□酳酬醻醋䤉釂酣酖醧醵䣰酺醉醺醅醟䣱酗酲莤䤘酸□酨醶酢酏醬□□□醢䤅□䤎酹䣼䤔䣸醍䣽醷酪醳醆醒醩□醙□䤄醂醝醠䤕□䤙□醦□醏□䤍醛酮□酭䣿醔䤒醯䤈醊□酘酡醨醎□醐醿醽醁醡䣩□䤃醚□\n□□酑酥䤂䣫□䣻□□酐□酠□䤆醃□□醥酩酊醜䤏醑醓韽□□醼□□□䤖□醀䣮醘醭□□□"
+        },
+        {
+          "id": "31.35",
+          "text": "尊僔"
+        },
+        {
+          "id": "31.36",
+          "text": "□"
+        },
+        {
+          "id": "31.37",
+          "text": "玉篇反紐圖\n夫文物之國假以書詩七歩之才五音為首聿興文字反切為初一字有訛餘音皆失四聲之體與天地而齊生宫商角徵羽之音與五嶽而同起且天地生於混沌不同混沌之初君子生於嬰兒豈與嬰兒同夫欲反字先須紐弄為初一弄不調則宫商靡次昔有梁朝沈約創立紐字之圖皆以平書碎尋難見唐又有陽甯公南陽釋處忠此二公者又撰元和韻譜奥文約義詞理稍繁淺劣之徒尋求難顯猶如匕匕彡□之字寫人㑹有改張紐字若不列圖不肖再皆失今此列圖曉示義理易彰為於韻切之樞機亦是詩人之鈐鍵也譜曰平聲者哀而安上聲者厲而舉去聲者清而逺入聲者直而促傍紐者皆是雙聲正在一紐之中傍出四聲之外傍正之目自此而分清濁也故列五箇圓圖者即是五聲之圖每圖皆從五音字行皆左轉中有注説之又列二箇方圖者即是九弄之圖圖中取一字為頭横列為圖首目題傍正之文以别之沙門神珙撰"
+        },
+        {
+          "id": "31.38",
+          "text": "東方喉聲"
+        },
+        {
+          "id": "31.39",
+          "text": "刀刁閍閚　袖柚誄誅　　閟悶痤座　　□□台□　　揌楒槯摧　　熊羆窴寘　　謟諂滔淊　　槄掐挼桵　　雎睢緌綏　　推椎絰經　　冷泠打朾　　□屏晴睛　　否□桶桷　　凍涷竉寵　　揀棟揔楤　　楥援嵕峻　　狻猣種　　樅摐橦撞　憧幢□扼　　帷惟貽眙　　攘榱時畤　　箕萁笞苔　　纂綦□　　捐損焌煖　　潛澘筧莧　現垷綆緶　　塤㻆橪撚　　檀擅搌榐　　瑑琢梗楩　　鞕鞭奓爹　　治冶舜斚　　灺地槎搓　絮䋈歁欺　　檬橡□敗　　駇馭䁔暖　　揮禈髧髠　　根拫捾棺　　禪襌菅管　　販眅甬角　　畧晷箄箅　　杫祉杷把　　暑署褚楮　　樁椿咀□　　柱拄枸拘　　祐祜摞樏　　湎洒揩楷　　浽涹毐毒　　陪倍荀筍　　□□敞敝　　汗汘挺挻　　揣椯挑桃　　皁早杲果　　□囚䀴脛　甲曱明朋　　未末天夭　　蒲滿杳沓　　恩思竪堅　　子孑且旦　　林材東柬　　北比徂阻　　枝技辨辦　　己已"
+        }
+      ]
+    }
+  ]
+}

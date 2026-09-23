@@ -117,6 +117,10 @@ const ALL_ROLES: RoleName[] = ['agent', 'recipient', 'theme'];
 const ENTITY_NO_VERB = "(?:(?![謂問告語])[^，。；：︰﹕「」？！、]){1,10}";
 /** Recipient slot: may not be the 曰 that belongs to the verb. */
 const ENTITY_NO_YUE = "(?:(?!曰)[^，。；：︰﹕「」？！、]){1,10}";
+/** Entity for the 云 frame: as ENTITY_NO_VERB but also refusing 云, so the agent span cannot itself
+ *  carry the speech verb. Needed because 云 is ALSO an ordinary "thus" — without this, 「是故云」and
+ *  「如是云」could put a conjunction in the agent slot and the frame would assert a speaker. */
+const ENTITY_NO_YUN = "(?:(?![謂問告語云])[^，。；：︰﹕「」？！、]){1,10}";
 const AGENT_THEME: RoleName[] = ['agent', 'theme'];
 
 const FRAMES: { id: string; verb: string; source: string; roles: RoleName[] }[] = [
@@ -145,6 +149,14 @@ const FRAMES: { id: string; verb: string; source: string; roles: RoleName[] }[] 
   { id: 'wen-plain', verb: '問', source: `(${ENTITY_NO_VERB})問曰${COLON}${Q_OPEN}(${SPEECH})${Q_CLOSE}`, roles: AGENT_THEME },
   { id: 'gao-plain', verb: '告', source: `(${ENTITY_NO_VERB})告曰${COLON}${Q_OPEN}(${SPEECH})${Q_CLOSE}`, roles: AGENT_THEME },
   { id: 'yue-quote', verb: '曰', source: `(${ENTITY_NO_VERB})曰${COLON}${Q_OPEN}(${SPEECH})${Q_CLOSE}`, roles: AGENT_THEME },
+  // <A>云：「<S>」 — declared 2026-09-24. 六祖壇經 read at 28.10% against a pre-registered prediction of
+  // >=0.60, and the cause was none of the three things the falsifier named (quote form, entity slot,
+  // length limit): it was this missing verb. 客云：「我從蘄州黃梅縣東禪寺來。」, 祖云：「這獦獠根性大利，
+  // 汝更勿言，著槽廠去。」 Corpus-wide the shape sits in 1,971 passages the grammar cannot read.
+  // LAST in the order ON PURPOSE, and that is not enough on its own: frames are tried in order, but
+  // containment precedence lets a wider span SUPERSEDE a narrower one, so a frame appended here can
+  // still take readings away. Measured before and after, not assumed.
+  { id: 'yun-quote', verb: '云', source: `(${ENTITY_NO_YUN})云${COLON}${Q_OPEN}(${SPEECH})${Q_CLOSE}`, roles: AGENT_THEME },
 ];
 
 export const CONSTRUCTION_IDS = FRAMES.map((f) => f.id);
@@ -257,6 +269,19 @@ export const CONSTRUCTIONS: Construction[] = [
       'that the whole passage is about A: only the frame is read, and a passage may hold several frames '
       + '(see additionalMatches)',
       'that A is a person: a book title can occupy the agent slot, and the frame cannot tell',
+    ],
+  },
+  {
+    id: 'yun-quote', frame: '<A>云：「<S>」', roles: AGENT_THEME,
+    interpretation: 'A speaks, or A is cited; S is what A said. 云 as a reporting verb, separate from 曰.',
+    reuseContract: 'Two spans, recipient null under the missing-role contract. The agent span may not '
+      + 'contain 謂問告語云, so a verb-bearing run before 云 is never read as an agent.',
+    doesNotLicence: [
+      'that A is a person: 《詩》云 and 經云 put a TEXT in the agent slot, and 云 is the verb that does '
+      + 'this most often — 《詩》云：「匪革其猶」 is a book being cited, not a speaker who spoke',
+      'that 云 means "said" wherever it occurs: 云 also means "thus", and only the frame with a quotation '
+      + 'after it is read at all',
+      'that a citation chain is one relation: A云 and B云 are one frame each and neither implies the other',
     ],
   },
 ];

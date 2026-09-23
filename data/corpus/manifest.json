@@ -1,10 +1,18 @@
 {
   "schema": "wenyan.corpus.manifest.v1",
   "format": "wenyan.corpus.v1",
-  "generatedAt": "2026-09-23T12:30:46.209Z",
+  "generatedAt": "2026-09-23T12:40:16.585Z",
   "partialRebuild": {
     "only": [
-      "齊民要術"
+      "藝文類聚",
+      "初學記",
+      "釋名",
+      "說文解字",
+      "玉篇",
+      "通典",
+      "神農本草經",
+      "周髀算經",
+      "孫子算經"
     ],
     "note": "this run rebuilt a subset; other entries are carried over from the previous manifest"
   },
@@ -24,10 +32,10 @@
     "ctextNotice": "ctext.org was NOT used. Its robots.txt and anti-scraping notice state that automated access is not authorized and direct researchers to subscribe; no content was retrieved from it."
   },
   "counts": {
-    "works": 107,
-    "sections": 4132,
-    "passages": 167892,
-    "characters": 21179901
+    "works": 116,
+    "sections": 4530,
+    "passages": 209604,
+    "characters": 25181798
   },
   "works": [
     {
@@ -2543,6 +2551,201 @@
       "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
       "limitations": [
         "密度对照（对话性文本，检验天工開物 0.67% 是书的性质还是类的性质）。路由 mainPageLinks，15 章；授权标签 唐朝作品。"
+      ]
+    },
+    {
+      "id": "藝文類聚",
+      "zh": "藝文類聚",
+      "tradition": "philosophers",
+      "file": "works/藝文類聚.json",
+      "sha256": "3e14536c69f27ab3a612595a34ccdd48d15c56993bb4bf214dd5f39bd46c2809",
+      "counts": {
+        "sections": 100,
+        "passages": 14421,
+        "characters": 1107119
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 32,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {},
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "未声明结构优先批（体裁假说：類書）。路由 mainPageLinks，100 章；授权标签 PD-old。密度与未声明结构密度实测后置。"
+      ]
+    },
+    {
+      "id": "初學記",
+      "zh": "初學記",
+      "tradition": "philosophers",
+      "file": "works/初學記.json",
+      "sha256": "499f8c16d27cce7c271e07a83c554510a246e80fb863a9956be9d02ab6e0c051",
+      "counts": {
+        "sections": 31,
+        "passages": 5216,
+        "characters": 628796
+      },
+      "structuralMarkersRemoved": 4,
+      "flaggedShortPassages": 41,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {
+        "PD-old": 5
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: PD-old.",
+      "limitations": [
+        "未声明结构优先批（体裁假说：類書）。路由 mainPageLinks，31 章；授权标签 唐朝作品。密度与未声明结构密度实测后置。"
+      ]
+    },
+    {
+      "id": "釋名",
+      "zh": "釋名",
+      "tradition": "philosophers",
+      "file": "works/釋名.json",
+      "sha256": "7a2bb4713cb072f13d13015fc47424bc8e6ada2dc2da09f482f437089d6090b8",
+      "counts": {
+        "sections": 8,
+        "passages": 31,
+        "characters": 26776
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {
+        "PD-old": 4,
+        "東漢作品": 8
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: PD-old, 東漢作品.",
+      "limitations": [
+        "未声明结构优先批（体裁假说：字書）。路由 mainPageLinks，8 章；授权标签 東漢作品。密度与未声明结构密度实测后置。"
+      ]
+    },
+    {
+      "id": "說文解字",
+      "zh": "說文解字",
+      "tradition": "philosophers",
+      "file": "works/說文解字.json",
+      "sha256": "1f20f967925e306890884deb64ac90fa3ee240d890747f7eeb3ac85569fbac1b",
+      "counts": {
+        "sections": 15,
+        "passages": 9617,
+        "characters": 205513
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 6,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {
+        "東漢作品": 1
+      },
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "未声明结构优先批（体裁假说：字書）。路由 mainPageLinks，15 章；授权标签 東漢作品。密度与未声明结构密度实测后置。"
+      ]
+    },
+    {
+      "id": "玉篇",
+      "zh": "玉篇",
+      "tradition": "philosophers",
+      "file": "works/玉篇.json",
+      "sha256": "d12a0e8100d7be1a4aad43ca3788948288467b963090bc68aa5fc59ccb6b63e3",
+      "counts": {
+        "sections": 31,
+        "passages": 848,
+        "characters": 59749
+      },
+      "structuralMarkersRemoved": 43,
+      "flaggedShortPassages": 288,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {
+        "PD-old": 63
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: PD-old.",
+      "limitations": [
+        "未声明结构优先批（体裁假说：字書）。路由 mainPageLinks，31 章；授权标签 PD-old。密度与未声明结构密度实测后置。"
+      ]
+    },
+    {
+      "id": "通典",
+      "zh": "通典",
+      "tradition": "historical",
+      "file": "works/通典.json",
+      "sha256": "c586e2d9ecf072a105cd0d1f00f79a22403d9832c11a8c6a2bb0a109ec9b5d5b",
+      "counts": {
+        "sections": 200,
+        "passages": 10696,
+        "characters": 1937181
+      },
+      "structuralMarkersRemoved": 6,
+      "flaggedShortPassages": 568,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {
+        "PD-old": 7
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: PD-old.",
+      "limitations": [
+        "未声明结构优先批（体裁假说：政書）。路由 mainPageLinks，200 章；授权标签 PD-old。密度与未声明结构密度实测后置。"
+      ]
+    },
+    {
+      "id": "神農本草經",
+      "zh": "神農本草經",
+      "tradition": "philosophers",
+      "file": "works/神農本草經.json",
+      "sha256": "cc6893fd43f51c1556b09d2cbd361b730e65dce0142f33083aa4146cfd3c7b45",
+      "counts": {
+        "sections": 3,
+        "passages": 371,
+        "characters": 17651
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "single",
+      "licenseTemplates": {
+        "PD-old": 1
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: PD-old.",
+      "limitations": [
+        "未声明结构优先批（体裁假说：醫方）。路由 single，1 章；授权标签 PD-old。密度与未声明结构密度实测后置。"
+      ]
+    },
+    {
+      "id": "周髀算經",
+      "zh": "周髀算經",
+      "tradition": "philosophers",
+      "file": "works/周髀算經.json",
+      "sha256": "0e97a146a626a3d815dbba4967f4e6bcab7e53026dcdaa48d28c0e597889401d",
+      "counts": {
+        "sections": 6,
+        "passages": 289,
+        "characters": 7267
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "single",
+      "licenseTemplates": {
+        "PD-old": 1
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: PD-old.",
+      "limitations": [
+        "未声明结构优先批（体裁假说：算經）。路由 single，1 章；授权标签 PD-old。密度与未声明结构密度实测后置。"
+      ]
+    },
+    {
+      "id": "孫子算經",
+      "zh": "孫子算經",
+      "tradition": "philosophers",
+      "file": "works/孫子算經.json",
+      "sha256": "6428b675ee6761927933cec5fda6aafb1a49dafccc927c16df86735493b0bea4",
+      "counts": {
+        "sections": 4,
+        "passages": 223,
+        "characters": 11845
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "single",
+      "licenseTemplates": {},
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "未声明结构优先批（体裁假说：算經）。路由 single，1 章；授权标签 （无 → 站点预设 CC BY-SA 4.0）。密度与未声明结构密度实测后置。"
       ]
     }
   ],
