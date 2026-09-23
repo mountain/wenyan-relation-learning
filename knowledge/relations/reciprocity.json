@@ -1,0 +1,65 @@
+{
+  "schema": "wenyan.relations.reciprocity.v1",
+  "generatedAt": "2026-09-23T13:15:45.084Z",
+  "question": "Are attested three-slot relations symmetric under the 我↔你 exchange more often than chance?",
+  "scope": {
+    "passagesScanned": 214371,
+    "threeSlotReadings": 3643,
+    "edgesWithDistinctEnds": 3316,
+    "edgesRejectedAsUnnameable": 320,
+    "note": "The rejected ends are the A1 aperture showing up as a blocker: with unpunctuated text the entity span is a whole clause, so no relation can be attributed to anyone. The filter keeps ends of 1-4 characters; examples of what it dropped: 乃祖先父丕乃 / 使子（路）〔貢〕 / 桓公"
+  },
+  "observed": {
+    "both": 79,
+    "total": 3316,
+    "rate": 0.023824
+  },
+  "null": {
+    "permutations": 200,
+    "meanRate": 0.000875,
+    "min": 0,
+    "max": 0.003017,
+    "percentileOfObserved": 100
+  },
+  "verdict": "Observed reciprocity 0.023824 against a null mean of 0.000875 (percentile 100); the network IS more symmetric than chance. Whether that is 恕 or just conversation is not decided here.",
+  "slotAsymmetry": {
+    "topAgents": [
+      "乃:79",
+      "顧:69",
+      "因:66",
+      "桓公:63",
+      "或:52",
+      "景公:44",
+      "又:41",
+      "《論:33"
+    ],
+    "topRecipients": [
+      "之:344",
+      "人:76",
+      "生:70",
+      "》:66",
+      "晏子:58",
+      "王:37",
+      "左右:37",
+      "諸將:32"
+    ],
+    "note": "The person words are the interesting rows: 我/吾 in the agent slot against 我/吾 in the recipient slot is the direct lexical trace of who is allowed to be the ends of an exchange."
+  },
+  "lexicalFormulas": {
+    "己所不欲": 9,
+    "勿施於人": 12,
+    "施諸己": 3,
+    "反求諸己": 6,
+    "忠恕": 29,
+    "絜矩": 4,
+    "所惡於": 9,
+    "恕": 525,
+    "我不欲": 9,
+    "人之不欲": 0
+  },
+  "nonClaims": [
+    "This measures the symmetry of attested SPEECH relations, not 恕. 恕 is a norm about what should be done, and no who-spoke-to-whom count can settle a norm.",
+    "The null preserves both marginals and nothing else: agents stay, recipients are reshuffled. It does not model genre, era or a work’s internal cast.",
+    "Reciprocity is counted on EXACT cleaned strings, so 孔子/夫子 are two people here. That under-counts reciprocity in works that name the same person two ways, which biases against the hypothesis rather than for it."
+  ]
+}

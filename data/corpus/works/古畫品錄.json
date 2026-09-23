@@ -1,0 +1,253 @@
+{
+  "schema": "wenyan.corpus.work.v1",
+  "id": "古畫品錄",
+  "title": {
+    "zh": "古畫品錄"
+  },
+  "tradition": "philosophers",
+  "source": {
+    "site": "zh.wikisource.org",
+    "discovery": {
+      "route": "single",
+      "chainLength": null,
+      "notReachedByChain": [],
+      "chainStopReason": null,
+      "chainSubstitutions": [],
+      "chainExcluded": []
+    }
+  },
+  "counts": {
+    "sections": 7,
+    "passages": 25,
+    "characters": 1368
+  },
+  "license": {
+    "pageTemplates": {
+      "PD-old": 1
+    },
+    "status": "Public-domain templates present on the pages used: PD-old.",
+    "basis": "The underlying classical works are public domain by age. What is taken from Wikisource is its transcription: choice of recension, modern punctuation, paragraphing and character forms. Attribution is recorded per section via sourcePage/sourceRevid. This build also modifies the material (template and commentary removal, re-segmentation), and selects recensions and first readings — decisions recorded in textEdition, extraction and limitations."
+  },
+  "extraction": {
+    "removed": {
+      "annotationsDropped": 0,
+      "annotationsKept": 6,
+      "declaredElementsDropped": 0,
+      "declaredTemplatesDropped": 0,
+      "annotationRegionsDropped": 0,
+      "templates": 2,
+      "contentTemplates": 0,
+      "uncertainGlyphs": 0,
+      "refFootnotes": 0,
+      "unbalancedTemplates": 0,
+      "htmlTags": 0,
+      "files": 2,
+      "externalLinks": 0,
+      "conversionMarkers": 0,
+      "licenseTemplates": {
+        "PD-old": 1
+      },
+      "anchorsLifted": 0,
+      "behaviourSwitches": 1,
+      "navigationLines": 0
+    },
+    "droppedSubsections": [],
+    "skippedNoText": [],
+    "droppedFrontMatter": [],
+    "droppedLines": 0,
+    "demotedHeadingLines": 0,
+    "structuralMarkers": [],
+    "flaggedShortPassages": [],
+    "untitledSections": [],
+    "notes": "Annotations ({{*|…}}) and site templates are removed; list/verse nesting is flattened; verse line breaks are preserved inside passage text."
+  },
+  "limitations": [
+    "画论／诗论／书论（用户 2026-09-24 指定）。类别 画论。路由 single，1 章；授权标签 PD-old。"
+  ],
+  "sections": [
+    {
+      "id": "古畫品錄.1",
+      "ordinal": 1,
+      "title": "序",
+      "sourcePage": "古畫品錄",
+      "sourceRevid": 2062706,
+      "sourcePages": [
+        "古畫品錄"
+      ],
+      "passages": [
+        {
+          "id": "1.1",
+          "text": "夫畫品者，蓋眾畫之優劣也。圖繪者，莫不明勸戒、著升沉，千載寂寥，披圖可鑒。雖畫有六法，罕能盡該。而自古及今，各善一節。六法者何？一，氣韻生動是也；二，骨法用筆是也；三，應物象形是也；四，隨類賦彩是也；五，經營位置是也；六，傳移模寫是也。唯陸探微、衛協備該之矣。然跡有巧拙，藝無古今，謹依遠近，隨其品第，裁成序引。故此所述不廣其源，但傳出自神仙，莫之聞見也。"
+        }
+      ]
+    },
+    {
+      "id": "古畫品錄.2",
+      "ordinal": 2,
+      "title": "第一品（五人）",
+      "sourcePage": "古畫品錄",
+      "sourceRevid": 2062706,
+      "sourcePages": [
+        "古畫品錄"
+      ],
+      "passages": [
+        {
+          "id": "2.1",
+          "text": "陸探微。事五代宋明帝，吳人。窮理盡性，事絕言象。包前孕後，古今獨立。非復激揚所以稱贊，但價之極乎上上品之外，無他寄言，故屈標第一等。"
+        },
+        {
+          "id": "2.2",
+          "text": "曹不興。五代吳時事孫權，吳興人。不興之跡，殆莫復傳。唯秘閣之內一龍而已。觀其風骨，名豈虛成！"
+        },
+        {
+          "id": "2.3",
+          "text": "衛協。五代晉時。占畫之略，至協始精。六法之中，迨為兼善。雖不說備形妙，頗得壯氣。陵跨群雄，曠代絕筆。"
+        },
+        {
+          "id": "2.4",
+          "text": "張墨、荀勗五代晉時。風範氣候，極妙參神。但取精靈，遺其骨法。若拘以物體，則未見精粹。若取之外，方厭高腴，可謂微妙也。"
+        }
+      ]
+    },
+    {
+      "id": "古畫品錄.3",
+      "ordinal": 3,
+      "title": "第二品（三人）",
+      "sourcePage": "古畫品錄",
+      "sourceRevid": 2062706,
+      "sourcePages": [
+        "古畫品錄"
+      ],
+      "passages": [
+        {
+          "id": "3.1",
+          "text": "顧駿之。神韻氣力，不逮前賢；精微謹細，有過往哲。始變古則今，賦彩制形，皆創新意。如包犧始更卦體，史籀初改畫法。常結構層樓，以為畫所。風雨炎燠之時，故不操筆；天和氣爽之日方乃染毫。登樓去梯，妻子罕見。畫蟬雀，駿之始也。宋大明中，天下莫敢競矣。"
+        },
+        {
+          "id": "3.2",
+          "text": "陸綏。體韻遒舉，風彩飄然。一點一拂，動筆皆奇。傳世蓋少，所謂希見卷軸，故為寶也。"
+        },
+        {
+          "id": "3.3",
+          "text": "袁蒨。比方陸氏，最為高逸。象人之妙，亞美前賢。但誌守師法，更無新意。然和璧微玷，豈貶十城之價也。"
+        }
+      ]
+    },
+    {
+      "id": "古畫品錄.4",
+      "ordinal": 4,
+      "title": "第三品（九人）",
+      "sourcePage": "古畫品錄",
+      "sourceRevid": 2062706,
+      "sourcePages": [
+        "古畫品錄"
+      ],
+      "passages": [
+        {
+          "id": "4.1",
+          "text": "姚曇度。畫有逸方，巧變鋒出，((鬼音))魁神鬼，皆能絕妙。奇正咸宜，雅鄭兼善，莫不俊拔出人意表，天挺生知非學所及。雖纖微長短，往往失之。而輿皂之中，莫與為匹。豈直棟梁蕭艾可搪突璵璠者哉！"
+        },
+        {
+          "id": "4.2",
+          "text": "顧愷之。五代晉時晉陵無錫人。字長康，小字虎頭。除體精微，筆無妄下。但跡不逮意，聲過其實。"
+        },
+        {
+          "id": "4.3",
+          "text": "毛惠遠。畫體周贍，無適弗該，出入窮奇，縱黃逸筆，力遒韻雅，超邁絕倫。其揮霍必也極妙，至於定質，塊然未盡。其善神鬼及馬，泥滯於體，頗有拙也。"
+        },
+        {
+          "id": "4.4",
+          "text": "夏瞻。雖氣力不足，而精彩有余。擅名遠代，事非虛美。"
+        },
+        {
+          "id": "4.5",
+          "text": "戴逵。情韻連綿，風趣巧拔。善圖賢聖，百工所範。荀、衛以後，實為領袖。及乎子顒能繼其美。"
+        },
+        {
+          "id": "4.6",
+          "text": "江僧寶。斟酌袁陸，親漸朱藍。用筆骨梗，甚有師法。像人之外，非其所長也。"
+        },
+        {
+          "id": "4.7",
+          "text": "吳((日東))。體法雅媚，制置才巧。擅美當年，有聲京洛。"
+        },
+        {
+          "id": "4.8",
+          "text": "張則。意思橫逸，動筆新奇。師心獨見，鄙於綜采。變巧不竭，若環之無端，景多觸目，謝題徐落雲此二人後不得預焉。"
+        },
+        {
+          "id": "4.9",
+          "text": "陸杲。體制不凡，跨邁流欲。時有合作，往往出人點畫之間。動流恢服，傳於後者，殆不盈握。桂枝一芳，足征本性。流液之素，難效其功。"
+        }
+      ]
+    },
+    {
+      "id": "古畫品錄.5",
+      "ordinal": 5,
+      "title": "第四品（五人）",
+      "sourcePage": "古畫品錄",
+      "sourceRevid": 2062706,
+      "sourcePages": [
+        "古畫品錄"
+      ],
+      "passages": [
+        {
+          "id": "5.1",
+          "text": "蘧道湣。章繼伯。並善寺壁，兼長畫扇，人馬分數，毫厘不失，別體之妙，亦為入神。"
+        },
+        {
+          "id": "5.2",
+          "text": "顧寶先。全法陸家，事之宗稟。方之袁蒨，可謂小巫。"
+        },
+        {
+          "id": "5.3",
+          "text": "王微。史道碩。五代晉時。並師荀、衛，各體善能。然王得其細，史傳以似真。細而論之，景玄為劣。"
+        }
+      ]
+    },
+    {
+      "id": "古畫品錄.6",
+      "ordinal": 6,
+      "title": "第五品（三人）",
+      "sourcePage": "古畫品錄",
+      "sourceRevid": 2062706,
+      "sourcePages": [
+        "古畫品錄"
+      ],
+      "passages": [
+        {
+          "id": "6.1",
+          "text": "劉頊。用意綿密，畫體簡細，而筆跡困弱。形制單省。其於所長，婦人為最。但纖細過度，翻更失真，然觀察祥審，甚得姿態。"
+        },
+        {
+          "id": "6.2",
+          "text": "晉明帝。諱紹，元帝長子，師王厲。雖略於形色，頗得神氣。筆跡超越，亦有奇觀。"
+        },
+        {
+          "id": "6.3",
+          "text": "劉紹祖。善於傳寫，不閑其思。至於雀鼠筆跡，歷落往往出群。時人為之語，號曰移畫，然述而不作，非畫所先。"
+        }
+      ]
+    },
+    {
+      "id": "古畫品錄.7",
+      "ordinal": 7,
+      "title": "第六品（二人）",
+      "sourcePage": "古畫品錄",
+      "sourceRevid": 2062706,
+      "sourcePages": [
+        "古畫品錄"
+      ],
+      "passages": [
+        {
+          "id": "7.1",
+          "text": "宋炳。炳明於六法，迄無適善，而含毫命素，必有損益，跡非準的，意足師放。"
+        },
+        {
+          "id": "7.2",
+          "text": "丁光。雖擅名蟬雀，而筆跡輕羸。非不精謹，乏於生氣。"
+        }
+      ]
+    }
+  ]
+}

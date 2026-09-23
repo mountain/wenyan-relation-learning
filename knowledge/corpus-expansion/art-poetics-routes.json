@@ -1,0 +1,193 @@
+{
+  "schema": "wenyan.corpus-expansion.routes.v1",
+  "routes": {
+    "歷代名畫記": {
+      "zh": "歷代名畫記",
+      "tradition": "philosophers",
+      "kind": "画论",
+      "resolvedTitle": "歷代名畫記",
+      "licenseTags": [
+        "PD-old"
+      ],
+      "route": "mainPageLinks",
+      "chapters": 10,
+      "status": "OK"
+    },
+    "圖畫見聞誌": {
+      "zh": "圖畫見聞誌",
+      "tradition": "philosophers",
+      "kind": "画论",
+      "resolvedTitle": "圖畫見聞誌",
+      "licenseTags": [
+        "北宋作品"
+      ],
+      "route": "mainPageLinks",
+      "chapters": 6,
+      "status": "OK"
+    },
+    "林泉高致": {
+      "zh": "林泉高致",
+      "tradition": "philosophers",
+      "kind": "画论",
+      "resolvedTitle": "林泉高致集",
+      "licenseTags": [
+        "PD-old"
+      ],
+      "route": "single",
+      "chapters": 1,
+      "status": "OK"
+    },
+    "苦瓜和尚畫語錄": {
+      "zh": "苦瓜和尚畫語錄",
+      "tradition": "philosophers",
+      "kind": "画论",
+      "resolvedTitle": "苦瓜和尚畫語錄",
+      "licenseTags": [],
+      "route": "single",
+      "chapters": 1,
+      "status": "OK"
+    },
+    "古畫品錄": {
+      "zh": "古畫品錄",
+      "tradition": "philosophers",
+      "kind": "画论",
+      "resolvedTitle": "古畫品錄",
+      "licenseTags": [
+        "PD-old"
+      ],
+      "route": "single",
+      "chapters": 1,
+      "status": "OK"
+    },
+    "詩品": {
+      "zh": "詩品",
+      "tradition": "philosophers",
+      "kind": "诗论",
+      "resolvedTitle": "詩品",
+      "licenseTags": [],
+      "route": "mainPageLinks",
+      "chapters": 3,
+      "status": "OK"
+    },
+    "二十四詩品": {
+      "zh": "二十四詩品",
+      "tradition": "philosophers",
+      "kind": "诗论",
+      "resolvedTitle": "二十四詩品",
+      "licenseTags": [
+        "PD-old"
+      ],
+      "route": "NEEDS-MANUAL",
+      "chapters": 0,
+      "status": "OK"
+    },
+    "滄浪詩話": {
+      "zh": "滄浪詩話",
+      "tradition": "philosophers",
+      "kind": "诗论",
+      "resolvedTitle": "滄浪詩話",
+      "licenseTags": [
+        "PD-old"
+      ],
+      "route": "mainPageLinks",
+      "chapters": 6,
+      "status": "OK"
+    },
+    "人間詞話": {
+      "zh": "人間詞話",
+      "tradition": "philosophers",
+      "kind": "诗论",
+      "resolvedTitle": "人間詞話",
+      "licenseTags": [
+        "Pd/1996"
+      ],
+      "route": "single",
+      "chapters": 1,
+      "status": "OK"
+    },
+    "六一詩話": {
+      "zh": "六一詩話",
+      "tradition": "philosophers",
+      "kind": "诗论",
+      "resolvedTitle": "六一詩話",
+      "licenseTags": [
+        "北宋作品"
+      ],
+      "route": "single",
+      "chapters": 1,
+      "status": "OK"
+    },
+    "隨園詩話": {
+      "zh": "隨園詩話",
+      "tradition": "philosophers",
+      "kind": "诗论",
+      "resolvedTitle": "隨園詩話",
+      "licenseTags": [
+        "清朝作品"
+      ],
+      "route": "mainPageLinks",
+      "chapters": 16,
+      "status": "OK"
+    },
+    "書譜": {
+      "zh": "書譜",
+      "tradition": "philosophers",
+      "kind": "书论",
+      "resolvedTitle": "書譜",
+      "licenseTags": [
+        "唐朝作品"
+      ],
+      "route": "single",
+      "chapters": 1,
+      "status": "OK"
+    },
+    "書斷": {
+      "zh": "書斷",
+      "tradition": "philosophers",
+      "kind": "书论",
+      "resolvedTitle": "書斷",
+      "licenseTags": [
+        "唐朝作品"
+      ],
+      "route": "mainPageLinks",
+      "chapters": 3,
+      "status": "OK"
+    },
+    "續書譜": {
+      "zh": "續書譜",
+      "tradition": "philosophers",
+      "kind": "书论",
+      "resolvedTitle": "續書譜",
+      "licenseTags": [
+        "PD-old"
+      ],
+      "route": "single",
+      "chapters": 1,
+      "status": "OK"
+    },
+    "藝舟雙楫": {
+      "zh": "藝舟雙楫",
+      "tradition": "philosophers",
+      "kind": "书论",
+      "resolvedTitle": "藝舟雙楫",
+      "licenseTags": [
+        "清朝作品"
+      ],
+      "route": "mainPageLinks",
+      "chapters": 6,
+      "status": "OK"
+    },
+    "海岳名言": {
+      "zh": "海岳名言",
+      "tradition": "philosophers",
+      "kind": "书论",
+      "resolvedTitle": "海嶽名言",
+      "licenseTags": [
+        "北宋作品"
+      ],
+      "route": "single",
+      "chapters": 1,
+      "status": "OK"
+    }
+  }
+}

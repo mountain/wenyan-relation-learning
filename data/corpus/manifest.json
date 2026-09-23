@@ -1,18 +1,24 @@
 {
   "schema": "wenyan.corpus.manifest.v1",
   "format": "wenyan.corpus.v1",
-  "generatedAt": "2026-09-23T12:40:16.585Z",
+  "generatedAt": "2026-09-23T13:15:14.770Z",
   "partialRebuild": {
     "only": [
-      "藝文類聚",
-      "初學記",
-      "釋名",
-      "說文解字",
-      "玉篇",
-      "通典",
-      "神農本草經",
-      "周髀算經",
-      "孫子算經"
+      "歷代名畫記",
+      "圖畫見聞誌",
+      "林泉高致",
+      "苦瓜和尚畫語錄",
+      "古畫品錄",
+      "詩品",
+      "滄浪詩話",
+      "人間詞話",
+      "六一詩話",
+      "隨園詩話",
+      "書譜",
+      "書斷",
+      "續書譜",
+      "藝舟雙楫",
+      "海岳名言"
     ],
     "note": "this run rebuilt a subset; other entries are carried over from the previous manifest"
   },
@@ -32,10 +38,10 @@
     "ctextNotice": "ctext.org was NOT used. Its robots.txt and anti-scraping notice state that automated access is not authorized and direct researchers to subscribe; no content was retrieved from it."
   },
   "counts": {
-    "works": 116,
-    "sections": 4530,
-    "passages": 209604,
-    "characters": 25181798
+    "works": 133,
+    "sections": 4740,
+    "passages": 217054,
+    "characters": 26016803
   },
   "works": [
     {
@@ -2746,6 +2752,370 @@
       "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
       "limitations": [
         "未声明结构优先批（体裁假说：算經）。路由 single，1 章；授权标签 （无 → 站点预设 CC BY-SA 4.0）。密度与未声明结构密度实测后置。"
+      ]
+    },
+    {
+      "id": "太玄經",
+      "zh": "太玄經",
+      "tradition": "philosophers",
+      "file": "works/太玄經.json",
+      "sha256": "5e3980494a90306dfb1f474f5ef55e41b942d5dbe6278252d8c0bcf9bafa04a7",
+      "counts": {
+        "sections": 7,
+        "passages": 864,
+        "characters": 31283
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "single",
+      "licenseTemplates": {
+        "西漢作品": 1
+      },
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "易与太玄解释增强（用户 2026-09-24 指定方向）。太玄本体：方州部家／首贊／玄測玄衝玄錯。路由 single，1 章；授权标签 西漢作品。"
+      ]
+    },
+    {
+      "id": "周易正義",
+      "zh": "周易正義",
+      "tradition": "philosophers",
+      "file": "works/周易正義.json",
+      "sha256": "17b5a1919ec0f5893fe2c18c612ddba0fbbcf2800cbba7ccb656c6d414d8a296",
+      "counts": {
+        "sections": 98,
+        "passages": 2922,
+        "characters": 255632
+      },
+      "structuralMarkersRemoved": 1,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {},
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "易与太玄解释增强（用户 2026-09-24 指定方向）。孔颖达疏：注疏层，解释链更长。路由 mainPageLinks，98 章；授权标签 PD-old。"
+      ]
+    },
+    {
+      "id": "歷代名畫記",
+      "zh": "歷代名畫記",
+      "tradition": "philosophers",
+      "file": "works/歷代名畫記.json",
+      "sha256": "c9f01117e77584279bf3609f907ca981f43a96d2e5ea557d6f2cb751f608d819",
+      "counts": {
+        "sections": 10,
+        "passages": 631,
+        "characters": 55429
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {
+        "PD-old": 10
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: PD-old.",
+      "limitations": [
+        "画论／诗论／书论（用户 2026-09-24 指定）。类别 画论。路由 mainPageLinks，10 章；授权标签 PD-old。"
+      ]
+    },
+    {
+      "id": "圖畫見聞誌",
+      "zh": "圖畫見聞誌",
+      "tradition": "philosophers",
+      "file": "works/圖畫見聞誌.json",
+      "sha256": "95f270dd955635e78b289d7a76ed2960b39c349f98244f6474fe12922e15ed8b",
+      "counts": {
+        "sections": 6,
+        "passages": 520,
+        "characters": 40048
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 25,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {},
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "画论／诗论／书论（用户 2026-09-24 指定）。类别 画论。路由 mainPageLinks，6 章；授权标签 北宋作品。"
+      ]
+    },
+    {
+      "id": "林泉高致",
+      "zh": "林泉高致",
+      "tradition": "philosophers",
+      "file": "works/林泉高致.json",
+      "sha256": "3775365548e31beac70f9cdc650d319e20e4ecacccdc8fef8ba44606c56e0660",
+      "counts": {
+        "sections": 5,
+        "passages": 71,
+        "characters": 7751
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 1,
+      "discoveryRoute": "single",
+      "licenseTemplates": {
+        "PD-old": 1
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: PD-old.",
+      "limitations": [
+        "画论／诗论／书论（用户 2026-09-24 指定）。类别 画论。路由 single，1 章；授权标签 PD-old。"
+      ]
+    },
+    {
+      "id": "苦瓜和尚畫語錄",
+      "zh": "苦瓜和尚畫語錄",
+      "tradition": "philosophers",
+      "file": "works/苦瓜和尚畫語錄.json",
+      "sha256": "51af775026fae08dadaf568ca45b865a707a7d8ade0de45c7eb5c0b7647506e1",
+      "counts": {
+        "sections": 18,
+        "passages": 18,
+        "characters": 6028
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "single",
+      "licenseTemplates": {},
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "画论／诗论／书论（用户 2026-09-24 指定）。类别 画论。路由 single，1 章；授权标签 （无 → 站点预设 CC BY-SA 4.0）。"
+      ]
+    },
+    {
+      "id": "古畫品錄",
+      "zh": "古畫品錄",
+      "tradition": "philosophers",
+      "file": "works/古畫品錄.json",
+      "sha256": "fa4dc6c1223275f60e463346b32daa2aac0f08ebf21c2c31f1ecbbe67720ca00",
+      "counts": {
+        "sections": 7,
+        "passages": 25,
+        "characters": 1368
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "single",
+      "licenseTemplates": {
+        "PD-old": 1
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: PD-old.",
+      "limitations": [
+        "画论／诗论／书论（用户 2026-09-24 指定）。类别 画论。路由 single，1 章；授权标签 PD-old。"
+      ]
+    },
+    {
+      "id": "詩品",
+      "zh": "詩品",
+      "tradition": "philosophers",
+      "file": "works/詩品.json",
+      "sha256": "b37d9eea0b276497c3425c6dfe944c893ba539cbef47e85d1e6a980bf7eb50e1",
+      "counts": {
+        "sections": 3,
+        "passages": 60,
+        "characters": 3967
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {},
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "画论／诗论／书论（用户 2026-09-24 指定）。类别 诗论。路由 mainPageLinks，3 章；授权标签 （无 → 站点预设 CC BY-SA 4.0）。"
+      ]
+    },
+    {
+      "id": "滄浪詩話",
+      "zh": "滄浪詩話",
+      "tradition": "philosophers",
+      "file": "works/滄浪詩話.json",
+      "sha256": "b57bfa77ce5794b3115f8995ace8d5dbf4c9252c8282cab79cc5d75bfce19419",
+      "counts": {
+        "sections": 6,
+        "passages": 120,
+        "characters": 11474
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {
+        "PD-old": 6
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: PD-old.",
+      "limitations": [
+        "画论／诗论／书论（用户 2026-09-24 指定）。类别 诗论。路由 mainPageLinks，6 章；授权标签 PD-old。"
+      ]
+    },
+    {
+      "id": "人間詞話",
+      "zh": "人間詞話",
+      "tradition": "philosophers",
+      "file": "works/人間詞話.json",
+      "sha256": "f420eb95726da1d90542edd97e1a6546d006f7d439877e71c47923f101b07dfa",
+      "counts": {
+        "sections": 3,
+        "passages": 324,
+        "characters": 30997
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "single",
+      "licenseTemplates": {
+        "Pd/1996": 1
+      },
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "画论／诗论／书论（用户 2026-09-24 指定）。类别 诗论。路由 single，1 章；授权标签 Pd/1996。"
+      ]
+    },
+    {
+      "id": "六一詩話",
+      "zh": "六一詩話",
+      "tradition": "philosophers",
+      "file": "works/六一詩話.json",
+      "sha256": "19d9f0dd9ebc70d0c5c5309d3374f8121cbe53142ce66b6cf7fc0a397b7a315f",
+      "counts": {
+        "sections": 1,
+        "passages": 29,
+        "characters": 5061
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "single",
+      "licenseTemplates": {
+        "北宋作品": 1
+      },
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "画论／诗论／书论（用户 2026-09-24 指定）。类别 诗论。路由 single，1 章；授权标签 北宋作品。"
+      ]
+    },
+    {
+      "id": "隨園詩話",
+      "zh": "隨園詩話",
+      "tradition": "philosophers",
+      "file": "works/隨園詩話.json",
+      "sha256": "7452928fb5e9bfcc035a7b225f886154ae9dc55c2279ed2928ad425d8c8ba0c3",
+      "counts": {
+        "sections": 16,
+        "passages": 1387,
+        "characters": 244366
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {
+        "清朝作品": 16
+      },
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "画论／诗论／书论（用户 2026-09-24 指定）。类别 诗论。路由 mainPageLinks，16 章；授权标签 清朝作品。"
+      ]
+    },
+    {
+      "id": "書譜",
+      "zh": "書譜",
+      "tradition": "philosophers",
+      "file": "works/書譜.json",
+      "sha256": "67ec628a165a666a2dd1ee511bc675d1f038ec74636cfb41b12ca902a9c04bdb",
+      "counts": {
+        "sections": 1,
+        "passages": 5,
+        "characters": 4491
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "single",
+      "licenseTemplates": {
+        "唐朝作品": 1
+      },
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "画论／诗论／书论（用户 2026-09-24 指定）。类别 书论。路由 single，1 章；授权标签 唐朝作品。"
+      ]
+    },
+    {
+      "id": "書斷",
+      "zh": "書斷",
+      "tradition": "philosophers",
+      "file": "works/書斷.json",
+      "sha256": "63ad0504c572fbcbd43a8be84c6d8990c0d313cdbbab5642b27c9ad8c6a26be1",
+      "counts": {
+        "sections": 3,
+        "passages": 152,
+        "characters": 26413
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {},
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "画论／诗论／书论（用户 2026-09-24 指定）。类别 书论。路由 mainPageLinks，3 章；授权标签 唐朝作品。"
+      ]
+    },
+    {
+      "id": "續書譜",
+      "zh": "續書譜",
+      "tradition": "philosophers",
+      "file": "works/續書譜.json",
+      "sha256": "70d707ddea2150b60bd6fb97964d62973ce89eebee46a4340322fa9a8420e9af",
+      "counts": {
+        "sections": 19,
+        "passages": 21,
+        "characters": 4567
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "single",
+      "licenseTemplates": {
+        "PD-old": 1
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: PD-old.",
+      "limitations": [
+        "画论／诗论／书论（用户 2026-09-24 指定）。类别 书论。路由 single，1 章；授权标签 PD-old。"
+      ]
+    },
+    {
+      "id": "藝舟雙楫",
+      "zh": "藝舟雙楫",
+      "tradition": "philosophers",
+      "file": "works/藝舟雙楫.json",
+      "sha256": "31eb38e05f18968ff74995322133ac19296f1ea9e7135703f82c10462306f07e",
+      "counts": {
+        "sections": 6,
+        "passages": 275,
+        "characters": 104243
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {
+        "清朝作品": 6
+      },
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "画论／诗论／书论（用户 2026-09-24 指定）。类别 书论。路由 mainPageLinks，6 章；授权标签 清朝作品。"
+      ]
+    },
+    {
+      "id": "海岳名言",
+      "zh": "海岳名言",
+      "tradition": "philosophers",
+      "file": "works/海岳名言.json",
+      "sha256": "202f34ce4a8f70774fbc04ef6d3df6e59f107c1b9ce91ecfd6ca9954f036e978",
+      "counts": {
+        "sections": 1,
+        "passages": 26,
+        "characters": 1887
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "single",
+      "licenseTemplates": {
+        "北宋作品": 1
+      },
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "画论／诗论／书论（用户 2026-09-24 指定）。类别 书论。路由 single，1 章；授权标签 北宋作品。"
       ]
     }
   ],
