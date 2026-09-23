@@ -142,12 +142,14 @@ export class WikiClient {
    * the anthology. Normalisation, redirects and (on zh wikis) variant conversion
    * are therefore resolved through the API's own mapping blocks: `query.normalized`
    * and `query.redirects` give requested → actual, and the page lookup uses that.
-   * @returns {Promise<{existing:string[], missing:string[], resolvedTo:Record<string,string>}>}
+   * @returns {Promise<{existing:string[], missing:string[], resolvedTo:Record<string,string>, variantResolved:Record<string,string>}>}
    */
   async exists(titles) {
     const existing = [];
     const missing = [];
     const resolvedTo = {};
+    const variantResolved = {};
+    const pendingMissing = [];
     for (let i = 0; i < titles.length; i += 50) {
       const batch = titles.slice(i, i + 50);
       const data = await this.api({
@@ -176,11 +178,37 @@ export class WikiClient {
           existing.push(t);
           resolvedTo[t] = actual;
         } else {
-          missing.push(t);
+          // Still missing: it may only be a SIMPLIFIED title for a traditional page.
+          // 子部's list contains 关尹子/關尹子, 黄帝四经/黃帝四經, 正统道藏/正統道藏 … and a
+          // plain lookup reports them absent, i.e. 20% of the list misread as red links.
+          // `converttitles=1` performs the wiki's own variant conversion and reports the
+          // mapping in `query.converted`; `variant=zh-hant` does NOT (measured: 0/8 vs 5/8).
+          pendingMissing.push(t);
         }
       }
     }
-    return { existing, missing, resolvedTo };
+    for (let i = 0; i < pendingMissing.length; i += 50) {
+      const batch = pendingMissing.slice(i, i + 50);
+      const data = await this.api({
+        action: 'query', prop: 'info', titles: batch.join('|'), redirects: '1', converttitles: '1',
+      });
+      const converted = new Map((data?.query?.converted ?? []).map((x) => [x.from, x.to]));
+      const pages = new Map((data?.query?.pages ?? []).map((p) => [p.title, p]));
+      const stillMissing = [];
+      for (const t of batch) {
+        const to = converted.get(t);
+        const page = to ? pages.get(to) : null;
+        if (to && page && !page.missing) {
+          existing.push(t);
+          resolvedTo[t] = to;
+          variantResolved[t] = to;
+        } else {
+          stillMissing.push(t);
+        }
+      }
+      missing.push(...stillMissing);
+    }
+    return { existing, missing, resolvedTo, variantResolved };
   }
 
   /**
