@@ -1,0 +1,196 @@
+{
+  "schema": "wenyan.relations.labeled-statement-probe.v1",
+  "generatedAt": "2026-09-23T13:36:40.280Z",
+  "status": "PROBE — measured only. No marker class here is a declared construction, nothing is stored, and no role is assigned to any span.",
+  "why": "唐國史補 showed 89% of its unread passages contain no speech verb, so the labelled-statement family, not another speech frame, is the candidate the evidence points at.",
+  "boundaryRule": "statement = marker to the first 。／；／！？ outside 「」『』（）, or end of passage; rejected if empty or over 300 chars",
+  "scope": {
+    "passages": 217071
+  },
+  "classes": [
+    {
+      "id": "position",
+      "why": "爻位/贊次：易與太玄的位置標記",
+      "pattern": "/((初|次|上)[一二三四五六七八九]|[九六][一二三四五])[：︰﹕][^。；！？]{1,300}/g",
+      "gain": 1119,
+      "superseded": 0,
+      "partialOverlap": 0,
+      "dispersion": {
+        "worksContributing": 5,
+        "top3Works": [
+          "太玄經:683",
+          "周易正義:371",
+          "zhouyi:63"
+        ],
+        "top3Share": 0.998,
+        "reading": "top3Share near 1 means the pattern is one work’s property, not the language’s"
+      },
+      "examples": [
+        {
+          "work": "zhouyi",
+          "match": "初九：潛龍勿用",
+          "text": "易經：\n乾：元亨。利貞。\n初九：潛龍勿用。\n九二：見龍在田，利見大人。\n九三：君子終日乾乾，夕惕若；厲，无咎。\n九四：或"
+        },
+        {
+          "work": "zhouyi",
+          "match": "初六：履霜，堅冰至",
+          "text": "易經：\n坤：元亨。利牝馬之貞。\n君子有攸往，先迷後得主。\n利西南得朋，東北喪朋。安貞，吉。\n初六：履霜，堅冰至。\n六二："
+        },
+        {
+          "work": "zhouyi",
+          "match": "初九：磐桓，利居貞，利建侯",
+          "text": "易經：\n屯：元亨，利貞。勿用有攸往，利建侯。\n初九：磐桓，利居貞，利建侯。\n六二：屯如邅如，乘馬班如，匪寇婚媾，女子貞不"
+        }
+      ]
+    },
+    {
+      "id": "ganzhi",
+      "why": "干支紀日：史料體的日期標記",
+      "pattern": "/[甲乙丙丁戊己庚辛壬癸][子丑寅卯辰巳午未申酉戌亥][^。；！？]{0,40}/g",
+      "gain": 3957,
+      "superseded": 2,
+      "partialOverlap": 192,
+      "dispersion": {
+        "worksContributing": 76,
+        "top3Works": [
+          "zuozhuan:630",
+          "hanshu:525",
+          "春秋穀梁傳:368"
+        ],
+        "top3Share": 0.385,
+        "reading": "top3Share near 1 means the pattern is one work’s property, not the language’s"
+      },
+      "examples": [
+        {
+          "work": "book-of-documents",
+          "match": "乙丑，伊尹祠于先王",
+          "text": "惟元祀，十有二月，乙丑，伊尹祠于先王。奉嗣王祗見厥祖。侯甸群後咸在。百官總己以聽冢宰。伊尹乃明言烈祖之成德，以訓于王，曰"
+        },
+        {
+          "work": "book-of-documents",
+          "match": "戊午，王次于河朔",
+          "text": "惟戊午，王次于河朔。群后以師畢會。王乃徇師而誓，曰：「嗚呼！西土有眾，咸聽朕言。我聞：吉人為善，惟日不足；兇人為不善，亦"
+        },
+        {
+          "work": "book-of-documents",
+          "match": "甲子昧爽，王朝至于商郊牧野，乃誓",
+          "text": "時甲子昧爽，王朝至于商郊牧野，乃誓。"
+        }
+      ]
+    },
+    {
+      "id": "naming",
+      "why": "命名與定義：謂之X／名曰X／一曰X",
+      "pattern": "/(謂之|謂曰|名曰|號曰|是為|一曰|亦曰)[「『\"“]?[^，。；：]{1,12}[^。；！？]{1,300}/g",
+      "gain": 6800,
+      "superseded": 2,
+      "partialOverlap": 464,
+      "dispersion": {
+        "worksContributing": 111,
+        "top3Works": [
+          "本草綱目:814",
+          "說文解字:679",
+          "藝文類聚:598"
+        ],
+        "top3Share": 0.307,
+        "reading": "top3Share near 1 means the pattern is one work’s property, not the language’s"
+      },
+      "examples": [
+        {
+          "work": "analects",
+          "match": "亦曰「君夫人」",
+          "text": "邦君之妻，君稱之曰「夫人」，夫人自稱曰「小童」；邦人稱之曰「君夫人」，稱諸異邦曰「寡小君」；異邦人稱之，亦曰「君夫人」。"
+        },
+        {
+          "work": "book-of-documents",
+          "match": "一曰五行，次二曰敬用五事，次三曰農用八政，次四曰協用五紀，次五曰建用皇極，次六曰乂用三德，次",
+          "text": "「初一曰五行，次二曰敬用五事，次三曰農用八政，次四曰協用五紀，次五曰建用皇極，次六曰乂用三德，次七曰明用稽疑，次八曰念（"
+        },
+        {
+          "work": "book-of-documents",
+          "match": "一曰水，二曰火，三曰木，四曰金，五曰土",
+          "text": "「一、五行：一曰水，二曰火，三曰木，四曰金，五曰土。水曰潤下，火曰炎上，木曰曲直，金曰從革，土爰稼穡。潤下作鹹，炎上作苦"
+        }
+      ]
+    },
+    {
+      "id": "bracket",
+      "why": "方括號標簽：本草綱目的【主治】式",
+      "pattern": "/【[^】]{1,8}】[^。；！？]{1,300}/g",
+      "gain": 10224,
+      "superseded": 10,
+      "partialOverlap": 161,
+      "dispersion": {
+        "worksContributing": 15,
+        "top3Works": [
+          "本草綱目:4769",
+          "初學記:2912",
+          "藝文類聚:1439"
+        ],
+        "top3Share": 0.892,
+        "reading": "top3Share near 1 means the pattern is one work’s property, not the language’s"
+      },
+      "examples": [
+        {
+          "work": "classic-of-poetry",
+          "match": "【韻：雱行】\n其虛其邪，既亟只且",
+          "text": "北風其涼，雨雪其雱，\n惠而好我，攜手同行，【韻：雱行】\n其虛其邪，既亟只且。"
+        },
+        {
+          "work": "classic-of-poetry",
+          "match": "【韻：霏歸】\n其虛其邪，既亟只且",
+          "text": "北風其喈，雨雪其霏，\n惠而好我，攜手同歸，【韻：霏歸】\n其虛其邪，既亟只且。"
+        },
+        {
+          "work": "classic-of-poetry",
+          "match": "【韻：烏車】\n其虛其邪，既亟只且",
+          "text": "莫赤匪狐，莫黑匪烏，\n惠而好我，攜手同車，【韻：烏車】\n其虛其邪，既亟只且。"
+        }
+      ]
+    },
+    {
+      "id": "grade",
+      "why": "品第：上上／中中／下下，第X",
+      "pattern": "/(上上|上中|上下|中上|中中|中下|下上|下中|下下)(品|第)?[^。；！？]{1,300}/g",
+      "gain": 1939,
+      "superseded": 0,
+      "partialOverlap": 155,
+      "dispersion": {
+        "worksContributing": 90,
+        "top3Works": [
+          "wenxian-tongkao:165",
+          "本草綱目:164",
+          "通典:123"
+        ],
+        "top3Share": 0.233,
+        "reading": "top3Share near 1 means the pattern is one work’s property, not the language’s"
+      },
+      "examples": [
+        {
+          "work": "book-of-documents",
+          "match": "上上錯，{厥}田{惟}中中",
+          "text": "厥土{惟}白壤，{厥}賦{惟}上上錯，{厥}田{惟}中中。"
+        },
+        {
+          "work": "book-of-documents",
+          "match": "中下，厥賦貞",
+          "text": "厥土黑墳。{厥}草{惟}繇，{厥}木{惟}條。厥田惟中下，厥賦貞。作十有三載，乃同。"
+        },
+        {
+          "work": "book-of-documents",
+          "match": "上下，{厥}賦中上",
+          "text": "厥土白墳，海濱廣斥。{厥}田{惟}上下，{厥}賦中上。"
+        }
+      ]
+    }
+  ],
+  "combined": {
+    "gainSum": 24039,
+    "note": "Class gains OVERLAP (a passage can carry a 干支 and a grade) and must NOT be added to anything."
+  },
+  "nonClaims": [
+    "A marker match is not a construction: no span here has been labelled a position, a judgement or a theme.",
+    "The classes are declared by hand from five genres and are therefore selected to fit them; a hold-out genre was not used.",
+    "superseded counts only containments of an EXISTING reading; the class spans are not declared, so this is the replacement risk a declaration WOULD carry, not one it has."
+  ]
+}
