@@ -168,7 +168,8 @@
     "reach is an upper bound that depends on segmentation only; it is not accuracy",
     "no claim that the declared speaker/addressee/speech reading is the correct linguistic analysis — it is a declared convention, pinned by supervision and falsifiable by it",
     "no claim that 21.42% is a ceiling: the no-曰 frame families are unmeasured for label quality, and the transfer frames are not framed at all",
-    "no claim that G8's 0.5 is reachable: the measured upper bound for 'named subject + reporting verb' is 45.87%, below the floor"
+    "no claim that G8's 0.5 is reachable: the measured upper bound for 'named subject + reporting verb' is 45.87%, below the floor",
+    "no claim that transfer frames can close the coverage gap: the MARKED ones (以 marks theme, 於 marks recipient) measure 2.97% of passages, and the unmarked ditransitive (23.81%) has no basis for delimiting the theme at all, so it cannot carry supervised labels"
   ],
   "missingRoleSemantics": {
     "requiredBy": "measuredButNotAdmitted previously recorded the two-slot frame <A>曰：「<S>」 as deliberately unused, on the explicit condition that it stay unused \"until a separate contract defines what a missing role means\". This block IS that contract; the frame was admitted only after it was written.",
@@ -188,5 +189,22 @@
     "licence": "missingRoleSemantics, written before admission",
     "measuredNow": "yue-quote alone reads 8,043 passages on a unique parse; the three two-slot constructions together carry the grammar from 3.13% to 21.42% of the corpus",
     "notAdmitted": "the two-slot 謂曰 and 語曰 frames remain undeclared on MEASUREMENT, not on principle: their real-text forms are dominated by adverbials and particles (厲聲謂曰, 樅公相謂曰, 蓋其語曰, 故諸儒爲之語曰), so no truthful agent label exists for them."
+  },
+  "transferFramesMeasured": {
+    "status": "measured, NOT declared",
+    "markedFrames": {
+      "X以T與Y": 1521,
+      "X V T於Y": 922,
+      "X以T V之": 247,
+      "union": 2313,
+      "rate": 0.0297
+    },
+    "unmarkedDitransitive": {
+      "pattern": "X V Y T",
+      "passages": 18548,
+      "rate": 0.2381,
+      "whyNotDeclared": "the theme span has NO delimiter and no marker, so delimiting it is a guess; 17.96% of the agent spans are already particles or adverbs. Declaring it would mean storing labels that assert something false, which the evidence discipline forbids."
+    },
+    "conclusion": "adding every frame with a defensible segmentation rule reaches about 24.4% of the corpus against G8's floor of 0.5. The gap is not closable by more work of this kind, which is why G8 is reported as measured-unreachable rather than as not-yet-done."
   }
 }
