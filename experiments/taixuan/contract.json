@@ -6,7 +6,13 @@
   "implementationAndSupervision": "Codex (OpenAI), via Mingli Yuan; labels await Mingli review",
   "sourceRevision": 2651096,
   "sourceSha256": "22573659dec9e3bbf8a6001c9ad07a275fb76ab4b5e42b01bc1fd91aa7626258",
-  "counts": { "heads": 81, "ordinaryZans": 729, "extraZans": 2, "separableZanCePairs": 728, "unresolvedZanCePairs": 1 },
+  "counts": {
+    "heads": 81,
+    "ordinaryZans": 729,
+    "extraZans": 2,
+    "separableZanCePairs": 728,
+    "unresolvedZanCePairs": 1
+  },
   "encoding": "4 ternary head coordinates + 2 ternary zan-address coordinates; no dynamical or semantic isomorphism",
   "task": "declared-evaluative-reading-v1",
   "labels": {
@@ -14,17 +20,56 @@
     "adverse": "The selected passage and commentary warn against, criticize, or describe failure of the disposition/action.",
     "qualified": "A conditional or insufficiently explicit reading; a supervisor label, not the runtime Unknown status."
   },
-  "trainingHeads": ["中", "周", "礥"],
-  "heldOutHeads": ["閑", "少", "戾"],
-  "positions": [1, 5, 9],
+  "trainingHeads": [
+    "中",
+    "周",
+    "礥"
+  ],
+  "heldOutHeads": [
+    "閑",
+    "少",
+    "戾"
+  ],
+  "positions": [
+    1,
+    5,
+    9
+  ],
   "selection": "First six source heads in order; sample first, middle, last zan; first three heads train, next three held out. Fixed before running predictions.",
   "protocol": "Train on 中 alone, then add 周 and 礥; evaluate the same nine held-out labels at each checkpoint. Held-out labels never enter the learning log. No hyperparameter selection on this holdout.",
   "profiles": [
-    { "id": "taixuan-position-v1", "features": ["zan"] },
-    { "id": "taixuan-prefix-v1", "features": ["fang", "zhou", "bu", "zan"] },
-    { "id": "taixuan-context-v1", "features": ["digits", "zan"] }
+    {
+      "id": "taixuan-position-v1",
+      "features": [
+        "zan"
+      ]
+    },
+    {
+      "id": "taixuan-prefix-v1",
+      "features": [
+        "fang",
+        "zhou",
+        "bu",
+        "zan"
+      ]
+    },
+    {
+      "id": "taixuan-context-v1",
+      "features": [
+        "digits",
+        "zan"
+      ]
+    }
   ],
-  "metrics": ["total", "answered", "correct", "wrong", "unknown", "coverage", "accuracyAmongAnswered"],
+  "metrics": [
+    "total",
+    "answered",
+    "correct",
+    "wrong",
+    "unknown",
+    "coverage",
+    "accuracyAmongAnswered"
+  ],
   "successCriteria": [
     "Every address round-trips and each retrieved text span reconstructs from the pinned snapshot",
     "Source anomalies are explicit; no silent repair or invented commentary",
@@ -40,5 +85,10 @@
     "No treating ternary digit 2 as Unknown",
     "No claim of general classical-Chinese understanding, historical logic completeness or Adva six-germ equivalence",
     "No implicit transition, calendar, divination procedure or automatic execution"
-  ]
+  ],
+  "forbidden_conflations": [
+    "C1 recognising a construction is not accepting its label",
+    "C5 a source passage being re-verifiable is not the same as its label being true"
+  ],
+  "forbidden_conflations_source": "knowledge/conflations.json — field and practice adopted from adva/docs/claims.toml. Each entry is checked by tools/knowledge/conflations.mjs; a declaration with no implementation is itself the conflation C6 forbids."
 }

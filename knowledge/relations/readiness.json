@@ -1,15 +1,15 @@
 {
   "schema": "wenyan.relations.readiness.v1",
-  "generatedAt": "2026-09-22T22:41:11.094Z",
+  "generatedAt": "2026-09-23T03:04:14.326Z",
   "grammar": "wenyan.relations.v1",
   "store": {
     "path": "knowledge/relations/evidence.jsonl",
-    "records": 32,
+    "records": 38,
     "grammarVersions": {
-      "wenyan.relations.v1": 3,
-      "wenyan.relations.reporting.v1": 29
+      "wenyan.relations.v1": 6,
+      "wenyan.relations.reporting.v1": 32
     },
-    "sha256": "35fdaa769041bdce65d4028670ea498bf32e7b0b61090bf74fcc8fbfe0f510c3"
+    "sha256": "4073bcb3579001a3417d9744f91caf5681baeb64f683cd4fbb5bee8e8e3e0c46"
   },
   "floors": {
     "labelledPerConstructionForDetermination": 2,
@@ -21,77 +21,145 @@
     {
       "grammar": "wenyan.relations.v1",
       "construction": "grant",
-      "labelledExamples": 1,
+      "labelledExamples": 2,
       "survivingRoleMappings": 1,
+      "rolePermutations": 6,
       "statusOnProbe": "KnownFiniteGrammar",
-      "distinctEntities": 3
+      "distinctEntities": 6,
+      "expressedRoles": [
+        "agent",
+        "recipient",
+        "theme"
+      ]
     },
     {
       "grammar": "wenyan.relations.v1",
       "construction": "hand-over",
-      "labelledExamples": 1,
+      "labelledExamples": 2,
       "survivingRoleMappings": 1,
+      "rolePermutations": 6,
       "statusOnProbe": "KnownFiniteGrammar",
-      "distinctEntities": 3
+      "distinctEntities": 6,
+      "expressedRoles": [
+        "agent",
+        "recipient",
+        "theme"
+      ]
     },
     {
       "grammar": "wenyan.relations.v1",
       "construction": "receive",
-      "labelledExamples": 1,
+      "labelledExamples": 2,
       "survivingRoleMappings": 1,
+      "rolePermutations": 6,
       "statusOnProbe": "KnownFiniteGrammar",
-      "distinctEntities": 3
+      "distinctEntities": 6,
+      "expressedRoles": [
+        "agent",
+        "recipient",
+        "theme"
+      ]
     },
     {
       "grammar": "wenyan.relations.reporting.v1",
       "construction": "wei-quote",
-      "labelledExamples": 8,
+      "labelledExamples": 9,
       "survivingRoleMappings": 1,
+      "rolePermutations": 6,
       "statusOnProbe": "KnownFiniteGrammar",
-      "distinctEntities": 24
+      "distinctEntities": 27,
+      "expressedRoles": [
+        "agent",
+        "recipient",
+        "theme"
+      ]
     },
     {
       "grammar": "wenyan.relations.reporting.v1",
       "construction": "wen-quote",
-      "labelledExamples": 8,
+      "labelledExamples": 6,
       "survivingRoleMappings": 1,
+      "rolePermutations": 6,
       "statusOnProbe": "KnownFiniteGrammar",
-      "distinctEntities": 24
+      "distinctEntities": 18,
+      "expressedRoles": [
+        "agent",
+        "recipient",
+        "theme"
+      ]
     },
     {
       "grammar": "wenyan.relations.reporting.v1",
       "construction": "gao-quote",
-      "labelledExamples": 8,
+      "labelledExamples": 5,
       "survivingRoleMappings": 1,
+      "rolePermutations": 6,
       "statusOnProbe": "KnownFiniteGrammar",
-      "distinctEntities": 23
+      "distinctEntities": 15,
+      "expressedRoles": [
+        "agent",
+        "recipient",
+        "theme"
+      ]
     },
     {
       "grammar": "wenyan.relations.reporting.v1",
       "construction": "yu-quote",
-      "labelledExamples": 5,
+      "labelledExamples": 4,
       "survivingRoleMappings": 1,
+      "rolePermutations": 6,
       "statusOnProbe": "KnownFiniteGrammar",
-      "distinctEntities": 15
+      "distinctEntities": 12,
+      "expressedRoles": [
+        "agent",
+        "recipient",
+        "theme"
+      ]
+    },
+    {
+      "grammar": "wenyan.relations.reporting.v1",
+      "construction": "wen-plain",
+      "labelledExamples": 3,
+      "survivingRoleMappings": 1,
+      "rolePermutations": 2,
+      "statusOnProbe": "KnownFiniteGrammar",
+      "distinctEntities": 6,
+      "expressedRoles": [
+        "agent",
+        "theme"
+      ]
+    },
+    {
+      "grammar": "wenyan.relations.reporting.v1",
+      "construction": "gao-plain",
+      "labelledExamples": 3,
+      "survivingRoleMappings": 1,
+      "rolePermutations": 2,
+      "statusOnProbe": "KnownFiniteGrammar",
+      "distinctEntities": 6,
+      "expressedRoles": [
+        "agent",
+        "theme"
+      ]
+    },
+    {
+      "grammar": "wenyan.relations.reporting.v1",
+      "construction": "yue-quote",
+      "labelledExamples": 2,
+      "survivingRoleMappings": 1,
+      "rolePermutations": 2,
+      "statusOnProbe": "KnownFiniteGrammar",
+      "distinctEntities": 4,
+      "expressedRoles": [
+        "agent",
+        "theme"
+      ]
     }
   ],
   "leaveOneOut": {
-    "total": 3,
-    "failures": [
-      {
-        "id": "authored:train-0",
-        "reason": "held out, the reading became Unknown (ambiguous-role-mapping); the remaining 2 core record(s) do not determine this construction"
-      },
-      {
-        "id": "authored:train-1",
-        "reason": "held out, the reading became Unknown (ambiguous-role-mapping); the remaining 2 core record(s) do not determine this construction"
-      },
-      {
-        "id": "authored:train-2",
-        "reason": "held out, the reading became Unknown (ambiguous-role-mapping); the remaining 2 core record(s) do not determine this construction"
-      }
-    ],
-    "accuracy": 0
+    "total": 6,
+    "failures": [],
+    "accuracy": 1
   },
   "negatives": [
     {
@@ -120,29 +188,29 @@
     }
   ],
   "corpusCoverage": {
-    "passages": 8208,
-    "known": 367,
-    "rate": 0.044712,
+    "passages": 77884,
+    "known": 16679,
+    "rate": 0.214152,
     "readErrors": 0,
     "firstReadError": null,
     "perGrammar": {
       "wenyan.relations.v1": {
         "known": 0,
         "rate": 0,
-        "evidenceRecords": 3,
+        "evidenceRecords": 6,
         "readErrors": 0
       },
       "wenyan.relations.reporting.v1": {
-        "known": 367,
-        "rate": 0.044712,
-        "evidenceRecords": 8,
+        "known": 16679,
+        "rate": 0.214152,
+        "evidenceRecords": 14,
         "readErrors": 0
       }
     },
     "bestGrammar": "wenyan.relations.reporting.v1"
   },
   "sourceVerification": {
-    "checked": 29,
+    "checked": 32,
     "failed": []
   },
   "integrity": {
@@ -152,13 +220,16 @@
       "authored:train-0: label has no timestamp",
       "authored:train-1: label has no timestamp",
       "authored:train-2: label has no timestamp",
-      "store spans multiple grammar versions: {\"wenyan.relations.v1\":3,\"wenyan.relations.reporting.v1\":29}"
+      "authored:falsifiable-grant: label has no timestamp",
+      "authored:falsifiable-hand-over: label has no timestamp",
+      "authored:falsifiable-receive: label has no timestamp",
+      "store spans multiple grammar versions: {\"wenyan.relations.v1\":6,\"wenyan.relations.reporting.v1\":32}"
     ],
     "replayError": null
   },
   "projection": {
-    "poolSize": 3,
-    "inModel": 3,
+    "poolSize": 6,
+    "inModel": 6,
     "droppedByCap": 0
   },
   "gates": [
@@ -173,17 +244,15 @@
       "id": "G2",
       "name": "role mapping determined per construction, per grammar",
       "required": true,
-      "pass": false,
-      "evidence": "experimental/grant: survivors=1/6, labels=1 (floor 2); experimental/hand-over: survivors=1/6, labels=1 (floor 2); experimental/receive: survivors=1/6, labels=1 (floor 2); reporting/wei-quote: survivors=1/6, labels=8 (floor 2); reporting/wen-quote: survivors=1/6, labels=8 (floor 2); reporting/gao-quote: survivors=1/6, labels=8 (floor 2); reporting/yu-quote: survivors=1/6, labels=5 (floor 2)",
-      "missing": "3 construction(s) need >= 2 labels and exactly 1 surviving mapping"
+      "pass": true,
+      "evidence": "experimental/grant: survivors=1/6, labels=2 (floor 2); experimental/hand-over: survivors=1/6, labels=2 (floor 2); experimental/receive: survivors=1/6, labels=2 (floor 2); reporting/wei-quote: survivors=1/6, labels=9 (floor 2); reporting/wen-quote: survivors=1/6, labels=6 (floor 2); reporting/gao-quote: survivors=1/6, labels=5 (floor 2); reporting/yu-quote: survivors=1/6, labels=4 (floor 2); reporting/wen-plain: survivors=1/2, labels=3 (floor 2); reporting/gao-plain: survivors=1/2, labels=3 (floor 2); reporting/yue-quote: survivors=1/2, labels=2 (floor 2)"
     },
     {
       "id": "G3",
       "name": "generalises when its own evidence is held out, per grammar",
       "required": true,
-      "pass": false,
-      "evidence": "experimental: core 3, accuracy=0, failures=3 (first authored:train-0: held out, the reading became Unknown (ambiguous-role-mapping); the remaining 2 core record(s) do not determine this construction); reporting: core 8, accuracy=1, failures=0",
-      "missing": "each construction needs >= 2 independent labels before this can be measured at all"
+      "pass": true,
+      "evidence": "experimental: core 6, accuracy=1, failures=0; reporting: core 14, accuracy=1, failures=0"
     },
     {
       "id": "G4",
@@ -197,36 +266,36 @@
       "name": "grounded in the target corpus",
       "required": false,
       "pass": true,
-      "evidence": "wenyan.relations.v1: 0/8208 (0, evidence 3); wenyan.relations.reporting.v1: 367/8208 (0.044712, evidence 8) — floor 0.01, best grammar wenyan.relations.reporting.v1"
+      "evidence": "wenyan.relations.v1: 0/77884 (0, evidence 6); wenyan.relations.reporting.v1: 16679/77884 (0.214152, evidence 14) — floor 0.01, best grammar wenyan.relations.reporting.v1"
     },
     {
       "id": "G6",
       "name": "durable and re-derivable",
       "required": true,
       "pass": true,
-      "evidence": "32 record(s); content hashes verified; corpus-derived sources verified=29/29"
+      "evidence": "49 record(s), 11 retracted (11 retraction record(s)); content hashes verified; corpus-derived sources verified=32/32"
     },
     {
       "id": "G7",
       "name": "dialogue contract exists and is enforced",
       "required": true,
       "pass": true,
-      "evidence": "contract=wenyan.dialogue.contract.v1, 6 question type(s), 6 invariant(s) each naming its enforcement, out-of-scope declared: Q6, recorded contract violations=0"
+      "evidence": "contract=wenyan.dialogue.contract.v1, 7 question type(s), 8 invariant(s) each naming its enforcement, out-of-scope declared: Q6, recorded contract violations=0"
     },
     {
       "id": "G8",
       "name": "declared questions answer the target corpus",
       "required": true,
       "pass": false,
-      "evidence": "best corpus answer rate 0.044712 under wenyan.relations.reporting.v1; floor 0.5",
+      "evidence": "best corpus answer rate 0.214152 under wenyan.relations.reporting.v1; floor 0.5",
       "missing": "the floor is a declared parameter and is not lowered to match the current value: answering a question about real text still fails for the large majority of passages"
     },
     {
       "id": "G9",
-      "name": "every record accounted for: modelled, held out by name, or out of grammar",
+      "name": "every record accounted for: modelled, held out, out of grammar, or excluded by provenance",
       "required": true,
       "pass": true,
-      "evidence": "wenyan.relations.v1: core 3/32 + held out 0 + out-of-grammar 0 = 3/3; wenyan.relations.reporting.v1: core 8/32 + held out 21 + out-of-grammar 0 = 29/29"
+      "evidence": "wenyan.relations.v1: core 6/32 + held out 0 + out-of-grammar 0 + provenance-excluded 0 = 6/6 (provenance authored); wenyan.relations.reporting.v1: core 14/32 + held out 18 + out-of-grammar 0 + provenance-excluded 0 = 32/32 (provenance corpus)"
     }
   ],
   "verdict": {
@@ -235,19 +304,20 @@
     "dialogueReady": false,
     "readyForConversationalReasoning": false,
     "readingReadyGrammars": [
+      "wenyan.relations.v1",
       "wenyan.relations.reporting.v1"
     ],
     "perGrammarReading": {
       "wenyan.relations.v1": {
         "short": "experimental",
         "constructions": 3,
-        "determined": false,
-        "generalises": false,
-        "readingReady": false
+        "determined": true,
+        "generalises": true,
+        "readingReady": true
       },
       "wenyan.relations.reporting.v1": {
         "short": "reporting",
-        "constructions": 4,
+        "constructions": 7,
         "determined": true,
         "generalises": true,
         "readingReady": true
@@ -269,8 +339,6 @@
     },
     "reversible": "Because the network is replay(evidence), adding contradicting evidence can raise survivors above 1 and re-open G2. Maturity is not monotone.",
     "deficits": [
-      "G2 role mapping determined per construction, per grammar: 3 construction(s) need >= 2 labels and exactly 1 surviving mapping",
-      "G3 generalises when its own evidence is held out, per grammar: each construction needs >= 2 independent labels before this can be measured at all",
       "G8 declared questions answer the target corpus: the floor is a declared parameter and is not lowered to match the current value: answering a question about real text still fails for the large majority of passages"
     ]
   }

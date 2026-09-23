@@ -179,11 +179,11 @@
     "tools/taixuan/ask.mjs": "6375645233c0dab8b9dfbc9be9c984e8729633fa216ffab269840350aaefc875",
     "tools/taixuan/fetch-source.mjs": "0b15bbf6b0b51c05184c8bfd10d9c96aed12ccfa56a795b8e3e21606270450fc",
     "tools/taixuan/selftest.mjs": "696e254b91c4e2ad2fe48464d36284cf0c9d4bc434ba3172552983c951c70586",
-    "experiments/taixuan/contract.json": "16977e611cb3c4d03cb8d1df2c0195d2fae513258651dec598f9a0d21f48ae4f",
+    "experiments/taixuan/contract.json": "1891468e80dc546338fe6ddb84487c299c0ce8b3f405b9a522022fbe01f2019c",
     "experiments/taixuan/annotations.json": "268316cbeed36cfba607e7f80df9cf83d7e8d53547566a145c8e438ea6357140"
   },
   "preserved": {
-    "experiments/changes/evidence.json": "932b725e64386083b00c07c081e2024f718c8fc336b2755df39a2c1b9721130d",
+    "experiments/changes/evidence.json": "289ad2bf546fa7daecdac82cbb905221a1474aeefaacd2654ce193c6cb0c053e",
     "knowledge/changes/learning.jsonl": "5ec183b2402f3d16fe51a14286e445c82494da86cdc298c63c7e63f50b16ebc7",
     "experiments/relations/evidence.json": "784f6fe4d8d60bcb92118fbc9dd0cba4b245d3b78c503dbd839fa7bdd931b45d"
   }

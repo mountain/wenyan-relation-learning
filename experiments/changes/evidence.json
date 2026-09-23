@@ -81,6 +81,6 @@
     "tools/changes/ask.mjs": "de4482a417b8f2906a0ad401440b593809f7c667ee2e912a00ccb505a535b5f5",
     "tools/changes/core-checks.mjs": "f1ec9cc4fa778f6dc276ec0e50f3d0e35bc3299dc74b79415edcdb7d71014b3b",
     "tools/changes/selftest.mjs": "ca810175028630cbf342a39c8fceaa303a6c7a5c0c95b017b07adc827fa79e2e",
-    "experiments/changes/contract.json": "1218965c65e8375b8db4db793be765698ff0764d1cfd5e0a8f35d402e886c94e"
+    "experiments/changes/contract.json": "f8db828f08fee47fad7cfaf31ebdfe662d696b3b983100e2057b25d5546a42db"
   }
 }

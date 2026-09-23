@@ -206,5 +206,20 @@
       "whyNotDeclared": "the theme span has NO delimiter and no marker, so delimiting it is a guess; 17.96% of the agent spans are already particles or adverbs. Declaring it would mean storing labels that assert something false, which the evidence discipline forbids."
     },
     "conclusion": "adding every frame with a defensible segmentation rule reaches about 24.4% of the corpus against G8's floor of 0.5. The gap is not closable by more work of this kind, which is why G8 is reported as measured-unreachable rather than as not-yet-done."
-  }
+  },
+  "labelAdmissibility": {
+    "rule": "a supervised label may only carry a span that can be STATED as that role. The criteria live in tools/grammar/admissibility.mjs, single-sourced because two callers depend on them: the seeder (which refuses to write an inadmissible label) and the live-store audit (tools/knowledge/conflations.mjs check C5).",
+    "agent": "length 1..5, no particle or adverb prefix or suffix, no reporting verb, preposition or interrogative particle",
+    "recipient": "length 1..5, no reporting verb, may not carry a preposition (於子貢/于樂正/乎長梧子), may not end in 者, may not begin with the existential 有. A pronominal recipient (人/余/之) IS the recipient expression and is kept",
+    "measuredRejectionRate": "1,002 of the 8,726 passages the seven constructions read (11.48%) have an agent span beginning with a particle or adverb",
+    "limitations": "The criteria are a DECLARED LIST OF PATTERNS, not a parser, and a span can pass the list yet still be wrong. Witness: corpus:zhuangzi:19.23:gao-quote carried agent 齊士有皇子 (containing the existential 有) and recipient 敖者 (a fragment of the name 皇子告敖); both passed the list as first written and the record had to be retracted. The list catches the pattern classes that have actually occurred; it does not prove a surviving label is right, and conflations C5 is about exactly that gap.",
+    "history": "the first retraction pass missed the 者-suffixed recipient because its scan used a start-anchored match against an alternation containing 者$ — a defect in the audit, not in the rule. It was found only when the rule became single-sourced and applied to the live store."
+  },
+  "forbidden_conflations": [
+    "C1 recognising a construction is not accepting its label — a record the grammar merely recognises may not enter the operational core",
+    "C3 declaring a partial-role construction is not the same as having written the missing-role contract it presupposes",
+    "C4 a reported denominator is not the same as the construction's own permutation space — a two-slot construction permutes two roles",
+    "C5 a source passage being re-verifiable is not the same as its label being true"
+  ],
+  "forbidden_conflations_source": "knowledge/conflations.json — field and practice adopted from adva/docs/claims.toml. Each entry is checked by tools/knowledge/conflations.mjs; a declaration with no implementation is itself the conflation C6 forbids."
 }

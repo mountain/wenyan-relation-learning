@@ -20,6 +20,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createTsLoader } from '../lib/tsload.mjs';
 import { makeRecord, appendEvidence } from '../knowledge/store.mjs';
+import { admissibleAgent, admissibleRecipient } from './admissibility.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(HERE, '../..');
@@ -42,32 +43,13 @@ const manifest = JSON.parse(fs.readFileSync(path.join(CORPUS, 'manifest.json'), 
 const workMeta = new Map(manifest.works.map((w) => [w.id, w]));
 
 /**
- * Is a captured span admissible as a SUPERVISED LABEL?
+ * Pick passages that parse uniquely AND whose spans can be labelled truthfully.
  *
- * The original picker took the first passages that parsed, and the corpus promptly
- * supplied spans that cannot be labelled truthfully: `於是武王遍告諸侯曰` yields agent
- * `於是武王遍`, `厲聲謂曰` yields agent `厲聲` (an adverbial), `樅公相謂曰` yields
- * `樅公相`, `野語有之曰` yields agent `野`. Labelling those as the agent ASSERTS
- * SOMETHING FALSE about who spoke, so they are rejected rather than stored.
- *
- * Measured cost of the rule: of the 8,726 passages the seven constructions can read
- * under the single-match rule, 1,002 (11.48%) have an agent span that starts with a
- * particle or adverb. This is a DECLARED filter with a measured rejection rate, not a
- * taste judgement, and the rate is reported by tools/grammar/measure.mjs.
+ * The admissibility criteria live in ./admissibility.mjs because the live store is
+ * audited against the SAME rules by tools/knowledge/conflations.mjs. Keeping a copy
+ * here would let the seeder and the audit drift apart, and a rule that only one of
+ * them knows is not a rule.
  */
-const PARTICLE_PREFIX = /^(且|復|亦|又|乃|遂|蓋|故|而|則|皆|盡|共|竊|嘗|數|相|於是|因|既|始|方|將|欲|敢|請|可|不|傳|使|若|夫|今|昔|初|後|其|之|以|為|所|與|野)/;
-const PARTICLE_SUFFIX = /(且|復|亦|又|乃|遂|蓋|故|而|則|皆|盡|共|竊|嘗|數|相|有|以|傳|歸)$/;
-const VERBISH = /[曰謂問告語於于乎]/;
-function admissibleAgent(v) {
-  return !!v && v.length <= 5 && !PARTICLE_PREFIX.test(v) && !PARTICLE_SUFFIX.test(v) && !VERBISH.test(v);
-}
-function admissibleRecipient(v) {
-  // A prepositional or relative recipient (`於子貢`, `乎長梧子`, `敖者`) records the
-  // wrong span; a pronominal one (`人`, `余`) IS the recipient expression and is kept.
-  return !!v && v.length <= 5 && !VERBISH.test(v) && !/者$/.test(v) && !/^有/.test(v);
-}
-
-/** Pick passages that parse uniquely AND whose spans can be labelled truthfully. */
 const chosen = new Map(CONSTRUCTION_IDS.map((c) => [c, []]));
 const seenWorks = new Map(CONSTRUCTION_IDS.map((c) => [c, new Set()]));
 for (const w of manifest.works) {

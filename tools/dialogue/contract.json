@@ -159,5 +159,10 @@
     "warrantRule": "the warrant is unchanged: the derivation names the surviving permutation and the evidence it rests on. A partially expressed relation is not a weaker warrant, it is a different claim — about the roles the construction DOES express.",
     "notAnOverclaim": "Answered here means \"the text states this much\". It does not mean \"this is the whole relation\", which is why the unexpressed role travels with the answer instead of being dropped or guessed.",
     "unknownIsStillUnknown": "if a question asks about the UNEXPRESSED role specifically, the answer about that role is Unknown."
-  }
+  },
+  "forbidden_conflations": [
+    "C1 recognising a construction is not accepting its label — an Answered answer may not rest on evidence the grammar refuses",
+    "C5 a source passage being re-verifiable is not the same as its label being true — a warrant naming a record does not make that record right"
+  ],
+  "forbidden_conflations_source": "knowledge/conflations.json — field and practice adopted from adva/docs/claims.toml. Each entry is checked by tools/knowledge/conflations.mjs; a declaration with no implementation is itself the conflation C6 forbids."
 }

@@ -1,0 +1,56 @@
+{
+  "schema": "wenyan.conflations.v1",
+  "adoptedFrom": "adva/docs/claims.toml (11-field claim schema; the `forbidden_conflations` field). Adva attaches an explicit list of conflations to EVERY claim; Wenyan's contracts previously carried prose `nonclaims`, which state what is not claimed but not what two different things must not be confused with each other.",
+  "why": "A nonclaim says 'this is not established'. A forbidden conflation says 'these two are different objects, and treating them as one is the error'. Every serious defect found in this repository so far has been a conflation, and each was invisible until it produced a wrong artifact. Naming them makes them assertable.",
+  "rule": "A conflation declared here MUST have a check under tools/knowledge/conflations.mjs, or be marked checkable:false with a reason. A declaration without enforcement is itself the conflation C6 forbids — 'the file says so' is not 'the code obeys it'.",
+  "conflations": [
+    {
+      "id": "C1",
+      "forbidden": "Recognising a construction is not accepting a label",
+      "detail": "A grammar can recognise a text's construction and still REFUSE the supervised label attached to it. Admitting records that are merely recognised put records into the operational core that replay() rejects, and because replay is all-or-nothing ONE such record made every construction throw 'out-of-grammar evidence'.",
+      "witness": "Found twice in this repository: first through constructionOf() returning a construction for a multi-frame passage, then again when the two-slot frames made such passages common instead of rare. The gate reported PASS while the model could not be built.",
+      "enforcedBy": "tools/knowledge/projection.mjs selectOperationalCore({ isConsistent }) with tools/grammar/relations-reporting.ts labelIsConsistent()",
+      "checkable": true
+    },
+    {
+      "id": "C2",
+      "forbidden": "A gate passing is not the same as every declared construction having been examined",
+      "detail": "REPORTING_PROBES declared only the original four constructions, so the three added later — including the one carrying 20.57% of the corpus by itself — were never examined while G2 reported PASS. A declaration list that omits members makes absence pass vacuously.",
+      "witness": "Found by hand while reading the G2 detail line; the gate had been green for a full round with three of seven constructions unchecked.",
+      "enforcedBy": "tools/knowledge/conflations.mjs check C2 against knowledge/relations/readiness.json and the grammar's exported CONSTRUCTION_IDS",
+      "checkable": true
+    },
+    {
+      "id": "C3",
+      "forbidden": "Declaring a construction is not the same as having written the contract its semantics require",
+      "detail": "tools/grammar/contract.json recorded the two-slot frame as measuredButNotAdmitted on the explicit condition that it stay unused 'until a separate contract defines what a missing role means'. The frame was admitted first and the contract written afterwards, inverting the stated order.",
+      "witness": "Self-inflicted in this session and self-reported: the precondition was in the file the whole time and was not read before acting on it.",
+      "enforcedBy": "tools/knowledge/conflations.mjs check C3: a construction expressing fewer than three roles requires missingRoleSemantics in the grammar contract",
+      "checkable": true
+    },
+    {
+      "id": "C4",
+      "forbidden": "A reported denominator is not the same as the construction's own permutation space",
+      "detail": "readiness printed survivors=n/6 for every construction. A two-slot construction permutes TWO roles, so its space is 2, and the hard-coded /6 made a determined mapping look under-determined.",
+      "witness": "Visible the moment a two-slot construction was probed: 'survivors=1/2, labels=2' beside 'survivors=1/6, labels=8' for frames whose spaces differ.",
+      "enforcedBy": "tools/knowledge/conflations.mjs check C4 against ROLES_FOR_CONSTRUCTION and readiness.json rolePermutations",
+      "checkable": true
+    },
+    {
+      "id": "C5",
+      "forbidden": "A source passage being re-verifiable is not the same as its label being true",
+      "detail": "verifySources() proved 29/29 corpus-derived records still matched their passages, and that number was reported as evidence health. It says nothing about the labels: eleven live records carried spans that cannot be stated as that role (recipient 於子貢, agent 於是武王遍, agent 周公乃), and the clean verification count stayed green throughout.",
+      "witness": "Eleven records retracted across two passes, found only by auditing spans rather than sources.",
+      "enforcedBy": "tools/grammar/admissibility.mjs, applied by the seeder and audited over the live store by tools/knowledge/conflations.mjs check C5",
+      "checkable": true
+    },
+    {
+      "id": "C6",
+      "forbidden": "A rule written in a contract is not the same as a rule the code enforces",
+      "detail": "The dialogue contract's own header says a contract that is only prose is a wish. The same holds for this registry: a conflation declared with no check is decoration.",
+      "witness": "This file. The check audits its own declarations, so 'declared' can never outrun 'enforced'.",
+      "enforcedBy": "tools/knowledge/conflations.mjs check C6: every conflation declared in knowledge/conflations.json or in any tools/*/contract.json must have an implementation, and every implementation must be declared",
+      "checkable": true
+    }
+  ]
+}

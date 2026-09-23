@@ -13,8 +13,15 @@
     {
       "id": "coreference",
       "ask": "Which earlier expression does this span refer to?",
-      "fields": ["text", "span", "link"],
-      "verdicts": ["holds", "fails"],
+      "fields": [
+        "text",
+        "span",
+        "link"
+      ],
+      "verdicts": [
+        "holds",
+        "fails"
+      ],
       "verify": "reload the records and recompute agreement; a mix of holds and fails is Contested",
       "failClosed": "no record -> Unknown(no-judgement-recorded)",
       "note": "The text does not witness this. Two defensible readings are a CONTESTED claim, not a corrupt store."
@@ -22,8 +29,15 @@
     {
       "id": "construction-meaning",
       "ask": "Does this construction carry the declared constructional meaning here?",
-      "fields": ["text", "form", "meaning"],
-      "verdicts": ["holds", "fails"],
+      "fields": [
+        "text",
+        "form",
+        "meaning"
+      ],
+      "verdicts": [
+        "holds",
+        "fails"
+      ],
       "verify": "as above",
       "failClosed": "no record -> Unknown(no-judgement-recorded)",
       "note": "Falsifiable in the weak sense: a counterexample where the form does not carry that meaning defeats a holds verdict."
@@ -31,8 +45,15 @@
     {
       "id": "speech-act",
       "ask": "Is this span's illocutionary act the declared one?",
-      "fields": ["text", "span", "act"],
-      "verdicts": ["holds", "fails"],
+      "fields": [
+        "text",
+        "span",
+        "act"
+      ],
+      "verdicts": [
+        "holds",
+        "fails"
+      ],
       "verify": "as above",
       "failClosed": "no record -> Unknown(no-judgement-recorded)",
       "note": "RESTRICTED to acts the text explicitly marks (e.g. 決定的是：). Not a reading of tone or intent — those are out of scope."
@@ -40,8 +61,16 @@
     {
       "id": "layer-sense-relation",
       "ask": "Between layer A and layer B, is the relation between the senses of this word the declared one?",
-      "fields": ["word", "layerA", "layerB", "relation"],
-      "verdicts": ["holds", "fails"],
+      "fields": [
+        "word",
+        "layerA",
+        "layerB",
+        "relation"
+      ],
+      "verdicts": [
+        "holds",
+        "fails"
+      ],
       "verify": "as above; attestation counts for each layer are recorded separately as evidence",
       "failClosed": "no record -> Unknown(no-judgement-recorded)",
       "note": "This is a claim ON A TRANSMISSION EDGE. Evidence for each side is separate, and a verdict may be contested when the two sides' attestations support different relations."
@@ -60,12 +89,36 @@
     }
   ],
   "invariants": [
-    { "id": "S1", "rule": "Answered requires at least one judgement record and unanimity among them.", "enforcedBy": "evaluateClaim() + validateAnswer()" },
-    { "id": "S2", "rule": "Contested requires at least two records with differing verdicts, and must name both sides with their judge and basis.", "enforcedBy": "validateAnswer()" },
-    { "id": "S3", "rule": "Contested is LOCAL: it must not prevent any other claim or question from being answered. A shared store problem is Inconsistent, not Contested.", "enforcedBy": "selftest (locality case) + evaluateClaim scope" },
-    { "id": "S4", "rule": "No judgement recorded means Unknown. The absence of a judgement is never rendered as a verdict.", "enforcedBy": "evaluateClaim()" },
-    { "id": "S5", "rule": "Every judgement names its judge and basis; a judgement without provenance cannot be stored.", "enforcedBy": "makeJudgment()" },
-    { "id": "S6", "rule": "Declared-out-of-scope claim types are Refused, never answered by analogy.", "enforcedBy": "ask()" }
+    {
+      "id": "S1",
+      "rule": "Answered requires at least one judgement record and unanimity among them.",
+      "enforcedBy": "evaluateClaim() + validateAnswer()"
+    },
+    {
+      "id": "S2",
+      "rule": "Contested requires at least two records with differing verdicts, and must name both sides with their judge and basis.",
+      "enforcedBy": "validateAnswer()"
+    },
+    {
+      "id": "S3",
+      "rule": "Contested is LOCAL: it must not prevent any other claim or question from being answered. A shared store problem is Inconsistent, not Contested.",
+      "enforcedBy": "selftest (locality case) + evaluateClaim scope"
+    },
+    {
+      "id": "S4",
+      "rule": "No judgement recorded means Unknown. The absence of a judgement is never rendered as a verdict.",
+      "enforcedBy": "evaluateClaim()"
+    },
+    {
+      "id": "S5",
+      "rule": "Every judgement names its judge and basis; a judgement without provenance cannot be stored.",
+      "enforcedBy": "makeJudgment()"
+    },
+    {
+      "id": "S6",
+      "rule": "Declared-out-of-scope claim types are Refused, never answered by analogy.",
+      "enforcedBy": "ask()"
+    }
   ],
   "nonclaims": [
     "not understanding: this layer records and reconciles judgements; it does not derive meaning from text",
@@ -73,5 +126,9 @@
     "not a consensus machine: a majority does not settle a claim — disagreement stays visible as Contested",
     "no claim that a Contested verdict is a defect; on real texts it is usually the honest answer",
     "judgements recorded by this session are declared readings with a stated basis, and carry no authority beyond that"
-  ]
+  ],
+  "forbidden_conflations": [
+    "C5 a source passage being re-verifiable is not the same as its label being true"
+  ],
+  "forbidden_conflations_source": "knowledge/conflations.json — field and practice adopted from adva/docs/claims.toml. Each entry is checked by tools/knowledge/conflations.mjs; a declaration with no implementation is itself the conflation C6 forbids."
 }
