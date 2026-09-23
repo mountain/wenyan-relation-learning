@@ -36,6 +36,11 @@ const { readReporting, emptyReportingModel, CONSTRUCTION_IDS, MAX_TEXT_UNITS } =
 const empty = emptyReportingModel();
 
 // ------------------------------------------------------------------- corpus
+/** Total passages per work. A count of readable passages without its denominator is not a density,
+ *  and 文獻通考 alone holds 20.8% of the corpus — per-work rates are unreadable without it.
+ *  Declared BEFORE the corpus loop: an earlier version put this after it and the loop hit the
+ *  temporal dead zone, which is a crash rather than a wrong number, so it cost one run and no data. */
+const perWorkTotal = {};
 const passages = [];
 let maxLength = 0;
 if (fs.existsSync(path.join(CORPUS, 'manifest.json'))) {
@@ -46,6 +51,7 @@ if (fs.existsSync(path.join(CORPUS, 'manifest.json'))) {
     for (const s of doc.sections) {
       for (const p of s.passages) {
         maxLength = Math.max(maxLength, p.text.length);
+        perWorkTotal[w.id] = (perWorkTotal[w.id] || 0) + 1;
         passages.push({
           work: w.id, zh: w.zh, section: s.id, passageId: p.id,
           sourcePage: s.sourcePage, sourceRevid: s.sourceRevid, text: p.text,
@@ -136,6 +142,11 @@ const report = {
     tooLong,
     perConstruction,
     perWork,
+    perWorkDensity: Object.fromEntries(Object.keys(perWorkTotal).map((id) => [id, {
+      passages: perWorkTotal[id],
+      readable: perWork[id] ?? 0,
+      density: +((perWork[id] ?? 0) / perWorkTotal[id]).toFixed(4),
+    }])),
     examples: reachExamples,
     ambiguousExamples,
   },

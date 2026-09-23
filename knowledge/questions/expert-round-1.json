@@ -1,0 +1,645 @@
+{
+  "schema": "wenyan.questions.expert-fill-in.v1",
+  "generatedAt": "2026-09-23T12:02:56.070Z",
+  "instructions": "每对填 relation（异体字／异写／古今字／通用字／通假字／异文／不同字／存疑），可加 basis 与 scope（篇目或时代）。存疑按未判定处理，不计收益。",
+  "classes": {
+    "异体字": {
+      "countsAsOrthographicGain": true,
+      "definition": "同一个字的两种（或多种）写法。"
+    },
+    "异写": {
+      "countsAsOrthographicGain": true,
+      "definition": "音义相同而写法不同，常作为异体的实际使用形态（罗小虎：惟常作唯的异体/异写）。"
+    },
+    "古今字": {
+      "countsAsOrthographicGain": true,
+      "definition": "同一个字的前后写法，一个古字一个稍后的字（罗小虎：雍→雝，一个古字一个稍微现代）。"
+    },
+    "通假字": {
+      "countsAsOrthographicGain": false,
+      "definition": "本字与借字音同或音近而借用，属于不同的词（罗小虎：普→溥「也不是严格异体字，算通假字或是看具体情况」）。"
+    },
+    "异文": {
+      "countsAsOrthographicGain": false,
+      "definition": "不同版本、不同征引之间的文字差异（罗小虎：异体、异文、通假这么说比较准确，但其实要看具体文章）。"
+    },
+    "不同字": {
+      "countsAsOrthographicGain": false,
+      "definition": "本来就是两个不同的字，各有各的音义（罗小虎：毋表示禁止、不要，無表示没有；協→洽不算异体字就是两个字）。"
+    },
+    "未判定": {
+      "countsAsOrthographicGain": false,
+      "definition": "尚未请教，或尚未落实到具体篇目。可以记录，不得计入书写变体收益。"
+    },
+    "通用字": {
+      "countsAsOrthographicGain": true,
+      "definition": "两字长期通用、音义相近，古籍与征引中自由互换（本项目判定：於/于）。"
+    }
+  },
+  "alreadyRuled": [
+    {
+      "pair": "毋/無",
+      "count": 4,
+      "relation": "不同字"
+    },
+    {
+      "pair": "後/后",
+      "count": 4,
+      "relation": "通假字"
+    },
+    {
+      "pair": "緡/緜",
+      "count": 3,
+      "relation": "不同字"
+    },
+    {
+      "pair": "雍/雝",
+      "count": 3,
+      "relation": "古今字"
+    },
+    {
+      "pair": "爲/為",
+      "count": 3,
+      "relation": "异体字"
+    },
+    {
+      "pair": "普/溥",
+      "count": 2,
+      "relation": "通假字"
+    },
+    {
+      "pair": "協/洽",
+      "count": 2,
+      "relation": "不同字"
+    }
+  ],
+  "open": [
+    {
+      "from": "惟",
+      "to": "維",
+      "citationsExplained": 8,
+      "relation": null,
+      "basis": null,
+      "scope": null,
+      "witness": "mencius:9.22 引 classic-of-poetry：永言孝思，孝思惟則 ／ 出处作：永言孝思孝思維則"
+    },
+    {
+      "from": "醤",
+      "to": "烕",
+      "citationsExplained": 4,
+      "relation": null,
+      "basis": null,
+      "scope": null,
+      "witness": "hanshu:33.279 引 classic-of-poetry：赫赫宗周，褒姒醤之。 ／ 出处作：赫赫宗周褒姒烕之"
+    },
+    {
+      "from": "昭",
+      "to": "炤",
+      "citationsExplained": 3,
+      "relation": null,
+      "basis": null,
+      "scope": null,
+      "witness": "doctrine-of-the-mean:1.34 引 classic-of-poetry：潛雖伏矣，亦孔之昭。 ／ 出处作：潛雖伏矣亦孔之炤"
+    },
+    {
+      "from": "監",
+      "to": "鑒",
+      "citationsExplained": 2,
+      "relation": null,
+      "basis": null,
+      "scope": null,
+      "witness": "hanshu:45.49 引 classic-of-poetry：殷監不遠，在夏后之世 ／ 出处作：殷鑒不遠在夏后之世"
+    },
+    {
+      "from": "遍",
+      "to": "徧",
+      "citationsExplained": 2,
+      "relation": null,
+      "basis": null,
+      "scope": null,
+      "witness": "wenxian-tongkao:73.53 引 book-of-documents：'肆類於上帝，禋於六宗，望於山川，遍於群神 ／ 出处作：肆類于上帝禋于六宗望于山川徧于群神"
+    },
+    {
+      "from": "以",
+      "to": "與",
+      "citationsExplained": 2,
+      "relation": null,
+      "basis": null,
+      "scope": null,
+      "witness": "wenxian-tongkao:83.24 引 classic-of-poetry：以我犧羊，以社以方。 ／ 出处作：與我犧羊以社以方"
+    },
+    {
+      "from": "乎",
+      "to": "恭",
+      "citationsExplained": 1,
+      "relation": null,
+      "basis": null,
+      "scope": null,
+      "witness": "analects:2.21 引 book-of-documents：孝乎惟孝，友於兄弟。 ／ 出处作：孝恭惟孝友于兄弟"
+    },
+    {
+      "from": "此",
+      "to": "女",
+      "citationsExplained": 1,
+      "relation": null,
+      "basis": null,
+      "scope": null,
+      "witness": "mencius:3.36 引 classic-of-poetry：迨天之未陰雨，徹彼桑土，綢繆牖戶。今此下民，或敢侮予？ ／ 出处作：迨天之未陰雨徹彼桑土綢繆牖戶今女下民或敢侮予"
+    },
+    {
+      "from": "绹",
+      "to": "綯",
+      "citationsExplained": 1,
+      "relation": null,
+      "basis": null,
+      "scope": null,
+      "witness": "mencius:5.14 引 classic-of-poetry：晝爾于茅，宵爾索绹。亟其乘屋，其始播百穀。 ／ 出处作：晝爾于茅宵爾索綯亟其乘屋其始播百穀"
+    },
+    {
+      "from": "娶",
+      "to": "取",
+      "citationsExplained": 1,
+      "relation": null,
+      "basis": null,
+      "scope": null,
+      "witness": "mencius:9.5 引 classic-of-poetry：娶妻如之何？必告父母。 ／ 出处作：取妻如之何必告父母"
+    },
+    {
+      "from": "底",
+      "to": "砥",
+      "citationsExplained": 1,
+      "relation": null,
+      "basis": null,
+      "scope": null,
+      "witness": "mencius:10.48 引 classic-of-poetry：周道如底，其直如矢；君子所履，小人所視。 ／ 出处作：周道如砥其直如矢君子所履小人所視"
+    },
+    {
+      "from": "蒸",
+      "to": "烝",
+      "citationsExplained": 1,
+      "relation": null,
+      "basis": null,
+      "scope": null,
+      "witness": "mencius:11.29 引 classic-of-poetry：天生蒸民，有物有則。民之秉彝，好是懿德。 ／ 出处作：天生烝民有物有則民之秉彝好是懿德"
+    },
+    {
+      "from": "凱",
+      "to": "豈",
+      "citationsExplained": 1,
+      "relation": null,
+      "basis": null,
+      "scope": null,
+      "witness": "book-of-rites:29.2 引 classic-of-poetry：凱弟君子，民之父母 ／ 出处作：豈弟君子民之父母"
+    },
+    {
+      "from": "‘",
+      "to": "笑",
+      "citationsExplained": 1,
+      "relation": null,
+      "basis": null,
+      "scope": null,
+      "witness": "book-of-rites:30.12 引 classic-of-poetry：‘先民有言，詢於芻蕘 ／ 出处作：笑先民有言詢于芻蕘"
+    },
+    {
+      "from": "‘",
+      "to": "行",
+      "citationsExplained": 1,
+      "relation": null,
+      "basis": null,
+      "scope": null,
+      "witness": "book-of-rites:30.17 引 analects：‘三年無改於父之道，可謂孝矣 ／ 出处作：行三年無改于父之道可謂孝矣"
+    },
+    {
+      "from": "‘",
+      "to": "矣",
+      "citationsExplained": 1,
+      "relation": null,
+      "basis": null,
+      "scope": null,
+      "witness": "book-of-rites:30.19 引 classic-of-poetry：‘此令兄弟，綽綽有裕；不令兄弟，交相為瘉 ／ 出处作：矣此令兄弟綽綽有裕不令兄弟交相為瘉"
+    },
+    {
+      "from": "‘",
+      "to": "五",
+      "citationsExplained": 1,
+      "relation": null,
+      "basis": null,
+      "scope": null,
+      "witness": "book-of-rites:30.24 引 zhouyi：‘東鄰殺牛，不如西鄰之禴祭，實受其福 ／ 出处作：五東鄰殺牛不如西鄰之禴祭實受其福"
+    },
+    {
+      "from": "‘",
+      "to": "錯",
+      "citationsExplained": 1,
+      "relation": null,
+      "basis": null,
+      "scope": null,
+      "witness": "book-of-rites:30.25 引 classic-of-poetry：‘禮儀卒度，笑語卒獲 ／ 出处作：錯禮儀卒度笑語卒獲"
+    },
+    {
+      "from": "‘",
+      "to": "怒",
+      "citationsExplained": 1,
+      "relation": null,
+      "basis": null,
+      "scope": null,
+      "witness": "book-of-rites:30.30 引 classic-of-poetry：‘采葑采菲，無以下體，德音莫違，及爾同死 ／ 出处作：怒采葑采菲無以下體德音莫違及爾同死"
+    },
+    {
+      "from": "梏",
+      "to": "覺",
+      "citationsExplained": 1,
+      "relation": null,
+      "basis": null,
+      "scope": null,
+      "witness": "book-of-rites:33.6 引 classic-of-poetry：有梏德行，四國順之。 ／ 出处作：有覺德行四國順之"
+    },
+    {
+      "from": "讎",
+      "to": "仇",
+      "citationsExplained": 1,
+      "relation": null,
+      "basis": null,
+      "scope": null,
+      "witness": "book-of-rites:33.15 引 classic-of-poetry：彼求我則，如不我得：執我仇讎，亦不我力。 ／ 出处作：彼求我則如不我得執我仇仇亦不我力"
+    },
+    {
+      "from": "也",
+      "to": "兮",
+      "citationsExplained": 1,
+      "relation": null,
+      "basis": null,
+      "scope": null,
+      "witness": "book-of-rites:33.18 引 classic-of-poetry：淑人君子，其儀一也。 ／ 出处作：淑人君子其儀一兮"
+    },
+    {
+      "from": "坤",
+      "to": "也",
+      "citationsExplained": 1,
+      "relation": null,
+      "basis": null,
+      "scope": null,
+      "witness": "book-of-rites:39.3 引 zhouyi：坤六二之動，直以方也。 ／ 出处作：也六二之動直以方也"
+    },
+    {
+      "from": "尸",
+      "to": "鳲",
+      "citationsExplained": 1,
+      "relation": null,
+      "basis": null,
+      "scope": null,
+      "witness": "xunzi:1.2 引 classic-of-poetry：尸鳩在桑，其子七兮。淑人君子，其儀一兮。其儀一兮，心如結兮。 ／ 出处作：鳲鳩在桑其子七兮淑人君子其儀一兮其儀一兮心如結兮"
+    },
+    {
+      "from": "己",
+      "to": "已",
+      "citationsExplained": 1,
+      "relation": null,
+      "basis": null,
+      "scope": null,
+      "witness": "xunzi:8.4 引 classic-of-poetry：民之無良，相怨一方。受爵不讓，至于己斯亡。 ／ 出处作：民之無良相怨一方受爵不讓至于已斯亡"
+    },
+    {
+      "from": "羣",
+      "to": "群",
+      "citationsExplained": 1,
+      "relation": null,
+      "basis": null,
+      "scope": null,
+      "witness": "xunzi:28.2 引 classic-of-poetry：憂心悄悄，慍於羣小。 ／ 出处作：憂心悄悄慍于群小"
+    },
+    {
+      "from": "諮",
+      "to": "咨",
+      "citationsExplained": 1,
+      "relation": null,
+      "basis": null,
+      "scope": null,
+      "witness": "mozi:12.13 引 classic-of-poetry：我馬維駱，六轡沃若。載馳載驅，周爰諮度。 ／ 出处作：我馬維駱六轡沃若載馳載驅周爰咨度"
+    },
+    {
+      "from": "僔",
+      "to": "噂",
+      "citationsExplained": 1,
+      "relation": null,
+      "basis": null,
+      "scope": null,
+      "witness": "zuozhuan:6.187 引 classic-of-poetry：下民之孽，匪降自天。僔沓背憎，職競由人。 ／ 出处作：下民之孽匪降自天噂沓背憎職競由人"
+    },
+    {
+      "from": "己",
+      "to": "其",
+      "citationsExplained": 1,
+      "relation": null,
+      "basis": null,
+      "scope": null,
+      "witness": "zuozhuan:6.332 引 classic-of-poetry：彼己之子，不稱其服。 ／ 出处作：彼其之子不稱其服"
+    },
+    {
+      "from": "何",
+      "to": "胡",
+      "citationsExplained": 1,
+      "relation": null,
+      "basis": null,
+      "scope": null,
+      "witness": "shiji:68.9 引 classic-of-poetry：相鼠有體，人而無禮，人而無禮，何不遄死。 ／ 出处作：相鼠有體人而無禮人而無禮胡不遄死"
+    },
+    {
+      "from": "遏",
+      "to": "曷",
+      "citationsExplained": 1,
+      "relation": null,
+      "basis": null,
+      "scope": null,
+      "witness": "hanshu:25.5 引 classic-of-poetry：武王載旆，有虔秉鉞，如火烈烈，則莫我敢遏。 ／ 出处作：武王載旆有虔秉鉞如火烈烈則莫我敢曷"
+    },
+    {
+      "from": "德",
+      "to": "典",
+      "citationsExplained": 1,
+      "relation": null,
+      "basis": null,
+      "scope": null,
+      "witness": "hanshu:25.11 引 classic-of-poetry：儀式刑文王之德，日靖四方。 ／ 出处作：儀式刑文王之典日靖四方"
+    },
+    {
+      "from": "愷",
+      "to": "豈",
+      "citationsExplained": 1,
+      "relation": null,
+      "basis": null,
+      "scope": null,
+      "witness": "hanshu:25.17 引 classic-of-poetry：愷弟君子，民之父母。 ／ 出处作：豈弟君子民之父母"
+    },
+    {
+      "from": "羞",
+      "to": "敬",
+      "citationsExplained": 1,
+      "relation": null,
+      "basis": null,
+      "scope": null,
+      "witness": "hanshu:39.190 引 book-of-documents：初一曰五行，次二曰羞用五事 ／ 出处作：初一曰五行次二曰敬用五事"
+    },
+    {
+      "from": "聚",
+      "to": "造",
+      "citationsExplained": 1,
+      "relation": null,
+      "basis": null,
+      "scope": null,
+      "witness": "hanshu:45.26 引 zhouyi：飛龍在天，大人聚也 ／ 出处作：飛龍在天大人造也"
+    },
+    {
+      "from": "唯",
+      "to": "維",
+      "citationsExplained": 1,
+      "relation": null,
+      "basis": null,
+      "scope": null,
+      "witness": "hanshu:62.34 引 classic-of-poetry：我心憂傷，惄焉如擣；假寐永歎，唯憂用老；心之憂矣，疢如疾首 ／ 出处作：我心憂傷惄焉如擣假寐永歎維憂用老心之憂矣疢如疾首"
+    },
+    {
+      "from": "旣",
+      "to": "既",
+      "citationsExplained": 1,
+      "relation": null,
+      "basis": null,
+      "scope": null,
+      "witness": "hanshu:75.11 引 classic-of-poetry：王猶允塞，徐方旣來 ／ 出处作：王猶允塞徐方既來"
+    },
+    {
+      "from": "鐘",
+      "to": "鍾",
+      "citationsExplained": 1,
+      "relation": null,
+      "basis": null,
+      "scope": null,
+      "witness": "hanshu:77.25 引 classic-of-poetry：鼓鐘于宮，聲聞于外。 ／ 出处作：鼓鍾于宮聲聞于外"
+    },
+    {
+      "from": "揭",
+      "to": "偈",
+      "citationsExplained": 1,
+      "relation": null,
+      "basis": null,
+      "scope": null,
+      "witness": "hanshu:84.6 引 classic-of-poetry：匪風發兮，匪車揭兮，顧瞻周道，中心怛兮。 ／ 出处作：匪風發兮匪車偈兮顧瞻周道中心怛兮"
+    },
+    {
+      "from": "禮",
+      "to": "履",
+      "citationsExplained": 1,
+      "relation": null,
+      "basis": null,
+      "scope": null,
+      "witness": "hanshu:90.15 引 classic-of-poetry：率禮不越，遂視既發；相土烈烈，海外有截。 ／ 出处作：率履不越遂視既發相土烈烈海外有截"
+    },
+    {
+      "from": "仇",
+      "to": "逑",
+      "citationsExplained": 1,
+      "relation": null,
+      "basis": null,
+      "scope": null,
+      "witness": "hanshu:93.17 引 classic-of-poetry：窈窕淑女，君子好仇。 ／ 出处作：窈窕淑女君子好逑"
+    },
+    {
+      "from": "悴",
+      "to": "瘁",
+      "citationsExplained": 1,
+      "relation": null,
+      "basis": null,
+      "scope": null,
+      "witness": "hanshu:117.23 引 classic-of-poetry：人之云亡，邦國殄悴 ／ 出处作：人之云亡邦國殄瘁"
+    },
+    {
+      "from": "谷",
+      "to": "穀",
+      "citationsExplained": 1,
+      "relation": null,
+      "basis": null,
+      "scope": null,
+      "witness": "sanguozhi:34.3 引 classic-of-poetry：谷則異室，死則同穴。 ／ 出处作：穀則異室死則同穴"
+    },
+    {
+      "from": "︰",
+      "to": "茅",
+      "citationsExplained": 1,
+      "relation": null,
+      "basis": null,
+      "scope": null,
+      "witness": "sanguozhi:38.24 引 classic-of-poetry：︰『天步艱難，之子不猶 ／ 出处作：茅天步艱難之子不猶"
+    },
+    {
+      "from": "‘",
+      "to": "重",
+      "citationsExplained": 1,
+      "relation": null,
+      "basis": null,
+      "scope": null,
+      "witness": "sanguozhi:58.25 引 book-of-documents：‘與其殺不辜，寧失不經 ／ 出处作：重與其殺不辜寧失不經"
+    },
+    {
+      "from": "已",
+      "to": "巳",
+      "citationsExplained": 1,
+      "relation": null,
+      "basis": null,
+      "scope": null,
+      "witness": "wenxian-tongkao:71.53 引 book-of-documents：'越三日丁已，用牲於郊，牛二 ／ 出处作：越三日丁巳用牲于郊牛二"
+    },
+    {
+      "from": "復",
+      "to": "其",
+      "citationsExplained": 1,
+      "relation": null,
+      "basis": null,
+      "scope": null,
+      "witness": "wenxian-tongkao:72.58 引 zhouyi：'《復》，見天地之心乎 ／ 出处作：其見天地之心乎"
+    },
+    {
+      "from": "泮",
+      "to": "頖",
+      "citationsExplained": 1,
+      "relation": null,
+      "basis": null,
+      "scope": null,
+      "witness": "wenxian-tongkao:73.46 引 book-of-rites：'魯人將有事於上帝，必先有事於泮宮 ／ 出处作：魯人將有事于上帝必先有事于頖宮"
+    },
+    {
+      "from": "祚",
+      "to": "阼",
+      "citationsExplained": 1,
+      "relation": null,
+      "basis": null,
+      "scope": null,
+      "witness": "wenxian-tongkao:82.64 引 book-of-rites：'踐祚臨祭祀，內事曰孝王某，外事曰嗣王某 ／ 出处作：踐阼臨祭祀內事曰孝王某外事曰嗣王某"
+    },
+    {
+      "from": "醜",
+      "to": "丑",
+      "citationsExplained": 1,
+      "relation": null,
+      "basis": null,
+      "scope": null,
+      "witness": "子不語:6.43 引 zhouyi：窺觀女貞，亦可醜也。 ／ 出处作：窺觀女貞亦可丑也"
+    },
+    {
+      "from": "射",
+      "to": "斁",
+      "citationsExplained": 1,
+      "relation": null,
+      "basis": null,
+      "scope": null,
+      "witness": "四書章句集註:4.34 引 classic-of-poetry：在彼無惡，在此無射；庶幾夙夜，以永終譽！ ／ 出处作：在彼無惡在此無斁庶幾夙夜以永終譽"
+    },
+    {
+      "from": "奏",
+      "to": "鬷",
+      "citationsExplained": 1,
+      "relation": null,
+      "basis": null,
+      "scope": null,
+      "witness": "四書章句集註:4.38 引 classic-of-poetry：奏假無言，時靡有爭。 ／ 出处作：鬷假無言時靡有爭"
+    },
+    {
+      "from": "室",
+      "to": "廟",
+      "citationsExplained": 1,
+      "relation": null,
+      "basis": null,
+      "scope": null,
+      "witness": "文選:1.10 引 爾雅：室無東西廂，有室曰寢 ／ 出处作：廟無東西廂有室曰寢"
+    },
+    {
+      "from": "蓺",
+      "to": "藝",
+      "citationsExplained": 1,
+      "relation": null,
+      "basis": null,
+      "scope": null,
+      "witness": "文選:1.10 引 周禮：《六蓺》：禮、樂、射、御、書、數 ／ 出处作：六藝禮樂射御書數"
+    },
+    {
+      "from": "猊",
+      "to": "麑",
+      "citationsExplained": 1,
+      "relation": null,
+      "basis": null,
+      "scope": null,
+      "witness": "文選:1.11 引 爾雅：狻猊，如虦貓，食虎豹 ／ 出处作：狻麑如虦貓食虎豹"
+    },
+    {
+      "from": "人",
+      "to": "民",
+      "citationsExplained": 1,
+      "relation": null,
+      "basis": null,
+      "scope": null,
+      "witness": "文選:1.15 引 國語：古曰在昔，昔曰先人 ／ 出处作：古曰在昔昔曰先民"
+    },
+    {
+      "from": "温",
+      "to": "溫",
+      "citationsExplained": 1,
+      "relation": null,
+      "basis": null,
+      "scope": null,
+      "witness": "文選:1.18 引 analects：温故而知新，可以爲師矣 ／ 出处作：溫故而知新可以爲師矣"
+    },
+    {
+      "from": "暮",
+      "to": "莫",
+      "citationsExplained": 1,
+      "relation": null,
+      "basis": null,
+      "scope": null,
+      "witness": "文選:25.71 引 analects：暮春者，春服既成 ／ 出处作：莫春者春服既成"
+    },
+    {
+      "from": "甯",
+      "to": "寧",
+      "citationsExplained": 1,
+      "relation": null,
+      "basis": null,
+      "scope": null,
+      "witness": "古文觀止:11.68 引 book-of-documents：罪疑惟輕，功疑惟重。與其殺不辜，甯失不經。 ／ 出处作：罪疑惟輕功疑惟重與其殺不辜寧失不經"
+    },
+    {
+      "from": "王",
+      "to": "享",
+      "citationsExplained": 1,
+      "relation": null,
+      "basis": null,
+      "scope": null,
+      "witness": "國語:2.3 引 classic-of-poetry：自彼氐、羌，莫敢不來王。 ／ 出处作：自彼氐羌莫敢不來享"
+    },
+    {
+      "from": "也",
+      "to": "邑",
+      "citationsExplained": 1,
+      "relation": null,
+      "basis": null,
+      "scope": null,
+      "witness": "國語:2.6 引 zhouyi：王用三驅，失前禽也。 ／ 出处作：王用三驅失前禽邑"
+    },
+    {
+      "from": "僚",
+      "to": "寮",
+      "citationsExplained": 1,
+      "relation": null,
+      "basis": null,
+      "scope": null,
+      "witness": "國語:6.26 引 classic-of-poetry：我雖異事，及爾同僚。 ／ 出处作：我雖異事及爾同寮"
+    },
+    {
+      "from": "恫",
+      "to": "怨",
+      "citationsExplained": 1,
+      "relation": null,
+      "basis": null,
+      "scope": null,
+      "witness": "國語:11.39 引 classic-of-poetry：惠于宗公，神罔時恫。 ／ 出处作：惠于宗公神罔時怨"
+    }
+  ]
+}
