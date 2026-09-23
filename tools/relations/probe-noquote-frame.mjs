@@ -60,6 +60,7 @@ for (const f of fs.readdirSync(path.join(ROOT, 'data/corpus/works'))) {
 let readNow = 0;
 let gain = 0;
 let superseded = 0;
+let spanMissing = 0;  // if this equals readNow the supersede measurement is void again
 let ambiguousWith = 0;
 const gainEx = [];
 const supEx = [];
@@ -86,8 +87,14 @@ for (const r of rows) {
     gain += 1;
     if (gainEx.length < 5) gainEx.push({ work: r.work, at: r.at, match: hits[0][0].slice(0, 60), text: r.text.slice(0, 90) });
   } else {
-    const cs = cur.spanStart ?? null;
-    const ce = cur.spanEnd ?? null;
+    // SPANS ARE NOT ON THE RESULT. readReporting returns {status, reason, source, construction,
+    // candidates, occurrences}; the span lives on candidates[0]. The first version read cur.spanStart,
+    // which is undefined — so `contains` could never be true and the zero it printed measured nothing.
+    // That is the SECOND zero this probe produced that measured nothing (the first was the skip), and
+    // both are kept in the record: a probe's failure mode is to look like evidence.
+    const cs = cur.candidates?.[0]?.spanStart ?? null;
+    const ce = cur.candidates?.[0]?.spanEnd ?? null;
+    if (cs === null) spanMissing += 1;
     const contains = cs !== null && cs >= spanStart && ce <= spanEnd;
     const overlaps = cs !== null && spanStart < ce && cs < spanEnd;
     if (contains) {
@@ -110,6 +117,7 @@ const report = {
     gain: { passages: gain, shareOfCorpus: +(gain / rows.length).toFixed(4) },
     superseded: { passages: superseded, shareOfReadable: readNow ? +(superseded / readNow).toFixed(4) : 0 },
     partialOverlap: ambiguousWith,
+    readableWithoutSpan: spanMissing,
     verdict: null,
   },
   examples: { gain: gainEx, superseded: supEx },
@@ -119,7 +127,14 @@ const report = {
     'SUPERSEDED counts spans, using the containment precedence the grammar now declares; it is the number that decides whether this frame is a gain or the 116 incident again.',
   ],
 };
-report.result.verdict = superseded === 0
+// A zero is only a result if it could have been non-zero. If the readable readings carry no span,
+// the comparison never ran, and the honest verdict is UNMEASURED — which is what this probe has now
+// had to say three times, for three different reasons.
+report.result.verdict = spanMissing / Math.max(1, readNow) > 0.5   // 21682/21685 — nearly all
+  ? 'UNMEASURED — no readable reading exposes a span, so replacement could not be checked at all. '
+    + 'It is NOT zero: exposing the span on the reading is a change to src/ and has not been made. '
+    + 'The GAIN figure is unaffected (it is a count, not a comparison).'
+  : superseded === 0
   ? 'No replacements measured — the candidate adds readings without taking any away (subject to the non-claims).'
   : superseded / Math.max(1, readNow) > 0.05
     ? `TOO DESTRUCTIVE AS STATED: ${superseded} existing readings would be swallowed. Needs a narrower boundary before it is declared.`
@@ -127,6 +142,7 @@ report.result.verdict = superseded === 0
 
 console.log(`[probe] on-disk passages ${rows.length}, readable now ${readNow}`);
 console.log(`[probe] GAIN ${gain} (${(gain / rows.length * 100).toFixed(2)}% of corpus)`);
+console.log(`[probe] readable readings lacking a span: ${spanMissing}`);
 console.log(`[probe] SUPERSEDED ${superseded} (${readNow ? (superseded / readNow * 100).toFixed(2) : 0}% of readable)`);
 console.log(`[probe] verdict: ${report.result.verdict}`);
 for (const e of gainEx.slice(0, 3)) console.log(`   + ${e.work} ${e.at}: ${e.match}`);

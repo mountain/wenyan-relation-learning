@@ -1,6 +1,6 @@
 {
   "schema": "wenyan.relations.noquote-probe.v1",
-  "generatedAt": "2026-09-23T12:18:32.030Z",
+  "generatedAt": "2026-09-23T12:19:15.618Z",
   "status": "PROBE — nothing here is declared, stored or licensed. A candidate frame is measured before it is adopted.",
   "boundaryRule": "speech = from the character after the colon to the first 。／；／！？ outside 「」『』（）, or the end of the passage; rejected if empty or longer than 300 characters",
   "frame": "<E>曰|云[：︰﹕]<S>  with E = the grammar's entity class, re-declared inside the probe",
@@ -18,7 +18,8 @@
       "shareOfReadable": 0
     },
     "partialOverlap": 0,
-    "verdict": "No replacements measured — the candidate adds readings without taking any away (subject to the non-claims)."
+    "readableWithoutSpan": 21682,
+    "verdict": "UNMEASURED — no readable reading exposes a span, so replacement could not be checked at all. It is NOT zero: exposing the span on the reading is a change to src/ and has not been made. The GAIN figure is unaffected (it is a count, not a comparison)."
   },
   "examples": {
     "gain": [
