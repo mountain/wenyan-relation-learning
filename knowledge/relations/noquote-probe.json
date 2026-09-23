@@ -1,0 +1,63 @@
+{
+  "schema": "wenyan.relations.noquote-probe.v1",
+  "generatedAt": "2026-09-23T12:18:32.030Z",
+  "status": "PROBE — nothing here is declared, stored or licensed. A candidate frame is measured before it is adopted.",
+  "boundaryRule": "speech = from the character after the colon to the first 。／；／！？ outside 「」『』（）, or the end of the passage; rejected if empty or longer than 300 characters",
+  "frame": "<E>曰|云[：︰﹕]<S>  with E = the grammar's entity class, re-declared inside the probe",
+  "scope": {
+    "passagesOnDisk": 156414,
+    "readableNow": 21685
+  },
+  "result": {
+    "gain": {
+      "passages": 25468,
+      "shareOfCorpus": 0.1628
+    },
+    "superseded": {
+      "passages": 0,
+      "shareOfReadable": 0
+    },
+    "partialOverlap": 0,
+    "verdict": "No replacements measured — the candidate adds readings without taking any away (subject to the non-claims)."
+  },
+  "examples": {
+    "gain": [
+      {
+        "work": "book-of-documents",
+        "at": "book-of-documents.12#12.2",
+        "match": "王曰：「嗟爾萬方有眾，明聽予一人誥",
+        "text": "王歸自克夏，至于亳，誕告萬方。王曰：「嗟爾萬方有眾，明聽予一人誥！惟皇上帝，降衷于下民。若有恒性，克綏厥猷惟後，夏王滅德作威，以敷虐于爾萬方百姓，爾萬方百姓罹其兇害，弗忍荼毒。并告"
+      },
+      {
+        "work": "book-of-documents",
+        "at": "book-of-documents.19#19.1",
+        "match": "卜稽曰：其如台（何）",
+        "text": "盤庚遷于殷，民不適有居。率籲眾戚出矢言。曰：「我王來，既爰（易）宅于兹；重我民，無盡劉。不能胥匡以生。卜稽曰：其如台（何）？先王有服，恪謹（勤）天命；兹猶（由）不常寧，不常厥邑，于"
+      },
+      {
+        "work": "book-of-documents",
+        "at": "book-of-documents.19#19.2",
+        "match": "王若曰：「格汝眾",
+        "text": "盤庚斆于民，由乃在位，以常舊服，正法度。曰：「無或（有）敢伏小人之攸箴。」王命眾，悉至于庭。王若曰：「格汝眾。予告汝訓：汝猷黜乃心，無傲從（縱）康。古我先王，亦惟圖任舊人共政。王播"
+      },
+      {
+        "work": "book-of-documents",
+        "at": "book-of-documents.31#31.1",
+        "match": "王曰：「嗟我友邦冢君，越我御事庶士，明聽誓",
+        "text": "惟十有三年，春，大會于孟津。王曰：「嗟我友邦冢君，越我御事庶士，明聽誓。惟天地，萬物父母；惟人，萬物之靈。亶聰明，作元后，元后作民父母。今商王受，弗敬上天，降災下民，沈緬冒色，敢行"
+      },
+      {
+        "work": "book-of-documents",
+        "at": "book-of-documents.43#43.4",
+        "match": "丕惟曰：爾克永觀省，作稽中德，爾尚克羞饋祀，爾乃自介（匄）用逸",
+        "text": "「庶士、有正，越庶伯、君子，其爾典聽朕教：爾大克羞耇惟君，爾乃飲食醉飽。丕惟曰：爾克永觀省，作稽中德，爾尚克羞饋祀，爾乃自介（匄）用逸。兹乃允惟王正事之臣；兹亦惟天若元德，永不忘（"
+      }
+    ],
+    "superseded": []
+  },
+  "nonClaims": [
+    "GAIN is not a promise: a passage may contain several 曰 and the probe reads only the first.",
+    "The probe cannot check whether the entity slot names a real speaker (A1 aperture: entity spans are unquoted runs).",
+    "SUPERSEDED counts spans, using the containment precedence the grammar now declares; it is the number that decides whether this frame is a gain or the 116 incident again."
+  ]
+}
