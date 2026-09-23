@@ -21,6 +21,7 @@ import crypto from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 import { createTsLoader } from '../lib/tsload.mjs';
 import { loadEvidence, integrityReport, projectModel, verifySources } from './store.mjs';
+import { statusOf, rungSummary, LADDER } from './claim-status.mjs';
 import { selectOperationalCore } from './projection.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
@@ -307,8 +308,13 @@ if (fs.existsSync(path.join(CORPUS, 'manifest.json'))) {
 
 // ------------------------------------------------------------------ gates
 const gates = [];
-const gate = (id, name, required, pass, evidence, missing = null) =>
-  gates.push({ id, name, required, pass, evidence, ...(missing ? { missing } : {}) });
+const gate = (id, name, required, pass, evidence, missing = null) => {
+  // The rung is looked up, never passed in: an undeclared gate throws rather than
+  // silently inheriting the strength of the gates beside it.
+  const { status, basis, bounds } = statusOf(id);
+  gates.push({ id, name, required, pass, evidence, claimStatus: status, claimStatusBasis: basis,
+    claimStatusBounds: bounds, ...(missing ? { missing } : {}) });
+};
 
 const unverifiedSources = sourceChecks.filter((s) => !s.ok);
 gate('G1', 'well-formed store', true,
@@ -494,6 +500,8 @@ const report = {
     readingReadyGrammars,
     perGrammarReading,
     gateGroups: { reading: READING_GATES, dialogue: DIALOGUE_GATES },
+    claimStatusLadder: LADDER,
+    rungSummary: rungSummary(gates),
     reversible: 'Because the network is replay(evidence), adding contradicting evidence can raise survivors above 1 and re-open G2. Maturity is not monotone.',
     deficits,
   },
@@ -509,10 +517,17 @@ if (argv.includes('--write')) {
 const mark = (p) => (p ? 'PASS' : 'FAIL');
 console.log(`[readiness] store=${report.store.path} records=${records.length} projection=${projection.model.examples.length}`);
 for (const g of gates) {
-  console.log(`  ${mark(g.pass)} ${g.id} ${g.name}${g.required ? '' : ' (optional)'}`);
+  console.log(`  ${mark(g.pass)} ${g.id} [${g.claimStatus}] ${g.name}${g.required ? '' : ' (optional)'}`);
   console.log(`       ${g.evidence}`);
   if (g.missing) console.log(`       missing: ${g.missing}`);
 }
+const rungs = rungSummary(gates);
+console.log(`\n[claim-status] ladder ${LADDER.join(' < ')}`);
+console.log(`[claim-status] passing gates by rung: ` +
+  LADDER.filter((r) => rungs.histogram[r]).map((r) => `${r} ${rungs.histogram[r]}`).join(', '));
+console.log(`[claim-status] weakest REQUIRED gate: ${rungs.weakestRequired} — a suite is not stronger than its weakest link`);
+console.log('               (G5 is optional and measured; G8 is a construction-target, i.e. a named target not met)');
+
 console.log(`\n[verdict] ready for computation: ${readyForComputation}` +
   (readingReadyGrammars.length
     ? ` (via ${readingReadyGrammars.map(shortOf).join(', ')} — the verdict is per grammar, not global)`
