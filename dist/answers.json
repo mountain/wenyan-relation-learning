@@ -10,12 +10,2074 @@
     "note": "stratified one-per-work plus fixed diagnostics"
   },
   "totals": {
-    "questions": 81,
+    "questions": 85,
     "byState": {
-      "Answered": 21,
-      "Unknown": 60
+      "Answered": 24,
+      "Unknown": 60,
+      "Refused": 1
     },
     "contractThrew": 0
+  },
+  "exercisedStates": {
+    "Answered": true,
+    "Unknown": true,
+    "Refused": true,
+    "Contested": false,
+    "Inconsistent": false,
+    "note": "Contested needs a store holding a named disagreement fed to a question type that surfaces it; the semantics store HAS one (the Lu Xun 他们-coreference judgement) but no Q1 input here reaches it. Inconsistent needs a contradictory store, which this repository is not: it is the state a UI must render when the evidence stops replaying, so it can only be shown from a synthetic store. Both are declared in knowledge/interaction/contract.json and must be implemented; they are simply not exercised by this data."
+  },
+  "citationNavigation": [
+    {
+      "host": "hanshu",
+      "cited": "classic-of-poetry",
+      "total": 111,
+      "byStatus": {
+        "found-in-cited-work": 42,
+        "not-found-in-cited-work": 69
+      },
+      "examples": [
+        {
+          "hostPassage": "8.82",
+          "marker": "《詩》云",
+          "quote": "憂心慘慘，念國之為虐。",
+          "foundAt": {
+            "section": "classic-of-poetry.192",
+            "passageId": "192.11"
+          }
+        },
+        {
+          "hostPassage": "13.19",
+          "marker": "《詩》云",
+          "quote": "穀則異室，死則同穴。",
+          "foundAt": {
+            "section": "classic-of-poetry.73",
+            "passageId": "73.1"
+          }
+        },
+        {
+          "hostPassage": "23.237",
+          "marker": "《詩》曰",
+          "quote": "七月流火。",
+          "foundAt": {
+            "section": "classic-of-poetry.154",
+            "passageId": "154.1"
+          }
+        }
+      ]
+    },
+    {
+      "host": "hanshu",
+      "cited": "zhouyi",
+      "total": 70,
+      "byStatus": {
+        "not-found-in-cited-work": 48,
+        "found-in-cited-work": 20,
+        "quotation-too-short-to-verify": 2
+      },
+      "examples": [
+        {
+          "hostPassage": "8.129",
+          "marker": "《易》曰",
+          "quote": "先甲三日，後甲三日。",
+          "foundAt": {
+            "section": "zhouyi.18",
+            "passageId": "18.3"
+          }
+        },
+        {
+          "hostPassage": "23.7",
+          "marker": "《易》曰",
+          "quote": "東北喪朋，乃終有慶",
+          "foundAt": {
+            "section": "zhouyi.2",
+            "passageId": "2.4"
+          }
+        },
+        {
+          "hostPassage": "24.13",
+          "marker": "《易》曰",
+          "quote": "先王以作樂崇德，殷薦之上帝，以配祖考。",
+          "foundAt": {
+            "section": "zhouyi.16",
+            "passageId": "16.5"
+          }
+        }
+      ]
+    },
+    {
+      "host": "book-of-rites",
+      "cited": "classic-of-poetry",
+      "total": 66,
+      "byStatus": {
+        "not-found-in-cited-work": 38,
+        "found-in-cited-work": 28
+      },
+      "examples": [
+        {
+          "hostPassage": "9.2",
+          "marker": "《詩》曰",
+          "quote": "相鼠有體，人而無禮，人而無禮，胡不遄死！",
+          "foundAt": {
+            "section": "classic-of-poetry.52",
+            "passageId": "52.1"
+          }
+        },
+        {
+          "hostPassage": "24.5",
+          "marker": "《詩》云",
+          "quote": "明發不寐，有懷二人。",
+          "foundAt": {
+            "section": "classic-of-poetry.196",
+            "passageId": "196.1"
+          }
+        },
+        {
+          "hostPassage": "24.23",
+          "marker": "《詩》云",
+          "quote": "自西自東，自南自北，無思不服。",
+          "foundAt": {
+            "section": "classic-of-poetry.244",
+            "passageId": "244.1"
+          }
+        }
+      ]
+    },
+    {
+      "host": "文選",
+      "cited": "爾雅",
+      "total": 66,
+      "byStatus": {
+        "quotation-too-short-to-verify": 26,
+        "found-in-cited-work": 13,
+        "not-found-in-cited-work": 27
+      },
+      "examples": [
+        {
+          "hostPassage": "1.8",
+          "marker": "《爾雅》曰",
+          "quote": "四達謂之衢",
+          "foundAt": {
+            "section": "爾雅.5",
+            "passageId": "5.16"
+          }
+        },
+        {
+          "hostPassage": "1.10",
+          "marker": "《爾雅》曰",
+          "quote": "螮蝀，虹也",
+          "foundAt": {
+            "section": "爾雅.8",
+            "passageId": "8.13"
+          }
+        },
+        {
+          "hostPassage": "1.10",
+          "marker": "《爾雅》曰",
+          "quote": "闔謂之扉",
+          "foundAt": {
+            "section": "爾雅.5",
+            "passageId": "5.14"
+          }
+        }
+      ]
+    },
+    {
+      "host": "zuozhuan",
+      "cited": "春秋經",
+      "total": 57,
+      "byStatus": {
+        "by-declared-convention": 11,
+        "quotation-too-short-to-verify": 3,
+        "no-quotation-follows": 43
+      },
+      "examples": []
+    },
+    {
+      "host": "hanshu",
+      "cited": "book-of-documents",
+      "total": 43,
+      "byStatus": {
+        "not-found-in-cited-work": 33,
+        "found-in-cited-work": 9,
+        "quotation-too-short-to-verify": 1
+      },
+      "examples": [
+        {
+          "hostPassage": "23.18",
+          "marker": "《書》曰",
+          "quote": "乃命羲、和，欽若昊天，曆象日月星辰，敬授民時。",
+          "foundAt": {
+            "section": "book-of-documents.1",
+            "passageId": "1.2"
+          }
+        },
+        {
+          "hostPassage": "24.13",
+          "marker": "《書》云",
+          "quote": "擊石拊石，百獸率舞。",
+          "foundAt": {
+            "section": "book-of-documents.1",
+            "passageId": "1.71"
+          }
+        },
+        {
+          "hostPassage": "25.1",
+          "marker": "《書》云",
+          "quote": "天秩有禮",
+          "foundAt": {
+            "section": "book-of-documents.4",
+            "passageId": "4.3"
+          }
+        }
+      ]
+    },
+    {
+      "host": "xunzi",
+      "cited": "classic-of-poetry",
+      "total": 38,
+      "byStatus": {
+        "found-in-cited-work": 17,
+        "not-found-in-cited-work": 21
+      },
+      "examples": [
+        {
+          "hostPassage": "1.1",
+          "marker": "《詩》曰",
+          "quote": "嗟爾君子，無恆安息。靖共爾位，好是正直。神之聽之，介爾景福。",
+          "foundAt": {
+            "section": "classic-of-poetry.207",
+            "passageId": "207.5"
+          }
+        },
+        {
+          "hostPassage": "2.2",
+          "marker": "《詩》曰",
+          "quote": "禮儀卒度，笑語卒獲。",
+          "foundAt": {
+            "section": "classic-of-poetry.209",
+            "passageId": "209.3"
+          }
+        },
+        {
+          "hostPassage": "2.10",
+          "marker": "《詩》云",
+          "quote": "不識不知，順帝之則。",
+          "foundAt": {
+            "section": "classic-of-poetry.241",
+            "passageId": "241.7"
+          }
+        }
+      ]
+    },
+    {
+      "host": "國語",
+      "cited": "classic-of-poetry",
+      "total": 31,
+      "byStatus": {
+        "not-found-in-cited-work": 7,
+        "found-in-cited-work": 24
+      },
+      "examples": [
+        {
+          "hostPassage": "2.11",
+          "marker": "《詩》云",
+          "quote": "二月初吉。",
+          "foundAt": {
+            "section": "classic-of-poetry.207",
+            "passageId": "207.1"
+          }
+        },
+        {
+          "hostPassage": "2.19",
+          "marker": "《詩》云",
+          "quote": "滔滔江漢，南國之紀。",
+          "foundAt": {
+            "section": "classic-of-poetry.204",
+            "passageId": "204.1"
+          }
+        },
+        {
+          "hostPassage": "2.22",
+          "marker": "《詩》云",
+          "quote": "鳳皇鳴矣，于彼高岡。",
+          "foundAt": {
+            "section": "classic-of-poetry.252",
+            "passageId": "252.1"
+          }
+        }
+      ]
+    },
+    {
+      "host": "mencius",
+      "cited": "classic-of-poetry",
+      "total": 29,
+      "byStatus": {
+        "found-in-cited-work": 19,
+        "not-found-in-cited-work": 10
+      },
+      "examples": [
+        {
+          "hostPassage": "1.32",
+          "marker": "《詩》云",
+          "quote": "他人有心，予忖度之。",
+          "foundAt": {
+            "section": "classic-of-poetry.198",
+            "passageId": "198.4"
+          }
+        },
+        {
+          "hostPassage": "1.37",
+          "marker": "《詩》云",
+          "quote": "刑於寡妻，至於兄弟，以御於家邦。",
+          "foundAt": {
+            "section": "classic-of-poetry.240",
+            "passageId": "240.1"
+          }
+        },
+        {
+          "hostPassage": "2.19",
+          "marker": "《詩》云",
+          "quote": "畏天之威，於時保之。",
+          "foundAt": {
+            "section": "classic-of-poetry.272",
+            "passageId": "272.1"
+          }
+        }
+      ]
+    },
+    {
+      "host": "四書章句集註",
+      "cited": "classic-of-poetry",
+      "total": 29,
+      "byStatus": {
+        "not-found-in-cited-work": 15,
+        "found-in-cited-work": 14
+      },
+      "examples": [
+        {
+          "hostPassage": "2.8",
+          "marker": "《詩》云",
+          "quote": "穆穆文王，於緝熙敬止。",
+          "foundAt": {
+            "section": "classic-of-poetry.235",
+            "passageId": "235.4"
+          }
+        },
+        {
+          "hostPassage": "2.20",
+          "marker": "《詩》云",
+          "quote": "桃之夭夭，其葉蓁蓁，之子于歸，宜其家人。",
+          "foundAt": {
+            "section": "classic-of-poetry.6",
+            "passageId": "6.1"
+          }
+        },
+        {
+          "hostPassage": "2.20",
+          "marker": "《詩》云",
+          "quote": "宜兄宜弟。",
+          "foundAt": {
+            "section": "classic-of-poetry.173",
+            "passageId": "173.1"
+          }
+        }
+      ]
+    },
+    {
+      "host": "zuozhuan",
+      "cited": "classic-of-poetry",
+      "total": 23,
+      "byStatus": {
+        "found-in-cited-work": 14,
+        "not-found-in-cited-work": 9
+      },
+      "examples": [
+        {
+          "hostPassage": "2.17",
+          "marker": "《詩》曰",
+          "quote": "孝子不匱，永錫爾類。",
+          "foundAt": {
+            "section": "classic-of-poetry.247",
+            "passageId": "247.1"
+          }
+        },
+        {
+          "hostPassage": "3.79",
+          "marker": "《詩》云",
+          "quote": "自求多福。",
+          "foundAt": {
+            "section": "classic-of-poetry.235",
+            "passageId": "235.6"
+          }
+        },
+        {
+          "hostPassage": "3.132",
+          "marker": "《詩》云",
+          "quote": "君子屢盟，亂是用長。",
+          "foundAt": {
+            "section": "classic-of-poetry.198",
+            "passageId": "198.3"
+          }
+        }
+      ]
+    },
+    {
+      "host": "wenxian-tongkao",
+      "cited": "zhouyi",
+      "total": 21,
+      "byStatus": {
+        "not-found-in-cited-work": 15,
+        "found-in-cited-work": 5,
+        "quotation-too-short-to-verify": 1
+      },
+      "examples": [
+        {
+          "hostPassage": "70.37",
+          "marker": "《易》曰",
+          "quote": "'先王以作樂崇德，殷薦之上帝，以配祖、考",
+          "foundAt": {
+            "section": "zhouyi.16",
+            "passageId": "16.5"
+          }
+        },
+        {
+          "hostPassage": "72.53",
+          "marker": "《易》曰",
+          "quote": "'殷薦之上帝，以配祖考",
+          "foundAt": {
+            "section": "zhouyi.16",
+            "passageId": "16.5"
+          }
+        },
+        {
+          "hostPassage": "121.16",
+          "marker": "《易》曰",
+          "quote": "利者，義之和也。",
+          "foundAt": {
+            "section": "zhouyi.1",
+            "passageId": "1.6"
+          }
+        }
+      ]
+    },
+    {
+      "host": "文選",
+      "cited": "周禮",
+      "total": 21,
+      "byStatus": {
+        "not-found-in-cited-work": 14,
+        "found-in-cited-work": 6,
+        "quotation-too-short-to-verify": 1
+      },
+      "examples": [
+        {
+          "hostPassage": "1.8",
+          "marker": "《周禮》曰",
+          "quote": "方千里曰王畿",
+          "foundAt": {
+            "section": "周禮.4",
+            "passageId": "4.139"
+          }
+        },
+        {
+          "hostPassage": "1.8",
+          "marker": "《周禮》曰",
+          "quote": "匠人營國，方九里，旁三門",
+          "foundAt": {
+            "section": "周禮.6",
+            "passageId": "6.87"
+          }
+        },
+        {
+          "hostPassage": "1.9",
+          "marker": "《周禮》曰",
+          "quote": "十夫有溝",
+          "foundAt": {
+            "section": "周禮.2",
+            "passageId": "2.132"
+          }
+        }
+      ]
+    },
+    {
+      "host": "wenxian-tongkao",
+      "cited": "classic-of-poetry",
+      "total": 20,
+      "byStatus": {
+        "not-found-in-cited-work": 12,
+        "found-in-cited-work": 8
+      },
+      "examples": [
+        {
+          "hostPassage": "9.78",
+          "marker": "《詩》云",
+          "quote": "'雨我公田，遂及我私",
+          "foundAt": {
+            "section": "classic-of-poetry.212",
+            "passageId": "212.3"
+          }
+        },
+        {
+          "hostPassage": "35.5",
+          "marker": "《詩》曰",
+          "quote": "'靡不有初，鮮克有終",
+          "foundAt": {
+            "section": "classic-of-poetry.255",
+            "passageId": "255.1"
+          }
+        },
+        {
+          "hostPassage": "48.13",
+          "marker": "《詩》曰",
+          "quote": "'四之日舉趾，同我婦子，饁彼南畝",
+          "foundAt": {
+            "section": "classic-of-poetry.154",
+            "passageId": "154.1"
+          }
+        }
+      ]
+    },
+    {
+      "host": "wenxian-tongkao",
+      "cited": "book-of-documents",
+      "total": 16,
+      "byStatus": {
+        "found-in-cited-work": 6,
+        "not-found-in-cited-work": 9,
+        "no-quotation-follows": 1
+      },
+      "examples": [
+        {
+          "hostPassage": "11.116",
+          "marker": "《書》曰",
+          "quote": "'惟土物愛，厥心臧'",
+          "foundAt": {
+            "section": "book-of-documents.43",
+            "passageId": "43.2"
+          }
+        },
+        {
+          "hostPassage": "73.48",
+          "marker": "《書》曰",
+          "quote": "'用牲於郊，牛二",
+          "foundAt": {
+            "section": "book-of-documents.45",
+            "passageId": "45.3"
+          }
+        },
+        {
+          "hostPassage": "76.47",
+          "marker": "《書》曰",
+          "quote": "'以昭受上帝，天其申命用休",
+          "foundAt": {
+            "section": "book-of-documents.5",
+            "passageId": "5.2"
+          }
+        }
+      ]
+    },
+    {
+      "host": "shiji",
+      "cited": "classic-of-poetry",
+      "total": 15,
+      "byStatus": {
+        "not-found-in-cited-work": 11,
+        "found-in-cited-work": 4
+      },
+      "examples": [
+        {
+          "hostPassage": "47.46",
+          "marker": "《詩》云",
+          "quote": "匪兕匪虎，率彼曠野",
+          "foundAt": {
+            "section": "classic-of-poetry.234",
+            "passageId": "234.1"
+          }
+        },
+        {
+          "hostPassage": "47.47",
+          "marker": "《詩》云",
+          "quote": "匪兕匪虎，率彼曠野",
+          "foundAt": {
+            "section": "classic-of-poetry.234",
+            "passageId": "234.1"
+          }
+        },
+        {
+          "hostPassage": "47.48",
+          "marker": "《詩》云",
+          "quote": "匪兕匪虎，率彼曠野",
+          "foundAt": {
+            "section": "classic-of-poetry.234",
+            "passageId": "234.1"
+          }
+        }
+      ]
+    },
+    {
+      "host": "wenxian-tongkao",
+      "cited": "今文孝經",
+      "total": 14,
+      "byStatus": {
+        "found-in-cited-work": 11,
+        "not-found-in-cited-work": 3
+      },
+      "examples": [
+        {
+          "hostPassage": "42.78",
+          "marker": "《孝經》曰",
+          "quote": "'宗祀文王於明堂",
+          "foundAt": {
+            "section": "今文孝經.9",
+            "passageId": "9.1"
+          }
+        },
+        {
+          "hostPassage": "42.78",
+          "marker": "《孝經》曰",
+          "quote": "'孝悌之至，通於神明，光於四海，無所不通",
+          "foundAt": {
+            "section": "今文孝經.16",
+            "passageId": "16.1"
+          }
+        },
+        {
+          "hostPassage": "70.37",
+          "marker": "《孝經》曰",
+          "quote": "'郊祀后稷以配天，宗祀文王於明堂，以配上帝",
+          "foundAt": {
+            "section": "今文孝經.9",
+            "passageId": "9.1"
+          }
+        }
+      ]
+    },
+    {
+      "host": "文選",
+      "cited": "analects",
+      "total": 14,
+      "byStatus": {
+        "found-in-cited-work": 10,
+        "not-found-in-cited-work": 4
+      },
+      "examples": [
+        {
+          "hostPassage": "1.8",
+          "marker": "《論語》曰",
+          "quote": "子適衞，冉有僕",
+          "foundAt": {
+            "section": "analects.13",
+            "passageId": "13.9"
+          }
+        },
+        {
+          "hostPassage": "1.14",
+          "marker": "《論語》曰",
+          "quote": "夫子喟然歎曰：吾與點也",
+          "foundAt": {
+            "section": "analects.11",
+            "passageId": "11.29"
+          }
+        },
+        {
+          "hostPassage": "1.16",
+          "marker": "《論語》曰",
+          "quote": "子謂韶盡美矣，又盡善也",
+          "foundAt": {
+            "section": "analects.3",
+            "passageId": "3.25"
+          }
+        }
+      ]
+    },
+    {
+      "host": "great-learning",
+      "cited": "classic-of-poetry",
+      "total": 12,
+      "byStatus": {
+        "not-found-in-cited-work": 6,
+        "found-in-cited-work": 6
+      },
+      "examples": [
+        {
+          "hostPassage": "1.6",
+          "marker": "《詩》云",
+          "quote": "穆穆文王，於緝熙敬止！",
+          "foundAt": {
+            "section": "classic-of-poetry.235",
+            "passageId": "235.4"
+          }
+        },
+        {
+          "hostPassage": "1.10",
+          "marker": "《詩》云",
+          "quote": "桃之夭夭，其葉蓁蓁；之子于歸，宜其家人。",
+          "foundAt": {
+            "section": "classic-of-poetry.6",
+            "passageId": "6.1"
+          }
+        },
+        {
+          "hostPassage": "1.10",
+          "marker": "《詩》云",
+          "quote": "宜兄宜弟。",
+          "foundAt": {
+            "section": "classic-of-poetry.173",
+            "passageId": "173.1"
+          }
+        }
+      ]
+    },
+    {
+      "host": "古文觀止",
+      "cited": "classic-of-poetry",
+      "total": 11,
+      "byStatus": {
+        "found-in-cited-work": 4,
+        "not-found-in-cited-work": 7
+      },
+      "examples": [
+        {
+          "hostPassage": "2.9",
+          "marker": "《詩》曰",
+          "quote": "『孝子不匱，永錫爾類。",
+          "foundAt": {
+            "section": "classic-of-poetry.247",
+            "passageId": "247.1"
+          }
+        },
+        {
+          "hostPassage": "3.12",
+          "marker": "《詩》曰",
+          "quote": "我疆我理，南東其畝。",
+          "foundAt": {
+            "section": "classic-of-poetry.210",
+            "passageId": "210.1"
+          }
+        },
+        {
+          "hostPassage": "3.12",
+          "marker": "《詩》曰",
+          "quote": "敷政優優，百祿是遒。",
+          "foundAt": {
+            "section": "classic-of-poetry.304",
+            "passageId": "304.4"
+          }
+        }
+      ]
+    },
+    {
+      "host": "doctrine-of-the-mean",
+      "cited": "classic-of-poetry",
+      "total": 10,
+      "byStatus": {
+        "found-in-cited-work": 7,
+        "not-found-in-cited-work": 3
+      },
+      "examples": [
+        {
+          "hostPassage": "1.12",
+          "marker": "《詩》云",
+          "quote": "鳶飛戾天；魚躍於淵。",
+          "foundAt": {
+            "section": "classic-of-poetry.239",
+            "passageId": "239.1"
+          }
+        },
+        {
+          "hostPassage": "1.13",
+          "marker": "《詩》云",
+          "quote": "，『伐柯伐柯，其則不遠",
+          "foundAt": {
+            "section": "classic-of-poetry.158",
+            "passageId": "158.1"
+          }
+        },
+        {
+          "hostPassage": "1.16",
+          "marker": "《詩》曰",
+          "quote": "神之格思，不可度思，矧可射思？",
+          "foundAt": {
+            "section": "classic-of-poetry.256",
+            "passageId": "256.7"
+          }
+        }
+      ]
+    },
+    {
+      "host": "國語",
+      "cited": "book-of-documents",
+      "total": 10,
+      "byStatus": {
+        "not-found-in-cited-work": 4,
+        "found-in-cited-work": 5,
+        "quotation-too-short-to-verify": 1
+      },
+      "examples": [
+        {
+          "hostPassage": "4.19",
+          "marker": "《書》曰",
+          "quote": "允恭克讓。",
+          "foundAt": {
+            "section": "book-of-documents.1",
+            "passageId": "1.1"
+          }
+        },
+        {
+          "hostPassage": "4.29",
+          "marker": "《書》曰",
+          "quote": "歌永言，聲依永。",
+          "foundAt": {
+            "section": "book-of-documents.2",
+            "passageId": "2.17"
+          }
+        },
+        {
+          "hostPassage": "4.33",
+          "marker": "《書》曰",
+          "quote": "簫韶九成。",
+          "foundAt": {
+            "section": "book-of-documents.4",
+            "passageId": "4.8"
+          }
+        }
+      ]
+    },
+    {
+      "host": "今文孝經",
+      "cited": "classic-of-poetry",
+      "total": 9,
+      "byStatus": {
+        "found-in-cited-work": 6,
+        "not-found-in-cited-work": 3
+      },
+      "examples": [
+        {
+          "hostPassage": "3.1",
+          "marker": "《詩》云",
+          "quote": "戰戰兢兢，如臨深淵，如履薄冰。",
+          "foundAt": {
+            "section": "classic-of-poetry.195",
+            "passageId": "195.6"
+          }
+        },
+        {
+          "hostPassage": "7.2",
+          "marker": "《詩》云",
+          "quote": "赫赫師尹，民具爾瞻。",
+          "foundAt": {
+            "section": "classic-of-poetry.191",
+            "passageId": "191.1"
+          }
+        },
+        {
+          "hostPassage": "8.1",
+          "marker": "《詩》云",
+          "quote": "有覺德行，四國順之。",
+          "foundAt": {
+            "section": "classic-of-poetry.256",
+            "passageId": "256.2"
+          }
+        }
+      ]
+    },
+    {
+      "host": "mencius",
+      "cited": "book-of-documents",
+      "total": 8,
+      "byStatus": {
+        "not-found-in-cited-work": 7,
+        "found-in-cited-work": 1
+      },
+      "examples": [
+        {
+          "hostPassage": "6.24",
+          "marker": "《書》曰",
+          "quote": "葛伯仇餉",
+          "foundAt": {
+            "section": "book-of-documents.11",
+            "passageId": "11.3"
+          }
+        }
+      ]
+    },
+    {
+      "host": "book-of-rites",
+      "cited": "zhouyi",
+      "total": 7,
+      "byStatus": {
+        "not-found-in-cited-work": 3,
+        "found-in-cited-work": 4
+      },
+      "examples": [
+        {
+          "hostPassage": "32.5",
+          "marker": "《易》曰",
+          "quote": "初筮告，再三瀆，瀆則不告。",
+          "foundAt": {
+            "section": "zhouyi.4",
+            "passageId": "4.2"
+          }
+        },
+        {
+          "hostPassage": "32.27",
+          "marker": "《易》曰",
+          "quote": "不家食吉。",
+          "foundAt": {
+            "section": "zhouyi.26",
+            "passageId": "26.3"
+          }
+        },
+        {
+          "hostPassage": "32.33",
+          "marker": "《易》曰",
+          "quote": "不事王侯，高尚其事。",
+          "foundAt": {
+            "section": "zhouyi.18",
+            "passageId": "18.3"
+          }
+        }
+      ]
+    },
+    {
+      "host": "文選",
+      "cited": "國語",
+      "total": 7,
+      "byStatus": {
+        "not-found-in-cited-work": 5,
+        "found-in-cited-work": 2
+      },
+      "examples": [
+        {
+          "hostPassage": "17.29",
+          "marker": "《國語》曰",
+          "quote": "先人就世",
+          "foundAt": {
+            "section": "國語.22",
+            "passageId": "22.6"
+          }
+        },
+        {
+          "hostPassage": "25.175",
+          "marker": "《國語》曰",
+          "quote": "近臣盡規",
+          "foundAt": {
+            "section": "國語.2",
+            "passageId": "2.7"
+          }
+        }
+      ]
+    },
+    {
+      "host": "hanfeizi",
+      "cited": "classic-of-poetry",
+      "total": 6,
+      "byStatus": {
+        "not-found-in-cited-work": 5,
+        "found-in-cited-work": 1
+      },
+      "examples": [
+        {
+          "hostPassage": "34.7",
+          "marker": "《詩》曰",
+          "quote": "雖無德與女，式歌且舞。",
+          "foundAt": {
+            "section": "classic-of-poetry.218",
+            "passageId": "218.1"
+          }
+        }
+      ]
+    },
+    {
+      "host": "sanguozhi",
+      "cited": "classic-of-poetry",
+      "total": 6,
+      "byStatus": {
+        "found-in-cited-work": 2,
+        "not-found-in-cited-work": 4
+      },
+      "examples": [
+        {
+          "hostPassage": "30.1",
+          "marker": "《詩》稱",
+          "quote": "玁狁孔熾",
+          "foundAt": {
+            "section": "classic-of-poetry.177",
+            "passageId": "177.1"
+          }
+        },
+        {
+          "hostPassage": "50.19",
+          "marker": "《詩》云",
+          "quote": "刑於寡妻，至於兄弟，以御於家邦",
+          "foundAt": {
+            "section": "classic-of-poetry.240",
+            "passageId": "240.1"
+          }
+        }
+      ]
+    },
+    {
+      "host": "國語",
+      "cited": "zhouyi",
+      "total": 6,
+      "byStatus": {
+        "not-found-in-cited-work": 5,
+        "found-in-cited-work": 1
+      },
+      "examples": [
+        {
+          "hostPassage": "4.5",
+          "marker": "《易》曰",
+          "quote": "利物足以和義。",
+          "foundAt": {
+            "section": "zhouyi.1",
+            "passageId": "1.6"
+          }
+        }
+      ]
+    },
+    {
+      "host": "穆天子傳",
+      "cited": "classic-of-poetry",
+      "total": 6,
+      "byStatus": {
+        "found-in-cited-work": 2,
+        "not-found-in-cited-work": 4
+      },
+      "examples": [
+        {
+          "hostPassage": "3.5",
+          "marker": "《詩》曰",
+          "quote": "北風其涼，雨雪其雱。",
+          "foundAt": {
+            "section": "classic-of-poetry.41",
+            "passageId": "41.1"
+          }
+        },
+        {
+          "hostPassage": "3.8",
+          "marker": "《詩》曰",
+          "quote": "吉日庚午。",
+          "foundAt": {
+            "section": "classic-of-poetry.180",
+            "passageId": "180.1"
+          }
+        }
+      ]
+    },
+    {
+      "host": "xunzi",
+      "cited": "book-of-documents",
+      "total": 5,
+      "byStatus": {
+        "found-in-cited-work": 1,
+        "not-found-in-cited-work": 4
+      },
+      "examples": [
+        {
+          "hostPassage": "2.12",
+          "marker": "《書》曰",
+          "quote": "無有作好，遵王之道；無有作惡，遵王之路。",
+          "foundAt": {
+            "section": "book-of-documents.36",
+            "passageId": "36.9"
+          }
+        }
+      ]
+    },
+    {
+      "host": "sanguozhi",
+      "cited": "zhouyi",
+      "total": 5,
+      "byStatus": {
+        "not-found-in-cited-work": 4,
+        "found-in-cited-work": 1
+      },
+      "examples": [
+        {
+          "hostPassage": "50.19",
+          "marker": "《易》稱",
+          "quote": "正家而天下定",
+          "foundAt": {
+            "section": "zhouyi.37",
+            "passageId": "37.4"
+          }
+        }
+      ]
+    },
+    {
+      "host": "wenxian-tongkao",
+      "cited": "book-of-rites",
+      "total": 5,
+      "byStatus": {
+        "quotation-too-short-to-verify": 1,
+        "not-found-in-cited-work": 4
+      },
+      "examples": []
+    },
+    {
+      "host": "wenxian-tongkao",
+      "cited": "爾雅",
+      "total": 5,
+      "byStatus": {
+        "found-in-cited-work": 4,
+        "not-found-in-cited-work": 1
+      },
+      "examples": [
+        {
+          "hostPassage": "42.78",
+          "marker": "《爾雅》曰",
+          "quote": "'宮中之門謂之闈",
+          "foundAt": {
+            "section": "爾雅.5",
+            "passageId": "5.13"
+          }
+        },
+        {
+          "hostPassage": "48.4",
+          "marker": "《爾雅》曰",
+          "quote": "'門側之堂謂之塾",
+          "foundAt": {
+            "section": "爾雅.5",
+            "passageId": "5.14"
+          }
+        },
+        {
+          "hostPassage": "48.4",
+          "marker": "《爾雅》曰",
+          "quote": "'東西牆謂之序",
+          "foundAt": {
+            "section": "爾雅.5",
+            "passageId": "5.2"
+          }
+        }
+      ]
+    },
+    {
+      "host": "book-of-rites",
+      "cited": "book-of-documents",
+      "total": 4,
+      "byStatus": {
+        "not-found-in-cited-work": 4
+      },
+      "examples": []
+    },
+    {
+      "host": "mozi",
+      "cited": "classic-of-poetry",
+      "total": 4,
+      "byStatus": {
+        "not-found-in-cited-work": 4
+      },
+      "examples": []
+    },
+    {
+      "host": "shiji",
+      "cited": "book-of-documents",
+      "total": 4,
+      "byStatus": {
+        "not-found-in-cited-work": 3,
+        "quotation-too-short-to-verify": 1
+      },
+      "examples": []
+    },
+    {
+      "host": "wenxian-tongkao",
+      "cited": "周禮",
+      "total": 4,
+      "byStatus": {
+        "found-in-cited-work": 1,
+        "not-found-in-cited-work": 3
+      },
+      "examples": [
+        {
+          "hostPassage": "72.50",
+          "marker": "《周禮》云",
+          "quote": "'兆五帝於四郊",
+          "foundAt": {
+            "section": "周禮.3",
+            "passageId": "3.72"
+          }
+        }
+      ]
+    },
+    {
+      "host": "文心雕龍",
+      "cited": "classic-of-poetry",
+      "total": 4,
+      "byStatus": {
+        "not-found-in-cited-work": 4
+      },
+      "examples": []
+    },
+    {
+      "host": "文選",
+      "cited": "zhouyi",
+      "total": 4,
+      "byStatus": {
+        "found-in-cited-work": 1,
+        "not-found-in-cited-work": 3
+      },
+      "examples": [
+        {
+          "hostPassage": "2.2",
+          "marker": "《易》曰",
+          "quote": "觀乎天文，以察時變。觀乎人文，以化成天下。",
+          "foundAt": {
+            "section": "zhouyi.22",
+            "passageId": "22.4"
+          }
+        }
+      ]
+    },
+    {
+      "host": "古文觀止",
+      "cited": "zhouyi",
+      "total": 4,
+      "byStatus": {
+        "found-in-cited-work": 3,
+        "not-found-in-cited-work": 1
+      },
+      "examples": [
+        {
+          "hostPassage": "2.17",
+          "marker": "《易》曰",
+          "quote": "義以方外。",
+          "foundAt": {
+            "section": "zhouyi.2",
+            "passageId": "2.6"
+          }
+        },
+        {
+          "hostPassage": "12.25",
+          "marker": "《易》曰",
+          "quote": "鳴鶴在陰，其子和之。",
+          "foundAt": {
+            "section": "zhouyi.61",
+            "passageId": "61.3"
+          }
+        },
+        {
+          "hostPassage": "13.68",
+          "marker": "《易》曰",
+          "quote": "履霜堅冰至。",
+          "foundAt": {
+            "section": "zhouyi.2",
+            "passageId": "2.3"
+          }
+        }
+      ]
+    },
+    {
+      "host": "shiji",
+      "cited": "zhouyi",
+      "total": 3,
+      "byStatus": {
+        "not-found-in-cited-work": 2,
+        "found-in-cited-work": 1
+      },
+      "examples": [
+        {
+          "hostPassage": "79.32",
+          "marker": "《易》曰",
+          "quote": "亢龍有悔",
+          "foundAt": {
+            "section": "zhouyi.1",
+            "passageId": "1.3"
+          }
+        }
+      ]
+    },
+    {
+      "host": "文心雕龍",
+      "cited": "zhouyi",
+      "total": 3,
+      "byStatus": {
+        "not-found-in-cited-work": 3
+      },
+      "examples": []
+    },
+    {
+      "host": "文選",
+      "cited": "classic-of-poetry",
+      "total": 3,
+      "byStatus": {
+        "not-found-in-cited-work": 1,
+        "found-in-cited-work": 2
+      },
+      "examples": [
+        {
+          "hostPassage": "25.88",
+          "marker": "《詩》曰",
+          "quote": "東宮之妹",
+          "foundAt": {
+            "section": "classic-of-poetry.57",
+            "passageId": "57.1"
+          }
+        },
+        {
+          "hostPassage": "25.149",
+          "marker": "《詩》曰",
+          "quote": "我心憂傷，惄焉如擣",
+          "foundAt": {
+            "section": "classic-of-poetry.197",
+            "passageId": "197.2"
+          }
+        }
+      ]
+    },
+    {
+      "host": "古文觀止",
+      "cited": "book-of-documents",
+      "total": 3,
+      "byStatus": {
+        "not-found-in-cited-work": 3
+      },
+      "examples": []
+    },
+    {
+      "host": "國語",
+      "cited": "analects",
+      "total": 3,
+      "byStatus": {
+        "found-in-cited-work": 2,
+        "not-found-in-cited-work": 1
+      },
+      "examples": [
+        {
+          "hostPassage": "4.2",
+          "marker": "《論語》曰",
+          "quote": "四體不勤",
+          "foundAt": {
+            "section": "analects.18",
+            "passageId": "18.7"
+          }
+        },
+        {
+          "hostPassage": "4.11",
+          "marker": "《論語》曰",
+          "quote": "帝臣不蔽，簡在帝心",
+          "foundAt": {
+            "section": "analects.20",
+            "passageId": "20.1"
+          }
+        }
+      ]
+    },
+    {
+      "host": "穆天子傳",
+      "cited": "周禮",
+      "total": 3,
+      "byStatus": {
+        "not-found-in-cited-work": 2,
+        "no-quotation-follows": 1
+      },
+      "examples": []
+    },
+    {
+      "host": "mencius",
+      "cited": "book-of-rites",
+      "total": 2,
+      "byStatus": {
+        "not-found-in-cited-work": 2
+      },
+      "examples": []
+    },
+    {
+      "host": "book-of-rites",
+      "cited": "book-of-rites",
+      "total": 2,
+      "byStatus": {
+        "found-in-cited-work": 2
+      },
+      "examples": [
+        {
+          "hostPassage": "1.46",
+          "marker": "《禮》曰",
+          "quote": "君子抱孫不抱子。",
+          "foundAt": {
+            "section": "book-of-rites.1",
+            "passageId": "1.46"
+          }
+        },
+        {
+          "hostPassage": "35.9",
+          "marker": "《禮》曰",
+          "quote": "童子不緦，唯當室緦。",
+          "foundAt": {
+            "section": "book-of-rites.35",
+            "passageId": "35.9"
+          }
+        }
+      ]
+    },
+    {
+      "host": "shiji",
+      "cited": "今文孝經",
+      "total": 2,
+      "byStatus": {
+        "found-in-cited-work": 2
+      },
+      "examples": [
+        {
+          "hostPassage": "58.24",
+          "marker": "《孝經》曰",
+          "quote": "非法不言，非道不行。",
+          "foundAt": {
+            "section": "今文孝經.4",
+            "passageId": "4.1"
+          }
+        },
+        {
+          "hostPassage": "112.29",
+          "marker": "《孝經》曰",
+          "quote": "安上治民，莫善於禮",
+          "foundAt": {
+            "section": "今文孝經.12",
+            "passageId": "12.1"
+          }
+        }
+      ]
+    },
+    {
+      "host": "hanshu",
+      "cited": "analects",
+      "total": 2,
+      "byStatus": {
+        "found-in-cited-work": 1,
+        "not-found-in-cited-work": 1
+      },
+      "examples": [
+        {
+          "hostPassage": "45.25",
+          "marker": "《論語》曰",
+          "quote": "見不善如探湯。",
+          "foundAt": {
+            "section": "analects.16",
+            "passageId": "16.11"
+          }
+        }
+      ]
+    },
+    {
+      "host": "hanshu",
+      "cited": "book-of-rites",
+      "total": 2,
+      "byStatus": {
+        "not-found-in-cited-work": 2
+      },
+      "examples": []
+    },
+    {
+      "host": "sanguozhi",
+      "cited": "book-of-documents",
+      "total": 2,
+      "byStatus": {
+        "found-in-cited-work": 1,
+        "not-found-in-cited-work": 1
+      },
+      "examples": [
+        {
+          "hostPassage": "30.9",
+          "marker": "《書》稱",
+          "quote": "東漸於海，西被於流沙",
+          "foundAt": {
+            "section": "book-of-documents.6",
+            "passageId": "6.60"
+          }
+        }
+      ]
+    },
+    {
+      "host": "wenxian-tongkao",
+      "cited": "analects",
+      "total": 2,
+      "byStatus": {
+        "not-found-in-cited-work": 1,
+        "found-in-cited-work": 1
+      },
+      "examples": [
+        {
+          "hostPassage": "78.114",
+          "marker": "《論語》曰",
+          "quote": "'緇衣羔裘，素衣麑裘，黃衣狐裘",
+          "foundAt": {
+            "section": "analects.10",
+            "passageId": "10.6"
+          }
+        }
+      ]
+    },
+    {
+      "host": "wenxian-tongkao",
+      "cited": "yili",
+      "total": 2,
+      "byStatus": {
+        "not-found-in-cited-work": 2
+      },
+      "examples": []
+    },
+    {
+      "host": "wenxian-tongkao",
+      "cited": "國語",
+      "total": 2,
+      "byStatus": {
+        "not-found-in-cited-work": 2
+      },
+      "examples": []
+    },
+    {
+      "host": "wenxian-tongkao",
+      "cited": "zuozhuan",
+      "total": 2,
+      "byStatus": {
+        "not-found-in-cited-work": 2
+      },
+      "examples": []
+    },
+    {
+      "host": "益智錄",
+      "cited": "book-of-documents",
+      "total": 2,
+      "byStatus": {
+        "not-found-in-cited-work": 2
+      },
+      "examples": []
+    },
+    {
+      "host": "蟫史",
+      "cited": "book-of-documents",
+      "total": 2,
+      "byStatus": {
+        "found-in-cited-work": 2
+      },
+      "examples": [
+        {
+          "hostPassage": "3.3",
+          "marker": "《書》曰",
+          "quote": "惟爾有神，尚克相予。",
+          "foundAt": {
+            "section": "book-of-documents.35",
+            "passageId": "35.1"
+          }
+        },
+        {
+          "hostPassage": "6.35",
+          "marker": "《書》曰",
+          "quote": "視遠惟明",
+          "foundAt": {
+            "section": "book-of-documents.15",
+            "passageId": "15.3"
+          }
+        }
+      ]
+    },
+    {
+      "host": "子不語",
+      "cited": "zhouyi",
+      "total": 2,
+      "byStatus": {
+        "not-found-in-cited-work": 2
+      },
+      "examples": []
+    },
+    {
+      "host": "剪燈餘話",
+      "cited": "classic-of-poetry",
+      "total": 2,
+      "byStatus": {
+        "not-found-in-cited-work": 1,
+        "found-in-cited-work": 1
+      },
+      "examples": [
+        {
+          "hostPassage": "6.71",
+          "marker": "《詩》曰",
+          "quote": "穀則異室，死則同穴。",
+          "foundAt": {
+            "section": "classic-of-poetry.73",
+            "passageId": "73.1"
+          }
+        }
+      ]
+    },
+    {
+      "host": "四書章句集註",
+      "cited": "book-of-documents",
+      "total": 2,
+      "byStatus": {
+        "not-found-in-cited-work": 2
+      },
+      "examples": []
+    },
+    {
+      "host": "文心雕龍",
+      "cited": "book-of-documents",
+      "total": 2,
+      "byStatus": {
+        "not-found-in-cited-work": 2
+      },
+      "examples": []
+    },
+    {
+      "host": "文選",
+      "cited": "yili",
+      "total": 2,
+      "byStatus": {
+        "not-found-in-cited-work": 1,
+        "found-in-cited-work": 1
+      },
+      "examples": [
+        {
+          "hostPassage": "16.29",
+          "marker": "《儀禮》曰",
+          "quote": "令月，吉日",
+          "foundAt": {
+            "section": "yili.1",
+            "passageId": "1.24"
+          }
+        }
+      ]
+    },
+    {
+      "host": "文選",
+      "cited": "今文孝經",
+      "total": 2,
+      "byStatus": {
+        "not-found-in-cited-work": 1,
+        "found-in-cited-work": 1
+      },
+      "examples": [
+        {
+          "hostPassage": "1.21",
+          "marker": "《孝經》曰",
+          "quote": "宗祀文王於明堂，以配上帝",
+          "foundAt": {
+            "section": "今文孝經.9",
+            "passageId": "9.1"
+          }
+        }
+      ]
+    },
+    {
+      "host": "國語",
+      "cited": "爾雅",
+      "total": 2,
+      "byStatus": {
+        "found-in-cited-work": 1,
+        "not-found-in-cited-work": 1
+      },
+      "examples": [
+        {
+          "hostPassage": "5.3",
+          "marker": "《爾雅》曰",
+          "quote": "桷謂之榱。",
+          "foundAt": {
+            "section": "爾雅.5",
+            "passageId": "5.10"
+          }
+        }
+      ]
+    },
+    {
+      "host": "山海經",
+      "cited": "爾雅",
+      "total": 2,
+      "byStatus": {
+        "not-found-in-cited-work": 2
+      },
+      "examples": []
+    },
+    {
+      "host": "analects",
+      "cited": "classic-of-poetry",
+      "total": 1,
+      "byStatus": {
+        "found-in-cited-work": 1
+      },
+      "examples": [
+        {
+          "hostPassage": "1.15",
+          "marker": "《詩》云",
+          "quote": "如切如磋，如琢如磨。",
+          "foundAt": {
+            "section": "classic-of-poetry.55",
+            "passageId": "55.1"
+          }
+        }
+      ]
+    },
+    {
+      "host": "analects",
+      "cited": "book-of-documents",
+      "total": 1,
+      "byStatus": {
+        "not-found-in-cited-work": 1
+      },
+      "examples": []
+    },
+    {
+      "host": "book-of-rites",
+      "cited": "analects",
+      "total": 1,
+      "byStatus": {
+        "not-found-in-cited-work": 1
+      },
+      "examples": []
+    },
+    {
+      "host": "zhuangzi",
+      "cited": "book-of-documents",
+      "total": 1,
+      "byStatus": {
+        "not-found-in-cited-work": 1
+      },
+      "examples": []
+    },
+    {
+      "host": "xunzi",
+      "cited": "zhouyi",
+      "total": 1,
+      "byStatus": {
+        "found-in-cited-work": 1
+      },
+      "examples": [
+        {
+          "hostPassage": "5.4",
+          "marker": "《易》曰",
+          "quote": "括囊，無咎無譽。",
+          "foundAt": {
+            "section": "zhouyi.2",
+            "passageId": "2.3"
+          }
+        }
+      ]
+    },
+    {
+      "host": "guanzi",
+      "cited": "classic-of-poetry",
+      "total": 1,
+      "byStatus": {
+        "not-found-in-cited-work": 1
+      },
+      "examples": []
+    },
+    {
+      "host": "gongyang",
+      "cited": "春秋經",
+      "total": 1,
+      "byStatus": {
+        "not-found-in-cited-work": 1
+      },
+      "examples": []
+    },
+    {
+      "host": "shiji",
+      "cited": "book-of-rites",
+      "total": 1,
+      "byStatus": {
+        "not-found-in-cited-work": 1
+      },
+      "examples": []
+    },
+    {
+      "host": "shiji",
+      "cited": "春秋經",
+      "total": 1,
+      "byStatus": {
+        "not-found-in-cited-work": 1
+      },
+      "examples": []
+    },
+    {
+      "host": "hanshu",
+      "cited": "春秋經",
+      "total": 1,
+      "byStatus": {
+        "found-in-cited-work": 1
+      },
+      "examples": [
+        {
+          "hostPassage": "80.15",
+          "marker": "《春秋》曰",
+          "quote": "天王出居于鄭",
+          "foundAt": {
+            "section": "春秋經.5",
+            "passageId": "5.24"
+          }
+        }
+      ]
+    },
+    {
+      "host": "hanshu",
+      "cited": "今文孝經",
+      "total": 1,
+      "byStatus": {
+        "found-in-cited-work": 1
+      },
+      "examples": [
+        {
+          "hostPassage": "83.23",
+          "marker": "《孝經》曰",
+          "quote": "天地之性人為貴，人之行莫大於孝，孝莫大於嚴父，嚴父莫大於配天，則周公其人也。",
+          "foundAt": {
+            "section": "今文孝經.9",
+            "passageId": "9.1"
+          }
+        }
+      ]
+    },
+    {
+      "host": "sanguozhi",
+      "cited": "周禮",
+      "total": 1,
+      "byStatus": {
+        "found-in-cited-work": 1
+      },
+      "examples": [
+        {
+          "hostPassage": "14.9",
+          "marker": "《周禮》云",
+          "quote": "設官分職，以為民極。",
+          "foundAt": {
+            "section": "周禮.1",
+            "passageId": "1.1"
+          }
+        }
+      ]
+    },
+    {
+      "host": "sanguozhi",
+      "cited": "analects",
+      "total": 1,
+      "byStatus": {
+        "not-found-in-cited-work": 1
+      },
+      "examples": []
+    },
+    {
+      "host": "wenxian-tongkao",
+      "cited": "春秋經",
+      "total": 1,
+      "byStatus": {
+        "not-found-in-cited-work": 1
+      },
+      "examples": []
+    },
+    {
+      "host": "遊仙窟",
+      "cited": "book-of-documents",
+      "total": 1,
+      "byStatus": {
+        "found-in-cited-work": 1
+      },
+      "examples": [
+        {
+          "hostPassage": "1.1",
+          "marker": "《書》云",
+          "quote": "導河積石，至於龍門。",
+          "foundAt": {
+            "section": "book-of-documents.6",
+            "passageId": "6.47"
+          }
+        }
+      ]
+    },
+    {
+      "host": "剪燈餘話",
+      "cited": "zhouyi",
+      "total": 1,
+      "byStatus": {
+        "not-found-in-cited-work": 1
+      },
+      "examples": []
+    },
+    {
+      "host": "剪燈餘話",
+      "cited": "analects",
+      "total": 1,
+      "byStatus": {
+        "not-found-in-cited-work": 1
+      },
+      "examples": []
+    },
+    {
+      "host": "豔異編",
+      "cited": "classic-of-poetry",
+      "total": 1,
+      "byStatus": {
+        "not-found-in-cited-work": 1
+      },
+      "examples": []
+    },
+    {
+      "host": "豔異編",
+      "cited": "zhouyi",
+      "total": 1,
+      "byStatus": {
+        "not-found-in-cited-work": 1
+      },
+      "examples": []
+    },
+    {
+      "host": "豔異編",
+      "cited": "analects",
+      "total": 1,
+      "byStatus": {
+        "not-found-in-cited-work": 1
+      },
+      "examples": []
+    },
+    {
+      "host": "文心雕龍",
+      "cited": "book-of-rites",
+      "total": 1,
+      "byStatus": {
+        "not-found-in-cited-work": 1
+      },
+      "examples": []
+    },
+    {
+      "host": "文心雕龍",
+      "cited": "周禮",
+      "total": 1,
+      "byStatus": {
+        "not-found-in-cited-work": 1
+      },
+      "examples": []
+    },
+    {
+      "host": "文選",
+      "cited": "zuozhuan",
+      "total": 1,
+      "byStatus": {
+        "not-found-in-cited-work": 1
+      },
+      "examples": []
+    },
+    {
+      "host": "國語",
+      "cited": "book-of-rites",
+      "total": 1,
+      "byStatus": {
+        "not-found-in-cited-work": 1
+      },
+      "examples": []
+    },
+    {
+      "host": "逸周書",
+      "cited": "classic-of-poetry",
+      "total": 1,
+      "byStatus": {
+        "not-found-in-cited-work": 1
+      },
+      "examples": []
+    },
+    {
+      "host": "山海經",
+      "cited": "zhouyi",
+      "total": 1,
+      "byStatus": {
+        "not-found-in-cited-work": 1
+      },
+      "examples": []
+    },
+    {
+      "host": "山海經",
+      "cited": "zuozhuan",
+      "total": 1,
+      "byStatus": {
+        "not-found-in-cited-work": 1
+      },
+      "examples": []
+    },
+    {
+      "host": "穆天子傳",
+      "cited": "國語",
+      "total": 1,
+      "byStatus": {
+        "not-found-in-cited-work": 1
+      },
+      "examples": []
+    },
+    {
+      "host": "穆天子傳",
+      "cited": "zuozhuan",
+      "total": 1,
+      "byStatus": {
+        "not-found-in-cited-work": 1
+      },
+      "examples": []
+    },
+    {
+      "host": "穆天子傳",
+      "cited": "book-of-rites",
+      "total": 1,
+      "byStatus": {
+        "not-found-in-cited-work": 1
+      },
+      "examples": []
+    }
+  ],
+  "payloadKeysByQuestionType": {
+    "Q1": {
+      "states": {
+        "Answered": 21,
+        "Unknown": 60
+      },
+      "keys": {
+        "type": [
+          "string"
+        ],
+        "roles": [
+          "object"
+        ],
+        "construction": [
+          "string"
+        ],
+        "grammar": [
+          "string"
+        ],
+        "occurrences": [
+          "object"
+        ],
+        "warrant": [
+          "object"
+        ],
+        "verified": [
+          "object"
+        ]
+      }
+    },
+    "Q2": {
+      "states": {
+        "Answered": 3
+      },
+      "keys": {
+        "type": [
+          "string"
+        ],
+        "relation": [
+          "string"
+        ],
+        "grammar": [
+          "string"
+        ],
+        "warrant": [
+          "object"
+        ],
+        "verified": [
+          "object"
+        ]
+      }
+    },
+    "Q42": {
+      "states": {
+        "Refused": 1
+      },
+      "keys": {}
+    }
   },
   "answers": [
     {
@@ -2795,6 +4857,167 @@
         "verified": {
           "ok": true,
           "note": "roles reproduce"
+        }
+      }
+    },
+    {
+      "id": "diag:q2:0",
+      "origin": "declared-diagnostic",
+      "why": "Q2 — two different three-slot speakers",
+      "source": {
+        "work": null,
+        "section": null,
+        "passageId": null,
+        "sourcePage": null,
+        "sourceRevid": null
+      },
+      "question": {
+        "type": "Q2",
+        "a": "孔子謂弟子曰：「學而時習之。」",
+        "b": "孟子告齊宣王曰：「君之視臣如手足。」",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q2",
+        "state": "Answered",
+        "relation": "DifferentRelation",
+        "grammar": "wenyan.relations.reporting.v1",
+        "warrant": {
+          "kind": "evidence",
+          "refs": [
+            "corpus:analects:2.21:wei-quote",
+            "corpus:mencius:4.22:wei-quote",
+            "corpus:book-of-rites:3.15:wei-quote",
+            "corpus:zhuangzi:1.6:wei-quote",
+            "corpus:xunzi:32.3:wei-quote",
+            "corpus:hanfeizi:7.1:wei-quote",
+            "corpus:mozi:38.2:wei-quote",
+            "corpus:guanzi:20.2:wei-quote",
+            "corpus:analects:6.4:wei-quote",
+            "corpus:mencius:8.3:gao-quote",
+            "corpus:liezi:1.14:gao-quote",
+            "corpus:zuozhuan:8.53:gao-quote",
+            "corpus:book-of-documents:38.4:gao-quote"
+          ],
+          "derivation": "both readings determined by replay(evidence), then compared structurally"
+        },
+        "verified": {
+          "ok": true,
+          "note": "relation reproduces"
+        }
+      }
+    },
+    {
+      "id": "diag:q2:1",
+      "origin": "declared-diagnostic",
+      "why": "Q2 — the same three-slot frame twice",
+      "source": {
+        "work": null,
+        "section": null,
+        "passageId": null,
+        "sourcePage": null,
+        "sourceRevid": null
+      },
+      "question": {
+        "type": "Q2",
+        "a": "孔子謂弟子曰：「學而時習之。」",
+        "b": "孔子謂弟子曰：「何謂也？」",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q2",
+        "state": "Answered",
+        "relation": "DifferentRelation",
+        "grammar": "wenyan.relations.reporting.v1",
+        "warrant": {
+          "kind": "evidence",
+          "refs": [
+            "corpus:analects:2.21:wei-quote",
+            "corpus:mencius:4.22:wei-quote",
+            "corpus:book-of-rites:3.15:wei-quote",
+            "corpus:zhuangzi:1.6:wei-quote",
+            "corpus:xunzi:32.3:wei-quote",
+            "corpus:hanfeizi:7.1:wei-quote",
+            "corpus:mozi:38.2:wei-quote",
+            "corpus:guanzi:20.2:wei-quote",
+            "corpus:analects:6.4:wei-quote"
+          ],
+          "derivation": "both readings determined by replay(evidence), then compared structurally"
+        },
+        "verified": {
+          "ok": true,
+          "note": "relation reproduces"
+        }
+      }
+    },
+    {
+      "id": "diag:q2:2",
+      "origin": "declared-diagnostic",
+      "why": "Q2 — a three-slot against a two-slot",
+      "source": {
+        "work": null,
+        "section": null,
+        "passageId": null,
+        "sourcePage": null,
+        "sourceRevid": null
+      },
+      "question": {
+        "type": "Q2",
+        "a": "孔子謂弟子曰：「學而時習之。」",
+        "b": "子曰：「學而時習之。」",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q2",
+        "state": "Answered",
+        "relation": "DifferentRelation",
+        "grammar": "wenyan.relations.reporting.v1",
+        "warrant": {
+          "kind": "evidence",
+          "refs": [
+            "corpus:analects:2.21:wei-quote",
+            "corpus:mencius:4.22:wei-quote",
+            "corpus:book-of-rites:3.15:wei-quote",
+            "corpus:zhuangzi:1.6:wei-quote",
+            "corpus:xunzi:32.3:wei-quote",
+            "corpus:hanfeizi:7.1:wei-quote",
+            "corpus:mozi:38.2:wei-quote",
+            "corpus:guanzi:20.2:wei-quote",
+            "corpus:analects:6.4:wei-quote",
+            "corpus:analects:1.1:yue-quote",
+            "corpus:mencius:1.1:yue-quote"
+          ],
+          "derivation": "both readings determined by replay(evidence), then compared structurally"
+        },
+        "verified": {
+          "ok": true,
+          "note": "relation reproduces"
+        }
+      }
+    },
+    {
+      "id": "diag:refused-undeclared-type",
+      "origin": "declared-diagnostic",
+      "why": "an undeclared question type must be Refused with a reason, never guessed at",
+      "source": {
+        "work": null,
+        "section": null,
+        "passageId": null,
+        "sourcePage": null,
+        "sourceRevid": null
+      },
+      "question": {
+        "type": "Q42",
+        "text": "子曰：「學而時習之。」",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q42",
+        "state": "Refused",
+        "reason": "question type \"Q42\" is not declared in the contract (see notDeclared)",
+        "verified": {
+          "ok": true,
+          "note": "nothing to recompute"
         }
       }
     }
