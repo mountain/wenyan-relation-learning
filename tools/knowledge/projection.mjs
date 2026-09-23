@@ -85,6 +85,7 @@ export function selectOperationalCore(records, {
   minPerConstruction = 2,
   cap = MODEL_CAP,
   provenance = 'any',
+  isConsistent = null,
 } = {}) {
   if (typeof constructionOf !== 'function') {
     throw new Error('selectOperationalCore requires constructionOf(text)');
@@ -99,7 +100,11 @@ export function selectOperationalCore(records, {
   const outOfGrammar = [];
   for (const r of usable) {
     const c = constructionOf(r.text);
-    if (!c) { outOfGrammar.push(r.id); continue; }
+    // Recognising a construction is NOT enough: the grammar must also ACCEPT the label.
+    // Records that merely look in-grammar were admitted before, and replay — being
+    // all-or-nothing — then threw for every construction. `isConsistent` is the real
+    // criterion; constructionOf alone is only a bucketing key.
+    if (!c || (isConsistent && !isConsistent(r))) { outOfGrammar.push(r.id); continue; }
     if (!byConstruction.has(c)) byConstruction.set(c, []);
     byConstruction.get(c).push(r);
   }

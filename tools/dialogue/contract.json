@@ -152,5 +152,12 @@
     "not open-domain: the declared question types are the whole of what can be asked",
     "no claim that a warranted answer about a controlled construction says anything about a real text",
     "Q6 gloss is out of scope by declaration, not by temporary limitation"
-  ]
+  ],
+  "unexpressedRoles": {
+    "statement": "A reading may leave a role unexpressed (null) when the CONSTRUCTION does not state it — see tools/grammar/contract.json missingRoleSemantics.",
+    "answerRule": "an Answered answer built on such a reading reports the unexpressed role as unexpressed. It must not present the relation as if all three roles had been read, and it must not fill the gap from context, from the dialogue, or from another passage.",
+    "warrantRule": "the warrant is unchanged: the derivation names the surviving permutation and the evidence it rests on. A partially expressed relation is not a weaker warrant, it is a different claim — about the roles the construction DOES express.",
+    "notAnOverclaim": "Answered here means \"the text states this much\". It does not mean \"this is the whole relation\", which is why the unexpressed role travels with the answer instead of being dropped or guessed.",
+    "unknownIsStillUnknown": "if a question asks about the UNEXPRESSED role specifically, the answer about that role is Unknown."
+  }
 }

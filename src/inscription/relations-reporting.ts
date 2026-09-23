@@ -27,10 +27,18 @@
  *     <entity> <frame verb> <entity> 曰：「<quoted speech>」
  *
  * Entity boundaries are declared as maximal runs of characters that contain no
- * sentence punctuation and no quote marks, length 1..10. Two passages out of
- * 399 in the corpus contain more than one such match; those return Unknown
- * rather than picking one. Segmentation is therefore a declared rule with a
- * measured failure rate, not a hidden guess.
+ * sentence punctuation and no quote marks, length 1..10. Segmentation is a declared
+ * rule with a MEASURED rate, not a hidden guess: of the 8,726 passages the seven
+ * constructions read, 1,002 (11.48%) carry an agent span that begins with a particle
+ * or adverb. That measurement is what forced an admissibility filter on labels — a span
+ * like `於是武王遍` (from `於是武王遍告諸侯曰`) cannot be stated as the agent without
+ * asserting something false, so it may not be stored as evidence.
+ *
+ * A passage containing SEVERAL frames used to return Unknown. That was reversed once
+ * measurement showed the cost: 8,323 passages (10.69%) were being given up, and a
+ * passage stating two relations is not made more honest by refusing to read either.
+ * The most explicit frame is now read and the number of further frames is reported in
+ * `additionalMatches`.
  */
 /**
  * A role is `null` when the construction does NOT EXPRESS it.
@@ -63,6 +71,15 @@ export type ReportingReading = {
   candidates: Roles[];
   occurrences: Occurrence[];
   ambiguousMatches?: number;
+  /**
+   * How many FURTHER frames this passage contains beyond the one read.
+   *
+   * A passage holding `子曰：「…」……王曰：「…」` states two relations. Reporting
+   * Unknown discarded both; silently returning one would pretend only one exists. So the
+   * most explicit frame is read AND the count of the rest is reported, which is what makes
+   * this a declared rule with a measured rate rather than a hidden choice.
+   */
+  additionalMatches?: number;
 };
 
 export const REPORTING_GRAMMAR_ID = "wenyan.relations.reporting.v1";
@@ -249,7 +266,7 @@ function replay(model: ReportingModel) {
     }
     seen.add(e.id);
     const p = parse(e.text);
-    if (!p || p.matches > 1) throw new Error('out-of-grammar evidence');
+    if (!p) throw new Error('out-of-grammar evidence');
     // The expectation is checked against THIS construction's expressed roles, so a
     // label cannot supply a role the construction does not express.
     if (!validExpected(e.expected, p.roles)) throw new Error('invalid evidence');
@@ -271,11 +288,6 @@ export function readReporting(text: string, model: ReportingModel): ReportingRea
     return { status: 'Unknown', reason: 'outside-reporting-grammar',
       source: text, candidates: [], occurrences: [] };
   }
-  if (p.matches > 1) {
-    return { status: 'Unknown', reason: 'ambiguous-frame-occurrence',
-      source: text, construction: p.construction, candidates: [], occurrences: p.occurrences,
-      ambiguousMatches: p.matches };
-  }
   const candidates = rules[p.construction].map((order) => assign(p.slots, order, p.roles));
   return {
     status: candidates.length === 1 ? 'KnownFiniteGrammar' : 'Unknown',
@@ -284,6 +296,7 @@ export function readReporting(text: string, model: ReportingModel): ReportingRea
     construction: p.construction,
     candidates,
     occurrences: p.occurrences,
+    ...(p.matches > 1 ? { additionalMatches: p.matches - 1 } : {}),
   };
 }
 
@@ -301,7 +314,7 @@ export function learnReportingRelations(model: ReportingModel, example: Example,
   if (model.examples.length >= 32) throw new Error('evidence capacity reached');
   if (model.examples.some((e) => e.id === example.id)) throw new Error('duplicate evidence id');
   const p = parse(example.text);
-  if (!p || p.matches > 1) {
+  if (!p) {
     return { status: 'Unknown', reason: 'outside-reporting-grammar',
       model, checked: 0, refutations: [] };
   }
@@ -328,6 +341,24 @@ export function learnReportingRelations(model: ReportingModel, example: Example,
   replay(next);
   return { status: 'Updated', model: next, checked, refutations,
     remainingMappings: survivors.length };
+}
+
+/**
+ * Would `replay` accept this label? The real criterion for "in grammar".
+ *
+ * A record is usable only if the grammar can read its text and the label is consistent
+ * with the construction's permutation space. Testing merely that a construction was
+ * RECOGNISED admitted records `replay` then rejected, and because replay is
+ * all-or-nothing one such record made every construction throw.
+ */
+export function labelIsConsistent(text: string, expected: Roles): boolean {
+  try {
+    const p = parse(text);
+    if (!p || !validExpected(expected, p.roles)) return false;
+    return ORDERS_FOR(p.roles).some((order) => equal(assign(p.slots, order, p.roles), expected));
+  } catch {
+    return false;
+  }
 }
 
 export function compareReporting(a: string, b: string, model: ReportingModel) {

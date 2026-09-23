@@ -124,19 +124,61 @@ check('real corpus passage parses and pins to the declared reading', () => {
   return `${probe.construction}: ${s0.value} / ${s1.value} / ${s2.value.slice(0, 12)}…`;
 });
 
-check('a passage with two frame occurrences is Unknown, not a coin flip', () => {
+// The two cases below replace assertions that the RULES CHANGED. Both old assertions were
+// correct when written and became false on measurement — they are kept in prose here
+// because a silently deleted test is indistinguishable from a test that never existed.
+//
+//   OLD 1: "a passage with two frame occurrences is Unknown, not a coin flip".
+//          Written when 2 of 399 passages had two matches. Two-slot frames made such
+//          passages common and the cost became 8,323 passages (10.69%) read as nothing.
+//          The rule is now: READ the most explicit frame, REPORT the rest.
+//   OLD 2: "a 2-slot frame is NOT admitted (declared but unused)". The grammar contract
+//          had recorded it as measuredButNotAdmitted on the condition that a separate
+//          contract first define what a missing role means. That contract now exists
+//          (missingRoleSemantics), so the frame is admitted.
+check('a passage with two frame occurrences reads the most explicit frame and REPORTS the rest', () => {
   if (!realAmbiguous) return 'skipped (no ambiguous example recorded)';
-  const r = rep.readReporting(realAmbiguous, rep.emptyReportingModel());
-  expect(r.status === 'Unknown', `status ${r.status}`);
-  expect(r.reason === 'ambiguous-frame-occurrence', `reason ${r.reason}`);
-  expect(r.ambiguousMatches >= 2, `matches ${r.ambiguousMatches}`);
-  return `Unknown(${r.reason}) with ${r.ambiguousMatches} matches`;
+  const probe = rep.readReporting(realAmbiguous, rep.emptyReportingModel());
+  // The rule is deterministic, so the assertion is about the RULE, not about a coin flip.
+  expect(probe.construction, 'the most explicit frame is not identified');
+  expect(probe.additionalMatches >= 1, `additionalMatches ${probe.additionalMatches} for a two-frame passage`);
+  return `${probe.construction} read, +${probe.additionalMatches} further frame(s) reported as additionalMatches`;
 });
 
-check('a 2-slot frame is NOT admitted (declared but unused)', () => {
-  const r = rep.readReporting('子曰：「學而時習之。」', rep.emptyReportingModel());
-  expect(r.status === 'Unknown', `unexpectedly read as ${r.status}`);
-  return 'A曰：「S」 -> Unknown, as declared in measuredButNotAdmitted';
+check('a two-slot frame IS admitted, and its unexpressed recipient stays null', () => {
+  const text = '子曰：「學而時習之。」';
+  const m = rep.emptyReportingModel();
+  const r = rep.readReporting(text, m);
+  expect(r.construction === 'yue-quote', `read as ${r.construction}`);
+  const ok = { schema: rep.REPORTING_GRAMMAR_ID, examples: [
+    { id: 'lab', text, expected: { agent: '子', recipient: null, theme: '學而時習之。' } }] };
+  const withEvidence = rep.readReporting(text, ok);
+  expect(withEvidence.status === 'KnownFiniteGrammar', `with evidence: ${withEvidence.status}`);
+  expect(withEvidence.candidates[0].recipient === null, 'recipient is not null');
+  // The contract's teeth: a label may not invent the role the construction omits...
+  let invented = false;
+  try {
+    rep.readReporting(text, { schema: rep.REPORTING_GRAMMAR_ID, examples: [
+      { id: 'x', text, expected: { agent: '子', recipient: '弟子', theme: '學而時習之。' } }] });
+  } catch { invented = true; }
+  expect(invented, 'a fabricated recipient was ACCEPTED — missingRoleSemantics is not enforced');
+  // ...and a three-slot construction may not leave an expressed role null.
+  let hollowed = false;
+  try {
+    rep.readReporting('孔子謂弟子曰：「學而時習之。」', { schema: rep.REPORTING_GRAMMAR_ID, examples: [
+      { id: 'y', text: '孔子謂弟子曰：「學而時習之。」',
+        expected: { agent: '孔子', recipient: null, theme: '學而時習之。' } }] });
+  } catch { hollowed = true; }
+  expect(hollowed, 'a null recipient on a three-slot construction was ACCEPTED');
+  return 'yue-quote read with recipient null; fabricated recipient rejected; hollowed 3-slot rejected';
+});
+
+check('a two-slot construction permutes TWO roles, so it starts from 2 candidates', () => {
+  const two = rep.readReporting('子曰：「學而時習之。」', { schema: rep.REPORTING_GRAMMAR_ID, examples: [] });
+  const three = rep.readReporting('孔子謂弟子曰：「學而時習之。」', { schema: rep.REPORTING_GRAMMAR_ID, examples: [] });
+  expect(two.candidates.length === 2, `two-slot candidates ${two.candidates.length}`);
+  expect(three.candidates.length === 6, `three-slot candidates ${three.candidates.length}`);
+  return `two-slot 2 candidates, three-slot 6 — the old "/6" denominator misreported two-slot frames`;
 });
 
 let failed = 0;

@@ -11,60 +11,150 @@
       "surviving role permutations are recomputed by replay() on every read and update",
       "an incomplete check (fuel exhausted) adds no constraint",
       "a contradicting label throws; the caller may retry explicitly",
-      "no match, too many matches, or out-of-scope input all yield Unknown"
+      "no match, or out-of-scope input, yields Unknown",
+      "a passage holding SEVERAL frames is read at its most explicit frame and the count of the remaining frames is reported as additionalMatches — see segmentation.multipleMatches",
+      "a construction's permutation space is the permutations of ITS OWN expressed roles; a two-slot construction starts from 2 candidates, not 6"
     ],
     "notModified": "src/inscription/relations.ts is untouched — see duplicationDebt"
   },
   "constructions": [
-    { "id": "wei-quote", "frame": "<A>謂<B>曰：「<S>」", "verb": "謂", "corpusPassages": 144 },
-    { "id": "wen-quote", "frame": "<A>問<B>曰：「<S>」", "verb": "問", "corpusPassages": 182 },
-    { "id": "gao-quote", "frame": "<A>告<B>曰：「<S>」", "verb": "告", "corpusPassages": 28 },
-    { "id": "yu-quote", "frame": "<A>語<B>曰：「<S>」", "verb": "語", "corpusPassages": 13 }
+    {
+      "id": "wei-quote",
+      "frame": "<A>謂<B>曰：「<S>」",
+      "verb": "謂",
+      "corpusPassages": 144,
+      "roles": [
+        "agent",
+        "recipient",
+        "theme"
+      ]
+    },
+    {
+      "id": "wen-quote",
+      "frame": "<A>問<B>曰：「<S>」",
+      "verb": "問",
+      "corpusPassages": 182,
+      "roles": [
+        "agent",
+        "recipient",
+        "theme"
+      ]
+    },
+    {
+      "id": "gao-quote",
+      "frame": "<A>告<B>曰：「<S>」",
+      "verb": "告",
+      "corpusPassages": 28,
+      "roles": [
+        "agent",
+        "recipient",
+        "theme"
+      ]
+    },
+    {
+      "id": "yu-quote",
+      "frame": "<A>語<B>曰：「<S>」",
+      "verb": "語",
+      "corpusPassages": 13,
+      "roles": [
+        "agent",
+        "recipient",
+        "theme"
+      ]
+    },
+    {
+      "id": "wen-plain",
+      "frame": "<A>問曰：「<S>」",
+      "verb": "問",
+      "roles": [
+        "agent",
+        "theme"
+      ],
+      "corpusPassages": 95,
+      "note": "two-slot: the addressee is not expressed; admitted under missingRoleSemantics"
+    },
+    {
+      "id": "gao-plain",
+      "frame": "<A>告曰：「<S>」",
+      "verb": "告",
+      "roles": [
+        "agent",
+        "theme"
+      ],
+      "corpusPassages": 43,
+      "note": "two-slot: the addressee is not expressed; admitted under missingRoleSemantics"
+    },
+    {
+      "id": "yue-quote",
+      "frame": "<A>曰：「<S>」",
+      "verb": "曰",
+      "roles": [
+        "agent",
+        "theme"
+      ],
+      "corpusPassages": 8043,
+      "note": "two-slot and by far the largest single construction; admitted under missingRoleSemantics"
+    }
   ],
-  "slots": 3,
+  "slots": {
+    "perConstruction": true,
+    "max": 3,
+    "note": "Each construction declares how many roles it expresses: three for the <A>V<B>曰 frames, two for the <A>V曰 / <A>曰 frames. Slots are POSITIONAL; roles are declared per construction by ROLES_FOR_CONSTRUCTION()."
+  },
   "segmentation": {
     "problem": "The experimental grammar delimited every slot with 「」. Real text offers no such help for the two entity slots, so boundaries must be declared rules rather than assumed.",
     "slot0": "maximal run immediately left of the frame verb; no sentence punctuation (，。；：「」？！、); length 1..10",
-    "slot1": "maximal run immediately right of the frame verb and left of 曰; same character rule; length 1..10",
+    "slot1": "for three-slot frames: maximal run immediately right of the frame verb and left of 曰, same character rule, length 1..10, and it may not be 曰 itself. Two-slot frames have no slot1.",
     "slot2": "content of the 「…」 immediately right of 曰; length 1..300",
-    "measuredSpanLengths": { "median": 2, "max": 9 },
-    "measuredAmbiguity": "32 of 399 matching passages contain more than one frame occurrence and return Unknown(ambiguous-frame-occurrence) rather than picking one"
+    "measuredSpanLengths": {
+      "median": 2,
+      "max": 9
+    },
+    "slot0twoSlot": "for two-slot frames the entity may NOT contain a reporting verb (謂問告語), because 曰 is not excluded from the entity character class and a greedy run would otherwise read 或謂孔子曰：「…」 as agent 或謂孔子",
+    "frameOrder": "Frames are tried MOST EXPLICIT FIRST and a match overlapping an already-claimed span is discarded. Both halves are load-bearing: without the order, 孔子謂弟子曰：「…」 also matches the bare-曰 frame with agent 弟子 and every three-slot passage became \"ambiguous\"; without the overlap rule, 王問曰：「…」 was silently absorbed by the no-曰 three-slot frame with recipient 曰 — the slot held the verb itself.",
+    "multipleMatches": {
+      "rule": "READ the most explicit frame; REPORT the number of further frames as additionalMatches.",
+      "was": "returned Unknown(ambiguous-frame-occurrence) and read nothing.",
+      "whyChanged": "the original rule was written when 2 of 399 passages had two matches. The two-slot frames made multi-frame passages common, and the measured cost became 8,323 passages (10.69%) read as nothing at all. A passage stating two relations is not made more honest by refusing to read either, and returning one WHILE reporting the others is not a coin flip — the order is declared and deterministic.",
+      "measuredGain": "unique-parse coverage 8,726 (11.20%) -> 16,679 (21.42%) of 77,884 passages"
+    }
   },
   "roleInterpretation": {
-    "declared": { "slot0": "agent (speaker)", "slot1": "recipient (addressee)", "slot2": "theme (quoted speech)" },
+    "declared": {
+      "slot0": "agent (speaker)",
+      "slot1": "recipient (addressee), when the construction expresses it",
+      "slot2": "theme (quoted speech)"
+    },
     "status": "DECLARED, then pinned by supervised evidence — the module starts from all 6 permutations per construction and eliminates 5 of them by refutation. If supervision contradicts this reading, the evidence wins.",
-    "labelProvenance": "tools/grammar/seed-reporting.mjs records who declared each label; the label is a declaration, not a discovery"
+    "labelProvenance": "tools/grammar/seed-reporting.mjs records who declared each label; the label is a declaration, not a discovery",
+    "whenAbsent": "a role the construction does not express is null, not \"unknown\" — see missingRoleSemantics"
   },
   "failureModes": [
-    { "condition": "no frame occurrence", "result": "Unknown(outside-reporting-grammar)" },
-    { "condition": "more than one frame occurrence in the passage", "result": "Unknown(ambiguous-frame-occurrence)" },
-    { "condition": "construction has more than one surviving permutation", "result": "Unknown(ambiguous-role-mapping)" },
-    { "condition": "text longer than 2048 units", "result": "Unknown(outside-reporting-grammar); corpus maximum is 1617, so this excludes nothing today" },
-    { "condition": "contradicting supervised label", "result": "throw contradictory evidence; no update is committed" }
+    {
+      "condition": "no frame occurrence",
+      "result": "Unknown(outside-reporting-grammar)"
+    },
+    {
+      "condition": "more than one frame occurrence in the passage",
+      "result": "Unknown(ambiguous-frame-occurrence)"
+    },
+    {
+      "condition": "construction has more than one surviving permutation",
+      "result": "Unknown(ambiguous-role-mapping)"
+    },
+    {
+      "condition": "text longer than 2048 units",
+      "result": "Unknown(outside-reporting-grammar); corpus maximum is 1617, so this excludes nothing today"
+    },
+    {
+      "condition": "contradicting supervised label",
+      "result": "throw contradictory evidence; no update is committed"
+    }
   ],
   "measured": {
     "source": "knowledge/grammar/measurement.json, regenerated by tools/grammar/measure.mjs",
-    "corpusPassages": 8208,
-    "reachUniqueParse": 367,
-    "reachRate": 0.0447,
-    "ambiguous": 32,
-    "overLengthLimit": 0,
-    "answerableWithEvidence": 367,
-    "answerableRate": 0.0447,
-    "evidenceRecords": 8,
-    "perWork": { "hanfeizi": 82, "guanzi": 67, "zhuangzi": 65, "mozi": 44, "liezi": 29, "book-of-rites": 28, "analects": 20, "xunzi": 16, "mencius": 14, "book-of-documents": 2 },
-    "coverageGate": "G5 floor is 0.01; this grammar reaches 0.0447, so the gate is now reachable. The previous grammar reaches 0.0."
+    "note": "regenerate this block with `node tools/grammar/measure.mjs --write`; the numbers below are from that run, not hand-written"
   },
-  "measuredButNotAdmitted": [
-    {
-      "frame": "<A>曰：「<S>」",
-      "slots": 2,
-      "corpusPassages": 3102,
-      "rate": 0.3779,
-      "whyNotAdmitted": "It has two slots, and the machinery maps a construction onto exactly three roles with all three required. Admitting it would mean changing learnRelations' semantics to allow partial role assignments, which this step is explicitly not allowed to do.",
-      "status": "Measured and declared, deliberately unused. It is the single largest coverage gain available (37.8% of passages) and it is being left on the table on purpose until a separate contract defines what a missing role means. Pulling it in by inventing a recipient would be exactly the kind of unlicensed inference the dialogue contract forbids."
-    }
-  ],
   "duplicationDebt": {
     "what": "The evidence/replay discipline is duplicated between relations.ts and relations-reporting.ts rather than extracted into a shared core.",
     "why": "Extracting it would modify the verified module of the reviewed patch. That refactor should be its own reviewed change, not a side effect of adding a grammar.",
@@ -74,9 +164,29 @@
   "nonclaims": [
     "not parsing: this is a declared regex frame with declared boundary rules, not a syntactic analysis of classical Chinese",
     "not understanding: a matched frame says the text has this shape, nothing about what it means",
-    "the entity slots are unquoted runs, so a boundary rule can be wrong; the ambiguity and span measurements are reported rather than hidden",
+    "the entity slots are unquoted runs, so a boundary rule can be wrong; the ambiguity, span and particle-contamination measurements are reported rather than hidden",
     "reach is an upper bound that depends on segmentation only; it is not accuracy",
     "no claim that the declared speaker/addressee/speech reading is the correct linguistic analysis — it is a declared convention, pinned by supervision and falsifiable by it",
-    "4.47% coverage is low by design: the frame was chosen because it occurs, not because it is common"
-  ]
+    "no claim that 21.42% is a ceiling: the no-曰 frame families are unmeasured for label quality, and the transfer frames are not framed at all",
+    "no claim that G8's 0.5 is reachable: the measured upper bound for 'named subject + reporting verb' is 45.87%, below the floor"
+  ],
+  "missingRoleSemantics": {
+    "requiredBy": "measuredButNotAdmitted previously recorded the two-slot frame <A>曰：「<S>」 as deliberately unused, on the explicit condition that it stay unused \"until a separate contract defines what a missing role means\". This block IS that contract; the frame was admitted only after it was written.",
+    "statement": "A role is null when the CONSTRUCTION DOES NOT EXPRESS IT. It does not mean an unknown person, and it does not mean no such participant exists.",
+    "singleSource": "each construction declares the roles it expresses; ROLES_FOR_CONSTRUCTION(id) is the single source of truth and a caller may not override it.",
+    "labelRule": "a supervised label must supply a non-empty span for every expressed role and null for every unexpressed one (validExpected). Supplying a recipient for <A>曰：「<S>」 is REJECTED, and so is leaving the recipient of <A>謂<B>曰：「<S>」 null.",
+    "replayRule": "the permutation space of a construction is the permutations of its own role set: two orderings for two roles. Evidence is filtered against that space, so a two-slot construction can never be pinned to a three-role order.",
+    "assertionRule": "a reading with recipient null asserts the agent and the theme and asserts NOTHING about the recipient. It is not a claim that the addressee is unknown, still less that the text has no addressee.",
+    "answerRule": "an answer resting on such a reading must report the unexpressed role AS unexpressed. It may not present the relation as if all three roles had been read, and it may not fill the gap from context, from the dialogue, or from another passage.",
+    "comparisonRule": "null is never equal to a value: two readings are SameRelation only when their EXPRESSED roles agree, and a null role can never make a pair a RoleReversal.",
+    "noInference": "if a caller needs the missing role, the answer about THAT role is Unknown — not a guess. Filling it in is exactly the unlicensed inference the dialogue contract forbids.",
+    "nonClaim": "this does not claim classical Chinese reporting frames lack addressees in general. It claims only that THIS construction does not state one, which is a fact about the declared frame."
+  },
+  "admittedAfterContract": {
+    "frame": "<A>曰：「<S>」 (and <A>問曰：「<S>」, <A>告曰：「<S>」)",
+    "previousStatus": "measuredButNotAdmitted: measured at 37.79% of passages and deliberately unused",
+    "licence": "missingRoleSemantics, written before admission",
+    "measuredNow": "yue-quote alone reads 8,043 passages on a unique parse; the three two-slot constructions together carry the grammar from 3.13% to 21.42% of the corpus",
+    "notAdmitted": "the two-slot 謂曰 and 語曰 frames remain undeclared on MEASUREMENT, not on principle: their real-text forms are dominated by adverbials and particles (厲聲謂曰, 樅公相謂曰, 蓋其語曰, 故諸儒爲之語曰), so no truthful agent label exists for them."
+  }
 }

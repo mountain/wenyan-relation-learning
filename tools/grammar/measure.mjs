@@ -110,13 +110,10 @@ if (fs.existsSync(storePath)) {
 const core = selectOperationalCore(
   records.map((r) => ({ ...r, grammar: mod.REPORTING_GRAMMAR_ID })),
   { grammar: mod.REPORTING_GRAMMAR_ID, constructionOf: (t) => {
-    try {
-      const r = readReporting(t, empty);
-      // Uniquely parsed only; a multi-frame passage is held out, not admitted.
-      if (!r.construction || r.reason === 'ambiguous-frame-occurrence') return null;
-      return r.construction;
-    } catch { return null; }
-  } });
+    try { return readReporting(t, empty).construction ?? null; } catch { return null; }
+  },
+  // The grammar must accept the label, not merely recognise the construction.
+  isConsistent: (r) => mod.labelIsConsistent(r.text, r.expected) });
 const model = core.model;
 let answerable = 0;
 if (model.examples.length) {

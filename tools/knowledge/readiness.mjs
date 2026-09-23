@@ -50,11 +50,12 @@ const reporting = load(path.join(ROOT, 'src/inscription/relations-reporting.ts')
  */
 const reportingConstructionOf = (text) => {
   try {
-    const r = reporting.readReporting(text, reporting.emptyReportingModel());
-    if (!r.construction || r.reason === 'ambiguous-frame-occurrence') return null;
-    return r.construction;
+    return reporting.readReporting(text, reporting.emptyReportingModel()).construction ?? null;
   } catch { return null; }
 };
+/** The real "in grammar" test: the grammar must accept the LABEL, not merely the text. */
+const reportingUsable = (r) => reportingConstructionOf(r.text) !== null
+  && reporting.labelIsConsistent(r.text, r.expected);
 
 /** A fresh in-grammar probe per construction, used only to count survivors. */
 const PROBES = {
@@ -110,6 +111,7 @@ const projection = projectModel(records, {
 const reportingProjection = selectOperationalCore(records, {
   grammar: REPORTING_GRAMMAR,
   constructionOf: reportingConstructionOf,
+  isConsistent: reportingUsable,
 });
 
 // replay() is private; reading an in-grammar probe exercises it. A throw here
@@ -127,16 +129,25 @@ const REPORTING_PROBES = {
   'wen-quote': '孔子問弟子曰：「何謂也？」',
   'gao-quote': '孔子告弟子曰：「學而時習之。」',
   'yu-quote': '孔子語弟子曰：「學而時習之。」',
+  // The three two-slot constructions MUST be probed too. When they were left out, G2
+  // reported PASS while three of the seven constructions — including the one that
+  // carries 20.57% of the corpus on its own — were never examined at all. That is
+  // exactly the under-reporting this file's own comment warns about.
+  'wen-plain': '孔子問曰：「何謂也？」',
+  'gao-plain': '孔子告曰：「學而時習之。」',
+  'yue-quote': '孔子曰：「學而時習之。」',
 };
 const GRAMMAR_SETS = {
   [GRAMMAR]: {
     id: GRAMMAR, short: 'experimental', probes: PROBES, model: projection.model,
-    constructionOf, read: (t, m) => readRelation(t, m),
+    constructionOf, usable: (r) => constructionOf(r.text) !== null,
+    read: (t, m) => readRelation(t, m),
     permutationsFor: () => 6,   // the experimental grammar always expresses three roles
   },
   [REPORTING_GRAMMAR]: {
     id: REPORTING_GRAMMAR, short: 'reporting', probes: REPORTING_PROBES, model: reportingProjection.model,
-    constructionOf: reportingConstructionOf, read: (t, m) => reporting.readReporting(t, m),
+    constructionOf: reportingConstructionOf, usable: reportingUsable,
+    read: (t, m) => reporting.readReporting(t, m),
     // A two-slot construction permutes TWO roles, so the old hard-coded "/6" misreported
     // it as under-determined. The denominator comes from the construction's role set.
     permutationsFor: (c) => {
@@ -153,7 +164,10 @@ const shortOf = (id) => GRAMMAR_SETS[id]?.short ?? id;
 const perConstruction = [];
 for (const set of Object.values(GRAMMAR_SETS)) {
   for (const [c, probe] of Object.entries(set.probes)) {
-    const labelled = records.filter((r) => r.grammar === set.id && set.constructionOf(r.text) === c);
+    // Only labels the grammar ACCEPTS may be counted toward G2's floor; counting merely
+    // recognised ones would let G2 pass on records replay refuses.
+    const labelled = records.filter((r) => r.grammar === set.id
+      && (set.usable ? set.usable(r) : true) && set.constructionOf(r.text) === c);
     let read;
     try {
       read = { ok: true, reading: set.read(probe, set.model) };

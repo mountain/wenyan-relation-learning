@@ -53,7 +53,10 @@ export const GRAMMARS = {
     module: 'src/inscription/relations-reporting.ts',
     read: 'readReporting', empty: 'emptyReportingModel',
     probe: '孔子謂弟子曰：「學而時習之。」',
-    constructions: ['wei-quote', 'wen-quote', 'gao-quote', 'yu-quote'],
+    // All SEVEN declared constructions, not the original four: a declaration that
+    // omits constructions makes absence pass vacuously.
+    constructions: ['wei-quote', 'wen-quote', 'gao-quote', 'yu-quote',
+      'wen-plain', 'gao-plain', 'yue-quote'],
     // A CORPUS grammar: learned only from real passage text.
     provenance: 'corpus',
     label: 'reporting frame (occurs in ~4.5% of corpus passages)',
@@ -82,19 +85,23 @@ export function makeContext({ storePath = DEFAULT_STORE, semanticStorePath = nul
     // grammar (it is all-or-nothing), so they are held out and named by G9 instead.
     const constructionOf = (text) => {
       try {
-        const r = mod[spec.read](text, mod[spec.empty]());
-        if (!r.construction || r.reason === 'ambiguous-frame-occurrence') return null;
-        return r.construction;
+        return mod[spec.read](text, mod[spec.empty]()).construction ?? null;
       } catch {
         return null;
       }
     };
+    // A record is usable only if the grammar accepts its LABEL too. Recognising the
+    // construction is not enough — replay is all-or-nothing, so one inadmissible record
+    // would make every construction throw.
+    const isConsistent = typeof mod.labelIsConsistent === 'function'
+      ? (r) => mod.labelIsConsistent(r.text, r.expected) : null;
     // Evidence is selected by ROLE, never by position, and — for a corpus
     // grammar — by PROVENANCE, so invented detection sentences cannot enter
     // corpus learning. Excluded records are named by the projection.
     const projection = selectOperationalCore(evidence, {
       grammar: id, constructionOf, provenance: spec.provenance ?? 'any',
       expectedConstructions: spec.constructions ?? null,
+      ...(isConsistent ? { isConsistent } : {}),
     });
     impls.set(id, {
       id, module: mod, spec, model: projection.model, evidenceRecords: evidence.length,
