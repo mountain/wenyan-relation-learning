@@ -1,14 +1,10 @@
 {
   "schema": "wenyan.corpus.manifest.v1",
   "format": "wenyan.corpus.v1",
-  "generatedAt": "2026-09-23T16:04:24.731Z",
+  "generatedAt": "2026-09-23T16:17:31.023Z",
   "partialRebuild": {
     "only": [
-      "唯識二十論",
-      "唯識論",
-      "大乘唯識論",
-      "唯識三十論",
-      "唯識三十論頌"
+      "太玄"
     ],
     "note": "this run rebuilt a subset; other entries are carried over from the previous manifest"
   },
@@ -28,10 +24,10 @@
     "ctextNotice": "ctext.org was NOT used. Its robots.txt and anti-scraping notice state that automated access is not authorized and direct researchers to subscribe; no content was retrieved from it."
   },
   "counts": {
-    "works": 143,
-    "sections": 5102,
-    "passages": 244386,
-    "characters": 29567452
+    "works": 154,
+    "sections": 5269,
+    "passages": 251740,
+    "characters": 30896079
   },
   "works": [
     {
@@ -2897,7 +2893,7 @@
       "zh": "詩品",
       "tradition": "philosophers",
       "file": "works/詩品.json",
-      "sha256": "b37d9eea0b276497c3425c6dfe944c893ba539cbef47e85d1e6a980bf7eb50e1",
+      "sha256": "2ff59d01b3b89f0883c2f35f62475a190f66e243a37d845d260ac9e544eba417",
       "counts": {
         "sections": 3,
         "passages": 60,
@@ -2909,7 +2905,7 @@
       "licenseTemplates": {},
       "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
       "limitations": [
-        "画论／诗论／书论（用户 2026-09-24 指定）。类别 诗论。路由 mainPageLinks，3 章；授权标签 （无 → 站点预设 CC BY-SA 4.0）。"
+        "【底本不全·不得作分布统计】源站仅 詩品/卷上、卷中、卷下 三页且无更深子页，正文分别 1590／2558／2099 字，而传世规模为上品 12 人、中品 39 人、下品 72 人（卷中人均 65 字、卷下人均 29 字，卷下「其源出於」0 次）——**站上《詩品》是节录／不全本**。本仓建出的 12/21/27 段（共 60 段）忠实反映底本。**不得据此作分布统计**（人数、品第、句式频次），只可用于逐条阅读与示例。画论／诗论／书论（用户 2026-09-24 指定）。类别 诗论。路由 mainPageLinks，3 章；授权标签 （无 → 站点预设 CC BY-SA 4.0）。"
       ]
     },
     {
@@ -3322,6 +3318,240 @@
       "licenseStatus": "Public-domain templates present on the pages used: PD-old.",
       "limitations": [
         "唯识：三十颂（颂文单行）。单页 1877 字；授权标签 PD-old。"
+      ]
+    },
+    {
+      "id": "成唯識論",
+      "zh": "成唯識論",
+      "tradition": "philosophers",
+      "file": "works/成唯識論.json",
+      "sha256": "3f4bd8d3db1742366f0efc938e82200d93ac95cbd4be5450ce8865265f93c00f",
+      "counts": {
+        "sections": 11,
+        "passages": 292,
+        "characters": 88896
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {
+        "PD-old": 11
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: PD-old.",
+      "limitations": [
+        "唯识：三十颂的载体（糅译十师释）。路由 mainPageLinks，11 章；授权标签 PD-old。"
+      ]
+    },
+    {
+      "id": "轉識論",
+      "zh": "轉識論",
+      "tradition": "philosophers",
+      "file": "works/轉識論.json",
+      "sha256": "ad9cc1f3b90d36afe13e759ee5b0491c6077c6f4d8e093520116a97375b9bb00",
+      "counts": {
+        "sections": 1,
+        "passages": 6,
+        "characters": 3397
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 1,
+      "discoveryRoute": "single",
+      "licenseTemplates": {
+        "PD-old": 1
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: PD-old.",
+      "limitations": [
+        "唯识：真谛本（三十颂平行）。路由 single，1 章；授权标签 PD-old。"
+      ]
+    },
+    {
+      "id": "解深密經",
+      "zh": "解深密經",
+      "tradition": "philosophers",
+      "file": "works/解深密經.json",
+      "sha256": "707e6f34321aa6496456e3b1c14b6673ac4567379501f05d1151fd746968ef4e",
+      "counts": {
+        "sections": 5,
+        "passages": 98,
+        "characters": 35773
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {},
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "唯识：唯识所依经。路由 mainPageLinks，5 章；授权标签 唐朝作品。"
+      ]
+    },
+    {
+      "id": "辯中邊論",
+      "zh": "辯中邊論",
+      "tradition": "philosophers",
+      "file": "works/辯中邊論.json",
+      "sha256": "4a7bd8bdb42a507917b07a57fedd72e992e298a07562582c59447769429b82bb",
+      "counts": {
+        "sections": 3,
+        "passages": 30,
+        "characters": 19618
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "single",
+      "licenseTemplates": {
+        "PD-old": 1
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: PD-old.",
+      "limitations": [
+        "唯识：弥勒—世亲系。路由 single，1 章；授权标签 PD-old。"
+      ]
+    },
+    {
+      "id": "攝大乘論本",
+      "zh": "攝大乘論本",
+      "tradition": "philosophers",
+      "file": "works/攝大乘論本.json",
+      "sha256": "294e068a60292d0962ee2a3ce074f791ab485ec9b62392620e8172e6fc0415cc",
+      "counts": {
+        "sections": 3,
+        "passages": 233,
+        "characters": 27839
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "single",
+      "licenseTemplates": {
+        "PD-old": 1
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: PD-old.",
+      "limitations": [
+        "唯识：无著。路由 single，1 章；授权标签 PD-old。"
+      ]
+    },
+    {
+      "id": "大乘阿毗達磨集論",
+      "zh": "大乘阿毗達磨集論",
+      "tradition": "philosophers",
+      "file": "works/大乘阿毗達磨集論.json",
+      "sha256": "9a1d22e653ab119250b41f34cba539ddce327107b498642c526f9760779b50f9",
+      "counts": {
+        "sections": 13,
+        "passages": 414,
+        "characters": 49467
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "single",
+      "licenseTemplates": {},
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "唯识：无著。路由 single，1 章；授权标签 无标签 → CC BY-SA 4.0。"
+      ]
+    },
+    {
+      "id": "因明入正理論",
+      "zh": "因明入正理論",
+      "tradition": "philosophers",
+      "file": "works/因明入正理論.json",
+      "sha256": "e2c8f8ba5e31d7bd542df0ebd232a0aa72c6c3fd333a1297814238ef8ac6c62a",
+      "counts": {
+        "sections": 2,
+        "passages": 18,
+        "characters": 3246
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "single",
+      "licenseTemplates": {
+        "PD-old": 1
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: PD-old.",
+      "limitations": [
+        "唯识：因明。路由 single，1 章；授权标签 PD-old。"
+      ]
+    },
+    {
+      "id": "觀所緣緣論",
+      "zh": "觀所緣緣論",
+      "tradition": "philosophers",
+      "file": "works/觀所緣緣論.json",
+      "sha256": "812ec0f9ea2cdc2d483195cd5b3fd775aff2a5c4ad14a1f59bf8841b65753922",
+      "counts": {
+        "sections": 1,
+        "passages": 29,
+        "characters": 1062
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "single",
+      "licenseTemplates": {
+        "PD-old": 1
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: PD-old.",
+      "limitations": [
+        "唯识：陈那。路由 single，1 章；授权标签 PD-old。"
+      ]
+    },
+    {
+      "id": "顯揚聖教論",
+      "zh": "顯揚聖教論",
+      "tradition": "philosophers",
+      "file": "works/顯揚聖教論.json",
+      "sha256": "4f90e8446cc4d0b437d41ccdd2216699cb53e87382a5cadbe294251fadcbf184",
+      "counts": {
+        "sections": 20,
+        "passages": 1539,
+        "characters": 156022
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {},
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "唯识：无著。路由 mainPageLinks，20 章；授权标签 PD-old。"
+      ]
+    },
+    {
+      "id": "瑜伽師地論",
+      "zh": "瑜伽師地論",
+      "tradition": "philosophers",
+      "file": "works/瑜伽師地論.json",
+      "sha256": "0b72ac232fef417b2edfae1663444356de8f6d95b812c8fdc4d936631b370d1a",
+      "counts": {
+        "sections": 101,
+        "passages": 3831,
+        "characters": 912024
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 4,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {},
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "唯识：根本论（101 章）。路由 mainPageLinks，101 章；授权标签 PD-old。"
+      ]
+    },
+    {
+      "id": "太玄",
+      "zh": "太玄",
+      "tradition": "philosophers",
+      "file": "works/太玄.json",
+      "sha256": "0d3fb1e4c2e3c010bb18fdb08c8ca355f7922534effcc7b091a2a5556b515bc1",
+      "counts": {
+        "sections": 7,
+        "passages": 864,
+        "characters": 31283
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "single",
+      "licenseTemplates": {
+        "西漢作品": 1
+      },
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "太玄另一传本（站上另有《太玄經》一页，31,283 字；本页 34,158 字，含玄首序）。**用途：对校 47/48 那一刀（第九贊 上九/次九 的分布）是否跨传本稳定。**"
       ]
     }
   ],

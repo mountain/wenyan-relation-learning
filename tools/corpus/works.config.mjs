@@ -990,7 +990,7 @@ export const WORKS = [
     zh: "詩品",
     tradition: 'philosophers',
     discovery: { kind: 'mainPageLinks', mainPage: "詩品" },
-    note: "画论／诗论／书论（用户 2026-09-24 指定）。类别 诗论。路由 mainPageLinks，3 章；授权标签 （无 → 站点预设 CC BY-SA 4.0）。",
+    note: "【底本不全·不得作分布统计】源站仅 詩品/卷上、卷中、卷下 三页且无更深子页，正文分别 1590／2558／2099 字，而传世规模为上品 12 人、中品 39 人、下品 72 人（卷中人均 65 字、卷下人均 29 字，卷下「其源出於」0 次）——**站上《詩品》是节录／不全本**。本仓建出的 12/21/27 段（共 60 段）忠实反映底本。**不得据此作分布统计**（人数、品第、句式频次），只可用于逐条阅读与示例。画论／诗论／书论（用户 2026-09-24 指定）。类别 诗论。路由 mainPageLinks，3 章；授权标签 （无 → 站点预设 CC BY-SA 4.0）。",
   },
   {
     id: "滄浪詩話",
@@ -1201,5 +1201,12 @@ export const WORKS = [
     tradition: 'philosophers',
     discovery: { kind: 'mainPageLinks', mainPage: "瑜伽師地論" },
     note: "唯识：根本论（101 章）。路由 mainPageLinks，101 章；授权标签 PD-old。"
+  },
+  {
+    id: "太玄",
+    zh: "太玄",
+    tradition: 'philosophers',
+    discovery: { kind: 'single', page: "太玄" },
+    note: "太玄另一传本（站上另有《太玄經》一页，31,283 字；本页 34,158 字，含玄首序）。**用途：对校 47/48 那一刀（第九贊 上九/次九 的分布）是否跨传本稳定。**"
   },
 ];

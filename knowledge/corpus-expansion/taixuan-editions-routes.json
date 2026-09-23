@@ -1,0 +1,104 @@
+{
+  "schema": "wenyan.corpus-expansion.title-probe.v1",
+  "task": "太玄其他版本/注本探测（不建仓）",
+  "rows": [
+    {
+      "title": "太玄",
+      "exists": true,
+      "chars": 34158,
+      "head": "{{header| author=揚雄| times=西漢|notes=}}/[[Category:易類]]/==玄首序==/馴乎玄。渾行無",
+      "hasZanNames": true
+    },
+    {
+      "title": "揚子太玄經",
+      "exists": false
+    },
+    {
+      "title": "揚子雲太玄經",
+      "exists": false
+    },
+    {
+      "title": "太玄經注",
+      "exists": false
+    },
+    {
+      "title": "太玄集注",
+      "exists": false
+    },
+    {
+      "title": "太玄本旨",
+      "exists": false
+    },
+    {
+      "title": "太玄經解",
+      "exists": false
+    },
+    {
+      "title": "玄經原旨",
+      "exists": false
+    },
+    {
+      "title": "太玄別訓",
+      "exists": false
+    },
+    {
+      "title": "太玄經釋文",
+      "exists": false
+    },
+    {
+      "title": "太玄準易圖",
+      "exists": false
+    },
+    {
+      "title": "太玄總例",
+      "exists": false
+    },
+    {
+      "title": "太玄經正義",
+      "exists": false
+    },
+    {
+      "title": "太玄圖",
+      "exists": false
+    },
+    {
+      "title": "揚子法言",
+      "exists": true,
+      "chars": 892,
+      "head": "{{header/| title    = 法言/| section  = /| author   =揚雄/| previous = /| ",
+      "hasZanNames": false
+    },
+    {
+      "title": "法言",
+      "exists": true,
+      "chars": 892,
+      "head": "{{header/| title    = 法言/| section  = /| author   =揚雄/| previous = /| ",
+      "hasZanNames": false
+    },
+    {
+      "title": "揚雄集",
+      "exists": false
+    },
+    {
+      "title": "楊子雲集",
+      "exists": false
+    },
+    {
+      "title": "揚子雲集",
+      "exists": false
+    },
+    {
+      "title": "太玄經音義",
+      "exists": false
+    },
+    {
+      "title": "太玄輯注",
+      "exists": false
+    }
+  ],
+  "found": [
+    "太玄",
+    "揚子法言",
+    "法言"
+  ]
+}
