@@ -70,9 +70,15 @@ export const GATE_STATUS = {
     bounds: 'structure only',
   },
   G8: {
-    status: 'construction-target',
-    basis: 'the floor is 0.5 and the best measured rate is far below it; the gate fails and names the target',
-    bounds: 'unreachable by any construction with a defensible segmentation rule — see CAP-REVIEW.md 补篇二',
+    // Was `construction-target` while the 0.5 floor was unmet. The floor was REVISED to 0.15 on
+    // 2026-09-23 (61% of the measured ceiling), so the gate now passes and the rung must follow
+    // the code rather than the memory of why it once failed. The unmet aspiration is carried in
+    // the floor record and in the verdict caveat, not by mislabelling the rung.
+    status: 'bounded-experiment',
+    basis: 'a rate measured over one corpus build under the declared questions; the floor is 0.15, '
+      + 'which is 61% of the measured ceiling',
+    bounds: 'one corpus build; the aspirational target 0.5 is NOT met — a PASS here means progress, '
+      + 'not arrival (see floors.mjs g8-corpus-answerability)',
   },
   G9: {
     status: 'exact',
@@ -148,6 +154,15 @@ export function statusOf(gateId) {
  */
 export function rungSummary(gates) {
   const passing = gates.filter((g) => g.pass);
+  // `construction-target` MEANS "a named target that is not met", so a passing gate may not
+  // carry it. Without this check the rung is a label that can drift from the gate's own
+  // verdict — which is how G8 came to read `PASS [construction-target]` for one commit.
+  for (const g of passing) {
+    if (statusOf(g.id).status === 'construction-target') {
+      throw new Error(`gate ${g.id} PASSES but is declared as construction-target, which means an unmet ` +
+        'target: either the gate is wrong or the rung is, and neither may pass silently');
+    }
+  }
   const histogram = {};
   for (const r of LADDER) histogram[r] = 0;
   for (const g of passing) histogram[statusOf(g.id).status]++;

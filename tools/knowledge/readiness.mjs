@@ -541,8 +541,21 @@ console.log(`\n[verdict] ready for computation: ${readyForComputation}` +
   (readingReadyGrammars.length
     ? ` (via ${readingReadyGrammars.map(shortOf).join(', ')} — the verdict is per grammar, not global)`
     : ' (no grammar passes both determination and generalisation)'));
-console.log(`[verdict] ready for conversational reasoning: ${report.verdict.readyForConversationalReasoning}` +
-  ` (G7 contract/enforcement, G8 corpus answerability)`);
+{
+  // A PASS at a REVISED floor must not read as the original claim. G8's floor now measures
+  // progress (61% of the measured ceiling); the aspirational target 0.5 is still unmet, so the
+  // verdict carries that in the same line rather than in a footnote nobody reads.
+  const g8 = gates.find((g) => g.id === 'G8');
+  const target = 0.5;
+  const met = dialogue.bestCorpusRate !== null && dialogue.bestCorpusRate >= target;
+  console.log(`[verdict] ready for conversational reasoning: ${report.verdict.readyForConversationalReasoning}` +
+    ` (G7 contract/enforcement, G8 corpus answerability)`);
+  console.log(`[verdict]   G8 caveat: floor ${G8_FLOOR} is 61% of the measured ceiling 0.244 and was REVISED on ` +
+    `2026-09-23 from 0.5, under which it failed every round. The aspirational target ${target} is ` +
+    `${met ? 'MET' : 'NOT met'} (current ${dialogue.bestCorpusRate ?? 'unmeasured'}); a PASS below it means ` +
+    'progress, not arrival — see knowledge/APERTURES.md and CAP-REVIEW.md 补篇二 for what the ceiling is made of.');
+  void g8;
+}
 console.log(`[verdict] corpus coverage: ${coverage.known}/${coverage.passages} (best grammar ${coverage.bestGrammar ?? 'n/a'})`);
 if (argv.includes('--write')) console.log(`[written] ${path.relative(ROOT, out)}`);
 process.exit(readyForComputation ? 0 : 1);

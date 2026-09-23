@@ -59,18 +59,34 @@ export const FLOORS = {
     changes: [],
   },
   'g8-corpus-answerability': {
-    value: 0.5,
-    since: '2026-09-22',
-    basis: 'DECLARED BEFORE THE ATTAINABLE RANGE WAS KNOWN: the intention was "a declared question can be '
-      + 'answered about half of real text".',
-    status: 'UNREACHABLE as measured. The honest ceiling for a relation grammar with declared segmentation '
-      + 'is about 0.244 of ALL passages (CAP-REVIEW.md 补篇二); the strict upper bound for "named subject + '
-      + 'reporting verb" is 0.459, itself below this floor. The gate therefore fails, and it is left '
-      + 'failing rather than lowered to the current value.',
+    value: 0.15,
+    since: '2026-09-23',
+    basis: 'REVISED, not lowered to the current value. The revision is argued from the ATTAINABLE RANGE: the '
+      + 'honest ceiling for a relation grammar with declared segmentation is about 0.244 of all passages, and '
+      + '0.15 is 61% of it. The rule this satisfies is that a threshold may not be moved to sit just under the '
+      + 'measured value; 0.15 is argued from the ceiling, and it keeps a third of the ceiling as headroom, so '
+      + 'the gate still fails if realisation degrades by a third — it measures the implementation, not how much '
+      + 'frame-bearing text the corpus happens to contain. 0.20 was rejected for conflating those two: it would '
+      + 'go red both when the implementation regressed and when the corpus mix changed.',
+    status: 'The aspirational target remains 0.5 and is NOT met. Declared 0.5 on 2026-09-22 before the '
+      + 'attainable range was known; the gate failed under it throughout, and that record stays below rather '
+      + 'than being erased. Mingli Yuan\u2019s reason for keeping the objective while revising the floor: an '
+      + 'unreachable target is the growth driver for 文言, so the target stays and the gate now measures '
+      + 'progress toward it.',
     ceiling: { value: 0.2443, measuredBy: CEILING_NOTE, note: 'ceiling = the union of frames with a '
       + 'defensible segmentation rule; the unmarked ditransitive (0.238) is excluded because its theme '
       + 'span has no delimiter and could only be guessed' },
-    changes: [],
+    review: 'RE-CHECK THE CEILING, then reconsider this floor. Raising the ceiling is the route to the 0.5 '
+      + 'target, and the known levers are: the two no-曰 frame families (measured about +1.5 points), '
+      + 'constructions that need a segmentation rule no one has written yet, and the variant-character '
+      + 'aperture A7 (one pair, 於/于, was worth 26 citations). Re-measure with tools/grammar/measure.mjs and '
+      + 'record the new ceiling here before touching the floor again.',
+    changes: [
+      { from: 0.5, to: 0.15, at: '2026-09-23',
+        basis: '0.5 exceeds the measured attainable range (ceiling 0.244) and had failed for every round since '
+          + 'it was declared. Revised to 61% of the ceiling with a third kept as headroom; see `basis` above. '
+          + 'The 0.5 target itself is retained as the aspiration the ceiling work aims at.' },
+    ],
   },
 };
 
