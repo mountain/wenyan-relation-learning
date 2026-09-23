@@ -52,7 +52,9 @@
       "externalLinks": 0,
       "conversionMarkers": 39,
       "licenseTemplates": {},
-      "anchorsLifted": 0
+      "anchorsLifted": 0,
+      "behaviourSwitches": 412,
+      "navigationLines": 0
     },
     "droppedSubsections": [
       "詩經/汝墳#毛詩序",
@@ -346,6 +348,7 @@
     "skippedNoText": [],
     "droppedFrontMatter": [],
     "droppedLines": 541,
+    "demotedHeadingLines": 0,
     "structuralMarkers": [],
     "flaggedShortPassages": [],
     "untitledSections": [],
@@ -494,7 +497,7 @@
     {
       "id": "classic-of-poetry.9",
       "ordinal": 9,
-      "title": "國風‧周南",
+      "title": "國風‧周南‧漢廣",
       "sourcePage": "詩經/漢廣",
       "sourceRevid": 2639133,
       "sourcePages": [
@@ -866,7 +869,7 @@
     {
       "id": "classic-of-poetry.31",
       "ordinal": 31,
-      "title": "國風‧邶",
+      "title": "國風‧邶‧擊鼓",
       "sourcePage": "詩經/擊鼓",
       "sourceRevid": 2554883,
       "sourcePages": [
@@ -910,7 +913,7 @@
     {
       "id": "classic-of-poetry.33",
       "ordinal": 33,
-      "title": "國風‧邶",
+      "title": "國風‧邶‧雄雉",
       "sourcePage": "詩經/雄雉",
       "sourceRevid": 8738471,
       "sourcePages": [

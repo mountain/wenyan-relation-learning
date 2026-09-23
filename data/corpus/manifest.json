@@ -1,10 +1,10 @@
 {
   "schema": "wenyan.corpus.manifest.v1",
   "format": "wenyan.corpus.v1",
-  "generatedAt": "2026-09-23T01:57:56.152Z",
+  "generatedAt": "2026-09-23T03:30:22.801Z",
   "partialRebuild": {
     "only": [
-      "唐詩三百首"
+      "classic-of-poetry"
     ],
     "note": "this run rebuilt a subset; other entries are carried over from the previous manifest"
   },
@@ -127,7 +127,7 @@
       "en": "Classic of Poetry",
       "tradition": "confucian",
       "file": "works/classic-of-poetry.json",
-      "sha256": "807528be1455089ba339ddd4bc11d36441aa5b4e88f67ca977f02e49aa533544",
+      "sha256": "f8b2c48c6b299b6cd95d8ff62b3556add3339d940c406c005897f9029846a690",
       "counts": {
         "sections": 305,
         "passages": 663,

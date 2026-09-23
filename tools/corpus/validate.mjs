@@ -22,6 +22,33 @@ const strict = process.argv.includes('--strict');
 
 const errors = [];
 const warnings = [];
+
+/**
+ * Which unit name does a section title have to contain?
+ *
+ * Source pages disagree about where the unit goes. Most 詩經 pages carry
+ * `|title = [[詩經]]` with `|section = 關雎`, but three invert it — `|title = 漢廣` with
+ * `|section = 國風‧周南`, and `{{Header2|title=擊鼓|section={{+|國風‧邶}}}}` — so taking
+ * the title from `section` alone named the CHAPTER and lost the poem: `國風‧周南` instead
+ * of 漢廣, and `國風‧邶` twice. The text was present the whole time; the corpus merely
+ * looked as if 漢廣/擊鼓/雄雉 were missing. This check is what would have caught it.
+ *
+ * A trailing `(邶風)`-style disambiguator is stripped so `詩經/谷風 (邶風)` yields `谷風`.
+ */
+export function unitOfPage(pageTitle) {
+  return String(pageTitle).split('/').pop().replace(/\s*[（(][^）)]*[）)]\s*$/, '');
+}
+
+/**
+ * Routes where one source page yields exactly one section. Only there is the page name a
+ * unit name; `single` and `tocSection` take their titles from headings inside one page.
+ */
+export const PAGE_PER_SECTION_ROUTES = new Set([
+  'nextChain', 'mainPageLinks', 'listLinks', 'allpages', 'containerChain',
+]);
+
+const routeOf = (doc) => doc?.source?.discovery?.route ?? null;
+
 const err = (m) => errors.push(m);
 const warn = (m) => warnings.push(m);
 
@@ -76,6 +103,19 @@ function checkWorkJson(file, entry) {
     if (s.ordinal !== si + 1) err(`${entry.id}: section ${s.id} ordinal ${s.ordinal} != position ${si + 1}`);
     if (!s.title) err(`${entry.id}: section ${s.id} has no title`);
     if (!s.sourcePage) err(`${entry.id}: section ${s.id} has no sourcePage`);
+    // A section's title must CONTAIN the unit name of its source page — but only where
+    // one page yields one section. Measured scope: across the five page-per-section
+    // routes this holds for all 2,205 sections of all 69 works; in the `single` and
+    // `tocSection` routes the titles legitimately come from in-page headings, and
+    // requiring the page name there would wrongly flag 490 sections (道德經's 一章…八十一章
+    // all come from the page 道德經 (王弼本)).
+    if (s.sourcePage && PAGE_PER_SECTION_ROUTES.has(routeOf(doc))) {
+      const unit = unitOfPage(s.sourcePage);
+      if (unit && !s.title.includes(unit)) {
+        err(`${entry.id}: section ${s.id} title ${JSON.stringify(s.title)} does not contain the ` +
+          `unit name ${JSON.stringify(unit)} of its source page ${s.sourcePage}`);
+      }
+    }
     if (!Array.isArray(s.passages) || !s.passages.length) { err(`${entry.id}: section ${s.id} has no passages`); return; }
 
     s.passages.forEach((p) => {

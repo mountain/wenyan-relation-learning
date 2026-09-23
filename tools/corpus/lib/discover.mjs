@@ -31,6 +31,39 @@ function splitParams(body) {
   return parts;
 }
 
+import { cleanInline } from './wikitext.mjs';
+
+/**
+ * The section title must contain the page's UNIT name.
+ *
+ * Source pages are not consistent about where they put the unit: most 詩經 pages carry
+ * `|title = [[詩經]]` with `|section = 關雎`, but three invert it — `|title = 漢廣` with
+ * `|section = 國風‧周南`, and `{{Header2|title=擊鼓|section={{+|國風‧邶}}}}` — so a title
+ * taken from `section` alone named the CHAPTER and lost the poem (`國風‧周南` instead of
+ * 漢廣, and `國風‧邶` twice). Those three sections were the only place a unit name went
+ * missing, and the symptom was a duplicated title plus a poem that appeared absent from
+ * the corpus even though its text was present.
+ *
+ * The test is CONTAINMENT of the cleaned title, not equality of a `‧`-separated
+ * component. Measured necessity: 莊子's sections are titled `逍遙遊第一` against the page
+ * `莊子/逍遙遊`, so a component test appends and yields `逍遙遊第一‧逍遙遊` — it would have
+ * changed 97 of the 432 chapters reached by this route instead of 3.
+ *
+ * The unit comes from the PAGE, not from the header, because the page name is the one
+ * field that is consistent: a trailing `(邶風)`-style disambiguator is stripped so that
+ * `詩經/谷風 (邶風)` yields `谷風`, which its title already contains.
+ */
+export function unitOfPage(pageTitle) {
+  return String(pageTitle).split('/').pop().replace(/\s*[（(][^）)]*[）)]\s*$/, '');
+}
+
+export function ensureUnitInTitle(title, pageTitle) {
+  const unit = unitOfPage(pageTitle);
+  if (!unit) return title;
+  if (cleanInline(title).includes(unit)) return title;
+  return title ? `${title}‧${unit}` : unit;
+}
+
 /** Read the first header-ish template of a page into a field map. */
 export function parseHeaderFields(wikitext) {
   const m = wikitext.match(/\{\{\s*(header2?|Header2?|Header)\b/i);
@@ -113,12 +146,13 @@ export async function discoverByNextChain(client, startPage, { max = 400, stopPr
     const resolved = rec.resolvedTitle || page;
     const fields = parseHeaderFields(rec.content);
     const title = (fields.section || '').replace(/'''/g, '').trim() || page.split('/').pop();
+    const withUnit = ensureUnitInTitle(title, resolved);
     // Excluded pages are skipped as chapters but the chain must still pass
     // through them, otherwise one exclusion would truncate the whole work.
     if (exclude.some((re) => re.test(resolved) || re.test(page))) {
       excluded.push(resolved);
     } else {
-      chapters.push({ title, pageTitle: resolved, revid: rec.revid });
+      chapters.push({ title: withUnit, pageTitle: resolved, revid: rec.revid });
     }
     const next = linkTarget(fields.next, page);
     if (!next) { stopReason = 'chain end'; break; }
