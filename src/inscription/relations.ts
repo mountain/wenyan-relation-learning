@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: MIT
 /** Research-only language adapter of Adva 0131's evidence-bound update policy.
  * Fixed controlled grammar, supervised role labels; not native Adva learn.
  * Codex (OpenAI), 2026-09-22. New contribution under Unknown v0.3.

@@ -89,7 +89,8 @@
 +
 --- /dev/null
 +++ b/src/inscription/relations.ts
-@@ -0,0 +1,136 @@
+@@ -0,0 +1,137 @@
++// SPDX-License-Identifier: MIT
 +/** Research-only language adapter of Adva 0131's evidence-bound update policy.
 + * Fixed controlled grammar, supervised role labels; not native Adva learn.
 + * Codex (OpenAI), 2026-09-22. New contribution under Unknown v0.3.
@@ -246,7 +247,8 @@
 +}
 --- /dev/null
 +++ b/experiments/relations/run.cjs
-@@ -0,0 +1,122 @@
+@@ -0,0 +1,123 @@
++// SPDX-License-Identifier: MIT
 +// Node 24/26 runtime-only harness for the pinned TypeScript subset.
 +// Does not replace the repository TypeScript/Jest gates.
 +const fs = require('node:fs');

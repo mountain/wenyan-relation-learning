@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: MIT
 // Node 24/26 runtime-only harness for the pinned TypeScript subset.
 // Does not replace the repository TypeScript/Jest gates.
 const fs = require('node:fs');
