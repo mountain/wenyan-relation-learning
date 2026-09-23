@@ -48,14 +48,20 @@ function checkWorkJson(file, entry) {
   if (doc.schema !== 'wenyan.corpus.work.v1') err(`${entry.id}: wrong schema ${doc.schema}`);
   if (doc.id !== entry.id) err(`${entry.id}: id mismatch (${doc.id})`);
   if (!doc.title?.zh) err(`${entry.id}: missing title.zh`);
-  if (!['confucian', 'philosophers'].includes(doc.tradition)) err(`${entry.id}: bad tradition`);
+  if (!['confucian', 'philosophers', 'historical', 'fiction', 'literature'].includes(doc.tradition)) err(`${entry.id}: bad tradition`);
 
   // manifest hash must match file content
   if (entry.sha256 && entry.sha256 !== sha256(raw)) {
     err(`${entry.id}: sha256 mismatch (manifest ${entry.sha256.slice(0, 12)}… != actual ${sha256(raw).slice(0, 12)}…)`);
   }
 
-  if (!Array.isArray(doc.sections) || !doc.sections.length) { err(`${entry.id}: no sections`); return doc; }
+  // Must return the SAME shape on every path: an earlier version returned the bare
+  // doc here, so the caller's `r.doc.sections` threw and validate CRASHED on the
+  // first work that had zero sections — hiding the very problem it should report.
+  if (!Array.isArray(doc.sections) || !doc.sections.length) {
+    err(`${entry.id}: no sections — the work built empty`);
+    return { doc, passages: 0, characters: 0, anchored: 0 };
+  }
 
   const secIds = new Set();
   const passIds = new Set();

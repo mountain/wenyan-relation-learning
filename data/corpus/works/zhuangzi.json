@@ -21,7 +21,7 @@
   "counts": {
     "sections": 33,
     "passages": 903,
-    "characters": 80075
+    "characters": 80033
   },
   "license": {
     "pageTemplates": {},
@@ -30,7 +30,11 @@
   },
   "extraction": {
     "removed": {
-      "annotations": 0,
+      "annotationsDropped": 0,
+      "annotationsKept": 0,
+      "declaredElementsDropped": 0,
+      "declaredTemplatesDropped": 0,
+      "annotationRegionsDropped": 0,
       "templates": 61,
       "contentTemplates": 10,
       "uncertainGlyphs": 0,
@@ -41,14 +45,18 @@
       "externalLinks": 0,
       "conversionMarkers": 8,
       "licenseTemplates": {},
-      "anchorsLifted": 0
+      "anchorsLifted": 0,
+      "behaviourSwitches": 0,
+      "navigationLines": 0
     },
     "droppedSubsections": [],
     "skippedNoText": [],
     "droppedFrontMatter": [],
     "droppedLines": 0,
+    "demotedHeadingLines": 21,
     "structuralMarkers": [],
     "flaggedShortPassages": [],
+    "untitledSections": [],
     "notes": "Annotations ({{*|…}}) and site templates are removed; list/verse nesting is flattened; verse line breaks are preserved inside passage text."
   },
   "limitations": [
@@ -579,7 +587,7 @@
       "passages": [
         {
           "id": "13.1",
-          "text": "=天道第十三="
+          "text": "天道第十三"
         },
         {
           "id": "13.2",
@@ -751,7 +759,7 @@
       "passages": [
         {
           "id": "14.1",
-          "text": "=天運第十四="
+          "text": "天運第十四"
         },
         {
           "id": "14.2",
@@ -943,7 +951,7 @@
       "passages": [
         {
           "id": "15.1",
-          "text": "=刻意第十五="
+          "text": "刻意第十五"
         },
         {
           "id": "15.2",
@@ -987,7 +995,7 @@
       "passages": [
         {
           "id": "16.1",
-          "text": "=繕性第十六="
+          "text": "繕性第十六"
         },
         {
           "id": "16.2",
@@ -1035,7 +1043,7 @@
       "passages": [
         {
           "id": "17.1",
-          "text": "=秋水第十七="
+          "text": "秋水第十七"
         },
         {
           "id": "17.2",
@@ -1219,7 +1227,7 @@
       "passages": [
         {
           "id": "18.1",
-          "text": "=至樂第十八="
+          "text": "至樂第十八"
         },
         {
           "id": "18.2",
@@ -1323,7 +1331,7 @@
       "passages": [
         {
           "id": "19.1",
-          "text": "=達生第十九="
+          "text": "達生第十九"
         },
         {
           "id": "19.2",
@@ -1539,7 +1547,7 @@
       "passages": [
         {
           "id": "20.1",
-          "text": "=山木第二十="
+          "text": "山木第二十"
         },
         {
           "id": "20.2",
@@ -1715,7 +1723,7 @@
       "passages": [
         {
           "id": "21.1",
-          "text": "=田子方第二十一="
+          "text": "田子方第二十一"
         },
         {
           "id": "21.2",
@@ -1959,7 +1967,7 @@
       "passages": [
         {
           "id": "22.1",
-          "text": "=知北遊第二十二="
+          "text": "知北遊第二十二"
         },
         {
           "id": "22.2",
@@ -2219,7 +2227,7 @@
       "passages": [
         {
           "id": "23.1",
-          "text": "=庚桑楚第二十三="
+          "text": "庚桑楚第二十三"
         },
         {
           "id": "23.2",
@@ -2391,7 +2399,7 @@
       "passages": [
         {
           "id": "24.1",
-          "text": "=徐無鬼第二十四="
+          "text": "徐無鬼第二十四"
         },
         {
           "id": "24.2",
@@ -2683,7 +2691,7 @@
       "passages": [
         {
           "id": "25.1",
-          "text": "=則陽第二十五="
+          "text": "則陽第二十五"
         },
         {
           "id": "25.2",
@@ -2919,7 +2927,7 @@
       "passages": [
         {
           "id": "26.1",
-          "text": "=外物第二十六="
+          "text": "外物第二十六"
         },
         {
           "id": "26.2",
@@ -3051,7 +3059,7 @@
       "passages": [
         {
           "id": "27.1",
-          "text": "=寓言第二十七="
+          "text": "寓言第二十七"
         },
         {
           "id": "27.2",
@@ -3143,7 +3151,7 @@
       "passages": [
         {
           "id": "28.1",
-          "text": "=讓王第二十八="
+          "text": "讓王第二十八"
         },
         {
           "id": "28.2",
@@ -3383,7 +3391,7 @@
       "passages": [
         {
           "id": "29.1",
-          "text": "=盜跖第二十九="
+          "text": "盜跖第二十九"
         },
         {
           "id": "29.2",
@@ -3555,7 +3563,7 @@
       "passages": [
         {
           "id": "30.1",
-          "text": "=說劍第三十="
+          "text": "說劍第三十"
         },
         {
           "id": "30.2",
@@ -3687,7 +3695,7 @@
       "passages": [
         {
           "id": "31.1",
-          "text": "=漁父第三十一="
+          "text": "漁父第三十一"
         },
         {
           "id": "31.2",
@@ -3815,7 +3823,7 @@
       "passages": [
         {
           "id": "32.1",
-          "text": "=列禦寇第三十二="
+          "text": "列禦寇第三十二"
         },
         {
           "id": "32.2",
@@ -3967,7 +3975,7 @@
       "passages": [
         {
           "id": "33.1",
-          "text": "=天下第三十三="
+          "text": "天下第三十三"
         },
         {
           "id": "33.2",

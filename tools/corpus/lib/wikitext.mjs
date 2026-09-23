@@ -69,6 +69,29 @@ const CONTENT_TEMPLATES = new Map([
   ['另', 0], ['另2', 0], ['參', 0], ['参', 0],
   ['!', 0], ['僻字', 0], ['ProperNoun', 0],
   ['+', 0], ['-', 0], ['ruby', 0],
+  // Added after scanning the four history works (tools/corpus/build.mjs covers
+  // 史記/漢書/三國志/文獻通考). Each of these wraps BASE TEXT, and dropping it
+  // would delete the text inside: 史記 alone carries 1672 {{專}} proper nouns.
+  ['專', 0],            // 專名:      {{專|黃帝}}        -> 黃帝
+  ['書', 0],            // 書名:      {{書|札記}}        -> 札記
+  ['標', 0],            // 標記引文:  {{標|幼而徇齊}}    -> 幼而徇齊
+  ['YL', 0],            // 紀年:      {{YL|元年|前722年}} -> 元年
+  ['ul', 0],            // 專名下劃線 {{ul|倭人}}       -> 倭人
+  ['WavyBookMark', 0],  // 波浪書名號 {{WavyBookMark|傅子}} -> 傅子
+  ['別', 0],            // 異文:      {{別|禦|御}}       -> 禦
+  ['校', 0],            // 校異:      {{校|歷山|歷陽}}   -> 歷山
+  ['quote', 0],         // 引文區塊（正文）
+  ['blue', 0], ['red', 0], ['~~', 0], ['PUA', 0],
+]);
+
+/**
+ * Templates that carry COMMENTARY, declared per work because the same wrapper
+ * means different things in different works: in 史記 `green`/`deepPink` wrap
+ * 【集解】【索隱】 (three-commentary apparatus), while in 漢書 `blue`/`red` wrap
+ * the base text (memorials and quoted speech). A global list would be wrong.
+ */
+const COMMENTARY_TEMPLATE_NAMES = new Set([
+  'green', 'deepPink', 'annotate', '註', '註釋',
 ]);
 const GLYPH_PLACEHOLDER_TEMPLATES = new Set(['？']);
 
@@ -98,7 +121,7 @@ function splitTemplateParams(inner) {
  *  - content-bearing templates keep their text parameter (see above) instead of
  *    being deleted as metadata.
  */
-function stripTemplates(text, stats, depth = 0) {
+function stripTemplates(text, stats, depth = 0, opts = {}) {
   let out = '';
   let i = 0;
   while (i < text.length) {
@@ -119,12 +142,27 @@ function stripTemplates(text, stats, depth = 0) {
         stats[label] = (stats[label] ?? 0) + 1;
         const kept = params.length > 1 ? params[1] : '';
         // Nested templates inside the kept text still need cleaning.
-        out += depth < 6 ? stripTemplates(kept, stats, depth + 1) : kept;
+        out += depth < 6 ? stripTemplates(kept, stats, depth + 1, opts) : kept;
       };
-      if (CONTENT_TEMPLATES.has(name)) keepFirst('contentTemplates');
+      const dropList = opts.dropTemplates ?? [];
+      if (dropList.includes(name) || COMMENTARY_TEMPLATE_NAMES.has(name) && opts.declareCommentary) {
+        stats.declaredTemplatesDropped = (stats.declaredTemplatesDropped ?? 0) + 1;
+      }
+      else if (CONTENT_TEMPLATES.has(name)) keepFirst('contentTemplates');
       else if (GLYPH_PLACEHOLDER_TEMPLATES.has(name)) keepFirst('uncertainGlyphs');
-      else if (name.startsWith('*')) stats.annotations++;
-      else stats.templates++;
+      else if (name.startsWith('*')) {
+        // {{*|X}} is NOT uniformly commentary. On 老子 and 荀子 it is annotation
+        // (王弼注 / 楊倞音義) and must go; on 春秋公羊傳 it is THE TEXT — the
+        // 傳文 itself — so dropping it deleted the main body of the work while
+        // leaving coherent-looking 經文 behind.
+        //
+        // The default is therefore KEEP: retaining commentary is a visible,
+        // recoverable error, whereas deleting base text is silent and permanent
+        // in the artifact. Works whose {{*}} is known to be annotation declare
+        // `dropAnnotation: true` and say so in their config note.
+        if (opts.dropAnnotation) { stats.annotationsDropped++; }
+        else keepFirst('annotationsKept');
+      } else stats.templates++;
       i = end;
       continue;
     }
@@ -149,6 +187,25 @@ function liftAnchors(text, anchors) {
     anchors.push(id);
     return `\n\u0000A:${id}\u0000\n`;
   });
+  return out;
+}
+
+/**
+ * Drop elements whose CONTENT is commentary, declared per work.
+ *
+ * 文獻通考 puts its notes in <sub>…</sub> («冀州：厥土白壤<sub>無塊曰壤</sub>»), and
+ * stripHtml() removes tags while KEEPING inner text — which would merge the note
+ * into the base text and produce «厥土白壤無塊曰壤». Whether a given element
+ * carries commentary is a per-work fact, so it is declared, never assumed.
+ */
+function dropDeclaredElements(text, stats, tags = []) {
+  let out = text;
+  for (const tag of tags) {
+    const re = new RegExp(`<${tag}\\b[^>]*>[\\s\\S]*?<\\/${tag}>`, 'gi');
+    out = out.replace(re, () => { stats.declaredElementsDropped = (stats.declaredElementsDropped ?? 0) + 1; return ''; });
+    const selfRe = new RegExp(`<${tag}\\b[^>]*/>`, 'gi');
+    out = out.replace(selfRe, '');
+  }
   return out;
 }
 
@@ -191,16 +248,34 @@ function stripLinks(text, stats) {
   return text;
 }
 
-/** MediaWiki language-conversion markers: -{T|..}- , -{H|..}- , -{乾}- */
+/**
+ * MediaWiki language-conversion markers: -{T|..}- , -{H|..}- , -{乾}-.
+ *
+ * Markers NEST: 史記 contains `爲變-{-{徴}-}-之聲`. A single non-greedy pass
+ * matches `-{-{徴}-` (up to the FIRST `}-`), so the "restored" text came out as
+ * `-{徴}-` — a leftover fragment that the residue check then flagged. The marker
+ * is therefore unwrapped INNERMOST-FIRST, repeatedly, until none remain.
+ */
 function stripConversionMarkers(text, stats) {
-  return text.replace(/-\{([\s\S]*?)\}-/g, (_m, inner) => {
-    stats.conversionMarkers++;
-    const trimmed = inner.trim();
-    if (/^[A-Za-z]\s*\|/.test(trimmed)) return ''; // -{T|..}-, -{H|..}-
-    if (trimmed.includes('|')) return trimmed.slice(trimmed.lastIndexOf('|') + 1);
-    if (trimmed.includes(':')) return trimmed.slice(trimmed.lastIndexOf(':') + 1);
-    return trimmed;
-  });
+  let out = text;
+  // content that contains no further '-{' is the innermost level
+  const innermost = /-\{((?:(?!-\{)[\s\S])*?)\}-/g;
+  for (let pass = 0; pass < 20; pass++) {
+    if (!out.includes('-{')) break;
+    let replaced = false;
+    out = out.replace(innermost, (_m, inner) => {
+      replaced = true;
+      stats.conversionMarkers++;
+      const trimmed = inner.trim();
+      if (/^[A-Za-z]\s*\|/.test(trimmed)) return ''; // -{T|..}-, -{H|..}-
+      if (trimmed.includes('|')) return trimmed.slice(trimmed.lastIndexOf('|') + 1);
+      if (trimmed.includes(':')) return trimmed.slice(trimmed.lastIndexOf(':') + 1);
+      return trimmed;
+    });
+    if (!replaced) break;
+  }
+  if (out.includes('-{')) stats.unresolvedConversionMarkers = (out.match(/-\{/g) ?? []).length;
+  return out;
 }
 
 function decodeEntities(text) {
@@ -213,10 +288,60 @@ function decodeEntities(text) {
     .replace(/&amp;/g, '&');
 }
 
+/**
+ * MediaWiki behaviour switches: `__FORCETOC__`, `__NOTOC__`, `__NOEDITSECTION__`,
+ * `__TOC__`, `__NEWSECTIONLINK__`, …
+ *
+ * The cleaner previously listed three of these literally, so every OTHER switch
+ * survived into the base text: 文選 shipped 12 passages containing the literal
+ * string `__FORCETOC__`, and 漢書/史記/三國志 54 more (66 in total). A switch is
+ * renderer instruction, never transcribed text, so the whole `__[A-Z]+__` form is
+ * removed and the count is reported rather than assumed to be zero.
+ */
+function stripBehaviourSwitches(text, stats) {
+  return text.replace(/__[A-Z]+__/g, () => {
+    stats.behaviourSwitches++;
+    return '';
+  });
+}
+
+/**
+ * Wikisource navigation furniture that sits in the page body as ordinary text.
+ *
+ * Two shapes occur in practice, both inside the base-text region and therefore
+ * invisible to a template allowlist:
+ *   - a breadcrumb line: `[[../天官冢宰|上一篇]]　[[../|回目录]]　[[../春官宗伯|下一篇]]`
+ *     (周禮, 春秋穀梁傳 — read back as 「上一篇　回目录　下一篇」)
+ *   - a reading-aid line: `[[論語/全覽|全覽]]（將全篇放在同一頁中閱讀，無註）`
+ *     (四書章句集註)
+ * Both are dropped only when the line consists of nothing but navigation words
+ * plus separators, or one navigation word plus one parenthetical gloss; a line
+ * carrying any other text is left untouched.
+ */
+const NAV_WORD = '(?:上一篇|下一篇|上一頁|下一頁|上一页|下一页|回目录|回目錄|返回目录|返回目錄|卷首|上卷|下卷)';
+const NAV_BREADCRUMB = new RegExp(`^[\\s　]*${NAV_WORD}(?:[\\s　|·、,，。\\-—]*${NAV_WORD})*[\\s　]*$`);
+// A reading aid, not a movement word: it is only furniture when GLOSSED, since on
+// its own 「全覽」/「全文」/「目錄」 can legitimately be a section title.
+const AID_WORD = '(?:全覽|全文|目錄|目录|回目錄|回目录)';
+const NAV_GLOSSED = new RegExp(`^[\\s　]*${AID_WORD}[（(][^）)]{0,80}[）)][\\s　]*$`);
+
+function dropNavigationLines(text, stats) {
+  const lines = text.split('\n');
+  const kept = lines.filter((line) => {
+    const t = line.trim();
+    if (!t) return true;
+    if (NAV_BREADCRUMB.test(t) || NAV_GLOSSED.test(t)) {
+      stats.navigationLines++;
+      return false;
+    }
+    return true;
+  });
+  return kept.join('\n');
+}
+
 function normalizeLines(text) {
   return text
     .replace(/\r\n?/g, '\n')
-    .replace(/__NOTOC__|__NOEDITSECTION__|__TOC__/g, '')
     .replace(/'''?/g, '')
     .split('\n')
     .map((line) => line.replace(/^[\s:;*#]+/, '').replace(/[ \t\u00a0]+$/g, '').trim())
@@ -231,7 +356,11 @@ function normalizeLines(text) {
  */
 export function cleanWikitext(raw, opts = {}) {
   const stats = {
-    annotations: 0,
+    annotationsDropped: 0,
+    annotationsKept: 0,
+    declaredElementsDropped: 0,
+    declaredTemplatesDropped: 0,
+    annotationRegionsDropped: 0,
     templates: 0,
     contentTemplates: 0,
     uncertainGlyphs: 0,
@@ -242,18 +371,37 @@ export function cleanWikitext(raw, opts = {}) {
     externalLinks: 0,
     conversionMarkers: 0,
     anchorsLifted: 0,
+    behaviourSwitches: 0,
+    navigationLines: 0,
   };
   const anchors = [];
   let out = stripComments(raw);
   out = boundOnlyinclude(out);
   out = liftAnchors(out, anchors);
   stats.anchorsLifted = anchors.length;
-  out = stripTemplates(out, stats);
+  // {{*s}}…{{*e}} delimit an annotation REGION: dropping only the delimiters would
+  // leave the annotation itself inline as if it were base text.
+  if (opts.dropAnnotation === true) {
+    out = out.replace(/\{\{\s*\*s\s*\}\}[\s\S]*?\{\{\s*\*e\s*\}\}/g, () => {
+      stats.annotationRegionsDropped = (stats.annotationRegionsDropped ?? 0) + 1;
+      return '';
+    });
+  }
+  out = stripTemplates(out, stats, 0, {
+    dropAnnotation: opts.dropAnnotation === true,
+    dropTemplates: opts.dropTemplates ?? [],
+    declareCommentary: true,
+  });
+  out = dropDeclaredElements(out, stats, opts.dropElements ?? []);
   out = stripHtml(out, stats);
   out = stripLinks(out, stats);
   out = stripConversionMarkers(out, stats);
   out = decodeEntities(out);
+  out = stripBehaviourSwitches(out, stats);
   out = normalizeLines(out);
+  // Navigation lines are matched AFTER link stripping, so the same rule catches
+  // both the relative (`[[../X|下一篇]]`) and the absolute (`[[W/X|下一篇]]`) forms.
+  out = dropNavigationLines(out, stats);
   out = out.replace(/\n{3,}/g, '\n\n').trim();
   const leftover = out.match(/\u0000A:[^\u0000]*\u0000/g)?.length ?? 0;
   if (leftover) stats.anchorsUnmatched = leftover;
@@ -269,6 +417,40 @@ export function cleanWikitext(raw, opts = {}) {
  * level 1 (`=X=`) is a part/volume marker and is left in the body.
  * @returns {{title:string|null, level:number, body:string}[]}
  */
+/**
+ * Remove heading markup from lines whose level is NOT split into a section.
+ *
+ * `splitSections` splits levels 2–4 and, by design, leaves level 1 (`=X=`) in the
+ * body because it is usually a part/volume marker. Leaving the MARKUP there,
+ * however, pushes `=` characters into the base text: measurement over the 69-work
+ * corpus found 154 passages carrying a literal level-1 heading line
+ * (`=賦甲=`/`=詩乙=` in 文選, `=贊=`/`=薛宣=` in 漢書/史記, `=禮官之屬=` in 周禮).
+ * Level 5–6 headings are likewise never split.
+ *
+ * The fix is to demote rather than delete: the heading's TEXT stays where it was,
+ * only the `=` delimiters go — so a label the model may need (`薛宣`) is preserved
+ * as an ordinary line instead of being silently dropped with its markup removed.
+ * @returns {{text:string, demoted:number}}
+ */
+export function demoteHeadings(text, { levels = [2, 3, 4] } = {}) {
+  const min = Math.min(...levels);
+  const max = Math.max(...levels);
+  const HEADING = /^(={1,6})\s*([^=\n][\s\S]*?)\s*\1$/;
+  let demoted = 0;
+  const out = text
+    .split('\n')
+    .map((line) => {
+      const m = HEADING.exec(line.trim());
+      if (!m) return line;
+      const level = m[1].length;
+      if (level >= min && level <= max) return line;
+      demoted++;
+      return m[2].trim();
+    })
+    .join('\n');
+  return { text: out, demoted };
+}
+
 export function splitSections(text, { levels = [2, 3, 4] } = {}) {
   const max = Math.max(...levels);
   const min = Math.min(...levels);
@@ -287,7 +469,10 @@ export function splitSections(text, { levels = [2, 3, 4] } = {}) {
     const start = marks[i].index + marks[i].length;
     const end = i + 1 < marks.length ? marks[i + 1].index : text.length;
     sections.push({
-      title: marks[i].title,
+      // A heading may be EMPTY in the source (廣異記 contains a literal `== ==`).
+      // Normalise it to null here so "no title" is a single, unambiguous value and
+      // callers' fallbacks work: `'' ?? x` is `''`, which produced an untitled work.
+      title: marks[i].title || null,
       level: marks[i].level,
       body: text.slice(start, end).trim(),
     });
@@ -336,12 +521,14 @@ export function dropSections(sections, titles) {
  */
 export function cleanInline(text) {
   const stats = {
-    annotations: 0, templates: 0, contentTemplates: 0, uncertainGlyphs: 0,
+    annotationsDropped: 0, annotationsKept: 0, templates: 0, contentTemplates: 0, uncertainGlyphs: 0,
     refFootnotes: 0, unbalancedTemplates: 0, htmlTags: 0,
     files: 0, externalLinks: 0, conversionMarkers: 0,
   };
   let out = stripComments(text ?? '');
-  out = stripTemplates(out, stats);
+  // Titles are metadata, not corpus text: annotation template content is dropped
+  // there regardless of the work's setting.
+  out = stripTemplates(out, stats, 0, { dropAnnotation: true });
   out = stripHtml(out, stats);
   out = stripLinks(out, stats);
   out = stripConversionMarkers(out, stats);

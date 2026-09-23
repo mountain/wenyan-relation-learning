@@ -35,7 +35,11 @@
   },
   "extraction": {
     "removed": {
-      "annotations": 1,
+      "annotationsDropped": 1,
+      "annotationsKept": 0,
+      "declaredElementsDropped": 0,
+      "declaredTemplatesDropped": 0,
+      "annotationRegionsDropped": 0,
       "templates": 64,
       "contentTemplates": 0,
       "uncertainGlyphs": 0,
@@ -54,6 +58,7 @@
     "droppedLines": 0,
     "structuralMarkers": [],
     "flaggedShortPassages": [],
+    "untitledSections": [],
     "notes": "Annotations ({{*|…}}) and site templates are removed; list/verse nesting is flattened; verse line breaks are preserved inside passage text."
   },
   "limitations": [

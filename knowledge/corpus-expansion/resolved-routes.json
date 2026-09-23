@@ -1,0 +1,577 @@
+{
+  "schema": "wenyan.corpus.route-proposal.v1",
+  "generatedAt": "2026-09-23T01:08:30.655Z",
+  "note": "Proposals, not decisions. NEEDS-MANUAL entries state why they were not settled.",
+  "results": [
+    {
+      "zh": "搜神記",
+      "route": "mainPageLinks",
+      "chapters": 21,
+      "note": "",
+      "stopReason": null,
+      "sample": [
+        "序",
+        "第01卷",
+        "第02卷"
+      ],
+      "subpages": 21,
+      "mainBytes": 2452,
+      "isVersionsPage": false,
+      "licenseTags": [
+        "PD-old"
+      ],
+      "mainPage": "搜神記"
+    },
+    {
+      "zh": "異苑",
+      "route": "mainPageLinks",
+      "chapters": 11,
+      "note": "",
+      "stopReason": null,
+      "sample": [
+        "卷01",
+        "卷02",
+        "卷03"
+      ],
+      "subpages": 11,
+      "mainBytes": 5266,
+      "isVersionsPage": false,
+      "licenseTags": [
+        "PD-old"
+      ],
+      "mainPage": "異苑"
+    },
+    {
+      "zh": "談藪",
+      "route": "single",
+      "chapters": 1,
+      "note": "no subpages; treated as a single page split at == headings",
+      "stopReason": null,
+      "sample": [],
+      "subpages": 0,
+      "mainBytes": 45367,
+      "isVersionsPage": false,
+      "licenseTags": []
+    },
+    {
+      "zh": "雲仙雜記",
+      "route": "mainPageLinks",
+      "chapters": 10,
+      "note": "",
+      "stopReason": null,
+      "sample": [
+        "卷一",
+        "卷二",
+        "卷三"
+      ],
+      "subpages": 10,
+      "mainBytes": 15426,
+      "isVersionsPage": false,
+      "licenseTags": [
+        "PD-old"
+      ],
+      "mainPage": "雲仙雜記"
+    },
+    {
+      "zh": "獨異志",
+      "route": "single",
+      "chapters": 1,
+      "note": "no subpages; treated as a single page split at == headings",
+      "stopReason": null,
+      "sample": [
+        "序",
+        "卷上",
+        "卷中"
+      ],
+      "subpages": 0,
+      "mainBytes": 95768,
+      "isVersionsPage": false,
+      "licenseTags": [
+        "PD-old"
+      ]
+    },
+    {
+      "zh": "廣異記",
+      "route": "single",
+      "chapters": 1,
+      "note": "no subpages; treated as a single page split at == headings",
+      "stopReason": null,
+      "sample": [
+        "敘",
+        "徐福",
+        "僕僕先生"
+      ],
+      "subpages": 0,
+      "mainBytes": 313521,
+      "isVersionsPage": false,
+      "licenseTags": [
+        "PD-old"
+      ]
+    },
+    {
+      "zh": "冥報記",
+      "route": "single",
+      "chapters": 1,
+      "note": "no subpages; treated as a single page split at == headings",
+      "stopReason": null,
+      "sample": [
+        "序",
+        "卷上",
+        "卷中"
+      ],
+      "subpages": 0,
+      "mainBytes": 94686,
+      "isVersionsPage": false,
+      "licenseTags": [
+        "唐朝作品"
+      ]
+    },
+    {
+      "zh": "括異誌",
+      "route": "mainPageLinks",
+      "chapters": 10,
+      "note": "",
+      "stopReason": null,
+      "sample": [
+        "01",
+        "02",
+        "03"
+      ],
+      "subpages": 10,
+      "mainBytes": 366,
+      "isVersionsPage": false,
+      "licenseTags": [
+        "北宋作品"
+      ],
+      "mainPage": "括異誌"
+    },
+    {
+      "zh": "稽神錄",
+      "route": "mainPageLinks",
+      "chapters": 9,
+      "note": "",
+      "stopReason": null,
+      "sample": [
+        "卷1",
+        "卷2",
+        "卷3"
+      ],
+      "subpages": 8,
+      "mainBytes": 2657,
+      "isVersionsPage": false,
+      "licenseTags": [
+        "PD-old"
+      ],
+      "mainPage": "稽神錄"
+    },
+    {
+      "zh": "夷堅志",
+      "route": "mainPageLinks",
+      "chapters": 236,
+      "note": "",
+      "stopReason": null,
+      "sample": [
+        "夷堅甲志",
+        "甲卷01",
+        "甲卷02"
+      ],
+      "subpages": 237,
+      "mainBytes": 21110,
+      "isVersionsPage": false,
+      "licenseTags": [],
+      "mainPage": "夷堅志"
+    },
+    {
+      "zh": "續夷堅志",
+      "route": "mainPageLinks",
+      "chapters": 9,
+      "note": "",
+      "stopReason": null,
+      "sample": [
+        "序一",
+        "序二",
+        "本傳"
+      ],
+      "subpages": 9,
+      "mainBytes": 687,
+      "isVersionsPage": false,
+      "licenseTags": [],
+      "mainPage": "續夷堅志"
+    },
+    {
+      "zh": "聊齋誌異",
+      "route": "mainPageLinks",
+      "chapters": 14,
+      "note": "",
+      "stopReason": null,
+      "sample": [
+        "作者小傳",
+        "作者自志",
+        "第01卷"
+      ],
+      "subpages": 0,
+      "mainBytes": 18261,
+      "isVersionsPage": false,
+      "licenseTags": [],
+      "mainPage": "聊齋誌異"
+    },
+    {
+      "zh": "益智錄",
+      "route": "mainPageLinks",
+      "chapters": 12,
+      "note": "",
+      "stopReason": null,
+      "sample": [
+        "00",
+        "01",
+        "02"
+      ],
+      "subpages": 12,
+      "mainBytes": 774,
+      "isVersionsPage": false,
+      "licenseTags": [],
+      "mainPage": "益智錄"
+    },
+    {
+      "zh": "蟫史",
+      "route": "mainPageLinks",
+      "chapters": 20,
+      "note": "",
+      "stopReason": null,
+      "sample": [
+        "卷01",
+        "卷02",
+        "卷03"
+      ],
+      "subpages": 20,
+      "mainBytes": 1363,
+      "isVersionsPage": false,
+      "licenseTags": [
+        "PD-old"
+      ],
+      "mainPage": "蟫史"
+    },
+    {
+      "zh": "子不語",
+      "route": "mainPageLinks",
+      "chapters": 24,
+      "note": "",
+      "stopReason": null,
+      "sample": [
+        "卷1",
+        "卷2",
+        "卷3"
+      ],
+      "subpages": 25,
+      "mainBytes": 49172,
+      "isVersionsPage": false,
+      "licenseTags": [],
+      "mainPage": "子不語"
+    },
+    {
+      "zh": "玄怪錄",
+      "route": "mainPageLinks",
+      "chapters": 5,
+      "note": "",
+      "stopReason": null,
+      "sample": [
+        "卷1",
+        "卷2",
+        "卷3"
+      ],
+      "subpages": 5,
+      "mainBytes": 1087,
+      "isVersionsPage": false,
+      "licenseTags": [
+        "唐朝作品"
+      ],
+      "mainPage": "玄怪錄"
+    },
+    {
+      "zh": "續玄怪錄",
+      "route": "single",
+      "chapters": 1,
+      "note": "no subpages; treated as a single page split at == headings",
+      "stopReason": null,
+      "sample": [
+        "卷一",
+        "卷二",
+        "卷三"
+      ],
+      "subpages": 0,
+      "mainBytes": 103879,
+      "isVersionsPage": false,
+      "licenseTags": []
+    },
+    {
+      "zh": "宣室志",
+      "route": "mainPageLinks",
+      "chapters": 11,
+      "note": "",
+      "stopReason": null,
+      "sample": [
+        "卷01",
+        "卷02",
+        "卷03"
+      ],
+      "subpages": 11,
+      "mainBytes": 1526,
+      "isVersionsPage": false,
+      "licenseTags": [
+        "唐朝作品"
+      ],
+      "mainPage": "宣室志"
+    },
+    {
+      "zh": "定命錄",
+      "route": "single",
+      "chapters": 1,
+      "note": "no subpages; treated as a single page split at == headings",
+      "stopReason": null,
+      "sample": [
+        "王超",
+        "宋惲",
+        "段文昌"
+      ],
+      "subpages": 0,
+      "mainBytes": 11545,
+      "isVersionsPage": false,
+      "licenseTags": [
+        "PD-old"
+      ]
+    },
+    {
+      "zh": "燕丹子",
+      "route": "single",
+      "chapters": 1,
+      "note": "no subpages; treated as a single page split at == headings",
+      "stopReason": null,
+      "sample": [
+        "敘",
+        "卷上",
+        "卷中"
+      ],
+      "subpages": 0,
+      "mainBytes": 13298,
+      "isVersionsPage": false,
+      "licenseTags": [
+        "PD-old"
+      ]
+    },
+    {
+      "zh": "遊仙窟",
+      "route": "single",
+      "chapters": 1,
+      "note": "no subpages; treated as a single page split at == headings",
+      "stopReason": null,
+      "sample": [],
+      "subpages": 0,
+      "mainBytes": 33934,
+      "isVersionsPage": false,
+      "licenseTags": []
+    },
+    {
+      "zh": "枕中記",
+      "route": "single",
+      "chapters": 1,
+      "note": "no subpages; treated as a single page split at == headings",
+      "stopReason": null,
+      "sample": [],
+      "subpages": 0,
+      "mainBytes": 4389,
+      "isVersionsPage": false,
+      "licenseTags": [
+        "唐朝作品"
+      ]
+    },
+    {
+      "zh": "集異記",
+      "route": "single",
+      "chapters": 1,
+      "note": "no subpages; treated as a single page split at == headings",
+      "stopReason": null,
+      "sample": [],
+      "subpages": 0,
+      "mainBytes": 2730,
+      "isVersionsPage": false,
+      "licenseTags": []
+    },
+    {
+      "zh": "南柯太守傳",
+      "route": "single",
+      "chapters": 1,
+      "note": "no subpages; treated as a single page split at == headings",
+      "stopReason": null,
+      "sample": [],
+      "subpages": 0,
+      "mainBytes": 12124,
+      "isVersionsPage": false,
+      "licenseTags": [
+        "唐朝作品"
+      ]
+    },
+    {
+      "zh": "霍小玉傳",
+      "route": "single",
+      "chapters": 1,
+      "note": "no subpages; treated as a single page split at == headings",
+      "stopReason": null,
+      "sample": [],
+      "subpages": 0,
+      "mainBytes": 12029,
+      "isVersionsPage": false,
+      "licenseTags": []
+    },
+    {
+      "zh": "李娃傳",
+      "route": "single",
+      "chapters": 1,
+      "note": "no subpages; treated as a single page split at == headings",
+      "stopReason": null,
+      "sample": [],
+      "subpages": 0,
+      "mainBytes": 13699,
+      "isVersionsPage": false,
+      "licenseTags": [
+        "唐朝作品"
+      ]
+    },
+    {
+      "zh": "鶯鶯傳",
+      "route": "single",
+      "chapters": 1,
+      "note": "no subpages; treated as a single page split at == headings",
+      "stopReason": null,
+      "sample": [],
+      "subpages": 0,
+      "mainBytes": 10786,
+      "isVersionsPage": false,
+      "licenseTags": [
+        "唐朝作品"
+      ]
+    },
+    {
+      "zh": "任氏傳",
+      "route": "single",
+      "chapters": 1,
+      "note": "no subpages; treated as a single page split at == headings",
+      "stopReason": null,
+      "sample": [],
+      "subpages": 0,
+      "mainBytes": 11365,
+      "isVersionsPage": false,
+      "licenseTags": [
+        "唐朝作品"
+      ]
+    },
+    {
+      "zh": "博異志",
+      "route": "single",
+      "chapters": 1,
+      "note": "no subpages; treated as a single page split at == headings",
+      "stopReason": null,
+      "sample": [
+        "序",
+        "正文",
+        "逸文"
+      ],
+      "subpages": 0,
+      "mainBytes": 75490,
+      "isVersionsPage": false,
+      "licenseTags": [
+        "唐朝作品"
+      ]
+    },
+    {
+      "zh": "剪燈新話",
+      "route": "mainPageLinks",
+      "chapters": 6,
+      "note": "",
+      "stopReason": null,
+      "sample": [
+        "0",
+        "1",
+        "2"
+      ],
+      "subpages": 16,
+      "mainBytes": 381,
+      "isVersionsPage": false,
+      "licenseTags": [
+        "明朝作品"
+      ],
+      "mainPage": "剪燈新話"
+    },
+    {
+      "zh": "剪燈餘話",
+      "route": "mainPageLinks",
+      "chapters": 6,
+      "note": "",
+      "stopReason": null,
+      "sample": [
+        "序",
+        "卷1",
+        "卷2"
+      ],
+      "subpages": 6,
+      "mainBytes": 512,
+      "isVersionsPage": false,
+      "licenseTags": [],
+      "mainPage": "剪燈餘話"
+    },
+    {
+      "zh": "覓燈因話",
+      "route": "single",
+      "chapters": 1,
+      "note": "no subpages; treated as a single page split at == headings",
+      "stopReason": null,
+      "sample": [
+        "卷一",
+        "卷二"
+      ],
+      "subpages": 0,
+      "mainBytes": 47105,
+      "isVersionsPage": false,
+      "licenseTags": [
+        "PD-old"
+      ]
+    },
+    {
+      "zh": "豔異編",
+      "route": "mainPageLinks",
+      "chapters": 41,
+      "note": "",
+      "stopReason": null,
+      "sample": [
+        "00",
+        "01",
+        "02"
+      ],
+      "subpages": 41,
+      "mainBytes": 1413,
+      "isVersionsPage": false,
+      "licenseTags": [
+        "明朝作品"
+      ],
+      "mainPage": "豔異編"
+    },
+    {
+      "zh": "大明奇俠傳",
+      "route": "mainPageLinks",
+      "chapters": 55,
+      "note": "",
+      "stopReason": null,
+      "sample": [
+        "00",
+        "01",
+        "02"
+      ],
+      "subpages": 55,
+      "mainBytes": 4244,
+      "isVersionsPage": false,
+      "licenseTags": [
+        "清朝作品"
+      ],
+      "mainPage": "大明奇俠傳"
+    }
+  ]
+}

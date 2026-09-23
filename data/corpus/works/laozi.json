@@ -21,18 +21,20 @@
   "counts": {
     "sections": 81,
     "passages": 434,
-    "characters": 7052
+    "characters": 7042
   },
   "license": {
-    "pageTemplates": {
-      "曹魏作品": 1
-    },
-    "status": "Public-domain templates present on the pages used: 曹魏作品.",
+    "pageTemplates": {},
+    "status": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
     "basis": "The underlying classical works are public domain by age. What is taken from Wikisource is its transcription: choice of recension, modern punctuation, paragraphing and character forms. Attribution is recorded per section via sourcePage/sourceRevid. This build also modifies the material (template and commentary removal, re-segmentation), and selects recensions and first readings — decisions recorded in textEdition, extraction and limitations."
   },
   "extraction": {
     "removed": {
-      "annotations": 956,
+      "annotationsDropped": 956,
+      "annotationsKept": 0,
+      "declaredElementsDropped": 0,
+      "declaredTemplatesDropped": 0,
+      "annotationRegionsDropped": 0,
       "templates": 4,
       "contentTemplates": 0,
       "uncertainGlyphs": 0,
@@ -42,10 +44,10 @@
       "files": 0,
       "externalLinks": 0,
       "conversionMarkers": 3,
-      "licenseTemplates": {
-        "曹魏作品": 1
-      },
-      "anchorsLifted": 0
+      "licenseTemplates": {},
+      "anchorsLifted": 0,
+      "behaviourSwitches": 0,
+      "navigationLines": 0
     },
     "droppedSubsections": [
       "道德經 (王弼本)#老子道經音義",
@@ -56,6 +58,7 @@
       "道德經 (王弼本)"
     ],
     "droppedLines": 0,
+    "demotedHeadingLines": 7,
     "structuralMarkers": [],
     "flaggedShortPassages": [
       {
@@ -183,8 +186,15 @@
         "sourcePage": "道德經 (王弼本)",
         "units": 4,
         "text": "同其塵，"
+      },
+      {
+        "section": "八十一章",
+        "sourcePage": "道德經 (王弼本)",
+        "units": 4,
+        "text": "經典釋文"
       }
     ],
+    "untitledSections": [],
     "notes": "Annotations ({{*|…}}) and site templates are removed; list/verse nesting is flattened; verse line breaks are preserved inside passage text."
   },
   "limitations": [
@@ -1399,7 +1409,7 @@
         },
         {
           "id": "37.6",
-          "text": "=老子《道德經》下篇=\n華亭張氏原本\n晉　王弼注"
+          "text": "老子《道德經》下篇\n華亭張氏原本\n晉　王弼注"
         }
       ]
     },
@@ -2875,7 +2885,7 @@
         },
         {
           "id": "81.9",
-          "text": "=跋=\n=晁說之跋=\n王弼老子道德經二卷，真得老子之學歟，蓋嚴君平指歸之流也。其言仁義與禮，不能自用，必待道以用之，天地萬物各得於一，豈特有功於老子哉。凡百學者，蓋不可不知乎此也。予於是知弼本深於老子，而易則末矣。其於易，多假諸老子之旨，而老子無資於易者，其有餘不足之迹，斷可見也。嗚呼，學其難哉！弼知佳兵者不祥之器，至於戰勝，以喪禮處之，非老子之言，乃不知常善救人，故無棄人；常善救物，故無棄物。獨得諸河上公，而古本無有也。賴傅弈能辯之爾。然弼題是書曰道德經，不析乎道德，而上下之，猶近於古歟！其文字則多謬誤，殆有不可讀者，令人惜之。嘗謂，弼之於老子，張湛之於列子，郭象之於莊子，杜預之於左氏，范甯之於穀梁，毛萇之於詩，郭璞之於爾雅，完然成一家之學，後世雖有作者，未易加也。予既繕寫弼書，并以記之。"
+          "text": "跋\n晁說之跋\n王弼老子道德經二卷，真得老子之學歟，蓋嚴君平指歸之流也。其言仁義與禮，不能自用，必待道以用之，天地萬物各得於一，豈特有功於老子哉。凡百學者，蓋不可不知乎此也。予於是知弼本深於老子，而易則末矣。其於易，多假諸老子之旨，而老子無資於易者，其有餘不足之迹，斷可見也。嗚呼，學其難哉！弼知佳兵者不祥之器，至於戰勝，以喪禮處之，非老子之言，乃不知常善救人，故無棄人；常善救物，故無棄物。獨得諸河上公，而古本無有也。賴傅弈能辯之爾。然弼題是書曰道德經，不析乎道德，而上下之，猶近於古歟！其文字則多謬誤，殆有不可讀者，令人惜之。嘗謂，弼之於老子，張湛之於列子，郭象之於莊子，杜預之於左氏，范甯之於穀梁，毛萇之於詩，郭璞之於爾雅，完然成一家之學，後世雖有作者，未易加也。予既繕寫弼書，并以記之。"
         },
         {
           "id": "81.10",
@@ -2883,7 +2893,7 @@
         },
         {
           "id": "81.11",
-          "text": "=熊克跋=\n克伏誦咸平聖語，有曰：「老子道德經治世之要，明皇解雖燦然可觀，王弼所注，言簡意深，真得老氏清淨之旨。」"
+          "text": "熊克跋\n克伏誦咸平聖語，有曰：「老子道德經治世之要，明皇解雖燦然可觀，王弼所注，言簡意深，真得老氏清淨之旨。」"
         },
         {
           "id": "81.12",
@@ -2895,7 +2905,7 @@
         },
         {
           "id": "81.14",
-          "text": "=經典釋文="
+          "text": "經典釋文"
         }
       ]
     }

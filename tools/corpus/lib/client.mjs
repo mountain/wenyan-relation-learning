@@ -124,6 +124,66 @@ export class WikiClient {
   }
 
   /**
+   * Which of these titles actually exist? Batched 50 at a time.
+   *
+   * A route proposal whose targets do not exist is worse than no proposal:
+   * 聊齋誌異's table of contents pointed at 聊齋誌異/第01卷… while the real pages
+   * live under its redirect target 聊齋志異 — so the work built EMPTY and the run
+   * still reported success.
+   *
+   * Results are keyed by the title the CALLER passed, never by the title the API
+   * echoed back. The two differ routinely and silently: `redirects=0` does not
+   * actually suppress redirect following here (the response still carried a
+   * `query.redirects` block), so 唐詩三百首's list of 320 poems came back with
+   * `送杜少府之任蜀州` reported as `杜少府之任蜀州`, `長干行之一` as
+   * `長干曲 (君家何處住)`, `石魚湖上醉歌並序` as `石魚湖上醉歌` and
+   * `廬山謠寄盧侍禦虛舟` as `廬山謠寄盧侍御虛舟`. Matching on the echoed name made
+   * 25 of the 320 look absent while `missing` stayed empty — a silent 8% loss of
+   * the anthology. Normalisation, redirects and (on zh wikis) variant conversion
+   * are therefore resolved through the API's own mapping blocks: `query.normalized`
+   * and `query.redirects` give requested → actual, and the page lookup uses that.
+   * @returns {Promise<{existing:string[], missing:string[], resolvedTo:Record<string,string>}>}
+   */
+  async exists(titles) {
+    const existing = [];
+    const missing = [];
+    const resolvedTo = {};
+    for (let i = 0; i < titles.length; i += 50) {
+      const batch = titles.slice(i, i + 50);
+      const data = await this.api({
+        action: 'query', prop: 'info', titles: batch.join('|'), redirects: '1',
+      });
+      // requested -> actual, following the API's own mapping chain (a redirect may
+      // itself be renamed first, so apply normalisation, then redirects to fixpoint).
+      const map = new Map(batch.map((t) => [t, t]));
+      for (const n of data?.query?.normalized ?? []) {
+        for (const [k, v] of map) if (v === n.from) map.set(k, n.to);
+      }
+      for (let pass = 0; pass < 3; pass++) {
+        let changed = false;
+        for (const r of data?.query?.redirects ?? []) {
+          for (const [k, v] of map) {
+            if (v === r.from && v !== r.to) { map.set(k, r.to); changed = true; }
+          }
+        }
+        if (!changed) break;
+      }
+      const pages = new Map((data?.query?.pages ?? []).map((p) => [p.title, p]));
+      for (const t of batch) {
+        const actual = map.get(t);
+        const page = pages.get(actual);
+        if (page && !page.missing) {
+          existing.push(t);
+          resolvedTo[t] = actual;
+        } else {
+          missing.push(t);
+        }
+      }
+    }
+    return { existing, missing, resolvedTo };
+  }
+
+  /**
    * List all main-namespace pages under a prefix (paginated).
    *
    * Cached on disk like wikitext(): a prefix listing is a network round-trip per

@@ -24,6 +24,7 @@ import {
   cleanWikitext,
   cleanInline,
   splitSections,
+  demoteHeadings,
   splitPassages,
   dropSections,
   dropLines,
@@ -47,8 +48,12 @@ const refresh = argv.includes('--refresh');
 const client = new WikiClient({ cacheDir: CACHE_DIR, userAgent: DEFAULT_USER_AGENT });
 
 /** License/copyright templates found on a page, e.g. {{PD-old}}, {{先秦作品}}. */
+// Dynasty tags ({{唐朝作品}}, {{東漢作品}}, {{清朝作品}} …) are licence evidence too:
+// they categorise the work by era and carry the corresponding public-domain notice.
+// The earlier pattern listed only 先秦作品/曹魏作品, so 漢書's 82 東漢作品 and
+// 三國志's 9 西晉作品 were never recorded as licence evidence at all.
 const LICENSE_TEMPLATE_RE =
-  /\{\{\s*(PD-old[^|}]*|PD[^|}]*|先秦作品|曹魏作品|Cc[^|}]*|CC[^|}]*|GFDL|版權[^|}]*|Copyright[^|}]*)\s*[|}]/gi;
+  /\{\{\s*(PD-old[^|}]*|PD[^|}]*|[東西南北]?[漢唐宋元明清秦周魏晉隋]朝?作品|先秦作品|Cc[^|}]*|CC[^|}]*|GFDL|版權[^|}]*|Copyright[^|}]*)\s*[|}]/gi;
 function scanLicenseTemplates(content, into) {
   for (const m of content.matchAll(LICENSE_TEMPLATE_RE)) {
     const name = m[1].trim();
@@ -87,7 +92,11 @@ async function pageText(pageTitle, work, agg, depth = 0) {
     Object.assign(agg, accumulate(agg, cleaned.stats));
     return { text: cleaned.text, revid: rec.revid, resolvedTitle: rec.resolvedTitle, sources, missing: false };
   }
-  const cleaned = cleanWikitext(raw, { dropAnnotation: work.dropAnnotation });
+  const cleaned = cleanWikitext(raw, {
+    dropAnnotation: work.dropAnnotation === true,
+    dropElements: work.dropElements ?? [],
+    dropTemplates: work.dropTemplates ?? [],
+  });
   Object.assign(agg, accumulate(agg, cleaned.stats));
   return { text: cleaned.text, revid: rec.revid, resolvedTitle: rec.resolvedTitle, sources, missing: false };
 }
@@ -146,7 +155,8 @@ function accumulate(agg, stats) {
 
 async function buildWork(work) {
   const agg = {
-    annotations: 0, templates: 0, contentTemplates: 0, uncertainGlyphs: 0,
+    annotationsDropped: 0, annotationsKept: 0, declaredElementsDropped: 0,
+    declaredTemplatesDropped: 0, annotationRegionsDropped: 0, templates: 0, contentTemplates: 0, uncertainGlyphs: 0,
     refFootnotes: 0, unbalancedTemplates: 0, htmlTags: 0,
     files: 0, externalLinks: 0, conversionMarkers: 0,
     licenseTemplates: {},
@@ -162,7 +172,9 @@ async function buildWork(work) {
   const droppedFrontMatter = [];
   const structuralMarkers = [];
   const flaggedShort = [];
+  const untitledSections = [];
   let droppedLines = 0;
+  let demotedHeadingLines = 0;
 
   for (const ch of disc.chapters) {
     const pageRes = await pageText(ch.pageTitle, work, agg);
@@ -173,10 +185,16 @@ async function buildWork(work) {
     droppedLines += lineDrop.dropped;
     const text = lineDrop.text;
 
+    // Split levels 2-4; anything else (level 1, level 5-6) would otherwise keep
+    // its `=` markup inside the base text. Demote once, before either branch.
+    const demoted = demoteHeadings(text);
+    demotedHeadingLines += demoted.demoted;
+    const bodyText = demoted.text;
+
     let bodies;
     if (work.discovery.kind === 'single') {
       // Headings inside the page ARE the chapters (道德經 ==一章==, 孫子兵法 ==始計第一==)
-      const parts = splitSections(text);
+      const parts = splitSections(bodyText);
       const isExcluded = (t) => !!t && (work.excludeSections ?? []).includes(t.trim());
       const chapters = [];
       const frontMatter = [];
@@ -203,7 +221,7 @@ async function buildWork(work) {
       }
     } else {
       // The discovered chapter is the section; drop listed sub-sections (e.g. 註釋)
-      const parts = splitSections(text);
+      const parts = splitSections(bodyText);
       const { sections: kept, dropped } = dropSections(parts, work.dropSections);
       if (dropped.length) droppedReport.push(...dropped.map((d) => `${ch.pageTitle}#${d}`));
       const merged = kept.map((s) => s.body).join('\n\n').trim();
@@ -211,7 +229,21 @@ async function buildWork(work) {
     }
 
     for (const b of bodies) {
-      const title = cleanInline(b.title ?? ch.title ?? work.zh);
+      // `??` does NOT fall back on an empty string, and the source does contain
+      // empty headings (廣異記 has a literal `== ==`), so an untitled work was
+      // produced and only validate() noticed. Treat blank as absent and name the
+      // section positionally, recording that the name was generated.
+      const fromBody = cleanInline(b.title ?? '');
+      const fromChapter = cleanInline(ch.title ?? '');
+      // The chapter title is only informative when it differs from the work name:
+      // for a single-page work ch.title IS work.zh, and falling back to it would
+      // put a section named 廣異記 inside 廣異記.
+      let title = fromBody || (fromChapter && fromChapter !== work.zh ? fromChapter : '');
+      if (!title) {
+        title = `${work.zh}·無題${sections.length + 1}`;
+        untitledSections.push({ ordinal: sections.length + 1, sourcePage: ch.pageTitle,
+          note: 'the source heading for this section is empty; the name is generated' });
+      }
       const passages = b.body ? splitPassages(b.body) : [];
       if (!passages.length) {
         // e.g. the 六笙詩 pages survive only as a 毛詩序, with no 辭 to include
@@ -263,6 +295,13 @@ async function buildWork(work) {
     (n, s) => n + s.passages.reduce((m, p) => m + [...p.text].length, 0), 0);
   const passageCount = sections.reduce((n, s) => n + s.passages.length, 0);
 
+  if (sections.length === 0) {
+    // A build that produces nothing must say so loudly: this is a failure, not a
+    // result. (聊齋誌異 built empty because its redirect-resolved title was not
+    // used when building subpage names.)
+    limitations.unshift('BUILT EMPTY: discovery yielded chapters but none produced text — treat this work as NOT collected');
+    console.log('\n  !! BUILT EMPTY — treat as NOT collected');
+  }
   if (work.expectedChapters != null && sections.length !== work.expectedChapters) {
     limitations.push(
       `chapter count ${sections.length} != expected ${work.expectedChapters}`);
@@ -317,8 +356,10 @@ async function buildWork(work) {
       skippedNoText,
       droppedFrontMatter,
       droppedLines,
+      demotedHeadingLines,
       structuralMarkers,
       flaggedShortPassages: flaggedShort,
+      untitledSections,
       notes: 'Annotations ({{*|…}}) and site templates are removed; list/verse nesting is flattened; verse line breaks are preserved inside passage text.',
     },
     limitations,
@@ -366,10 +407,29 @@ async function main() {
     }
   }
 
+  // --only builds a SUBSET, but the manifest must describe the WHOLE corpus.
+  //
+  // BUG WORTH REMEMBERING: an earlier version wrote `works: entries`, so a
+  // `--only a,b,c` run replaced the manifest with those three and silently
+  // discarded the record of every other work — 16 validation errors and a
+  // manifest claiming the corpus had 3 works. A partial build must MERGE:
+  // rebuilt entries win, everything else is carried over.
+  const manifestPath = path.join(OUT_DIR, 'manifest.json');
+  const previous = fs.existsSync(manifestPath)
+    ? JSON.parse(fs.readFileSync(manifestPath, 'utf8')) : null;
+  const merged = new Map((previous?.works ?? []).map((w) => [w.id, w]));
+  for (const e of entries) merged.set(e.id, e);
+  const mergedEntries = WORKS.map((w) => merged.get(w.id)).filter(Boolean);
+  const orphans = [...merged.keys()].filter((id) => !WORKS.some((w) => w.id === id));
+  if (only && orphans.length) {
+    console.log(`\n[note] ${orphans.length} manifest entr(ies) not in the current config: ${orphans.join(', ')}`);
+  }
+
   const manifest = {
     schema: 'wenyan.corpus.manifest.v1',
     format: 'wenyan.corpus.v1',
     generatedAt: new Date().toISOString(),
+    ...(only ? { partialRebuild: { only: [...only], note: 'this run rebuilt a subset; other entries are carried over from the previous manifest' } } : {}),
     source: {
       sitename,
       api: 'https://zh.wikisource.org/w/api.php',
@@ -397,12 +457,12 @@ async function main() {
         'is not authorized and direct researchers to subscribe; no content was retrieved from it.',
     },
     counts: {
-      works: entries.filter((e) => e.file).length,
-      sections: entries.reduce((n, e) => n + (e.counts?.sections ?? 0), 0),
-      passages: entries.reduce((n, e) => n + (e.counts?.passages ?? 0), 0),
-      characters: entries.reduce((n, e) => n + (e.counts?.characters ?? 0), 0),
+      works: mergedEntries.filter((e) => e.file).length,
+      sections: mergedEntries.reduce((n, e) => n + (e.counts?.sections ?? 0), 0),
+      passages: mergedEntries.reduce((n, e) => n + (e.counts?.passages ?? 0), 0),
+      characters: mergedEntries.reduce((n, e) => n + (e.counts?.characters ?? 0), 0),
     },
-    works: entries,
+    works: mergedEntries,
     nonclaims: [
       'not a critical edition: no collation against manuscripts, no variant apparatus',
       'not verified against a print edition or against ctext.org',

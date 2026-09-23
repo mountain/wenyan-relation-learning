@@ -1,7 +1,13 @@
 {
   "schema": "wenyan.corpus.manifest.v1",
   "format": "wenyan.corpus.v1",
-  "generatedAt": "2026-09-22T23:15:25.335Z",
+  "generatedAt": "2026-09-23T01:57:56.152Z",
+  "partialRebuild": {
+    "only": [
+      "唐詩三百首"
+    ],
+    "note": "this run rebuilt a subset; other entries are carried over from the previous manifest"
+  },
   "source": {
     "sitename": "Wikisource",
     "api": "https://zh.wikisource.org/w/api.php",
@@ -18,10 +24,10 @@
     "ctextNotice": "ctext.org was NOT used. Its robots.txt and anti-scraping notice state that automated access is not authorized and direct researchers to subscribe; no content was retrieved from it."
   },
   "counts": {
-    "works": 16,
-    "sections": 877,
-    "passages": 8138,
-    "characters": 906678
+    "works": 69,
+    "sections": 2818,
+    "passages": 77884,
+    "characters": 11286654
   },
   "works": [
     {
@@ -30,7 +36,7 @@
       "en": "Analects",
       "tradition": "confucian",
       "file": "works/analects.json",
-      "sha256": "29560a4afbc9bb8d7737ffcfe9c2b4927ebbe81c894a8e4a65166282311c38ff",
+      "sha256": "3459f75a3dae17082adf7f3cc45e0374f26c1d765deeb05fd1acd63e675df13b",
       "counts": {
         "sections": 20,
         "passages": 507,
@@ -52,7 +58,7 @@
       "en": "Mencius",
       "tradition": "confucian",
       "file": "works/mencius.json",
-      "sha256": "f09015ec913f739365e0312ea8b6b6c76f1f3bdc72fd75097d058c369ce92aa2",
+      "sha256": "fa90d828fbf740f864de7b5d0db95bd9640493b536a89ec7aa16d3208d92ab91",
       "counts": {
         "sections": 14,
         "passages": 742,
@@ -74,7 +80,7 @@
       "tradition": "confucian",
       "textEdition": "《禮記》第四十二篇（未分經傳）",
       "file": "works/great-learning.json",
-      "sha256": "116d2c97b681ed8d82645c253e8ad937ff52a250219cf31f47fe3850b9630963",
+      "sha256": "f027236286685f195d284c152ac53b75497ab66c3a0b4b05c87b78f43e5b6134",
       "counts": {
         "sections": 1,
         "passages": 11,
@@ -98,7 +104,7 @@
       "tradition": "confucian",
       "textEdition": "《禮記》第三十一篇（未分經傳）",
       "file": "works/doctrine-of-the-mean.json",
-      "sha256": "9281ad5bc771615346d1fdb3e901415057aa213a612c77001fa1f8f7d8293bf7",
+      "sha256": "8b33cb372112d2da452dcc00811905e035034bd7fcdc736758b78fae17c0f26e",
       "counts": {
         "sections": 1,
         "passages": 34,
@@ -121,7 +127,7 @@
       "en": "Classic of Poetry",
       "tradition": "confucian",
       "file": "works/classic-of-poetry.json",
-      "sha256": "fe716cbc40745bfb4f09d5b6836ba9fed4f091248dd40f8c5557fbb95d4269c3",
+      "sha256": "807528be1455089ba339ddd4bc11d36441aa5b4e88f67ca977f02e49aa533544",
       "counts": {
         "sections": 305,
         "passages": 663,
@@ -142,7 +148,7 @@
       "en": "Book of Documents",
       "tradition": "confucian",
       "file": "works/book-of-documents.json",
-      "sha256": "299163a5af2e80e4e47a4891c2854fa0ff578dc6972e56510fb82474f32c7462",
+      "sha256": "f8fb7ad6ca2e38d051fecac6394c0d21e8237876f6c560a9440b79c7cb64c178",
       "counts": {
         "sections": 68,
         "passages": 412,
@@ -165,7 +171,7 @@
       "en": "Zhouyi (I Ching)",
       "tradition": "confucian",
       "file": "works/zhouyi.json",
-      "sha256": "3b2c6aeac5dcd1c0311effa40b400f86d58473a83b3fd5239a3b5dbc19fd9d3b",
+      "sha256": "537e111435d7a58c037de27abb49fa8681dda5d42d18b83f0eea6e3514b0b8a1",
       "counts": {
         "sections": 64,
         "passages": 324,
@@ -186,7 +192,7 @@
       "en": "Book of Rites",
       "tradition": "confucian",
       "file": "works/book-of-rites.json",
-      "sha256": "7eeeaafe49c4266cfb71eeb4e016419afc41785cc1f644a232be5e479a6b717a",
+      "sha256": "fb0540f2812d6d3f39b7688a33ad5046207adb4747a29b559355cba988a5dd1e",
       "counts": {
         "sections": 49,
         "passages": 1332,
@@ -210,19 +216,17 @@
       "tradition": "philosophers",
       "textEdition": "王弼本（頁面另附王弼注）",
       "file": "works/laozi.json",
-      "sha256": "54f3dbca092031fadfeeada274f7ffcd9b2f20e01b2c9517cfcdb6aa7a6d9abd",
+      "sha256": "86b337238651b2ddcb2088cef117254a902b265752c92ec48ab1826a9250805e",
       "counts": {
         "sections": 81,
         "passages": 434,
-        "characters": 7052
+        "characters": 7042
       },
       "structuralMarkersRemoved": 0,
-      "flaggedShortPassages": 21,
+      "flaggedShortPassages": 22,
       "discoveryRoute": "single",
-      "licenseTemplates": {
-        "曹魏作品": 1
-      },
-      "licenseStatus": "Public-domain templates present on the pages used: 曹魏作品.",
+      "licenseTemplates": {},
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
       "limitations": [
         "「老子」與「道德經」皆為版本頁；取王弼本。站上經文與王弼注逐句交錯，注文已剔除，僅留經文。頁末〈道經音義〉〈德經音義〉為音義附錄，卷首題記（華亭張氏原本／晉王弼注）為版本題記，均非經文，已排除。"
       ]
@@ -233,11 +237,11 @@
       "en": "Zhuangzi",
       "tradition": "philosophers",
       "file": "works/zhuangzi.json",
-      "sha256": "5465254cc85dd28ab7604b0a8acc0fbbe86b00b8da3f1f107fe38e409aa47eff",
+      "sha256": "ba804e0294b6e137b3b6ab5d0a0bc0959e4909042029c71f068650c31db967a6",
       "counts": {
         "sections": 33,
         "passages": 903,
-        "characters": 80075
+        "characters": 80033
       },
       "structuralMarkersRemoved": 0,
       "flaggedShortPassages": 0,
@@ -254,7 +258,7 @@
       "en": "Xunzi",
       "tradition": "philosophers",
       "file": "works/xunzi.json",
-      "sha256": "14461f9a84e369c31e64ec07a5e45dfeb3a4d295550cb6c4dcf7b6649e8d3938",
+      "sha256": "278d7f2589e902505fd2a2d57471b7cabf3278545147cf6637025d65fd785e1c",
       "counts": {
         "sections": 32,
         "passages": 481,
@@ -277,7 +281,7 @@
       "en": "Han Feizi",
       "tradition": "philosophers",
       "file": "works/hanfeizi.json",
-      "sha256": "e14b65470ed7e60931a7e79ab60fb5c11204e67fe210d70193a1b468fae650f5",
+      "sha256": "8eddf16c66750e54bd25e506968bd87d8424966a9656e157a50c0a2f19f1b132",
       "counts": {
         "sections": 55,
         "passages": 744,
@@ -298,7 +302,7 @@
       "en": "Mozi",
       "tradition": "philosophers",
       "file": "works/mozi.json",
-      "sha256": "f2ae24e8be3dcc0b6e37062f69aa41a1f41a3ef3f5a3ade6de045588c2c6f546",
+      "sha256": "dc042cc8c18645477f27da62e875ee9542a98dd0e10c494de07e6158d7c1ecf2",
       "counts": {
         "sections": 53,
         "passages": 650,
@@ -319,7 +323,7 @@
       "en": "Guanzi",
       "tradition": "philosophers",
       "file": "works/guanzi.json",
-      "sha256": "d04dd703a87b6c820877edb084779829f63120ddd85c26962e2c37226e0a950c",
+      "sha256": "7eb947ab53aa42b50e88da76252c0698013513015f624e3fcbbdbf6aed2fd0ff",
       "counts": {
         "sections": 80,
         "passages": 688,
@@ -341,7 +345,7 @@
       "en": "Liezi",
       "tradition": "philosophers",
       "file": "works/liezi.json",
-      "sha256": "8028f394c9134632f7123e20a0cb68be593ee2123b90c191249c78058621c0de",
+      "sha256": "3b339fb865f3067d11b6cc0b6d8a4af17a6013f713857a3747fe1e6530755180",
       "counts": {
         "sections": 8,
         "passages": 139,
@@ -363,7 +367,7 @@
       "tradition": "philosophers",
       "textEdition": "通行十三篇本",
       "file": "works/sunzi.json",
-      "sha256": "fad052db77681dd9fbd39aa03fb909bec4938e51c47eecd996acdf2da9707e16",
+      "sha256": "90631cd1b19f3bb4b3535f8f8d23a0731cebe1f6455bfb5dd5493adc5ff9f7fd",
       "counts": {
         "sections": 13,
         "passages": 74,
@@ -376,6 +380,1343 @@
       "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
       "limitations": [
         "「孫子」為重定向；正文取《孫子兵法》單頁，按 == 篇名 == 標題分章。站上另附〈答話〉一節，屬《吳越春秋》系統的問答佚文、非十三篇本文，已排除。"
+      ]
+    },
+    {
+      "id": "zuozhuan",
+      "zh": "春秋左氏傳",
+      "en": "Zuo Commentary on the Spring and Autumn Annals",
+      "tradition": "confucian",
+      "file": "works/zuozhuan.json",
+      "sha256": "5171681e24395f60b24fae065d47cc5f9324deccbce8e82dbb787d21b5b7c4fb",
+      "counts": {
+        "sections": 13,
+        "passages": 2839,
+        "characters": 242661
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 17,
+      "discoveryRoute": "index",
+      "licenseTemplates": {
+        "PD-old": 13
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: PD-old.",
+      "limitations": [
+        "十三經之一，經部。站上有全覽索引頁，篇序與頁名由索引直接給出。頁面帶 PD-old 標籤。"
+      ]
+    },
+    {
+      "id": "gongyang",
+      "zh": "春秋公羊傳",
+      "en": "Gongyang Commentary on the Spring and Autumn Annals",
+      "tradition": "confucian",
+      "file": "works/gongyang.json",
+      "sha256": "cb7597a0748a2f766c2881e6a611c22cbad826f275523b357dccb0744656b8ec",
+      "counts": {
+        "sections": 12,
+        "passages": 1757,
+        "characters": 55340
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 48,
+      "discoveryRoute": "index",
+      "licenseTemplates": {
+        "PD-old": 12
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: PD-old.",
+      "limitations": [
+        "十三經之一，經部。同上，經全覽索引取得正序。頁面帶 PD-old 標籤。"
+      ]
+    },
+    {
+      "id": "yili",
+      "zh": "儀禮",
+      "en": "Etiquette and Ceremonial",
+      "tradition": "confucian",
+      "file": "works/yili.json",
+      "sha256": "207cc208351c348ef00c70b580310e5c0a84f6aa683704c32306b4744ea7a424",
+      "counts": {
+        "sections": 17,
+        "passages": 453,
+        "characters": 69477
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "nextChain",
+      "licenseTemplates": {
+        "PD-old": 17
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: PD-old.",
+      "limitations": [
+        "十三經之一，經部。無全覽索引亦無主頁目錄，改走 next 鏈；自「士冠禮」起 17 章走通（實測 17/17）。頁面帶 PD-old 標籤。"
+      ]
+    },
+    {
+      "id": "shiji",
+      "zh": "史記",
+      "en": "Records of the Grand Historian",
+      "tradition": "historical",
+      "file": "works/shiji.json",
+      "sha256": "0a39fd2b2967095bbade5abde96fca71b58143ba1dcc62360ac4881e3070139b",
+      "counts": {
+        "sections": 130,
+        "passages": 4773,
+        "characters": 744788
+      },
+      "structuralMarkersRemoved": 9,
+      "flaggedShortPassages": 5,
+      "discoveryRoute": "allpages",
+      "licenseTemplates": {
+        "PD-old": 25
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: PD-old.",
+      "limitations": [
+        "section order is the wiki sort order, not a verified canonical order",
+        "前三史之一。站上全書無授權標籤，適用站點預設（CC BY-SA 4.0），已逐部記於 license。子頁為零填充「卷NNN」，故 allpages 排序即卷序。清洗：{{專}}（專名 1672 次）、{{書}}（書名）、{{標}}、{{YL}}（紀年）等為**正文內容**，已列入內容型模板白名單——否則每卷會靜默刪去數百專名；三家注（【集解】【索隱】【正義】）在此站以 {{green}}/{{deepPink}} 包裹，且**嵌套在外層 {{*|…}} 之內**，故隨 ${{*|}} 一併刪除、計入 annotationsDropped（本部 429 次）；dropTemplates 仍保留 green/deepPink 作為外層未包覆時的保險。實測成品中【集解】【索隱】【正義】均為 0 次。三家注另有獨立作品《史記三家註》。頁內 <ref> 校勘記亦已剔除。"
+      ]
+    },
+    {
+      "id": "hanshu",
+      "zh": "漢書",
+      "en": "Book of Han",
+      "tradition": "historical",
+      "file": "works/hanshu.json",
+      "sha256": "50c5502bf086134d776ab88763271da6c541d932c4bcd6f9967602f4b6ebd52f",
+      "counts": {
+        "sections": 120,
+        "passages": 8027,
+        "characters": 1242500
+      },
+      "structuralMarkersRemoved": 25,
+      "flaggedShortPassages": 16,
+      "discoveryRoute": "allpages",
+      "licenseTemplates": {
+        "東漢作品": 79,
+        "PD-old": 5
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: 東漢作品, PD-old.",
+      "limitations": [
+        "chapter count 120 != expected 100",
+        "section order is the wiki sort order, not a verified canonical order",
+        "前三史之一。無授權標籤，適用站點預設。卷有上下分卷（卷001上／卷001下），零填充故排序即卷序。{{*|師古曰…}} 為顏師古注、{{annotate|<poem><small>〔一〕…}} 為校注區塊，二者均按本部聲明剔除；{{blue}}/{{red}} 在本部包裹**正文**（奏議與引語），故保留。"
+      ]
+    },
+    {
+      "id": "sanguozhi",
+      "zh": "三國志",
+      "en": "Records of the Three Kingdoms",
+      "tradition": "historical",
+      "file": "works/sanguozhi.json",
+      "sha256": "cc71c6aa0193df0cbe3755ef73b23ca4b48a6576b78145ffa379cf70b190e8df",
+      "counts": {
+        "sections": 65,
+        "passages": 2309,
+        "characters": 448867
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 8,
+      "discoveryRoute": "allpages",
+      "licenseTemplates": {
+        "西晉作品": 9,
+        "PD-old": 31
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: 西晉作品, PD-old.",
+      "limitations": [
+        "section order is the wiki sort order, not a verified canonical order",
+        "前三史之一。無授權標籤，適用站點預設。{{*|…}} 經查為裴松之注（引《曹瞞傳》《魏書》《續漢書》，卷三十五頭部明寫「裴松之註」），{{*s}}…{{*e}} 為成對注文界標，兩者一併剔除（只刪界標會把注留在正文裡）；{{ul}}／{{WavyBookMark}}／{{ProperNoun}}／{{別}}／{{校}}／{{quote}} 屬正文，保留。"
+      ]
+    },
+    {
+      "id": "wenxian-tongkao",
+      "zh": "文獻通考",
+      "en": "Comprehensive Examination of Literature",
+      "tradition": "historical",
+      "file": "works/wenxian-tongkao.json",
+      "sha256": "8a2969e03ff8cb60a448e17941c484627a472c907c9f4b75e59cd6299abaf5b4",
+      "counts": {
+        "sections": 163,
+        "passages": 16957,
+        "characters": 1720118
+      },
+      "structuralMarkersRemoved": 38,
+      "flaggedShortPassages": 213,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {},
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "missing page: 文獻通考/卷八十三",
+        "missing page: 文獻通考/卷八十四",
+        "missing page: 文獻通考/卷八十五",
+        "missing page: 文獻通考/卷八十六",
+        "missing page: 文獻通考/卷八十七",
+        "missing page: 文獻通考/卷八十八",
+        "missing page: 文獻通考/卷八十九",
+        "missing page: 文獻通考/卷九十",
+        "missing page: 文獻通考/卷九十一",
+        "missing page: 文獻通考/卷九十二",
+        "missing page: 文獻通考/卷九十三",
+        "missing page: 文獻通考/卷九十四",
+        "missing page: 文獻通考/卷九十五",
+        "missing page: 文獻通考/卷九十六",
+        "missing page: 文獻通考/卷九十七",
+        "missing page: 文獻通考/卷九十八",
+        "missing page: 文獻通考/卷九十九",
+        "missing page: 文獻通考/卷一百",
+        "missing page: 文獻通考/卷一百一",
+        "missing page: 文獻通考/卷一百二",
+        "missing page: 文獻通考/卷一百三",
+        "missing page: 文獻通考/卷一百四",
+        "missing page: 文獻通考/卷一百五",
+        "missing page: 文獻通考/卷一百六",
+        "missing page: 文獻通考/卷一百七",
+        "missing page: 文獻通考/卷一百八",
+        "missing page: 文獻通考/卷一百九",
+        "missing page: 文獻通考/卷一百十",
+        "missing page: 文獻通考/卷一百十二",
+        "missing page: 文獻通考/卷一百十三",
+        "missing page: 文獻通考/卷一百十四",
+        "missing page: 文獻通考/卷一百十五",
+        "missing page: 文獻通考/卷一百十六",
+        "missing page: 文獻通考/卷一百十七",
+        "missing page: 文獻通考/卷一百十八",
+        "missing page: 文獻通考/卷一百十九",
+        "missing page: 文獻通考/卷一百二十",
+        "missing page: 文獻通考/卷一百二十一",
+        "missing page: 文獻通考/卷一百二十二",
+        "missing page: 文獻通考/卷一百二十三",
+        "missing page: 文獻通考/卷一百二十四",
+        "missing page: 文獻通考/卷一百二十五",
+        "missing page: 文獻通考/卷一百二十六",
+        "missing page: 文獻通考/卷一百二十七",
+        "missing page: 文獻通考/卷一百二十八",
+        "missing page: 文獻通考/卷一百二十九",
+        "missing page: 文獻通考/卷一百三十",
+        "missing page: 文獻通考/卷一百三十一",
+        "missing page: 文獻通考/卷一百三十二",
+        "missing page: 文獻通考/卷一百三十三",
+        "missing page: 文獻通考/卷一百三十四",
+        "missing page: 文獻通考/卷一百三十五",
+        "missing page: 文獻通考/卷一百三十六",
+        "missing page: 文獻通考/卷一百三十七",
+        "missing page: 文獻通考/卷一百三十八",
+        "missing page: 文獻通考/卷一百三十九",
+        "missing page: 文獻通考/卷一百四十",
+        "missing page: 文獻通考/卷一百四十一",
+        "missing page: 文獻通考/卷一百四十二",
+        "missing page: 文獻通考/卷一百四十三",
+        "missing page: 文獻通考/卷一百四十四",
+        "missing page: 文獻通考/卷一百四十五",
+        "missing page: 文獻通考/卷一百四十六",
+        "missing page: 文獻通考/卷一百四十七",
+        "missing page: 文獻通考/卷一百四十八",
+        "missing page: 文獻通考/卷一百四十九",
+        "missing page: 文獻通考/卷一百五十",
+        "missing page: 文獻通考/卷一百五十一",
+        "missing page: 文獻通考/卷一百五十二",
+        "missing page: 文獻通考/卷一百五十三",
+        "missing page: 文獻通考/卷一百五十四",
+        "missing page: 文獻通考/卷一百五十五",
+        "missing page: 文獻通考/卷一百五十六",
+        "missing page: 文獻通考/卷一百五十七",
+        "missing page: 文獻通考/卷一百五十八",
+        "missing page: 文獻通考/卷一百五十九",
+        "missing page: 文獻通考/卷一百六十",
+        "missing page: 文獻通考/卷一百六十一",
+        "missing page: 文獻通考/卷一百六十三",
+        "missing page: 文獻通考/卷一百六十四",
+        "missing page: 文獻通考/卷一百六十五",
+        "missing page: 文獻通考/卷一百六十六",
+        "missing page: 文獻通考/卷一百六十七",
+        "missing page: 文獻通考/卷一百六十八",
+        "missing page: 文獻通考/卷一百六十九",
+        "missing page: 文獻通考/卷一百七十",
+        "missing page: 文獻通考/卷一百七十一",
+        "missing page: 文獻通考/卷一百七十二",
+        "missing page: 文獻通考/卷一百七十三",
+        "missing page: 文獻通考/卷二百五十",
+        "missing page: 文獻通考/卷二百五十一",
+        "missing page: 文獻通考/卷二百五十二",
+        "missing page: 文獻通考/卷二百五十三",
+        "missing page: 文獻通考/卷二百五十四",
+        "missing page: 文獻通考/卷二百五十五",
+        "missing page: 文獻通考/卷二百五十六",
+        "missing page: 文獻通考/卷二百五十七",
+        "missing page: 文獻通考/卷二百五十八",
+        "missing page: 文獻通考/卷二百五十九",
+        "missing page: 文獻通考/卷二百六十",
+        "missing page: 文獻通考/卷二百六十一",
+        "missing page: 文獻通考/卷二百六十二",
+        "missing page: 文獻通考/卷二百六十三",
+        "missing page: 文獻通考/卷二百六十四",
+        "missing page: 文獻通考/卷二百六十五",
+        "missing page: 文獻通考/卷二百六十六",
+        "missing page: 文獻通考/卷二百六十七",
+        "missing page: 文獻通考/卷二百六十八",
+        "missing page: 文獻通考/卷二百六十九",
+        "missing page: 文獻通考/卷二百七十",
+        "missing page: 文獻通考/卷二百七十一",
+        "missing page: 文獻通考/卷二百七十二",
+        "missing page: 文獻通考/卷二百七十三",
+        "missing page: 文獻通考/卷二百七十四",
+        "missing page: 文獻通考/卷二百七十五",
+        "missing page: 文獻通考/卷二百七十六",
+        "missing page: 文獻通考/卷二百七十七",
+        "missing page: 文獻通考/卷二百七十九",
+        "missing page: 文獻通考/卷二百八十",
+        "missing page: 文獻通考/卷二百八十一",
+        "missing page: 文獻通考/卷二百八十二",
+        "missing page: 文獻通考/卷二百八十三",
+        "missing page: 文獻通考/卷二百八十四",
+        "missing page: 文獻通考/卷二百八十五",
+        "missing page: 文獻通考/卷二百八十六",
+        "missing page: 文獻通考/卷二百八十七",
+        "missing page: 文獻通考/卷二百八十八",
+        "missing page: 文獻通考/卷二百八十九",
+        "missing page: 文獻通考/卷二百九十",
+        "missing page: 文獻通考/卷二百九十一",
+        "missing page: 文獻通考/卷二百九十二",
+        "missing page: 文獻通考/卷二百九十三",
+        "missing page: 文獻通考/卷二百九十四",
+        "missing page: 文獻通考/卷二百九十五",
+        "missing page: 文獻通考/卷二百九十六",
+        "missing page: 文獻通考/卷二百九十七",
+        "missing page: 文獻通考/卷二百九十八",
+        "missing page: 文獻通考/卷二百九十九",
+        "missing page: 文獻通考/卷三百",
+        "missing page: 文獻通考/卷三百一",
+        "missing page: 文獻通考/卷三百二",
+        "missing page: 文獻通考/卷三百三",
+        "missing page: 文獻通考/卷三百四",
+        "missing page: 文獻通考/卷三百五",
+        "missing page: 文獻通考/卷三百六",
+        "missing page: 文獻通考/卷三百七",
+        "missing page: 文獻通考/卷三百八",
+        "missing page: 文獻通考/卷三百九",
+        "missing page: 文獻通考/卷三百十",
+        "missing page: 文獻通考/卷三百十一",
+        "missing page: 文獻通考/卷三百十二",
+        "missing page: 文獻通考/卷三百十三",
+        "missing page: 文獻通考/卷三百十四",
+        "missing page: 文獻通考/卷三百十五",
+        "missing page: 文獻通考/卷三百十六",
+        "missing page: 文獻通考/卷三百十七",
+        "missing page: 文獻通考/卷三百十八",
+        "missing page: 文獻通考/卷三百十九",
+        "missing page: 文獻通考/卷三百二十",
+        "missing page: 文獻通考/卷三百二十一",
+        "missing page: 文獻通考/卷三百二十二",
+        "missing page: 文獻通考/卷三百二十三",
+        "missing page: 文獻通考/卷三百二十四",
+        "missing page: 文獻通考/卷三百二十五",
+        "missing page: 文獻通考/卷三百二十六",
+        "missing page: 文獻通考/卷三百二十七",
+        "missing page: 文獻通考/卷三百二十八",
+        "missing page: 文獻通考/卷三百二十九",
+        "missing page: 文獻通考/卷三百三十一",
+        "missing page: 文獻通考/卷三百三十二",
+        "missing page: 文獻通考/卷三百三十三",
+        "missing page: 文獻通考/卷三百三十四",
+        "missing page: 文獻通考/卷三百三十五",
+        "missing page: 文獻通考/卷三百三十六",
+        "missing page: 文獻通考/卷三百三十七",
+        "missing page: 文獻通考/卷三百三十八",
+        "missing page: 文獻通考/卷三百三十九",
+        "missing page: 文獻通考/卷三百四十",
+        "missing page: 文獻通考/卷三百四十一",
+        "missing page: 文獻通考/卷三百四十二",
+        "missing page: 文獻通考/卷三百四十三",
+        "missing page: 文獻通考/卷三百四十四",
+        "missing page: 文獻通考/卷三百四十五",
+        "missing page: 文獻通考/卷三百四十六",
+        "missing page: 文獻通考/卷三百四十七",
+        "missing page: 文獻通考/卷三百四十八",
+        "用戶指定。無授權標籤，適用站點預設。子頁用漢字數字（卷一…卷一百七十七），allpages 排序非卷序，改走 next 鏈。注文在 <sub>…</sub> 內（如「厥土白壤<sub>無塊曰壤</sub>」），此為馬端臨自注性質，按本部聲明剔除——否則注會混入正文。{{YL}}（紀年）為正文內容，保留。"
+      ]
+    },
+    {
+      "id": "搜神記",
+      "zh": "搜神記",
+      "tradition": "fiction",
+      "file": "works/搜神記.json",
+      "sha256": "b0f399e21d7cf2d862580f0d7df2ae2437e842f84dddff5ec099023af7de9333",
+      "counts": {
+        "sections": 21,
+        "passages": 465,
+        "characters": 71029
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {
+        "PD-old": 13
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: PD-old.",
+      "limitations": [
+        "Portal:小说 志怪類。授權標籤 PD-old。路由：主頁目錄（21 章）。"
+      ]
+    },
+    {
+      "id": "異苑",
+      "zh": "異苑",
+      "tradition": "fiction",
+      "file": "works/異苑.json",
+      "sha256": "6ee817f94bed552a51b097c71384e660b7086ce680fba42c60c7890bda7cd824",
+      "counts": {
+        "sections": 11,
+        "passages": 384,
+        "characters": 33965
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {
+        "PD-old": 11
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: PD-old.",
+      "limitations": [
+        "Portal:小说 志怪類。授權標籤 PD-old。路由：主頁目錄（11 章）。"
+      ]
+    },
+    {
+      "id": "談藪",
+      "zh": "談藪",
+      "tradition": "fiction",
+      "file": "works/談藪.json",
+      "sha256": "54c6d7427702cb8657d145b2657cfb5df7e465ae40f19e6c90e0a99858cfb388",
+      "counts": {
+        "sections": 1,
+        "passages": 79,
+        "characters": 15037
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 1,
+      "discoveryRoute": "single",
+      "licenseTemplates": {},
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "Portal:小说 志怪類。無授權標籤，適用站點預設（CC BY-SA 4.0）。路由：單頁全文，按 == 標題分節。"
+      ]
+    },
+    {
+      "id": "雲仙雜記",
+      "zh": "雲仙雜記",
+      "tradition": "fiction",
+      "file": "works/雲仙雜記.json",
+      "sha256": "65016b4f8c3f809ff1501323afba46aac49e329c9a268a48decfbb59e7d91269",
+      "counts": {
+        "sections": 10,
+        "passages": 447,
+        "characters": 22314
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {},
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "Portal:小说 志怪類。授權標籤 PD-old。路由：主頁目錄（10 章）。"
+      ]
+    },
+    {
+      "id": "獨異志",
+      "zh": "獨異志",
+      "tradition": "fiction",
+      "file": "works/獨異志.json",
+      "sha256": "8659360f029f3c5c54ddd04a05e62b63a27269c1566c61c6d09d000642e75851",
+      "counts": {
+        "sections": 6,
+        "passages": 432,
+        "characters": 31406
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "single",
+      "licenseTemplates": {
+        "PD-old": 1
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: PD-old.",
+      "limitations": [
+        "Portal:小说 志怪類。授權標籤 PD-old。路由：單頁全文，按 == 標題分節。"
+      ]
+    },
+    {
+      "id": "廣異記",
+      "zh": "廣異記",
+      "tradition": "fiction",
+      "file": "works/廣異記.json",
+      "sha256": "89ed553f5f8639cfc26d7210cdcc008c8aed45295de3ba390db3aec7455559c9",
+      "counts": {
+        "sections": 305,
+        "passages": 305,
+        "characters": 102706
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "single",
+      "licenseTemplates": {
+        "PD-old": 1
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: PD-old.",
+      "limitations": [
+        "Portal:小说 志怪類。授權標籤 PD-old。路由：單頁全文，按 == 標題分節。"
+      ]
+    },
+    {
+      "id": "冥報記",
+      "zh": "冥報記",
+      "tradition": "fiction",
+      "file": "works/冥報記.json",
+      "sha256": "706f1a79631169341d40b8e7c761fe610fb731ad117cc55456ecec88405a4f19",
+      "counts": {
+        "sections": 5,
+        "passages": 232,
+        "characters": 30994
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "single",
+      "licenseTemplates": {
+        "唐朝作品": 1
+      },
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "Portal:小说 志怪類。授權標籤 唐朝作品。路由：單頁全文，按 == 標題分節。"
+      ]
+    },
+    {
+      "id": "括異誌",
+      "zh": "括異誌",
+      "tradition": "fiction",
+      "file": "works/括異誌.json",
+      "sha256": "c3fc4ff400a8e89ad71d3609f2cbe8072acd9377b8bfd068dd37fbfa9d895095",
+      "counts": {
+        "sections": 10,
+        "passages": 146,
+        "characters": 37999
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 1,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {
+        "北宋作品": 10
+      },
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "Portal:小说 志怪類。授權標籤 北宋作品。路由：主頁目錄（10 章）。"
+      ]
+    },
+    {
+      "id": "稽神錄",
+      "zh": "稽神錄",
+      "tradition": "fiction",
+      "file": "works/稽神錄.json",
+      "sha256": "4c383cff68821c840066a84fdb0477dc5cc7042035390d82f2b3f6954df9d2b1",
+      "counts": {
+        "sections": 8,
+        "passages": 234,
+        "characters": 53874
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {},
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "missing page: 稽神錄/再補",
+        "Portal:小说 志怪類。授權標籤 PD-old。路由：主頁目錄（9 章）。"
+      ]
+    },
+    {
+      "id": "夷堅志",
+      "zh": "夷堅志",
+      "tradition": "fiction",
+      "file": "works/夷堅志.json",
+      "sha256": "5894d6b8b357b89e04bc1a89b01963c004b14a7a369e0fe5466b57e5ebd762e9",
+      "counts": {
+        "sections": 236,
+        "passages": 4755,
+        "characters": 1228652
+      },
+      "structuralMarkersRemoved": 3,
+      "flaggedShortPassages": 690,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {},
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "Portal:小说 志怪類。無授權標籤，適用站點預設（CC BY-SA 4.0）。路由：主頁目錄（236 章）。"
+      ]
+    },
+    {
+      "id": "續夷堅志",
+      "zh": "續夷堅志",
+      "tradition": "fiction",
+      "file": "works/續夷堅志.json",
+      "sha256": "65822f9fbb2556f0476e24e7ce00f8cbebd13b86443ef8fad4cd783574cfd486",
+      "counts": {
+        "sections": 9,
+        "passages": 294,
+        "characters": 36525
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 2,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {
+        "PD-old": 9
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: PD-old.",
+      "limitations": [
+        "Portal:小说 志怪類。無授權標籤，適用站點預設（CC BY-SA 4.0）。路由：主頁目錄（9 章）。"
+      ]
+    },
+    {
+      "id": "聊齋志異",
+      "zh": "聊齋志異",
+      "tradition": "fiction",
+      "file": "works/聊齋志異.json",
+      "sha256": "0b57a37f1cb9d2a550ba56cdf24744324a48dda3f36ced8da0af75a30ab7dc30",
+      "counts": {
+        "sections": 14,
+        "passages": 1193,
+        "characters": 484688
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {
+        "PD-old": 2
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: PD-old.",
+      "limitations": [
+        "Portal:小说 志怪類。**「聊齋誌異」在站上是重定向至「聊齋志異」**，本條目取規範標題。無授權標籤，適用站點預設（CC BY-SA 4.0）。路由：主頁目錄。"
+      ]
+    },
+    {
+      "id": "益智錄",
+      "zh": "益智錄",
+      "tradition": "fiction",
+      "file": "works/益智錄.json",
+      "sha256": "03d6b347917c9f8107a01892db4a9eeb1c32feb7ca57a9ab4fb7fb2c7dec4bf1",
+      "counts": {
+        "sections": 12,
+        "passages": 581,
+        "characters": 191431
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {
+        "清朝作品": 12
+      },
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "Portal:小说 志怪類。無授權標籤，適用站點預設（CC BY-SA 4.0）。路由：主頁目錄（12 章）。"
+      ]
+    },
+    {
+      "id": "蟫史",
+      "zh": "蟫史",
+      "tradition": "fiction",
+      "file": "works/蟫史.json",
+      "sha256": "e843a5deac9dd6b5c8f99fa30a9b6b9fd6402ef71cf86b16569a10087584e1b7",
+      "counts": {
+        "sections": 20,
+        "passages": 1037,
+        "characters": 214681
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {},
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "Portal:小说 志怪類。授權標籤 PD-old。路由：主頁目錄（20 章）。"
+      ]
+    },
+    {
+      "id": "子不語",
+      "zh": "子不語",
+      "tradition": "fiction",
+      "file": "works/子不語.json",
+      "sha256": "3dfee03b2597fea07f17d15e7a5eee3262204cda66e49217ab3234e68219c1f3",
+      "counts": {
+        "sections": 24,
+        "passages": 1635,
+        "characters": 263893
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {},
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "Portal:小说 志怪類。無授權標籤，適用站點預設（CC BY-SA 4.0）。路由：主頁目錄（24 章）。"
+      ]
+    },
+    {
+      "id": "玄怪錄",
+      "zh": "玄怪錄",
+      "tradition": "fiction",
+      "file": "works/玄怪錄.json",
+      "sha256": "6d3740e79adc6f6e35ba47b774a273ece4c268b40ac84b71efbf8e2cf6603be7",
+      "counts": {
+        "sections": 5,
+        "passages": 364,
+        "characters": 48768
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 1,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {
+        "唐朝作品": 5
+      },
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "Portal:小说 傳奇類。授權標籤 唐朝作品。路由：主頁目錄（5 章）。"
+      ]
+    },
+    {
+      "id": "續玄怪錄",
+      "zh": "續玄怪錄",
+      "tradition": "fiction",
+      "file": "works/續玄怪錄.json",
+      "sha256": "f4da82a38c849e2ecff97582b76f41963afffd49a60ea912234496caa36b3c6d",
+      "counts": {
+        "sections": 5,
+        "passages": 131,
+        "characters": 34141
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "single",
+      "licenseTemplates": {},
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "Portal:小说 傳奇類。無授權標籤，適用站點預設（CC BY-SA 4.0）。路由：單頁全文，按 == 標題分節。"
+      ]
+    },
+    {
+      "id": "宣室志",
+      "zh": "宣室志",
+      "tradition": "fiction",
+      "file": "works/宣室志.json",
+      "sha256": "1fcbd7254ea6c346218ec3a80abe6f17fb1cf02f5753273a07042b0c97a67996",
+      "counts": {
+        "sections": 11,
+        "passages": 424,
+        "characters": 80261
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 1,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {},
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "Portal:小说 傳奇類。授權標籤 唐朝作品。路由：主頁目錄（11 章）。"
+      ]
+    },
+    {
+      "id": "定命錄",
+      "zh": "定命錄",
+      "tradition": "fiction",
+      "file": "works/定命錄.json",
+      "sha256": "c6d1457696d90ca77171b8376310158b1f02fd4e1636c2ea3d4616dffcaa6812",
+      "counts": {
+        "sections": 12,
+        "passages": 18,
+        "characters": 3720
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "single",
+      "licenseTemplates": {
+        "PD-old": 1
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: PD-old.",
+      "limitations": [
+        "Portal:小说 傳奇類。授權標籤 PD-old。路由：單頁全文，按 == 標題分節。"
+      ]
+    },
+    {
+      "id": "燕丹子",
+      "zh": "燕丹子",
+      "tradition": "fiction",
+      "file": "works/燕丹子.json",
+      "sha256": "fa0cf1225355daf2321f24ed9a22aa64c053b353505096829455c8cae1361453",
+      "counts": {
+        "sections": 4,
+        "passages": 5,
+        "characters": 3829
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "single",
+      "licenseTemplates": {
+        "PD-old": 1
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: PD-old.",
+      "limitations": [
+        "Portal:小说 傳奇類。授權標籤 PD-old。路由：單頁全文，按 == 標題分節。"
+      ]
+    },
+    {
+      "id": "遊仙窟",
+      "zh": "遊仙窟",
+      "tradition": "fiction",
+      "file": "works/遊仙窟.json",
+      "sha256": "bf10478753c567906814de8579f810d6d3ac91f1be3481331c89151a33436cca",
+      "counts": {
+        "sections": 1,
+        "passages": 225,
+        "characters": 10671
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "single",
+      "licenseTemplates": {},
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "Portal:小说 傳奇類。無授權標籤，適用站點預設（CC BY-SA 4.0）。路由：單頁全文，按 == 標題分節。"
+      ]
+    },
+    {
+      "id": "枕中記",
+      "zh": "枕中記",
+      "tradition": "fiction",
+      "file": "works/枕中記.json",
+      "sha256": "e3b67d3d4f7ae1203464173af42a01fa15c3d1e70db8634c1926a5bfe1e71914",
+      "counts": {
+        "sections": 1,
+        "passages": 6,
+        "characters": 1420
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "single",
+      "licenseTemplates": {
+        "唐朝作品": 1
+      },
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "Portal:小说 傳奇類。授權標籤 唐朝作品。路由：單頁全文，按 == 標題分節。"
+      ]
+    },
+    {
+      "id": "集異記",
+      "zh": "集異記",
+      "tradition": "fiction",
+      "file": "works/集異記.json",
+      "sha256": "5a163574d516f53c98afe5ba772cceddc3e92e6a3123bb91c3ab782077c0946a",
+      "counts": {
+        "sections": 1,
+        "passages": 11,
+        "characters": 863
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "single",
+      "licenseTemplates": {},
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "Portal:小说 傳奇類。無授權標籤，適用站點預設（CC BY-SA 4.0）。路由：單頁全文，按 == 標題分節。"
+      ]
+    },
+    {
+      "id": "南柯太守傳",
+      "zh": "南柯太守傳",
+      "tradition": "fiction",
+      "file": "works/南柯太守傳.json",
+      "sha256": "73a74dd2bfd390bcf499cbb6c1e49e25b5a5b2387b8cd3f5e56a5b9583eb6271",
+      "counts": {
+        "sections": 1,
+        "passages": 24,
+        "characters": 3982
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "single",
+      "licenseTemplates": {
+        "唐朝作品": 1
+      },
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "Portal:小说 傳奇類。授權標籤 唐朝作品。路由：單頁全文，按 == 標題分節。"
+      ]
+    },
+    {
+      "id": "霍小玉傳",
+      "zh": "霍小玉傳",
+      "tradition": "fiction",
+      "file": "works/霍小玉傳.json",
+      "sha256": "0a7080aea59152338c4d013a3a879a6c5ea74307c80a853704ee38ca28aa7add",
+      "counts": {
+        "sections": 1,
+        "passages": 16,
+        "characters": 3893
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "single",
+      "licenseTemplates": {},
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "Portal:小说 傳奇類。無授權標籤，適用站點預設（CC BY-SA 4.0）。路由：單頁全文，按 == 標題分節。"
+      ]
+    },
+    {
+      "id": "李娃傳",
+      "zh": "李娃傳",
+      "tradition": "fiction",
+      "file": "works/李娃傳.json",
+      "sha256": "9ee10258fd94b0c6bf3d67638825a1a297edec0a3be96a5afc61990cf1a60642",
+      "counts": {
+        "sections": 1,
+        "passages": 21,
+        "characters": 4473
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "single",
+      "licenseTemplates": {
+        "唐朝作品": 1
+      },
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "Portal:小说 傳奇類。授權標籤 唐朝作品。路由：單頁全文，按 == 標題分節。"
+      ]
+    },
+    {
+      "id": "鶯鶯傳",
+      "zh": "鶯鶯傳",
+      "tradition": "fiction",
+      "file": "works/鶯鶯傳.json",
+      "sha256": "3d682b5f6544026aac6e6cebdda8e9e476001915de6a3b907b5b913138d2bf84",
+      "counts": {
+        "sections": 1,
+        "passages": 5,
+        "characters": 3556
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "single",
+      "licenseTemplates": {
+        "唐朝作品": 1
+      },
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "Portal:小说 傳奇類。授權標籤 唐朝作品。路由：單頁全文，按 == 標題分節。"
+      ]
+    },
+    {
+      "id": "任氏傳",
+      "zh": "任氏傳",
+      "tradition": "fiction",
+      "file": "works/任氏傳.json",
+      "sha256": "dd5444902946e56f4213934f8cc9e5f06c9ab4a2008d4d9c4ca14ae3e4567a61",
+      "counts": {
+        "sections": 1,
+        "passages": 12,
+        "characters": 3737
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "single",
+      "licenseTemplates": {
+        "唐朝作品": 1
+      },
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "Portal:小说 傳奇類。授權標籤 唐朝作品。路由：單頁全文，按 == 標題分節。"
+      ]
+    },
+    {
+      "id": "博異志",
+      "zh": "博異志",
+      "tradition": "fiction",
+      "file": "works/博異志.json",
+      "sha256": "872b8ed202003937e4eac5f4b16bfa8d47ba0b4aacb91844f38c09e6767165d8",
+      "counts": {
+        "sections": 3,
+        "passages": 36,
+        "characters": 24777
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "single",
+      "licenseTemplates": {
+        "唐朝作品": 1
+      },
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "Portal:小说 傳奇類。授權標籤 唐朝作品。路由：單頁全文，按 == 標題分節。"
+      ]
+    },
+    {
+      "id": "剪燈新話",
+      "zh": "剪燈新話",
+      "tradition": "fiction",
+      "file": "works/剪燈新話.json",
+      "sha256": "8fc9e87d314be3282fb33f3aea2dc89a33edc16f6d90000efceb59edaeb05f03",
+      "counts": {
+        "sections": 6,
+        "passages": 571,
+        "characters": 44421
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {
+        "明朝作品": 6
+      },
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "Portal:小说 傳奇類。授權標籤 明朝作品。路由：主頁目錄（6 章）。"
+      ]
+    },
+    {
+      "id": "剪燈餘話",
+      "zh": "剪燈餘話",
+      "tradition": "fiction",
+      "file": "works/剪燈餘話.json",
+      "sha256": "f2d7e8c48f5ea8a3d96a0c257e5cd515a859f8703bf6b940386da4248925e05a",
+      "counts": {
+        "sections": 6,
+        "passages": 477,
+        "characters": 73856
+      },
+      "structuralMarkersRemoved": 6,
+      "flaggedShortPassages": 8,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {},
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "Portal:小说 傳奇類。無授權標籤，適用站點預設（CC BY-SA 4.0）。路由：主頁目錄（6 章）。"
+      ]
+    },
+    {
+      "id": "覓燈因話",
+      "zh": "覓燈因話",
+      "tradition": "fiction",
+      "file": "works/覓燈因話.json",
+      "sha256": "973364bf861ad7a73c906270fb8c00589ee8b07aa7f329564d078de341ef2e2c",
+      "counts": {
+        "sections": 2,
+        "passages": 31,
+        "characters": 15560
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "single",
+      "licenseTemplates": {
+        "PD-old": 1
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: PD-old.",
+      "limitations": [
+        "Portal:小说 傳奇類。授權標籤 PD-old。路由：單頁全文，按 == 標題分節。"
+      ]
+    },
+    {
+      "id": "豔異編",
+      "zh": "豔異編",
+      "tradition": "fiction",
+      "file": "works/豔異編.json",
+      "sha256": "82f67dcb7d9ff55646ea3babaa1b85bc431aa434702d757fcc0be4a4c75fc1ec",
+      "counts": {
+        "sections": 41,
+        "passages": 2952,
+        "characters": 351092
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 64,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {
+        "明朝作品": 41
+      },
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "Portal:小说 傳奇類。授權標籤 明朝作品。路由：主頁目錄（41 章）。"
+      ]
+    },
+    {
+      "id": "大明奇俠傳",
+      "zh": "大明奇俠傳",
+      "tradition": "fiction",
+      "file": "works/大明奇俠傳.json",
+      "sha256": "77e8d12fabad8411002d65a47d5bbf5568518ecece95ee4e3760dee02698cbb8",
+      "counts": {
+        "sections": 55,
+        "passages": 1183,
+        "characters": 176764
+      },
+      "structuralMarkersRemoved": 27,
+      "flaggedShortPassages": 51,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {
+        "清朝作品": 55
+      },
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "Portal:小说 傳奇類。授權標籤 清朝作品。路由：主頁目錄（55 章）。"
+      ]
+    },
+    {
+      "id": "周禮",
+      "zh": "周禮",
+      "tradition": "confucian",
+      "file": "works/周禮.json",
+      "sha256": "4bbee68f8494058f45dbd6d91cfa0210a443641394877fd2a6b1f6882d1a636e",
+      "counts": {
+        "sections": 6,
+        "passages": 877,
+        "characters": 61407
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 4,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {
+        "PD-old": 6
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: PD-old.",
+      "limitations": [
+        "Portal:典籍 經部。頁面帶 PD-old 標籤。"
+      ]
+    },
+    {
+      "id": "春秋穀梁傳",
+      "zh": "春秋穀梁傳",
+      "tradition": "confucian",
+      "file": "works/春秋穀梁傳.json",
+      "sha256": "1bd16331de29a837ed12c3721de2ec2864a802a1ea3982b56a99e16923707002",
+      "counts": {
+        "sections": 12,
+        "passages": 1873,
+        "characters": 51722
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 66,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {
+        "PD-old": 12
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: PD-old.",
+      "limitations": [
+        "Portal:典籍 經部，十三經之一。頁面帶 PD-old 標籤。"
+      ]
+    },
+    {
+      "id": "春秋經",
+      "zh": "春秋經",
+      "tradition": "confucian",
+      "file": "works/春秋經.json",
+      "sha256": "16c91411b3ea91b4c55b7f90448ab5f58ba56608a68b4d536fa27c53a43994c1",
+      "counts": {
+        "sections": 12,
+        "passages": 520,
+        "characters": 21185
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 20,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {},
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "Portal:典籍 經部。**「春秋」在站上是樞紐頁**（列出左氏／公羊／穀梁三傳），經文本身在「春秋經」。無授權標籤，適用站點預設。"
+      ]
+    },
+    {
+      "id": "今文孝經",
+      "zh": "今文孝經",
+      "tradition": "confucian",
+      "file": "works/今文孝經.json",
+      "sha256": "c615ebe3ca25c2d08c7bac0429f9c2424881a6eeb9f35e75e09b50ad87429c40",
+      "counts": {
+        "sections": 18,
+        "passages": 22,
+        "characters": 2272
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "single",
+      "licenseTemplates": {
+        "PD-old": 1
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: PD-old.",
+      "limitations": [
+        "Portal:典籍 經部，十三經之一。**「孝經」在站上是 {{versions}} 版本頁**（今文孝經／古文孝經孔氏傳），本條目取今文。頁面帶 PD-old 標籤。"
+      ]
+    },
+    {
+      "id": "爾雅",
+      "zh": "爾雅",
+      "tradition": "confucian",
+      "file": "works/爾雅.json",
+      "sha256": "b30fd2f3246ee8e5cbacb2d662d0285217483cde8558a60e4c3dc9f04cb024a3",
+      "counts": {
+        "sections": 19,
+        "passages": 1092,
+        "characters": 15074
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 35,
+      "discoveryRoute": "single",
+      "licenseTemplates": {},
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "Portal:典籍 經部，十三經之一，辭書之祖。**整篇正文即在主頁**（22.6KB、31 節，含「釋詁第一」），按 == 標題分節。該前綴下另有 2 個子頁屬別本《音釋》，非本書，不收。無授權標籤，適用站點預設。"
+      ]
+    },
+    {
+      "id": "四書章句集註",
+      "zh": "四書章句集註",
+      "tradition": "confucian",
+      "file": "works/四書章句集註.json",
+      "sha256": "bdf53ace464fb3a8a5c669beb6b921b04b62fa858810f225ead3d25dc464b540",
+      "counts": {
+        "sections": 33,
+        "passages": 892,
+        "characters": 84908
+      },
+      "structuralMarkersRemoved": 29,
+      "flaggedShortPassages": 1,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {
+        "PD-old": 2
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: PD-old.",
+      "limitations": [
+        "Portal:典籍 經部。**此書本身即朱熹注本**，經文與章句集註同屬該書內容，故一併保留（與《史記》白文另立《史記三家註》的情形不同）。頁面帶 PD-old 標籤。"
+      ]
+    },
+    {
+      "id": "楚辭",
+      "zh": "楚辭",
+      "tradition": "literature",
+      "file": "works/楚辭.json",
+      "sha256": "21d2fdb3c2ce654b6cde153f4b8bb9265bd464d8a081162d538243d86e3853f5",
+      "counts": {
+        "sections": 17,
+        "passages": 191,
+        "characters": 32023
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 36,
+      "discoveryRoute": "tocSection",
+      "licenseTemplates": {
+        "PD-old": 9,
+        "先秦作品": 1,
+        "西漢作品": 5,
+        "東漢作品": 1
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: PD-old, 先秦作品, 西漢作品, 東漢作品.",
+      "limitations": [
+        "Portal:典籍 集部。**目錄指向頂層篇頁**（離騷／九歌／天問…）而非子頁，故用「目錄小節」路由取正序 17 章。頁面帶 PD-old 標籤。"
+      ]
+    },
+    {
+      "id": "文心雕龍",
+      "zh": "文心雕龍",
+      "tradition": "literature",
+      "file": "works/文心雕龍.json",
+      "sha256": "76462112efbc3173d2bad9f27a0da76d3d79141d384825b9ac23f3b1973f7a9c",
+      "counts": {
+        "sections": 50,
+        "passages": 462,
+        "characters": 46824
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 50,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {},
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "Portal:典籍 集部。無授權標籤，適用站點預設。"
+      ]
+    },
+    {
+      "id": "玉臺新詠",
+      "zh": "玉臺新詠",
+      "tradition": "literature",
+      "file": "works/玉臺新詠.json",
+      "sha256": "8f7cb8fc56d4a586844f95c5c0c1dfefffb88dacad3ffa60e8c37164e09e03dc",
+      "counts": {
+        "sections": 10,
+        "passages": 1942,
+        "characters": 53421
+      },
+      "structuralMarkersRemoved": 216,
+      "flaggedShortPassages": 440,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {
+        "PD-old": 1
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: PD-old.",
+      "limitations": [
+        "Portal:典籍 集部。無授權標籤，適用站點預設。"
+      ]
+    },
+    {
+      "id": "文選",
+      "zh": "文選",
+      "tradition": "literature",
+      "file": "works/文選.json",
+      "sha256": "1f02b72d3d1310d82ee9f7dd707e694d55fe259ab80a1b36361fcd92c6fa4ef1",
+      "counts": {
+        "sections": 61,
+        "passages": 4837,
+        "characters": 1479437
+      },
+      "structuralMarkersRemoved": 5,
+      "flaggedShortPassages": 814,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {
+        "PD-old": 24,
+        "唐朝作品": 1
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: PD-old, 唐朝作品.",
+      "limitations": [
+        "Portal:典籍 集部。頁面帶 PD-old 標籤。"
+      ]
+    },
+    {
+      "id": "唐詩三百首",
+      "zh": "唐詩三百首",
+      "tradition": "literature",
+      "file": "works/唐詩三百首.json",
+      "sha256": "99c77469f0a5e9e02298c4cb15a67ceadc534cb8660a2604a2c0870bfc2fbf49",
+      "counts": {
+        "sections": 320,
+        "passages": 329,
+        "characters": 24873
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "listLinks",
+      "licenseTemplates": {
+        "唐朝作品": 314,
+        "PD-old": 2
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: 唐朝作品, PD-old.",
+      "limitations": [
+        "Portal:典籍 集部。**主頁是清單而非正文**（正文僅 3188 字，是 320 首詩的題目索引），詩篇位於頂層頁面（如 [[賊退示官吏]]）而非子頁，故用「清單連結」路由按選本原序取 320 章。僅取清單行上的連結，因此序文中提到的 [[千家詩]] 不會被誤收。頁面帶 清朝作品 標籤。"
+      ]
+    },
+    {
+      "id": "古文觀止",
+      "zh": "古文觀止",
+      "tradition": "literature",
+      "file": "works/古文觀止.json",
+      "sha256": "f8a8b7d13ba7b1b52bad120989c884d1f48a4f0a260dc2b28f1e0c3773c7fb15",
+      "counts": {
+        "sections": 13,
+        "passages": 863,
+        "characters": 274153
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 164,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {},
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "Portal:典籍 集部。頁面帶 清朝作品 標籤。"
       ]
     }
   ],

@@ -144,19 +144,89 @@ export async function discoverByNextChain(client, startPage, { max = 400, stopPr
 export async function discoverByMainPageLinks(client, page, work = {}) {
   const rec = await client.wikitext(page);
   if (rec.missing) return { chapters: [], route: 'mainPageLinks', error: `main page ${page} missing` };
-  const prefix = `${work.zh}/`;
+  // Use the RESOLVED title, not the configured one: 聊齋誌異 redirects to 聊齋志異,
+  // and building prefixes from the requested title produced 14 links to
+  // 聊齋誌異/第01卷… — pages that do not exist — so the work built with 0 sections
+  // and the run still reported success.
+  const base = rec.resolvedTitle || work.zh;
+  const prefix = `${base}/`;
   const seen = new Set();
   const chapters = [];
   for (const m of rec.content.matchAll(/\[\[([^\]|#]+)(?:#[^\]|]*)?(?:\|[^\]]*)?\]\]/g)) {
     let target = m[1].trim();
     if (target.startsWith('../')) target = prefix + target.slice(3);
+    // 文獻通考's main page links its volumes RELATIVELY, as `/卷一`. Treating
+    // only `../` left a 398-link table of contents reading as zero chapters.
+    else if (target.startsWith('/')) target = base + target;
     if (!target.startsWith(prefix)) continue;
     if (seen.has(target)) continue;
     if ((work.exclude ?? []).some((re) => re.test(target))) continue;
     seen.add(target);
     chapters.push({ title: target.slice(prefix.length), pageTitle: target, revid: null });
   }
-  return { chapters, route: 'mainPageLinks', mainPage: page, mainRevid: rec.revid, error: null };
+  return { chapters, route: 'mainPageLinks', mainPage: page, mainPageResolved: base,
+    mainRevid: rec.revid, error: null };
+}
+
+/**
+ * Route: an anthology whose main page is a LIST of links to per-item pages.
+ *
+ * 唐詩三百首 is the case that forced this route. Its main page is not the text and
+ * not a table of contents into subpages: it is `# 元結 [[賊退示官吏]]` lines
+ * pointing at anthology member pages at the TOP level, so the prefix-based
+ * mainPageLinks route found zero chapters and the `single` route "succeeded" by
+ * capturing the 3,188-character index as if it were the work.
+ *
+ * Only links on list-item lines (`#`/`*`) are taken. That is what separates the 320
+ * poems from the one prose link on the same page (`[[千家詩]]`, mentioned inside
+ * 蘅塘退士's preface), which a whole-page link scan would have collected too.
+ *
+ * Every candidate is then checked with `client.exists`, because a red link in a
+ * list is indistinguishable from a poem by pattern alone.
+ */
+export async function discoverByListLinks(client, page, work = {}) {
+  const rec = await client.wikitext(page);
+  if (rec.missing) return { chapters: [], route: 'listLinks', error: `main page ${page} missing` };
+  const base = rec.resolvedTitle || work.zh;
+  const prefix = `${base}/`;
+  const seen = new Set();
+  const candidates = [];
+  const notListed = [];
+  for (const line of rec.content.split('\n')) {
+    const isItem = /^\s*[#*]/.test(line);
+    for (const m of line.matchAll(/\[\[([^\]|#]+)(?:#[^\]|]*)?(?:\|[^\]]*)?\]\]/g)) {
+      let target = m[1].trim();
+      if (target.startsWith('../')) target = prefix + target.slice(3);
+      else if (target.startsWith('/')) target = base + target;
+      // `[[category:唐詩]]`, `[[File:…]]` and interwiki links are not anthology items.
+      if (/^[^:]*:/.test(target)) continue;
+      if (seen.has(target)) continue;
+      seen.add(target);
+      if (!isItem) { notListed.push(target); continue; }
+      if ((work.exclude ?? []).some((re) => re.test(target))) continue;
+      candidates.push(target);
+    }
+  }
+  const { existing, missing, resolvedTo } = await client.exists(candidates);
+  const ok = new Set(existing);
+  const chapters = candidates
+    .filter((t) => ok.has(t))
+    .map((t) => ({ title: t, pageTitle: t, revid: null }));
+  // 25 of the 320 anthology entries are redirects (`長干行之一` → `長干曲 (君家何處住)`).
+  // They are kept: the LIST label is the anthology's own name for the poem and is the
+  // right section title, while pageText() records the resolved page in `sources` for
+  // attribution. The redirect map is returned so that fact is auditable, not folklore.
+  const redirected = Object.entries(resolvedTo).filter(([from, to]) => from !== to);
+  return {
+    chapters,
+    route: 'listLinks',
+    mainPage: page,
+    mainPageResolved: base,
+    mainRevid: rec.revid,
+    listLinksSkipped: { missingPages: missing, proseLinks: notListed },
+    listLinksRedirected: redirected,
+    error: null,
+  };
 }
 
 /**
@@ -196,6 +266,39 @@ export async function discoverByContainerChain(client, startPage, work = {}) {
     }
   }
   return { chapters, route: 'containerChain', startPage, containers: chain.chapters.length, error: null };
+}
+
+/**
+ * Route: the ordered link list inside a TABLE-OF-CONTENTS section.
+ *
+ * Some works list their chapters as top-level pages rather than subpages — 楚辭's
+ * 目錄 reads `#[[離騷|楚辭卷第一]]`, `#[[九歌|楚辭卷第二]]` … — so a prefix filter
+ * (discoverByMainPageLinks) rejects every chapter but one, and an allpages scan
+ * finds nothing because the pages carry no prefix at all. Taking the links from
+ * the 目錄 section specifically avoids both problems and avoids swallowing the
+ * unrelated cross-references that dot the prose elsewhere on the page.
+ */
+export async function discoverByTocSection(client, page, work = {}) {
+  const rec = await client.wikitext(page);
+  if (rec.missing) return { chapters: [], route: 'tocSection', error: `main page ${page} missing` };
+  const lines = rec.content.split('\n');
+  const tocRe = work.tocHeading ?? /目[錄录次]/;
+  let inToc = false;
+  const chapters = [];
+  const seen = new Set();
+  for (const line of lines) {
+    const h = line.match(/^={2,4}\s*([^=]+?)\s*={2,4}\s*$/);
+    if (h) { inToc = tocRe.test(h[1]); continue; }
+    if (!inToc) continue;
+    for (const m of line.matchAll(/\[\[([^\]|#]+)(?:#[^\]|]*)?(?:\|([^\]]*))?\]\]/g)) {
+      const target = m[1].trim();
+      if (/^(Portal|Category|分類|作者|wikipedia|s|w):/i.test(target)) continue;
+      if (seen.has(target)) continue;
+      seen.add(target);
+      chapters.push({ title: (m[2] ?? target).trim(), pageTitle: target, revid: null });
+    }
+  }
+  return { chapters, route: 'tocSection', mainPage: page, mainRevid: rec.revid, error: null };
 }
 
 /** Route: enumerate the prefix. Order is the wiki's sort order. */
@@ -238,7 +341,9 @@ export async function discoverChapters(client, work) {
     });
   }
   else if (d.kind === 'mainPageLinks') result = await discoverByMainPageLinks(client, d.mainPage, work);
+  else if (d.kind === 'listLinks') result = await discoverByListLinks(client, d.mainPage, work);
   else if (d.kind === 'containerChain') result = await discoverByContainerChain(client, d.startPage, work);
+  else if (d.kind === 'tocSection') result = await discoverByTocSection(client, d.mainPage, work);
   else if (d.kind === 'prefixChain' || (d.kind === 'allpages' && d.startPage)) {
     const chain = await discoverByNextChain(client, d.startPage);
     const listing = await discoverByPrefix(client, d.prefix, work);
