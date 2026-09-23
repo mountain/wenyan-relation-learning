@@ -80,6 +80,20 @@ const manifest = read('data/corpus/manifest.json');
 const manifestIds = new Set(manifest.works.map((w) => w.id));
 const direct = directRows(manifestIds);
 const densityAll = { ...density, ...direct };
+
+// STALE-ARTIFACT GUARD. measurement.json is generated from the manifest; a work built AFTER that run
+// is in the manifest but absent from the artifact, and this tool then reports it as "not yet built" —
+// a fact about the artifact printed as a fact about the corpus. Measured instance: 齊民要術 built
+// successfully on retry, the manifest went to 107 works, the artifact still held 106, and the group
+// line read "not built: 齊民要術 (OK)" while its text sat on disk. Same failure class as the hardcoded
+// G8 ceiling and the stale sampled densities; guarded here instead of being noticed again.
+const unmeasured = [...manifestIds].filter((id) => !density[id]);
+if (unmeasured.length) {
+  console.error(`[density] STALE measurement.json: ${unmeasured.length} work(s) now in the manifest `
+    + `are absent from it (${unmeasured.slice(0, 4).join(', ')}${unmeasured.length > 4 ? ' …' : ''}). `
+    + 'Per-work and per-group figures below are NOT current — re-run tools/grammar/measure.mjs --write.');
+  process.exitCode = 2;
+}
 const byZh = new Map();
 for (const w of manifest.works) if (w.zh) byZh.set(w.zh, w.id);
 
@@ -124,7 +138,9 @@ for (const [name, list] of Object.entries(triage.groups ?? {})) {
     const id = byZh.get(e.work) ?? (densityAll[e.work] ? e.work : undefined);
     const d = id ? densityAll[id] : null;
     if (d) built.push({ id, zh: e.work, ...d });
-    else pending.push({ zh: e.work, routeStatus: routeStatus.get(e.work) ?? e.status ?? 'not attempted' });
+    else pending.push({ zh: e.work, routeStatus: (manifestIds.has(id ?? '') && !density[id])
+      ? '已建，但 measurement.json 滞后（重跑 measure.mjs --write）'
+      : (routeStatus.get(e.work) ?? e.status ?? 'not attempted') });
   }
   groups[name] = {
     ...stat(built),

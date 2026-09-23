@@ -1,6 +1,6 @@
 {
   "schema": "wenyan.relations.undeclared-density.v1",
-  "generatedAt": "2026-09-23T12:29:23.771Z",
+  "generatedAt": "2026-09-23T12:31:58.745Z",
   "why": "Density under the current grammar ranks the already-read books first, which is the wrong order for acquisition. This measures the complement: passages the declared CANDIDATES would read.",
   "candidates": [
     {
@@ -60,9 +60,9 @@
     }
   ],
   "scope": {
-    "works": 106,
-    "passages": 166069,
-    "readable": 22195
+    "works": 107,
+    "passages": 167644,
+    "readable": 22865
   },
   "perWork": [
     {
@@ -1908,6 +1908,27 @@
         "qi-fa": 4,
         "shang-yue": 1
       }
+    },
+    {
+      "work": "齊民要術",
+      "group": "practical-technology",
+      "passages": 1575,
+      "readable": 670,
+      "density": 0.4254,
+      "undeclared": 239,
+      "undeclaredDensity": 0.1517,
+      "perCandidate": {
+        "yue-noquote": 84,
+        "shao-zhi": 55,
+        "zhe-ye": 48,
+        "yi-wei": 32,
+        "ruo-ze": 26,
+        "ri-yong-shu": 20,
+        "fan-zhe": 15,
+        "yi-yue": 3,
+        "fan-jie": 3,
+        "qi-fa": 1
+      }
     }
   ],
   "ranking": {
@@ -2191,13 +2212,6 @@
   "nextBatch": {
     "derivedFrom": "作品在盘上、且属 triage 已声明组、且尚未建",
     "sameGroupNotBuilt": [
-      {
-        "work": "齊民要術",
-        "group": "practical-technology",
-        "status": "OK",
-        "chapters": 14,
-        "sampledDensity": 0.2009
-      },
       {
         "work": "耒耜經",
         "group": "practical-technology",

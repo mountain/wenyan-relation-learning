@@ -1,11 +1,11 @@
 {
   "schema": "wenyan.grammar.density.v1",
-  "generatedAt": "2026-09-23T12:29:19.113Z",
+  "generatedAt": "2026-09-23T12:31:54.073Z",
   "measuredUnder": {
     "grammar": "wenyan.relations.reporting.v1",
-    "measurementGeneratedAt": "2026-09-23T12:29:18.880Z",
-    "corpusPassages": 166317,
-    "corpusRate": 0.13345
+    "measurementGeneratedAt": "2026-09-23T12:31:53.915Z",
+    "corpusPassages": 167892,
+    "corpusRate": 0.136189
   },
   "caveats": [
     "Density is grammar-dependent: it is only comparable with figures measured under the same grammar.",
@@ -258,6 +258,13 @@
       "passages": 412,
       "readable": 205,
       "density": 0.4976
+    },
+    {
+      "id": "齊民要術",
+      "zh": "齊民要術",
+      "passages": 1575,
+      "readable": 670,
+      "density": 0.4254
     },
     {
       "id": "sanguozhi",
@@ -794,15 +801,16 @@
       "partial": true
     },
     "practical-technology": {
-      "works": 14,
-      "passages": 60923,
-      "readable": 1302,
-      "pooled": 0.0214,
-      "median": 0.0165,
+      "works": 15,
+      "passages": 62498,
+      "readable": 1972,
+      "pooled": 0.0316,
+      "median": 0.0174,
       "min": 0,
-      "max": 0.2629,
+      "max": 0.4254,
       "declared": 18,
       "builtWorks": [
+        "齊民要術",
         "夢溪筆談",
         "農政全書",
         "天工開物",
@@ -819,10 +827,6 @@
         "黃帝內經"
       ],
       "notYetBuilt": [
-        {
-          "zh": "齊民要術",
-          "routeStatus": "OK"
-        },
         {
           "zh": "耒耜經",
           "routeStatus": "OK"
@@ -874,25 +878,25 @@
   "hypothesis": {
     "statement": "操作性的技术 and 市井文化 carry more shared structure per passage than the corpus as a whole.",
     "practicalAndUrbanBuilt": {
-      "works": 27,
-      "passages": 83273,
-      "readable": 1748,
-      "pooled": 0.021,
-      "median": 0.0174,
+      "works": 28,
+      "passages": 84848,
+      "readable": 2418,
+      "pooled": 0.0285,
+      "median": 0.0181,
       "min": 0,
-      "max": 0.2629
+      "max": 0.4254
     },
     "corpusBaseline": {
-      "works": 106,
-      "passages": 166317,
-      "readable": 22195,
-      "pooled": 0.1334,
-      "median": 0.2425,
+      "works": 107,
+      "passages": 167892,
+      "readable": 22865,
+      "pooled": 0.1362,
+      "median": 0.25,
       "min": 0,
       "max": 1
     },
-    "verdict": "NOT SUPPORTED so far (-0.1124 pooled, -0.2251 median), 27/32 declared works built; confounded with era and edition, and this is a description of two groups, not a test.",
-    "pooledDelta": -0.1124,
-    "medianDelta": -0.2251
+    "verdict": "NOT SUPPORTED so far (-0.1077 pooled, -0.2319 median), 28/32 declared works built; confounded with era and edition, and this is a description of two groups, not a test.",
+    "pooledDelta": -0.1077,
+    "medianDelta": -0.2319
   }
 }

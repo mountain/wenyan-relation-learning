@@ -1,25 +1,25 @@
 {
   "schema": "wenyan.grammar.measurement.v1",
-  "generatedAt": "2026-09-23T12:29:18.880Z",
+  "generatedAt": "2026-09-23T12:31:53.915Z",
   "grammar": "wenyan.relations.reporting.v1",
   "corpus": {
-    "passages": 166317,
+    "passages": 167892,
     "maxPassageLength": 32773,
     "maxTextUnits": 2048
   },
   "reach": {
-    "uniqueParse": 22195,
-    "rate": 0.13345,
+    "uniqueParse": 22865,
+    "rate": 0.136189,
     "ambiguousFrameOccurrences": 0,
     "tooLong": 248,
     "perConstruction": {
       "wei-quote": 1926,
-      "wen-quote": 574,
+      "wen-quote": 576,
       "gao-quote": 411,
-      "yu-quote": 304,
-      "wen-plain": 623,
+      "yu-quote": 305,
+      "wen-plain": 624,
       "gao-plain": 197,
-      "yue-quote": 18160
+      "yue-quote": 18826
     },
     "perWork": {
       "analects": 449,
@@ -93,6 +93,7 @@
       "越絕書": 86,
       "吳越春秋": 342,
       "晏子春秋": 214,
+      "齊民要術": 670,
       "夢溪筆談": 158,
       "農政全書": 189,
       "天工開物": 3,
@@ -506,6 +507,11 @@
         "readable": 214,
         "density": 0.9817
       },
+      "齊民要術": {
+        "passages": 1575,
+        "readable": 670,
+        "density": 0.4254
+      },
       "夢溪筆談": {
         "passages": 601,
         "readable": 158,
@@ -836,8 +842,8 @@
   },
   "answerable": {
     "evidenceRecords": 14,
-    "passages": 22195,
-    "rate": 0.13345,
+    "passages": 22865,
+    "rate": 0.136189,
     "note": "Requires every construction below to be pinned by supervised evidence; reach is the ceiling this can approach."
   }
 }

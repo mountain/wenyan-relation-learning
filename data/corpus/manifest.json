@@ -1,11 +1,10 @@
 {
   "schema": "wenyan.corpus.manifest.v1",
   "format": "wenyan.corpus.v1",
-  "generatedAt": "2026-09-23T12:28:14.328Z",
+  "generatedAt": "2026-09-23T12:30:46.209Z",
   "partialRebuild": {
     "only": [
-      "大唐西域記",
-      "六祖壇經"
+      "齊民要術"
     ],
     "note": "this run rebuilt a subset; other entries are carried over from the previous manifest"
   },
@@ -25,10 +24,10 @@
     "ctextNotice": "ctext.org was NOT used. Its robots.txt and anti-scraping notice state that automated access is not authorized and direct researchers to subscribe; no content was retrieved from it."
   },
   "counts": {
-    "works": 106,
-    "sections": 4118,
-    "passages": 166317,
-    "characters": 21043361
+    "works": 107,
+    "sections": 4132,
+    "passages": 167892,
+    "characters": 21179901
   },
   "works": [
     {
@@ -1895,10 +1894,22 @@
       "id": "齊民要術",
       "zh": "齊民要術",
       "tradition": "philosophers",
-      "file": null,
-      "error": "fetch failed",
+      "file": "works/齊民要術.json",
+      "sha256": "6190faba3ed2b221ffc8580fcafeb72d7f1e21f2782cfd74c43e9df20fd9cea2",
+      "counts": {
+        "sections": 14,
+        "passages": 1575,
+        "characters": 136540
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 6,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {
+        "PD-old": 6
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: PD-old.",
       "limitations": [
-        "build failed"
+        "後台批次（用戶指定：可操作技術與市井文獻）。路由 mainPageLinks，14 章；授權標籤 PD-old。密度實測後置。"
       ]
     },
     {
