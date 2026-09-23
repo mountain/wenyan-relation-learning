@@ -22,6 +22,7 @@ Corpus scanned: 77 works, 81575 passages.
 - **A1 Entity spans are unquoted runs**: A label taken from such a span asserts a false agent (`於是武王遍`, `厲聲`, `敖者`). The admissibility filter stops it being STORED; nothing stops the grammar from READING it.
 - **A2 A passage can hold several frames**: A passage stating two relations yields one reading. The count is reported, so the answer does not pretend the passage had one frame — but the second relation is still dropped.
 - **A3 Missing source pages**: The work builds SHORTER and reports success; the gap shows only in `limitations`.
+ 2026-09-25 补：**同一失效还有一种形态——不是缺页，而是"缺文"**。詩品在源站只有卷上／卷中／卷下三页、无更深子页，但正文分别为 1590／2558／2099 字，而传世规模是上品 12 人、中品 39 人、下品 72 人——卷中人均 65 字、卷下人均 29 字，且卷下「其源出於」0 次。**建仓是成功的，段数（12/21/27）也忠实于底本，所以从任何数字上都看不出问题**；差别只在于：A3 是"页没抓到"，这一种是"页抓到了但内容本身不全"。两者的正确处置相同——**写进 limitations 并禁止据此作分布统计**——但触发方式不同：A3 由逐页核对发现，这一种只能靠**对照传世规模或征引制度**发现。
 - **A4 Duplicate section titles inside one work**: Two sections become indistinguishable by title (詩經 揚之水 ×3, 羔裘 ×3). Measured, not fixed — fixing it changes titles and no check yet distinguishes a legitimate repeat from a collision.
 - **A5 A title can lose the unit name**: The section was named after the CHAPTER (國風‧邶 twice), so three poems looked absent while their text was present. Now repaired at discovery AND checked by tools/corpus/validate.mjs.
 - **A6 Works with no licence template**: Corpus-derived evidence from those works carries CC BY-SA 4.0 (ShareAlike) rather than a public-domain rationale. Recorded per record; not a defect, but it constrains reuse.
