@@ -66,7 +66,12 @@ export function ensureUnitInTitle(title, pageTitle) {
 
 /** Read the first header-ish template of a page into a field map. */
 export function parseHeaderFields(wikitext) {
-  const m = wikitext.match(/\{\{\s*(header2?|Header2?|Header)\b/i);
+  // Any template whose NAME ends in `header` carries these fields, not just `{{header}}`.
+  // Measured necessity: 戰國策's volumes and the whole 士禮居 edition use `{{album header}}`,
+  // and 四庫 scans use `{{SKQS header}}`. The original pattern matched neither, so `next=`
+  // came back undefined and a nextChain walk over 戰國策 stopped after ONE page while
+  // reporting the innocuous stop reason "chain end" — a silent 1-of-33 build.
+  const m = wikitext.match(/\{\{\s*([A-Za-z0-9_. ]*header[A-Za-z0-9_. ]*)\s*[|}]/i);
   if (!m) return {};
   const start = m.index + 2;
   let depth = 0;

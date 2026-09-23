@@ -1,10 +1,10 @@
 {
   "schema": "wenyan.corpus.manifest.v1",
   "format": "wenyan.corpus.v1",
-  "generatedAt": "2026-09-23T03:30:22.801Z",
+  "generatedAt": "2026-09-23T03:49:49.180Z",
   "partialRebuild": {
     "only": [
-      "classic-of-poetry"
+      "戰國策"
     ],
     "note": "this run rebuilt a subset; other entries are carried over from the previous manifest"
   },
@@ -24,10 +24,10 @@
     "ctextNotice": "ctext.org was NOT used. Its robots.txt and anti-scraping notice state that automated access is not authorized and direct researchers to subscribe; no content was retrieved from it."
   },
   "counts": {
-    "works": 69,
-    "sections": 2818,
-    "passages": 77884,
-    "characters": 11286654
+    "works": 77,
+    "sections": 2944,
+    "passages": 81575,
+    "characters": 12170490
   },
   "works": [
     {
@@ -1717,6 +1717,177 @@
       "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
       "limitations": [
         "Portal:典籍 集部。頁面帶 清朝作品 標籤。"
+      ]
+    },
+    {
+      "id": "國語",
+      "zh": "國語",
+      "tradition": "historical",
+      "file": "works/國語.json",
+      "sha256": "402a052d3387592c3b957a8e6d146691a48a80a32f8ed1c1e2567b95432582d9",
+      "counts": {
+        "sections": 22,
+        "passages": 517,
+        "characters": 206267
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {
+        "PD-old": 1
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: PD-old.",
+      "limitations": [
+        "史部。**版本无争议**（站上仅此一本，21 篇）。源站頁面帶 PD-old 標籤。"
+      ]
+    },
+    {
+      "id": "戰國策",
+      "zh": "戰國策",
+      "tradition": "historical",
+      "file": "works/戰國策.json",
+      "sha256": "bc6e1e718bc52d3f1147add96e78e0b59dc0e3caf40f984239380b78bc9bc566",
+      "counts": {
+        "sections": 33,
+        "passages": 1005,
+        "characters": 427306
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {
+        "PD-old": 27
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: PD-old.",
+      "limitations": [
+        "史部。**版本是編輯決定**：站上主頁 {{Versions}} 列出鮑彪注四庫本、高誘注姚宏續注四庫本、顧廣圻校黃丕烈札記本（士禮居叢書本）；本倉取 **士禮居叢書本（顧廣圻校、黃丕烈札記本）**，即通行整理本所據的底本。**路由取士禮居本主頁的鏈表**，不用 allpages 前綴枚舉：該前綴下 203 頁分屬六種版本／作品（純正文為重定向、黃丕烈札記 47 頁屬另一部書、四庫高誘姚宏注本、鮑彪注本、四部叢刊校注本），枚舉會混版並觸發 [取 N/M] 子集警告。序跋與書錄（劉向書錄、目錄序、校注序等 6 頁）按 exclude 排除。校記（鮑本／姚本／正曰）在 {{*|…}} 內，按本倉一貫做法剔除。"
+      ]
+    },
+    {
+      "id": "逸周書",
+      "zh": "逸周書",
+      "tradition": "historical",
+      "file": "works/逸周書.json",
+      "sha256": "2c914ac9285077c085c269ca6b31701c900638cb831d6feece523845d7740d1a",
+      "counts": {
+        "sections": 10,
+        "passages": 136,
+        "characters": 50354
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {
+        "PD-old": 1
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: PD-old.",
+      "limitations": [
+        "史部雜史類。無授權標籤，適用站點預設（CC BY-SA 4.0）。"
+      ]
+    },
+    {
+      "id": "山海經",
+      "zh": "山海經",
+      "tradition": "historical",
+      "file": "works/山海經.json",
+      "sha256": "6b9ec78459a0024053e19236fe2a16bbf673b2564b142a892cee6e5d4a0c655d",
+      "counts": {
+        "sections": 19,
+        "passages": 874,
+        "characters": 45768
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 1,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {
+        "PD-old": 3
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: PD-old.",
+      "limitations": [
+        "史部地理類（四庫入子部小說家類，此處從傳統地理類）。源站頁面帶 PD-old 標籤。"
+      ]
+    },
+    {
+      "id": "穆天子傳",
+      "zh": "穆天子傳",
+      "tradition": "historical",
+      "file": "works/穆天子傳.json",
+      "sha256": "a0ae1e7b254b59beaa0237f487f0696b8092166c8a8bbc360ee2fd9d6e8adfde",
+      "counts": {
+        "sections": 8,
+        "passages": 123,
+        "characters": 15321
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 4,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {},
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "史部起居注類之祖。源站頁面帶 PD-old 標籤。"
+      ]
+    },
+    {
+      "id": "越絕書",
+      "zh": "越絕書",
+      "tradition": "historical",
+      "file": "works/越絕書.json",
+      "sha256": "4f31a87a3a91c49f4c6b27edeab0fc0dbef05c47d52db6bb6fbac9b27004c7a8",
+      "counts": {
+        "sections": 15,
+        "passages": 316,
+        "characters": 38278
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {},
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "史部載記類。源站頁面帶 PD-old 標籤。"
+      ]
+    },
+    {
+      "id": "吳越春秋",
+      "zh": "吳越春秋",
+      "tradition": "historical",
+      "file": "works/吳越春秋.json",
+      "sha256": "74139a2b291536d3a2d903732780da3eb49bb03a7ba8aa03633f603fc44b90cf",
+      "counts": {
+        "sections": 11,
+        "passages": 502,
+        "characters": 50112
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 33,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {},
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "missing page: 吳越春秋/全覽",
+        "史部載記類。源站頁面帶 PD-old 標籤。"
+      ]
+    },
+    {
+      "id": "晏子春秋",
+      "zh": "晏子春秋",
+      "tradition": "historical",
+      "file": "works/晏子春秋.json",
+      "sha256": "22babc645afe69de19f316f006b6430f8b63e718f8190a321f0877f4447ce1ae",
+      "counts": {
+        "sections": 8,
+        "passages": 218,
+        "characters": 50430
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {
+        "先秦作品": 8
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: 先秦作品.",
+      "limitations": [
+        "四庫入史部傳記類（Portal:典籍 則列於子部，此處從四庫）。源站頁面帶 pd-old 標籤。"
       ]
     }
   ],

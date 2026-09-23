@@ -592,4 +592,70 @@ export const WORKS = [
     discovery: { kind: 'mainPageLinks', mainPage: '古文觀止' },
     note: "Portal:典籍 集部。頁面帶 清朝作品 標籤。",
   },
+  // ---------------- 第六批：史記之前的史書（先秦至漢初）----------------
+  {
+    id: "國語",
+    zh: "國語",
+    tradition: 'historical',
+    discovery: { kind: 'mainPageLinks', mainPage: '國語' },
+    note: "史部。**版本无争议**（站上仅此一本，21 篇）。源站頁面帶 PD-old 標籤。",
+  },
+  {
+    id: "戰國策",
+    zh: "戰國策",
+    tradition: 'historical',
+    discovery: { kind: 'mainPageLinks', mainPage: '戰國策 (士禮居叢書本)' },
+    // `exclude` is read at the WORK level, not inside `discovery` — putting it in the
+    // discovery object silently excluded nothing and the build took all 46 links
+    // including 劉向書錄 and the five 序, which are editorial apparatus (the same class
+    // the project already excludes for 毛詩序 and 書序).
+    // Unanchored on purpose: the paratext includes 題戰國策 (題 only at the START) and
+    // 戰國策後序 (序 at the end), so an end-anchored pattern excluded 11 of 12 and let
+    // 題戰國策 through as a 34th "chapter". The bare state names are link-group headings
+    // that have no page of their own.
+    exclude: [/(序|書錄|札記|後|題)/, /全覽$/, /\/[秦齊楚趙魏韓燕]$/],
+    note: "史部。**版本是編輯決定**：站上主頁 {{Versions}} 列出鮑彪注四庫本、高誘注姚宏續注四庫本、顧廣圻校黃丕烈札記本（士禮居叢書本）；本倉取 **士禮居叢書本（顧廣圻校、黃丕烈札記本）**，即通行整理本所據的底本。**路由取士禮居本主頁的鏈表**，不用 allpages 前綴枚舉：該前綴下 203 頁分屬六種版本／作品（純正文為重定向、黃丕烈札記 47 頁屬另一部書、四庫高誘姚宏注本、鮑彪注本、四部叢刊校注本），枚舉會混版並觸發 [取 N/M] 子集警告。序跋與書錄（劉向書錄、目錄序、校注序等 6 頁）按 exclude 排除。校記（鮑本／姚本／正曰）在 {{*|…}} 內，按本倉一貫做法剔除。",
+  },
+  {
+    id: "逸周書",
+    zh: "逸周書",
+    tradition: 'historical',
+    discovery: { kind: 'mainPageLinks', mainPage: '逸周書' },
+    note: "史部雜史類。無授權標籤，適用站點預設（CC BY-SA 4.0）。",
+  },
+  {
+    id: "山海經",
+    zh: "山海經",
+    tradition: 'historical',
+    discovery: { kind: 'mainPageLinks', mainPage: '山海經' },
+    note: "史部地理類（四庫入子部小說家類，此處從傳統地理類）。源站頁面帶 PD-old 標籤。",
+  },
+  {
+    id: "穆天子傳",
+    zh: "穆天子傳",
+    tradition: 'historical',
+    discovery: { kind: 'mainPageLinks', mainPage: '穆天子傳' },
+    note: "史部起居注類之祖。源站頁面帶 PD-old 標籤。",
+  },
+  {
+    id: "越絕書",
+    zh: "越絕書",
+    tradition: 'historical',
+    discovery: { kind: 'mainPageLinks', mainPage: '越絕書' },
+    note: "史部載記類。源站頁面帶 PD-old 標籤。",
+  },
+  {
+    id: "吳越春秋",
+    zh: "吳越春秋",
+    tradition: 'historical',
+    discovery: { kind: 'mainPageLinks', mainPage: '吳越春秋' },
+    note: "史部載記類。源站頁面帶 PD-old 標籤。",
+  },
+  {
+    id: "晏子春秋",
+    zh: "晏子春秋",
+    tradition: 'historical',
+    discovery: { kind: 'mainPageLinks', mainPage: '晏子春秋' },
+    note: "四庫入史部傳記類（Portal:典籍 則列於子部，此處從四庫）。源站頁面帶 pd-old 標籤。",
+  },
 ];
