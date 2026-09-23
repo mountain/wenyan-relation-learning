@@ -1,0 +1,458 @@
+{
+  "schema": "wenyan-relation-learning.qin-dayan-arithmetic-check.v1",
+  "status": "FiniteArithmeticReconstructionChecked",
+  "scope": "modern arithmetic reconstruction",
+  "native_calls": 0,
+  "historical_algorithm_replay": "NotRun",
+  "zero_residue_yarrow_endpoint": "NotChecked",
+  "semantic_mapping": "NotEstablished",
+  "bindings": {
+    "checker_sha256": "9e8d0a324ba1939cf6338777f7a66fa89865bf7bb95152b01a126b115a9c28a0",
+    "sources_sha256": "7ac609c5b96c11c9e2b8be7024b9fa865fbc4ffed00d94635514db649b23b3ab"
+  },
+  "checks_count": 33,
+  "checks": [
+    {
+      "name": "original complementary products",
+      "status": "Passed"
+    },
+    {
+      "name": "original complementary products sum",
+      "status": "Passed"
+    },
+    {
+      "name": "adjusted product",
+      "status": "Passed"
+    },
+    {
+      "name": "adjusted complementary products",
+      "status": "Passed"
+    },
+    {
+      "name": "coefficients before representative adjustment",
+      "status": "Passed"
+    },
+    {
+      "name": "coefficient sum before representative adjustment",
+      "status": "Passed"
+    },
+    {
+      "name": "coefficients after representative adjustment",
+      "status": "Passed"
+    },
+    {
+      "name": "coefficient sum after representative adjustment",
+      "status": "Passed"
+    },
+    {
+      "name": "representative changes are multiples of twelve",
+      "status": "Passed"
+    },
+    {
+      "name": "three is an inverse of three modulo four",
+      "status": "Passed"
+    },
+    {
+      "name": "positive remainders of thirty-three",
+      "status": "Passed"
+    },
+    {
+      "name": "standard remainders of thirty-three",
+      "status": "Passed"
+    },
+    {
+      "name": "the two remainder conventions differ",
+      "status": "Passed"
+    },
+    {
+      "name": "weighted terms",
+      "status": "Passed"
+    },
+    {
+      "name": "weighted sum",
+      "status": "Passed"
+    },
+    {
+      "name": "weighted sum remainder",
+      "status": "Passed"
+    },
+    {
+      "name": "image number for the declared nonzero remainder",
+      "status": "Passed"
+    },
+    {
+      "name": "selector four projects to one and zero",
+      "status": "Passed"
+    },
+    {
+      "name": "selector nine projects to zero and one",
+      "status": "Passed"
+    },
+    {
+      "name": "selectors are idempotent modulo twelve",
+      "status": "Passed"
+    },
+    {
+      "name": "selectors are orthogonal modulo twelve",
+      "status": "Passed"
+    },
+    {
+      "name": "selectors sum to one modulo twelve",
+      "status": "Passed"
+    },
+    {
+      "name": "joint three-four observation has twelve fibres",
+      "status": "Passed"
+    },
+    {
+      "name": "joint fibres are singleton",
+      "status": "Passed"
+    },
+    {
+      "name": "all enumerated fibres agree with CRT reconstruction",
+      "status": "Passed"
+    },
+    {
+      "name": "moduli one and two add no distinction to three-four observation",
+      "status": "Passed"
+    },
+    {
+      "name": "modulo two is already determined by modulo four",
+      "status": "Passed"
+    },
+    {
+      "name": "modulo one has only zero as its standard remainder",
+      "status": "Passed"
+    },
+    {
+      "name": "nine twenty-one and thirty-three have the same observation",
+      "status": "Passed"
+    },
+    {
+      "name": "old calibration honest observation",
+      "status": "Passed"
+    },
+    {
+      "name": "old calibration honest reconstruction",
+      "status": "Passed"
+    },
+    {
+      "name": "old calibration altered reconstruction",
+      "status": "Passed"
+    },
+    {
+      "name": "old calibration altered answer differs from source",
+      "status": "Passed"
+    }
+  ],
+  "arithmetic": {
+    "original_numbers": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "original_complementary_products": [
+      24,
+      12,
+      8,
+      6
+    ],
+    "original_sum": 50,
+    "adjusted_numbers": [
+      1,
+      1,
+      3,
+      4
+    ],
+    "modulus": 12,
+    "adjusted_complementary_products": [
+      12,
+      12,
+      4,
+      3
+    ],
+    "multipliers": [
+      1,
+      1,
+      1,
+      3
+    ],
+    "coefficients_before_adjustment": [
+      12,
+      12,
+      4,
+      9
+    ],
+    "coefficients_after_adjustment": [
+      12,
+      24,
+      4,
+      9
+    ],
+    "coefficient_changes": [
+      0,
+      12,
+      0,
+      0
+    ],
+    "yarrow_input": 33,
+    "remainder_divisors": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "positive_remainders": [
+      1,
+      1,
+      3,
+      1
+    ],
+    "standard_remainders": [
+      0,
+      1,
+      0,
+      1
+    ],
+    "weighted_terms": [
+      12,
+      24,
+      12,
+      9
+    ],
+    "weighted_sum": 57,
+    "reduced_value": 9,
+    "image_divisor": 3,
+    "image_number": 3
+  },
+  "modern_crt": {
+    "moduli": [
+      3,
+      4
+    ],
+    "selectors": [
+      4,
+      9
+    ],
+    "domain": {
+      "lower_inclusive": 0,
+      "upper_exclusive": 12
+    },
+    "reconstructions": [
+      {
+        "observation": [
+          0,
+          0
+        ],
+        "members": [
+          0
+        ],
+        "reconstructed": 0
+      },
+      {
+        "observation": [
+          1,
+          1
+        ],
+        "members": [
+          1
+        ],
+        "reconstructed": 1
+      },
+      {
+        "observation": [
+          2,
+          2
+        ],
+        "members": [
+          2
+        ],
+        "reconstructed": 2
+      },
+      {
+        "observation": [
+          0,
+          3
+        ],
+        "members": [
+          3
+        ],
+        "reconstructed": 3
+      },
+      {
+        "observation": [
+          1,
+          0
+        ],
+        "members": [
+          4
+        ],
+        "reconstructed": 4
+      },
+      {
+        "observation": [
+          2,
+          1
+        ],
+        "members": [
+          5
+        ],
+        "reconstructed": 5
+      },
+      {
+        "observation": [
+          0,
+          2
+        ],
+        "members": [
+          6
+        ],
+        "reconstructed": 6
+      },
+      {
+        "observation": [
+          1,
+          3
+        ],
+        "members": [
+          7
+        ],
+        "reconstructed": 7
+      },
+      {
+        "observation": [
+          2,
+          0
+        ],
+        "members": [
+          8
+        ],
+        "reconstructed": 8
+      },
+      {
+        "observation": [
+          0,
+          1
+        ],
+        "members": [
+          9
+        ],
+        "reconstructed": 9
+      },
+      {
+        "observation": [
+          1,
+          2
+        ],
+        "members": [
+          10
+        ],
+        "reconstructed": 10
+      },
+      {
+        "observation": [
+          2,
+          3
+        ],
+        "members": [
+          11
+        ],
+        "reconstructed": 11
+      }
+    ],
+    "fibre_counts": [
+      {
+        "moduli": [
+          3,
+          4
+        ],
+        "count": 12
+      },
+      {
+        "moduli": [
+          1,
+          3,
+          4
+        ],
+        "count": 12
+      },
+      {
+        "moduli": [
+          2,
+          3,
+          4
+        ],
+        "count": 12
+      },
+      {
+        "moduli": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "count": 12
+      }
+    ],
+    "alias_witnesses": [
+      {
+        "value": 9,
+        "in_declared_domain": true,
+        "observation": [
+          0,
+          1,
+          0,
+          1
+        ]
+      },
+      {
+        "value": 21,
+        "in_declared_domain": false,
+        "observation": [
+          0,
+          1,
+          0,
+          1
+        ]
+      },
+      {
+        "value": 33,
+        "in_declared_domain": false,
+        "observation": [
+          0,
+          1,
+          0,
+          1
+        ]
+      }
+    ]
+  },
+  "old_calibration_replay": {
+    "source": 5,
+    "moduli": [
+      3,
+      4
+    ],
+    "honest_observation": [
+      2,
+      1
+    ],
+    "altered_observation": [
+      0,
+      1
+    ],
+    "attribution": "Replays adva-library calibrations/crt-source-boundary-v0; not a new finding.",
+    "honest_reconstruction": 5,
+    "altered_reconstruction": 9
+  },
+  "boundaries": [
+    "The multipliers attached to modulus one are bookkeeping values, not inverse witnesses.",
+    "The positive remainder convention uses representatives 1..m and differs from ordinary representatives 0..m-1.",
+    "The image-number check uses only input 33 and its nonzero reduced value 9; no zero-remainder endpoint is interpreted.",
+    "Uniqueness is checked only in [0,12); the listed outside-domain aliases remain distinct integers.",
+    "CRT reconstruction does not establish source fidelity; the altered-observation example repeats an existing calibration.",
+    "This arithmetic does not replay Qin Jiushao's full historical procedure or establish a mapping to Adva, hexagrams, Taixuan, or role semantics.",
+    "The source digest binds the companion manifest bytes; it does not validate the manifest's historical claims."
+  ]
+}
