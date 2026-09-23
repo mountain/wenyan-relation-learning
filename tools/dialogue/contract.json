@@ -11,14 +11,47 @@
     "Contested": "Warranted evidence exists but disagrees with itself. MUST name both sides and what they disagree about. LOCAL: it concerns one claim and must never block another question — that distinction is the whole reason it is separate from Inconsistent."
   },
   "invariants": [
-    { "id": "I1", "rule": "Answered implies warrant.refs is non-empty, or warrant.kind is 'store'.", "enforcedBy": "validateAnswer()" },
-    { "id": "I2", "rule": "Unknown implies both reason and missing are present.", "enforcedBy": "validateAnswer()" },
-    { "id": "I3", "rule": "No free-text answer field exists. Every Answered payload conforms to the question type's declared answer schema.", "enforcedBy": "validateAnswer()" },
-    { "id": "I4", "rule": "A question whose type is not declared here is Refused, never answered by analogy.", "enforcedBy": "ask()" },
-    { "id": "I5", "rule": "Every Answered answer must be reproducible from the store alone; the recomputation must agree with what was returned.", "enforcedBy": "verifyAnswer()" },
-    { "id": "I6", "rule": "Answers are never cached as truth. Adding or removing evidence may change an earlier answer, including turning Answered back into Unknown.", "enforcedBy": "Q4 counterfactual; readiness re-run" },
-    { "id": "I7", "rule": "Contested requires at least two disagreeing records and MUST name them, with each side's judge and basis. It may never be returned as a bare state.", "enforcedBy": "validateAnswer()" },
-    { "id": "I8", "rule": "Contested is LOCAL and Inconsistent takes precedence: a store-wide failure licenses nothing, so Contested must not be used to report one. Conversely, a contested claim must not prevent any other claim or question from being answered.", "enforcedBy": "validateAnswer() + selftest locality case" }
+    {
+      "id": "I1",
+      "rule": "Answered implies warrant.refs is non-empty, or warrant.kind is 'store', or warrant.noEvidence is true — the last case being an explicitly declared derivation over an EMPTY evidence set (a Q4 counterfactual that withdrew a construction's last record). An empty refs is never silent: the flag must be set.",
+      "enforcedBy": "validateAnswer()",
+      "note": "Added when the minimal falsifiable set landed: with 2 labels per construction, withdrawing the LAST one reduces the derivation's evidence set to empty, and I1 as originally written made that case unrepresentable — so 'the last evidence was withdrawn' could not be reported at all. Found by strengthening the I6 test."
+    },
+    {
+      "id": "I2",
+      "rule": "Unknown implies both reason and missing are present.",
+      "enforcedBy": "validateAnswer()"
+    },
+    {
+      "id": "I3",
+      "rule": "No free-text answer field exists. Every Answered payload conforms to the question type's declared answer schema.",
+      "enforcedBy": "validateAnswer()"
+    },
+    {
+      "id": "I4",
+      "rule": "A question whose type is not declared here is Refused, never answered by analogy.",
+      "enforcedBy": "ask()"
+    },
+    {
+      "id": "I5",
+      "rule": "Every Answered answer must be reproducible from the store alone; the recomputation must agree with what was returned.",
+      "enforcedBy": "verifyAnswer()"
+    },
+    {
+      "id": "I6",
+      "rule": "Answers are never cached as truth. Adding or removing evidence may change an earlier answer, including turning Answered back into Unknown.",
+      "enforcedBy": "Q4 counterfactual; readiness re-run"
+    },
+    {
+      "id": "I7",
+      "rule": "Contested requires at least two disagreeing records and MUST name them, with each side's judge and basis. It may never be returned as a bare state.",
+      "enforcedBy": "validateAnswer()"
+    },
+    {
+      "id": "I8",
+      "rule": "Contested is LOCAL and Inconsistent takes precedence: a store-wide failure licenses nothing, so Contested must not be used to report one. Conversely, a contested claim must not prevent any other claim or question from being answered.",
+      "enforcedBy": "validateAnswer() + selftest locality case"
+    }
   ],
   "questionTypes": [
     {
@@ -40,7 +73,9 @@
       "name": "comparison",
       "ask": "Do these two sentences express the same relation, a role reversal, or different relations?",
       "input": "{ a: string, b: string }",
-      "requires": ["Q1 is Answered for both a and b"],
+      "requires": [
+        "Q1 is Answered for both a and b"
+      ],
       "answer": "{ relation: 'SameRelation' | 'RoleReversal' | 'DifferentRelation' }",
       "warrant": "evidence — the union of both readings' warrants",
       "verify": "recompute both readings and re-derive the relation",
@@ -51,7 +86,9 @@
       "name": "warrant",
       "ask": "What licenses this conclusion, and who asserted it?",
       "input": "{ answer: <a previously returned answer> }",
-      "requires": ["nothing beyond the store: this is the 'how do you know?' move"],
+      "requires": [
+        "nothing beyond the store: this is the 'how do you know?' move"
+      ],
       "answer": "{ refs: [{ id, text, expected, labelKind, labelBy, source }] }",
       "warrant": "store — the records named by the answer",
       "verify": "each ref must exist in the store and its contentHash must verify",
@@ -62,7 +99,9 @@
       "name": "counterfactual",
       "ask": "If evidence record E were withdrawn, would this conclusion still hold?",
       "input": "{ text: string, removeId: string }",
-      "requires": ["the named record exists in the store"],
+      "requires": [
+        "the named record exists in the store"
+      ],
       "answer": "{ status, survivingRoleMappings, changed: boolean }",
       "warrant": "derivation — replay(evidence minus E)",
       "verify": "recompute; must agree",
@@ -73,7 +112,9 @@
       "name": "consistency",
       "ask": "Is the store itself sound?",
       "input": "{}",
-      "requires": ["nothing"],
+      "requires": [
+        "nothing"
+      ],
       "answer": "{ replayOk, recordCount, integrityIssues[], grammarVersions }",
       "warrant": "store — content hashes plus replay over the whole store",
       "verify": "re-run integrity and replay",

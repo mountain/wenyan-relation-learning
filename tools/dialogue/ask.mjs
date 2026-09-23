@@ -264,7 +264,10 @@ const HANDLERS = {
       { status: after.status, survivingRoleMappings: survivors, changed,
         withoutEvidence: removeId, grammar: impl.id },
       { kind: 'derivation', refs: reduced.examples.map((r) => r.id),
-        derivation: `replay(evidence minus ${removeId}) in ${impl.id}` });
+        ...(reduced.examples.length ? {} : { noEvidence: true }),
+        derivation: `replay(evidence minus ${removeId}) in ${impl.id}` +
+          (reduced.examples.length ? '' : ' — this was the construction\'s last record, so the '
+            + 'reduced evidence set is empty') });
   },
 
   /** Q5 consistency */
@@ -338,7 +341,12 @@ export function validateAnswer(answer, contract) {
   if (!states.includes(answer.state)) throw new Error(`invalid answer state: ${answer.state}`);
   if (answer.state === 'Answered') {
     if (!answer.warrant) throw new Error('I1 violated: Answered without a warrant');
-    if (answer.warrant.kind !== 'store' && !(answer.warrant.refs ?? []).length) {
+    if (answer.warrant.kind !== 'store' && !(answer.warrant.refs ?? []).length
+        && answer.warrant.noEvidence !== true) {
+      // `noEvidence` is the declared exception (contract I1): a derivation over an EMPTY
+      // evidence set is legitimate only when the caller says so explicitly. Without it,
+      // withdrawing a construction's last record produced an answer the contract refused
+      // to represent — "the last evidence was withdrawn" could not be reported at all.
       throw new Error('I1 violated: Answered with a non-store warrant and no refs');
     }
     if (!answer.warrant.derivation) throw new Error('I1 violated: warrant without a derivation string');

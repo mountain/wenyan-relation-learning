@@ -7,6 +7,9 @@
  * than merely documenting the rules. A contract that is only prose is a
  * wish; these are the cases that prove otherwise.
  */
+import fs from 'node:fs';
+import os from 'node:os';
+import path from 'node:path';
 import { makeContext, ask, validateAnswer, loadContract, DEFAULT_STORE } from './ask.mjs';
 
 const contract = loadContract();
@@ -54,11 +57,16 @@ check('I4 refuses an undeclared question type', () => {
   return 'Q42 -> Refused';
 });
 
-// ------------------------------- I6: withdrawing the only evidence retracts it
-check('I6 withdrawal retracts a conclusion (maturity is not monotone)', () => {
-  // Uses whichever grammar the first stored record belongs to, via the
-  // grammar-aware context. (An earlier version called ctx.constructionOf, which
-  // stopped existing when the context became multi-grammar.)
+// ------------------- I6: withdrawal, and the redundancy the minimal set buys
+//
+// Adding a second supervised label per construction (the declared minimal
+// falsifiable set, CAP-REVIEW.md) changed what withdrawal means: removing ONE of
+// two agreeing labels must leave the conclusion standing, and only removing the
+// LAST label retracts it. The earlier single assertion — "withdrawing the only
+// evidence did not change the conclusion" — had become false, and it was right to
+// fail: the premise "the only evidence" no longer described the store. Both halves
+// are asserted now, so the test is stronger than the one it replaces.
+check('I6 withdrawal: one of two labels does not retract, the last one does', () => {
   const rec = ctx.records[0];
   const impl = ctx.forGrammar(rec.grammar);
   if (!impl) throw new Error(`no declared grammar for stored record grammar ${rec.grammar}`);
@@ -72,13 +80,40 @@ check('I6 withdrawal retracts a conclusion (maturity is not monotone)', () => {
   if (!probeText) throw new Error(`no probe sentence for construction ${construction}`);
   const before = ask({ type: 'Q1', text: probeText, grammar: impl.id }, ctx, contract);
   if (before.state !== 'Answered') throw new Error(`probe was ${before.state}, expected Answered`);
-  const after = ask({ type: 'Q4', text: probeText, removeId: rec.id, grammar: impl.id }, ctx, contract);
-  if (after.state !== 'Answered') throw new Error(`counterfactual was ${after.state}`);
-  if (!after.changed) throw new Error('withdrawing the only evidence did not change the conclusion');
-  if (after.survivingRoleMappings !== 6) {
-    throw new Error(`expected 6 surviving mappings after withdrawal, got ${after.survivingRoleMappings}`);
+
+  // (a) the store really is redundant for this construction: >= 2 agreeing labels
+  const siblings = ctx.records.filter(
+    (r) => r.grammar === rec.grammar && impl.constructionOf(r.text) === construction);
+  if (siblings.length < 2) throw new Error(`expected >= 2 labels for ${construction}, found ${siblings.length}`);
+
+  // (b) withdrawing one of them must NOT change the conclusion
+  const one = ask({ type: 'Q4', text: probeText, removeId: rec.id, grammar: impl.id }, ctx, contract);
+  if (one.state !== 'Answered') throw new Error(`counterfactual was ${one.state}`);
+  if (one.changed) {
+    throw new Error(`withdrawing 1 of ${siblings.length} agreeing labels changed the conclusion — ` +
+      'the redundant label is not actually being used');
   }
-  return `${before.roles.agent}=agent -> retracted: ${after.survivingRoleMappings}/6 survive, changed=${after.changed}`;
+  if (one.survivingRoleMappings !== 1) {
+    throw new Error(`expected the mapping to stay determined, got ${one.survivingRoleMappings}/6`);
+  }
+
+  // (c) with that construction's ONLY label, withdrawal must retract (maturity is not monotone)
+  const solo = path.join(os.tmpdir(), `wenyan-solo-${process.pid}.jsonl`);
+  try {
+    fs.writeFileSync(solo, JSON.stringify(rec) + '\n');
+    const soloCtx = makeContext({ storePath: solo });
+    const soloImpl = soloCtx.forGrammar(rec.grammar);
+    const last = ask({ type: 'Q4', text: probeText, removeId: rec.id, grammar: impl.id }, soloCtx, contract);
+    if (last.state !== 'Answered') throw new Error(`solo counterfactual was ${last.state}`);
+    if (!last.changed) throw new Error('withdrawing the LAST label did not change the conclusion');
+    if (last.survivingRoleMappings !== 6) {
+      throw new Error(`expected 6 surviving mappings once the construction is unlabelled, got ${last.survivingRoleMappings}`);
+    }
+    if (soloImpl.model.examples.length !== 1) throw new Error('solo store did not build a 1-example model');
+  } finally {
+    fs.rmSync(solo, { force: true });
+  }
+  return `${siblings.length} agreeing labels: withdraw 1 -> still 1/6, withdraw the last -> 6/6 survive`;
 });
 
 // ----------------------------- an Answered answer cannot name evidence it lacks
