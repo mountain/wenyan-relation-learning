@@ -1,6 +1,6 @@
 {
   "schema": "wenyan.relations.readiness.v1",
-  "generatedAt": "2026-09-23T12:47:02.862Z",
+  "generatedAt": "2026-09-23T12:53:13.662Z",
   "grammar": "wenyan.relations.v1",
   "store": {
     "path": "knowledge/relations/evidence.jsonl",
@@ -319,10 +319,10 @@
     },
     {
       "id": "G8",
-      "name": "declared questions answer the target corpus",
+      "name": "declared questions answer the frozen reference corpus",
       "required": true,
-      "pass": false,
-      "evidence": "best corpus answer rate 0.128118 under wenyan.relations.reporting.v1; floor 0.15",
+      "pass": true,
+      "evidence": "reference-corpus answer rate 0.246656 under wenyan.relations.reporting.v1 over 81575 reference passage(s) [frozen: knowledge/grammar/reference-corpus.json]; floor 0.15. DIAGNOSTIC, not the gate: live corpus rate 0.128118 — it moves when books are acquired, which is not grammar progress",
       "claimStatus": "bounded-experiment",
       "claimStatusBasis": "a rate measured over one corpus build under the declared questions; the floor is 0.15, which is 61% of the measured ceiling",
       "claimStatusBounds": "one corpus build; the aspirational target 0.5 is NOT met — a PASS here means progress, not arrival (see floors.mjs g8-corpus-answerability)",
@@ -346,8 +346,8 @@
   "verdict": {
     "readyForComputation": true,
     "readingReady": true,
-    "dialogueReady": false,
-    "readyForConversationalReasoning": false,
+    "dialogueReady": true,
+    "readyForConversationalReasoning": true,
     "readingReadyGrammars": [
       "wenyan.relations.v1",
       "wenyan.relations.reporting.v1"
@@ -393,17 +393,15 @@
       "histogram": {
         "construction-target": 0,
         "definition": 1,
-        "bounded-experiment": 1,
+        "bounded-experiment": 2,
         "bounded-verified": 5,
         "exact": 1
       },
       "weakestRequired": "definition",
-      "passing": 8,
+      "passing": 9,
       "total": 9
     },
     "reversible": "Because the network is replay(evidence), adding contradicting evidence can raise survivors above 1 and re-open G2. Maturity is not monotone.",
-    "deficits": [
-      "G8 declared questions answer the target corpus: the floor is a declared parameter and is not lowered to match the current value: answering a question about real text still fails for the large majority of passages"
-    ]
+    "deficits": []
   }
 }

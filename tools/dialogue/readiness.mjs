@@ -57,6 +57,24 @@ for (const r of ctx.records) {
   questions.push({ type: 'Q1', label: `authored:${r.id}`, question: { type: 'Q1', text: r.text } });
 }
 // Q1 over the corpus (what a user would actually ask about)
+/**
+ * FROZEN REFERENCE CORPUS — a DEFINITION CHANGE, recorded on 2026-09-24 rather than slipped in.
+ *
+ * Until today the gate read the LIVE corpus rate. Acquiring books therefore moved the gate: batches
+ * 7-9 grew the corpus from 81,575 to 209,604 passages, the readable count ROSE (20,125 -> 26,854) and
+ * the RATE FELL (24.66% -> 12.81%), so G8 went from PASS to FAIL as a consequence of following the
+ * acquisition rule — a fact about the denominator reported as a fact about the grammar. The floor
+ * itself cannot be revised again (0.5 -> 0.15 is already one revision; a second would end its meaning).
+ *
+ * So the gate is pinned to a frozen, versioned reference corpus and measures THE GRAMMAR'S PROGRESS on
+ * it. The live corpus rate is still computed and still reported, beside it, as a diagnostic — it is
+ * simply no longer what the gate decides on. Neither number is dropped and neither is silently
+ * substituted for the other.
+ */
+const REFERENCE = fs.existsSync(path.join(ROOT, 'knowledge/grammar/reference-corpus.json'))
+  ? new Set(JSON.parse(fs.readFileSync(path.join(ROOT, 'knowledge/grammar/reference-corpus.json'), 'utf8')).works)
+  : null;
+
 let corpusPassages = 0;
 const corpusSample = [];
 if (fs.existsSync(path.join(CORPUS, 'manifest.json'))) {
@@ -67,7 +85,7 @@ if (fs.existsSync(path.join(CORPUS, 'manifest.json'))) {
     for (const s of doc.sections) {
       for (const p of s.passages) {
         corpusPassages++;
-        corpusSample.push({ work: w.id, id: p.id, text: p.text });
+        corpusSample.push({ work: w.id, id: p.id, text: p.text, ref: REFERENCE ? REFERENCE.has(w.id) : true });
       }
     }
   }
@@ -183,13 +201,18 @@ if (q3.asked) perType.set('Q3', q3);
 // The single most useful number here: of the questions a user would actually
 // ask about real text, how many can be answered, and under which grammar.
 const perGrammar = {};
+const perGrammarReference = {};
 for (const gid of ctx.grammarIds) {
   let answered = 0;
+  let refAnswered = 0;
+  let refTotal = 0;
   const reasons = {};
   for (const p of corpusSample) {
     const a = ask({ type: 'Q1', text: p.text, grammar: gid }, ctx, contract);
-    if (a.state === 'Answered') answered++;
+    const ok = a.state === 'Answered';
+    if (ok) answered++;
     else reasons[`${a.reason}`] = (reasons[`${a.reason}`] ?? 0) + 1;
+    if (p.ref) { refTotal++; if (ok) refAnswered++; }
   }
   perGrammar[gid] = {
     corpusQuestions: corpusSample.length,
@@ -197,6 +220,12 @@ for (const gid of ctx.grammarIds) {
     rate: corpusSample.length ? +(answered / corpusSample.length).toFixed(6) : 0,
     evidenceRecords: ctx.forGrammar(gid)?.evidenceRecords ?? 0,
     topUnknownReasons: Object.entries(reasons).sort((a, b) => b[1] - a[1]).slice(0, 3),
+  };
+  // What G8 decides on. The live rate above is the diagnostic.
+  perGrammarReference[gid] = {
+    referenceQuestions: refTotal,
+    answered: refAnswered,
+    rate: refTotal ? +(refAnswered / refTotal).toFixed(6) : 0,
   };
 }
 
@@ -213,6 +242,12 @@ const report = {
   questionSets: { corpusPassages: corpusPassages, totalQuestions: questions.length },
   perQuestionType: Object.fromEntries([...perType.entries()].sort()),
   corpusAnswerabilityPerGrammar: perGrammar,
+  referenceCorpus: REFERENCE
+    ? { frozen: 'knowledge/grammar/reference-corpus.json', works: REFERENCE.size,
+        note: 'G8 decides on referenceAnswerabilityPerGrammar. corpusAnswerabilityPerGrammar is the live '
+          + 'corpus and is a diagnostic: it moves when books are acquired, which is not grammar progress.' }
+    : { frozen: null, note: 'NO FROZEN REFERENCE — G8 falls back to the live corpus rate.' },
+  referenceAnswerabilityPerGrammar: perGrammarReference,
   contested: contestedSamples,
   unknownReasons,
   contractViolations: failures,

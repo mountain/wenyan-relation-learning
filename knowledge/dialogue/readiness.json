@@ -1,6 +1,6 @@
 {
   "schema": "wenyan.dialogue.readiness.v1",
-  "generatedAt": "2026-09-23T12:45:36.635Z",
+  "generatedAt": "2026-09-23T12:51:50.573Z",
   "contract": {
     "schema": "wenyan.dialogue.contract.v1",
     "checks": [
@@ -130,6 +130,23 @@
           2412
         ]
       ]
+    }
+  },
+  "referenceCorpus": {
+    "frozen": "knowledge/grammar/reference-corpus.json",
+    "works": 77,
+    "note": "G8 decides on referenceAnswerabilityPerGrammar. corpusAnswerabilityPerGrammar is the live corpus and is a diagnostic: it moves when books are acquired, which is not grammar progress."
+  },
+  "referenceAnswerabilityPerGrammar": {
+    "wenyan.relations.v1": {
+      "referenceQuestions": 81575,
+      "answered": 0,
+      "rate": 0
+    },
+    "wenyan.relations.reporting.v1": {
+      "referenceQuestions": 81575,
+      "answered": 20121,
+      "rate": 0.246656
     }
   },
   "contested": [
