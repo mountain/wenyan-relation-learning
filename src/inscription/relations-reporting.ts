@@ -87,7 +87,14 @@ export const REPORTING_GRAMMAR_ID = "wenyan.relations.reporting.v1";
 /** Entity spans: no sentence punctuation, no quotes, 1..10 characters. */
 const ENTITY = "[^，。；：「」？！、]{1,10}";
 /** Quoted speech is delimited by the text's own quotation marks. */
-const SPEECH = '[^」]{1,300}';
+// Quotation delimiters are NOT one pair. 「」 is primary and 『』 nested — but some
+// texts and editions use 『』 or plain " or “” as the PRIMARY delimiter, and the grammar then
+// read none of those passages: measured, 563 passages use 『』 as the outer quote, 863 use ASCII
+// quotes, 366 use “”. Declared as a character class rather than a guess about which is which.
+const SPEECH = '[^」』"”]{1,300}';
+/** Opener and closer for the four delimiter styles, kept in one place. */
+const Q_OPEN = '[「『"“]';
+const Q_CLOSE = '[」』"”]';
 
 /**
  * Frame verbs attested in the corpus, with their measured passage counts
@@ -109,27 +116,31 @@ const ENTITY_NO_YUE = "(?:(?!曰)[^，。；：「」？！、]){1,10}";
 const AGENT_THEME: RoleName[] = ['agent', 'theme'];
 
 const FRAMES: { id: string; verb: string; source: string; roles: RoleName[] }[] = [
-  // ORDER IS THE RULE, not a detail: the frames are tried most-explicit-first, and a
-  // match that OVERLAPS an already-claimed span is discarded. Measured necessity —
+  // ORDER IS THE RULE, not a detail: the frames are tried most-explicit-first; a match that
+  // PARTIALLY overlaps an already-claimed span is discarded; and a match that FULLY CONTAINS
+  // already-claimed spans SUPERSEDES them (containment precedence — an outer quotation beats a
+  // frame nested inside it). The third clause is not decoration: widening the quotation
+  // delimiters below let an inner frame claim first, and the outer match was then discarded as an
+  // overlap, so 116 passages silently changed from the outer relation to an inner one. Measured necessity —
   // `孔子謂弟子曰：「學而時習之。」` matches the three-slot frame (correct: agent 孔子,
   // recipient 弟子) AND the bare-曰 frame (agent 弟子), and treating that as two
   // matches made every three-slot passage "ambiguous" and destroyed all 29 existing
   // corpus records. And `王問曰：「何謂也？」` was silently absorbed by the no-曰
   // three-slot frame with recipient `曰` — a slot holding the verb itself. Both are
   // fixed by ordering the frames by how many markers they require.
-  { id: 'wei-quote', verb: '謂', source: `(${ENTITY})謂(${ENTITY_NO_YUE})曰：「(${SPEECH})」`, roles: ALL_ROLES },
-  { id: 'wen-quote', verb: '問', source: `(${ENTITY})問(${ENTITY_NO_YUE})曰：「(${SPEECH})」`, roles: ALL_ROLES },
-  { id: 'gao-quote', verb: '告', source: `(${ENTITY})告(${ENTITY_NO_YUE})曰：「(${SPEECH})」`, roles: ALL_ROLES },
-  { id: 'yu-quote', verb: '語', source: `(${ENTITY})語(${ENTITY_NO_YUE})曰：「(${SPEECH})」`, roles: ALL_ROLES },
+  { id: 'wei-quote', verb: '謂', source: `(${ENTITY})謂(${ENTITY_NO_YUE})曰：${Q_OPEN}(${SPEECH})${Q_CLOSE}`, roles: ALL_ROLES },
+  { id: 'wen-quote', verb: '問', source: `(${ENTITY})問(${ENTITY_NO_YUE})曰：${Q_OPEN}(${SPEECH})${Q_CLOSE}`, roles: ALL_ROLES },
+  { id: 'gao-quote', verb: '告', source: `(${ENTITY})告(${ENTITY_NO_YUE})曰：${Q_OPEN}(${SPEECH})${Q_CLOSE}`, roles: ALL_ROLES },
+  { id: 'yu-quote', verb: '語', source: `(${ENTITY})語(${ENTITY_NO_YUE})曰：${Q_OPEN}(${SPEECH})${Q_CLOSE}`, roles: ALL_ROLES },
   // Two-slot forms: the addressee is simply not there. `子曰：「學而時習之。」` is the
   // commonest shape in the corpus and states a speaker and a quotation only.
   // Only the two-slot 問/告 forms are declared: measured on the corpus, the two-slot
   // 謂/語 forms are dominated by adverbials and particles (厲聲謂曰, 樅公相謂曰,
   // 蓋其語曰, 故諸儒爲之語曰). Labelling those spans as the agent would assert something
   // false, and this grammar may only carry evidence a supervisor can state truthfully.
-  { id: 'wen-plain', verb: '問', source: `(${ENTITY_NO_VERB})問曰：「(${SPEECH})」`, roles: AGENT_THEME },
-  { id: 'gao-plain', verb: '告', source: `(${ENTITY_NO_VERB})告曰：「(${SPEECH})」`, roles: AGENT_THEME },
-  { id: 'yue-quote', verb: '曰', source: `(${ENTITY_NO_VERB})曰：「(${SPEECH})」`, roles: AGENT_THEME },
+  { id: 'wen-plain', verb: '問', source: `(${ENTITY_NO_VERB})問曰：${Q_OPEN}(${SPEECH})${Q_CLOSE}`, roles: AGENT_THEME },
+  { id: 'gao-plain', verb: '告', source: `(${ENTITY_NO_VERB})告曰：${Q_OPEN}(${SPEECH})${Q_CLOSE}`, roles: AGENT_THEME },
+  { id: 'yue-quote', verb: '曰', source: `(${ENTITY_NO_VERB})曰：${Q_OPEN}(${SPEECH})${Q_CLOSE}`, roles: AGENT_THEME },
 ];
 
 export const CONSTRUCTION_IDS = FRAMES.map((f) => f.id);
@@ -352,7 +363,20 @@ function parse(text: string): Parsed | undefined {
     for (const m of text.matchAll(re)) {
       const spanStart = m.index ?? 0;
       const spanEnd = spanStart + m[0].length;
-      if (claimed.some(([a, b]) => spanStart < b && a < spanEnd)) continue;
+      const partial = claimed.some(([a, b]) => spanStart < b && a < spanEnd && !(a >= spanStart && b <= spanEnd));
+      if (partial) continue;
+      // CONTAINMENT PRECEDENCE, declared: an OUTER quotation beats any frame nested inside it.
+      // Without this, widening the delimiters let an inner frame claim first and the outer match
+      // was then discarded as an overlap - measured, 116 passages changed construction, almost all
+      // from an outer frame to an inner one, i.e. the primary relation was being thrown away.
+      const swallowed = found.filter((f) => f.spanStart >= spanStart && f.spanEnd <= spanEnd);
+      for (const sw of swallowed) {
+        const i = found.indexOf(sw);
+        if (i >= 0) found.splice(i, 1);
+      }
+      const keptClaims = claimed.filter(([a, b]) => !(a >= spanStart && b <= spanEnd));
+      claimed.length = 0;
+      claimed.push(...keptClaims);
       claimed.push([spanStart, spanEnd]);
       const occurrences: Occurrence[] = [];
       for (let slot = 0; slot < frame.roles.length; slot++) {
@@ -363,7 +387,7 @@ function parse(text: string): Parsed | undefined {
         occurrences.push({ slot, value, start, end: start + value.length });
       }
       found.push({ construction: frame.id, slots: m.slice(1, 1 + frame.roles.length),
-        roles: frame.roles, occurrences, matches: 1 });
+        roles: frame.roles, occurrences, matches: 1, spanStart, spanEnd });
     }
   }
   if (!found.length) return undefined;

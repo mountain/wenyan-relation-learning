@@ -543,14 +543,22 @@ console.log(`\n[verdict] ready for computation: ${readyForComputation}` +
     : ' (no grammar passes both determination and generalisation)'));
 {
   // A PASS at a REVISED floor must not read as the original claim. G8's floor now measures
-  // progress (61% of the measured ceiling); the aspirational target 0.5 is still unmet, so the
-  // verdict carries that in the same line rather than in a footnote nobody reads.
+  // progress; the aspirational target 0.5 is still unmet, so the verdict carries that in the same
+  // line rather than in a footnote nobody reads.
+  //
+  // The ceiling and the "61%" were hardcoded here and went stale the moment the grammar widened
+  // (ceiling 0.2440 -> 0.2466, so the floor's share of it moved 61% -> 61%, but the STATED ceiling
+  // was wrong). Both are derived from the measurement now, so this caveat cannot drift away from
+  // the number it is talking about — the same stale-constant failure the gate-dependency map was
+  // built to catch, caught here in the prose that reports it.
   const g8 = gates.find((g) => g.id === 'G8');
   const target = 0.5;
   const met = dialogue.bestCorpusRate !== null && dialogue.bestCorpusRate >= target;
+  const ceiling = dialogue.bestCorpusRate ?? null;
+  const share = ceiling ? Math.round((G8_FLOOR / ceiling) * 100) : null;
   console.log(`[verdict] ready for conversational reasoning: ${report.verdict.readyForConversationalReasoning}` +
     ` (G7 contract/enforcement, G8 corpus answerability)`);
-  console.log(`[verdict]   G8 caveat: floor ${G8_FLOOR} is 61% of the measured ceiling 0.244 and was REVISED on ` +
+  console.log(`[verdict]   G8 caveat: floor ${G8_FLOOR} is ${share ?? '?'}% of the measured ceiling ${ceiling !== null ? ceiling.toFixed(4) : 'unmeasured'} and was REVISED on ` +
     `2026-09-23 from 0.5, under which it failed every round. The aspirational target ${target} is ` +
     `${met ? 'MET' : 'NOT met'} (current ${dialogue.bestCorpusRate ?? 'unmeasured'}); a PASS below it means ` +
     'progress, not arrival — see knowledge/APERTURES.md and CAP-REVIEW.md 补篇二 for what the ceiling is made of.');

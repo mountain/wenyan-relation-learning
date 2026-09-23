@@ -1,15 +1,15 @@
 {
   "schema": "wenyan.relations.readiness.v1",
-  "generatedAt": "2026-09-23T03:04:14.326Z",
+  "generatedAt": "2026-09-23T11:58:28.406Z",
   "grammar": "wenyan.relations.v1",
   "store": {
     "path": "knowledge/relations/evidence.jsonl",
-    "records": 38,
+    "records": 37,
     "grammarVersions": {
       "wenyan.relations.v1": 6,
-      "wenyan.relations.reporting.v1": 32
+      "wenyan.relations.reporting.v1": 31
     },
-    "sha256": "4073bcb3579001a3417d9744f91caf5681baeb64f683cd4fbb5bee8e8e3e0c46"
+    "sha256": "745ffd14cdc965c03c71fca183f79624148d6957c6865bfc25737b6faa4f3614"
   },
   "floors": {
     "labelledPerConstructionForDetermination": 2,
@@ -91,11 +91,11 @@
     {
       "grammar": "wenyan.relations.reporting.v1",
       "construction": "gao-quote",
-      "labelledExamples": 5,
+      "labelledExamples": 4,
       "survivingRoleMappings": 1,
       "rolePermutations": 6,
       "statusOnProbe": "KnownFiniteGrammar",
-      "distinctEntities": 15,
+      "distinctEntities": 12,
       "expressedRoles": [
         "agent",
         "recipient",
@@ -105,11 +105,11 @@
     {
       "grammar": "wenyan.relations.reporting.v1",
       "construction": "yu-quote",
-      "labelledExamples": 4,
+      "labelledExamples": 3,
       "survivingRoleMappings": 1,
       "rolePermutations": 6,
       "statusOnProbe": "KnownFiniteGrammar",
-      "distinctEntities": 12,
+      "distinctEntities": 9,
       "expressedRoles": [
         "agent",
         "recipient",
@@ -188,9 +188,9 @@
     }
   ],
   "corpusCoverage": {
-    "passages": 77884,
-    "known": 16679,
-    "rate": 0.214152,
+    "passages": 81575,
+    "known": 20114,
+    "rate": 0.246571,
     "readErrors": 0,
     "firstReadError": null,
     "perGrammar": {
@@ -201,8 +201,8 @@
         "readErrors": 0
       },
       "wenyan.relations.reporting.v1": {
-        "known": 16679,
-        "rate": 0.214152,
+        "known": 20114,
+        "rate": 0.246571,
         "evidenceRecords": 14,
         "readErrors": 0
       }
@@ -210,7 +210,7 @@
     "bestGrammar": "wenyan.relations.reporting.v1"
   },
   "sourceVerification": {
-    "checked": 32,
+    "checked": 31,
     "failed": []
   },
   "integrity": {
@@ -223,7 +223,7 @@
       "authored:falsifiable-grant: label has no timestamp",
       "authored:falsifiable-hand-over: label has no timestamp",
       "authored:falsifiable-receive: label has no timestamp",
-      "store spans multiple grammar versions: {\"wenyan.relations.v1\":6,\"wenyan.relations.reporting.v1\":32}"
+      "store spans multiple grammar versions: {\"wenyan.relations.v1\":6,\"wenyan.relations.reporting.v1\":31}"
     ],
     "replayError": null
   },
@@ -238,56 +238,96 @@
       "name": "well-formed store",
       "required": true,
       "pass": true,
-      "evidence": "parse issues=0, integrity issues=0, replay=ok"
+      "evidence": "parse issues=0, integrity issues=0, replay=ok",
+      "claimStatus": "bounded-verified",
+      "claimStatusBasis": "parse issues, integrity issues and a replay probe are all checked on the store as it exists",
+      "claimStatusBounds": "this store, at this revision",
+      "supportKind": "verification",
+      "supportBasis": "parse, integrity and replay are fixed obligations checked against the store"
     },
     {
       "id": "G2",
       "name": "role mapping determined per construction, per grammar",
       "required": true,
       "pass": true,
-      "evidence": "experimental/grant: survivors=1/6, labels=2 (floor 2); experimental/hand-over: survivors=1/6, labels=2 (floor 2); experimental/receive: survivors=1/6, labels=2 (floor 2); reporting/wei-quote: survivors=1/6, labels=9 (floor 2); reporting/wen-quote: survivors=1/6, labels=6 (floor 2); reporting/gao-quote: survivors=1/6, labels=5 (floor 2); reporting/yu-quote: survivors=1/6, labels=4 (floor 2); reporting/wen-plain: survivors=1/2, labels=3 (floor 2); reporting/gao-plain: survivors=1/2, labels=3 (floor 2); reporting/yue-quote: survivors=1/2, labels=2 (floor 2)"
+      "evidence": "experimental/grant: survivors=1/6, labels=2 (floor 2); experimental/hand-over: survivors=1/6, labels=2 (floor 2); experimental/receive: survivors=1/6, labels=2 (floor 2); reporting/wei-quote: survivors=1/6, labels=9 (floor 2); reporting/wen-quote: survivors=1/6, labels=6 (floor 2); reporting/gao-quote: survivors=1/6, labels=4 (floor 2); reporting/yu-quote: survivors=1/6, labels=3 (floor 2); reporting/wen-plain: survivors=1/2, labels=3 (floor 2); reporting/gao-plain: survivors=1/2, labels=3 (floor 2); reporting/yue-quote: survivors=1/2, labels=2 (floor 2)",
+      "claimStatus": "bounded-verified",
+      "claimStatusBasis": "per-construction survival is read from the operational core, and every declared construction is probed",
+      "claimStatusBounds": "the ledger's declared constructions",
+      "supportKind": "evidence",
+      "supportBasis": "the mapping survives because supervised labels eliminated the other permutations"
     },
     {
       "id": "G3",
       "name": "generalises when its own evidence is held out, per grammar",
       "required": true,
       "pass": true,
-      "evidence": "experimental: core 6, accuracy=1, failures=0; reporting: core 14, accuracy=1, failures=0"
+      "evidence": "experimental: core 6, accuracy=1, failures=0; reporting: core 14, accuracy=1, failures=0",
+      "claimStatus": "bounded-verified",
+      "claimStatusBasis": "leave-one-out over the operational core; each held-out record is re-read without itself",
+      "claimStatusBounds": "the core, not the whole store — records held out of the core are not re-read",
+      "supportKind": "evidence",
+      "supportBasis": "accuracy is computed from held-out labelled records"
     },
     {
       "id": "G4",
       "name": "fails closed outside the grammar",
       "required": true,
       "pass": true,
-      "evidence": "6/6 declared negatives returned Unknown"
+      "evidence": "6/6 declared negatives returned Unknown",
+      "claimStatus": "bounded-verified",
+      "claimStatusBasis": "six declared negatives must all return Unknown",
+      "claimStatusBounds": "exactly those six sentences; nothing else is tested for failing closed",
+      "supportKind": "verification",
+      "supportBasis": "six declared negatives are a fixed obligation: each must return Unknown"
     },
     {
       "id": "G5",
       "name": "grounded in the target corpus",
       "required": false,
       "pass": true,
-      "evidence": "wenyan.relations.v1: 0/77884 (0, evidence 6); wenyan.relations.reporting.v1: 16679/77884 (0.214152, evidence 14) — floor 0.01, best grammar wenyan.relations.reporting.v1"
+      "evidence": "wenyan.relations.v1: 0/81575 (0, evidence 6); wenyan.relations.reporting.v1: 20114/81575 (0.246571, evidence 14) — floor 0.01, best grammar wenyan.relations.reporting.v1",
+      "claimStatus": "bounded-experiment",
+      "claimStatusBasis": "a coverage rate measured over the corpus by running each declared grammar over every passage",
+      "claimStatusBounds": "one corpus build; a rebuild moves the denominator",
+      "supportKind": "measurement",
+      "supportBasis": "a coverage rate over one corpus build; it is a ratio, not a proof"
     },
     {
       "id": "G6",
       "name": "durable and re-derivable",
       "required": true,
       "pass": true,
-      "evidence": "49 record(s), 11 retracted (11 retraction record(s)); content hashes verified; corpus-derived sources verified=32/32"
+      "evidence": "49 record(s), 12 retracted (12 retraction record(s)); content hashes verified; corpus-derived sources verified=31/31",
+      "claimStatus": "bounded-verified",
+      "claimStatusBasis": "record and retraction hashes are recomputed, and corpus-derived sources are re-matched by TEXT",
+      "claimStatusBounds": "text equality, not label truth — a record can verify and still be wrong (see conflation C5)",
+      "supportKind": "verification",
+      "supportBasis": "hashes recomputed and source text re-matched — text presence, not label truth"
     },
     {
       "id": "G7",
       "name": "dialogue contract exists and is enforced",
       "required": true,
       "pass": true,
-      "evidence": "contract=wenyan.dialogue.contract.v1, 7 question type(s), 8 invariant(s) each naming its enforcement, out-of-scope declared: Q6, recorded contract violations=0"
+      "evidence": "contract=wenyan.dialogue.contract.v1, 7 question type(s), 8 invariant(s) each naming its enforcement, out-of-scope declared: Q6, recorded contract violations=0",
+      "claimStatus": "definition",
+      "claimStatusBasis": "the contract file is read and its invariants are required to name an enforcer; nothing is measured",
+      "claimStatusBounds": "structure only",
+      "supportKind": "verification",
+      "supportBasis": "structural conformance of the contract file"
     },
     {
       "id": "G8",
       "name": "declared questions answer the target corpus",
       "required": true,
-      "pass": false,
-      "evidence": "best corpus answer rate 0.214152 under wenyan.relations.reporting.v1; floor 0.5",
+      "pass": true,
+      "evidence": "best corpus answer rate 0.246571 under wenyan.relations.reporting.v1; floor 0.15",
+      "claimStatus": "bounded-experiment",
+      "claimStatusBasis": "a rate measured over one corpus build under the declared questions; the floor is 0.15, which is 61% of the measured ceiling",
+      "claimStatusBounds": "one corpus build; the aspirational target 0.5 is NOT met — a PASS here means progress, not arrival (see floors.mjs g8-corpus-answerability)",
+      "supportKind": "measurement",
+      "supportBasis": "the answer rate over the corpus under the declared questions",
       "missing": "the floor is a declared parameter and is not lowered to match the current value: answering a question about real text still fails for the large majority of passages"
     },
     {
@@ -295,14 +335,19 @@
       "name": "every record accounted for: modelled, held out, out of grammar, or excluded by provenance",
       "required": true,
       "pass": true,
-      "evidence": "wenyan.relations.v1: core 6/32 + held out 0 + out-of-grammar 0 + provenance-excluded 0 = 6/6 (provenance authored); wenyan.relations.reporting.v1: core 14/32 + held out 18 + out-of-grammar 0 + provenance-excluded 0 = 32/32 (provenance corpus)"
+      "evidence": "wenyan.relations.v1: core 6/32 + held out 0 + out-of-grammar 0 + provenance-excluded 0 = 6/6 (provenance authored); wenyan.relations.reporting.v1: core 14/32 + held out 17 + out-of-grammar 0 + provenance-excluded 0 = 31/31 (provenance corpus)",
+      "claimStatus": "exact",
+      "claimStatusBasis": "a partition identity over a finite set: core + named held-out + declared out-of-grammar + provenance-excluded must equal the pool, checked by exhaustion over the actual records",
+      "claimStatusBounds": "the pool as loaded; the identity is arithmetic and admits no sampling error",
+      "supportKind": "proof",
+      "supportBasis": "a partition identity over the finite record set, established by exhaustion"
     }
   ],
   "verdict": {
     "readyForComputation": true,
     "readingReady": true,
-    "dialogueReady": false,
-    "readyForConversationalReasoning": false,
+    "dialogueReady": true,
+    "readyForConversationalReasoning": true,
     "readingReadyGrammars": [
       "wenyan.relations.v1",
       "wenyan.relations.reporting.v1"
@@ -337,9 +382,26 @@
         "G8"
       ]
     },
+    "claimStatusLadder": [
+      "construction-target",
+      "definition",
+      "bounded-experiment",
+      "bounded-verified",
+      "exact"
+    ],
+    "rungSummary": {
+      "histogram": {
+        "construction-target": 0,
+        "definition": 1,
+        "bounded-experiment": 2,
+        "bounded-verified": 5,
+        "exact": 1
+      },
+      "weakestRequired": "definition",
+      "passing": 9,
+      "total": 9
+    },
     "reversible": "Because the network is replay(evidence), adding contradicting evidence can raise survivors above 1 and re-open G2. Maturity is not monotone.",
-    "deficits": [
-      "G8 declared questions answer the target corpus: the floor is a declared parameter and is not lowered to match the current value: answering a question about real text still fails for the large majority of passages"
-    ]
+    "deficits": []
   }
 }

@@ -1,87 +1,98 @@
 {
   "schema": "wenyan.grammar.measurement.v1",
-  "generatedAt": "2026-09-23T02:50:50.972Z",
+  "generatedAt": "2026-09-23T11:56:12.668Z",
   "grammar": "wenyan.relations.reporting.v1",
   "corpus": {
-    "passages": 77884,
+    "passages": 81575,
     "maxPassageLength": 32773,
     "maxTextUnits": 2048
   },
   "reach": {
-    "uniqueParse": 16679,
-    "rate": 0.214152,
+    "uniqueParse": 20114,
+    "rate": 0.246571,
     "ambiguousFrameOccurrences": 0,
-    "tooLong": 167,
+    "tooLong": 177,
     "perConstruction": {
-      "wei-quote": 1440,
-      "wen-quote": 420,
-      "gao-quote": 299,
-      "yu-quote": 250,
-      "wen-plain": 504,
-      "gao-plain": 158,
-      "yue-quote": 13608
+      "wei-quote": 1742,
+      "wen-quote": 536,
+      "gao-quote": 369,
+      "yu-quote": 287,
+      "wen-plain": 547,
+      "gao-plain": 171,
+      "yue-quote": 16462
     },
     "perWork": {
-      "analects": 448,
-      "mencius": 393,
+      "analects": 449,
+      "mencius": 437,
       "great-learning": 8,
       "doctrine-of-the-mean": 23,
       "classic-of-poetry": 1,
-      "book-of-documents": 185,
+      "book-of-documents": 205,
       "zhouyi": 3,
-      "book-of-rites": 413,
+      "book-of-rites": 417,
       "laozi": 1,
-      "zhuangzi": 512,
-      "xunzi": 72,
-      "hanfeizi": 407,
+      "zhuangzi": 521,
+      "xunzi": 155,
+      "hanfeizi": 408,
       "mozi": 144,
-      "guanzi": 370,
-      "liezi": 113,
+      "guanzi": 371,
+      "liezi": 115,
       "sunzi": 1,
-      "zuozhuan": 283,
-      "gongyang": 55,
-      "yili": 59,
-      "shiji": 1493,
-      "hanshu": 2166,
-      "sanguozhi": 801,
-      "wenxian-tongkao": 406,
-      "搜神記": 236,
+      "zuozhuan": 326,
+      "gongyang": 59,
+      "yili": 74,
+      "shiji": 1572,
+      "hanshu": 2266,
+      "sanguozhi": 932,
+      "wenxian-tongkao": 1289,
+      "搜神記": 238,
       "異苑": 98,
       "談藪": 13,
       "雲仙雜記": 95,
       "獨異志": 174,
-      "廣異記": 183,
-      "冥報記": 88,
-      "括異誌": 96,
-      "稽神錄": 125,
-      "夷堅志": 1882,
-      "續夷堅志": 41,
-      "聊齋志異": 877,
+      "廣異記": 184,
+      "冥報記": 93,
+      "括異誌": 98,
+      "稽神錄": 127,
+      "夷堅志": 1920,
+      "續夷堅志": 42,
+      "聊齋志異": 883,
       "益智錄": 328,
       "蟫史": 348,
-      "子不語": 836,
-      "玄怪錄": 190,
-      "續玄怪錄": 90,
-      "宣室志": 249,
+      "子不語": 857,
+      "玄怪錄": 194,
+      "續玄怪錄": 95,
+      "宣室志": 255,
       "定命錄": 12,
       "燕丹子": 3,
       "遊仙窟": 205,
+      "枕中記": 4,
       "集異記": 3,
       "南柯太守傳": 13,
       "霍小玉傳": 11,
       "李娃傳": 11,
+      "鶯鶯傳": 5,
+      "任氏傳": 9,
       "博異志": 32,
-      "剪燈新話": 193,
-      "剪燈餘話": 132,
+      "剪燈新話": 197,
+      "剪燈餘話": 139,
       "覓燈因話": 11,
-      "豔異編": 693,
+      "豔異編": 694,
       "周禮": 4,
       "春秋穀梁傳": 33,
       "今文孝經": 16,
-      "四書章句集註": 759,
+      "四書章句集註": 762,
       "楚辭": 3,
-      "文選": 139,
-      "古文觀止": 100
+      "文選": 143,
+      "古文觀止": 115,
+      "國語": 396,
+      "戰國策": 779,
+      "逸周書": 34,
+      "山海經": 10,
+      "穆天子傳": 9,
+      "越絕書": 86,
+      "吳越春秋": 342,
+      "晏子春秋": 214
     },
     "examples": {
       "yue-quote": {
@@ -212,6 +223,28 @@
           }
         ]
       },
+      "gao-plain": {
+        "work": "mencius",
+        "section": "mencius.2",
+        "passageId": "2.11",
+        "sourcePage": "孟子/梁惠王下",
+        "sourceRevid": 2636980,
+        "text": "「臣請為王言樂。今王鼓樂於此，百姓聞王鐘鼓之聲，管龠之音，舉疾首蹙頞而相告曰：『吾王之好鼓樂，夫何使我至於此極也？父子不相見，兄弟妻子離散。』今王田獵於此，百姓聞王車馬之音，見羽旄之美，舉疾首蹙頞而相告曰：『吾王之好田獵，夫何使我至於此極也？父子不相見，兄弟妻子離散。』此無他，不與民同樂也。今王鼓樂於此，百姓聞王鐘鼓之聲，管龠之音，舉欣欣然有喜色而相告曰：『吾王庶幾無疾病與，何以能鼓樂也？』今王田獵於此，百姓聞王車馬之音，見羽旄之美，舉欣欣然有喜色而相告曰：『吾王庶幾無疾病與，何以能田獵也？』此無他，與民同樂也。今王與百姓同樂，則王矣。」",
+        "occurrences": [
+          {
+            "slot": 0,
+            "value": "舉疾首蹙頞而相",
+            "start": 29,
+            "end": 36
+          },
+          {
+            "slot": 1,
+            "value": "吾王之好鼓樂，夫何使我至於此極也？父子不相見，兄弟妻子離散。",
+            "start": 40,
+            "end": 70
+          }
+        ]
+      },
       "gao-quote": {
         "work": "mencius",
         "section": "mencius.8",
@@ -239,36 +272,14 @@
             "end": 57
           }
         ]
-      },
-      "gao-plain": {
-        "work": "book-of-rites",
-        "section": "book-of-rites.4",
-        "passageId": "4.34",
-        "sourcePage": "禮記/檀弓下",
-        "sourceRevid": 2346897,
-        "text": "陳子車死於衛，其妻與其家大夫謀以殉葬，定而后陳子亢至，以告曰：「夫子疾，莫養於下，請以殉葬。」子亢曰：「以殉葬，非禮也；雖然，則彼疾當養者孰若妻與宰？得已，則吾欲已；不得已，則吾欲以二子者之為之也。」於是弗果用。",
-        "occurrences": [
-          {
-            "slot": 0,
-            "value": "以",
-            "start": 27,
-            "end": 28
-          },
-          {
-            "slot": 1,
-            "value": "夫子疾，莫養於下，請以殉葬。",
-            "start": 32,
-            "end": 46
-          }
-        ]
       }
     },
     "ambiguousExamples": []
   },
   "answerable": {
     "evidenceRecords": 14,
-    "passages": 16679,
-    "rate": 0.214152,
+    "passages": 20114,
+    "rate": 0.246571,
     "note": "Requires every construction below to be pinned by supervised evidence; reach is the ceiling this can approach."
   }
 }
