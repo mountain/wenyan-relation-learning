@@ -21,7 +21,7 @@ import crypto from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 import { createTsLoader } from '../lib/tsload.mjs';
 import { loadEvidence, integrityReport, projectModel, verifySources } from './store.mjs';
-import { statusOf, rungSummary, LADDER } from './claim-status.mjs';
+import { statusOf, rungSummary, LADDER, supportOf } from './claim-status.mjs';
 import { selectOperationalCore } from './projection.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
@@ -312,8 +312,10 @@ const gate = (id, name, required, pass, evidence, missing = null) => {
   // The rung is looked up, never passed in: an undeclared gate throws rather than
   // silently inheriting the strength of the gates beside it.
   const { status, basis, bounds } = statusOf(id);
+  const sup = supportOf(id);
   gates.push({ id, name, required, pass, evidence, claimStatus: status, claimStatusBasis: basis,
-    claimStatusBounds: bounds, ...(missing ? { missing } : {}) });
+    claimStatusBounds: bounds, supportKind: sup.kind, supportBasis: sup.basis,
+    ...(missing ? { missing } : {}) });
 };
 
 const unverifiedSources = sourceChecks.filter((s) => !s.ok);
@@ -517,7 +519,7 @@ if (argv.includes('--write')) {
 const mark = (p) => (p ? 'PASS' : 'FAIL');
 console.log(`[readiness] store=${report.store.path} records=${records.length} projection=${projection.model.examples.length}`);
 for (const g of gates) {
-  console.log(`  ${mark(g.pass)} ${g.id} [${g.claimStatus}] ${g.name}${g.required ? '' : ' (optional)'}`);
+  console.log(`  ${mark(g.pass)} ${g.id} [${g.claimStatus} / ${g.supportKind}] ${g.name}${g.required ? '' : ' (optional)'}`);
   console.log(`       ${g.evidence}`);
   if (g.missing) console.log(`       missing: ${g.missing}`);
 }

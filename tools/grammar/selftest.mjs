@@ -181,6 +181,33 @@ check('a two-slot construction permutes TWO roles, so it starts from 2 candidate
   return `two-slot 2 candidates, three-slot 6 — the old "/6" denominator misreported two-slot frames`;
 });
 
+// Word-formation completeness (Adva 0131: "a word may denote a hypothesis; forming the name
+// does not prove it"). The module throws on a construction lacking an interpretation, a reuse
+// contract or a non-empty doesNotLicence list, so loading it IS part of the check; what is
+// asserted here is the content, plus an anti-boilerplate rule.
+check('every construction is a named unit with an interpretation and stated limits', () => {
+  const cs = rep.CONSTRUCTIONS;
+  expect(Array.isArray(cs) && cs.length === rep.CONSTRUCTION_IDS.length,
+    `CONSTRUCTIONS ${cs?.length} vs ids ${rep.CONSTRUCTION_IDS.length}`);
+  expect(cs.map((c) => c.id).join(',') === rep.CONSTRUCTION_IDS.join(','), 'ids and named units disagree');
+  let limits = 0;
+  const seen = new Map();
+  for (const c of cs) {
+    expect(c.interpretation && c.interpretation.length > 30, `${c.id}: interpretation too thin`);
+    expect(c.reuseContract && c.reuseContract.length > 30, `${c.id}: reuse contract too thin`);
+    expect(c.doesNotLicence.length >= 2, `${c.id}: only ${c.doesNotLicence.length} non-licence(s) — a name whose ` +
+      'limits are unstated is what word-formation is supposed to prevent');
+    limits += c.doesNotLicence.length;
+    for (const d of c.doesNotLicence) {
+      // Boilerplate detector: the same sentence reused across constructions would make the
+      // field decoration. Each limit has to be specific to its own construction.
+      if (seen.has(d)) throw new Error(`non-licence reused verbatim by ${seen.get(d)} and ${c.id}: ${d.slice(0, 40)}…`);
+      seen.set(d, c.id);
+    }
+  }
+  return `${cs.length} named units, ${limits} stated limits, none reused verbatim`;
+});
+
 let failed = 0;
 for (const c of cases) {
   if (!c.ok) failed++;

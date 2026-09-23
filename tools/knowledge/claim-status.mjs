@@ -82,6 +82,50 @@ export const GATE_STATUS = {
   },
 };
 
+
+/**
+ * WHAT KIND OF SUPPORT does a gate's PASS rest on?
+ *
+ * Adva 0131 separates three objects that Wenyan had merged into one word ("warrant"):
+ *
+ *   `verify` checks a fixed obligation; `proof` is a proof object and `evidence` may be broader.
+ *
+ *   evidence      supervised labels in the store. Broader than a proof: it can support a
+ *                 reading without establishing it, and a label can be wrong.
+ *   proof         an object that establishes the claim over a declared finite space, by
+ *                 exhaustion rather than sampling.
+ *   verification  a check against a FIXED OBLIGATION — a hash, a text's presence, a
+ *                 declared structural requirement. It says the obligation holds, nothing more.
+ *
+ * A FOURTH KIND IS DECLARED HERE, not taken from Adva: `measurement`. A rate is not a proof
+ * (nothing is exhausted) and not a fixed obligation (it moves when the corpus moves), and
+ * filing it under `evidence` would blur a computed ratio with a supervised label. The
+ * distinction is load-bearing in this repository: G6 verified 29/29 sources while eleven
+ * records carried labels that could not be stated truthfully, so "verified" and "supported"
+ * are not the same claim and must not share a word.
+ */
+export const SUPPORT_KINDS = ['evidence', 'proof', 'verification', 'measurement'];
+
+const SUPPORT = {
+  G1: ['verification', 'parse, integrity and replay are fixed obligations checked against the store'],
+  G2: ['evidence', 'the mapping survives because supervised labels eliminated the other permutations'],
+  G3: ['evidence', 'accuracy is computed from held-out labelled records'],
+  G4: ['verification', 'six declared negatives are a fixed obligation: each must return Unknown'],
+  G5: ['measurement', 'a coverage rate over one corpus build; it is a ratio, not a proof'],
+  G6: ['verification', 'hashes recomputed and source text re-matched — text presence, not label truth'],
+  G7: ['verification', 'structural conformance of the contract file'],
+  G8: ['measurement', 'the answer rate over the corpus under the declared questions'],
+  G9: ['proof', 'a partition identity over the finite record set, established by exhaustion'],
+};
+
+export function supportOf(gateId) {
+  const e = SUPPORT[gateId];
+  if (!e) throw new Error(`gate ${gateId} declares no support kind`);
+  const [kind, basis] = e;
+  if (!SUPPORT_KINDS.includes(kind)) throw new Error(`gate ${gateId}: unknown support kind ${kind}`);
+  return { kind, basis };
+}
+
 export function statusOf(gateId) {
   const e = GATE_STATUS[gateId];
   if (!e) {

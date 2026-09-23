@@ -145,6 +145,129 @@ export function ROLES_FOR_CONSTRUCTION(id: string): RoleName[] {
   return f.roles.slice();
 }
 
+/**
+ * Word-formation: a construction as a NAMED UNIT with an interpretation and a reuse contract.
+ *
+ * Vocabulary from Adva 0131: "`word-formation` records a named unit within a language, with
+ * its interpretation and reuse contract. A word may denote a hypothesis; forming the name
+ * does not prove it."
+ *
+ * Until now the seven constructions were a regex plus prose comments: the name `yue-quote`
+ * carried no stated interpretation, and nothing said what a caller may NOT conclude from
+ * it. `doesNotLicence` is that field. It is REQUIRED and must be non-empty, because a name
+ * whose limits are unstated is precisely the thing 0131 warns about — and this project’s
+ * record shows the cost: `verifySources()` reported 29/29 healthy while eleven records
+ * carried labels that could not be stated truthfully.
+ *
+ * NO CORPUS REACH FIGURE APPEARS HERE, deliberately. A hardcoded "yue-quote covers 20.57%"
+ * goes stale the next time the corpus grows — exactly the failure the gate-dependency map
+ * caught in knowledge/dialogue/readiness.json. Reach is measured by tools/grammar/measure.mjs
+ * and audited by readiness G5.
+ */
+export type Construction = {
+  id: string;
+  frame: string;
+  roles: RoleName[];
+  interpretation: string;
+  reuseContract: string;
+  doesNotLicence: string[];
+};
+
+export const CONSTRUCTIONS: Construction[] = [
+  {
+    id: 'wei-quote', frame: '<A>謂<B>曰：「<S>」', roles: ALL_ROLES,
+    interpretation: 'A speaks to B; S is what A said. All three roles are stated by the frame.',
+    reuseContract: 'The three spans are the surface agent, addressee and quotation, and the mapping was '
+      + 'pinned by supervised labels for THIS construction.',
+    doesNotLicence: [
+      'that 謂 means "said to" everywhere — the name records a frame, not a lexeme',
+      'that B heard, accepted or acted on S',
+      'that A believes S: speakers report other people constantly, and 謂-quotes often do exactly that',
+    ],
+  },
+  {
+    id: 'wen-quote', frame: '<A>問<B>曰：「<S>」', roles: ALL_ROLES,
+    interpretation: 'A asks B, and S is the question asked. All three roles are stated.',
+    reuseContract: 'As wei-quote: three surface spans, mapping pinned by THIS construction’s labels.',
+    doesNotLicence: [
+      'that S is interrogative in form — the frame marks asking, and the quotation is whatever follows',
+      'that B answered: the answer, if any, is outside this construction',
+    ],
+  },
+  {
+    id: 'gao-quote', frame: '<A>告<B>曰：「<S>」', roles: ALL_ROLES,
+    interpretation: 'A informs B; S is what A told B. All three roles are stated.',
+    reuseContract: 'As wei-quote: three surface spans, mapping pinned by THIS construction’s labels.',
+    doesNotLicence: [
+      'that the information was requested or welcome',
+      'that 告 carries the same force here as in 告于宗廟-style ritual formulae',
+    ],
+  },
+  {
+    id: 'yu-quote', frame: '<A>語<B>曰：「<S>」', roles: ALL_ROLES,
+    interpretation: 'A speaks to B; S is what A said. All three roles are stated.',
+    reuseContract: 'As wei-quote: three surface spans, mapping pinned by THIS construction’s labels.',
+    doesNotLicence: [
+      'that 語 implies advice or instruction rather than speech',
+      'anything about the relative status of A and B — that is not in the frame',
+    ],
+  },
+  {
+    id: 'wen-plain', frame: '<A>問曰：「<S>」', roles: AGENT_THEME,
+    interpretation: 'A asks, and S is the question. The frame names a speaker and a question and NO addressee.',
+    reuseContract: 'Two surface spans; recipient is null because the construction does not express it, and '
+      + 'the missing-role contract (tools/grammar/contract.json missingRoleSemantics) governs what that means.',
+    doesNotLicence: [
+      'that there was no addressee — only that this frame does not state one',
+      'that the addressee is unknown, or that it can be recovered from context; if a caller needs it, the '
+      + 'answer about that role is Unknown',
+    ],
+  },
+  {
+    id: 'gao-plain', frame: '<A>告曰：「<S>」', roles: AGENT_THEME,
+    interpretation: 'A announces; S is what was announced. No addressee is expressed.',
+    reuseContract: 'As wen-plain: two spans, recipient null under the missing-role contract.',
+    doesNotLicence: [
+      'that the announcement was public or addressed to anyone in particular',
+      'that A is the origin of S rather than its transmitter',
+    ],
+  },
+  {
+    id: 'yue-quote', frame: '<A>曰：「<S>」', roles: AGENT_THEME,
+    interpretation: 'A speaks; S is what A said. The commonest shape in the corpus, and it states no addressee.',
+    reuseContract: 'Two spans, recipient null under the missing-role contract; the agent span may not contain '
+      + 'a reporting verb, so a verb-bearing run before 曰 is not read as an agent.',
+    doesNotLicence: [
+      'that A is the author of S rather than a quoter — 子曰 quotes, transmits and reports',
+      'that the whole passage is about A: only the frame is read, and a passage may hold several frames '
+      + '(see additionalMatches)',
+      'that A is a person: a book title can occupy the agent slot, and the frame cannot tell',
+    ],
+  },
+];
+
+/** The named units and the pattern table must describe the same set. */
+function assertConstructions() {
+  const ids = FRAMES.map((f) => f.id);
+  const named = CONSTRUCTIONS.map((c) => c.id);
+  if (ids.length !== named.length || ids.some((id, i) => id !== named[i])) {
+    throw new Error(`CONSTRUCTIONS and FRAMES disagree: [${named}] vs [${ids}]`);
+  }
+  for (const c of CONSTRUCTIONS) {
+    const f = FRAMES.find((x) => x.id === c.id)!;
+    if (c.roles.length !== f.roles.length || c.roles.some((r, i) => r !== f.roles[i])) {
+      throw new Error(`construction ${c.id}: declared roles differ from its frame`);
+    }
+    if (!c.interpretation || !c.reuseContract) throw new Error(`construction ${c.id}: no interpretation or reuse contract`);
+    // The field that makes "forming the name does not prove it" checkable.
+    if (!Array.isArray(c.doesNotLicence) || !c.doesNotLicence.length) {
+      throw new Error(`construction ${c.id}: doesNotLicence is empty — a name whose limits are unstated is `
+        + 'exactly what word-formation is supposed to prevent');
+    }
+  }
+}
+assertConstructions();
+
 function permutations(n: number): number[][] {
   // Base case must be n === 0. Written as `n <= 1` it returned `[[]]` for n === 1 — an
   // empty order rather than `[0]` — so permutations(2) and permutations(3) came back

@@ -322,3 +322,47 @@ node tools/knowledge/conflations.mjs [--write] [--json]
 **81,575**——**G8 的数字陈旧了好几轮**。重推后 G8 由 21.42% 变为 **22.43%**，覆盖
 **18,301/81,575**。依赖边不是装饰，它的第一个用处就是指出我自己抱着一个过期读数。
 
+---
+
+## 第四样：支持类型（verify / proof / evidence）与命名单元
+
+Adva 0131 把本仓混成一个词（"warrant"）的三样东西分开：
+
+> `verify` checks a fixed obligation; `proof` is a proof object and `evidence` may be broader.
+
+现在每个门的输出同时给出**强度**与**支持类型**：
+
+```
+PASS G2 [bounded-verified / evidence]     role mapping determined per construction
+PASS G6 [bounded-verified / verification] durable and re-derivable
+PASS G9 [exact / proof]                   every record accounted for
+FAIL G8 [construction-target / measurement] declared questions answer the target corpus
+```
+
+| 支持类型 | 含义 | 归属本仓哪些门 |
+|---|---|---|
+| `evidence` | 库里的监督标注。**比证明宽**：能支持一个读法而不确立它，且标注可能是错的 | G2、G3 |
+| `proof` | 在声明的有限空间上**穷举**确立的证明对象 | G9 |
+| `verification` | 对一个**固定义务**的检查——哈希、文本是否存在、声明的结构要求。它只说该义务成立 | G1、G4、G6、G7 |
+| `measurement` | **第四类，由本仓声明**（非 Adva 原有）：比率既不是穷举也不是固定义务，它随语料移动 | G5、G8 |
+
+第四类为何要单独声明：把比率归到 `evidence` 会把「算出来的比值」与「人给的标注」混为一谈。
+这个区分在本仓是承重的——**G6 曾报 29/29 全部可回查，而当时有 11 条记录的标注根本无法如此陈述**。
+"已核验"与"有支持"不是同一个主张，不该共用一词。
+
+### 命名单元（word-formation）
+
+`relations-reporting.ts` 现在导出 `CONSTRUCTIONS`：7 个构式各为**命名单元**，带
+`interpretation`（解读）、`reuseContract`（复用契约）与 `doesNotLicence`（不授权项，**必填且非空**）。
+
+> A word may denote a hypothesis; forming the name does not prove it. —— 0131
+
+`doesNotLicence` 就是把这句话落成字段。例如 `yue-quote` 明写三条：不授权「A 是 S 的作者而非引用者」、
+不授权「整段都在讲 A」、**不授权「A 是人」**——书名也会占据 agent 槽，而框架分辨不出。
+
+两条自检：模块加载时若某构式缺解读/契约/不授权项即抛错；`tools/grammar/selftest.mjs` 另查
+**同一句话不得被多个构式逐字复用**（防占位填充），实测 7 单元 16 条限制、无逐字重复。
+
+**刻意不放语料覆盖率**：写死「yue-quote 覆盖 20.57%」下次语料一变就陈旧——正是依赖图在
+`knowledge/dialogue/readiness.json` 上抓到的那个失败模式。覆盖率由 `tools/grammar/measure.mjs` 测量。
+
