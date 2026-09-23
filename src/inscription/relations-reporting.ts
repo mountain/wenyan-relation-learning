@@ -85,7 +85,7 @@ export type ReportingReading = {
 export const REPORTING_GRAMMAR_ID = "wenyan.relations.reporting.v1";
 
 /** Entity spans: no sentence punctuation, no quotes, 1..10 characters. */
-const ENTITY = "[^，。；：「」？！、]{1,10}";
+const ENTITY = "[^，。；：︰﹕「」？！、]{1,10}";
 /** Quoted speech is delimited by the text's own quotation marks. */
 // Quotation delimiters are NOT one pair. 「」 is primary and 『』 nested — but some
 // texts and editions use 『』 or plain " or “” as the PRIMARY delimiter, and the grammar then
@@ -94,6 +94,10 @@ const ENTITY = "[^，。；：「」？！、]{1,10}";
 const SPEECH = '[^」』"”]{1,300}';
 /** Opener and closer for the four delimiter styles, kept in one place. */
 const Q_OPEN = '[「『"“]';
+/** The colon is ALSO not one character: 本草綱目 and other Ming/Qing editions use ︰ (︰) and
+ * some use ﹕. Measured: ︰ alone occurs 13,019 times after 曰 in this corpus, and the grammar
+ * read none of them because it demanded ：. Same class of mistake as the quotation delimiters. */
+const COLON = '[：︰﹕]';
 const Q_CLOSE = '[」』"”]';
 
 /**
@@ -110,9 +114,9 @@ const ALL_ROLES: RoleName[] = ['agent', 'recipient', 'theme'];
  * more specific reading — and this pattern additionally refuses to contain a
  * reporting verb, so `王問曰：「…」` cannot be read with agent `王問`.
  */
-const ENTITY_NO_VERB = "(?:(?![謂問告語])[^，。；：「」？！、]){1,10}";
+const ENTITY_NO_VERB = "(?:(?![謂問告語])[^，。；：︰﹕「」？！、]){1,10}";
 /** Recipient slot: may not be the 曰 that belongs to the verb. */
-const ENTITY_NO_YUE = "(?:(?!曰)[^，。；：「」？！、]){1,10}";
+const ENTITY_NO_YUE = "(?:(?!曰)[^，。；：︰﹕「」？！、]){1,10}";
 const AGENT_THEME: RoleName[] = ['agent', 'theme'];
 
 const FRAMES: { id: string; verb: string; source: string; roles: RoleName[] }[] = [
@@ -128,19 +132,19 @@ const FRAMES: { id: string; verb: string; source: string; roles: RoleName[] }[] 
   // corpus records. And `王問曰：「何謂也？」` was silently absorbed by the no-曰
   // three-slot frame with recipient `曰` — a slot holding the verb itself. Both are
   // fixed by ordering the frames by how many markers they require.
-  { id: 'wei-quote', verb: '謂', source: `(${ENTITY})謂(${ENTITY_NO_YUE})曰：${Q_OPEN}(${SPEECH})${Q_CLOSE}`, roles: ALL_ROLES },
-  { id: 'wen-quote', verb: '問', source: `(${ENTITY})問(${ENTITY_NO_YUE})曰：${Q_OPEN}(${SPEECH})${Q_CLOSE}`, roles: ALL_ROLES },
-  { id: 'gao-quote', verb: '告', source: `(${ENTITY})告(${ENTITY_NO_YUE})曰：${Q_OPEN}(${SPEECH})${Q_CLOSE}`, roles: ALL_ROLES },
-  { id: 'yu-quote', verb: '語', source: `(${ENTITY})語(${ENTITY_NO_YUE})曰：${Q_OPEN}(${SPEECH})${Q_CLOSE}`, roles: ALL_ROLES },
+  { id: 'wei-quote', verb: '謂', source: `(${ENTITY})謂(${ENTITY_NO_YUE})曰${COLON}${Q_OPEN}(${SPEECH})${Q_CLOSE}`, roles: ALL_ROLES },
+  { id: 'wen-quote', verb: '問', source: `(${ENTITY})問(${ENTITY_NO_YUE})曰${COLON}${Q_OPEN}(${SPEECH})${Q_CLOSE}`, roles: ALL_ROLES },
+  { id: 'gao-quote', verb: '告', source: `(${ENTITY})告(${ENTITY_NO_YUE})曰${COLON}${Q_OPEN}(${SPEECH})${Q_CLOSE}`, roles: ALL_ROLES },
+  { id: 'yu-quote', verb: '語', source: `(${ENTITY})語(${ENTITY_NO_YUE})曰${COLON}${Q_OPEN}(${SPEECH})${Q_CLOSE}`, roles: ALL_ROLES },
   // Two-slot forms: the addressee is simply not there. `子曰：「學而時習之。」` is the
   // commonest shape in the corpus and states a speaker and a quotation only.
   // Only the two-slot 問/告 forms are declared: measured on the corpus, the two-slot
   // 謂/語 forms are dominated by adverbials and particles (厲聲謂曰, 樅公相謂曰,
   // 蓋其語曰, 故諸儒爲之語曰). Labelling those spans as the agent would assert something
   // false, and this grammar may only carry evidence a supervisor can state truthfully.
-  { id: 'wen-plain', verb: '問', source: `(${ENTITY_NO_VERB})問曰：${Q_OPEN}(${SPEECH})${Q_CLOSE}`, roles: AGENT_THEME },
-  { id: 'gao-plain', verb: '告', source: `(${ENTITY_NO_VERB})告曰：${Q_OPEN}(${SPEECH})${Q_CLOSE}`, roles: AGENT_THEME },
-  { id: 'yue-quote', verb: '曰', source: `(${ENTITY_NO_VERB})曰：${Q_OPEN}(${SPEECH})${Q_CLOSE}`, roles: AGENT_THEME },
+  { id: 'wen-plain', verb: '問', source: `(${ENTITY_NO_VERB})問曰${COLON}${Q_OPEN}(${SPEECH})${Q_CLOSE}`, roles: AGENT_THEME },
+  { id: 'gao-plain', verb: '告', source: `(${ENTITY_NO_VERB})告曰${COLON}${Q_OPEN}(${SPEECH})${Q_CLOSE}`, roles: AGENT_THEME },
+  { id: 'yue-quote', verb: '曰', source: `(${ENTITY_NO_VERB})曰${COLON}${Q_OPEN}(${SPEECH})${Q_CLOSE}`, roles: AGENT_THEME },
 ];
 
 export const CONSTRUCTION_IDS = FRAMES.map((f) => f.id);

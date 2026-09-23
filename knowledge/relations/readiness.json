@@ -1,6 +1,6 @@
 {
   "schema": "wenyan.relations.readiness.v1",
-  "generatedAt": "2026-09-23T11:58:28.406Z",
+  "generatedAt": "2026-09-23T12:17:17.617Z",
   "grammar": "wenyan.relations.v1",
   "store": {
     "path": "knowledge/relations/evidence.jsonl",
@@ -189,8 +189,8 @@
   ],
   "corpusCoverage": {
     "passages": 81575,
-    "known": 20114,
-    "rate": 0.246571,
+    "known": 20125,
+    "rate": 0.246705,
     "readErrors": 0,
     "firstReadError": null,
     "perGrammar": {
@@ -201,8 +201,8 @@
         "readErrors": 0
       },
       "wenyan.relations.reporting.v1": {
-        "known": 20114,
-        "rate": 0.246571,
+        "known": 20125,
+        "rate": 0.246705,
         "evidenceRecords": 14,
         "readErrors": 0
       }
@@ -286,7 +286,7 @@
       "name": "grounded in the target corpus",
       "required": false,
       "pass": true,
-      "evidence": "wenyan.relations.v1: 0/81575 (0, evidence 6); wenyan.relations.reporting.v1: 20114/81575 (0.246571, evidence 14) — floor 0.01, best grammar wenyan.relations.reporting.v1",
+      "evidence": "wenyan.relations.v1: 0/81575 (0, evidence 6); wenyan.relations.reporting.v1: 20125/81575 (0.246705, evidence 14) — floor 0.01, best grammar wenyan.relations.reporting.v1",
       "claimStatus": "bounded-experiment",
       "claimStatusBasis": "a coverage rate measured over the corpus by running each declared grammar over every passage",
       "claimStatusBounds": "one corpus build; a rebuild moves the denominator",
@@ -322,7 +322,7 @@
       "name": "declared questions answer the target corpus",
       "required": true,
       "pass": true,
-      "evidence": "best corpus answer rate 0.246571 under wenyan.relations.reporting.v1; floor 0.15",
+      "evidence": "best corpus answer rate 0.246705 under wenyan.relations.reporting.v1; floor 0.15",
       "claimStatus": "bounded-experiment",
       "claimStatusBasis": "a rate measured over one corpus build under the declared questions; the floor is 0.15, which is 61% of the measured ceiling",
       "claimStatusBounds": "one corpus build; the aspirational target 0.5 is NOT met — a PASS here means progress, not arrival (see floors.mjs g8-corpus-answerability)",

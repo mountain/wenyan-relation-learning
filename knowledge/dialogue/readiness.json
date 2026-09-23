@@ -1,6 +1,6 @@
 {
   "schema": "wenyan.dialogue.readiness.v1",
-  "generatedAt": "2026-09-23T11:57:27.873Z",
+  "generatedAt": "2026-09-23T12:16:50.318Z",
   "contract": {
     "schema": "wenyan.dialogue.contract.v1",
     "checks": [
@@ -117,13 +117,13 @@
     },
     "wenyan.relations.reporting.v1": {
       "corpusQuestions": 81575,
-      "answered": 20114,
-      "rate": 0.246571,
+      "answered": 20125,
+      "rate": 0.246705,
       "evidenceRecords": 31,
       "topUnknownReasons": [
         [
           "outside-declared-grammar",
-          61461
+          61450
         ]
       ]
     }
@@ -147,7 +147,7 @@
     "q1AnswerRateOverall": 0.000074,
     "q2AnswerRateOverall": 0.021292,
     "bestGrammarOnCorpus": "wenyan.relations.reporting.v1",
-    "bestCorpusAnswerRate": 0.246571,
+    "bestCorpusAnswerRate": 0.246705,
     "glossIsRefusedByContract": true,
     "note": "A high rate on authored evidence with a low rate on the corpus means the dialogue works, but mostly about the sentences it was taught. The corpus rate is now non-zero because a grammar that occurs in real text was added; it is still small, and it is per question, not a claim about understanding."
   },

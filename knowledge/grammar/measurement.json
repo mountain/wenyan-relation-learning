@@ -1,6 +1,6 @@
 {
   "schema": "wenyan.grammar.measurement.v1",
-  "generatedAt": "2026-09-23T12:01:46.117Z",
+  "generatedAt": "2026-09-23T12:15:34.176Z",
   "grammar": "wenyan.relations.reporting.v1",
   "corpus": {
     "passages": 81575,
@@ -8,18 +8,18 @@
     "maxTextUnits": 2048
   },
   "reach": {
-    "uniqueParse": 20114,
-    "rate": 0.246571,
+    "uniqueParse": 20125,
+    "rate": 0.246705,
     "ambiguousFrameOccurrences": 0,
     "tooLong": 177,
     "perConstruction": {
-      "wei-quote": 1742,
-      "wen-quote": 536,
+      "wei-quote": 1744,
+      "wen-quote": 537,
       "gao-quote": 369,
       "yu-quote": 287,
-      "wen-plain": 547,
+      "wen-plain": 548,
       "gao-plain": 171,
-      "yue-quote": 16462
+      "yue-quote": 16469
     },
     "perWork": {
       "analects": 449,
@@ -32,7 +32,7 @@
       "book-of-rites": 417,
       "laozi": 1,
       "zhuangzi": 521,
-      "xunzi": 155,
+      "xunzi": 156,
       "hanfeizi": 408,
       "mozi": 144,
       "guanzi": 371,
@@ -43,7 +43,7 @@
       "yili": 74,
       "shiji": 1572,
       "hanshu": 2266,
-      "sanguozhi": 932,
+      "sanguozhi": 941,
       "wenxian-tongkao": 1289,
       "搜神記": 238,
       "異苑": 98,
@@ -84,7 +84,7 @@
       "四書章句集註": 762,
       "楚辭": 3,
       "文選": 143,
-      "古文觀止": 115,
+      "古文觀止": 116,
       "國語": 396,
       "戰國策": 779,
       "逸周書": 34,
@@ -147,8 +147,8 @@
       },
       "xunzi": {
         "passages": 481,
-        "readable": 155,
-        "density": 0.3222
+        "readable": 156,
+        "density": 0.3243
       },
       "hanfeizi": {
         "passages": 744,
@@ -202,8 +202,8 @@
       },
       "sanguozhi": {
         "passages": 2309,
-        "readable": 932,
-        "density": 0.4036
+        "readable": 941,
+        "density": 0.4075
       },
       "wenxian-tongkao": {
         "passages": 16957,
@@ -437,8 +437,8 @@
       },
       "古文觀止": {
         "passages": 863,
-        "readable": 115,
-        "density": 0.1333
+        "readable": 116,
+        "density": 0.1344
       },
       "國語": {
         "passages": 517,
@@ -665,8 +665,8 @@
   },
   "answerable": {
     "evidenceRecords": 14,
-    "passages": 20114,
-    "rate": 0.246571,
+    "passages": 20125,
+    "rate": 0.246705,
     "note": "Requires every construction below to be pinned by supervised evidence; reach is the ceiling this can approach."
   }
 }
