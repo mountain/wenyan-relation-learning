@@ -22,6 +22,7 @@ import { fileURLToPath } from 'node:url';
 import { createTsLoader } from '../lib/tsload.mjs';
 import { loadEvidence, integrityReport, projectModel, verifySources } from './store.mjs';
 import { statusOf, rungSummary, LADDER, supportOf } from './claim-status.mjs';
+import { floorValue, floorLines } from './floors.mjs';
 import { selectOperationalCore } from './projection.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
@@ -66,12 +67,16 @@ const PROBES = {
 };
 const CONSTRUCTIONS = Object.keys(PROBES);
 
-/** Declared floors. These are the thresholds; change them deliberately. */
+/**
+ * Declared floors. The values live in floors.mjs WITH their history, so a threshold carries a
+ * record of what it was, when it changed and on what basis — a bare constant cannot show
+ * whether it was moved to sit just under the measured value.
+ */
 const FLOORS = {
-  labelledPerConstructionForDetermination: 2,
-  labelledPerConstructionForHoldout: 2,
-  negativeCases: 6,
-  corpusCoverageRate: 0.01,
+  labelledPerConstructionForDetermination: floorValue('labelled-per-construction-determination'),
+  labelledPerConstructionForHoldout: floorValue('labelled-per-construction-holdout'),
+  negativeCases: floorValue('negative-cases'),
+  corpusCoverageRate: floorValue('corpus-coverage-rate'),
 };
 
 const NEGATIVES = [
@@ -395,7 +400,7 @@ gate('G7', 'dialogue contract exists and is enforced', true,
   `out-of-scope declared: ${dialogue.outOfScope.join(',') || 'none'}, recorded contract violations=${dialogue.violations ?? 'no measurement'}`,
   dialogue.contractExists ? null : 'no declared dialogue contract');
 
-const G8_FLOOR = 0.5;
+const G8_FLOOR = floorValue('g8-corpus-answerability');
 gate('G8', 'declared questions answer the target corpus', true,
   dialogue.bestCorpusRate !== null && dialogue.bestCorpusRate >= G8_FLOOR,
   `best corpus answer rate ${dialogue.bestCorpusRate ?? 'unmeasured'} under ${dialogue.bestGrammar ?? 'n/a'}; floor ${G8_FLOOR}`,
@@ -524,6 +529,8 @@ for (const g of gates) {
   if (g.missing) console.log(`       missing: ${g.missing}`);
 }
 const rungs = rungSummary(gates);
+for (const line of floorLines()) console.log(`[floors] ${line}`);
+
 console.log(`\n[claim-status] ladder ${LADDER.join(' < ')}`);
 console.log(`[claim-status] passing gates by rung: ` +
   LADDER.filter((r) => rungs.histogram[r]).map((r) => `${r} ${rungs.histogram[r]}`).join(', '));
