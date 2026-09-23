@@ -300,3 +300,25 @@ node tools/knowledge/conflations.mjs [--write] [--json]
 - 不声称可采纳性规则完整：它们是**声明的模式清单而非解析器**，跨度可以通过清单却依然是错的
   （见 `tools/grammar/contract.json` 的 `labelAdmissibility.limitations`，见证为 `敖者` 那条）。
 
+---
+
+## 三样附加物：claim status、apertures、gate dependencies
+
+三者都借自 Adva，各解决一个不同的读法问题。
+
+| 工具 | 解决什么 | 调用 |
+|---|---|---|
+| `claim-status.mjs` | `PASS` 混同了「跑了一次有界测量」与「这成立」。五级阶梯，每门必须声明自己属哪一级并给依据与边界；未声明即抛错 | `node tools/knowledge/readiness.mjs`（已并入输出） |
+| `apertures.mjs` | 声明规则会静默做错事的地方。**数字由扫描器生成，人只维护分类**；文件开头印着「不要编辑本文件」 | `node tools/knowledge/apertures.mjs [--write]` |
+| `gate-dependencies.mjs` | 门必须从工作区重新推导，不能凭记忆。三类边：`READS`（依赖坏了门就**无意义**而非为假）、`TRIGGERS`（改了某产物后哪些门陈旧）、`REOPEN`（非单调：通过的门会被重新打开） | `node tools/knowledge/gate-dependencies.mjs [--since <rev>]` |
+
+**三者都有同一个自检**：未声明的门/边一律抛错，且 `gate-dependencies` 会核对门清单是否与
+`readiness.mjs` 一致——否则这张图描述的是另一套门。
+
+### 它当场抓到的第一件事
+
+`--since` 跑在「建入 8 部史书」那一轮上，报出 **G5、G6、G8 都需重推**。核对发现
+`knowledge/dialogue/readiness.json` 的分母还停在 **77,884**（建 8 部之前），而语料已是
+**81,575**——**G8 的数字陈旧了好几轮**。重推后 G8 由 21.42% 变为 **22.43%**，覆盖
+**18,301/81,575**。依赖边不是装饰，它的第一个用处就是指出我自己抱着一个过期读数。
+
