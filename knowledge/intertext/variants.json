@@ -20,7 +20,8 @@
     {
       "from": "惟",
       "to": "维",
-      "measuredGain": 0
+      "measuredGain": null,
+      "whyRejected": "ENTRY WAS MIS-FORMED, and the mistake is recorded: the target was typed in its simplified form 维 while the pair being judged is 惟/維, which the cited works actually write (維 1595 in the corpus, 260 in 詩經; 维 35 corpus-wide, 0 in 詩經). The correctly-formed pair measures +17 and is the highest-yield candidate found — see measuredNotAdmitted. The 0 recorded here was a typo's result, not a measurement."
     },
     {
       "from": "惟",
@@ -45,7 +46,8 @@
     {
       "from": "说",
       "to": "悅",
-      "measuredGain": 0
+      "measuredGain": 0,
+      "whyRejected": "a LOAN between different words, not an orthographic variant: 说/悅 and 见/現 are not one word written two ways. Rejected on the admission rule. (An earlier note here blamed a mis-typed form; that explanation was itself wrong — these two forms do occur in the corpus, 说 8 times and 见 51 times, and the zero is legitimate.)"
     },
     {
       "from": "女",
@@ -65,7 +67,8 @@
     {
       "from": "见",
       "to": "現",
-      "measuredGain": 0
+      "measuredGain": 0,
+      "whyRejected": "a LOAN between different words, not an orthographic variant: 说/悅 and 见/現 are not one word written two ways. Rejected on the admission rule. (An earlier note here blamed a mis-typed form; that explanation was itself wrong — these two forms do occur in the corpus, 说 8 times and 见 51 times, and the zero is legitimate.)"
     },
     {
       "from": "竟",
@@ -93,5 +96,73 @@
     "The table is not a variant dictionary: it is the subset that quotation matching needed and measurement supported.",
     "Rejected entries were MEASURED, not overlooked — the zero is a result.",
     "A variant pair normalises BOTH sides, so it can in principle create a match that is not a quotation; the gains above are small precisely because the pairs are few and orthographic."
-  ]
+  ],
+  "measuredNotAdmitted": {
+    "why": "Measured but NOT admitted. Admission needs human judgement on top of the rule (same word written two ways, never a phonetic loan), and this project has no variant dictionary to appeal to.",
+    "measured": [
+      {
+        "from": "惟",
+        "to": "維",
+        "gain": 17,
+        "occursInCorpus": 5326,
+        "note": "well-attested particle variants (惟/維/唯); highest explanatory power found"
+      },
+      {
+        "from": "爲",
+        "to": "為",
+        "gain": 7,
+        "occursInCorpus": 18501,
+        "note": "two forms of the same character"
+      },
+      {
+        "from": "毋",
+        "to": "無",
+        "gain": 5,
+        "occursInCorpus": 2042,
+        "note": "attested variant in prohibitions"
+      },
+      {
+        "from": "雍",
+        "to": "雝",
+        "gain": 5,
+        "occursInCorpus": 1781,
+        "note": "雝 is the ancient form of 雍"
+      },
+      {
+        "from": "緡",
+        "to": "緜",
+        "gain": 3,
+        "occursInCorpus": 615,
+        "note": "詩經 writes 緜蠻; hosts write 緡"
+      },
+      {
+        "from": "昭",
+        "to": "炤",
+        "gain": 3,
+        "occursInCorpus": 4732,
+        "note": "詩經 正月 writes 亦孔之炤"
+      },
+      {
+        "from": "普",
+        "to": "溥",
+        "gain": 2,
+        "occursInCorpus": 418,
+        "note": "詩經 writes 溥天之下"
+      },
+      {
+        "from": "協",
+        "to": "洽",
+        "gain": 2,
+        "occursInCorpus": 574,
+        "note": "詩經 writes 洽比其鄰"
+      },
+      {
+        "from": "後",
+        "to": "后",
+        "gain": 3,
+        "occursInCorpus": 27610,
+        "note": "REJECT ON THE RULE, not on gain: 后 and 後 are different words in most texts (后 = sovereign). 易 uses 后 for 後, but admitting the pair globally would rewrite every \"after\" in the corpus. This is exactly the phonetic-loan case the admission rule refuses — recorded because a real gain of 3 is otherwise tempting."
+      }
+    ]
+  }
 }

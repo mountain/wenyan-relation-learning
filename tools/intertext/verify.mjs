@@ -69,6 +69,25 @@ const hostText = (r) => {
   return null;
 };
 
+// A variant entry whose `from` character NEVER occurs in the corpus cannot fire, so it is dead
+// weight and now a loud failure rather than a silent zero.
+//
+// WHAT THIS CHECK DOES NOT CATCH — recorded because its negative control failed. It was written
+// to catch the mistake that actually happened (惟→维 recorded as a rejected pair with gain 0,
+// while the intended pair 惟/維 measures +17), and it does NOT catch it: 维 occurs 35 times
+// corpus-wide, just never in 詩經. A `from` character being absent everywhere is a stricter
+// condition than being absent where the pair would have to fire. Detecting the real case needs
+// per-work counts (`维` 0 in 詩經 against `維` 260) and a judgement about which work the pair is
+// for — that is a report, not a guard, and it is not implemented here rather than pretended.
+const corpusText = [...works.values()].flatMap((d) => d.sections.flatMap((s) => s.passages.map((p) => p.text))).join('');
+const inert = variants.filter((v) => !corpusText.includes(v.from));
+if (inert.length) {
+  console.error(`[intertext:verify] ${inert.length} variant entry(ies) can never fire — their \`from\` character ` +
+    `does not occur in the corpus: ${inert.map((v) => `${v.from}→${v.to}`).join(', ')}. ` +
+    'Either the entry is dead weight or its form is mistyped.');
+  process.exit(1);
+}
+
 const records = fs.readFileSync(RECORDS, 'utf8').split('\n').filter(Boolean).map((l) => JSON.parse(l));
 const drift = [];
 let ok = 0;
