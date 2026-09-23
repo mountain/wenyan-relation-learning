@@ -1,0 +1,2132 @@
+{
+  "schema": "wenyan.relations.undeclared-density.v1",
+  "generatedAt": "2026-09-23T12:22:53.420Z",
+  "why": "Density under the current grammar ranks the already-read books first, which is the wrong order for acquisition. This measures the complement: passages the declared CANDIDATES would read.",
+  "candidates": [
+    {
+      "id": "ri-yong-shu",
+      "hint": "每X一Y — quantity",
+      "pattern": "/(每|各)([^，。；：]{1,12})(一|二|三|四|五|六|七|八|九|十|百|千|萬)/g"
+    },
+    {
+      "id": "yi-wei",
+      "hint": "以X為Y — operation on a material",
+      "pattern": "/以([^，。；：]{1,16})為([^，。；：]{1,16})/g"
+    },
+    {
+      "id": "shao-zhi",
+      "hint": "verb-object modifiers",
+      "pattern": "/(少|多|久|細|熟)([^，。；：]{0,6})(之|而)/g"
+    },
+    {
+      "id": "zhe-ye",
+      "hint": "X者，Y也 — definition",
+      "pattern": "/([^，。；：]{1,16})者[，、]([^，。；：]{1,24})也/g"
+    },
+    {
+      "id": "fan-zhe",
+      "hint": "凡X者 — the classical conditional",
+      "pattern": "/凡([^，。；：]{1,24})者/g"
+    },
+    {
+      "id": "ruo-ze",
+      "hint": "若X則Y — conditional procedure",
+      "pattern": "/若([^，。；：]{1,16})[，、]?則([^，。；：]{1,20})/g"
+    },
+    {
+      "id": "yi-yue",
+      "hint": "一曰X — alternate name",
+      "pattern": "/一曰([^，。；：]{1,20})/g"
+    },
+    {
+      "id": "qi-fa",
+      "hint": "其法… — the recipe",
+      "pattern": "/其法([^。]{1,40})/g"
+    },
+    {
+      "id": "fan-jie",
+      "hint": "凡X皆Y — universal procedure",
+      "pattern": "/凡([^，。；：]{1,24})(皆|俱|並|盡)/g"
+    },
+    {
+      "id": "shang-yue",
+      "hint": "CONTROL: a speech frame that measured 0 in this slice before",
+      "pattern": "/上曰/g"
+    },
+    {
+      "id": "yue-noquote",
+      "hint": "无引号言语帧 <A>曰：<S>（言语止于括号外第一个。；！？）— 候选，替换风险未测",
+      "pattern": "/((?:(?!曰)[^，。；：︰﹕「」『』\"“”？！、]){1,10})(曰|云)[：︰﹕]([^。；！？]{1,300})/g"
+    }
+  ],
+  "scope": {
+    "works": 99,
+    "passages": 159248,
+    "readable": 21688
+  },
+  "perWork": [
+    {
+      "work": "analects",
+      "group": null,
+      "passages": 507,
+      "readable": 449,
+      "density": 0.8856,
+      "undeclared": 3,
+      "undeclaredDensity": 0.0059,
+      "perCandidate": {
+        "zhe-ye": 1,
+        "shao-zhi": 1,
+        "ruo-ze": 1
+      }
+    },
+    {
+      "work": "book-of-documents",
+      "group": null,
+      "passages": 412,
+      "readable": 205,
+      "density": 0.4976,
+      "undeclared": 23,
+      "undeclaredDensity": 0.0558,
+      "perCandidate": {
+        "yue-noquote": 15,
+        "yi-yue": 7,
+        "yi-wei": 1,
+        "shao-zhi": 1
+      }
+    },
+    {
+      "work": "book-of-rites",
+      "group": null,
+      "passages": 1332,
+      "readable": 417,
+      "density": 0.3131,
+      "undeclared": 256,
+      "undeclaredDensity": 0.1922,
+      "perCandidate": {
+        "zhe-ye": 97,
+        "yue-noquote": 94,
+        "yi-wei": 43,
+        "fan-zhe": 28,
+        "ruo-ze": 21,
+        "shao-zhi": 10,
+        "ri-yong-shu": 5,
+        "fan-jie": 3,
+        "yi-yue": 2,
+        "qi-fa": 1
+      }
+    },
+    {
+      "work": "classic-of-poetry",
+      "group": null,
+      "passages": 663,
+      "readable": 1,
+      "density": 0.0015,
+      "undeclared": 3,
+      "undeclaredDensity": 0.0045,
+      "perCandidate": {
+        "yi-wei": 1,
+        "zhe-ye": 1,
+        "ri-yong-shu": 1
+      }
+    },
+    {
+      "work": "doctrine-of-the-mean",
+      "group": null,
+      "passages": 34,
+      "readable": 23,
+      "density": 0.6765,
+      "undeclared": 5,
+      "undeclaredDensity": 0.1471,
+      "perCandidate": {
+        "zhe-ye": 3,
+        "yue-noquote": 3
+      }
+    },
+    {
+      "work": "gongyang",
+      "group": null,
+      "passages": 1757,
+      "readable": 59,
+      "density": 0.0336,
+      "undeclared": 67,
+      "undeclaredDensity": 0.0381,
+      "perCandidate": {
+        "zhe-ye": 41,
+        "yi-wei": 24,
+        "shao-zhi": 3,
+        "fan-zhe": 1,
+        "yi-yue": 1,
+        "ruo-ze": 1,
+        "yue-noquote": 1
+      }
+    },
+    {
+      "work": "great-learning",
+      "group": null,
+      "passages": 11,
+      "readable": 8,
+      "density": 0.7273,
+      "undeclared": 1,
+      "undeclaredDensity": 0.0909,
+      "perCandidate": {
+        "zhe-ye": 1,
+        "yue-noquote": 1
+      }
+    },
+    {
+      "work": "guanzi",
+      "group": null,
+      "passages": 688,
+      "readable": 371,
+      "density": 0.5392,
+      "undeclared": 175,
+      "undeclaredDensity": 0.2544,
+      "perCandidate": {
+        "zhe-ye": 130,
+        "yue-noquote": 73,
+        "fan-zhe": 24,
+        "shao-zhi": 22,
+        "yi-yue": 14,
+        "qi-fa": 10,
+        "ruo-ze": 7,
+        "fan-jie": 1
+      }
+    },
+    {
+      "work": "hanfeizi",
+      "group": null,
+      "passages": 744,
+      "readable": 408,
+      "density": 0.5484,
+      "undeclared": 165,
+      "undeclaredDensity": 0.2218,
+      "perCandidate": {
+        "zhe-ye": 109,
+        "yue-noquote": 63,
+        "shao-zhi": 23,
+        "fan-zhe": 12,
+        "qi-fa": 12,
+        "yi-yue": 9,
+        "ruo-ze": 8,
+        "fan-jie": 2,
+        "shang-yue": 1
+      }
+    },
+    {
+      "work": "hanshu",
+      "group": null,
+      "passages": 8015,
+      "readable": 2266,
+      "density": 0.2827,
+      "undeclared": 906,
+      "undeclaredDensity": 0.113,
+      "perCandidate": {
+        "yi-wei": 405,
+        "yue-noquote": 207,
+        "zhe-ye": 168,
+        "shao-zhi": 154,
+        "ri-yong-shu": 57,
+        "yi-yue": 26,
+        "fan-zhe": 18,
+        "qi-fa": 12,
+        "ruo-ze": 11,
+        "shang-yue": 9,
+        "fan-jie": 1
+      }
+    },
+    {
+      "work": "laozi",
+      "group": null,
+      "passages": 434,
+      "readable": 1,
+      "density": 0.0023,
+      "undeclared": 25,
+      "undeclaredDensity": 0.0576,
+      "perCandidate": {
+        "yi-wei": 18,
+        "shao-zhi": 4,
+        "yue-noquote": 2,
+        "yi-yue": 1,
+        "ri-yong-shu": 1,
+        "zhe-ye": 1,
+        "fan-zhe": 1
+      }
+    },
+    {
+      "work": "liezi",
+      "group": null,
+      "passages": 139,
+      "readable": 115,
+      "density": 0.8273,
+      "undeclared": 8,
+      "undeclaredDensity": 0.0576,
+      "perCandidate": {
+        "yue-noquote": 6,
+        "zhe-ye": 4,
+        "shao-zhi": 1,
+        "fan-zhe": 1
+      }
+    },
+    {
+      "work": "mencius",
+      "group": null,
+      "passages": 742,
+      "readable": 437,
+      "density": 0.5889,
+      "undeclared": 37,
+      "undeclaredDensity": 0.0499,
+      "perCandidate": {
+        "zhe-ye": 18,
+        "yi-wei": 12,
+        "yue-noquote": 9,
+        "ruo-ze": 6,
+        "shao-zhi": 1,
+        "fan-zhe": 1
+      }
+    },
+    {
+      "work": "mozi",
+      "group": null,
+      "passages": 650,
+      "readable": 144,
+      "density": 0.2215,
+      "undeclared": 191,
+      "undeclaredDensity": 0.2938,
+      "perCandidate": {
+        "zhe-ye": 102,
+        "yue-noquote": 94,
+        "ruo-ze": 28,
+        "shao-zhi": 16,
+        "fan-zhe": 14,
+        "ri-yong-shu": 9,
+        "yi-yue": 2,
+        "qi-fa": 1
+      }
+    },
+    {
+      "work": "sanguozhi",
+      "group": null,
+      "passages": 2308,
+      "readable": 941,
+      "density": 0.4077,
+      "undeclared": 331,
+      "undeclaredDensity": 0.1434,
+      "perCandidate": {
+        "yue-noquote": 151,
+        "yi-wei": 136,
+        "shao-zhi": 42,
+        "zhe-ye": 34,
+        "ri-yong-shu": 19,
+        "ruo-ze": 15,
+        "fan-zhe": 3,
+        "qi-fa": 3,
+        "yi-yue": 1,
+        "fan-jie": 1
+      }
+    },
+    {
+      "work": "shiji",
+      "group": null,
+      "passages": 4760,
+      "readable": 1572,
+      "density": 0.3303,
+      "undeclared": 619,
+      "undeclaredDensity": 0.13,
+      "perCandidate": {
+        "zhe-ye": 220,
+        "yi-wei": 215,
+        "yue-noquote": 175,
+        "shao-zhi": 65,
+        "yi-yue": 16,
+        "ri-yong-shu": 14,
+        "fan-zhe": 8,
+        "ruo-ze": 3,
+        "qi-fa": 2,
+        "fan-jie": 1,
+        "shang-yue": 1
+      }
+    },
+    {
+      "work": "sunzi",
+      "group": null,
+      "passages": 74,
+      "readable": 1,
+      "density": 0.0135,
+      "undeclared": 49,
+      "undeclaredDensity": 0.6622,
+      "perCandidate": {
+        "zhe-ye": 32,
+        "yue-noquote": 17,
+        "fan-zhe": 8,
+        "yi-yue": 3,
+        "shao-zhi": 3,
+        "yi-wei": 3,
+        "qi-fa": 1
+      }
+    },
+    {
+      "work": "wenxian-tongkao",
+      "group": null,
+      "passages": 16934,
+      "readable": 1289,
+      "density": 0.0761,
+      "undeclared": 6193,
+      "undeclaredDensity": 0.3657,
+      "perCandidate": {
+        "yue-noquote": 4842,
+        "yi-wei": 1169,
+        "ri-yong-shu": 517,
+        "shao-zhi": 390,
+        "zhe-ye": 379,
+        "ruo-ze": 175,
+        "fan-zhe": 161,
+        "fan-jie": 92,
+        "qi-fa": 73,
+        "yi-yue": 46,
+        "shang-yue": 2
+      }
+    },
+    {
+      "work": "xunzi",
+      "group": null,
+      "passages": 481,
+      "readable": 156,
+      "density": 0.3243,
+      "undeclared": 156,
+      "undeclaredDensity": 0.3243,
+      "perCandidate": {
+        "zhe-ye": 84,
+        "yue-noquote": 51,
+        "shao-zhi": 24,
+        "yi-wei": 23,
+        "ruo-ze": 16,
+        "fan-zhe": 8,
+        "qi-fa": 1
+      }
+    },
+    {
+      "work": "yili",
+      "group": null,
+      "passages": 453,
+      "readable": 74,
+      "density": 0.1634,
+      "undeclared": 42,
+      "undeclaredDensity": 0.0927,
+      "perCandidate": {
+        "ruo-ze": 33,
+        "fan-zhe": 4,
+        "ri-yong-shu": 4,
+        "yi-wei": 2,
+        "shao-zhi": 2,
+        "shang-yue": 1,
+        "zhe-ye": 1
+      }
+    },
+    {
+      "work": "zhouyi",
+      "group": null,
+      "passages": 324,
+      "readable": 3,
+      "density": 0.0093,
+      "undeclared": 128,
+      "undeclaredDensity": 0.3951,
+      "perCandidate": {
+        "yue-noquote": 128,
+        "shao-zhi": 1,
+        "yi-wei": 1
+      }
+    },
+    {
+      "work": "zhuangzi",
+      "group": null,
+      "passages": 903,
+      "readable": 521,
+      "density": 0.577,
+      "undeclared": 113,
+      "undeclaredDensity": 0.1251,
+      "perCandidate": {
+        "zhe-ye": 67,
+        "yi-wei": 34,
+        "yue-noquote": 23,
+        "shao-zhi": 8,
+        "ruo-ze": 5,
+        "yi-yue": 1,
+        "fan-zhe": 1
+      }
+    },
+    {
+      "work": "zuozhuan",
+      "group": null,
+      "passages": 2838,
+      "readable": 326,
+      "density": 0.1149,
+      "undeclared": 229,
+      "undeclaredDensity": 0.0807,
+      "perCandidate": {
+        "yi-wei": 165,
+        "shao-zhi": 61,
+        "ruo-ze": 30,
+        "yue-noquote": 15,
+        "ri-yong-shu": 7,
+        "shang-yue": 2,
+        "fan-zhe": 2,
+        "fan-jie": 2,
+        "yi-yue": 1
+      }
+    },
+    {
+      "work": "九章算術",
+      "group": "practical-technology",
+      "passages": 804,
+      "readable": 1,
+      "density": 0.0012,
+      "undeclared": 428,
+      "undeclaredDensity": 0.5323,
+      "perCandidate": {
+        "yue-noquote": 420,
+        "yi-wei": 69,
+        "ri-yong-shu": 13,
+        "shao-zhi": 8,
+        "zhe-ye": 7,
+        "fan-zhe": 4,
+        "ruo-ze": 1,
+        "fan-jie": 1
+      }
+    },
+    {
+      "work": "二刻拍案驚奇",
+      "group": "urban-and-market",
+      "passages": 2678,
+      "readable": 5,
+      "density": 0.0019,
+      "undeclared": 184,
+      "undeclaredDensity": 0.0687,
+      "perCandidate": {
+        "ri-yong-shu": 76,
+        "shao-zhi": 54,
+        "yi-wei": 41,
+        "yue-noquote": 16,
+        "fan-zhe": 4,
+        "fan-jie": 3,
+        "qi-fa": 2,
+        "zhe-ye": 1
+      }
+    },
+    {
+      "work": "今文孝經",
+      "group": null,
+      "passages": 22,
+      "readable": 16,
+      "density": 0.7273,
+      "undeclared": 4,
+      "undeclaredDensity": 0.1818,
+      "perCandidate": {
+        "yue-noquote": 3,
+        "zhe-ye": 1
+      }
+    },
+    {
+      "work": "任氏傳",
+      "group": null,
+      "passages": 12,
+      "readable": 9,
+      "density": 0.75,
+      "undeclared": 0,
+      "undeclaredDensity": 0,
+      "perCandidate": {}
+    },
+    {
+      "work": "傷寒論",
+      "group": "practical-technology",
+      "passages": 773,
+      "readable": 0,
+      "density": 0,
+      "undeclared": 219,
+      "undeclaredDensity": 0.2833,
+      "perCandidate": {
+        "zhe-ye": 140,
+        "yue-noquote": 47,
+        "ri-yong-shu": 23,
+        "shao-zhi": 18,
+        "ruo-ze": 8,
+        "fan-zhe": 5,
+        "yi-wei": 4,
+        "qi-fa": 1,
+        "fan-jie": 1
+      }
+    },
+    {
+      "work": "儒林外史",
+      "group": "urban-and-market",
+      "passages": 703,
+      "readable": 0,
+      "density": 0,
+      "undeclared": 103,
+      "undeclaredDensity": 0.1465,
+      "perCandidate": {
+        "ri-yong-shu": 68,
+        "yi-wei": 17,
+        "shao-zhi": 14,
+        "yue-noquote": 6,
+        "zhe-ye": 2,
+        "fan-zhe": 1,
+        "fan-jie": 1
+      }
+    },
+    {
+      "work": "冥報記",
+      "group": null,
+      "passages": 232,
+      "readable": 93,
+      "density": 0.4009,
+      "undeclared": 22,
+      "undeclaredDensity": 0.0948,
+      "perCandidate": {
+        "yue-noquote": 12,
+        "shao-zhi": 9,
+        "yi-wei": 7,
+        "zhe-ye": 1
+      }
+    },
+    {
+      "work": "初刻拍案驚奇",
+      "group": "urban-and-market",
+      "passages": 1872,
+      "readable": 4,
+      "density": 0.0021,
+      "undeclared": 217,
+      "undeclaredDensity": 0.1159,
+      "perCandidate": {
+        "ri-yong-shu": 81,
+        "yue-noquote": 79,
+        "yi-wei": 35,
+        "shao-zhi": 30,
+        "zhe-ye": 5,
+        "fan-zhe": 2,
+        "qi-fa": 1
+      }
+    },
+    {
+      "work": "剪燈新話",
+      "group": null,
+      "passages": 571,
+      "readable": 197,
+      "density": 0.345,
+      "undeclared": 29,
+      "undeclaredDensity": 0.0508,
+      "perCandidate": {
+        "shao-zhi": 13,
+        "yi-wei": 8,
+        "yue-noquote": 7,
+        "ruo-ze": 2,
+        "shang-yue": 1,
+        "ri-yong-shu": 1
+      }
+    },
+    {
+      "work": "剪燈餘話",
+      "group": null,
+      "passages": 477,
+      "readable": 139,
+      "density": 0.2914,
+      "undeclared": 14,
+      "undeclaredDensity": 0.0294,
+      "perCandidate": {
+        "ri-yong-shu": 8,
+        "yi-wei": 4,
+        "shao-zhi": 2,
+        "yue-noquote": 1
+      }
+    },
+    {
+      "work": "北山酒經",
+      "group": "practical-technology",
+      "passages": 127,
+      "readable": 2,
+      "density": 0.0157,
+      "undeclared": 39,
+      "undeclaredDensity": 0.3071,
+      "perCandidate": {
+        "ri-yong-shu": 26,
+        "yi-wei": 13,
+        "ruo-ze": 6,
+        "zhe-ye": 5,
+        "shao-zhi": 2,
+        "yue-noquote": 2,
+        "qi-fa": 2
+      }
+    },
+    {
+      "work": "南柯太守傳",
+      "group": null,
+      "passages": 24,
+      "readable": 13,
+      "density": 0.5417,
+      "undeclared": 1,
+      "undeclaredDensity": 0.0417,
+      "perCandidate": {
+        "yi-wei": 1
+      }
+    },
+    {
+      "work": "博異志",
+      "group": null,
+      "passages": 36,
+      "readable": 32,
+      "density": 0.8889,
+      "undeclared": 2,
+      "undeclaredDensity": 0.0556,
+      "perCandidate": {
+        "ri-yong-shu": 1,
+        "zhe-ye": 1
+      }
+    },
+    {
+      "work": "古文觀止",
+      "group": null,
+      "passages": 845,
+      "readable": 116,
+      "density": 0.1373,
+      "undeclared": 152,
+      "undeclaredDensity": 0.1799,
+      "perCandidate": {
+        "zhe-ye": 96,
+        "shao-zhi": 51,
+        "yue-noquote": 22,
+        "ruo-ze": 20,
+        "fan-zhe": 11,
+        "ri-yong-shu": 9,
+        "fan-jie": 4,
+        "yi-yue": 3,
+        "qi-fa": 2,
+        "shang-yue": 1,
+        "yi-wei": 1
+      }
+    },
+    {
+      "work": "吳越春秋",
+      "group": null,
+      "passages": 502,
+      "readable": 342,
+      "density": 0.6813,
+      "undeclared": 25,
+      "undeclaredDensity": 0.0498,
+      "perCandidate": {
+        "zhe-ye": 11,
+        "yi-wei": 6,
+        "yue-noquote": 6,
+        "shao-zhi": 2,
+        "yi-yue": 1,
+        "ri-yong-shu": 1
+      }
+    },
+    {
+      "work": "周禮",
+      "group": null,
+      "passages": 877,
+      "readable": 4,
+      "density": 0.0046,
+      "undeclared": 240,
+      "undeclaredDensity": 0.2737,
+      "perCandidate": {
+        "fan-zhe": 83,
+        "ruo-ze": 69,
+        "yi-yue": 47,
+        "yi-wei": 40,
+        "ri-yong-shu": 24,
+        "qi-fa": 9,
+        "fan-jie": 5,
+        "zhe-ye": 4
+      }
+    },
+    {
+      "work": "唐詩三百首",
+      "group": null,
+      "passages": 329,
+      "readable": 0,
+      "density": 0,
+      "undeclared": 2,
+      "undeclaredDensity": 0.0061,
+      "perCandidate": {
+        "shao-zhi": 1,
+        "yue-noquote": 1
+      }
+    },
+    {
+      "work": "喻世明言",
+      "group": "urban-and-market",
+      "passages": 2423,
+      "readable": 130,
+      "density": 0.0537,
+      "undeclared": 123,
+      "undeclaredDensity": 0.0508,
+      "perCandidate": {
+        "ri-yong-shu": 35,
+        "yi-wei": 31,
+        "shao-zhi": 30,
+        "yue-noquote": 25,
+        "zhe-ye": 6,
+        "fan-zhe": 3,
+        "ruo-ze": 3,
+        "qi-fa": 1,
+        "fan-jie": 1
+      }
+    },
+    {
+      "work": "四書章句集註",
+      "group": null,
+      "passages": 892,
+      "readable": 762,
+      "density": 0.8543,
+      "undeclared": 21,
+      "undeclaredDensity": 0.0235,
+      "perCandidate": {
+        "yue-noquote": 7,
+        "yi-wei": 5,
+        "zhe-ye": 5,
+        "shao-zhi": 4,
+        "ruo-ze": 3,
+        "fan-zhe": 2,
+        "qi-fa": 1
+      }
+    },
+    {
+      "work": "國語",
+      "group": null,
+      "passages": 516,
+      "readable": 396,
+      "density": 0.7674,
+      "undeclared": 61,
+      "undeclaredDensity": 0.1182,
+      "perCandidate": {
+        "yue-noquote": 24,
+        "zhe-ye": 23,
+        "yi-wei": 16,
+        "shao-zhi": 12,
+        "ruo-ze": 3,
+        "ri-yong-shu": 2,
+        "yi-yue": 2,
+        "fan-jie": 1,
+        "fan-zhe": 1,
+        "shang-yue": 1
+      }
+    },
+    {
+      "work": "夢溪筆談",
+      "group": "practical-technology",
+      "passages": 600,
+      "readable": 158,
+      "density": 0.2633,
+      "undeclared": 225,
+      "undeclaredDensity": 0.375,
+      "perCandidate": {
+        "yue-noquote": 82,
+        "yi-wei": 69,
+        "zhe-ye": 47,
+        "shao-zhi": 42,
+        "ri-yong-shu": 29,
+        "ruo-ze": 20,
+        "qi-fa": 14,
+        "fan-zhe": 11,
+        "fan-jie": 7,
+        "yi-yue": 2
+      }
+    },
+    {
+      "work": "大明奇俠傳",
+      "group": null,
+      "passages": 1183,
+      "readable": 0,
+      "density": 0,
+      "undeclared": 36,
+      "undeclaredDensity": 0.0304,
+      "perCandidate": {
+        "ri-yong-shu": 20,
+        "yi-wei": 7,
+        "shao-zhi": 6,
+        "yue-noquote": 2,
+        "fan-jie": 1,
+        "fan-zhe": 1
+      }
+    },
+    {
+      "work": "天工開物",
+      "group": "practical-technology",
+      "passages": 449,
+      "readable": 3,
+      "density": 0.0067,
+      "undeclared": 206,
+      "undeclaredDensity": 0.4588,
+      "perCandidate": {
+        "fan-zhe": 57,
+        "yi-wei": 53,
+        "ri-yong-shu": 50,
+        "ruo-ze": 37,
+        "zhe-ye": 32,
+        "shao-zhi": 26,
+        "yue-noquote": 18,
+        "qi-fa": 12,
+        "fan-jie": 9,
+        "yi-yue": 7,
+        "shang-yue": 1
+      }
+    },
+    {
+      "work": "夷堅志",
+      "group": null,
+      "passages": 4749,
+      "readable": 1920,
+      "density": 0.4043,
+      "undeclared": 886,
+      "undeclaredDensity": 0.1866,
+      "perCandidate": {
+        "yi-wei": 363,
+        "shao-zhi": 297,
+        "yue-noquote": 198,
+        "ri-yong-shu": 139,
+        "fan-jie": 49,
+        "fan-zhe": 39,
+        "zhe-ye": 36,
+        "ruo-ze": 35,
+        "qi-fa": 11,
+        "yi-yue": 7,
+        "shang-yue": 6
+      }
+    },
+    {
+      "work": "子不語",
+      "group": null,
+      "passages": 1635,
+      "readable": 857,
+      "density": 0.5242,
+      "undeclared": 244,
+      "undeclaredDensity": 0.1492,
+      "perCandidate": {
+        "yue-noquote": 158,
+        "shao-zhi": 37,
+        "zhe-ye": 29,
+        "ri-yong-shu": 23,
+        "yi-wei": 19,
+        "fan-zhe": 10,
+        "ruo-ze": 4,
+        "qi-fa": 3
+      }
+    },
+    {
+      "work": "定命錄",
+      "group": null,
+      "passages": 18,
+      "readable": 12,
+      "density": 0.6667,
+      "undeclared": 5,
+      "undeclaredDensity": 0.2778,
+      "perCandidate": {
+        "yue-noquote": 5
+      }
+    },
+    {
+      "work": "宣室志",
+      "group": null,
+      "passages": 424,
+      "readable": 255,
+      "density": 0.6014,
+      "undeclared": 34,
+      "undeclaredDensity": 0.0802,
+      "perCandidate": {
+        "yue-noquote": 14,
+        "shao-zhi": 11,
+        "yi-wei": 6,
+        "zhe-ye": 5,
+        "ri-yong-shu": 1
+      }
+    },
+    {
+      "work": "山海經",
+      "group": null,
+      "passages": 874,
+      "readable": 10,
+      "density": 0.0114,
+      "undeclared": 139,
+      "undeclaredDensity": 0.159,
+      "perCandidate": {
+        "yi-yue": 60,
+        "shao-zhi": 52,
+        "yue-noquote": 22,
+        "zhe-ye": 6,
+        "yi-wei": 6,
+        "ri-yong-shu": 3,
+        "fan-jie": 1
+      }
+    },
+    {
+      "work": "廣異記",
+      "group": null,
+      "passages": 305,
+      "readable": 184,
+      "density": 0.6033,
+      "undeclared": 85,
+      "undeclaredDensity": 0.2787,
+      "perCandidate": {
+        "yue-noquote": 69,
+        "shao-zhi": 37,
+        "yi-wei": 8,
+        "zhe-ye": 4,
+        "ri-yong-shu": 3,
+        "ruo-ze": 1,
+        "qi-fa": 1
+      }
+    },
+    {
+      "work": "戰國策",
+      "group": null,
+      "passages": 998,
+      "readable": 779,
+      "density": 0.7806,
+      "undeclared": 179,
+      "undeclaredDensity": 0.1794,
+      "perCandidate": {
+        "yue-noquote": 170,
+        "yi-wei": 52,
+        "zhe-ye": 42,
+        "shao-zhi": 21,
+        "fan-zhe": 7,
+        "ruo-ze": 4,
+        "fan-jie": 2,
+        "yi-yue": 1,
+        "ri-yong-shu": 1
+      }
+    },
+    {
+      "work": "括異誌",
+      "group": null,
+      "passages": 146,
+      "readable": 98,
+      "density": 0.6712,
+      "undeclared": 21,
+      "undeclaredDensity": 0.1438,
+      "perCandidate": {
+        "yue-noquote": 14,
+        "zhe-ye": 4,
+        "ri-yong-shu": 4,
+        "shao-zhi": 2,
+        "fan-zhe": 1
+      }
+    },
+    {
+      "work": "搜神記",
+      "group": null,
+      "passages": 465,
+      "readable": 238,
+      "density": 0.5118,
+      "undeclared": 56,
+      "undeclaredDensity": 0.1204,
+      "perCandidate": {
+        "yue-noquote": 27,
+        "zhe-ye": 18,
+        "yi-wei": 9,
+        "shao-zhi": 6,
+        "ri-yong-shu": 4,
+        "ruo-ze": 3,
+        "yi-yue": 2
+      }
+    },
+    {
+      "work": "文心雕龍",
+      "group": null,
+      "passages": 462,
+      "readable": 0,
+      "density": 0,
+      "undeclared": 121,
+      "undeclaredDensity": 0.2619,
+      "perCandidate": {
+        "zhe-ye": 64,
+        "yi-wei": 31,
+        "yue-noquote": 22,
+        "ruo-ze": 20,
+        "shao-zhi": 11,
+        "yi-yue": 4,
+        "ri-yong-shu": 2,
+        "fan-zhe": 1
+      }
+    },
+    {
+      "work": "文選",
+      "group": null,
+      "passages": 4780,
+      "readable": 143,
+      "density": 0.0299,
+      "undeclared": 2357,
+      "undeclaredDensity": 0.4931,
+      "perCandidate": {
+        "yue-noquote": 2247,
+        "zhe-ye": 478,
+        "yi-wei": 378,
+        "shao-zhi": 183,
+        "shang-yue": 69,
+        "yi-yue": 60,
+        "ri-yong-shu": 45,
+        "ruo-ze": 45,
+        "fan-zhe": 34,
+        "fan-jie": 14,
+        "qi-fa": 3
+      }
+    },
+    {
+      "work": "春秋穀梁傳",
+      "group": null,
+      "passages": 1873,
+      "readable": 33,
+      "density": 0.0176,
+      "undeclared": 209,
+      "undeclaredDensity": 0.1116,
+      "perCandidate": {
+        "zhe-ye": 176,
+        "yi-wei": 25,
+        "yue-noquote": 16,
+        "shao-zhi": 2,
+        "fan-zhe": 1,
+        "yi-yue": 1
+      }
+    },
+    {
+      "work": "春秋經",
+      "group": null,
+      "passages": 520,
+      "readable": 0,
+      "density": 0,
+      "undeclared": 0,
+      "undeclaredDensity": 0,
+      "perCandidate": {}
+    },
+    {
+      "work": "晏子春秋",
+      "group": null,
+      "passages": 218,
+      "readable": 214,
+      "density": 0.9817,
+      "undeclared": 2,
+      "undeclaredDensity": 0.0092,
+      "perCandidate": {
+        "yi-wei": 1,
+        "zhe-ye": 1,
+        "ruo-ze": 1
+      }
+    },
+    {
+      "work": "本草綱目",
+      "group": "practical-technology",
+      "passages": 42293,
+      "readable": 13,
+      "density": 0.0003,
+      "undeclared": 13447,
+      "undeclaredDensity": 0.3179,
+      "perCandidate": {
+        "yue-noquote": 10888,
+        "ri-yong-shu": 2401,
+        "shao-zhi": 796,
+        "yi-wei": 618,
+        "zhe-ye": 579,
+        "fan-zhe": 151,
+        "ruo-ze": 100,
+        "qi-fa": 54,
+        "fan-jie": 50,
+        "yi-yue": 9,
+        "shang-yue": 4
+      }
+    },
+    {
+      "work": "李娃傳",
+      "group": null,
+      "passages": 21,
+      "readable": 11,
+      "density": 0.5238,
+      "undeclared": 3,
+      "undeclaredDensity": 0.1429,
+      "perCandidate": {
+        "shao-zhi": 1,
+        "yue-noquote": 1,
+        "yi-wei": 1
+      }
+    },
+    {
+      "work": "枕中記",
+      "group": null,
+      "passages": 6,
+      "readable": 4,
+      "density": 0.6667,
+      "undeclared": 0,
+      "undeclaredDensity": 0,
+      "perCandidate": {}
+    },
+    {
+      "work": "楚辭",
+      "group": null,
+      "passages": 190,
+      "readable": 3,
+      "density": 0.0158,
+      "undeclared": 28,
+      "undeclaredDensity": 0.1474,
+      "perCandidate": {
+        "yue-noquote": 22,
+        "shao-zhi": 6
+      }
+    },
+    {
+      "work": "武經總要",
+      "group": "practical-technology",
+      "passages": 4267,
+      "readable": 651,
+      "density": 0.1526,
+      "undeclared": 686,
+      "undeclaredDensity": 0.1608,
+      "perCandidate": {
+        "yue-noquote": 343,
+        "yi-wei": 194,
+        "ri-yong-shu": 123,
+        "zhe-ye": 59,
+        "ruo-ze": 52,
+        "fan-zhe": 44,
+        "shao-zhi": 23,
+        "qi-fa": 15,
+        "yi-yue": 13,
+        "fan-jie": 8,
+        "shang-yue": 1
+      }
+    },
+    {
+      "work": "洗冤集錄",
+      "group": "practical-technology",
+      "passages": 171,
+      "readable": 3,
+      "density": 0.0175,
+      "undeclared": 41,
+      "undeclaredDensity": 0.2398,
+      "perCandidate": {
+        "fan-zhe": 20,
+        "ruo-ze": 9,
+        "ri-yong-shu": 8,
+        "yue-noquote": 5,
+        "shao-zhi": 4,
+        "yi-wei": 3,
+        "fan-jie": 1,
+        "qi-fa": 1
+      }
+    },
+    {
+      "work": "燕丹子",
+      "group": null,
+      "passages": 5,
+      "readable": 3,
+      "density": 0.6,
+      "undeclared": 0,
+      "undeclaredDensity": 0,
+      "perCandidate": {}
+    },
+    {
+      "work": "營造法式",
+      "group": "practical-technology",
+      "passages": 2600,
+      "readable": 0,
+      "density": 0,
+      "undeclared": 1084,
+      "undeclaredDensity": 0.4169,
+      "perCandidate": {
+        "ri-yong-shu": 843,
+        "yi-wei": 191,
+        "yi-yue": 77,
+        "ruo-ze": 36,
+        "yue-noquote": 31,
+        "fan-jie": 18,
+        "shao-zhi": 11,
+        "fan-zhe": 10,
+        "zhe-ye": 6,
+        "shang-yue": 3
+      }
+    },
+    {
+      "work": "爾雅",
+      "group": null,
+      "passages": 1092,
+      "readable": 0,
+      "density": 0,
+      "undeclared": 10,
+      "undeclaredDensity": 0.0092,
+      "perCandidate": {
+        "zhe-ye": 5,
+        "fan-zhe": 1,
+        "yue-noquote": 1,
+        "shao-zhi": 1,
+        "shang-yue": 1,
+        "yi-yue": 1
+      }
+    },
+    {
+      "work": "獨異志",
+      "group": null,
+      "passages": 432,
+      "readable": 174,
+      "density": 0.4028,
+      "undeclared": 52,
+      "undeclaredDensity": 0.1204,
+      "perCandidate": {
+        "yue-noquote": 32,
+        "yi-wei": 9,
+        "ri-yong-shu": 8,
+        "zhe-ye": 4,
+        "shao-zhi": 3,
+        "fan-zhe": 2,
+        "fan-jie": 2,
+        "ruo-ze": 1,
+        "yi-yue": 1
+      }
+    },
+    {
+      "work": "玄怪錄",
+      "group": null,
+      "passages": 364,
+      "readable": 194,
+      "density": 0.533,
+      "undeclared": 26,
+      "undeclaredDensity": 0.0714,
+      "perCandidate": {
+        "yue-noquote": 15,
+        "ri-yong-shu": 6,
+        "yi-wei": 3,
+        "shao-zhi": 3,
+        "zhe-ye": 1
+      }
+    },
+    {
+      "work": "玉臺新詠",
+      "group": null,
+      "passages": 1942,
+      "readable": 0,
+      "density": 0,
+      "undeclared": 11,
+      "undeclaredDensity": 0.0057,
+      "perCandidate": {
+        "yi-wei": 5,
+        "shao-zhi": 4,
+        "zhe-ye": 1,
+        "ri-yong-shu": 1,
+        "yue-noquote": 1
+      }
+    },
+    {
+      "work": "王禎農書",
+      "group": "practical-technology",
+      "passages": 1295,
+      "readable": 207,
+      "density": 0.1598,
+      "undeclared": 638,
+      "undeclaredDensity": 0.4927,
+      "perCandidate": {
+        "yue-noquote": 476,
+        "yi-wei": 100,
+        "shao-zhi": 72,
+        "ri-yong-shu": 34,
+        "zhe-ye": 28,
+        "ruo-ze": 24,
+        "fan-zhe": 12,
+        "qi-fa": 11,
+        "yi-yue": 6,
+        "fan-jie": 1
+      }
+    },
+    {
+      "work": "異苑",
+      "group": null,
+      "passages": 384,
+      "readable": 98,
+      "density": 0.2552,
+      "undeclared": 71,
+      "undeclaredDensity": 0.1849,
+      "perCandidate": {
+        "yue-noquote": 55,
+        "yi-wei": 7,
+        "shao-zhi": 6,
+        "zhe-ye": 4,
+        "ri-yong-shu": 3,
+        "ruo-ze": 1
+      }
+    },
+    {
+      "work": "益智錄",
+      "group": null,
+      "passages": 581,
+      "readable": 328,
+      "density": 0.5645,
+      "undeclared": 114,
+      "undeclaredDensity": 0.1962,
+      "perCandidate": {
+        "yue-noquote": 86,
+        "yi-wei": 23,
+        "zhe-ye": 15,
+        "shao-zhi": 15,
+        "fan-zhe": 3,
+        "ri-yong-shu": 2,
+        "ruo-ze": 2
+      }
+    },
+    {
+      "work": "稽神錄",
+      "group": null,
+      "passages": 234,
+      "readable": 127,
+      "density": 0.5427,
+      "undeclared": 23,
+      "undeclaredDensity": 0.0983,
+      "perCandidate": {
+        "shao-zhi": 10,
+        "yi-wei": 5,
+        "yue-noquote": 5,
+        "ri-yong-shu": 2,
+        "zhe-ye": 1
+      }
+    },
+    {
+      "work": "穆天子傳",
+      "group": null,
+      "passages": 123,
+      "readable": 9,
+      "density": 0.0732,
+      "undeclared": 20,
+      "undeclaredDensity": 0.1626,
+      "perCandidate": {
+        "yue-noquote": 12,
+        "zhe-ye": 6,
+        "shao-zhi": 3,
+        "yi-wei": 2,
+        "fan-jie": 1,
+        "ri-yong-shu": 1
+      }
+    },
+    {
+      "work": "紅樓夢",
+      "group": "urban-and-market",
+      "passages": 2834,
+      "readable": 3,
+      "density": 0.0011,
+      "undeclared": 210,
+      "undeclaredDensity": 0.0741,
+      "perCandidate": {
+        "ri-yong-shu": 105,
+        "yi-wei": 41,
+        "shao-zhi": 32,
+        "yue-noquote": 29,
+        "ruo-ze": 12,
+        "fan-zhe": 9,
+        "zhe-ye": 8,
+        "fan-jie": 6
+      }
+    },
+    {
+      "work": "續夷堅志",
+      "group": null,
+      "passages": 294,
+      "readable": 42,
+      "density": 0.1429,
+      "undeclared": 67,
+      "undeclaredDensity": 0.2279,
+      "perCandidate": {
+        "yue-noquote": 55,
+        "shao-zhi": 11,
+        "ri-yong-shu": 9,
+        "fan-zhe": 1,
+        "fan-jie": 1,
+        "yi-yue": 1
+      }
+    },
+    {
+      "work": "續玄怪錄",
+      "group": null,
+      "passages": 131,
+      "readable": 95,
+      "density": 0.7252,
+      "undeclared": 9,
+      "undeclaredDensity": 0.0687,
+      "perCandidate": {
+        "shao-zhi": 4,
+        "yi-wei": 3,
+        "ri-yong-shu": 2,
+        "yue-noquote": 2
+      }
+    },
+    {
+      "work": "聊齋志異",
+      "group": null,
+      "passages": 1164,
+      "readable": 883,
+      "density": 0.7586,
+      "undeclared": 78,
+      "undeclaredDensity": 0.067,
+      "perCandidate": {
+        "yue-noquote": 37,
+        "shao-zhi": 33,
+        "yi-wei": 8,
+        "ri-yong-shu": 5,
+        "zhe-ye": 4,
+        "ruo-ze": 3,
+        "fan-zhe": 2,
+        "fan-jie": 1,
+        "yi-yue": 1
+      }
+    },
+    {
+      "work": "茶經",
+      "group": "practical-technology",
+      "passages": 270,
+      "readable": 10,
+      "density": 0.037,
+      "undeclared": 71,
+      "undeclaredDensity": 0.263,
+      "perCandidate": {
+        "yue-noquote": 30,
+        "yi-yue": 26,
+        "zhe-ye": 14,
+        "shao-zhi": 8,
+        "ruo-ze": 4,
+        "ri-yong-shu": 2
+      }
+    },
+    {
+      "work": "蟫史",
+      "group": null,
+      "passages": 1036,
+      "readable": 348,
+      "density": 0.3359,
+      "undeclared": 55,
+      "undeclaredDensity": 0.0531,
+      "perCandidate": {
+        "yi-wei": 20,
+        "yue-noquote": 16,
+        "shao-zhi": 9,
+        "zhe-ye": 6,
+        "ri-yong-shu": 4,
+        "fan-zhe": 2,
+        "ruo-ze": 2
+      }
+    },
+    {
+      "work": "覓燈因話",
+      "group": null,
+      "passages": 29,
+      "readable": 11,
+      "density": 0.3793,
+      "undeclared": 0,
+      "undeclaredDensity": 0,
+      "perCandidate": {}
+    },
+    {
+      "work": "談藪",
+      "group": null,
+      "passages": 79,
+      "readable": 13,
+      "density": 0.1646,
+      "undeclared": 29,
+      "undeclaredDensity": 0.3671,
+      "perCandidate": {
+        "yi-wei": 14,
+        "shao-zhi": 13,
+        "ri-yong-shu": 5,
+        "shang-yue": 2,
+        "yue-noquote": 1,
+        "fan-zhe": 1,
+        "fan-jie": 1
+      }
+    },
+    {
+      "work": "警世通言",
+      "group": "urban-and-market",
+      "passages": 783,
+      "readable": 54,
+      "density": 0.069,
+      "undeclared": 50,
+      "undeclaredDensity": 0.0639,
+      "perCandidate": {
+        "ri-yong-shu": 18,
+        "yue-noquote": 14,
+        "shao-zhi": 10,
+        "yi-wei": 5,
+        "fan-zhe": 4,
+        "zhe-ye": 3
+      }
+    },
+    {
+      "work": "豔異編",
+      "group": null,
+      "passages": 2949,
+      "readable": 694,
+      "density": 0.2353,
+      "undeclared": 152,
+      "undeclaredDensity": 0.0515,
+      "perCandidate": {
+        "yue-noquote": 62,
+        "yi-wei": 42,
+        "shao-zhi": 38,
+        "ri-yong-shu": 19,
+        "zhe-ye": 14,
+        "fan-zhe": 2,
+        "fan-jie": 1,
+        "ruo-ze": 1,
+        "shang-yue": 1
+      }
+    },
+    {
+      "work": "越絕書",
+      "group": null,
+      "passages": 316,
+      "readable": 86,
+      "density": 0.2722,
+      "undeclared": 81,
+      "undeclaredDensity": 0.2563,
+      "perCandidate": {
+        "zhe-ye": 64,
+        "yue-noquote": 16,
+        "yi-wei": 5,
+        "qi-fa": 2,
+        "yi-yue": 2,
+        "ri-yong-shu": 1
+      }
+    },
+    {
+      "work": "農政全書",
+      "group": "practical-technology",
+      "passages": 3307,
+      "readable": 189,
+      "density": 0.0572,
+      "undeclared": 1580,
+      "undeclaredDensity": 0.4778,
+      "perCandidate": {
+        "yue-noquote": 1233,
+        "shao-zhi": 224,
+        "yi-wei": 207,
+        "ri-yong-shu": 202,
+        "zhe-ye": 172,
+        "ruo-ze": 79,
+        "fan-zhe": 52,
+        "qi-fa": 30,
+        "yi-yue": 28,
+        "fan-jie": 19,
+        "shang-yue": 3
+      }
+    },
+    {
+      "work": "農桑輯要",
+      "group": "practical-technology",
+      "passages": 984,
+      "readable": 58,
+      "density": 0.0589,
+      "undeclared": 223,
+      "undeclaredDensity": 0.2266,
+      "perCandidate": {
+        "yue-noquote": 100,
+        "ri-yong-shu": 42,
+        "zhe-ye": 33,
+        "shao-zhi": 31,
+        "ruo-ze": 22,
+        "fan-zhe": 14,
+        "qi-fa": 10,
+        "yi-yue": 1,
+        "fan-jie": 1
+      }
+    },
+    {
+      "work": "逸周書",
+      "group": null,
+      "passages": 134,
+      "readable": 34,
+      "density": 0.2537,
+      "undeclared": 30,
+      "undeclaredDensity": 0.2239,
+      "perCandidate": {
+        "yue-noquote": 13,
+        "zhe-ye": 10,
+        "yi-wei": 7,
+        "shao-zhi": 5,
+        "fan-zhe": 2,
+        "yi-yue": 2,
+        "fan-jie": 2,
+        "ri-yong-shu": 2,
+        "ruo-ze": 1,
+        "shang-yue": 1
+      }
+    },
+    {
+      "work": "遊仙窟",
+      "group": null,
+      "passages": 225,
+      "readable": 205,
+      "density": 0.9111,
+      "undeclared": 2,
+      "undeclaredDensity": 0.0089,
+      "perCandidate": {
+        "yue-noquote": 2
+      }
+    },
+    {
+      "work": "醒世恆言",
+      "group": "urban-and-market",
+      "passages": 3140,
+      "readable": 59,
+      "density": 0.0188,
+      "undeclared": 277,
+      "undeclaredDensity": 0.0882,
+      "perCandidate": {
+        "yue-noquote": 102,
+        "ri-yong-shu": 65,
+        "yi-wei": 62,
+        "shao-zhi": 38,
+        "zhe-ye": 13,
+        "ruo-ze": 7,
+        "fan-zhe": 4,
+        "fan-jie": 2,
+        "qi-fa": 1
+      }
+    },
+    {
+      "work": "金瓶梅",
+      "group": "urban-and-market",
+      "passages": 2515,
+      "readable": 6,
+      "density": 0.0024,
+      "undeclared": 221,
+      "undeclaredDensity": 0.0879,
+      "perCandidate": {
+        "ri-yong-shu": 174,
+        "shao-zhi": 23,
+        "yi-wei": 13,
+        "yue-noquote": 10,
+        "zhe-ye": 4,
+        "ruo-ze": 2,
+        "qi-fa": 1,
+        "fan-jie": 1
+      }
+    },
+    {
+      "work": "集異記",
+      "group": null,
+      "passages": 11,
+      "readable": 3,
+      "density": 0.2727,
+      "undeclared": 0,
+      "undeclaredDensity": 0,
+      "perCandidate": {}
+    },
+    {
+      "work": "雲仙雜記",
+      "group": null,
+      "passages": 447,
+      "readable": 95,
+      "density": 0.2125,
+      "undeclared": 53,
+      "undeclaredDensity": 0.1186,
+      "perCandidate": {
+        "yi-wei": 15,
+        "shao-zhi": 12,
+        "yue-noquote": 11,
+        "ri-yong-shu": 11,
+        "fan-zhe": 2,
+        "ruo-ze": 2,
+        "qi-fa": 1,
+        "zhe-ye": 1
+      }
+    },
+    {
+      "work": "霍小玉傳",
+      "group": null,
+      "passages": 16,
+      "readable": 11,
+      "density": 0.6875,
+      "undeclared": 3,
+      "undeclaredDensity": 0.1875,
+      "perCandidate": {
+        "shao-zhi": 1,
+        "zhe-ye": 1,
+        "yi-wei": 1
+      }
+    },
+    {
+      "work": "鶯鶯傳",
+      "group": null,
+      "passages": 5,
+      "readable": 5,
+      "density": 1,
+      "undeclared": 0,
+      "undeclaredDensity": 0,
+      "perCandidate": {}
+    },
+    {
+      "work": "黃帝內經",
+      "group": "practical-technology",
+      "passages": 2962,
+      "readable": 7,
+      "density": 0.0024,
+      "undeclared": 2334,
+      "undeclaredDensity": 0.788,
+      "perCandidate": {
+        "yue-noquote": 2079,
+        "zhe-ye": 339,
+        "shao-zhi": 200,
+        "yi-wei": 72,
+        "fan-zhe": 44,
+        "yi-yue": 11,
+        "ri-yong-shu": 7,
+        "ruo-ze": 6,
+        "qi-fa": 4,
+        "shang-yue": 1
+      }
+    }
+  ],
+  "ranking": {
+    "byAbsoluteYield": [
+      {
+        "work": "本草綱目",
+        "undeclared": 13447,
+        "of": 42293,
+        "rate": 0.3179
+      },
+      {
+        "work": "wenxian-tongkao",
+        "undeclared": 6193,
+        "of": 16934,
+        "rate": 0.3657
+      },
+      {
+        "work": "文選",
+        "undeclared": 2357,
+        "of": 4780,
+        "rate": 0.4931
+      },
+      {
+        "work": "黃帝內經",
+        "undeclared": 2334,
+        "of": 2962,
+        "rate": 0.788
+      },
+      {
+        "work": "農政全書",
+        "undeclared": 1580,
+        "of": 3307,
+        "rate": 0.4778
+      },
+      {
+        "work": "營造法式",
+        "undeclared": 1084,
+        "of": 2600,
+        "rate": 0.4169
+      },
+      {
+        "work": "hanshu",
+        "undeclared": 906,
+        "of": 8015,
+        "rate": 0.113
+      },
+      {
+        "work": "夷堅志",
+        "undeclared": 886,
+        "of": 4749,
+        "rate": 0.1866
+      },
+      {
+        "work": "武經總要",
+        "undeclared": 686,
+        "of": 4267,
+        "rate": 0.1608
+      },
+      {
+        "work": "王禎農書",
+        "undeclared": 638,
+        "of": 1295,
+        "rate": 0.4927
+      },
+      {
+        "work": "shiji",
+        "undeclared": 619,
+        "of": 4760,
+        "rate": 0.13
+      },
+      {
+        "work": "九章算術",
+        "undeclared": 428,
+        "of": 804,
+        "rate": 0.5323
+      },
+      {
+        "work": "sanguozhi",
+        "undeclared": 331,
+        "of": 2308,
+        "rate": 0.1434
+      },
+      {
+        "work": "醒世恆言",
+        "undeclared": 277,
+        "of": 3140,
+        "rate": 0.0882
+      },
+      {
+        "work": "book-of-rites",
+        "undeclared": 256,
+        "of": 1332,
+        "rate": 0.1922
+      }
+    ],
+    "byRateMin300Passages": [
+      {
+        "work": "黃帝內經",
+        "rate": 0.788,
+        "undeclared": 2334,
+        "density": 0.0024
+      },
+      {
+        "work": "九章算術",
+        "rate": 0.5323,
+        "undeclared": 428,
+        "density": 0.0012
+      },
+      {
+        "work": "文選",
+        "rate": 0.4931,
+        "undeclared": 2357,
+        "density": 0.0299
+      },
+      {
+        "work": "王禎農書",
+        "rate": 0.4927,
+        "undeclared": 638,
+        "density": 0.1598
+      },
+      {
+        "work": "農政全書",
+        "rate": 0.4778,
+        "undeclared": 1580,
+        "density": 0.0572
+      },
+      {
+        "work": "天工開物",
+        "rate": 0.4588,
+        "undeclared": 206,
+        "density": 0.0067
+      },
+      {
+        "work": "營造法式",
+        "rate": 0.4169,
+        "undeclared": 1084,
+        "density": 0
+      },
+      {
+        "work": "zhouyi",
+        "rate": 0.3951,
+        "undeclared": 128,
+        "density": 0.0093
+      },
+      {
+        "work": "夢溪筆談",
+        "rate": 0.375,
+        "undeclared": 225,
+        "density": 0.2633
+      },
+      {
+        "work": "wenxian-tongkao",
+        "rate": 0.3657,
+        "undeclared": 6193,
+        "density": 0.0761
+      },
+      {
+        "work": "xunzi",
+        "rate": 0.3243,
+        "undeclared": 156,
+        "density": 0.3243
+      },
+      {
+        "work": "本草綱目",
+        "rate": 0.3179,
+        "undeclared": 13447,
+        "density": 0.0003
+      },
+      {
+        "work": "mozi",
+        "rate": 0.2938,
+        "undeclared": 191,
+        "density": 0.2215
+      },
+      {
+        "work": "傷寒論",
+        "rate": 0.2833,
+        "undeclared": 219,
+        "density": 0
+      },
+      {
+        "work": "廣異記",
+        "rate": 0.2787,
+        "undeclared": 85,
+        "density": 0.6033
+      }
+    ],
+    "gapDensity": [
+      {
+        "work": "黃帝內經",
+        "gap": 0.7856,
+        "density": 0.0024,
+        "undeclaredDensity": 0.788
+      },
+      {
+        "work": "九章算術",
+        "gap": 0.5311,
+        "density": 0.0012,
+        "undeclaredDensity": 0.5323
+      },
+      {
+        "work": "文選",
+        "gap": 0.4632,
+        "density": 0.0299,
+        "undeclaredDensity": 0.4931
+      },
+      {
+        "work": "天工開物",
+        "gap": 0.4521,
+        "density": 0.0067,
+        "undeclaredDensity": 0.4588
+      },
+      {
+        "work": "農政全書",
+        "gap": 0.4206,
+        "density": 0.0572,
+        "undeclaredDensity": 0.4778
+      },
+      {
+        "work": "營造法式",
+        "gap": 0.4169,
+        "density": 0,
+        "undeclaredDensity": 0.4169
+      },
+      {
+        "work": "zhouyi",
+        "gap": 0.3858,
+        "density": 0.0093,
+        "undeclaredDensity": 0.3951
+      },
+      {
+        "work": "王禎農書",
+        "gap": 0.3329,
+        "density": 0.1598,
+        "undeclaredDensity": 0.4927
+      },
+      {
+        "work": "本草綱目",
+        "gap": 0.3176,
+        "density": 0.0003,
+        "undeclaredDensity": 0.3179
+      },
+      {
+        "work": "wenxian-tongkao",
+        "gap": 0.2896,
+        "density": 0.0761,
+        "undeclaredDensity": 0.3657
+      },
+      {
+        "work": "傷寒論",
+        "gap": 0.2833,
+        "density": 0,
+        "undeclaredDensity": 0.2833
+      },
+      {
+        "work": "周禮",
+        "gap": 0.2691,
+        "density": 0.0046,
+        "undeclaredDensity": 0.2737
+      },
+      {
+        "work": "文心雕龍",
+        "gap": 0.2619,
+        "density": 0,
+        "undeclaredDensity": 0.2619
+      },
+      {
+        "work": "農桑輯要",
+        "gap": 0.1677,
+        "density": 0.0589,
+        "undeclaredDensity": 0.2266
+      },
+      {
+        "work": "山海經",
+        "gap": 0.1476,
+        "density": 0.0114,
+        "undeclaredDensity": 0.159
+      }
+    ]
+  },
+  "nextBatch": {
+    "derivedFrom": "作品在盘上、且属 triage 已声明组、且尚未建",
+    "sameGroupNotBuilt": [
+      {
+        "work": "齊民要術",
+        "group": "practical-technology",
+        "status": "OK",
+        "chapters": 14,
+        "sampledDensity": 0.2009
+      },
+      {
+        "work": "耒耜經",
+        "group": "practical-technology",
+        "status": "OK",
+        "chapters": 0,
+        "sampledDensity": null
+      },
+      {
+        "work": "便民圖纂",
+        "group": "practical-technology",
+        "status": "MISSING",
+        "chapters": null,
+        "sampledDensity": null
+      },
+      {
+        "work": "數書九章",
+        "group": "practical-technology",
+        "status": "MISSING",
+        "chapters": null,
+        "sampledDensity": null
+      }
+    ],
+    "genreHypothesis": [
+      {
+        "class": "政書／典制",
+        "exemplarsOnDisk": [
+          "wenxian-tongkao"
+        ],
+        "why": "典制叙述＋徵引，第二大体量的未声明结构",
+        "measured": false
+      },
+      {
+        "class": "類書",
+        "exemplarsOnDisk": [],
+        "why": "通篇「《書》曰」「X曰」，若无引号形态占比高，与 yue-noquote 直接相干",
+        "measured": false
+      },
+      {
+        "class": "字書／詞典",
+        "exemplarsOnDisk": [],
+        "why": "爾雅 0/1092 可读，而候选骨架 X者，Y也 是全库最像词典的形状",
+        "measured": false
+      },
+      {
+        "class": "醫方／本草",
+        "exemplarsOnDisk": [
+          "本草綱目",
+          "黃帝內經",
+          "傷寒論"
+        ],
+        "why": "本表第一名与第四名都在这一类",
+        "measured": false
+      }
+    ]
+  },
+  "nonClaims": [
+    "A candidate is a counted shape, not a frame: nothing here is labelled, stored or licensed.",
+    "Skeletons overlap and are NOT deduplicated into a total that could be summed: the union per work is reported, the per-candidate counts are not additive.",
+    "The biggest candidate (yue-noquote) has an UNMEASURED replacement risk because a reading does not expose its span; a large yield is not yet a gain.",
+    "Works not on disk cannot be ranked at all by this metric — for those, genre is a proxy and a weak one.",
+    "BLIND SPOT, and it is structural: the derivation can only reach a group that has at least one built exemplar. spanning-antiquity (通典, 資治通鑑, 通鑑紀事本末, 日知錄, 廿二史劄記) has NOTHING built, so it is invisible here even though 通鑑紀事本末 sampled at 41.4% under the older grammar. 通典 is a 政書 like 文獻通考, which is second in this ranking — that inference is made in the genre hypothesis, not in the derived list, and the two must not be confused."
+  ],
+  "reading": "按绝对产出排，本草綱目一部占了大头；按比率排（≥300 段）才是「这部书有多少比例是我们还读不懂的」。两列都要看：比率高但体量小的书，绝对增量有限；体量大又比率高的，才是下一批优先。"
+}
