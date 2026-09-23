@@ -32,7 +32,18 @@
  * rather than picking one. Segmentation is therefore a declared rule with a
  * measured failure rate, not a hidden guess.
  */
-export type Roles = { agent: string; recipient: string; theme: string };
+/**
+ * A role is `null` when the construction does NOT EXPRESS it.
+ *
+ * `子曰：「學而時習之。」` names a speaker and a quotation and no addressee. Writing
+ * some addressee in would be invention, and returning Unknown would throw away the
+ * agent and theme the text does state, so the reading carries `recipient: null` and
+ * the construction declares which roles it expresses. Measured consequence: this one
+ * construction covers 16,907 of 77,884 passages (21.71%) against 2,440 (3.13%) for
+ * all four three-slot frames together — the addressee is simply absent most of the time.
+ */
+export type Roles = { agent: string | null; recipient: string | null; theme: string | null };
+export type RoleName = "agent" | "recipient" | "theme";
 export type Example = { id: string; text: string; expected: Roles };
 export type ReportingModel = {
   schema: "wenyan.relations.reporting.v1";
@@ -66,16 +77,80 @@ const SPEECH = '[^」]{1,300}';
  * (see tools/grammar/measure.mjs). Each is its own construction, because each
  * must earn its role mapping from its own evidence.
  */
-const FRAMES: { id: string; verb: string; source: string }[] = [
-  { id: 'wei-quote', verb: '謂', source: `(${ENTITY})謂(${ENTITY})曰：「(${SPEECH})」` },
-  { id: 'wen-quote', verb: '問', source: `(${ENTITY})問(${ENTITY})曰：「(${SPEECH})」` },
-  { id: 'gao-quote', verb: '告', source: `(${ENTITY})告(${ENTITY})曰：「(${SPEECH})」` },
-  { id: 'yu-quote', verb: '語', source: `(${ENTITY})語(${ENTITY})曰：「(${SPEECH})」` },
+const ALL_ROLES: RoleName[] = ['agent', 'recipient', 'theme'];
+
+/**
+ * The 2-slot frame needs its own entity pattern: `曰` is not excluded from ENTITY, so
+ * a greedy ENTITY would swallow the verb and read `或謂孔子曰：「…」` as agent
+ * `或謂孔子`. Three-slot frames are tried FIRST for the same reason — they are the
+ * more specific reading — and this pattern additionally refuses to contain a
+ * reporting verb, so `王問曰：「…」` cannot be read with agent `王問`.
+ */
+const ENTITY_NO_VERB = "(?:(?![謂問告語])[^，。；：「」？！、]){1,10}";
+/** Recipient slot: may not be the 曰 that belongs to the verb. */
+const ENTITY_NO_YUE = "(?:(?!曰)[^，。；：「」？！、]){1,10}";
+const AGENT_THEME: RoleName[] = ['agent', 'theme'];
+
+const FRAMES: { id: string; verb: string; source: string; roles: RoleName[] }[] = [
+  // ORDER IS THE RULE, not a detail: the frames are tried most-explicit-first, and a
+  // match that OVERLAPS an already-claimed span is discarded. Measured necessity —
+  // `孔子謂弟子曰：「學而時習之。」` matches the three-slot frame (correct: agent 孔子,
+  // recipient 弟子) AND the bare-曰 frame (agent 弟子), and treating that as two
+  // matches made every three-slot passage "ambiguous" and destroyed all 29 existing
+  // corpus records. And `王問曰：「何謂也？」` was silently absorbed by the no-曰
+  // three-slot frame with recipient `曰` — a slot holding the verb itself. Both are
+  // fixed by ordering the frames by how many markers they require.
+  { id: 'wei-quote', verb: '謂', source: `(${ENTITY})謂(${ENTITY_NO_YUE})曰：「(${SPEECH})」`, roles: ALL_ROLES },
+  { id: 'wen-quote', verb: '問', source: `(${ENTITY})問(${ENTITY_NO_YUE})曰：「(${SPEECH})」`, roles: ALL_ROLES },
+  { id: 'gao-quote', verb: '告', source: `(${ENTITY})告(${ENTITY_NO_YUE})曰：「(${SPEECH})」`, roles: ALL_ROLES },
+  { id: 'yu-quote', verb: '語', source: `(${ENTITY})語(${ENTITY_NO_YUE})曰：「(${SPEECH})」`, roles: ALL_ROLES },
+  // Two-slot forms: the addressee is simply not there. `子曰：「學而時習之。」` is the
+  // commonest shape in the corpus and states a speaker and a quotation only.
+  // Only the two-slot 問/告 forms are declared: measured on the corpus, the two-slot
+  // 謂/語 forms are dominated by adverbials and particles (厲聲謂曰, 樅公相謂曰,
+  // 蓋其語曰, 故諸儒爲之語曰). Labelling those spans as the agent would assert something
+  // false, and this grammar may only carry evidence a supervisor can state truthfully.
+  { id: 'wen-plain', verb: '問', source: `(${ENTITY_NO_VERB})問曰：「(${SPEECH})」`, roles: AGENT_THEME },
+  { id: 'gao-plain', verb: '告', source: `(${ENTITY_NO_VERB})告曰：「(${SPEECH})」`, roles: AGENT_THEME },
+  { id: 'yue-quote', verb: '曰', source: `(${ENTITY_NO_VERB})曰：「(${SPEECH})」`, roles: AGENT_THEME },
 ];
 
 export const CONSTRUCTION_IDS = FRAMES.map((f) => f.id);
 
-const ORDERS = [[0, 1, 2], [0, 2, 1], [1, 0, 2], [1, 2, 0], [2, 0, 1], [2, 1, 0]];
+/**
+ * Which roles a construction expresses. Exported because a LABEL must be checked
+ * against it: the seeding tool may not invent a recipient for a construction that
+ * does not express one, and may not leave one null for a construction that does.
+ */
+export function ROLES_FOR_CONSTRUCTION(id: string): RoleName[] {
+  const f = FRAMES.find((x) => x.id === id);
+  if (!f) throw new Error(`unknown construction: ${id}`);
+  return f.roles.slice();
+}
+
+function permutations(n: number): number[][] {
+  // Base case must be n === 0. Written as `n <= 1` it returned `[[]]` for n === 1 — an
+  // empty order rather than `[0]` — so permutations(2) and permutations(3) came back
+  // EMPTY and every construction reported "contradictory evidence".
+  if (n === 0) return [[]];
+  const out: number[][] = [];
+  for (const rest of permutations(n - 1)) {
+    for (let i = 0; i <= rest.length; i++) out.push([...rest.slice(0, i), n - 1, ...rest.slice(i)]);
+  }
+  return out;
+}
+/** All orderings of the roles a construction actually expresses. */
+const ORDERS_FOR = (roles: RoleName[]) => permutations(roles.length);
+function assertFrames() {
+  for (const f of FRAMES) {
+    // Count CAPTURING groups only: the patterns contain non-capturing groups
+    // (`(?:`, `(?!`) and a first version of this check counted those too, which
+    // rejected the two-slot frame as "4 captures but 2 roles".
+    const n = (f.source.match(/\((?!\?)/g) ?? []).length;
+    if (n !== f.roles.length) throw new Error(`frame ${f.id}: ${n} capture(s) but ${f.roles.length} role(s)`);
+  }
+}
+assertFrames();
 
 /**
  * Longest text this grammar will look at; longer input is out of scope.
@@ -88,23 +163,38 @@ export const MAX_TEXT_UNITS = 2048;
 type Parsed = {
   construction: string;
   slots: string[];
+  roles: RoleName[];
   occurrences: Occurrence[];
   matches: number;
 };
 
-function assign(slots: string[], order: number[]): Roles {
-  return { agent: slots[order[0]], recipient: slots[order[1]], theme: slots[order[2]] };
+/** Unexpressed roles stay null; expressed roles take the slot the order assigns them. */
+function assign(slots: string[], order: number[], roles: RoleName[]): Roles {
+  const out: Roles = { agent: null, recipient: null, theme: null };
+  roles.forEach((role, i) => { out[role] = slots[order[i]]; });
+  return out;
 }
 
 function equal(a: Roles, b: Roles) {
   return a.agent === b.agent && a.recipient === b.recipient && a.theme === b.theme;
 }
 
-function validRoles(r: unknown): r is Roles {
+/**
+ * An expectation is valid against a construction when every role the construction
+ * EXPRESSES is a non-empty string and every role it does not express is null. This is
+ * what keeps "unexpressed" from decaying into "whatever was convenient": a label may
+ * not quietly supply a recipient the text never states.
+ */
+function validExpected(r: unknown, roles: RoleName[]): r is Roles {
   const x = r as Roles;
-  return !!x && typeof x.agent === 'string' && !!x.agent
-    && typeof x.recipient === 'string' && !!x.recipient
-    && typeof x.theme === 'string' && !!x.theme;
+  if (!x || typeof x !== 'object') return false;
+  for (const role of ALL_ROLES) {
+    const v = x[role];
+    if (roles.includes(role)) {
+      if (typeof v !== 'string' || !v) return false;
+    } else if (v !== null) return false;
+  }
+  return true;
 }
 
 /**
@@ -115,24 +205,31 @@ function validRoles(r: unknown): r is Roles {
 function parse(text: string): Parsed | undefined {
   if (typeof text !== 'string' || text.length === 0 || text.length > MAX_TEXT_UNITS) return undefined;
   const found: Parsed[] = [];
+  // Spans already claimed by a MORE EXPLICIT frame. A later frame may not re-read them.
+  const claimed: [number, number][] = [];
   for (const frame of FRAMES) {
     const re = new RegExp(frame.source, 'gu');
     for (const m of text.matchAll(re)) {
+      const spanStart = m.index ?? 0;
+      const spanEnd = spanStart + m[0].length;
+      if (claimed.some(([a, b]) => spanStart < b && a < spanEnd)) continue;
+      claimed.push([spanStart, spanEnd]);
       const occurrences: Occurrence[] = [];
-      for (let slot = 0; slot < 3; slot++) {
+      for (let slot = 0; slot < frame.roles.length; slot++) {
         const value = m[slot + 1];
         // Locate each capture inside the match so offsets point at the source.
         const localStart = m[0].indexOf(value);
         const start = (m.index ?? 0) + localStart;
         occurrences.push({ slot, value, start, end: start + value.length });
       }
-      found.push({ construction: frame.id, slots: [m[1], m[2], m[3]], occurrences, matches: 1 });
+      found.push({ construction: frame.id, slots: m.slice(1, 1 + frame.roles.length),
+        roles: frame.roles, occurrences, matches: 1 });
     }
   }
   if (!found.length) return undefined;
   if (found.length > 1) {
     return { construction: found[0].construction, slots: found[0].slots,
-      occurrences: found[0].occurrences, matches: found.length };
+      roles: found[0].roles, occurrences: found[0].occurrences, matches: found.length };
   }
   return found[0];
 }
@@ -144,16 +241,20 @@ function replay(model: ReportingModel) {
     throw new Error('invalid reporting model');
   }
   const rules: Record<string, number[][]> = {};
-  for (const frame of FRAMES) rules[frame.id] = ORDERS.slice();
+  for (const frame of FRAMES) rules[frame.id] = ORDERS_FOR(frame.roles);
   const seen = new Set<string>();
   for (const e of model.examples) {
-    if (!e || typeof e.id !== 'string' || !e.id || e.id.length > 128
-      || seen.has(e.id) || !validRoles(e.expected)) throw new Error('invalid evidence');
+    if (!e || typeof e.id !== 'string' || !e.id || e.id.length > 128 || seen.has(e.id)) {
+      throw new Error('invalid evidence');
+    }
     seen.add(e.id);
     const p = parse(e.text);
     if (!p || p.matches > 1) throw new Error('out-of-grammar evidence');
+    // The expectation is checked against THIS construction's expressed roles, so a
+    // label cannot supply a role the construction does not express.
+    if (!validExpected(e.expected, p.roles)) throw new Error('invalid evidence');
     rules[p.construction] = rules[p.construction].filter((order) =>
-      equal(assign(p.slots, order), e.expected));
+      equal(assign(p.slots, order, p.roles), e.expected));
     if (!rules[p.construction].length) throw new Error('contradictory evidence');
   }
   return rules;
@@ -175,7 +276,7 @@ export function readReporting(text: string, model: ReportingModel): ReportingRea
       source: text, construction: p.construction, candidates: [], occurrences: p.occurrences,
       ambiguousMatches: p.matches };
   }
-  const candidates = rules[p.construction].map((order) => assign(p.slots, order));
+  const candidates = rules[p.construction].map((order) => assign(p.slots, order, p.roles));
   return {
     status: candidates.length === 1 ? 'KnownFiniteGrammar' : 'Unknown',
     ...(candidates.length === 1 ? {} : { reason: 'ambiguous-role-mapping' }),
@@ -194,8 +295,9 @@ export function readReporting(text: string, model: ReportingModel): ReportingRea
 export function learnReportingRelations(model: ReportingModel, example: Example, fuel: number) {
   const rules = replay(model);
   if (!Number.isSafeInteger(fuel) || fuel < 0 || fuel > 192) throw new Error('invalid fuel');
-  if (!example || typeof example.id !== 'string' || !example.id || example.id.length > 128
-    || !validRoles(example.expected)) throw new Error('invalid training example');
+  if (!example || typeof example.id !== 'string' || !example.id || example.id.length > 128) {
+    throw new Error('invalid training example');
+  }
   if (model.examples.length >= 32) throw new Error('evidence capacity reached');
   if (model.examples.some((e) => e.id === example.id)) throw new Error('duplicate evidence id');
   const p = parse(example.text);
@@ -203,6 +305,7 @@ export function learnReportingRelations(model: ReportingModel, example: Example,
     return { status: 'Unknown', reason: 'outside-reporting-grammar',
       model, checked: 0, refutations: [] };
   }
+  if (!validExpected(example.expected, p.roles)) throw new Error('invalid training example');
   const candidates = rules[p.construction];
   const refutations: { order: number[]; actual: Roles; expected: Roles }[] = [];
   const survivors: number[][] = [];
@@ -212,7 +315,7 @@ export function learnReportingRelations(model: ReportingModel, example: Example,
       return { status: 'Unknown', reason: 'fuel-exhausted', model, checked, refutations };
     }
     checked++;
-    const actual = assign(p.slots, order);
+    const actual = assign(p.slots, order, p.roles);
     if (equal(actual, example.expected)) survivors.push(order);
     else refutations.push({ order: order.slice(), actual, expected: { ...example.expected } });
   }
@@ -235,8 +338,12 @@ export function compareReporting(a: string, b: string, model: ReportingModel) {
   }
   const x = left.candidates[0];
   const y = right.candidates[0];
+  // A null role can never be "the same as" another: an unexpressed role is not a value,
+  // so two readings of an addressee-less construction are SameRelation only when their
+  // expressed roles agree, and they can never be a RoleReversal of each other.
   const status = equal(x, y) ? 'SameRelation'
-    : (x.agent !== x.recipient && x.agent === y.recipient && x.recipient === y.agent
+    : (x.agent !== null && x.recipient !== null && y.agent !== null && y.recipient !== null
+      && x.agent !== x.recipient && x.agent === y.recipient && x.recipient === y.agent
       && x.theme === y.theme) ? 'RoleReversal' : 'DifferentRelation';
   return { status, left, right };
 }

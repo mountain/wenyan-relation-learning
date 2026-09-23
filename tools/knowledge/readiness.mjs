@@ -39,9 +39,20 @@ const load = createTsLoader();
 const relations = load(path.join(ROOT, 'src/inscription/relations.ts'));
 const { readRelation, compareRelations, emptyRelationModel } = relations;
 const reporting = load(path.join(ROOT, 'src/inscription/relations-reporting.ts'));
+/**
+ * In-grammar means the grammar parses the text UNIQUELY, not merely that it recognises
+ * a construction. `readReporting` reports the construction even for a passage holding
+ * several frames, so testing only for `construction` admitted multi-match records into
+ * the operational core — and because `replay` is all-or-nothing, ONE such record made
+ * every construction throw "out-of-grammar evidence". That is the failure mode
+ * CAP-REVIEW.md §实测三 describes, re-entered through a different door: it was found
+ * when the two-slot frames made multi-frame passages common instead of rare.
+ */
 const reportingConstructionOf = (text) => {
   try {
-    return reporting.readReporting(text, reporting.emptyReportingModel()).construction ?? null;
+    const r = reporting.readReporting(text, reporting.emptyReportingModel());
+    if (!r.construction || r.reason === 'ambiguous-frame-occurrence') return null;
+    return r.construction;
   } catch { return null; }
 };
 
@@ -121,10 +132,17 @@ const GRAMMAR_SETS = {
   [GRAMMAR]: {
     id: GRAMMAR, short: 'experimental', probes: PROBES, model: projection.model,
     constructionOf, read: (t, m) => readRelation(t, m),
+    permutationsFor: () => 6,   // the experimental grammar always expresses three roles
   },
   [REPORTING_GRAMMAR]: {
     id: REPORTING_GRAMMAR, short: 'reporting', probes: REPORTING_PROBES, model: reportingProjection.model,
     constructionOf: reportingConstructionOf, read: (t, m) => reporting.readReporting(t, m),
+    // A two-slot construction permutes TWO roles, so the old hard-coded "/6" misreported
+    // it as under-determined. The denominator comes from the construction's role set.
+    permutationsFor: (c) => {
+      const n = reporting.ROLES_FOR_CONSTRUCTION(c).length;
+      return [1, 1, 2, 6, 24, 120][n] ?? null;
+    },
   },
 };
 // Both grammar ids end in '.v1', so split('.').pop() rendered them identically
@@ -147,11 +165,16 @@ for (const set of Object.values(GRAMMAR_SETS)) {
       construction: c,
       labelledExamples: labelled.length,
       survivingRoleMappings: read.ok ? read.reading.candidates.length : null,
+      rolePermutations: set.permutationsFor ? set.permutationsFor(c) : null,
       statusOnProbe: read.ok ? read.reading.status : 'replay-error',
       ...(read.ok ? {} : { error: read.error }),
+      // null = a role this construction does not express; it is not an entity.
       distinctEntities: new Set(
-        labelled.flatMap((r) => [r.expected.agent, r.expected.recipient, r.expected.theme]),
+        labelled.flatMap((r) => [r.expected.agent, r.expected.recipient, r.expected.theme])
+          .filter((v) => typeof v === 'string' && v),
       ).size,
+      expressedRoles: [...new Set(labelled.flatMap((r) => Object.entries(r.expected)
+        .filter(([, v]) => typeof v === 'string' && v).map(([k]) => k)))].sort(),
     });
   }
 }
@@ -283,7 +306,7 @@ gate('G1', 'well-formed store', true,
 const determined = perConstruction.filter(
   (c) => c.survivingRoleMappings === 1 && c.labelledExamples >= FLOORS.labelledPerConstructionForDetermination);
 const g2Detail = perConstruction.map((c) =>
-  `${shortOf(c.grammar)}/${c.construction}: survivors=${c.survivingRoleMappings ?? 'n/a'}/6, labels=${c.labelledExamples} (floor ${FLOORS.labelledPerConstructionForDetermination})${c.error ? `, ERROR: ${c.error}` : ''}`).join('; ');
+  `${shortOf(c.grammar)}/${c.construction}: survivors=${c.survivingRoleMappings ?? 'n/a'}/${c.rolePermutations ?? '?'}, labels=${c.labelledExamples} (floor ${FLOORS.labelledPerConstructionForDetermination})${c.error ? `, ERROR: ${c.error}` : ''}`).join('; ');
 gate('G2', 'role mapping determined per construction, per grammar', true,
   determined.length === perConstruction.length, g2Detail,
   determined.length === perConstruction.length ? null

@@ -41,7 +41,33 @@ const empty = emptyReportingModel();
 const manifest = JSON.parse(fs.readFileSync(path.join(CORPUS, 'manifest.json'), 'utf8'));
 const workMeta = new Map(manifest.works.map((w) => [w.id, w]));
 
-/** Pick passages that parse uniquely, spreading across works. */
+/**
+ * Is a captured span admissible as a SUPERVISED LABEL?
+ *
+ * The original picker took the first passages that parsed, and the corpus promptly
+ * supplied spans that cannot be labelled truthfully: `於是武王遍告諸侯曰` yields agent
+ * `於是武王遍`, `厲聲謂曰` yields agent `厲聲` (an adverbial), `樅公相謂曰` yields
+ * `樅公相`, `野語有之曰` yields agent `野`. Labelling those as the agent ASSERTS
+ * SOMETHING FALSE about who spoke, so they are rejected rather than stored.
+ *
+ * Measured cost of the rule: of the 8,726 passages the seven constructions can read
+ * under the single-match rule, 1,002 (11.48%) have an agent span that starts with a
+ * particle or adverb. This is a DECLARED filter with a measured rejection rate, not a
+ * taste judgement, and the rate is reported by tools/grammar/measure.mjs.
+ */
+const PARTICLE_PREFIX = /^(且|復|亦|又|乃|遂|蓋|故|而|則|皆|盡|共|竊|嘗|數|相|於是|因|既|始|方|將|欲|敢|請|可|不|傳|使|若|夫|今|昔|初|後|其|之|以|為|所|與|野)/;
+const PARTICLE_SUFFIX = /(且|復|亦|又|乃|遂|蓋|故|而|則|皆|盡|共|竊|嘗|數|相|有|以|傳|歸)$/;
+const VERBISH = /[曰謂問告語於于乎]/;
+function admissibleAgent(v) {
+  return !!v && v.length <= 5 && !PARTICLE_PREFIX.test(v) && !PARTICLE_SUFFIX.test(v) && !VERBISH.test(v);
+}
+function admissibleRecipient(v) {
+  // A prepositional or relative recipient (`於子貢`, `乎長梧子`, `敖者`) records the
+  // wrong span; a pronominal one (`人`, `余`) IS the recipient expression and is kept.
+  return !!v && v.length <= 5 && !VERBISH.test(v) && !/者$/.test(v) && !/^有/.test(v);
+}
+
+/** Pick passages that parse uniquely AND whose spans can be labelled truthfully. */
 const chosen = new Map(CONSTRUCTION_IDS.map((c) => [c, []]));
 const seenWorks = new Map(CONSTRUCTION_IDS.map((c) => [c, new Set()]));
 for (const w of manifest.works) {
@@ -52,6 +78,13 @@ for (const w of manifest.works) {
       let r;
       try { r = readReporting(p.text, empty); } catch { continue; }
       if (!r.construction || r.reason === 'ambiguous-frame-occurrence') continue;
+      // Admissibility is checked against the span the label would actually carry.
+      const spans = r.occurrences.map((o) => o.value);
+      const expressed = mod.ROLES_FOR_CONSTRUCTION(r.construction);
+      if (!admissibleAgent(spans[0])) continue;
+      if (expressed.includes('recipient') && !admissibleRecipient(spans[1])) continue;
+      const theme = spans[spans.length - 1];
+      if (!theme || theme.length < 5) continue;
       const bucket = chosen.get(r.construction);
       if (!bucket || bucket.length >= perConstruction) continue;
       if (seenWorks.get(r.construction).has(w.id) && bucket.length < perConstruction) {
@@ -74,7 +107,11 @@ let skipped = 0;
 const summary = [];
 for (const [construction, items] of chosen) {
   for (const it of items) {
-    const [speaker, addressee, speech] = it.occurrences.map((o) => o.value);
+    const spans = it.occurrences.map((o) => o.value);
+    const expressed = mod.ROLES_FOR_CONSTRUCTION(construction);
+    const [speaker, speech] = expressed.includes('recipient')
+      ? [spans[0], spans[2]] : [spans[0], spans[1]];
+    const addressee = expressed.includes('recipient') ? spans[1] : null;
     const meta = workMeta.get(it.work);
     const record = makeRecord({
       id: `corpus:${it.work}:${it.passageId}:${construction}`,
@@ -85,7 +122,10 @@ for (const [construction, items] of chosen) {
         kind: 'supervisor',
         by: 'tools/grammar/seed-reporting.mjs',
         at: new Date().toISOString(),
-        reading: 'speaker -> agent, addressee -> recipient, quoted speech -> theme',
+        reading: expressed.includes('recipient')
+          ? 'speaker -> agent, addressee -> recipient, quoted speech -> theme'
+          : 'speaker -> agent, quoted speech -> theme; this construction does NOT express '
+            + 'an addressee, so recipient is null rather than invented',
         note: 'Declared reading for the reporting frame. A declaration, not a discovery: if it is wrong, this record is wrong.',
       },
       source: {

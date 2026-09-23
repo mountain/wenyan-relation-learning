@@ -77,9 +77,14 @@ export function makeContext({ storePath = DEFAULT_STORE, semanticStorePath = nul
   for (const [id, spec] of Object.entries(GRAMMARS)) {
     const mod = load(path.join(ROOT, spec.module));
     const evidence = records.filter((r) => r.grammar === id);
+    // In-grammar means UNIQUELY parsed. A passage holding several frames still reports a
+    // construction, and admitting those into the core made `replay` throw for the whole
+    // grammar (it is all-or-nothing), so they are held out and named by G9 instead.
     const constructionOf = (text) => {
       try {
-        return mod[spec.read](text, mod[spec.empty]()).construction ?? null;
+        const r = mod[spec.read](text, mod[spec.empty]());
+        if (!r.construction || r.reason === 'ambiguous-frame-occurrence') return null;
+        return r.construction;
       } catch {
         return null;
       }

@@ -1,6 +1,6 @@
 {
   "schema": "wenyan.dialogue.readiness.v1",
-  "generatedAt": "2026-09-22T23:12:50.971Z",
+  "generatedAt": "2026-09-23T02:42:34.436Z",
   "contract": {
     "schema": "wenyan.dialogue.contract.v1",
     "checks": [
@@ -38,26 +38,26 @@
   },
   "store": {
     "path": "knowledge/relations/evidence.jsonl",
-    "records": 32,
-    "sha256": "35fdaa769041bdce65d4028670ea498bf32e7b0b61090bf74fcc8fbfe0f510c3"
+    "records": 39,
+    "sha256": "6e6e82693cac6e8fdb1364118a8f33174da304d6bb451f092374ccfc9d2b33de"
   },
   "questionSets": {
-    "corpusPassages": 8208,
-    "totalQuestions": 9287
+    "corpusPassages": 77884,
+    "totalQuestions": 79499
   },
   "perQuestionType": {
     "Q1": {
-      "asked": 8240,
-      "Answered": 3,
-      "Unknown": 8237,
+      "asked": 77923,
+      "Answered": 6,
+      "Unknown": 77917,
       "Refused": 0,
       "Inconsistent": 0,
       "Contested": 0
     },
     "Q2": {
-      "asked": 1008,
-      "Answered": 6,
-      "Unknown": 1002,
+      "asked": 1551,
+      "Answered": 30,
+      "Unknown": 1521,
       "Refused": 0,
       "Inconsistent": 0,
       "Contested": 0
@@ -70,8 +70,8 @@
       "Inconsistent": 0
     },
     "Q4": {
-      "asked": 32,
-      "Answered": 32,
+      "asked": 18,
+      "Answered": 18,
       "Unknown": 0,
       "Refused": 0,
       "Inconsistent": 0,
@@ -104,30 +104,30 @@
   },
   "corpusAnswerabilityPerGrammar": {
     "wenyan.relations.v1": {
-      "corpusQuestions": 8208,
+      "corpusQuestions": 77884,
       "answered": 0,
       "rate": 0,
-      "evidenceRecords": 3,
+      "evidenceRecords": 6,
       "topUnknownReasons": [
         [
           "outside-declared-grammar",
-          8208
+          77884
         ]
       ]
     },
     "wenyan.relations.reporting.v1": {
-      "corpusQuestions": 8208,
-      "answered": 367,
-      "rate": 0.044712,
-      "evidenceRecords": 29,
+      "corpusQuestions": 77884,
+      "answered": 8720,
+      "rate": 0.111961,
+      "evidenceRecords": 33,
       "topUnknownReasons": [
         [
           "outside-declared-grammar",
-          7809
+          61205
         ],
         [
           "ambiguous-frame-occurrence",
-          32
+          7959
         ]
       ]
     }
@@ -141,17 +141,17 @@
     }
   ],
   "unknownReasons": {
-    "Q1: outside-declared-grammar": 8237,
-    "Q2: right side: outside-declared-grammar": 87,
-    "Q2: left side: outside-declared-grammar": 915
+    "Q1: outside-declared-grammar": 77917,
+    "Q2: right side: outside-declared-grammar": 198,
+    "Q2: left side: outside-declared-grammar": 1323
   },
   "contractViolations": [],
   "verdict": {
-    "answeredOnAuthoredEvidence": 32,
-    "q1AnswerRateOverall": 0.000364,
-    "q2AnswerRateOverall": 0.005952,
+    "answeredOnAuthoredEvidence": 39,
+    "q1AnswerRateOverall": 0.000077,
+    "q2AnswerRateOverall": 0.019342,
     "bestGrammarOnCorpus": "wenyan.relations.reporting.v1",
-    "bestCorpusAnswerRate": 0.044712,
+    "bestCorpusAnswerRate": 0.111961,
     "glossIsRefusedByContract": true,
     "note": "A high rate on authored evidence with a low rate on the corpus means the dialogue works, but mostly about the sentences it was taught. The corpus rate is now non-zero because a grammar that occurs in real text was added; it is still small, and it is per question, not a claim about understanding."
   },

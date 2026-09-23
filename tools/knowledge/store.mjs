@@ -77,18 +77,27 @@ export function makeRecord({
   if (!id || typeof id !== 'string' || id.length > 128) throw new Error('invalid evidence id');
   if (!grammar || typeof grammar !== 'string') throw new Error('missing grammar version');
   if (typeof text !== 'string' || !text) throw new Error('missing text');
+  // A role is a non-empty string when the construction EXPRESSES it and null when it
+  // does not. Requiring all three to be strings made `子曰：「學而時習之。」` — which
+  // names a speaker and a quotation and no addressee — unstorable except by inventing
+  // an addressee. At least one role must be expressed, and the grammar re-checks each
+  // expectation against its own construction's role set (see relations-reporting.ts).
+  if (!expected || typeof expected !== 'object') throw new Error('missing expected roles');
+  let expressed = 0;
   for (const k of ['agent', 'recipient', 'theme']) {
-    if (typeof expected?.[k] !== 'string' || !expected[k]) {
-      throw new Error(`invalid expected.${k}`);
-    }
+    const v = expected[k];
+    if (v === null || v === undefined) continue;
+    if (typeof v !== 'string' || !v) throw new Error(`invalid expected.${k}`);
+    expressed++;
   }
+  if (!expressed) throw new Error('expected has no expressed role');
   if (!label || typeof label !== 'object') throw new Error('missing label provenance');
   const record = {
     schema: RECORD_SCHEMA,
     id,
     grammar,
     text,
-    expected: { agent: expected.agent, recipient: expected.recipient, theme: expected.theme },
+    expected: { agent: expected.agent ?? null, recipient: expected.recipient ?? null, theme: expected.theme ?? null },
     label,
     ...(source ? { source } : {}),
   };

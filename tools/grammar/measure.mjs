@@ -110,7 +110,12 @@ if (fs.existsSync(storePath)) {
 const core = selectOperationalCore(
   records.map((r) => ({ ...r, grammar: mod.REPORTING_GRAMMAR_ID })),
   { grammar: mod.REPORTING_GRAMMAR_ID, constructionOf: (t) => {
-    try { return readReporting(t, empty).construction ?? null; } catch { return null; }
+    try {
+      const r = readReporting(t, empty);
+      // Uniquely parsed only; a multi-frame passage is held out, not admitted.
+      if (!r.construction || r.reason === 'ambiguous-frame-occurrence') return null;
+      return r.construction;
+    } catch { return null; }
   } });
 const model = core.model;
 let answerable = 0;
