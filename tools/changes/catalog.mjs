@@ -5,6 +5,7 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 import { createTsLoader } from '../lib/tsload.mjs';
+import { canonicalJson } from '../knowledge/store.mjs';
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 export const sha256 = value => crypto.createHash('sha256').update(value).digest('hex');
 export const core = createTsLoader()(path.join(ROOT, 'src/inscription/changes.ts'));
@@ -16,6 +17,15 @@ export function buildCatalog(root = ROOT) {
   const work = JSON.parse(bytes);
   const manifest = JSON.parse(fs.readFileSync(path.join(root, 'data/corpus/manifest.json'), 'utf8'));
   const digest = sha256(bytes);
+  // The WHOLE-FILE digest is informational only: `data/corpus/works/zhouyi.json` is a
+  // DERIVED artifact and every corpus re-extraction rewrites it, so pinning its bytes
+  // made the hash-chained, append-only learning log unreadable after any rebuild —
+  // observed when adding the 前三史/志怪/經部 corpora changed `extraction.removed`'s
+  // bookkeeping shape while every bound passage stayed byte-identical. What the
+  // reference has always claimed to pin (`field: 'license'`) is pinned explicitly
+  // here instead: the licence object's own digest. The sibling `taixuan` module binds
+  // a frozen `data/taixuan/source.json` snapshot, which is why it never had this problem.
+  const licenseDigest = sha256(JSON.stringify(canonicalJson(work.license)));
   if (work.id !== 'zhouyi' || work.sections.length !== 64) throw new Error('unexpected Zhouyi corpus');
   const entries = work.sections.map(section => {
     const passages = section.passages.filter(p => p.text.startsWith('易經：'));
@@ -36,7 +46,8 @@ export function buildCatalog(root = ROOT) {
       return { text, source: { work: work.id, section: section.id, passageId: passage.id,
         sourcePage: section.sourcePage, sourceRevid: section.sourceRevid,
         passageHash: sha256(passage.text), start, end,
-        license: { source: filename, corpusSha256: digest, field: 'license', attribution: section.sourcePage } } };
+        license: { source: filename, corpusSha256: digest, licenseSha256: licenseDigest,
+          field: 'license', attribution: section.sourcePage } } };
     }
     const lines = [], extra = [];
     matches.forEach((m, i) => {

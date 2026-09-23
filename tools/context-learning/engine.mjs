@@ -13,14 +13,38 @@ const exact = (o, keys) => o && typeof o === 'object' && !Array.isArray(o)
   && Object.keys(o).sort().join(',') === keys.slice().sort().join(',');
 const name = s => typeof s === 'string' && s.length > 0 && s.length <= 128;
 
+/**
+ * Source-binding policy, declared per adapter.
+ *
+ * `'exact'` (default) requires the recorded reference to equal the catalog's current
+ * one field for field — correct for an adapter bound to a FROZEN snapshot, as
+ * `taixuan` is: its `snapshotSha256` describes bytes that never change, so a mismatch
+ * means the evidence really moved.
+ *
+ * `'evidence'` treats the whole-FILE digest at `reference.license.corpusSha256` as
+ * drift (reported) instead of a fatal mismatch, because that file is the DERIVED
+ * corpus and every re-extraction rewrites it. A hash-chained append-only log cannot
+ * be repaired by rewriting, so the digest must not be fatal; passage hash, span,
+ * source page, revision, part and text are still compared for equality, and
+ * `licenseSha256` — once an event declares it — is compared for equality too.
+ */
+function splitSourceDigest(reference) {
+  const { license, ...rest } = reference ?? {};
+  if (!license || typeof license !== 'object') return { rest, fileDigest: null, licenseSha256: null };
+  const { corpusSha256, licenseSha256, ...licenseRest } = license;
+  return { rest: { ...rest, license: licenseRest }, fileDigest: corpusSha256 ?? null, licenseSha256: licenseSha256 ?? null };
+}
+
 export function createContextLearner(adapter) {
-  const { schema: SCHEMA, features: FEATURES } = adapter;
+  const { schema: SCHEMA, features: FEATURES, sourceBinding = 'exact' } = adapter;
+  if (!['exact', 'evidence'].includes(sourceBinding)) throw new Error('invalid source-binding policy');
   if (!name(SCHEMA) || !Array.isArray(FEATURES) || !FEATURES.length || new Set(FEATURES).size !== FEATURES.length
       || FEATURES.some(x => !name(x)) || ['context', 'key', 'record'].some(k => typeof adapter[k] !== 'function'))
     throw new Error('invalid context adapter');
 
   function replayLearning(events, catalog) {
     const profiles = new Map(), examples = new Map(), retracted = new Set(), ids = new Set();
+    const sourceDrift = [];
     let previous = null;
     for (const event of events) {
       if (!exact(event, ['schema', 'id', 'previous', 'payload', 'provenance', 'hash']) || event.schema !== SCHEMA
@@ -50,8 +74,17 @@ export function createContextLearner(adapter) {
         adapter.context(p.context);
         if (p.source?.kind === 'corpus') {
           const line = adapter.record(catalog, p.context);
-          if (!exact(p.source, ['kind', 'reference', 'text']) || hash(p.source.reference) !== hash(line.source)
-              || p.source.text !== line.text) throw new Error('stale or mismatched source binding');
+          if (!exact(p.source, ['kind', 'reference', 'text']) || p.source.text !== line.text)
+            throw new Error('stale or mismatched source binding');
+          if (sourceBinding === 'evidence') {
+            const a = splitSourceDigest(p.source.reference), b = splitSourceDigest(line.source);
+            if (hash(a.rest) !== hash(b.rest)) throw new Error('stale or mismatched source binding');
+            if (a.licenseSha256 !== null && a.licenseSha256 !== b.licenseSha256)
+              throw new Error('licence changed since this example was recorded');
+            if (a.fileDigest !== b.fileDigest) sourceDrift.push({ event: event.id, recorded: a.fileDigest, current: b.fileDigest, kind: 'corpus-file-rewritten' });
+          } else if (hash(p.source.reference) !== hash(line.source)) {
+            throw new Error('stale or mismatched source binding');
+          }
         } else if (!exact(p.source, ['kind', 'note']) || p.source.kind !== 'authored'
             || typeof p.source.note !== 'string' || !p.source.note) throw new Error('missing source kind');
         examples.set(event.id, { ...p, id: event.id, provenance: event.provenance });
@@ -62,7 +95,7 @@ export function createContextLearner(adapter) {
       } else throw new Error('unknown learning event');
       ids.add(event.id); previous = recorded;
     }
-    return { profiles, active: [...examples.values()].filter(e => !retracted.has(e.id)), retracted: [...retracted], head: previous };
+    return { profiles, active: [...examples.values()].filter(e => !retracted.has(e.id)), retracted: [...retracted], head: previous, sourceDrift };
   }
 
   function makeLearningEvent(events, { id, payload, provenance }, catalog) {

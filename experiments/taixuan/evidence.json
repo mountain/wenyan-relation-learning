@@ -1,6 +1,6 @@
 {
   "schema": "wenyan.taixuan.validation.v1",
-  "runtime": "v24.19.0",
+  "runtime": "v26.4.0",
   "corpus": {
     "heads": 81,
     "zans": 729,
@@ -171,19 +171,19 @@
   "sources": {
     "data/taixuan/source.wiki": "22573659dec9e3bbf8a6001c9ad07a275fb76ab4b5e42b01bc1fd91aa7626258",
     "data/taixuan/source.json": "aa64039392ea6e0d0278a9f870e290d0be7a1b35c16d6cecd4349e3d7ca0f5aa",
-    "tools/context-learning/engine.mjs": "e1946b10fc666fbfff44246cba06cd7b67a4fd397e0f5c2aa91fcdee8ac1b199",
+    "tools/context-learning/engine.mjs": "b88cc0e71bec38857142cf1c2801b37d356c12c057af99f874ebeadbb3a93183",
     "tools/taixuan/structure.mjs": "c118d2fdd1ef3e40c88815259eaa5e82870d72f9b0b40eadce6dec2c32a79c93",
     "tools/taixuan/catalog.mjs": "ce8ca2e1e5226923ad1be89c62a7d543789d7a36c8525e58cb54acfc45c6ab80",
     "tools/taixuan/learning.mjs": "54babb9d691cf7bec61db95b4c8169721cfb13091cddca54970ef34af20770ed",
     "tools/taixuan/experiment.mjs": "50abea40fe279ab1dd3812d9a46357a5f9529e04da9d94c3e153cc1af6c89e00",
     "tools/taixuan/ask.mjs": "6375645233c0dab8b9dfbc9be9c984e8729633fa216ffab269840350aaefc875",
     "tools/taixuan/fetch-source.mjs": "0b15bbf6b0b51c05184c8bfd10d9c96aed12ccfa56a795b8e3e21606270450fc",
-    "tools/taixuan/selftest.mjs": "16d3c0f8d9bd115c88d1d107b10db039e69ce01183502a9187663a496369dbcd",
+    "tools/taixuan/selftest.mjs": "696e254b91c4e2ad2fe48464d36284cf0c9d4bc434ba3172552983c951c70586",
     "experiments/taixuan/contract.json": "16977e611cb3c4d03cb8d1df2c0195d2fae513258651dec598f9a0d21f48ae4f",
     "experiments/taixuan/annotations.json": "268316cbeed36cfba607e7f80df9cf83d7e8d53547566a145c8e438ea6357140"
   },
   "preserved": {
-    "experiments/changes/evidence.json": "abded40e5eef4f413a3e0f1e3f463e79e6d5de9d53c94b3043136d20135d03f0",
+    "experiments/changes/evidence.json": "932b725e64386083b00c07c081e2024f718c8fc336b2755df39a2c1b9721130d",
     "knowledge/changes/learning.jsonl": "5ec183b2402f3d16fe51a14286e445c82494da86cdc298c63c7e63f50b16ebc7",
     "experiments/relations/evidence.json": "784f6fe4d8d60bcb92118fbc9dd0cba4b245d3b78c503dbd839fa7bdd931b45d"
   }

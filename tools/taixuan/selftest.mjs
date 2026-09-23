@@ -106,6 +106,10 @@ assert.throws(() => add(events, 'untyped', { ...original.payload, context: { bit
 const zhouyi = buildZhouyi();
 const oldLog = legacy.loadLearning(path.join(ROOT, 'knowledge/changes/learning.jsonl'), zhouyi);
 const compatible = createContextLearner({ schema: 'wenyan.changes.learning-event.v1',
+  // This harness replays the `changes` log, whose references pin the DERIVED corpus
+  // file rather than a frozen snapshot, so the parity peer must declare the same
+  // source-binding policy as that log: whole-file digest drift is reported, not fatal.
+  sourceBinding: 'evidence',
   features: ['bits', 'position', 'polarity', 'lower', 'upper', 'central', 'proper', 'oppositeAtCorrespondence'],
   context: c => {
     if (!c || Object.keys(c).sort().join(',') !== 'bits,position') throw new Error('invalid Zhouyi context');

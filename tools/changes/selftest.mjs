@@ -80,6 +80,33 @@ const tampered = clone(events); tampered[1].payload.label = 'yin'; assert.throws
 assert.throws(() => replayLearning(events.slice(1), catalog));
 const badSource = clone(events.find(e => e.id === 'qian-wait').payload); badSource.source.text = 'invented';
 assert.throws(() => makeLearningEvent(events, { id: 'bad-source', payload: badSource, provenance }, catalog));
+
+// Source-binding policy. The corpus work file is DERIVED and re-extracting it rewrites
+// its bytes, so its whole-file digest is compared as reported drift rather than as a
+// fatal mismatch — the log is hash-chained and cannot be repaired by rewriting. Every
+// component of the EVIDENCE stays fatal, and so does the licence once an event declares
+// its own digest.
+{
+  const driftPayload = clone(events.find(e => e.id === 'qian-wait').payload);
+  driftPayload.source.reference.license.corpusSha256 = 'f'.repeat(64);
+  const withDrift = [...events, makeLearningEvent(events, { id: 'file-rewritten', payload: driftPayload, provenance }, catalog)];
+  const replayed = replayLearning(withDrift, catalog);
+  assert.equal(replayed.sourceDrift.length, 1, 'a rewritten corpus file must be reported, not silently accepted');
+  assert.equal(replayed.sourceDrift[0].event, 'file-rewritten');
+  assert.equal(replayed.sourceDrift[0].kind, 'corpus-file-rewritten');
+
+  const spanMoved = clone(driftPayload); spanMoved.source.reference.start += 1;
+  assert.throws(() => makeLearningEvent(events, { id: 'span-moved', payload: spanMoved, provenance }, catalog),
+    /stale or mismatched source binding/, 'a moved span is evidence drift and stays fatal');
+
+  const revMoved = clone(driftPayload); revMoved.source.reference.sourceRevid += 1;
+  assert.throws(() => makeLearningEvent(events, { id: 'rev-moved', payload: revMoved, provenance }, catalog),
+    /stale or mismatched source binding/, 'a different source revision is evidence drift and stays fatal');
+
+  const licenceMoved = clone(driftPayload); licenceMoved.source.reference.license.licenseSha256 = '0'.repeat(64);
+  assert.throws(() => makeLearningEvent(events, { id: 'licence-moved', payload: licenceMoved, provenance }, catalog),
+    /licence changed since this example was recorded/, 'a licence change is fatal once the event pins it');
+}
 assert.throws(() => makeLearningEvent(events, { id: 'bad-profile', payload: { kind: 'profile', profile: 'bad', task: 'bad', labels: ['a', 'b'], hypotheses: [['destiny']] }, provenance }, catalog));
 const temp = fs.mkdtempSync(path.join(os.tmpdir(), 'wenyan-changes-'));
 try {
@@ -105,6 +132,10 @@ const report = { schema: 'wenyan.changes.validation.v1', runtime: process.versio
     coarseHypothesesRefuted: refutation.refuted.length, contestedLocal: true, withdrawalAndReplay: true,
     semanticStatus: 'supervisor-proposals-only; corpus context refinement is not measured semantic generalization' },
   integration: { optIn: true, legacyFieldsEqual: true, acknowledgementGatePreserved: true },
+  // Reported, not swallowed: the recorded log pins the corpus work file's bytes, and that
+  // file is DERIVED, so a corpus re-extraction moves the digest while the bound passages
+  // stay identical. Recording the drift here is what keeps the tolerance auditable.
+  sourceDrift: replayLearning(loadLearning(path.join(ROOT, 'knowledge/changes/learning.jsonl'), catalog), catalog).sourceDrift,
   sources: Object.fromEntries(sourcePaths.map(p => [p, sha256(fs.readFileSync(path.join(ROOT, p)))])) };
 const atlas = { schema: 'wenyan.changes.syllogism-atlas.v1',
   encoding: 'bottom quantity triple, top quality triple; figure and policy retained separately',
@@ -125,8 +156,17 @@ if (process.argv.includes('--write')) {
   fs.mkdirSync(path.join(ROOT, 'knowledge/changes'), { recursive: true });
   fs.writeFileSync(path.join(ROOT, 'knowledge/changes/catalog.json'), JSON.stringify(catalog, null, 2) + '\n');
   fs.writeFileSync(path.join(ROOT, 'knowledge/changes/syllogisms.json'), JSON.stringify(atlas, null, 2) + '\n');
+  // The log is hash-chained history and is NOT regenerated: every payload pins its own
+  // corpus revision, so a re-derivation after a corpus re-extraction would name different
+  // content under an existing id. Only ids not already recorded are appended; drift in an
+  // existing event is reported by loadLearning() (sourceDrift), never repaired by rewriting.
   const log = path.join(ROOT, 'knowledge/changes/learning.jsonl');
-  for (const e of events) appendLearning(log, { id: e.id, payload: e.payload, provenance: e.provenance }, catalog);
+  const recordedIds = new Set(fs.existsSync(log)
+    ? fs.readFileSync(log, 'utf8').split('\n').filter(Boolean).map(l => JSON.parse(l).id) : []);
+  for (const e of events) {
+    if (recordedIds.has(e.id)) continue;
+    appendLearning(log, { id: e.id, payload: e.payload, provenance: e.provenance }, catalog);
+  }
   fs.writeFileSync(path.join(ROOT, 'experiments/changes/evidence.json'), JSON.stringify(report, null, 2) + '\n');
 }
 console.log(JSON.stringify(report, null, 2));

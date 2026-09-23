@@ -1,12 +1,12 @@
 {
   "schema": "wenyan.changes.validation.v1",
-  "runtime": "v24.19.0",
+  "runtime": "v26.4.0",
   "corpus": {
     "hexagrams": 64,
     "statements": 64,
     "ordinaryLines": 384,
     "extraUseLines": 2,
-    "sourceSha256": "3b2c6aeac5dcd1c0311effa40b400f86d58473a83b3fd5239a3b5dbc19fd9d3b"
+    "sourceSha256": "537e111435d7a58c037de27abb49fa8681dda5d42d18b83f0eea6e3514b0b8a1"
   },
   "exact": {
     "encodings": 64,
@@ -52,15 +52,35 @@
     "legacyFieldsEqual": true,
     "acknowledgementGatePreserved": true
   },
+  "sourceDrift": [
+    {
+      "event": "qian-wait",
+      "recorded": "3b2c6aeac5dcd1c0311effa40b400f86d58473a83b3fd5239a3b5dbc19fd9d3b",
+      "current": "537e111435d7a58c037de27abb49fa8681dda5d42d18b83f0eea6e3514b0b8a1",
+      "kind": "corpus-file-rewritten"
+    },
+    {
+      "event": "lu-act",
+      "recorded": "3b2c6aeac5dcd1c0311effa40b400f86d58473a83b3fd5239a3b5dbc19fd9d3b",
+      "current": "537e111435d7a58c037de27abb49fa8681dda5d42d18b83f0eea6e3514b0b8a1",
+      "kind": "corpus-file-rewritten"
+    },
+    {
+      "event": "qian-disagreement",
+      "recorded": "3b2c6aeac5dcd1c0311effa40b400f86d58473a83b3fd5239a3b5dbc19fd9d3b",
+      "current": "537e111435d7a58c037de27abb49fa8681dda5d42d18b83f0eea6e3514b0b8a1",
+      "kind": "corpus-file-rewritten"
+    }
+  ],
   "sources": {
     "src/inscription/changes.ts": "0d4adef56208ce3d00c6d1c3d742c7290c1216b32c10f6194471836115d6f572",
     "src/inscription/syllogism.ts": "31c08cd675fb541dac272f9e82246bfe5402c3dba31f5d9d31ce8ec17d0b91ed",
     "src/inscription/pipeline.ts": "33a098d6de5d1525788cb692c029469a659089443b8e2522934cdf3c42e5f887",
-    "tools/changes/catalog.mjs": "f3056c15dd7d203952102b7c039ad1c7a410585c286a68c1ef5a2438f1d5f89a",
-    "tools/changes/learning.mjs": "76fc0c38c0614eb22e80d819126e27cd0622ce8118ceff02e2118d49d4b8d184",
+    "tools/changes/catalog.mjs": "ea470d4dc2ce4487dc0cc2935d2d4f56dfe46e61609a166eb584c14e3cfee242",
+    "tools/changes/learning.mjs": "23de404989bcdd9c171360103c783286f0474ae85f9ba8a15ed0b4dcdb703015",
     "tools/changes/ask.mjs": "de4482a417b8f2906a0ad401440b593809f7c667ee2e912a00ccb505a535b5f5",
     "tools/changes/core-checks.mjs": "f1ec9cc4fa778f6dc276ec0e50f3d0e35bc3299dc74b79415edcdb7d71014b3b",
-    "tools/changes/selftest.mjs": "ae34b58cbe282ace9b01a740226873879ff12df9ff6b89cad585f3558a9f63b7",
+    "tools/changes/selftest.mjs": "ca810175028630cbf342a39c8fceaa303a6c7a5c0c95b017b07adc827fa79e2e",
     "experiments/changes/contract.json": "1218965c65e8375b8db4db793be765698ff0764d1cfd5e0a8f35d402e886c94e"
   }
 }

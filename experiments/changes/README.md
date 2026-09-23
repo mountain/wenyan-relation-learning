@@ -29,6 +29,37 @@ https://zh.wikisource.org/wiki/周易正義/01乾
 `sourceVerification: caller-supplied-catalog`。关系库的 CLI 自行从本地语料重建。
 文言仓只接收这个数据接口，不复制古籍数据。
 
+### 2.1 来源绑定为什么按证据校验，而不按文件字节
+
+`data/corpus/works/zhouyi.json` 是**派生**产物：语料重新抽取会重写它的字节，即使被绑定的段落一字未动。
+2026 年扩充语料（前三史、志怪传奇、经部与集部，共 50 部）时正是如此——该文件只有
+`extraction.removed` 的记账字段形状改变，而 `潛龍勿用。` 仍在第 3 段的 16–21 位。
+
+原先的绑定把**整文件 SHA-256** 当作必须相等的值，于是每次重建语料都会让 `learning.jsonl` 无法读取。
+该日志是**哈希链式 append-only**（每事件的 `previous` 是前一事件的 `hash`），改绑只能重写全链、
+从而销毁它存在的意义，所以「重算摘要」这条路是堵死的。
+
+现在 `reference.license.corpusSha256` 按**漂移上报**处理：`replayLearning` 返回 `sourceDrift`，
+`experiments/changes/evidence.json` 记录之（当前 3 条：`qian-wait`、`lu-act`、`qian-disagreement`）。
+**证据本身仍然必须逐项相等**：段落哈希、UTF-16 跨度、页面修订号、篇段编号与正文文本；
+任何一项改动依旧直接抛错。另外新增 `licenseSha256`（许可对象自身的摘要），
+事件一旦声明它，许可变动即致命——旧事件没有这一项，故对它们而言许可只由上述漂移摘要间接约束，
+这是本次的已知弱化，如实记于此。
+
+兄弟模块 `tools/taixuan` 从未遇到此问题，因为它绑的是**冻结快照** `data/taixuan/source.json`。
+两条路线都可用：冻结快照（强度最高，代价是语料更新后需重新冻结），
+或按证据绑定（自动跟随语料，代价是整文件摘要降为可追溯信息）。本模块选后者。
+
+`tools/context-learning/engine.mjs` 因此新增 `sourceBinding` 选项，默认 `'exact'`（冻结快照仍按字节校验），
+`'evidence'` 为上述策略；重放 `changes` 日志的 parity 测试显式声明 `'evidence'`。
+
+### 2.2 语料索引的静默丢失（已修）
+
+`client.exists()` 曾以 API **回显的标题**作匹配。`zh` 站点会跟随重定向，于是唐詩三百首清单里的
+`長干行之一` 回显为 `長干曲 (君家何處住)`、`送杜少府之任蜀州` 回显为 `杜少府之任蜀州`，
+320 首中有 25 首被当成不存在，而 `missing` 却是空的——静默丢掉选集 8%。
+现改为经 API 自身的 `normalized` / `redirects` 映射解析，并按调用方传入的标题回报。
+
 `觀「乾」。` 返回卦的索引；`觀「乾」之初爻。` 返回原文、位置特征和显式单爻变换。
 `观` 亦可。无定义的问题返回 Unknown，不用叙事分数替代语义。
 

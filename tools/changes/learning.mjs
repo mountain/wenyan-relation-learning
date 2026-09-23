@@ -12,8 +12,39 @@ const exact = (o, keys) => o && typeof o === 'object' && !Array.isArray(o)
   && Object.keys(o).sort().join(',') === keys.slice().sort().join(',');
 const name = s => typeof s === 'string' && s.length > 0 && s.length <= 128;
 
+/**
+ * Source-binding comparison for a labelled example.
+ *
+ * `reference.license.corpusSha256` is the digest of the WHOLE corpus work file, which
+ * is a derived artifact: re-extracting the corpus rewrites it even when the bound
+ * passage is untouched. Because the learning log is hash-chained and append-only
+ * (each event's `previous` is the prior event's hash), a stale file digest cannot be
+ * repaired by re-writing the log — it would have to be re-chained, destroying exactly
+ * the provenance the log exists to carry. The digest is therefore compared as DRIFT
+ * (reported) rather than as EQUALITY (fatal); everything that constitutes the evidence
+ * is still compared for equality: passage hash, span, source page, revision, part and
+ * text. `licenseSha256`, once an event declares it, IS compared for equality, so a
+ * genuine licence change remains fatal.
+ */
+function splitSourceDigest(reference) {
+  const { license, ...rest } = reference ?? {};
+  if (!license || typeof license !== 'object') return { rest, fileDigest: null, licenseSha256: null };
+  const { corpusSha256, licenseSha256, ...licenseRest } = license;
+  return { rest: { ...rest, license: licenseRest }, fileDigest: corpusSha256 ?? null, licenseSha256: licenseSha256 ?? null };
+}
+
+function bindingFrom(recorded, current) {
+  const a = splitSourceDigest(recorded), b = splitSourceDigest(current);
+  if (hash(a.rest) !== hash(b.rest)) throw new Error('stale or mismatched source binding');
+  if (a.licenseSha256 !== null && a.licenseSha256 !== b.licenseSha256) throw new Error('licence changed since this example was recorded');
+  return a.fileDigest === b.fileDigest ? null
+    : { recorded: a.fileDigest, current: b.fileDigest, kind: 'corpus-file-rewritten' };
+}
+
+
 export function replayLearning(events, catalog) {
   const profiles = new Map(), examples = new Map(), retracted = new Set(), ids = new Set();
+  const sourceDrift = [];
   let previous = null;
   for (const event of events) {
     if (!exact(event, ['schema', 'id', 'previous', 'payload', 'provenance', 'hash']) || event.schema !== SCHEMA
@@ -44,8 +75,10 @@ export function replayLearning(events, catalog) {
       core.lineContext(p.context.bits, p.context.position);
       if (p.source?.kind === 'corpus') {
         const { line } = findLine(catalog, p.context.bits, p.context.position);
-        if (!exact(p.source, ['kind', 'reference', 'text']) || hash(p.source.reference) !== hash(line.source)
-            || p.source.text !== line.text) throw new Error('stale or mismatched source binding');
+        if (!exact(p.source, ['kind', 'reference', 'text']) || p.source.text !== line.text)
+          throw new Error('stale or mismatched source binding');
+        const drift = bindingFrom(p.source.reference, line.source);
+        if (drift) sourceDrift.push({ event: event.id, ...drift });
       } else if (!exact(p.source, ['kind', 'note']) || p.source.kind !== 'authored'
           || typeof p.source.note !== 'string' || !p.source.note) throw new Error('missing source kind');
       examples.set(event.id, { ...p, id: event.id, provenance: event.provenance });
@@ -56,7 +89,7 @@ export function replayLearning(events, catalog) {
     } else throw new Error('unknown learning event');
     ids.add(event.id); previous = recorded;
   }
-  return { profiles, active: [...examples.values()].filter(e => !retracted.has(e.id)), retracted: [...retracted], head: previous };
+  return { profiles, active: [...examples.values()].filter(e => !retracted.has(e.id)), retracted: [...retracted], head: previous, sourceDrift };
 }
 
 export function makeLearningEvent(events, { id, payload, provenance }, catalog) {
