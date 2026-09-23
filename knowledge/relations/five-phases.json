@@ -1,0 +1,289 @@
+{
+  "schema": "wenyan.relations.five-phases.v1",
+  "generatedAt": "2026-09-23T13:19:20.718Z",
+  "question": "Is the 五行 correspondence table present in the text as a bijection, and is its weight even across the five phases?",
+  "scope": {
+    "passages": 217054,
+    "phases": [
+      "木",
+      "火",
+      "土",
+      "金",
+      "水"
+    ],
+    "categories": [
+      "五方",
+      "五色",
+      "五音",
+      "五臟",
+      "五味",
+      "五數",
+      "五穀",
+      "五臭",
+      "五常"
+    ]
+  },
+  "perCategory": {
+    "五方": {
+      "table": {
+        "木": "東",
+        "火": "南",
+        "土": "中",
+        "金": "西",
+        "水": "北"
+      },
+      "diagonalCounts": {
+        "木": 1898,
+        "火": 1598,
+        "土": 4355,
+        "金": 3667,
+        "水": 3665
+      },
+      "diagonalShare": 0.1814,
+      "chanceShare": 0.2,
+      "argmaxIsCanonical": false,
+      "mismatches": [
+        "木→中(非典范 東)",
+        "火→中(非典范 南)",
+        "土→中(非典范 中)",
+        "金→中(非典范 西)"
+      ],
+      "diagonalSpread": 2.73
+    },
+    "五色": {
+      "table": {
+        "木": "青",
+        "火": "赤",
+        "土": "黃",
+        "金": "白",
+        "水": "黑"
+      },
+      "diagonalCounts": {
+        "木": 1426,
+        "火": 823,
+        "土": 1748,
+        "金": 3655,
+        "水": 1686
+      },
+      "diagonalShare": 0.2033,
+      "chanceShare": 0.2,
+      "argmaxIsCanonical": false,
+      "mismatches": [
+        "木→白(非典范 青)",
+        "火→白(非典范 赤)",
+        "土→白(非典范 黃)",
+        "金→白(非典范 白)"
+      ],
+      "diagonalSpread": 4.44
+    },
+    "五音": {
+      "table": {
+        "木": "角",
+        "火": "徵",
+        "土": "宮",
+        "金": "商",
+        "水": "羽"
+      },
+      "diagonalCounts": {
+        "木": 696,
+        "火": 177,
+        "土": 856,
+        "金": 911,
+        "水": 783
+      },
+      "diagonalShare": 0.2054,
+      "chanceShare": 0.2,
+      "argmaxIsCanonical": false,
+      "mismatches": [
+        "木→宮(非典范 角)",
+        "火→宮(非典范 徵)",
+        "土→宮(非典范 宮)",
+        "金→宮(非典范 商)"
+      ],
+      "diagonalSpread": 5.15
+    },
+    "五臟": {
+      "table": {
+        "木": "肝",
+        "火": "心",
+        "土": "脾",
+        "金": "肺",
+        "水": "腎"
+      },
+      "diagonalCounts": {
+        "木": 224,
+        "火": 2087,
+        "土": 149,
+        "金": 177,
+        "水": 353
+      },
+      "diagonalShare": 0.166,
+      "chanceShare": 0.2,
+      "argmaxIsCanonical": false,
+      "mismatches": [
+        "木→心(非典范 肝)",
+        "火→心(非典范 心)",
+        "土→心(非典范 脾)",
+        "金→心(非典范 肺)"
+      ],
+      "diagonalSpread": 14.01
+    },
+    "五味": {
+      "table": {
+        "木": "酸",
+        "火": "苦",
+        "土": "甘",
+        "金": "辛",
+        "水": "鹹"
+      },
+      "diagonalCounts": {
+        "木": 251,
+        "火": 815,
+        "土": 668,
+        "金": 504,
+        "水": 249
+      },
+      "diagonalShare": 0.1824,
+      "chanceShare": 0.2,
+      "argmaxIsCanonical": false,
+      "mismatches": [
+        "木→甘(非典范 酸)",
+        "火→苦(非典范 苦)",
+        "土→苦(非典范 甘)",
+        "金→苦(非典范 辛)"
+      ],
+      "diagonalSpread": 3.27
+    },
+    "五數": {
+      "table": {
+        "木": "八",
+        "火": "七",
+        "土": "五",
+        "金": "九",
+        "水": "六"
+      },
+      "diagonalCounts": {
+        "木": 1403,
+        "火": 1369,
+        "土": 3203,
+        "金": 2259,
+        "水": 3615
+      },
+      "diagonalShare": 0.1916,
+      "chanceShare": 0.2,
+      "argmaxIsCanonical": false,
+      "mismatches": [
+        "木→五(非典范 八)",
+        "火→五(非典范 七)",
+        "土→五(非典范 五)",
+        "金→五(非典范 九)"
+      ],
+      "diagonalSpread": 2.64
+    },
+    "五穀": {
+      "table": {
+        "木": "麥",
+        "火": "菽",
+        "土": "稷",
+        "金": "麻",
+        "水": "黍"
+      },
+      "diagonalCounts": {
+        "木": 286,
+        "火": 28,
+        "土": 430,
+        "金": 419,
+        "水": 314
+      },
+      "diagonalShare": 0.2239,
+      "chanceShare": 0.2,
+      "argmaxIsCanonical": false,
+      "mismatches": [
+        "木→麻(非典范 麥)",
+        "火→麻(非典范 菽)",
+        "土→麻(非典范 稷)"
+      ],
+      "diagonalSpread": 15.36
+    },
+    "五臭": {
+      "table": {
+        "木": "羶",
+        "火": "焦",
+        "土": "香",
+        "金": "腥",
+        "水": "朽"
+      },
+      "diagonalCounts": {
+        "木": 6,
+        "火": 338,
+        "土": 696,
+        "金": 68,
+        "水": 184
+      },
+      "diagonalShare": 0.1341,
+      "chanceShare": 0.2,
+      "argmaxIsCanonical": false,
+      "mismatches": [
+        "木→香(非典范 羶)",
+        "火→香(非典范 焦)",
+        "土→香(非典范 香)",
+        "金→香(非典范 腥)"
+      ],
+      "diagonalSpread": 116
+    },
+    "五常": {
+      "table": {
+        "木": "仁",
+        "火": "禮",
+        "土": "信",
+        "金": "義",
+        "水": "智"
+      },
+      "diagonalCounts": {
+        "木": 647,
+        "火": 1000,
+        "土": 820,
+        "金": 1418,
+        "水": 510
+      },
+      "diagonalShare": 0.1817,
+      "chanceShare": 0.2,
+      "argmaxIsCanonical": false,
+      "mismatches": [
+        "木→禮(非典范 仁)",
+        "火→禮(非典范 禮)",
+        "土→禮(非典范 信)",
+        "金→禮(非典范 義)"
+      ],
+      "diagonalSpread": 2.78
+    }
+  },
+  "nonClaims": [
+    "Co-occurrence inside one passage is not assertion: 西 and 金 share passages for geographic reasons too. The diagonal test is therefore an UPPER bound on support, and the asymmetry measured between rows is the part that cannot be explained that way.",
+    "The canonical tables are taken from the classical standard, not derived from this corpus; if a table is wrong, the tool reports the corpus as disagreeing with it rather than correcting itself.",
+    "Greedy argmax, not an optimal assignment: collisions are reported rather than resolved."
+  ],
+  "symmetry": {
+    "diagonalSpreadPerCategory": {
+      "五方": 2.73,
+      "五色": 4.44,
+      "五音": 5.15,
+      "五臟": 14.01,
+      "五味": 3.27,
+      "五數": 2.64,
+      "五穀": 15.36,
+      "五臭": 116,
+      "五常": 2.78
+    },
+    "medianSpread": 4.44,
+    "reading": "A regular structure predicts a spread near 1 (all five phases equally attested). Larger means the labelling is carried unevenly by the corpus, so the regularity is an idealisation rather than a measured property — which is exactly the kind of thing this project reports instead of assuming."
+  },
+  "outcome": {
+    "result": "NEGATIVE, and the diagnosis matters more than the numbers.",
+    "whatWasMeasured": "同段共现（passage-level co-occurrence）能否支撑九张对应表。",
+    "whatWasFound": "九张表全部不成立：对角占比 16.6%–22.4%，随机基线 20%。八张表里前四相的 argmax 塌到同一个高频项（中／白／宮／心／麻／香／禮）——即矩阵的行近似成比例，**它不携带任何相位专有信息**。",
+    "whatMustBeRetracted": "「五相跨度 2.6×–116× = 相位不对称」这个读法我要撤回：跨度几乎完全由**项自身的词频**决定（香 常见、羶 罕见），不是相位权重。跨度可以报，但不能当相位对称性的证据。",
+    "correctMethod": "需要**对齐**而不是共现：取「同段内 ≥3 相 + 同类别 ≥3 项**成列并出**」的段落（月令／素問／五行志式的平行列举），在那里才谈得上表格。共现法把「一段里同时提到 木 和 白」与「木，其色白」一视同仁。",
+    "pattern": "同一失败模式的第二次：共现若不带对齐，量到的是边缘分布。前一次是变体字守卫的负对照（维 全库 35 次、詩經 0 次，所以「源字符不在语料」这个判据无效）。两次都是「看起来像信号的东西其实是词频」。"
+  }
+}
