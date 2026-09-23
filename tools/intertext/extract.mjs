@@ -53,7 +53,22 @@ const STRICT = /《\s*(詩|書|易|禮|春秋|論語|孝經|爾雅|周禮|儀禮
 const BARE = /(?<![》\u4e00-\u9fff])(詩|書|易|禮)\s*(?:曰|云)(?![》「])/g;
 
 /** Punctuation and whitespace carry no weight in a classical quotation. */
-const norm = (t) => t.replace(/[\s，。；：、！？「」『』（）()《》〈〉·—…"'']/g, '');
+/**
+ * Punctuation carries no weight in a classical quotation, and neither do the ORTHOGRAPHIC
+ * variants in knowledge/intertext/variants.json. That table is DATA, not code, because each
+ * entry carries its own basis and its own MEASURED gain — 於/于 alone hides 18 citations,
+ * and thirteen other candidate pairs measured exactly zero, which is why they are recorded
+ * as rejected rather than quietly used. Phonetic loans are refused there outright.
+ */
+const VARIANTS = JSON.parse(fs.readFileSync(path.join(ROOT, 'knowledge/intertext/variants.json'), 'utf8'))
+  .accepted.map((v) => [v.from, v.to]);
+const CONVENTIONS = JSON.parse(fs.readFileSync(path.join(ROOT, 'knowledge/intertext/conventions.json'), 'utf8'))
+  .declared;
+const norm = (t) => {
+  let s = t.replace(/[\s，。；：、！？「」『』（）()《》〈〉·—…"'']/g, '');
+  for (const [a, b] of VARIANTS) s = s.split(a).join(b);
+  return s;
+};
 
 const works = new Map();
 for (const w of JSON.parse(fs.readFileSync(path.join(CORPUS, 'manifest.json'), 'utf8')).works) {
@@ -87,11 +102,23 @@ function quotedAfter(text, from) {
 
 const records = [];
 const bareCounts = {};
+let resolvedByConvention = 0;
 let unresolved = 0;
 for (const [hostId, doc] of works) {
   for (const s of doc.sections) {
     for (const p of s.passages) {
-      for (const m of p.text.matchAll(BARE)) bareCounts[m[1]] = (bareCounts[m[1]] ?? 0) + 1;
+      for (const m of p.text.matchAll(BARE)) {
+        const conv = CONVENTIONS.find((c) => c.host === hostId && c.marker === m[0]);
+        if (conv) {
+          // A declared host-relative convention: the bare name IS how this host cites that work.
+          resolvedByConvention++;
+          records.push({ schema: 'wenyan.intertext.citation.v1',
+            host: { work: hostId, section: s.id, passageId: p.id, sourcePage: s.sourcePage, sourceRevid: s.sourceRevid },
+            marker: m[0].trim(), citedName: m[1], citedWork: CITED[conv.means] ?? null,
+            quote: quotedAfter(p.text, m.index + m[0].length),
+            status: 'by-declared-convention', convention: { means: conv.means, rate: conv.measuredSupport?.rate ?? null } });
+        } else bareCounts[m[1]] = (bareCounts[m[1]] ?? 0) + 1;
+      }
       for (const m of p.text.matchAll(STRICT)) {
         const citedName = m[1];
         const citedId = CITED[citedName];
@@ -146,5 +173,6 @@ for (const [k, v] of pairs.slice(0, 14)) {
 }
 console.log(`\n[intertext] unbracketed markers reported, NOT counted as citations: ` +
   Object.entries(bareCounts).map(([k, v]) => `${k} ${v}`).join(', '));
-console.log('            (host-relative: in 左傳 「書曰」 means 春秋; elsewhere 「詩云」 may be the author composing)');
+console.log(`            ${resolvedByConvention} resolved by a DECLARED host convention; the rest stay unresolved`);
+console.log('            (host-relative: in 左傳 「書曰」 means 春秋經 — see conventions.json; elsewhere 「詩云」 may be the author composing)');
 if (process.argv.includes('--write')) console.log(`\n[written] ${path.relative(ROOT, out)}`);

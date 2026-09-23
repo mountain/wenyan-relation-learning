@@ -1,0 +1,34 @@
+{
+  "schema": "wenyan.intertext.conventions.v1",
+  "why": "824 markers are unbracketed (詩 486, 書 176, 易 137, 禮 25). They cannot be counted as citations nor discarded: in some hosts the bare name IS the established way to cite a work, and in others it is the author composing verse or writing a letter. Which one it is depends on the HOST, so it is declared per host rather than guessed per occurrence.",
+  "declared": [
+    {
+      "host": "zuozhuan",
+      "marker": "書曰",
+      "means": "春秋經",
+      "basis": "左傳 cites the annals as 書; the convention is standard in 春秋 exegesis",
+      "measuredSupport": {
+        "quotesFound": 9,
+        "quotesWithQuotation": 14,
+        "rate": 0.64,
+        "note": "64% is a LOWER BOUND. The misses are annals-style entries (`寔來`, `天王出居于鄭`, `鄭公子歸生弒其君夷。`) that look like 春秋 text, so they are matcher misses (short fragments and span boundaries), not counter-examples. Supported, not established."
+      }
+    }
+  ],
+  "notDeclared": [
+    {
+      "host": "文選",
+      "marker": "詩云",
+      "why": "文選 is an anthology of verse; a bare 詩 there may be the poem being quoted or the poem being composed, and nothing in the text decides it"
+    },
+    {
+      "host": "*",
+      "marker": "書曰",
+      "why": "elsewhere 書 commonly means LETTER (遺羽書曰, 遺章邯書曰), which is why the naive detector reported 12,501 citations instead of 861"
+    }
+  ],
+  "nonClaims": [
+    "A convention is a claim about the HOST's usage, not a fact about the marker.",
+    "An undeclared host/marker pair stays unresolved and is reported as such — it is never silently counted."
+  ]
+}

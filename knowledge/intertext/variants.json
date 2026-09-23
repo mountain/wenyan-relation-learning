@@ -1,0 +1,97 @@
+{
+  "schema": "wenyan.intertext.variants.v1",
+  "why": "Quotation matching is exact substring matching, so an orthographic variant hides a citation. Measured: 於/于 alone hides 18 citations. This table is DATA, not a regex, because each entry needs its own justification and its own measured gain.",
+  "admissionRule": "A pair is admitted only if it is an ORTHOGRAPHIC variant of the same word (the same lexeme written two ways), never a phonetic loan between different words. And it must have a measured marginal gain above zero: an entry that gains nothing buys nothing and risks matching text that is not the same.",
+  "accepted": [
+    {
+      "from": "於",
+      "to": "于",
+      "basis": "both are the same preposition; texts differ freely between them (詩經作「刑于寡妻」, 孟子引作「刑於寡妻」)",
+      "measuredGain": 18
+    },
+    {
+      "from": "无",
+      "to": "無",
+      "basis": "无 is the ancient form of 無, used throughout 易 (无咎, 无妄) while 詩經/尚書 write 無; a host quoting 易 may write either",
+      "measuredGain": 1
+    }
+  ],
+  "rejected": [
+    {
+      "from": "惟",
+      "to": "维",
+      "measuredGain": 0
+    },
+    {
+      "from": "惟",
+      "to": "唯",
+      "measuredGain": 0
+    },
+    {
+      "from": "唯",
+      "to": "维",
+      "measuredGain": 0
+    },
+    {
+      "from": "与",
+      "to": "與",
+      "measuredGain": 0
+    },
+    {
+      "from": "尔",
+      "to": "爾",
+      "measuredGain": 0
+    },
+    {
+      "from": "说",
+      "to": "悅",
+      "measuredGain": 0
+    },
+    {
+      "from": "女",
+      "to": "汝",
+      "measuredGain": 0
+    },
+    {
+      "from": "弟",
+      "to": "悌",
+      "measuredGain": 0
+    },
+    {
+      "from": "反",
+      "to": "返",
+      "measuredGain": 0
+    },
+    {
+      "from": "见",
+      "to": "現",
+      "measuredGain": 0
+    },
+    {
+      "from": "竟",
+      "to": "境",
+      "measuredGain": 0
+    },
+    {
+      "from": "孰",
+      "to": "熟",
+      "measuredGain": 0
+    },
+    {
+      "from": "塗",
+      "to": "途",
+      "measuredGain": 0
+    },
+    {
+      "from": "知",
+      "to": "智",
+      "measuredGain": 1,
+      "whyRejected": "a phonetic loan between two different words, not an orthographic variant; admitted gain would be 1, which does not justify letting 知 match 智 everywhere"
+    }
+  ],
+  "nonClaims": [
+    "The table is not a variant dictionary: it is the subset that quotation matching needed and measurement supported.",
+    "Rejected entries were MEASURED, not overlooked — the zero is a result.",
+    "A variant pair normalises BOTH sides, so it can in principle create a match that is not a quotation; the gains above are small precisely because the pairs are few and orthographic."
+  ]
+}
