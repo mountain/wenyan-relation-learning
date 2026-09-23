@@ -114,9 +114,18 @@ for (const [hostId, doc] of works) {
           resolvedByConvention++;
           records.push({ schema: 'wenyan.intertext.citation.v1',
             host: { work: hostId, section: s.id, passageId: p.id, sourcePage: s.sourcePage, sourceRevid: s.sourceRevid },
-            marker: m[0].trim(), citedName: m[1], citedWork: CITED[conv.means] ?? null,
+            marker: m[0].trim(), citedName: m[1], citedWork: conv.meansWork ?? null,
             quote: quotedAfter(p.text, m.index + m[0].length),
-            status: 'by-declared-convention', convention: { means: conv.means, rate: conv.measuredSupport?.rate ?? null } });
+            // The status follows the SAME order the verifier re-derives it in, or every
+            // convention record would look like drift: a marker with no quotation is not a
+            // citation, convention or not.
+            status: (() => {
+              const q = quotedAfter(p.text, m.index + m[0].length);
+              if (!q) return 'no-quotation-follows';
+              if (!conv.meansWork) return 'cited-work-not-in-corpus';
+              return norm(q).length < 4 ? 'quotation-too-short-to-verify' : 'by-declared-convention';
+            })(),
+            convention: { means: conv.means, meansWork: conv.meansWork ?? null, rate: conv.measuredSupport?.rate ?? null } });
         } else bareCounts[m[1]] = (bareCounts[m[1]] ?? 0) + 1;
       }
       for (const m of p.text.matchAll(STRICT)) {
