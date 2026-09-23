@@ -60,8 +60,24 @@ const BARE = /(?<![》\u4e00-\u9fff])(詩|書|易|禮)\s*(?:曰|云)(?![》「])
  * and thirteen other candidate pairs measured exactly zero, which is why they are recorded
  * as rejected rather than quietly used. Phonetic loans are refused there outright.
  */
-const VARIANTS = JSON.parse(fs.readFileSync(path.join(ROOT, 'knowledge/intertext/variants.json'), 'utf8'))
-  .accepted.map((v) => [v.from, v.to]);
+const VARIANT_TABLE = JSON.parse(fs.readFileSync(path.join(ROOT, 'knowledge/intertext/variants.json'), 'utf8'));
+// ENFORCED, not documented: normalising text is only legitimate when the pair is ONE WORD written
+// two ways, so every accepted pair must name a relation class and that class must be marked
+// countable. Before 2026-09-23 the rule lived in prose ("the same word written two ways") while the
+// measured candidate list carried notes calling 毋/無, 協/洽 and 緡/緜 "attested variants" — they are
+// different characters, and 罗小虎 said so on 2026-09-23. Prose did not stop that; a check does.
+for (const v of VARIANT_TABLE.accepted) {
+  const cls = VARIANT_TABLE.relationClasses[v.relation];
+  if (!cls) {
+    throw new Error(`variant pair ${v.from}/${v.to} declares no relation class from `
+      + `knowledge/intertext/variants.json#relationClasses — an unclassified pair may not normalise text`);
+  }
+  if (cls.countsAsOrthographicGain !== true) {
+    throw new Error(`variant pair ${v.from}/${v.to} is classed ${v.relation}, which is not one word `
+      + `written two ways; it may not be used to rewrite the text before matching`);
+  }
+}
+const VARIANTS = VARIANT_TABLE.accepted.map((v) => [v.from, v.to]);
 const CONVENTIONS = JSON.parse(fs.readFileSync(path.join(ROOT, 'knowledge/intertext/conventions.json'), 'utf8'))
   .declared;
 const norm = (t) => {

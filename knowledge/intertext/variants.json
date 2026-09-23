@@ -1,19 +1,23 @@
 {
   "schema": "wenyan.intertext.variants.v1",
   "why": "Quotation matching is exact substring matching, so an orthographic variant hides a citation. Measured: 於/于 alone hides 18 citations. This table is DATA, not a regex, because each entry needs its own justification and its own measured gain.",
-  "admissionRule": "A pair is admitted only if it is an ORTHOGRAPHIC variant of the same word (the same lexeme written two ways), never a phonetic loan between different words. And it must have a measured marginal gain above zero: an entry that gains nothing buys nothing and risks matching text that is not the same.",
+  "admissionRule": "A pair is admitted only if (a) it declares one of the relation classes in `relationClasses`, (b) that class is marked countsAsOrthographicGain=true, and (c) it has a measured marginal gain above zero. Before 2026-09-23 the rule said only \"the same word written two ways\" and left the class unstated — which is how 毋/無, 協/洽 and 緡/緜 sat in this file as candidates with notes calling them \"attested variants\" when they are different characters. A pair whose relation has not been judged is recorded as 未判定 and may NOT be counted as a spelling variant.",
   "accepted": [
     {
       "from": "於",
       "to": "于",
       "basis": "both are the same preposition; texts differ freely between them (詩經作「刑于寡妻」, 孟子引作「刑於寡妻」)",
-      "measuredGain": 18
+      "measuredGain": 18,
+      "relation": "通用字",
+      "relationBasis": "本项目判定：于/於 长期通用，詩經作于、孟子引作於。未经罗小虎逐条确认，已挂待裁定。"
     },
     {
       "from": "无",
       "to": "無",
       "basis": "无 is the ancient form of 無, used throughout 易 (无咎, 无妄) while 詩經/尚書 write 無; a host quoting 易 may write either",
-      "measuredGain": 1
+      "measuredGain": 1,
+      "relation": "古今字",
+      "relationBasis": "按罗小虎给的古今字定义（一个古字一个稍微现代）归入：无是無的古字。这是据其定义推的，不是他逐条说的。"
     }
   ],
   "rejected": [
@@ -95,7 +99,11 @@
   "nonClaims": [
     "The table is not a variant dictionary: it is the subset that quotation matching needed and measurement supported.",
     "Rejected entries were MEASURED, not overlooked — the zero is a result.",
-    "A variant pair normalises BOTH sides, so it can in principle create a match that is not a quotation; the gains above are small precisely because the pairs are few and orthographic."
+    "A variant pair normalises BOTH sides, so it can in principle create a match that is not a quotation; the gains above are small precisely because the pairs are few and orthographic.",
+    "关系类别是罗小虎（2026-09-23）的判断，不是本项目自行判定的；本项目的贡献只是把它记下来并据此重算。",
+    "未逐条请教的条目记为 未判定，且不计入书写变体收益——不知道类别不等于可以当成异体字用。",
+    "这些判断都带范围：罗小虎说緡/緜「要看年代」，普/溥「看具体情况」，所以类别随篇目与时代而变，不是全局常量。",
+    "於/于 与 无/無 的类别是本项目按罗小虎给的类别定义推的，不是他逐条判的；两条都挂着待他裁定。"
   ],
   "measuredNotAdmitted": {
     "why": "Measured but NOT admitted. Admission needs human judgement on top of the rule (same word written two ways, never a phonetic loan), and this project has no variant dictionary to appeal to.",
@@ -105,63 +113,90 @@
         "to": "維",
         "gain": 17,
         "occursInCorpus": 5326,
-        "note": "well-attested particle variants (惟/維/唯); highest explanatory power found"
+        "note": "well-attested particle variants (惟/維/唯); highest explanatory power found",
+        "relation": "未判定",
+        "relationBasis": "罗小虎：并非通常意义上的异体字关系。既不是异体，本项目也不知道它属于哪一类——记未判定，不计收益。",
+        "countsTowardOrthographicGain": false
       },
       {
         "from": "爲",
         "to": "為",
         "gain": 7,
         "occursInCorpus": 18501,
-        "note": "two forms of the same character"
+        "note": "two forms of the same character",
+        "relation": "异体字",
+        "relationBasis": "同一个字的两种写法。本项目判定，未逐条请教罗小虎——不冒充专家意见。",
+        "countsTowardOrthographicGain": true
       },
       {
         "from": "毋",
         "to": "無",
         "gain": 5,
         "occursInCorpus": 2042,
-        "note": "attested variant in prohibitions"
+        "note": "attested variant in prohibitions",
+        "relation": "不同字",
+        "relationBasis": "罗小虎：两字本来就是不同字，毋表禁止、無表没有。此条原注写「attested variant in prohibitions」，是错的。",
+        "countsTowardOrthographicGain": false
       },
       {
         "from": "雍",
         "to": "雝",
         "gain": 5,
         "occursInCorpus": 1781,
-        "note": "雝 is the ancient form of 雍"
+        "note": "雝 is the ancient form of 雍",
+        "relation": "古今字",
+        "relationBasis": "罗小虎：一个古字一个稍微现代，是古今字，不是异体字。同一个字的前后写法，可作正规化，但按古今字记。",
+        "countsTowardOrthographicGain": true
       },
       {
         "from": "緡",
         "to": "緜",
         "gain": 3,
         "occursInCorpus": 615,
-        "note": "詩經 writes 緜蠻; hosts write 緡"
+        "note": "詩經 writes 緜蠻; hosts write 緡",
+        "relation": "不同字",
+        "relationBasis": "罗小虎：本身是不同字，要看年代，在先秦或早期应该是两个字。故在前秦范围内不得正规化。",
+        "countsTowardOrthographicGain": false
       },
       {
         "from": "昭",
         "to": "炤",
         "gain": 3,
         "occursInCorpus": 4732,
-        "note": "詩經 正月 writes 亦孔之炤"
+        "note": "詩經 正月 writes 亦孔之炤",
+        "relation": "未判定",
+        "relationBasis": "未请教。原注「詩經 正月 writes 亦孔之炤」只证明了异文存在，没有判定关系类别。",
+        "countsTowardOrthographicGain": false
       },
       {
         "from": "普",
         "to": "溥",
         "gain": 2,
         "occursInCorpus": 418,
-        "note": "詩經 writes 溥天之下"
+        "note": "詩經 writes 溥天之下",
+        "relation": "通假字",
+        "relationBasis": "罗小虎：不是严格异体字，算通假字或看具体情况。",
+        "countsTowardOrthographicGain": false
       },
       {
         "from": "協",
         "to": "洽",
         "gain": 2,
         "occursInCorpus": 574,
-        "note": "詩經 writes 洽比其鄰"
+        "note": "詩經 writes 洽比其鄰",
+        "relation": "不同字",
+        "relationBasis": "罗小虎：不算异体字，就是两个字。",
+        "countsTowardOrthographicGain": false
       },
       {
         "from": "後",
         "to": "后",
         "gain": 3,
         "occursInCorpus": 27610,
-        "note": "REJECT ON THE RULE, not on gain: 后 and 後 are different words in most texts (后 = sovereign). 易 uses 后 for 後, but admitting the pair globally would rewrite every \"after\" in the corpus. This is exactly the phonetic-loan case the admission rule refuses — recorded because a real gain of 3 is otherwise tempting."
+        "note": "REJECT ON THE RULE, not on gain: 后 and 後 are different words in most texts (后 = sovereign). 易 uses 后 for 後, but admitting the pair globally would rewrite every \"after\" in the corpus. This is exactly the phonetic-loan case the admission rule refuses — recorded because a real gain of 3 is otherwise tempting.",
+        "relation": "通假字",
+        "relationBasis": "已按入库规则拒绝（后/後 在多数文本中是两个词）；与罗小虎的分类一致。",
+        "countsTowardOrthographicGain": false
       }
     ],
     "combinedMeasurement": {
@@ -223,6 +258,185 @@
       ],
       "whyOverlapIsZero": "no unmatched citation needed two pairs at once; greedy and all-at-once reach the same total, so the per-pair gains above can be read as independent",
       "whatThisDoesNotMean": "A larger found-count is not a better reading. Each pair still has to pass the admission rule (same word written two ways, never a phonetic loan) on human judgement; 後→后 is excluded by that rule despite a real gain of +3, and a pair that is in fact a genuine recension difference would inflate this number without improving anything."
+    },
+    "resplitByRelation": {
+      "when": "2026-09-23",
+      "why": "The +44 combined gain was quoted as one number. Under the declared classes it is not one number: only the pairs that are the same word written two ways may be counted as spelling variants, and 罗小虎 ruled several of these pairs to be different characters outright.",
+      "byRelation": {
+        "未判定": {
+          "pairs": [
+            "惟→維",
+            "昭→炤"
+          ],
+          "gain": 20,
+          "counts": false
+        },
+        "不同字": {
+          "pairs": [
+            "毋→無",
+            "緡→緜",
+            "協→洽"
+          ],
+          "gain": 10,
+          "counts": false
+        },
+        "异体字": {
+          "pairs": [
+            "爲→為"
+          ],
+          "gain": 7,
+          "counts": true
+        },
+        "古今字": {
+          "pairs": [
+            "雍→雝"
+          ],
+          "gain": 5,
+          "counts": true
+        },
+        "通假字": {
+          "pairs": [
+            "普→溥"
+          ],
+          "gain": 2,
+          "counts": false
+        }
+      },
+      "gainTotalAsPreviouslyQuoted": 44,
+      "gainCountableAsOrthographic": 12,
+      "gainNotCountable": 32,
+      "reads": "Of the 44 previously quoted, 12 survives as a same-word spelling or era relation (古今字 5, 异体字 7) and 32 does not: different characters (10), 通假 (2), and 8 pairs' worth still unjudged (20). The unjudged 20 is dominated by 惟→維 (17), which was this file's \"highest explanatory power\" candidate — it may still be a real 异文, but it is not a spelling variant and must not be filed as one."
     }
-  }
+  },
+  "relationClasses": {
+    "_why": "The one distinction this table cannot do without: 异体/异写 (one word, two writings) versus 通假 (a different word borrowed for its sound) versus plain 不同字 (two different characters). Only the first licenses normalising text before comparing it. Recorded from 罗小虎 on 2026-09-23, verbatim below in expertTestimony, because it is a specialist judgement and not something this project can derive from its own corpus.",
+    "异体字": {
+      "definition": "同一个字的两种（或多种）写法。",
+      "countsAsOrthographicGain": true
+    },
+    "异写": {
+      "definition": "音义相同而写法不同，常作为异体的实际使用形态（罗小虎：惟常作唯的异体/异写）。",
+      "countsAsOrthographicGain": true
+    },
+    "古今字": {
+      "definition": "同一个字的前后写法，一个古字一个稍后的字（罗小虎：雍→雝，一个古字一个稍微现代）。",
+      "countsAsOrthographicGain": true,
+      "careful": "必须与 异体字 分开记：它是同一个字在时间上的先后，不是同时并存的两个写法。"
+    },
+    "通假字": {
+      "definition": "本字与借字音同或音近而借用，属于不同的词（罗小虎：普→溥「也不是严格异体字，算通假字或是看具体情况」）。",
+      "countsAsOrthographicGain": false
+    },
+    "异文": {
+      "definition": "不同版本、不同征引之间的文字差异（罗小虎：异体、异文、通假这么说比较准确，但其实要看具体文章）。",
+      "countsAsOrthographicGain": false,
+      "careful": "版本差异不是用字差异：它可以改变句子本身，正规化会把两个不同的文本说成同一个。"
+    },
+    "不同字": {
+      "definition": "本来就是两个不同的字，各有各的音义（罗小虎：毋表示禁止、不要，無表示没有；協→洽不算异体字就是两个字）。",
+      "countsAsOrthographicGain": false
+    },
+    "未判定": {
+      "definition": "尚未请教，或尚未落实到具体篇目。可以记录，不得计入书写变体收益。",
+      "countsAsOrthographicGain": false
+    },
+    "通用字": {
+      "definition": "两字长期通用、音义相近，古籍与征引中自由互换（本项目判定：於/于）。",
+      "countsAsOrthographicGain": true,
+      "careful": "这是本项目的分类，不是罗小虎说的——他没有逐条判过於/于。已列入待他裁定的问题（knowledge/APERTURES.md）。若他判为两个字或异文，於/于 18 条引用必须重算。"
+    }
+  },
+  "expertTestimony": [
+    {
+      "speaker": "罗小虎",
+      "date": "2026-09-23",
+      "statement": "“惟”“唯”“維”历史上有不同用法；“惟”常作“唯”的异体/异写，但“維”与“惟”并非通常意义上的异体字关系。",
+      "appliesTo": [
+        [
+          "惟",
+          "維"
+        ],
+        [
+          "惟",
+          "唯"
+        ],
+        [
+          "唯",
+          "維"
+        ]
+      ]
+    },
+    {
+      "speaker": "罗小虎",
+      "date": "2026-09-23",
+      "statement": "两字本来就是不同字。“毋”表示禁止、不要；“無”表示没有。",
+      "appliesTo": [
+        [
+          "毋",
+          "無"
+        ]
+      ]
+    },
+    {
+      "speaker": "罗小虎",
+      "date": "2026-09-23",
+      "statement": "雍→雝这也不是异体字，一个古字一个稍微现代",
+      "appliesTo": [
+        [
+          "雍",
+          "雝"
+        ]
+      ]
+    },
+    {
+      "speaker": "罗小虎",
+      "date": "2026-09-23",
+      "statement": "“緡”“緜”本身是不同字，这个要看年代，在先秦或是早期应该是两个字。",
+      "appliesTo": [
+        [
+          "緡",
+          "緜"
+        ]
+      ]
+    },
+    {
+      "speaker": "罗小虎",
+      "date": "2026-09-23",
+      "statement": "普 → 溥也不是严格异体字，算通假字或是看具体情况。",
+      "appliesTo": [
+        [
+          "普",
+          "溥"
+        ]
+      ]
+    },
+    {
+      "speaker": "罗小虎",
+      "date": "2026-09-23",
+      "statement": "協 → 洽不算异体字就是两个字",
+      "appliesTo": [
+        [
+          "協",
+          "洽"
+        ]
+      ]
+    },
+    {
+      "speaker": "罗小虎",
+      "date": "2026-09-23",
+      "statement": "异体、异文、通假等这么说比较准确，但其实要看具体文章。",
+      "appliesTo": []
+    },
+    {
+      "speaker": "罗小虎",
+      "date": "2026-09-23",
+      "statement": "雍→雝这也不是异体字，一个古字一个稍微现代，是古今字",
+      "appliesTo": [
+        [
+          "雍",
+          "雝"
+        ]
+      ]
+    }
+  ]
 }

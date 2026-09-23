@@ -48,8 +48,7 @@
 
 ## 异体字表：数据，不是散落的 replace
 
-`knowledge/intertext/variants.json`。**入库规则**：必须是**同词的书写变体**（orthographic），
-绝不收**通假**（不同词之间的音借）；且**实测边际收益须大于零**——没有收益的条目买不到东西，
+`knowledge/intertext/variants.json`。**入库规则**（2026-09-23 起由代码强制，不再只是这段话）：每对必须声明 `knowledge/intertext/variants.json#relationClasses` 里的**关系类别**（异体字／异写／古今字／通用字／通假字／异文／不同字／未判定），且该类别的 `countsAsOrthographicGain` 必须为 true——**只有同一个字的两种写法才允许在比对前改写文本**；未判定的记为未判定且不计收益；且**实测边际收益须大于零**——没有收益的条目买不到东西，
 却增加"匹到并非同一段文本"的风险。
 
 | 收 | 依据 | 实测收益 |
