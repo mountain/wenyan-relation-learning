@@ -145,7 +145,15 @@ earlier base `6143e22` has moved to. The patch was re-anchored because upstream
 added `changes?: { catalog: ChangesCatalog }` and its return-site spread at the
 SAME two places this patch adds `relationModel`, so the previous version no
 longer applied. Check it with `git apply --check` against that source before
-applying. Full repository type checking, Jest,
+applying.
+
+Re-anchoring is a REPEATABLE operation, not an ad hoc edit:
+`node tools/relations/rebuild-patch.mjs` regenerates all seven sections from the upstream
+tree and runs four checks (git apply, patch(1) dry-run, byte-for-byte reproduction, and the
+reverse check in this repository). It REFUSES to run when the upstream clone is not at the
+declared base, because a patch silently re-anchored to a moving branch is not pinned.
+The first re-anchoring was done from a scratch script that was then deleted, which made the
+operation unrepeatable; that script is now this tool. Full repository type checking, Jest,
 CLI/browser packaging and remote CI remain integration gates. This deliverable
 is a reviewed local patch, not a remote commit or an edit to upstream PR #717.
 
