@@ -1,0 +1,33 @@
+{
+  "schema": "wenyan.corpus-expansion.routes.v1",
+  "routes": {
+    "徐文長傳": {
+      "zh": "徐文長傳",
+      "tradition": "historical",
+      "use": "袁宏道评传（古文觀止／瓶花齋集卷07）",
+      "resolvedTitle": "徐文長傳",
+      "licenseTags": [
+        "明朝作品"
+      ],
+      "chars": 1126,
+      "route": "single",
+      "chapters": 1,
+      "status": "OK"
+    },
+    "明史/卷288": {
+      "zh": "明史/卷288",
+      "tradition": "historical",
+      "use": "正史本传（文苑四，含徐渭）",
+      "resolvedTitle": "明史/卷288",
+      "licenseTags": [
+        "清朝作品"
+      ],
+      "chars": 10966,
+      "route": "single",
+      "chapters": 1,
+      "status": "OK"
+    }
+  },
+  "task": "第 0 任务：徐渭的历史记载侧；自传侧（自為墓誌銘）正文为空，未取到",
+  "correction": "exists 报「存在」不等于有正文：自為墓誌銘 原始正文 0 字，属假阳性；早先据此声称「找到自传」已更正。"
+}

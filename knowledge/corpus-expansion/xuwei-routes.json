@@ -1,0 +1,67 @@
+{
+  "schema": "wenyan.corpus-expansion.routes.v1",
+  "routes": {
+    "徐文長文集": {
+      "zh": "徐文長文集",
+      "tradition": "historical",
+      "use": "徐渭文集（含自傳性篇目）",
+      "status": "MISSING"
+    },
+    "徐文長三集": {
+      "zh": "徐文長三集",
+      "tradition": "historical",
+      "use": "徐渭诗文集三集本",
+      "status": "MISSING"
+    },
+    "徐文長逸稿": {
+      "zh": "徐文長逸稿",
+      "tradition": "historical",
+      "use": "逸稿",
+      "status": "MISSING"
+    },
+    "青藤書屋文集": {
+      "zh": "青藤書屋文集",
+      "tradition": "historical",
+      "use": "青藤书屋文集",
+      "status": "MISSING"
+    },
+    "徐渭集": {
+      "zh": "徐渭集",
+      "tradition": "historical",
+      "use": "今人整理本（若站上有）",
+      "status": "MISSING"
+    },
+    "四聲猿": {
+      "zh": "四聲猿",
+      "tradition": "fiction",
+      "use": "徐渭杂剧（自况色彩强）",
+      "status": "MISSING"
+    },
+    "南詞敘錄": {
+      "zh": "南詞敘錄",
+      "tradition": "philosophers",
+      "use": "徐渭戏曲理论",
+      "resolvedTitle": "南詞敘錄",
+      "licenseTags": [
+        "明朝作品"
+      ],
+      "route": "single",
+      "chapters": 1,
+      "status": "OK"
+    },
+    "明史": {
+      "zh": "明史",
+      "tradition": "historical",
+      "use": "正史：卷288 文苑傳 徐渭传",
+      "resolvedTitle": "明史",
+      "licenseTags": [
+        "清朝作品"
+      ],
+      "route": "mainPageLinks",
+      "chapters": 332,
+      "status": "OK"
+    }
+  },
+  "task": "第 0 任务：徐渭自传与历史记载，随后在周易与太玄經上对齐",
+  "preregistration": "见 tmp/fetch-7.mjs 头部"
+}

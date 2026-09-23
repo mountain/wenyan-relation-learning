@@ -1,10 +1,10 @@
 {
   "schema": "wenyan.corpus.manifest.v1",
   "format": "wenyan.corpus.v1",
-  "generatedAt": "2026-09-23T13:33:55.050Z",
+  "generatedAt": "2026-09-23T14:08:41.077Z",
   "partialRebuild": {
     "only": [
-      "唐國史補"
+      "明史卷288"
     ],
     "note": "this run rebuilt a subset; other entries are carried over from the previous manifest"
   },
@@ -24,10 +24,10 @@
     "ctextNotice": "ctext.org was NOT used. Its robots.txt and anti-scraping notice state that automated access is not authorized and direct researchers to subscribe; no content was retrieved from it."
   },
   "counts": {
-    "works": 134,
-    "sections": 4743,
-    "passages": 217362,
-    "characters": 26040734
+    "works": 136,
+    "sections": 4760,
+    "passages": 217429,
+    "characters": 26051126
   },
   "works": [
     {
@@ -3122,6 +3122,50 @@
       "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
       "limitations": [
         "结构因素探查（预注册见 tmp/fetch-6.mjs 头部）：笔记体史料，制度掌故＋记言。路由 mainPageLinks，3 章；授权标签 PD-old。"
+      ]
+    },
+    {
+      "id": "徐文長傳",
+      "zh": "徐文長傳",
+      "tradition": "historical",
+      "file": "works/徐文長傳.json",
+      "sha256": "043e5a8d8f6530e5405952a5372187de280a3acf91c5234d5e59451ab06c92af",
+      "counts": {
+        "sections": 1,
+        "passages": 5,
+        "characters": 864
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "single",
+      "licenseTemplates": {
+        "明朝作品": 1
+      },
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "第 0 任务（徐渭）历史记载侧：袁宏道评传（古文觀止／瓶花齋集卷07）。正文 1126 字；门槛按篇定为 200 字。授权标签 明朝作品。"
+      ]
+    },
+    {
+      "id": "明史卷288",
+      "zh": "明史卷288",
+      "tradition": "historical",
+      "file": "works/明史卷288.json",
+      "sha256": "a39e5e145f5e1556d1f8add5b710241713071643de94942fd521fb54707cdf11",
+      "counts": {
+        "sections": 16,
+        "passages": 62,
+        "characters": 9528
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "single",
+      "licenseTemplates": {
+        "清朝作品": 1
+      },
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "第 0 任务（徐渭）历史记载侧：正史本传（文苑四，含徐渭）。正文 10966 字；门槛按篇定为 200 字。授权标签 清朝作品。"
       ]
     }
   ],

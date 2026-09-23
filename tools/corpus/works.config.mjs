@@ -1063,4 +1063,36 @@ export const WORKS = [
     discovery: { kind: 'mainPageLinks', mainPage: "唐國史補" },
     note: "结构因素探查（预注册见 tmp/fetch-6.mjs 头部）：笔记体史料，制度掌故＋记言。路由 mainPageLinks，3 章；授权标签 PD-old。",
   },
+  // ---------------- 第零批：徐渭（自传与历史记载）----------------
+  {
+    id: "南詞敘錄",
+    zh: "南詞敘錄",
+    tradition: 'philosophers',
+    discovery: { kind: 'single', page: "南詞敘錄" },
+    note: "第 0 任务（徐渭）：徐渭戏曲理论。路由 single，1 章；授权标签 明朝作品。",
+  },
+  {
+    id: "明史",
+    zh: "明史",
+    tradition: 'historical',
+    discovery: { kind: 'mainPageLinks', mainPage: "明史" },
+    note: "第 0 任务（徐渭）：正史：卷288 文苑傳 徐渭传。路由 mainPageLinks，332 章；授权标签 清朝作品。",
+  },
+  // ---------------- 第零批补：徐渭自传与传记 ----------------
+
+  // ---------------- 第零批补二：徐渭历史记载 ----------------
+  {
+    id: "徐文長傳",
+    zh: "徐文長傳",
+    tradition: 'historical',
+    discovery: { kind: 'single', page: "徐文長傳" },
+    note: "第 0 任务（徐渭）历史记载侧：袁宏道评传（古文觀止／瓶花齋集卷07）。正文 1126 字；门槛按篇定为 200 字。授权标签 明朝作品。",
+  },
+  {
+    id: "明史卷288",
+    zh: "明史卷288",
+    tradition: 'historical',
+    discovery: { kind: 'single', page: "明史/卷288" },
+    note: "第 0 任务（徐渭）历史记载侧：正史本传（文苑四，含徐渭）。正文 10966 字；门槛按篇定为 200 字。授权标签 清朝作品。",
+  },
 ];

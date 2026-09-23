@@ -1,0 +1,28 @@
+{
+  "schema": "wenyan.corpus-expansion.routes.v1",
+  "routes": {
+    "自為墓誌銘": {
+      "zh": "自為墓誌銘",
+      "tradition": "historical",
+      "use": "徐渭自传：自作墓志",
+      "resolvedTitle": "自為墓誌銘",
+      "licenseTags": [],
+      "route": "NEEDS-MANUAL",
+      "chapters": 0,
+      "status": "OK"
+    },
+    "徐文長傳": {
+      "zh": "徐文長傳",
+      "tradition": "historical",
+      "use": "袁宏道评传：历史记载侧",
+      "resolvedTitle": "徐文長傳",
+      "licenseTags": [
+        "明朝作品"
+      ],
+      "route": "NEEDS-MANUAL",
+      "chapters": 0,
+      "status": "OK"
+    }
+  },
+  "task": "第 0 任务：徐渭自传（自為墓誌銘）与传记（徐文長傳），随后在周易困/解与太玄窮/釋上对齐"
+}

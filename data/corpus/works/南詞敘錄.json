@@ -1,0 +1,163 @@
+{
+  "schema": "wenyan.corpus.work.v1",
+  "id": "南詞敘錄",
+  "title": {
+    "zh": "南詞敘錄"
+  },
+  "tradition": "philosophers",
+  "source": {
+    "site": "zh.wikisource.org",
+    "discovery": {
+      "route": "single",
+      "chainLength": null,
+      "notReachedByChain": [],
+      "chainStopReason": null,
+      "chainSubstitutions": [],
+      "chainExcluded": []
+    }
+  },
+  "counts": {
+    "sections": 5,
+    "passages": 8,
+    "characters": 3278
+  },
+  "license": {
+    "pageTemplates": {
+      "明朝作品": 1
+    },
+    "status": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+    "basis": "The underlying classical works are public domain by age. What is taken from Wikisource is its transcription: choice of recension, modern punctuation, paragraphing and character forms. Attribution is recorded per section via sourcePage/sourceRevid. This build also modifies the material (template and commentary removal, re-segmentation), and selects recensions and first readings — decisions recorded in textEdition, extraction and limitations."
+  },
+  "extraction": {
+    "removed": {
+      "annotationsDropped": 0,
+      "annotationsKept": 1,
+      "declaredElementsDropped": 0,
+      "declaredTemplatesDropped": 27,
+      "annotationRegionsDropped": 0,
+      "templates": 3,
+      "contentTemplates": 3,
+      "uncertainGlyphs": 0,
+      "refFootnotes": 1,
+      "unbalancedTemplates": 0,
+      "htmlTags": 0,
+      "files": 0,
+      "externalLinks": 0,
+      "conversionMarkers": 0,
+      "licenseTemplates": {
+        "明朝作品": 1
+      },
+      "anchorsLifted": 0,
+      "behaviourSwitches": 0,
+      "navigationLines": 0
+    },
+    "droppedSubsections": [],
+    "skippedNoText": [],
+    "droppedFrontMatter": [
+      "南詞敘錄"
+    ],
+    "droppedLines": 0,
+    "demotedHeadingLines": 0,
+    "structuralMarkers": [],
+    "flaggedShortPassages": [],
+    "untitledSections": [],
+    "notes": "Annotations ({{*|…}}) and site templates are removed; list/verse nesting is flattened; verse line breaks are preserved inside passage text."
+  },
+  "limitations": [
+    "第 0 任务（徐渭）：徐渭戏曲理论。路由 single，1 章；授权标签 明朝作品。"
+  ],
+  "sections": [
+    {
+      "id": "南詞敘錄.1",
+      "ordinal": 1,
+      "title": "釋義",
+      "sourcePage": "南詞敘錄",
+      "sourceRevid": 2461853,
+      "sourcePages": [
+        "南詞敘錄"
+      ],
+      "passages": [
+        {
+          "id": "1.1",
+          "text": "{| class=\"wikitable\" style=\"font-size: 80%\"\n! style=\"width:30px\" | 術語\n! 字義\n|-\n| 生 || 即男子之稱。史有董生、魯生，樂府有劉生之屬。\n|-\n| 旦 || 宋伎上場，皆以樂器之類置籃中，擔之以出，號曰「花擔」；今陝西猶然。後省文為「旦」。或曰：「小獸能殺虎，如伎以小物害人也。」未必然。\n|-\n| 外 || 生之外又一生也，或謂之小生。外旦、小外，後人益之。\n|-\n| 貼 || 旦之外貼一旦也。\n|-\n| 丑 || 以墨粉塗面，其形甚醜。今省文作「丑」。\n|-\n| 淨 || 此字不可解。或曰：「其面不淨，故反言之。」予意：即古「參軍」二字，合而訛之耳。優中最尊。其手皮帽，有兩手形，因明皇奉黃旛綽首而起。\n|-\n| 末 || 優中之少者為之，故居其末。手執搕爪。起於後唐莊宗。古謂之蒼鶻，言能擊物也。北劇不然：生曰末泥，亦曰正末；外曰孛老；末曰外；淨曰徠，律蛇切，小兒也。亦曰淨，亦曰邦老；老旦曰卜兒；外兒也，省文作卜。其他或直稱名。\n|-\n| 傳奇 || 裴鉶乃呂用之之客。用之以道術愚弄高駢，鉶作傳奇，多言仙鬼事慆之，詞多對偶。借以為戲文之號，非唐之舊矣。\n|-\n| 題目 || 開場下白詩四句，以總一故意之大綱。今人內房念誦以應副末，非也。\n|-\n| 賓白 || 唱為主，白為賓，故曰賓、白，言其明白易曉也。\n|-\n| 科 || 相見、作揖、進拜、舞蹈、坐跪之類，身之所行，皆謂之科。今人不知，以諢為科，非也。\n|-\n| 介 || 今戲文於科處皆作「介」，蓋書坊省文，以科字作介字，非科、介有異也。\n|-\n| 諢 || 於唱白之際，出一可笑之語以誘坐客，如水之渾渾也。切忌鄉音。\n|-\n| 打箱 || 以別技求賞也。\n|-\n| 開場 || 宋人凡勾欄未出，一老者先出，夸說大意，以求賞，謂之「開呵」。今戲文首一出，謂之「開場」，亦遺意也。\n|}"
+        }
+      ]
+    },
+    {
+      "id": "南詞敘錄.2",
+      "ordinal": 2,
+      "title": "方言字義解",
+      "sourcePage": "南詞敘錄",
+      "sourceRevid": 2461853,
+      "sourcePages": [
+        "南詞敘錄"
+      ],
+      "passages": [
+        {
+          "id": "2.1",
+          "text": "曲中常用方言字義，今解於此，庶作者不誤用。"
+        },
+        {
+          "id": "2.2",
+          "text": "{| class=\"wikitable\"\n! 方言 !! 字義\n|-\n| 員外 || 宋富翁皆買郎外散官，如朝散、朝議、將仕之類。\n|-\n| 謝娘 || 本謂文女，如謝道蘊是也。今以指妓。\n|-\n| 勤兒 || 言其勤於悅色，不憚煩也。亦曰「刷子」，言其亂也。\n|-\n| 行首 || 妓之貴稱。居班行之首也。\n|-\n| 小玉 || 霍小玉，妓女也。今以指女妓。\n|-\n| 薄暮 || 母也。「薄」音「博」；「母」，「磨」上聲。薄民綿母，以切腳言。\n|-\n| 九百 || 風魔也。宋人云：「九百尚在，六十猶癡」。\n|-\n| 相公 || 唐、宋謂執政曰「相公」。最古。今人改曰「大人」，已俗矣。\n|-\n| 下官 || 六朝以來，仕者見上，皆稱「下官」，或曰「小官」。最古。\n|-\n| 奴家 || 婦人自稱。今閩人猶然。\n|-\n| 使長 || 金、元謂主曰「使長」，今世已呼公侯子、王姬。\n|-\n| 包彈 || 包拯為中丞，善彈劾，故世謂物有可議者曰「包彈」。\n|-\n| 虛脾 || 虛情也。五臟為脾最虛。\n|-\n| 掗擺 || 把持也。今人云「掗擺不下」，即此二字。\n|-\n| 動使 || 什物器皿也。見《東京夢華錄》。\n|-\n| 嗹嗻 || 能而大也。或作「𨐃𨰵」，皆俗字。\n|-\n| 傻角 || 上溫假切，下急了切。癡人也，吳謂「獃子」。\n|-\n| 評跋 || 以言論人曰「評」，以文論人曰「跋」。\n|-\n| 波查 || 猶言口舌。北音凡語畢必以「波查」助詞，故云。\n|-\n| 入跋 || 入門也。倡家謂門曰「跋限」。\n|-\n| 妝么 || 猶做模樣也。古云「作態」。\n|-\n| 妝局 || 宋有吉慶事，則聚人治之，謂之「結局」。誆人者，亦曰「騙局」。\n|-\n| 忐忑 || 上卯□切，下吞勒切。心不定貌。俗字也。\n|-\n| 遮莫 || 儘教也。亦曰「折莫」。杜詩：「遮莫鄰雞下五更。」\n|-\n| 行徑 || 門牆也。猶言家風也。\n|-\n| 摟羅 || 矯絕也。唐人語曰：「欺客打客當摟羅。」今以目綠林之從卒。\n|-\n| 尷尬 || 難進難退也。一作「間架」。\n|-\n| 端相 || 細看也。唐人曰：「端相良之。」作「端詳」者，非。\n|-\n| 若為 || 怎麼也。李太白：「桃李今若為。」\n|-\n| 打脊 || 古人鞭背，故詈人曰「打脊」。唐之遺言也。\n|-\n| 恁的 || 猶言「如此」也。吳人曰「更箇」。\n|-\n| 交加 || 紛亂也。唐人云：「交交加加，進能得會？」\n|-\n| 畢羅 || 唐人以麵為湯餅之名，今謂之整治酒肴。\n|-\n| 胡柴 || 亂說也。今人云：「被我柴倒」，即此字。\n|-\n| 畢竟 || 到底也。唐人云：「畢竟不成眠，鴉啼金井寒。」\n|-\n| 爭得 || 怎得也。唐無「怎」字，借「爭」為「怎」。\n|-\n| 支吾 || 一作「枝梧」，猶言遮欄也。或云：「鼯鼠五枝，技之淺也。」\n|-\n| 恁 || 「你每」二字，合呼為恁。\n|-\n| 掌事 || 今之主管。\n|-\n| 頂老 || 伎之諢名。\n|-\n| 輔俏 || 美俊也。\n|-\n| 辣浪 || 風流爽快也。\n|-\n| 入馬 || 進步也。倡家語。\n|-\n| 僝僽 || 憂懷也。\n|-\n| 世不 || 誓不也。\n|-\n| 喒 || 「咱們」二字，合呼為喒。\n|-\n| 解庫 || 今之典鋪。\n|-\n| 龐兒 || 貌也。\n|-\n| 喬才 || 狙詐也，狡獪也。\n|-\n| 奚落 || 遺棄也。當作遺。\n|-\n| 唧溜 || 精細也。\n|-\n| 技 || 本事也。\n|-\n| 籌兒 || 根株也。\n|}"
+        }
+      ]
+    },
+    {
+      "id": "南詞敘錄.3",
+      "ordinal": 3,
+      "title": "宋元舊篇",
+      "sourcePage": "南詞敘錄",
+      "sourceRevid": 2461853,
+      "sourcePages": [
+        "南詞敘錄"
+      ],
+      "passages": [
+        {
+          "id": "3.1",
+          "text": "《趙貞女蔡二郎》\n《王魁負桂英》\n《陳巡檢梅嶺失妻》\n《鬼元宵》\n《王祥臥冰》\n《王十朋荊釵記》\n《殺狗勸夫》\n《朱買臣休妻記》\n《鶯鶯西廂記》\n《司馬相如題橋記》\n《陳光蕊江流和尚》\n《孟姜女送寒衣》\n《裴少俊牆頭馬上》\n《柳耆卿花柳翫江樓》\n《劉錫沈香太子》\n《賀怜怜煙花怨》\n《史弘肇故鄉宴》\n《蘇小卿月下販茶船》\n《陳叔萬三負心》\n《京娘怨燕子傳書》\n《歡喜冤家》\n《樂昌公主破鏡重圓》\n《呂洞賓三醉岳陽樓》\n《周處風雲記》\n《王月英月下留鞋》\n《劉知遠白兔記》\n《趙氏孤兒》\n《蘇秦衣錦還鄉》\n《趙普進梅諫》\n《董秀英花月東牆記》\n《宋子京鷓鴣天》\n《詐妮子鶯燕爭春》\n《蔣世隆拜月亭》\n《崔君瑞江天暮雪》\n《王公綽》\n《柳文直正旦賀昇平》\n《秋夜鑾城驛》\n《秦檜東窗事犯》\n《王孝子尋母》\n《馮京三元記》\n《朱文太平錢》\n《薛雲卿鬼做媒》\n《呂洞賓黃粱夢》\n《賈似道木棉菴記》\n《何推官錯勘屍》\n《柳毅洞庭龍女》\n《呂蒙正破窯記》\n《蘇武牧羊記》\n《孟月梅錦香亭》\n《張孜鴛鴦燈》\n《林招得三負心》\n《唐伯亨八不知音》\n《百花亭》\n《冤家債主》\n《劉文龍菱花鏡》\n《劉盼盼》\n《生死夫妻》\n《寶妝亭》\n《教子尋親》\n《劉孝女金釵記》\n《借燭尋珠》\n《多月亭》\n《閔子騫單衣記》\n《蔡伯喈琵琶記》\n《王俊民休書記》"
+        }
+      ]
+    },
+    {
+      "id": "南詞敘錄.4",
+      "ordinal": 4,
+      "title": "本朝",
+      "sourcePage": "南詞敘錄",
+      "sourceRevid": 2461853,
+      "sourcePages": [
+        "南詞敘錄"
+      ],
+      "passages": [
+        {
+          "id": "4.1",
+          "text": "《崔鶯鶯西廂記》\n《王十朋荊釵記》\n《天賜溫涼》\n《賈雲華還魂記》\n《蘭蕙聯芳樓記》\n《瓊奴傳》\n《陳可中剔目記》\n《玉簫兩世姻緣》\n《岳飛東窗事犯》\n《商輅三元記》\n《馮京三元記》\n《鄒知縣湘湖記》\n《馮國珍衣錦還鄉》\n《高漢卿羅囊記》\n《裴度還帶記》\n《韓信築壇拜將》\n《張良圯橋進履》\n《八不知犀合記》\n《桂英誣王魁》\n《姜詩得鯉》\n《張許雙忠記》\n《孟宗泣竹》\n《繡鞋記》\n《芙蓉屏記》\n《花園記》\n《銀瓶記》\n《鄧攸棄子抱姪》\n《金錢記》\n《羅帶記》\n《高文舉》\n《羅帕記》\n《五倫全備》\n《鴛鴦記》"
+        },
+        {
+          "id": "4.2",
+          "text": "（全書完）"
+        },
+        {
+          "id": "4.3",
+          "text": "（以下何焯補錄十五本。）\n《香囊記》\n《龍泉記》\n《三益記》\n《洪皓使虜記》\n《李白宮錦袍記》\n《嬌紅記》\n《破鏡重圓》\n《文林四景》\n《麗情四景》\n《忠孝節義》\n《百行傳》\n《玉玦記》\n《王陽明平逆記》\n《中山狼白猿》\n《唐僧西遊記》"
+        }
+      ]
+    },
+    {
+      "id": "南詞敘錄.5",
+      "ordinal": 5,
+      "title": "註",
+      "sourcePage": "南詞敘錄",
+      "sourceRevid": 2461853,
+      "sourcePages": [
+        "南詞敘錄"
+      ],
+      "passages": [
+        {
+          "id": "5.1",
+          "text": "小藍字乃何焯眉注。"
+        }
+      ]
+    }
+  ]
+}
