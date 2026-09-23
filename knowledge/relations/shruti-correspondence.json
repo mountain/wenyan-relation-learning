@@ -1,0 +1,107 @@
+{
+  "schema": "wenyan.relations.shruti-correspondence.v1",
+  "generatedAt": "2026-09-23T13:30:41.974Z",
+  "claim": "122 magnetic point groups and 1651 magnetic space groups show 100% octave-normalized correspondence with the 22 shrutis.",
+  "choice": {
+    "shrutis": "22 equal divisions of the octave, 2^{k/22}",
+    "why": "the most favourable reading for the claim"
+  },
+  "A_serialNumbers": {
+    "mpg122": {
+      "n": 122,
+      "maxNearestDistanceOctaves": 0.02272,
+      "coverageAt1percent": 22,
+      "coverageAt0_1percent": 4,
+      "coverageAt0_01percent": 1,
+      "meanNearestDistance": 0.010373,
+      "exactHits": 7,
+      "exactHitValues": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64
+      ]
+    },
+    "msg1651": {
+      "n": 1651,
+      "maxNearestDistanceOctaves": 0.02272,
+      "coverageAt1percent": 22,
+      "coverageAt0_1percent": 22,
+      "coverageAt0_01percent": 2,
+      "meanNearestDistance": 0.011248,
+      "exactHits": 11,
+      "exactHitValues": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64,
+        128,
+        256,
+        512,
+        1024
+      ]
+    },
+    "null122": {
+      "trials": 2000,
+      "eps": 0.001,
+      "shareFullCoverage": 0
+    },
+    "null1651": {
+      "trials": 2000,
+      "eps": 0.001,
+      "shareFullCoverage": 0.5535
+    },
+    "reading": "With 1651 serial numbers the octave is covered to within 2.272% of an octave, so a 100% coverage claim is a statement about DENSITY, not correspondence: the null (random values of the same size) reaches full coverage in 55.4% of trials. Exact hits: 11 for 1651 and 7 for 122, and they are the powers of two [1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024] — i.e. the UNISON/octave, the one position that is forced for any n and therefore carries no information."
+  },
+  "B_counts": {
+    "magneticSpaceGroups": {
+      "value": 1651,
+      "mod22": 1,
+      "quotient": 75.045,
+      "exactMultipleOf22": false
+    },
+    "typeIII": {
+      "value": 1191,
+      "mod22": 3,
+      "quotient": 54.136,
+      "exactMultipleOf22": false
+    },
+    "magneticLayerGroups": {
+      "value": 528,
+      "mod22": 0,
+      "quotient": 24,
+      "exactMultipleOf22": true
+    },
+    "magneticRodGroups": {
+      "value": 394,
+      "mod22": 20,
+      "quotient": 17.909,
+      "exactMultipleOf22": false
+    },
+    "greyOrColorless": {
+      "value": 230,
+      "mod22": 10,
+      "quotient": 10.455,
+      "exactMultipleOf22": false
+    },
+    "magneticPointGroups": {
+      "value": 122,
+      "mod22": 12,
+      "quotient": 5.545,
+      "exactMultipleOf22": false
+    },
+    "reading": "Exactly divisible by 22: magneticLayerGroups=528. With 6 numbers and one modulus, P(at least one exact multiple) = 1-(21/22)^6 = 24.4%, so this is expected, not a signal."
+  },
+  "nonClaims": [
+    "The paper's own method is not reproduced here; only the two readings a reader can check from the numbers themselves.",
+    "Equal-tempered shrutis are a modern idealisation of a scheme with competing traditional versions; the choice is declared above because it favours the claim.",
+    "Nothing here shows the paper is wrong about whatever it actually computed — it shows what the stated claim does and does not establish when read this way."
+  ],
+  "verdict": "FAILED AS STATED, and for an instructive reason: the 100% is coverage, which equidistribution guarantees at this size, and the only exact correspondence is the trivial unison. A correspondence claim needs a rule that maps a specific group to a specific shruti, and no such rule is stated or recovered here."
+}
