@@ -33,6 +33,15 @@ const ROOT = path.resolve(HERE, '../..');
 
 /** The declared upstream commitment this patch is re-anchored to. */
 export const BASE = 'bcd05ba';
+
+/**
+ * The commit that DELIVERED these files upstream. Once the relations line went into PR #717,
+ * the patch stopped being the delivery and became a REPRODUCTION BUNDLE: its base is the
+ * delivery commit's PARENT, which is no longer the branch head. So the base check below asks
+ * whether BASE is an ANCESTOR of origin/master, not whether it equals it — and check 5 asks
+ * whether the delivered commit's blobs still match this repository's files.
+ */
+export const DELIVERED_AS = 'dbe3294';
 export const DEFAULT_UPSTREAM = '/Users/mingli/Adva/mingli-wenyan';
 
 /**
@@ -86,8 +95,18 @@ if (!master) {
   console.error(`[rebuild-patch] upstream at ${upstream} has no origin/master to compare against.`);
   process.exit(2);
 }
-if (!master.startsWith(BASE)) {
-  console.error(`[rebuild-patch] DECLARED BASE ${BASE} is not upstream origin/master (${master}).`);
+// ANCESTOR, not equality. Before delivery the base WAS the branch head; after delivery the
+// base is the delivery commit's parent and the head has moved past it. Requiring equality
+// would refuse to run the moment the work was delivered — which is precisely what happened.
+const isAncestor = (() => {
+  try {
+    execFileSync('git', [`--git-dir=${gitDir}`, 'merge-base', '--is-ancestor', BASE, 'origin/master'],
+      { stdio: 'pipe' });
+    return true;
+  } catch { return false; }
+})();
+if (!isAncestor) {
+  console.error(`[rebuild-patch] DECLARED BASE ${BASE} is not an ancestor of origin/master (${master}).`);
   console.error('  The base is declared, not discovered: update BASE in this file deliberately,');
   console.error('  then re-run. A patch silently re-anchored to a moving branch is not pinned.');
   process.exit(2);
@@ -166,6 +185,16 @@ run('git apply --check -R in this repository', () => {
   execFileSync('git', ['apply', '--check', '-R', 'wenyan-relations.patch'], { cwd: ROOT, stdio: 'pipe' });
 });
 
+run(`the delivered commit ${DELIVERED_AS} still matches this repository`, () => {
+  const out = [];
+  for (const s of SECTIONS) {
+    const blob = execFileSync('git', [`--git-dir=${gitDir}`, 'show', `${DELIVERED_AS}:${s.file}`],
+      { encoding: 'buffer' });
+    if (!Buffer.from(blob).equals(fs.readFileSync(path.join(ROOT, s.file)))) out.push(s.file);
+  }
+  if (out.length) throw new Error(`differ from ${DELIVERED_AS}: ${out.join(', ')}`);
+});
+
 for (const r of results) console.log(`  ${r.ok ? 'ok  ' : 'FAIL'} ${r.name}${r.detail ? ` — ${r.detail}` : ''}`);
 fs.rmSync(tmpTree, { recursive: true, force: true });
 
@@ -174,4 +203,5 @@ if (failed) {
   console.error(`\n[rebuild-patch] ${failed} check(s) failed`);
   process.exit(1);
 }
-console.log(`\n[rebuild-patch] 4/4 checks pass — this repository equals ${BASE} + the patch`);
+console.log(`\n[rebuild-patch] ${results.length}/${results.length} checks pass — this repository equals ${BASE} + the patch, `
+  + `and equals the delivered commit ${DELIVERED_AS}`);

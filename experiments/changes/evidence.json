@@ -75,7 +75,7 @@
   "sources": {
     "src/inscription/changes.ts": "0d4adef56208ce3d00c6d1c3d742c7290c1216b32c10f6194471836115d6f572",
     "src/inscription/syllogism.ts": "31c08cd675fb541dac272f9e82246bfe5402c3dba31f5d9d31ce8ec17d0b91ed",
-    "src/inscription/pipeline.ts": "33a098d6de5d1525788cb692c029469a659089443b8e2522934cdf3c42e5f887",
+    "src/inscription/pipeline.ts": "794dcf8b72fe050b94595618146d1e589b2115643c37f9d40edea74da826909f",
     "tools/changes/catalog.mjs": "ea470d4dc2ce4487dc0cc2935d2d4f56dfe46e61609a166eb584c14e3cfee242",
     "tools/changes/learning.mjs": "23de404989bcdd9c171360103c783286f0474ae85f9ba8a15ed0b4dcdb703015",
     "tools/changes/ask.mjs": "de4482a417b8f2906a0ad401440b593809f7c667ee2e912a00ccb505a535b5f5",

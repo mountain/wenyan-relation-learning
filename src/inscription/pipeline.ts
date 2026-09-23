@@ -307,8 +307,12 @@ export function runInscriptionPipeline(
 
   return {
     blocked: false,
-    ...(options.changes ? { changes: readChanges(txt, options.changes.catalog) } : {}),
-    ...(options.relationModel ? { relation: readRelation(txt, options.relationModel) } : {}),
+    ...(options.changes
+      ? { changes: readChanges(txt, options.changes.catalog) }
+      : {}),
+    ...(options.relationModel
+      ? { relation: readRelation(txt, options.relationModel) }
+      : {}),
     entryWarning: INSCRIPTION_EXPERIMENT_WARNING,
     analysis,
     forward,
