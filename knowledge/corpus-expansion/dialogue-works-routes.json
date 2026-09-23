@@ -1,0 +1,27 @@
+{
+  "schema": "wenyan.corpus-expansion.routes.v1",
+  "routes": {
+    "大唐西域記": {
+      "zh": "大唐西域記",
+      "tradition": "historical",
+      "resolvedTitle": "大唐西域記",
+      "licenseTags": [
+        "PD-old"
+      ],
+      "route": "mainPageLinks",
+      "chapters": 14,
+      "status": "OK"
+    },
+    "六祖壇經": {
+      "zh": "六祖壇經",
+      "tradition": "philosophers",
+      "resolvedTitle": "六祖壇經",
+      "licenseTags": [
+        "唐朝作品"
+      ],
+      "route": "mainPageLinks",
+      "chapters": 15,
+      "status": "OK"
+    }
+  }
+}

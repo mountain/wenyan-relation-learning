@@ -1,0 +1,339 @@
+{
+  "schema": "wenyan.corpus-expansion.routes.v1",
+  "routes": {
+    "齊民要術": {
+      "zh": "齊民要術",
+      "tradition": "philosophers",
+      "resolvedTitle": "齊民要術",
+      "licenseTags": [
+        "PD-old"
+      ],
+      "route": "mainPageLinks",
+      "chapters": 14,
+      "status": "OK"
+    },
+    "夢溪筆談": {
+      "zh": "夢溪筆談",
+      "tradition": "philosophers",
+      "resolvedTitle": "夢溪筆談",
+      "licenseTags": [
+        "北宋作品"
+      ],
+      "route": "mainPageLinks",
+      "chapters": 29,
+      "status": "OK"
+    },
+    "農政全書": {
+      "zh": "農政全書",
+      "tradition": "philosophers",
+      "resolvedTitle": "農政全書",
+      "licenseTags": [
+        "PD-old"
+      ],
+      "route": "mainPageLinks",
+      "chapters": 60,
+      "status": "OK"
+    },
+    "天工開物": {
+      "zh": "天工開物",
+      "tradition": "philosophers",
+      "resolvedTitle": "天工開物",
+      "licenseTags": [
+        "明朝作品"
+      ],
+      "route": "mainPageLinks",
+      "chapters": 157,
+      "status": "OK"
+    },
+    "營造法式": {
+      "zh": "營造法式",
+      "tradition": "philosophers",
+      "resolvedTitle": "營造法式",
+      "licenseTags": [
+        "北宋作品"
+      ],
+      "route": "mainPageLinks",
+      "chapters": 38,
+      "status": "OK"
+    },
+    "洗冤集錄": {
+      "zh": "洗冤集錄",
+      "tradition": "philosophers",
+      "resolvedTitle": "洗冤集錄",
+      "licenseTags": [
+        "PD-old"
+      ],
+      "route": "mainPageLinks",
+      "chapters": 5,
+      "status": "OK"
+    },
+    "武經總要": {
+      "zh": "武經總要",
+      "tradition": "philosophers",
+      "resolvedTitle": "武經總要",
+      "licenseTags": [
+        "北宋作品"
+      ],
+      "route": "mainPageLinks",
+      "chapters": 45,
+      "status": "OK"
+    },
+    "本草綱目": {
+      "zh": "本草綱目",
+      "tradition": "philosophers",
+      "resolvedTitle": "本草綱目",
+      "licenseTags": [
+        "明朝作品"
+      ],
+      "route": "mainPageLinks",
+      "chapters": 65,
+      "status": "OK"
+    },
+    "農桑輯要": {
+      "zh": "農桑輯要",
+      "tradition": "philosophers",
+      "resolvedTitle": "農桑輯要",
+      "licenseTags": [
+        "PD-old"
+      ],
+      "route": "mainPageLinks",
+      "chapters": 10,
+      "status": "OK"
+    },
+    "王禎農書": {
+      "zh": "王禎農書",
+      "tradition": "philosophers",
+      "resolvedTitle": "王禎農書",
+      "licenseTags": [
+        "PD-old"
+      ],
+      "route": "mainPageLinks",
+      "chapters": 22,
+      "status": "OK"
+    },
+    "茶經": {
+      "zh": "茶經",
+      "tradition": "philosophers",
+      "resolvedTitle": "茶經",
+      "licenseTags": [
+        "唐朝作品"
+      ],
+      "route": "mainPageLinks",
+      "chapters": 13,
+      "status": "OK"
+    },
+    "北山酒經": {
+      "zh": "北山酒經",
+      "tradition": "philosophers",
+      "resolvedTitle": "北山酒經",
+      "licenseTags": [
+        "北宋作品"
+      ],
+      "route": "single",
+      "chapters": 1,
+      "status": "OK"
+    },
+    "耒耜經": {
+      "zh": "耒耜經",
+      "tradition": "philosophers",
+      "resolvedTitle": "耒耜經",
+      "licenseTags": [
+        "唐朝作品"
+      ],
+      "route": "NEEDS-MANUAL",
+      "chapters": 0,
+      "status": "OK"
+    },
+    "便民圖纂": {
+      "zh": "便民圖纂",
+      "tradition": "philosophers",
+      "status": "MISSING"
+    },
+    "九章算術": {
+      "zh": "九章算術",
+      "tradition": "philosophers",
+      "resolvedTitle": "九章算術",
+      "licenseTags": [
+        "PD-old"
+      ],
+      "route": "single",
+      "chapters": 1,
+      "status": "OK"
+    },
+    "數書九章": {
+      "zh": "數書九章",
+      "tradition": "philosophers",
+      "status": "MISSING"
+    },
+    "傷寒論": {
+      "zh": "傷寒論",
+      "tradition": "philosophers",
+      "resolvedTitle": "傷寒論",
+      "licenseTags": [
+        "PD-old"
+      ],
+      "route": "single",
+      "chapters": 1,
+      "status": "OK"
+    },
+    "黃帝內經": {
+      "zh": "黃帝內經",
+      "tradition": "philosophers",
+      "resolvedTitle": "黃帝內經",
+      "licenseTags": [
+        "先秦作品"
+      ],
+      "route": "mainPageLinks",
+      "chapters": 36,
+      "status": "OK"
+    },
+    "金瓶梅": {
+      "zh": "金瓶梅",
+      "tradition": "fiction",
+      "resolvedTitle": "金瓶梅",
+      "licenseTags": [],
+      "route": "mainPageLinks",
+      "chapters": 101,
+      "status": "OK"
+    },
+    "喻世明言": {
+      "zh": "喻世明言",
+      "tradition": "fiction",
+      "resolvedTitle": "喻世明言",
+      "licenseTags": [
+        "PD-old"
+      ],
+      "route": "mainPageLinks",
+      "chapters": 41,
+      "status": "OK"
+    },
+    "警世通言": {
+      "zh": "警世通言",
+      "tradition": "fiction",
+      "resolvedTitle": "警世通言",
+      "licenseTags": [
+        "PD-old"
+      ],
+      "route": "mainPageLinks",
+      "chapters": 41,
+      "status": "OK"
+    },
+    "醒世恆言": {
+      "zh": "醒世恆言",
+      "tradition": "fiction",
+      "resolvedTitle": "醒世恆言",
+      "licenseTags": [
+        "PD-old"
+      ],
+      "route": "mainPageLinks",
+      "chapters": 41,
+      "status": "OK"
+    },
+    "初刻拍案驚奇": {
+      "zh": "初刻拍案驚奇",
+      "tradition": "fiction",
+      "resolvedTitle": "初刻拍案驚奇",
+      "licenseTags": [
+        "明朝作品"
+      ],
+      "route": "mainPageLinks",
+      "chapters": 40,
+      "status": "OK"
+    },
+    "二刻拍案驚奇": {
+      "zh": "二刻拍案驚奇",
+      "tradition": "fiction",
+      "resolvedTitle": "二刻拍案驚奇",
+      "licenseTags": [
+        "明朝作品"
+      ],
+      "route": "mainPageLinks",
+      "chapters": 41,
+      "status": "OK"
+    },
+    "儒林外史": {
+      "zh": "儒林外史",
+      "tradition": "fiction",
+      "resolvedTitle": "儒林外史",
+      "licenseTags": [
+        "PD-old"
+      ],
+      "route": "mainPageLinks",
+      "chapters": 56,
+      "status": "OK"
+    },
+    "紅樓夢": {
+      "zh": "紅樓夢",
+      "tradition": "fiction",
+      "resolvedTitle": "紅樓夢",
+      "licenseTags": [
+        "清朝作品"
+      ],
+      "route": "mainPageLinks",
+      "chapters": 120,
+      "status": "OK"
+    },
+    "水滸傳": {
+      "zh": "水滸傳",
+      "tradition": "fiction",
+      "resolvedTitle": "水滸傳",
+      "licenseTags": [],
+      "route": "NEEDS-MANUAL",
+      "chapters": 0,
+      "status": "OK"
+    },
+    "西遊記": {
+      "zh": "西遊記",
+      "tradition": "fiction",
+      "resolvedTitle": "西遊記",
+      "licenseTags": [],
+      "route": "mainPageLinks",
+      "chapters": 101,
+      "status": "OK"
+    },
+    "東京夢華錄": {
+      "zh": "東京夢華錄",
+      "tradition": "historical",
+      "resolvedTitle": "東京夢華錄",
+      "licenseTags": [
+        "南宋作品"
+      ],
+      "route": "mainPageLinks",
+      "chapters": 10,
+      "status": "OK"
+    },
+    "武林舊事": {
+      "zh": "武林舊事",
+      "tradition": "historical",
+      "resolvedTitle": "武林舊事",
+      "licenseTags": [
+        "PD-old"
+      ],
+      "route": "mainPageLinks",
+      "chapters": 11,
+      "status": "OK"
+    },
+    "夢粱錄": {
+      "zh": "夢粱錄",
+      "tradition": "historical",
+      "resolvedTitle": "夢粱錄",
+      "licenseTags": [
+        "南宋作品"
+      ],
+      "route": "mainPageLinks",
+      "chapters": 21,
+      "status": "OK"
+    },
+    "揚州畫舫錄": {
+      "zh": "揚州畫舫錄",
+      "tradition": "historical",
+      "resolvedTitle": "揚州畫舫錄",
+      "licenseTags": [
+        "清朝作品"
+      ],
+      "route": "mainPageLinks",
+      "chapters": 21,
+      "status": "OK"
+    }
+  }
+}

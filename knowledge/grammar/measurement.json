@@ -1,25 +1,25 @@
 {
   "schema": "wenyan.grammar.measurement.v1",
-  "generatedAt": "2026-09-23T12:15:34.176Z",
+  "generatedAt": "2026-09-23T12:29:18.880Z",
   "grammar": "wenyan.relations.reporting.v1",
   "corpus": {
-    "passages": 81575,
+    "passages": 166317,
     "maxPassageLength": 32773,
     "maxTextUnits": 2048
   },
   "reach": {
-    "uniqueParse": 20125,
-    "rate": 0.246705,
+    "uniqueParse": 22195,
+    "rate": 0.13345,
     "ambiguousFrameOccurrences": 0,
-    "tooLong": 177,
+    "tooLong": 248,
     "perConstruction": {
-      "wei-quote": 1744,
-      "wen-quote": 537,
-      "gao-quote": 369,
-      "yu-quote": 287,
-      "wen-plain": 548,
-      "gao-plain": 171,
-      "yue-quote": 16469
+      "wei-quote": 1926,
+      "wen-quote": 574,
+      "gao-quote": 411,
+      "yu-quote": 304,
+      "wen-plain": 623,
+      "gao-plain": 197,
+      "yue-quote": 18160
     },
     "perWork": {
       "analects": 449,
@@ -92,7 +92,33 @@
       "穆天子傳": 9,
       "越絕書": 86,
       "吳越春秋": 342,
-      "晏子春秋": 214
+      "晏子春秋": 214,
+      "夢溪筆談": 158,
+      "農政全書": 189,
+      "天工開物": 3,
+      "洗冤集錄": 3,
+      "武經總要": 651,
+      "本草綱目": 13,
+      "農桑輯要": 58,
+      "王禎農書": 207,
+      "茶經": 10,
+      "北山酒經": 2,
+      "九章算術": 1,
+      "黃帝內經": 7,
+      "金瓶梅": 6,
+      "喻世明言": 130,
+      "警世通言": 54,
+      "醒世恆言": 59,
+      "初刻拍案驚奇": 4,
+      "二刻拍案驚奇": 5,
+      "紅樓夢": 3,
+      "西遊記": 71,
+      "東京夢華錄": 3,
+      "武林舊事": 15,
+      "夢粱錄": 32,
+      "揚州畫舫錄": 64,
+      "大唐西域記": 145,
+      "六祖壇經": 177
     },
     "perWorkDensity": {
       "analects": {
@@ -479,6 +505,151 @@
         "passages": 218,
         "readable": 214,
         "density": 0.9817
+      },
+      "夢溪筆談": {
+        "passages": 601,
+        "readable": 158,
+        "density": 0.2629
+      },
+      "農政全書": {
+        "passages": 3319,
+        "readable": 189,
+        "density": 0.0569
+      },
+      "天工開物": {
+        "passages": 449,
+        "readable": 3,
+        "density": 0.0067
+      },
+      "營造法式": {
+        "passages": 2600,
+        "readable": 0,
+        "density": 0
+      },
+      "洗冤集錄": {
+        "passages": 172,
+        "readable": 3,
+        "density": 0.0174
+      },
+      "武經總要": {
+        "passages": 4270,
+        "readable": 651,
+        "density": 0.1525
+      },
+      "本草綱目": {
+        "passages": 42296,
+        "readable": 13,
+        "density": 0.0003
+      },
+      "農桑輯要": {
+        "passages": 984,
+        "readable": 58,
+        "density": 0.0589
+      },
+      "王禎農書": {
+        "passages": 1295,
+        "readable": 207,
+        "density": 0.1598
+      },
+      "茶經": {
+        "passages": 270,
+        "readable": 10,
+        "density": 0.037
+      },
+      "北山酒經": {
+        "passages": 127,
+        "readable": 2,
+        "density": 0.0157
+      },
+      "九章算術": {
+        "passages": 805,
+        "readable": 1,
+        "density": 0.0012
+      },
+      "傷寒論": {
+        "passages": 773,
+        "readable": 0,
+        "density": 0
+      },
+      "黃帝內經": {
+        "passages": 2962,
+        "readable": 7,
+        "density": 0.0024
+      },
+      "金瓶梅": {
+        "passages": 2515,
+        "readable": 6,
+        "density": 0.0024
+      },
+      "喻世明言": {
+        "passages": 2423,
+        "readable": 130,
+        "density": 0.0537
+      },
+      "警世通言": {
+        "passages": 804,
+        "readable": 54,
+        "density": 0.0672
+      },
+      "醒世恆言": {
+        "passages": 3140,
+        "readable": 59,
+        "density": 0.0188
+      },
+      "初刻拍案驚奇": {
+        "passages": 1872,
+        "readable": 4,
+        "density": 0.0021
+      },
+      "二刻拍案驚奇": {
+        "passages": 2678,
+        "readable": 5,
+        "density": 0.0019
+      },
+      "儒林外史": {
+        "passages": 703,
+        "readable": 0,
+        "density": 0
+      },
+      "紅樓夢": {
+        "passages": 2843,
+        "readable": 3,
+        "density": 0.0011
+      },
+      "西遊記": {
+        "passages": 2539,
+        "readable": 71,
+        "density": 0.028
+      },
+      "東京夢華錄": {
+        "passages": 86,
+        "readable": 3,
+        "density": 0.0349
+      },
+      "武林舊事": {
+        "passages": 1385,
+        "readable": 15,
+        "density": 0.0108
+      },
+      "夢粱錄": {
+        "passages": 202,
+        "readable": 32,
+        "density": 0.1584
+      },
+      "揚州畫舫錄": {
+        "passages": 1160,
+        "readable": 64,
+        "density": 0.0552
+      },
+      "大唐西域記": {
+        "passages": 839,
+        "readable": 145,
+        "density": 0.1728
+      },
+      "六祖壇經": {
+        "passages": 630,
+        "readable": 177,
+        "density": 0.281
       }
     },
     "examples": {
@@ -665,8 +836,8 @@
   },
   "answerable": {
     "evidenceRecords": 14,
-    "passages": 20125,
-    "rate": 0.246705,
+    "passages": 22195,
+    "rate": 0.13345,
     "note": "Requires every construction below to be pinned by supervised evidence; reach is the ceiling this can approach."
   }
 }

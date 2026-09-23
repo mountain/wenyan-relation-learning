@@ -1,10 +1,11 @@
 {
   "schema": "wenyan.corpus.manifest.v1",
   "format": "wenyan.corpus.v1",
-  "generatedAt": "2026-09-23T03:49:49.180Z",
+  "generatedAt": "2026-09-23T12:28:14.328Z",
   "partialRebuild": {
     "only": [
-      "戰國策"
+      "大唐西域記",
+      "六祖壇經"
     ],
     "note": "this run rebuilt a subset; other entries are carried over from the previous manifest"
   },
@@ -24,10 +25,10 @@
     "ctextNotice": "ctext.org was NOT used. Its robots.txt and anti-scraping notice state that automated access is not authorized and direct researchers to subscribe; no content was retrieved from it."
   },
   "counts": {
-    "works": 77,
-    "sections": 2944,
-    "passages": 81575,
-    "characters": 12170490
+    "works": 106,
+    "sections": 4118,
+    "passages": 166317,
+    "characters": 21043361
   },
   "works": [
     {
@@ -1888,6 +1889,649 @@
       "licenseStatus": "Public-domain templates present on the pages used: 先秦作品.",
       "limitations": [
         "四庫入史部傳記類（Portal:典籍 則列於子部，此處從四庫）。源站頁面帶 pd-old 標籤。"
+      ]
+    },
+    {
+      "id": "齊民要術",
+      "zh": "齊民要術",
+      "tradition": "philosophers",
+      "file": null,
+      "error": "fetch failed",
+      "limitations": [
+        "build failed"
+      ]
+    },
+    {
+      "id": "夢溪筆談",
+      "zh": "夢溪筆談",
+      "tradition": "philosophers",
+      "file": "works/夢溪筆談.json",
+      "sha256": "f408b36728104352f3edb28b3c8ac8f25f83c1c5ba0bb9d015ba8927fb148a74",
+      "counts": {
+        "sections": 29,
+        "passages": 601,
+        "characters": 126547
+      },
+      "structuralMarkersRemoved": 3,
+      "flaggedShortPassages": 4,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {
+        "PD-old": 6,
+        "北宋作品": 21,
+        "pd-old": 1
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: PD-old, 北宋作品, pd-old.",
+      "limitations": [
+        "後台批次（用戶指定：可操作技術與市井文獻）。路由 mainPageLinks，29 章；授權標籤 北宋作品。密度實測後置。"
+      ]
+    },
+    {
+      "id": "農政全書",
+      "zh": "農政全書",
+      "tradition": "philosophers",
+      "file": "works/農政全書.json",
+      "sha256": "08f362752f08f3a9be6f4a5112a81bd0896943b9893a015b48d1bc1bca17ae2d",
+      "counts": {
+        "sections": 60,
+        "passages": 3319,
+        "characters": 494908
+      },
+      "structuralMarkersRemoved": 2,
+      "flaggedShortPassages": 31,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {
+        "明朝作品": 3
+      },
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "後台批次（用戶指定：可操作技術與市井文獻）。路由 mainPageLinks，60 章；授權標籤 PD-old。密度實測後置。"
+      ]
+    },
+    {
+      "id": "天工開物",
+      "zh": "天工開物",
+      "tradition": "philosophers",
+      "file": "works/天工開物.json",
+      "sha256": "43756e9aed0cc35117b7c67a799a2066b7c8e6d7fd0d76ce5c815b0405188b27",
+      "counts": {
+        "sections": 157,
+        "passages": 449,
+        "characters": 57617
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {
+        "PD-old": 157
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: PD-old.",
+      "limitations": [
+        "後台批次（用戶指定：可操作技術與市井文獻）。路由 mainPageLinks，157 章；授權標籤 明朝作品。密度實測後置。"
+      ]
+    },
+    {
+      "id": "營造法式",
+      "zh": "營造法式",
+      "tradition": "philosophers",
+      "file": "works/營造法式.json",
+      "sha256": "b8d6c2dee40fd36ad8394375955ff2f557a78194cdc8a0fc663665554d4492c3",
+      "counts": {
+        "sections": 32,
+        "passages": 2600,
+        "characters": 129609
+      },
+      "structuralMarkersRemoved": 10,
+      "flaggedShortPassages": 81,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {
+        "PD-old": 3
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: PD-old.",
+      "limitations": [
+        "missing page: 營造法式/第二十九卷",
+        "missing page: 營造法式/第三十卷",
+        "missing page: 營造法式/第三十一卷",
+        "missing page: 營造法式/第三十二卷",
+        "missing page: 營造法式/第三十三卷",
+        "missing page: 營造法式/第三十四卷",
+        "後台批次（用戶指定：可操作技術與市井文獻）。路由 mainPageLinks，38 章；授權標籤 北宋作品。密度實測後置。"
+      ]
+    },
+    {
+      "id": "洗冤集錄",
+      "zh": "洗冤集錄",
+      "tradition": "philosophers",
+      "file": "works/洗冤集錄.json",
+      "sha256": "adf3b97a9b6b6c850fc99d904dde937781908c2edf2c8c830c50f3540b83b353",
+      "counts": {
+        "sections": 5,
+        "passages": 172,
+        "characters": 27543
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {
+        "PD-old": 5
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: PD-old.",
+      "limitations": [
+        "後台批次（用戶指定：可操作技術與市井文獻）。路由 mainPageLinks，5 章；授權標籤 PD-old。密度實測後置。"
+      ]
+    },
+    {
+      "id": "武經總要",
+      "zh": "武經總要",
+      "tradition": "philosophers",
+      "file": "works/武經總要.json",
+      "sha256": "7476d89dded06d2d24c7c5d63cf89f0b2db69401c2616aa270ba8b82313eb600",
+      "counts": {
+        "sections": 45,
+        "passages": 4270,
+        "characters": 414741
+      },
+      "structuralMarkersRemoved": 4,
+      "flaggedShortPassages": 220,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {},
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "後台批次（用戶指定：可操作技術與市井文獻）。路由 mainPageLinks，45 章；授權標籤 北宋作品。密度實測後置。"
+      ]
+    },
+    {
+      "id": "本草綱目",
+      "zh": "本草綱目",
+      "tradition": "philosophers",
+      "file": "works/本草綱目.json",
+      "sha256": "4242a4d43a74e47b5ebab4446dafc8573a8b75d8bec3254e752274d46e2d43d1",
+      "counts": {
+        "sections": 65,
+        "passages": 42296,
+        "characters": 1761458
+      },
+      "structuralMarkersRemoved": 2,
+      "flaggedShortPassages": 9106,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {
+        "明朝作品": 1,
+        "PD-old": 62
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: 明朝作品, PD-old.",
+      "limitations": [
+        "後台批次（用戶指定：可操作技術與市井文獻）。路由 mainPageLinks，65 章；授權標籤 明朝作品。密度實測後置。"
+      ]
+    },
+    {
+      "id": "農桑輯要",
+      "zh": "農桑輯要",
+      "tradition": "philosophers",
+      "file": "works/農桑輯要.json",
+      "sha256": "86d63b942a43ff64973f8e4f64401d47883da56cd3e33e39998c05a9737bd61b",
+      "counts": {
+        "sections": 10,
+        "passages": 984,
+        "characters": 76467
+      },
+      "structuralMarkersRemoved": 2,
+      "flaggedShortPassages": 7,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {
+        "PD-old": 7
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: PD-old.",
+      "limitations": [
+        "後台批次（用戶指定：可操作技術與市井文獻）。路由 mainPageLinks，10 章；授權標籤 PD-old。密度實測後置。"
+      ]
+    },
+    {
+      "id": "王禎農書",
+      "zh": "王禎農書",
+      "tradition": "philosophers",
+      "file": "works/王禎農書.json",
+      "sha256": "4daff1cae7d535a4cb1df7a84a12761f86d1412095955ef58ff682384ea3e8c9",
+      "counts": {
+        "sections": 22,
+        "passages": 1295,
+        "characters": 144138
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {
+        "PD-old": 22
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: PD-old.",
+      "limitations": [
+        "後台批次（用戶指定：可操作技術與市井文獻）。路由 mainPageLinks，22 章；授權標籤 PD-old。密度實測後置。"
+      ]
+    },
+    {
+      "id": "茶經",
+      "zh": "茶經",
+      "tradition": "philosophers",
+      "file": "works/茶經.json",
+      "sha256": "824d82ae310285865102ecd0730af8851b23ce5b621814217a2701bc8694196c",
+      "counts": {
+        "sections": 13,
+        "passages": 270,
+        "characters": 18015
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 24,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {
+        "唐朝作品": 3,
+        "PD-old": 10
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: 唐朝作品, PD-old.",
+      "limitations": [
+        "後台批次（用戶指定：可操作技術與市井文獻）。路由 mainPageLinks，13 章；授權標籤 唐朝作品。密度實測後置。"
+      ]
+    },
+    {
+      "id": "北山酒經",
+      "zh": "北山酒經",
+      "tradition": "philosophers",
+      "file": "works/北山酒經.json",
+      "sha256": "049439960e71b150e40583d453848f8c714b6c32694041529ef61ce0ca2b8eee",
+      "counts": {
+        "sections": 4,
+        "passages": 127,
+        "characters": 13696
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 17,
+      "discoveryRoute": "single",
+      "licenseTemplates": {
+        "北宋作品": 1
+      },
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "後台批次（用戶指定：可操作技術與市井文獻）。路由 single，1 章；授權標籤 北宋作品。密度實測後置。"
+      ]
+    },
+    {
+      "id": "九章算術",
+      "zh": "九章算術",
+      "tradition": "philosophers",
+      "file": "works/九章算術.json",
+      "sha256": "cf8a23888848c017bf22e16891bbb4c77e8a101a4ddfd6829a9776310c6724ae",
+      "counts": {
+        "sections": 10,
+        "passages": 805,
+        "characters": 30641
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 22,
+      "discoveryRoute": "single",
+      "licenseTemplates": {
+        "PD-old": 1
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: PD-old.",
+      "limitations": [
+        "後台批次（用戶指定：可操作技術與市井文獻）。路由 single，1 章；授權標籤 PD-old。密度實測後置。"
+      ]
+    },
+    {
+      "id": "傷寒論",
+      "zh": "傷寒論",
+      "tradition": "philosophers",
+      "file": "works/傷寒論.json",
+      "sha256": "814d2ff1438fec79e75df876f0caf6712e6315b09ee860b96b704745e9b81d46",
+      "counts": {
+        "sections": 12,
+        "passages": 773,
+        "characters": 41766
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 1,
+      "discoveryRoute": "single",
+      "licenseTemplates": {
+        "PD-old": 1
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: PD-old.",
+      "limitations": [
+        "後台批次（用戶指定：可操作技術與市井文獻）。路由 single，1 章；授權標籤 PD-old。密度實測後置。"
+      ]
+    },
+    {
+      "id": "黃帝內經",
+      "zh": "黃帝內經",
+      "tradition": "philosophers",
+      "file": "works/黃帝內經.json",
+      "sha256": "2d10d4711cdefbb5665de217d7a195de1417a260da7af8f85d85fbba345bebcd",
+      "counts": {
+        "sections": 36,
+        "passages": 2962,
+        "characters": 188334
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 1,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {
+        "PD-old": 34
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: PD-old.",
+      "limitations": [
+        "後台批次（用戶指定：可操作技術與市井文獻）。路由 mainPageLinks，36 章；授權標籤 先秦作品。密度實測後置。"
+      ]
+    },
+    {
+      "id": "金瓶梅",
+      "zh": "金瓶梅",
+      "tradition": "fiction",
+      "file": "works/金瓶梅.json",
+      "sha256": "2fa89e1e7a12a5b4865d808b4ec61739c9be0b8553973e8a8d9191b3a428a6e2",
+      "counts": {
+        "sections": 101,
+        "passages": 2515,
+        "characters": 750541
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 103,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {
+        "明朝作品": 6
+      },
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "後台批次（用戶指定：可操作技術與市井文獻）。路由 mainPageLinks，101 章；授權標籤 （無 → 站點預設 CC BY-SA 4.0）。密度實測後置。"
+      ]
+    },
+    {
+      "id": "喻世明言",
+      "zh": "喻世明言",
+      "tradition": "fiction",
+      "file": "works/喻世明言.json",
+      "sha256": "96fed0e3f21a43ee5f7c6814bec9ab64f180807c84f541a94dff1aa19ff8e889",
+      "counts": {
+        "sections": 41,
+        "passages": 2423,
+        "characters": 358084
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 12,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {
+        "明朝作品": 40
+      },
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "後台批次（用戶指定：可操作技術與市井文獻）。路由 mainPageLinks，41 章；授權標籤 PD-old。密度實測後置。"
+      ]
+    },
+    {
+      "id": "警世通言",
+      "zh": "警世通言",
+      "tradition": "fiction",
+      "file": "works/警世通言.json",
+      "sha256": "2199289b8ea45fc68a860fad435f9d81eb8b832d246d730831eac8684bf5af07",
+      "counts": {
+        "sections": 41,
+        "passages": 804,
+        "characters": 382284
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 8,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {},
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "後台批次（用戶指定：可操作技術與市井文獻）。路由 mainPageLinks，41 章；授權標籤 PD-old。密度實測後置。"
+      ]
+    },
+    {
+      "id": "醒世恆言",
+      "zh": "醒世恆言",
+      "tradition": "fiction",
+      "file": "works/醒世恆言.json",
+      "sha256": "3bb3ebb6073f60441c6c088668ba1f0dae349f5d40017a463328c5f2a868a7ab",
+      "counts": {
+        "sections": 41,
+        "passages": 3140,
+        "characters": 534811
+      },
+      "structuralMarkersRemoved": 1,
+      "flaggedShortPassages": 15,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {},
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "後台批次（用戶指定：可操作技術與市井文獻）。路由 mainPageLinks，41 章；授權標籤 PD-old。密度實測後置。"
+      ]
+    },
+    {
+      "id": "初刻拍案驚奇",
+      "zh": "初刻拍案驚奇",
+      "tradition": "fiction",
+      "file": "works/初刻拍案驚奇.json",
+      "sha256": "1f161dbadc17f9adcd9cd02bdd30f91fc214873586ce802bfc488865dd2eb2aa",
+      "counts": {
+        "sections": 40,
+        "passages": 1872,
+        "characters": 395339
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 5,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {
+        "明朝作品": 40
+      },
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "後台批次（用戶指定：可操作技術與市井文獻）。路由 mainPageLinks，40 章；授權標籤 明朝作品。密度實測後置。"
+      ]
+    },
+    {
+      "id": "二刻拍案驚奇",
+      "zh": "二刻拍案驚奇",
+      "tradition": "fiction",
+      "file": "works/二刻拍案驚奇.json",
+      "sha256": "8ed519e926a8a943f9463cd331a4096b0d318504c54a7b604b27c99f30e1558f",
+      "counts": {
+        "sections": 41,
+        "passages": 2678,
+        "characters": 425346
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 36,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {
+        "明朝作品": 41
+      },
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "後台批次（用戶指定：可操作技術與市井文獻）。路由 mainPageLinks，41 章；授權標籤 明朝作品。密度實測後置。"
+      ]
+    },
+    {
+      "id": "儒林外史",
+      "zh": "儒林外史",
+      "tradition": "fiction",
+      "file": "works/儒林外史.json",
+      "sha256": "4b15f481fff26f571a1cd491d189b3fe65578b4365e72c908d690874d091dad2",
+      "counts": {
+        "sections": 56,
+        "passages": 703,
+        "characters": 326860
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {},
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "後台批次（用戶指定：可操作技術與市井文獻）。路由 mainPageLinks，56 章；授權標籤 PD-old。密度實測後置。"
+      ]
+    },
+    {
+      "id": "紅樓夢",
+      "zh": "紅樓夢",
+      "tradition": "fiction",
+      "file": "works/紅樓夢.json",
+      "sha256": "75c9a49cd023f0c1b85aa7f7d2e25f4bce99f53aaf808a294147d19d9fcae766",
+      "counts": {
+        "sections": 120,
+        "passages": 2843,
+        "characters": 865362
+      },
+      "structuralMarkersRemoved": 4,
+      "flaggedShortPassages": 310,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {
+        "清朝作品": 120
+      },
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "後台批次（用戶指定：可操作技術與市井文獻）。路由 mainPageLinks，120 章；授權標籤 清朝作品。密度實測後置。"
+      ]
+    },
+    {
+      "id": "西遊記",
+      "zh": "西遊記",
+      "tradition": "fiction",
+      "file": "works/西遊記.json",
+      "sha256": "3c3fda9d42b3960076eeac4b96fcfb444a90e1702a56a306405cf59811d5378b",
+      "counts": {
+        "sections": 101,
+        "passages": 2539,
+        "characters": 724910
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 1,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {
+        "Pd-old": 3,
+        "PD-old": 1
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: Pd-old, PD-old.",
+      "limitations": [
+        "後台批次（用戶指定：可操作技術與市井文獻）。路由 mainPageLinks，101 章；授權標籤 （無 → 站點預設 CC BY-SA 4.0）。密度實測後置。"
+      ]
+    },
+    {
+      "id": "東京夢華錄",
+      "zh": "東京夢華錄",
+      "tradition": "historical",
+      "file": "works/東京夢華錄.json",
+      "sha256": "2479e3a5060af09f6d2d69506ceb6ce06b78d6b1902cf55864e7d6fcffe7892f",
+      "counts": {
+        "sections": 10,
+        "passages": 86,
+        "characters": 32114
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {},
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "後台批次（用戶指定：可操作技術與市井文獻）。路由 mainPageLinks，10 章；授權標籤 南宋作品。密度實測後置。"
+      ]
+    },
+    {
+      "id": "武林舊事",
+      "zh": "武林舊事",
+      "tradition": "historical",
+      "file": "works/武林舊事.json",
+      "sha256": "618a17b0bef368669f0e2da2bb0ebda750067490d9c88eb827296657a15461c9",
+      "counts": {
+        "sections": 11,
+        "passages": 1385,
+        "characters": 67438
+      },
+      "structuralMarkersRemoved": 1,
+      "flaggedShortPassages": 459,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {},
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "後台批次（用戶指定：可操作技術與市井文獻）。路由 mainPageLinks，11 章；授權標籤 PD-old。密度實測後置。"
+      ]
+    },
+    {
+      "id": "夢粱錄",
+      "zh": "夢粱錄",
+      "tradition": "historical",
+      "file": "works/夢粱錄.json",
+      "sha256": "6500f65c8e0c31ca2352ce2033901bf05b31c3adc3970aeab29767368ecceb36",
+      "counts": {
+        "sections": 21,
+        "passages": 202,
+        "characters": 111071
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 1,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {},
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "後台批次（用戶指定：可操作技術與市井文獻）。路由 mainPageLinks，21 章；授權標籤 南宋作品。密度實測後置。"
+      ]
+    },
+    {
+      "id": "揚州畫舫錄",
+      "zh": "揚州畫舫錄",
+      "tradition": "historical",
+      "file": "works/揚州畫舫錄.json",
+      "sha256": "d1c7da46f8fe5f66aa588f6204f0e2b25523b01e348e57d894f28c51d4aaac5f",
+      "counts": {
+        "sections": 21,
+        "passages": 1160,
+        "characters": 217333
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {
+        "清朝作品": 18
+      },
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "後台批次（用戶指定：可操作技術與市井文獻）。路由 mainPageLinks，21 章；授權標籤 清朝作品。密度實測後置。"
+      ]
+    },
+    {
+      "id": "大唐西域記",
+      "zh": "大唐西域記",
+      "tradition": "historical",
+      "file": "works/大唐西域記.json",
+      "sha256": "cd898e2affbcc7469bd6c8557f3cbf0cb87a8bd7170f0c92bdb3d3ed339c1e6d",
+      "counts": {
+        "sections": 14,
+        "passages": 839,
+        "characters": 124637
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {
+        "PD-old": 2
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: PD-old.",
+      "limitations": [
+        "密度对照（对话性文本，检验天工開物 0.67% 是书的性质还是类的性质）。路由 mainPageLinks，14 章；授权标签 PD-old。"
+      ]
+    },
+    {
+      "id": "六祖壇經",
+      "zh": "六祖壇經",
+      "tradition": "philosophers",
+      "file": "works/六祖壇經.json",
+      "sha256": "264a10c75ab211dd42645af1979f08f8861a196947236328905210bab5aa080a",
+      "counts": {
+        "sections": 15,
+        "passages": 630,
+        "characters": 31261
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 6,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {},
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "密度对照（对话性文本，检验天工開物 0.67% 是书的性质还是类的性质）。路由 mainPageLinks，15 章；授权标签 唐朝作品。"
       ]
     }
   ],

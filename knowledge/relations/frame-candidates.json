@@ -1,0 +1,615 @@
+{
+  "schema": "wenyan.relations.frame-candidates.v1",
+  "method": "recurring 2-3 character n-grams carrying a ROLE MARKER, counted over passages the current grammar cannot read; a candidate is a proposal, and whether a SEGMENTATION RULE exists for it is the human decision the grammar rests on",
+  "corpus": {
+    "passages": 81575,
+    "readable": 18301,
+    "unread": 51509
+  },
+  "candidates": [
+    {
+      "gram": "氏曰",
+      "unreadPassagesContainingIt": 4116,
+      "worksSpanned": 13,
+      "markers": [
+        "曰=quotation"
+      ],
+      "examples": [
+        {
+          "work": "zuozhuan",
+          "passageId": "10.107",
+          "text": "六月．楚子囊．鄭子耳．伐宋．師于訾毋．庚午．圍宋門于桐門．晉荀罃伐秦．報其侵也．衛侯救宋．師于襄牛．鄭子展曰．必伐衛．不"
+        },
+        {
+          "work": "zuozhuan",
+          "passageId": "10.258",
+          "text": "冬．十月．孟氏將辟．藉除於臧氏．臧孫使正夫助之．除於東門甲．從已而視之．孟氏又告季孫．季孫怒．命攻臧氏．乙亥．臧紇斬鹿門"
+        }
+      ]
+    },
+    {
+      "gram": "以為",
+      "unreadPassagesContainingIt": 3748,
+      "worksSpanned": 56,
+      "markers": [
+        "以=theme-marker",
+        "為=benefactive-or-copula"
+      ],
+      "examples": [
+        {
+          "work": "mencius",
+          "passageId": "1.47",
+          "text": "曰：「鄒人與楚人戰，則王以為孰勝？」"
+        },
+        {
+          "work": "mencius",
+          "passageId": "2.16",
+          "text": "曰：「寡人之囿方四十里，民猶以為大，何也？」"
+        }
+      ]
+    },
+    {
+      "gram": "陳氏曰",
+      "unreadPassagesContainingIt": 2395,
+      "worksSpanned": 3,
+      "markers": [
+        "曰=quotation"
+      ],
+      "examples": [
+        {
+          "work": "wenxian-tongkao",
+          "passageId": "1.18",
+          "text": "永嘉陳氏曰：\"鄉、遂用貢法，《遂人》是也。都、鄙用助法，《匠人》是也。按《遂人》雲'百夫有洫'，'十夫有溝'，即不見得包"
+        },
+        {
+          "work": "wenxian-tongkao",
+          "passageId": "6.21",
+          "text": "止齋陳氏曰：\"按孔氏《闕里志》云：先是，歷代以聖人之後，不預庸調，至周顯德中遣使均田，遂抑為編戶。又按：太平興國中，遣左"
+        }
+      ]
+    },
+    {
+      "gram": "不得",
+      "unreadPassagesContainingIt": 2233,
+      "worksSpanned": 63,
+      "markers": [
+        "得=reception"
+      ],
+      "examples": [
+        {
+          "work": "analects",
+          "passageId": "9.5",
+          "text": "子畏於匡。曰：「文王既沒，文不在茲乎？天之將喪斯文也，後死者，不得與於斯文也。天之未喪斯文也，匡人其如予何？」"
+        },
+        {
+          "work": "analects",
+          "passageId": "9.12",
+          "text": "子疾病，子路使門人爲臣。病間，曰：「久矣哉，由之行詐也！無臣而爲有臣，吾誰欺？欺天乎？且予與其死於臣之手也，無寧死於二三"
+        }
+      ]
+    },
+    {
+      "gram": "於是",
+      "unreadPassagesContainingIt": 2204,
+      "worksSpanned": 52,
+      "markers": [
+        "於=recipient-marker"
+      ],
+      "examples": [
+        {
+          "work": "analects",
+          "passageId": "7.9",
+          "text": "子食於有喪者之側，未嘗飽也。子於是日哭，則不歌。"
+        },
+        {
+          "work": "mencius",
+          "passageId": "2.23",
+          "text": "孟子對曰：「有。人不得，則非其上矣。不得而非其上者，非也；為民上，而不與民同樂者，亦非也。樂民之樂者，民亦樂其樂；憂民之"
+        }
+      ]
+    },
+    {
+      "gram": "所以",
+      "unreadPassagesContainingIt": 2140,
+      "worksSpanned": 56,
+      "markers": [
+        "以=theme-marker"
+      ],
+      "examples": [
+        {
+          "work": "analects",
+          "passageId": "5.22",
+          "text": "子在陳，曰：「歸與！歸與！吾黨之小子狂簡，斐然成章，不知所以裁之。」"
+        },
+        {
+          "work": "mencius",
+          "passageId": "1.37",
+          "text": "曰：「挾太山以超北海，語人曰：『我不能。』是誠不能也。為長者折枝，語人曰：『我不能。』是不為也，非不能也。故王之不王，非"
+        }
+      ]
+    },
+    {
+      "gram": "人之",
+      "unreadPassagesContainingIt": 2047,
+      "worksSpanned": 64,
+      "markers": [
+        "之=pronominal-slot"
+      ],
+      "examples": [
+        {
+          "work": "mencius",
+          "passageId": "1.37",
+          "text": "曰：「挾太山以超北海，語人曰：『我不能。』是誠不能也。為長者折枝，語人曰：『我不能。』是不為也，非不能也。故王之不王，非"
+        },
+        {
+          "work": "mencius",
+          "passageId": "2.16",
+          "text": "曰：「寡人之囿方四十里，民猶以為大，何也？」"
+        }
+      ]
+    },
+    {
+      "gram": "子曰",
+      "unreadPassagesContainingIt": 1949,
+      "worksSpanned": 40,
+      "markers": [
+        "曰=quotation"
+      ],
+      "examples": [
+        {
+          "work": "analects",
+          "passageId": "7.6",
+          "text": "子曰：『志於道，狎於德，依於仁，游於藝。』"
+        },
+        {
+          "work": "mencius",
+          "passageId": "2.23",
+          "text": "孟子對曰：「有。人不得，則非其上矣。不得而非其上者，非也；為民上，而不與民同樂者，亦非也。樂民之樂者，民亦樂其樂；憂民之"
+        }
+      ]
+    },
+    {
+      "gram": "之所",
+      "unreadPassagesContainingIt": 1945,
+      "worksSpanned": 55,
+      "markers": [
+        "之=pronominal-slot"
+      ],
+      "examples": [
+        {
+          "work": "mencius",
+          "passageId": "1.39",
+          "text": "曰：「王之所大欲，可得聞與？」"
+        },
+        {
+          "work": "mencius",
+          "passageId": "3.12",
+          "text": "曰：「有。北宮黝之養勇也，不膚橈，不目逃。思以一豪挫於人，若撻之於市朝。不受於褐寬博，亦不受於萬乘之君。視刺萬乘之君若刺"
+        }
+      ]
+    },
+    {
+      "gram": "書曰",
+      "unreadPassagesContainingIt": 1608,
+      "worksSpanned": 16,
+      "markers": [
+        "曰=quotation"
+      ],
+      "examples": [
+        {
+          "work": "laozi",
+          "passageId": "81.9",
+          "text": "跋\n晁說之跋\n王弼老子道德經二卷，真得老子之學歟，蓋嚴君平指歸之流也。其言仁義與禮，不能自用，必待道以用之，天地萬物各得"
+        },
+        {
+          "work": "xunzi",
+          "passageId": "9.4",
+          "text": "分均則不偏，埶齊則不壹，眾齊則不使。有天有地，而上下有差；明王始立，而處國有制。夫兩貴之不能相事，兩賤之不能相使，是天數"
+        }
+      ]
+    },
+    {
+      "gram": "可以",
+      "unreadPassagesContainingIt": 1574,
+      "worksSpanned": 60,
+      "markers": [
+        "以=theme-marker"
+      ],
+      "examples": [
+        {
+          "work": "mencius",
+          "passageId": "1.8",
+          "text": "曰：「王如知此，則無望民之多於鄰國也。不違農時，穀不可勝食也；數罟不入洿池，魚鼈不可勝食也；斧斤以時入山林，材木不可勝用"
+        },
+        {
+          "work": "mencius",
+          "passageId": "1.20",
+          "text": "曰：「德何如，則可以王矣？」"
+        }
+      ]
+    },
+    {
+      "gram": "子之",
+      "unreadPassagesContainingIt": 1462,
+      "worksSpanned": 56,
+      "markers": [
+        "之=pronominal-slot"
+      ],
+      "examples": [
+        {
+          "work": "analects",
+          "passageId": "5.16",
+          "text": "子謂子產：「有君子之道四焉：其行己也恭，其事上也敬，其養民也惠，其使民也義。」"
+        },
+        {
+          "work": "analects",
+          "passageId": "7.4",
+          "text": "子之燕居，申申如也，夭夭如也。"
+        }
+      ]
+    },
+    {
+      "gram": "謂之",
+      "unreadPassagesContainingIt": 1455,
+      "worksSpanned": 54,
+      "markers": [
+        "謂=speech-to",
+        "之=pronominal-slot"
+      ],
+      "examples": [
+        {
+          "work": "mencius",
+          "passageId": "2.23",
+          "text": "孟子對曰：「有。人不得，則非其上矣。不得而非其上者，非也；為民上，而不與民同樂者，亦非也。樂民之樂者，民亦樂其樂；憂民之"
+        },
+        {
+          "work": "mencius",
+          "passageId": "2.46",
+          "text": "曰：「賊仁者謂之『賊』，賊義者謂之『殘』。殘賊之人謂之『一夫』。聞誅一夫紂矣，未聞弒君也。」"
+        }
+      ]
+    },
+    {
+      "gram": "為之",
+      "unreadPassagesContainingIt": 1441,
+      "worksSpanned": 51,
+      "markers": [
+        "為=benefactive-or-copula",
+        "之=pronominal-slot"
+      ],
+      "examples": [
+        {
+          "work": "mencius",
+          "passageId": "1.45",
+          "text": "曰：「殆有甚焉。緣木求魚，雖不得魚，無後災；以若所為，求若所欲，盡心力而為之，後必有災。」"
+        },
+        {
+          "work": "mencius",
+          "passageId": "4.11",
+          "text": "曰：「豈謂是與？曾子曰：『晉楚之富，不可及也。彼以其富，我以吾仁；彼以其爵，我以吾義，吾何慊乎哉？』夫豈不義而曾子言之？"
+        }
+      ]
+    },
+    {
+      "gram": "詩曰",
+      "unreadPassagesContainingIt": 1390,
+      "worksSpanned": 21,
+      "markers": [
+        "曰=quotation"
+      ],
+      "examples": [
+        {
+          "work": "mencius",
+          "passageId": "2.23",
+          "text": "孟子對曰：「有。人不得，則非其上矣。不得而非其上者，非也；為民上，而不與民同樂者，亦非也。樂民之樂者，民亦樂其樂；憂民之"
+        },
+        {
+          "work": "mencius",
+          "passageId": "9.22",
+          "text": "曰：「是詩也，非是之謂也，勞於王事而不得養父母也。曰：『此莫非王事，我獨賢勞也。』故說詩者，不以文害辭，不以辭害志；以意"
+        }
+      ]
+    },
+    {
+      "gram": "之不",
+      "unreadPassagesContainingIt": 1381,
+      "worksSpanned": 61,
+      "markers": [
+        "之=pronominal-slot"
+      ],
+      "examples": [
+        {
+          "work": "mencius",
+          "passageId": "1.27",
+          "text": "曰：「是心足以王矣。百姓皆以王為愛也，臣固知王之不忍也。」"
+        },
+        {
+          "work": "mencius",
+          "passageId": "1.35",
+          "text": "「今恩足以及禽獸，而功不至於百姓者，獨何與？然則一羽之不舉，為不用力焉；輿薪之不見，為不用明焉；百姓之不見保，為不用恩焉"
+        }
+      ]
+    },
+    {
+      "gram": "是以",
+      "unreadPassagesContainingIt": 1336,
+      "worksSpanned": 49,
+      "markers": [
+        "以=theme-marker"
+      ],
+      "examples": [
+        {
+          "work": "mencius",
+          "passageId": "1.31",
+          "text": "曰：「無傷也，是乃仁術也，見牛未見羊也。君子之於禽獸也，見其生，不忍見其死；聞其聲，不忍食其肉。是以君子遠庖廚也。」"
+        },
+        {
+          "work": "mencius",
+          "passageId": "2.65",
+          "text": "曰：「或告寡人曰，『孟子之後喪逾前喪』，是以不往見也。」"
+        }
+      ]
+    },
+    {
+      "gram": "鼂氏曰",
+      "unreadPassagesContainingIt": 1313,
+      "worksSpanned": 1,
+      "markers": [
+        "曰=quotation"
+      ],
+      "examples": [
+        {
+          "work": "wenxian-tongkao",
+          "passageId": "88.27",
+          "text": "鼂氏曰：《上下經》魏尚書郎王弼輔嗣注；《繫辭》、《說卦》、《雜卦》、《序卦》，弼之門人韓康伯注；又載弼所作《略例》，通十"
+        },
+        {
+          "work": "wenxian-tongkao",
+          "passageId": "88.37",
+          "text": "鼂氏曰：唐國子祭酒孔穎達與顏師古、司馬才章、王恭、馬嘉運、趙乾葉、王談、於志寧等同撰，蘇德融、趙弘智覆審。序稱江南義疏有"
+        }
+      ]
+    },
+    {
+      "gram": "王之",
+      "unreadPassagesContainingIt": 1236,
+      "worksSpanned": 46,
+      "markers": [
+        "之=pronominal-slot"
+      ],
+      "examples": [
+        {
+          "work": "mencius",
+          "passageId": "1.27",
+          "text": "曰：「是心足以王矣。百姓皆以王為愛也，臣固知王之不忍也。」"
+        },
+        {
+          "work": "mencius",
+          "passageId": "1.35",
+          "text": "「今恩足以及禽獸，而功不至於百姓者，獨何與？然則一羽之不舉，為不用力焉；輿薪之不見，為不用明焉；百姓之不見保，為不用恩焉"
+        }
+      ]
+    },
+    {
+      "gram": "以其",
+      "unreadPassagesContainingIt": 1196,
+      "worksSpanned": 51,
+      "markers": [
+        "以=theme-marker"
+      ],
+      "examples": [
+        {
+          "work": "analects",
+          "passageId": "5.1",
+          "text": "子謂公冶長，「可妻也；雖在縲絏之中，非其罪也。」以其子妻之。"
+        },
+        {
+          "work": "analects",
+          "passageId": "5.2",
+          "text": "子謂南容，「邦有道，不廢；邦無道，免於刑戮。」以其兄之子妻之。"
+        }
+      ]
+    },
+    {
+      "gram": "之事",
+      "unreadPassagesContainingIt": 1182,
+      "worksSpanned": 52,
+      "markers": [
+        "之=pronominal-slot"
+      ],
+      "examples": [
+        {
+          "work": "mencius",
+          "passageId": "5.41",
+          "text": "曰：「百工之事，固不可耕且為也。」"
+        },
+        {
+          "work": "mencius",
+          "passageId": "5.42",
+          "text": "「然則治天下獨可耕且為與？有大人之事，有小人之事。且一人之身，而百工之所為備。如必自為而後用之，是率天下而路也。故曰：或"
+        }
+      ]
+    },
+    {
+      "gram": "之也",
+      "unreadPassagesContainingIt": 1162,
+      "worksSpanned": 40,
+      "markers": [
+        "之=pronominal-slot"
+      ],
+      "examples": [
+        {
+          "work": "mencius",
+          "passageId": "1.14",
+          "text": "曰：「庖有肥肉，廄有肥馬，民有饑色，野有餓莩；此率獸而食人也。獸相食，且人惡之；為民父母行政，不免於率獸而食人，惡在其為"
+        },
+        {
+          "work": "mencius",
+          "passageId": "1.51",
+          "text": "曰：「無恆產而有恆心者，惟士為能。若民，則無恆產，因無恆心。苟無恆心，放辟邪侈，無不為已。及陷於罪，然後從而刑之，是罔民"
+        }
+      ]
+    },
+    {
+      "gram": "下之",
+      "unreadPassagesContainingIt": 1111,
+      "worksSpanned": 47,
+      "markers": [
+        "之=pronominal-slot"
+      ],
+      "examples": [
+        {
+          "work": "mencius",
+          "passageId": "1.8",
+          "text": "曰：「王如知此，則無望民之多於鄰國也。不違農時，穀不可勝食也；數罟不入洿池，魚鼈不可勝食也；斧斤以時入山林，材木不可勝用"
+        },
+        {
+          "work": "mencius",
+          "passageId": "1.49",
+          "text": "曰：「然則小固不可以敵大，寡固不可以敵眾，弱固不可以敵強。海內之地，方千里者九，齊集有其一；以一服八，何以異於鄒敵楚哉？"
+        }
+      ]
+    },
+    {
+      "gram": "至於",
+      "unreadPassagesContainingIt": 1083,
+      "worksSpanned": 57,
+      "markers": [
+        "於=recipient-marker"
+      ],
+      "examples": [
+        {
+          "work": "analects",
+          "passageId": "7.13",
+          "text": "子在齊聞韶，三月不知肉味，曰：「不圖爲樂之至於斯也！」"
+        },
+        {
+          "work": "mencius",
+          "passageId": "1.35",
+          "text": "「今恩足以及禽獸，而功不至於百姓者，獨何與？然則一羽之不舉，為不用力焉；輿薪之不見，為不用明焉；百姓之不見保，為不用恩焉"
+        }
+      ]
+    },
+    {
+      "gram": "所謂",
+      "unreadPassagesContainingIt": 1070,
+      "worksSpanned": 45,
+      "markers": [
+        "謂=speech-to"
+      ],
+      "examples": [
+        {
+          "work": "mencius",
+          "passageId": "2.40",
+          "text": "孟子見齊宣王，曰：「所謂故國者，非謂有喬木之謂也，有世臣之謂也。王無親臣矣，昔者所進，今日不知其亡也。」"
+        },
+        {
+          "work": "mencius",
+          "passageId": "2.66",
+          "text": "曰：「何哉，君所謂逾者？前以士，後以大夫；前以三鼎，而後以五鼎與？」"
+        }
+      ]
+    },
+    {
+      "gram": "又曰",
+      "unreadPassagesContainingIt": 1057,
+      "worksSpanned": 23,
+      "markers": [
+        "曰=quotation"
+      ],
+      "examples": [
+        {
+          "work": "mencius",
+          "passageId": "3.15",
+          "text": "「既曰『志，至焉；氣，次焉』，又曰『持其志，無暴其氣』者，何也？」"
+        },
+        {
+          "work": "book-of-documents",
+          "passageId": "17.2",
+          "text": "伊尹既復政厥辟，將告歸，乃陳戒于德。曰：「嗚呼！天難諶，命靡常。常厥德，保厥位。厥德匪常，九有以亡。夏王弗克庸德，慢神虐"
+        }
+      ]
+    },
+    {
+      "gram": "傳曰",
+      "unreadPassagesContainingIt": 1057,
+      "worksSpanned": 13,
+      "markers": [
+        "曰=quotation"
+      ],
+      "examples": [
+        {
+          "work": "xunzi",
+          "passageId": "9.3",
+          "text": "凡聽：威嚴猛厲，而不好假道人，則下畏恐而不親，周閉而不竭。若是，則大事殆乎弛，小事殆乎遂。和解調通，好假道人，而無所凝止"
+        },
+        {
+          "work": "xunzi",
+          "passageId": "9.5",
+          "text": "馬駭輿，則君子不安輿；庶人駭政，則君子不安位。馬駭輿，則莫若靜之；庶人駭政，則莫若惠之。選賢良，舉篤敬，興孝弟，收孤寡，"
+        }
+      ]
+    },
+    {
+      "gram": "之以",
+      "unreadPassagesContainingIt": 1038,
+      "worksSpanned": 52,
+      "markers": [
+        "之=pronominal-slot",
+        "以=theme-marker"
+      ],
+      "examples": [
+        {
+          "work": "analects",
+          "passageId": "11.26",
+          "text": "子路率爾而對，曰：「千乘之國，攝乎大國之閒，加之以師旅，因之以饑饉，由也爲之，比及三年，可使有勇，且知方也。」夫子哂之。"
+        },
+        {
+          "work": "mencius",
+          "passageId": "1.8",
+          "text": "曰：「王如知此，則無望民之多於鄰國也。不違農時，穀不可勝食也；數罟不入洿池，魚鼈不可勝食也；斧斤以時入山林，材木不可勝用"
+        }
+      ]
+    },
+    {
+      "gram": "國之",
+      "unreadPassagesContainingIt": 1037,
+      "worksSpanned": 49,
+      "markers": [
+        "之=pronominal-slot"
+      ],
+      "examples": [
+        {
+          "work": "analects",
+          "passageId": "11.26",
+          "text": "子路率爾而對，曰：「千乘之國，攝乎大國之閒，加之以師旅，因之以饑饉，由也爲之，比及三年，可使有勇，且知方也。」夫子哂之。"
+        },
+        {
+          "work": "mencius",
+          "passageId": "2.17",
+          "text": "曰：「文王之囿方七十里，芻蕘者往焉，雉兔者往焉，與民同之。民以為小，不亦宜乎？臣始至於境，問國之大禁，然後敢入。臣聞郊關"
+        }
+      ]
+    },
+    {
+      "gram": "注曰",
+      "unreadPassagesContainingIt": 976,
+      "worksSpanned": 2,
+      "markers": [
+        "曰=quotation"
+      ],
+      "examples": [
+        {
+          "work": "wenxian-tongkao",
+          "passageId": "14.38",
+          "text": "東漢鄉置三老，掌教化，凡有孝子順孫、正女義婦，遜財救患，及學士為民法式者，皆扁表其門閭，以興善行。鄉置有秩、遊徼、三老。"
+        },
+        {
+          "work": "wenxian-tongkao",
+          "passageId": "17.22",
+          "text": "東漢郡有鹽官、鐵官者，隨事廣狹置令長及丞。本注曰：\"凡郡縣出鹽多者，置鹽官主鹽稅；出鐵多者，置鐵官主鼓鑄。\""
+        }
+      ]
+    }
+  ]
+}

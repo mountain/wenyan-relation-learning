@@ -1,0 +1,730 @@
+{
+  "schema": "wenyan.corpus-expansion.triage.v1",
+  "generatedAt": "2026-09-23T11:42:15.684Z",
+  "method": "exists -> route proposal (same order as tools/corpus/resolve-routes.mjs) -> frame-density sample under the CURRENT 7-construction reporting grammar. Density predicts how much the relation network grows per unit of work; it is measured, not assumed.",
+  "groups": {
+    "spanning-antiquity": [
+      {
+        "work": "資治通鑑",
+        "exists": true,
+        "resolvedTitle": "資治通鑑",
+        "licenseTags": [
+          "北宋作品"
+        ],
+        "route": "mainPageLinks",
+        "chapters": 294,
+        "density": {
+          "sampled": 4,
+          "passages": 409,
+          "readable": 88,
+          "rate": 0.2152,
+          "samplePages": [
+            "資治通鑑/卷001",
+            "資治通鑑/卷074"
+          ]
+        },
+        "status": "OK"
+      },
+      {
+        "work": "日知錄",
+        "exists": true,
+        "resolvedTitle": "日知錄",
+        "licenseTags": [
+          "明朝作品"
+        ],
+        "route": "mainPageLinks",
+        "chapters": 33,
+        "density": {
+          "sampled": 4,
+          "passages": 214,
+          "readable": 18,
+          "rate": 0.0841,
+          "samplePages": [
+            "日知錄/自序",
+            "日知錄/卷08"
+          ]
+        },
+        "status": "OK"
+      },
+      {
+        "work": "廿二史劄記",
+        "exists": true,
+        "resolvedTitle": "廿二史劄記",
+        "licenseTags": [
+          "PD-old"
+        ],
+        "route": "mainPageLinks",
+        "chapters": 38,
+        "density": {
+          "sampled": 4,
+          "passages": 569,
+          "readable": 1,
+          "rate": 0.0018,
+          "samplePages": [
+            "廿二史劄記/小引",
+            "廿二史劄記/卷09"
+          ]
+        },
+        "status": "OK"
+      },
+      {
+        "work": "通鑑紀事本末",
+        "exists": true,
+        "resolvedTitle": "通鑑紀事本末",
+        "licenseTags": [
+          "南宋作品"
+        ],
+        "route": "mainPageLinks",
+        "chapters": 42,
+        "density": {
+          "sampled": 4,
+          "passages": 1218,
+          "readable": 504,
+          "rate": 0.4138,
+          "samplePages": [
+            "通鑑紀事本末/第一卷",
+            "通鑑紀事本末/第十一卷"
+          ]
+        },
+        "status": "OK"
+      },
+      {
+        "work": "通典",
+        "exists": true,
+        "resolvedTitle": "通典",
+        "licenseTags": [
+          "PD-old"
+        ],
+        "route": "mainPageLinks",
+        "chapters": 200,
+        "density": {
+          "sampled": 4,
+          "passages": 126,
+          "readable": 58,
+          "rate": 0.4603,
+          "samplePages": [
+            "通典/卷001",
+            "通典/卷051"
+          ]
+        },
+        "status": "OK"
+      }
+    ],
+    "practical-technology": [
+      {
+        "work": "齊民要術",
+        "exists": true,
+        "resolvedTitle": "齊民要術",
+        "licenseTags": [
+          "PD-old"
+        ],
+        "route": "mainPageLinks",
+        "chapters": 14,
+        "density": {
+          "sampled": 4,
+          "passages": 224,
+          "readable": 45,
+          "rate": 0.2009,
+          "samplePages": [
+            "齊民要術/序",
+            "齊民要術/卷第一"
+          ]
+        },
+        "status": "OK"
+      },
+      {
+        "work": "夢溪筆談",
+        "exists": true,
+        "resolvedTitle": "夢溪筆談",
+        "licenseTags": [
+          "北宋作品"
+        ],
+        "route": "mainPageLinks",
+        "chapters": 29,
+        "density": {
+          "sampled": 4,
+          "passages": 76,
+          "readable": 17,
+          "rate": 0.2237,
+          "samplePages": [
+            "夢溪筆談/序",
+            "夢溪筆談/卷07"
+          ]
+        },
+        "status": "OK"
+      },
+      {
+        "work": "農政全書",
+        "exists": true,
+        "resolvedTitle": "農政全書",
+        "licenseTags": [
+          "PD-old"
+        ],
+        "route": "mainPageLinks",
+        "chapters": 60,
+        "density": {
+          "sampled": 4,
+          "passages": 267,
+          "readable": 16,
+          "rate": 0.0599,
+          "samplePages": [
+            "農政全書/卷01",
+            "農政全書/卷16"
+          ]
+        },
+        "status": "OK"
+      },
+      {
+        "work": "天工開物",
+        "exists": true,
+        "resolvedTitle": "天工開物",
+        "licenseTags": [
+          "明朝作品"
+        ],
+        "route": "mainPageLinks",
+        "chapters": 157,
+        "density": {
+          "sampled": 4,
+          "passages": 19,
+          "readable": 0,
+          "rate": 0,
+          "samplePages": [
+            "天工開物/自序",
+            "天工開物/結花本"
+          ]
+        },
+        "status": "OK"
+      },
+      {
+        "work": "營造法式",
+        "exists": true,
+        "resolvedTitle": "營造法式",
+        "licenseTags": [
+          "北宋作品"
+        ],
+        "route": "mainPageLinks",
+        "chapters": 38,
+        "density": {
+          "sampled": 4,
+          "passages": 233,
+          "readable": 0,
+          "rate": 0,
+          "samplePages": [
+            "營造法式/序",
+            "營造法式/第六卷"
+          ]
+        },
+        "status": "OK"
+      },
+      {
+        "work": "洗冤集錄",
+        "exists": true,
+        "resolvedTitle": "洗冤集錄",
+        "licenseTags": [
+          "PD-old"
+        ],
+        "route": "mainPageLinks",
+        "chapters": 5,
+        "density": {
+          "sampled": 4,
+          "passages": 117,
+          "readable": 2,
+          "rate": 0.0171,
+          "samplePages": [
+            "洗冤集錄/卷1",
+            "洗冤集錄/卷2"
+          ]
+        },
+        "status": "OK"
+      },
+      {
+        "work": "武經總要",
+        "exists": true,
+        "resolvedTitle": "武經總要",
+        "licenseTags": [
+          "北宋作品"
+        ],
+        "route": "mainPageLinks",
+        "chapters": 45,
+        "density": {
+          "sampled": 4,
+          "passages": 256,
+          "readable": 50,
+          "rate": 0.1953,
+          "samplePages": [
+            "武經總要/序",
+            "武經總要/前集/卷十一"
+          ]
+        },
+        "status": "OK"
+      },
+      {
+        "work": "本草綱目",
+        "exists": true,
+        "resolvedTitle": "本草綱目",
+        "licenseTags": [
+          "明朝作品"
+        ],
+        "route": "mainPageLinks",
+        "chapters": 65,
+        "density": {
+          "sampled": 4,
+          "passages": 1794,
+          "readable": 0,
+          "rate": 0,
+          "samplePages": [
+            "本草綱目/序",
+            "本草綱目/草之三"
+          ]
+        },
+        "status": "OK"
+      },
+      {
+        "work": "農桑輯要",
+        "exists": true,
+        "resolvedTitle": "農桑輯要",
+        "licenseTags": [
+          "PD-old"
+        ],
+        "route": "mainPageLinks",
+        "chapters": 10,
+        "density": {
+          "sampled": 4,
+          "passages": 207,
+          "readable": 12,
+          "rate": 0.058,
+          "samplePages": [
+            "農桑輯要/序",
+            "農桑輯要/卷之一"
+          ]
+        },
+        "status": "OK"
+      },
+      {
+        "work": "王禎農書",
+        "exists": true,
+        "resolvedTitle": "王禎農書",
+        "licenseTags": [
+          "PD-old"
+        ],
+        "route": "mainPageLinks",
+        "chapters": 22,
+        "density": {
+          "sampled": 4,
+          "passages": 201,
+          "readable": 0,
+          "rate": 0,
+          "samplePages": [
+            "王禎農書/卷一",
+            "王禎農書/卷六"
+          ]
+        },
+        "status": "OK"
+      },
+      {
+        "work": "茶經",
+        "exists": true,
+        "resolvedTitle": "茶經",
+        "licenseTags": [
+          "唐朝作品"
+        ],
+        "route": "mainPageLinks",
+        "chapters": 13,
+        "density": {
+          "sampled": 4,
+          "passages": 107,
+          "readable": 1,
+          "rate": 0.0093,
+          "samplePages": [
+            "茶經/卷上",
+            "茶經/三之造"
+          ]
+        },
+        "status": "OK"
+      },
+      {
+        "work": "北山酒經",
+        "exists": true,
+        "resolvedTitle": "北山酒經",
+        "licenseTags": [
+          "北宋作品"
+        ],
+        "route": "single",
+        "chapters": 1,
+        "density": {
+          "sampled": 1,
+          "passages": 84,
+          "readable": 2,
+          "rate": 0.0238,
+          "samplePages": [
+            "北山酒經"
+          ]
+        },
+        "status": "OK"
+      },
+      {
+        "work": "耒耜經",
+        "exists": true,
+        "resolvedTitle": "耒耜經",
+        "licenseTags": [
+          "唐朝作品"
+        ],
+        "route": "NEEDS-MANUAL",
+        "chapters": 0,
+        "status": "OK"
+      },
+      {
+        "work": "便民圖纂",
+        "exists": false,
+        "status": "MISSING"
+      },
+      {
+        "work": "九章算術",
+        "exists": true,
+        "resolvedTitle": "九章算術",
+        "licenseTags": [
+          "PD-old"
+        ],
+        "route": "single",
+        "chapters": 1,
+        "density": {
+          "sampled": 1,
+          "passages": 724,
+          "readable": 1,
+          "rate": 0.0014,
+          "samplePages": [
+            "九章算術"
+          ]
+        },
+        "status": "OK"
+      },
+      {
+        "work": "數書九章",
+        "exists": false,
+        "status": "MISSING"
+      },
+      {
+        "work": "傷寒論",
+        "exists": true,
+        "resolvedTitle": "傷寒論",
+        "licenseTags": [
+          "PD-old"
+        ],
+        "route": "single",
+        "chapters": 1,
+        "density": {
+          "sampled": 1,
+          "passages": 751,
+          "readable": 0,
+          "rate": 0,
+          "samplePages": [
+            "傷寒論"
+          ]
+        },
+        "status": "OK"
+      },
+      {
+        "work": "黃帝內經",
+        "exists": true,
+        "resolvedTitle": "黃帝內經",
+        "licenseTags": [
+          "先秦作品"
+        ],
+        "route": "mainPageLinks",
+        "chapters": 36,
+        "density": {
+          "sampled": 4,
+          "passages": 279,
+          "readable": 6,
+          "rate": 0.0215,
+          "samplePages": [
+            "黃帝內經/素問第一卷",
+            "黃帝內經/素問第十卷"
+          ]
+        },
+        "status": "OK"
+      }
+    ],
+    "urban-and-market": [
+      {
+        "work": "金瓶梅",
+        "exists": true,
+        "resolvedTitle": "金瓶梅",
+        "licenseTags": [],
+        "route": "mainPageLinks",
+        "chapters": 101,
+        "density": {
+          "sampled": 4,
+          "passages": 61,
+          "readable": 1,
+          "rate": 0.0164,
+          "samplePages": [
+            "金瓶梅/序",
+            "金瓶梅/第25回"
+          ]
+        },
+        "status": "OK"
+      },
+      {
+        "work": "喻世明言",
+        "exists": true,
+        "resolvedTitle": "喻世明言",
+        "licenseTags": [
+          "PD-old"
+        ],
+        "route": "mainPageLinks",
+        "chapters": 41,
+        "density": {
+          "sampled": 4,
+          "passages": 180,
+          "readable": 14,
+          "rate": 0.0778,
+          "samplePages": [
+            "喻世明言/序",
+            "喻世明言/第10卷"
+          ]
+        },
+        "status": "OK"
+      },
+      {
+        "work": "警世通言",
+        "exists": true,
+        "resolvedTitle": "警世通言",
+        "licenseTags": [
+          "PD-old"
+        ],
+        "route": "mainPageLinks",
+        "chapters": 41,
+        "density": {
+          "sampled": 4,
+          "passages": 28,
+          "readable": 2,
+          "rate": 0.0714,
+          "samplePages": [
+            "警世通言/序",
+            "警世通言/第05卷"
+          ]
+        },
+        "status": "OK"
+      },
+      {
+        "work": "醒世恆言",
+        "exists": true,
+        "resolvedTitle": "醒世恆言",
+        "licenseTags": [
+          "PD-old"
+        ],
+        "route": "mainPageLinks",
+        "chapters": 41,
+        "density": {
+          "sampled": 4,
+          "passages": 314,
+          "readable": 0,
+          "rate": 0,
+          "samplePages": [
+            "醒世恆言/序",
+            "醒世恆言/第10卷"
+          ]
+        },
+        "status": "OK"
+      },
+      {
+        "work": "初刻拍案驚奇",
+        "exists": true,
+        "resolvedTitle": "初刻拍案驚奇",
+        "licenseTags": [
+          "明朝作品"
+        ],
+        "route": "mainPageLinks",
+        "chapters": 40,
+        "density": {
+          "sampled": 4,
+          "passages": 224,
+          "readable": 0,
+          "rate": 0,
+          "samplePages": [
+            "初刻拍案驚奇/卷一",
+            "初刻拍案驚奇/卷十一"
+          ]
+        },
+        "status": "OK"
+      },
+      {
+        "work": "二刻拍案驚奇",
+        "exists": true,
+        "resolvedTitle": "二刻拍案驚奇",
+        "licenseTags": [
+          "明朝作品"
+        ],
+        "route": "mainPageLinks",
+        "chapters": 41,
+        "density": {
+          "sampled": 4,
+          "passages": 168,
+          "readable": 4,
+          "rate": 0.0238,
+          "samplePages": [
+            "二刻拍案驚奇/00",
+            "二刻拍案驚奇/10"
+          ]
+        },
+        "status": "OK"
+      },
+      {
+        "work": "儒林外史",
+        "exists": true,
+        "resolvedTitle": "儒林外史",
+        "licenseTags": [
+          "PD-old"
+        ],
+        "route": "mainPageLinks",
+        "chapters": 56,
+        "density": {
+          "sampled": 4,
+          "passages": 57,
+          "readable": 0,
+          "rate": 0,
+          "samplePages": [
+            "儒林外史/第01回",
+            "儒林外史/第15回"
+          ]
+        },
+        "status": "OK"
+      },
+      {
+        "work": "紅樓夢",
+        "exists": true,
+        "resolvedTitle": "紅樓夢",
+        "licenseTags": [
+          "清朝作品"
+        ],
+        "route": "mainPageLinks",
+        "chapters": 120,
+        "density": {
+          "sampled": 4,
+          "passages": 69,
+          "readable": 0,
+          "rate": 0,
+          "samplePages": [
+            "紅樓夢/第001回",
+            "紅樓夢/第031回"
+          ]
+        },
+        "status": "OK"
+      },
+      {
+        "work": "水滸傳",
+        "exists": true,
+        "resolvedTitle": "水滸傳",
+        "licenseTags": [],
+        "route": "NEEDS-MANUAL",
+        "chapters": 0,
+        "status": "OK"
+      },
+      {
+        "work": "西遊記",
+        "exists": true,
+        "resolvedTitle": "西遊記",
+        "licenseTags": [],
+        "route": "mainPageLinks",
+        "chapters": 101,
+        "density": {
+          "sampled": 4,
+          "passages": 116,
+          "readable": 2,
+          "rate": 0.0172,
+          "samplePages": [
+            "西遊記/第001回",
+            "西遊記/第026回"
+          ]
+        },
+        "status": "OK"
+      },
+      {
+        "work": "東京夢華錄",
+        "exists": true,
+        "resolvedTitle": "東京夢華錄",
+        "licenseTags": [
+          "南宋作品"
+        ],
+        "route": "mainPageLinks",
+        "chapters": 10,
+        "density": {
+          "sampled": 4,
+          "passages": 13,
+          "readable": 0,
+          "rate": 0,
+          "samplePages": [
+            "東京夢華錄/卷一",
+            "東京夢華錄/卷三"
+          ]
+        },
+        "status": "OK"
+      },
+      {
+        "work": "武林舊事",
+        "exists": true,
+        "resolvedTitle": "武林舊事",
+        "licenseTags": [
+          "PD-old"
+        ],
+        "route": "mainPageLinks",
+        "chapters": 11,
+        "density": {
+          "sampled": 4,
+          "passages": 21,
+          "readable": 0,
+          "rate": 0,
+          "samplePages": [
+            "武林舊事/序",
+            "武林舊事/卷二"
+          ]
+        },
+        "status": "OK"
+      },
+      {
+        "work": "夢粱錄",
+        "exists": true,
+        "resolvedTitle": "夢粱錄",
+        "licenseTags": [
+          "南宋作品"
+        ],
+        "route": "mainPageLinks",
+        "chapters": 21,
+        "density": {
+          "sampled": 4,
+          "passages": 45,
+          "readable": 11,
+          "rate": 0.2444,
+          "samplePages": [
+            "夢粱錄/序",
+            "夢粱錄/卷05"
+          ]
+        },
+        "status": "OK"
+      },
+      {
+        "work": "揚州畫舫錄",
+        "exists": true,
+        "resolvedTitle": "揚州畫舫錄",
+        "licenseTags": [
+          "清朝作品"
+        ],
+        "route": "mainPageLinks",
+        "chapters": 21,
+        "density": {
+          "sampled": 4,
+          "passages": 201,
+          "readable": 9,
+          "rate": 0.0448,
+          "samplePages": [
+            "揚州畫舫錄/袁枚序",
+            "揚州畫舫錄/03"
+          ]
+        },
+        "status": "OK"
+      }
+    ]
+  },
+  "notes": []
+}

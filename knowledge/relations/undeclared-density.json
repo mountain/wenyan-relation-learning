@@ -1,6 +1,6 @@
 {
   "schema": "wenyan.relations.undeclared-density.v1",
-  "generatedAt": "2026-09-23T12:22:53.420Z",
+  "generatedAt": "2026-09-23T12:29:23.771Z",
   "why": "Density under the current grammar ranks the already-read books first, which is the wrong order for acquisition. This measures the complement: passages the declared CANDIDATES would read.",
   "candidates": [
     {
@@ -60,9 +60,9 @@
     }
   ],
   "scope": {
-    "works": 99,
-    "passages": 159248,
-    "readable": 21688
+    "works": 106,
+    "passages": 166069,
+    "readable": 22195
   },
   "perWork": [
     {
@@ -574,6 +574,25 @@
       }
     },
     {
+      "work": "六祖壇經",
+      "group": null,
+      "passages": 630,
+      "readable": 177,
+      "density": 0.281,
+      "undeclared": 109,
+      "undeclaredDensity": 0.173,
+      "perCandidate": {
+        "yue-noquote": 95,
+        "zhe-ye": 7,
+        "yi-wei": 6,
+        "ri-yong-shu": 5,
+        "ruo-ze": 3,
+        "yi-yue": 2,
+        "shao-zhi": 1,
+        "qi-fa": 1
+      }
+    },
+    {
       "work": "冥報記",
       "group": null,
       "passages": 232,
@@ -833,6 +852,43 @@
       }
     },
     {
+      "work": "夢粱錄",
+      "group": "urban-and-market",
+      "passages": 194,
+      "readable": 32,
+      "density": 0.1649,
+      "undeclared": 59,
+      "undeclaredDensity": 0.3041,
+      "perCandidate": {
+        "ri-yong-shu": 26,
+        "yi-wei": 21,
+        "shao-zhi": 10,
+        "yue-noquote": 9,
+        "zhe-ye": 6,
+        "ruo-ze": 6,
+        "fan-zhe": 3,
+        "yi-yue": 2,
+        "shang-yue": 1
+      }
+    },
+    {
+      "work": "大唐西域記",
+      "group": null,
+      "passages": 839,
+      "readable": 145,
+      "density": 0.1728,
+      "undeclared": 80,
+      "undeclaredDensity": 0.0954,
+      "perCandidate": {
+        "yue-noquote": 31,
+        "ri-yong-shu": 19,
+        "shao-zhi": 17,
+        "zhe-ye": 10,
+        "yi-yue": 5,
+        "yi-wei": 4
+      }
+    },
+    {
       "work": "大明奇俠傳",
       "group": null,
       "passages": 1183,
@@ -1013,6 +1069,28 @@
       }
     },
     {
+      "work": "揚州畫舫錄",
+      "group": "urban-and-market",
+      "passages": 1154,
+      "readable": 64,
+      "density": 0.0555,
+      "undeclared": 433,
+      "undeclaredDensity": 0.3752,
+      "perCandidate": {
+        "yue-noquote": 267,
+        "yi-wei": 140,
+        "ri-yong-shu": 37,
+        "shao-zhi": 32,
+        "zhe-ye": 12,
+        "fan-zhe": 11,
+        "yi-yue": 10,
+        "fan-jie": 10,
+        "qi-fa": 9,
+        "ruo-ze": 8,
+        "shang-yue": 1
+      }
+    },
+    {
       "work": "搜神記",
       "group": null,
       "passages": 465,
@@ -1149,6 +1227,25 @@
       }
     },
     {
+      "work": "東京夢華錄",
+      "group": "urban-and-market",
+      "passages": 85,
+      "readable": 3,
+      "density": 0.0353,
+      "undeclared": 34,
+      "undeclaredDensity": 0.4,
+      "perCandidate": {
+        "ri-yong-shu": 23,
+        "yi-wei": 8,
+        "shao-zhi": 3,
+        "ruo-ze": 1,
+        "fan-zhe": 1,
+        "zhe-ye": 1,
+        "yue-noquote": 1,
+        "fan-jie": 1
+      }
+    },
+    {
       "work": "枕中記",
       "group": null,
       "passages": 6,
@@ -1169,6 +1266,24 @@
       "perCandidate": {
         "yue-noquote": 22,
         "shao-zhi": 6
+      }
+    },
+    {
+      "work": "武林舊事",
+      "group": "urban-and-market",
+      "passages": 1381,
+      "readable": 15,
+      "density": 0.0109,
+      "undeclared": 65,
+      "undeclaredDensity": 0.0471,
+      "perCandidate": {
+        "yue-noquote": 34,
+        "ri-yong-shu": 22,
+        "yi-wei": 15,
+        "shao-zhi": 5,
+        "ruo-ze": 2,
+        "qi-fa": 1,
+        "shang-yue": 1
       }
     },
     {
@@ -1505,6 +1620,23 @@
         "ri-yong-shu": 4,
         "fan-zhe": 2,
         "ruo-ze": 2
+      }
+    },
+    {
+      "work": "西遊記",
+      "group": "urban-and-market",
+      "passages": 2538,
+      "readable": 71,
+      "density": 0.028,
+      "undeclared": 317,
+      "undeclaredDensity": 0.1249,
+      "perCandidate": {
+        "yue-noquote": 193,
+        "ri-yong-shu": 61,
+        "yi-wei": 30,
+        "shao-zhi": 29,
+        "zhe-ye": 22,
+        "fan-zhe": 5
       }
     },
     {
@@ -1847,6 +1979,12 @@
         "rate": 0.13
       },
       {
+        "work": "揚州畫舫錄",
+        "undeclared": 433,
+        "of": 1154,
+        "rate": 0.3752
+      },
+      {
         "work": "九章算術",
         "undeclared": 428,
         "of": 804,
@@ -1859,16 +1997,10 @@
         "rate": 0.1434
       },
       {
-        "work": "醒世恆言",
-        "undeclared": 277,
-        "of": 3140,
-        "rate": 0.0882
-      },
-      {
-        "work": "book-of-rites",
-        "undeclared": 256,
-        "of": 1332,
-        "rate": 0.1922
+        "work": "西遊記",
+        "undeclared": 317,
+        "of": 2538,
+        "rate": 0.1249
       }
     ],
     "byRateMin300Passages": [
@@ -1921,6 +2053,12 @@
         "density": 0.0093
       },
       {
+        "work": "揚州畫舫錄",
+        "rate": 0.3752,
+        "undeclared": 433,
+        "density": 0.0555
+      },
+      {
         "work": "夢溪筆談",
         "rate": 0.375,
         "undeclared": 225,
@@ -1955,12 +2093,6 @@
         "rate": 0.2833,
         "undeclared": 219,
         "density": 0
-      },
-      {
-        "work": "廣異記",
-        "rate": 0.2787,
-        "undeclared": 85,
-        "density": 0.6033
       }
     ],
     "gapDensity": [
@@ -2013,6 +2145,12 @@
         "undeclaredDensity": 0.4927
       },
       {
+        "work": "揚州畫舫錄",
+        "gap": 0.3197,
+        "density": 0.0555,
+        "undeclaredDensity": 0.3752
+      },
+      {
         "work": "本草綱目",
         "gap": 0.3176,
         "density": 0.0003,
@@ -2047,12 +2185,6 @@
         "gap": 0.1677,
         "density": 0.0589,
         "undeclaredDensity": 0.2266
-      },
-      {
-        "work": "山海經",
-        "gap": 0.1476,
-        "density": 0.0114,
-        "undeclaredDensity": 0.159
       }
     ]
   },
@@ -2085,6 +2217,13 @@
         "group": "practical-technology",
         "status": "MISSING",
         "chapters": null,
+        "sampledDensity": null
+      },
+      {
+        "work": "水滸傳",
+        "group": "urban-and-market",
+        "status": "OK",
+        "chapters": 0,
         "sampledDensity": null
       }
     ],

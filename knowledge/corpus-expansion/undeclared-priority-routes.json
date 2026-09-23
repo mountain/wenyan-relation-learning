@@ -1,0 +1,117 @@
+{
+  "schema": "wenyan.corpus-expansion.routes.v1",
+  "routes": {
+    "藝文類聚": {
+      "zh": "藝文類聚",
+      "tradition": "philosophers",
+      "genre": "類書",
+      "resolvedTitle": "藝文類聚",
+      "licenseTags": [
+        "PD-old"
+      ],
+      "route": "mainPageLinks",
+      "chapters": 100,
+      "status": "OK"
+    },
+    "初學記": {
+      "zh": "初學記",
+      "tradition": "philosophers",
+      "genre": "類書",
+      "resolvedTitle": "初學記",
+      "licenseTags": [
+        "唐朝作品"
+      ],
+      "route": "mainPageLinks",
+      "chapters": 31,
+      "status": "OK"
+    },
+    "釋名": {
+      "zh": "釋名",
+      "tradition": "philosophers",
+      "genre": "字書",
+      "resolvedTitle": "釋名",
+      "licenseTags": [
+        "東漢作品"
+      ],
+      "route": "mainPageLinks",
+      "chapters": 8,
+      "status": "OK"
+    },
+    "說文解字": {
+      "zh": "說文解字",
+      "tradition": "philosophers",
+      "genre": "字書",
+      "resolvedTitle": "說文解字",
+      "licenseTags": [
+        "東漢作品"
+      ],
+      "route": "mainPageLinks",
+      "chapters": 15,
+      "status": "OK"
+    },
+    "玉篇": {
+      "zh": "玉篇",
+      "tradition": "philosophers",
+      "genre": "字書",
+      "resolvedTitle": "玉篇 (四庫全書本)",
+      "licenseTags": [
+        "PD-old"
+      ],
+      "route": "mainPageLinks",
+      "chapters": 31,
+      "status": "OK"
+    },
+    "通典": {
+      "zh": "通典",
+      "tradition": "historical",
+      "genre": "政書",
+      "resolvedTitle": "通典",
+      "licenseTags": [
+        "PD-old"
+      ],
+      "route": "mainPageLinks",
+      "chapters": 200,
+      "status": "OK"
+    },
+    "千金要方": {
+      "zh": "千金要方",
+      "tradition": "philosophers",
+      "genre": "醫方",
+      "status": "MISSING"
+    },
+    "神農本草經": {
+      "zh": "神農本草經",
+      "tradition": "philosophers",
+      "genre": "醫方",
+      "resolvedTitle": "神農本草經",
+      "licenseTags": [
+        "PD-old"
+      ],
+      "route": "single",
+      "chapters": 1,
+      "status": "OK"
+    },
+    "周髀算經": {
+      "zh": "周髀算經",
+      "tradition": "philosophers",
+      "genre": "算經",
+      "resolvedTitle": "周髀算經",
+      "licenseTags": [
+        "PD-old"
+      ],
+      "route": "single",
+      "chapters": 1,
+      "status": "OK"
+    },
+    "孫子算經": {
+      "zh": "孫子算經",
+      "tradition": "philosophers",
+      "genre": "算經",
+      "resolvedTitle": "孫子算經",
+      "licenseTags": [],
+      "route": "single",
+      "chapters": 1,
+      "status": "OK"
+    }
+  }
+}

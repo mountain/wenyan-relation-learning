@@ -1,11 +1,11 @@
 {
   "schema": "wenyan.grammar.density.v1",
-  "generatedAt": "2026-09-23T12:02:17.630Z",
+  "generatedAt": "2026-09-23T12:29:19.113Z",
   "measuredUnder": {
     "grammar": "wenyan.relations.reporting.v1",
-    "measurementGeneratedAt": "2026-09-23T12:01:46.117Z",
-    "corpusPassages": 81575,
-    "corpusRate": 0.246571
+    "measurementGeneratedAt": "2026-09-23T12:29:18.880Z",
+    "corpusPassages": 166317,
+    "corpusRate": 0.13345
   },
   "caveats": [
     "Density is grammar-dependent: it is only comparable with figures measured under the same grammar.",
@@ -260,18 +260,18 @@
       "density": 0.4976
     },
     {
+      "id": "sanguozhi",
+      "zh": "三國志",
+      "passages": 2309,
+      "readable": 941,
+      "density": 0.4075
+    },
+    {
       "id": "夷堅志",
       "zh": "夷堅志",
       "passages": 4755,
       "readable": 1920,
       "density": 0.4038
-    },
-    {
-      "id": "sanguozhi",
-      "zh": "三國志",
-      "passages": 2309,
-      "readable": 932,
-      "density": 0.4036
     },
     {
       "id": "獨異志",
@@ -319,8 +319,8 @@
       "id": "xunzi",
       "zh": "荀子",
       "passages": 481,
-      "readable": 155,
-      "density": 0.3222
+      "readable": 156,
+      "density": 0.3243
     },
     {
       "id": "book-of-rites",
@@ -344,6 +344,13 @@
       "density": 0.2823
     },
     {
+      "id": "六祖壇經",
+      "zh": "六祖壇經",
+      "passages": 630,
+      "readable": 177,
+      "density": 0.281
+    },
+    {
       "id": "集異記",
       "zh": "集異記",
       "passages": 11,
@@ -362,8 +369,7 @@
       "zh": "夢溪筆談",
       "passages": 601,
       "readable": 158,
-      "density": 0.2629,
-      "unmanifested": true
+      "density": 0.2629
     },
     {
       "id": "異苑",
@@ -401,6 +407,13 @@
       "density": 0.2125
     },
     {
+      "id": "大唐西域記",
+      "zh": "大唐西域記",
+      "passages": 839,
+      "readable": 145,
+      "density": 0.1728
+    },
+    {
       "id": "談藪",
       "zh": "談藪",
       "passages": 79,
@@ -415,6 +428,27 @@
       "density": 0.1634
     },
     {
+      "id": "王禎農書",
+      "zh": "王禎農書",
+      "passages": 1295,
+      "readable": 207,
+      "density": 0.1598
+    },
+    {
+      "id": "夢粱錄",
+      "zh": "夢粱錄",
+      "passages": 202,
+      "readable": 32,
+      "density": 0.1584
+    },
+    {
+      "id": "武經總要",
+      "zh": "武經總要",
+      "passages": 4270,
+      "readable": 651,
+      "density": 0.1525
+    },
+    {
       "id": "續夷堅志",
       "zh": "續夷堅志",
       "passages": 294,
@@ -425,8 +459,8 @@
       "id": "古文觀止",
       "zh": "古文觀止",
       "passages": 863,
-      "readable": 115,
-      "density": 0.1333
+      "readable": 116,
+      "density": 0.1344
     },
     {
       "id": "zuozhuan",
@@ -450,12 +484,53 @@
       "density": 0.0732
     },
     {
+      "id": "警世通言",
+      "zh": "警世通言",
+      "passages": 804,
+      "readable": 54,
+      "density": 0.0672
+    },
+    {
+      "id": "農桑輯要",
+      "zh": "農桑輯要",
+      "passages": 984,
+      "readable": 58,
+      "density": 0.0589
+    },
+    {
       "id": "農政全書",
       "zh": "農政全書",
       "passages": 3319,
       "readable": 189,
-      "density": 0.0569,
-      "unmanifested": true
+      "density": 0.0569
+    },
+    {
+      "id": "揚州畫舫錄",
+      "zh": "揚州畫舫錄",
+      "passages": 1160,
+      "readable": 64,
+      "density": 0.0552
+    },
+    {
+      "id": "喻世明言",
+      "zh": "喻世明言",
+      "passages": 2423,
+      "readable": 130,
+      "density": 0.0537
+    },
+    {
+      "id": "茶經",
+      "zh": "茶經",
+      "passages": 270,
+      "readable": 10,
+      "density": 0.037
+    },
+    {
+      "id": "東京夢華錄",
+      "zh": "東京夢華錄",
+      "passages": 86,
+      "readable": 3,
+      "density": 0.0349
     },
     {
       "id": "gongyang",
@@ -472,6 +547,20 @@
       "density": 0.0296
     },
     {
+      "id": "西遊記",
+      "zh": "西遊記",
+      "passages": 2539,
+      "readable": 71,
+      "density": 0.028
+    },
+    {
+      "id": "醒世恆言",
+      "zh": "醒世恆言",
+      "passages": 3140,
+      "readable": 59,
+      "density": 0.0188
+    },
+    {
       "id": "春秋穀梁傳",
       "zh": "春秋穀梁傳",
       "passages": 1873,
@@ -479,10 +568,24 @@
       "density": 0.0176
     },
     {
+      "id": "洗冤集錄",
+      "zh": "洗冤集錄",
+      "passages": 172,
+      "readable": 3,
+      "density": 0.0174
+    },
+    {
       "id": "楚辭",
       "zh": "楚辭",
       "passages": 191,
       "readable": 3,
+      "density": 0.0157
+    },
+    {
+      "id": "北山酒經",
+      "zh": "北山酒經",
+      "passages": 127,
+      "readable": 2,
       "density": 0.0157
     },
     {
@@ -500,6 +603,13 @@
       "density": 0.0114
     },
     {
+      "id": "武林舊事",
+      "zh": "武林舊事",
+      "passages": 1385,
+      "readable": 15,
+      "density": 0.0108
+    },
+    {
       "id": "zhouyi",
       "zh": "周易",
       "passages": 324,
@@ -511,8 +621,7 @@
       "zh": "天工開物",
       "passages": 449,
       "readable": 3,
-      "density": 0.0067,
-      "unmanifested": true
+      "density": 0.0067
     },
     {
       "id": "周禮",
@@ -522,6 +631,20 @@
       "density": 0.0046
     },
     {
+      "id": "黃帝內經",
+      "zh": "黃帝內經",
+      "passages": 2962,
+      "readable": 7,
+      "density": 0.0024
+    },
+    {
+      "id": "金瓶梅",
+      "zh": "金瓶梅",
+      "passages": 2515,
+      "readable": 6,
+      "density": 0.0024
+    },
+    {
       "id": "laozi",
       "zh": "老子",
       "passages": 434,
@@ -529,11 +652,46 @@
       "density": 0.0023
     },
     {
+      "id": "初刻拍案驚奇",
+      "zh": "初刻拍案驚奇",
+      "passages": 1872,
+      "readable": 4,
+      "density": 0.0021
+    },
+    {
+      "id": "二刻拍案驚奇",
+      "zh": "二刻拍案驚奇",
+      "passages": 2678,
+      "readable": 5,
+      "density": 0.0019
+    },
+    {
       "id": "classic-of-poetry",
       "zh": "詩經",
       "passages": 663,
       "readable": 1,
       "density": 0.0015
+    },
+    {
+      "id": "九章算術",
+      "zh": "九章算術",
+      "passages": 805,
+      "readable": 1,
+      "density": 0.0012
+    },
+    {
+      "id": "紅樓夢",
+      "zh": "紅樓夢",
+      "passages": 2843,
+      "readable": 3,
+      "density": 0.0011
+    },
+    {
+      "id": "本草綱目",
+      "zh": "本草綱目",
+      "passages": 42296,
+      "readable": 13,
+      "density": 0.0003
     },
     {
       "id": "大明奇俠傳",
@@ -576,13 +734,30 @@
       "passages": 329,
       "readable": 0,
       "density": 0
+    },
+    {
+      "id": "營造法式",
+      "zh": "營造法式",
+      "passages": 2600,
+      "readable": 0,
+      "density": 0
+    },
+    {
+      "id": "傷寒論",
+      "zh": "傷寒論",
+      "passages": 773,
+      "readable": 0,
+      "density": 0
+    },
+    {
+      "id": "儒林外史",
+      "zh": "儒林外史",
+      "passages": 703,
+      "readable": 0,
+      "density": 0
     }
   ],
-  "unmanifestedWorks": [
-    "夢溪筆談",
-    "天工開物",
-    "農政全書"
-  ],
+  "unmanifestedWorks": [],
   "groups": {
     "spanning-antiquity": {
       "works": 0,
@@ -619,54 +794,33 @@
       "partial": true
     },
     "practical-technology": {
-      "works": 3,
-      "passages": 4369,
-      "readable": 350,
-      "pooled": 0.0801,
-      "median": 0.0569,
-      "min": 0.0067,
+      "works": 14,
+      "passages": 60923,
+      "readable": 1302,
+      "pooled": 0.0214,
+      "median": 0.0165,
+      "min": 0,
       "max": 0.2629,
       "declared": 18,
       "builtWorks": [
         "夢溪筆談",
         "農政全書",
-        "天工開物"
+        "天工開物",
+        "營造法式",
+        "洗冤集錄",
+        "武經總要",
+        "本草綱目",
+        "農桑輯要",
+        "王禎農書",
+        "茶經",
+        "北山酒經",
+        "九章算術",
+        "傷寒論",
+        "黃帝內經"
       ],
       "notYetBuilt": [
         {
           "zh": "齊民要術",
-          "routeStatus": "OK"
-        },
-        {
-          "zh": "營造法式",
-          "routeStatus": "OK"
-        },
-        {
-          "zh": "洗冤集錄",
-          "routeStatus": "OK"
-        },
-        {
-          "zh": "武經總要",
-          "routeStatus": "OK"
-        },
-        {
-          "zh": "本草綱目",
-          "routeStatus": "OK"
-        },
-        {
-          "zh": "農桑輯要",
-          "routeStatus": "OK"
-        },
-        {
-          "zh": "王禎農書",
-          "routeStatus": "OK"
-        },
-        {
-          "zh": "茶經",
-          "routeStatus": "OK"
-        },
-        {
-          "zh": "北山酒經",
           "routeStatus": "OK"
         },
         {
@@ -678,89 +832,39 @@
           "routeStatus": "MISSING"
         },
         {
-          "zh": "九章算術",
-          "routeStatus": "OK"
-        },
-        {
           "zh": "數書九章",
           "routeStatus": "MISSING"
-        },
-        {
-          "zh": "傷寒論",
-          "routeStatus": "OK"
-        },
-        {
-          "zh": "黃帝內經",
-          "routeStatus": "OK"
         }
       ],
       "partial": true
     },
     "urban-and-market": {
-      "works": 0,
-      "passages": 0,
-      "readable": 0,
-      "pooled": null,
-      "median": null,
-      "min": null,
-      "max": null,
+      "works": 13,
+      "passages": 22350,
+      "readable": 446,
+      "pooled": 0.02,
+      "median": 0.0188,
+      "min": 0,
+      "max": 0.1584,
       "declared": 14,
-      "builtWorks": [],
+      "builtWorks": [
+        "金瓶梅",
+        "喻世明言",
+        "警世通言",
+        "醒世恆言",
+        "初刻拍案驚奇",
+        "二刻拍案驚奇",
+        "儒林外史",
+        "紅樓夢",
+        "西遊記",
+        "東京夢華錄",
+        "武林舊事",
+        "夢粱錄",
+        "揚州畫舫錄"
+      ],
       "notYetBuilt": [
         {
-          "zh": "金瓶梅",
-          "routeStatus": "OK"
-        },
-        {
-          "zh": "喻世明言",
-          "routeStatus": "OK"
-        },
-        {
-          "zh": "警世通言",
-          "routeStatus": "OK"
-        },
-        {
-          "zh": "醒世恆言",
-          "routeStatus": "OK"
-        },
-        {
-          "zh": "初刻拍案驚奇",
-          "routeStatus": "OK"
-        },
-        {
-          "zh": "二刻拍案驚奇",
-          "routeStatus": "OK"
-        },
-        {
-          "zh": "儒林外史",
-          "routeStatus": "OK"
-        },
-        {
-          "zh": "紅樓夢",
-          "routeStatus": "OK"
-        },
-        {
           "zh": "水滸傳",
-          "routeStatus": "OK"
-        },
-        {
-          "zh": "西遊記",
-          "routeStatus": "OK"
-        },
-        {
-          "zh": "東京夢華錄",
-          "routeStatus": "OK"
-        },
-        {
-          "zh": "武林舊事",
-          "routeStatus": "OK"
-        },
-        {
-          "zh": "夢粱錄",
-          "routeStatus": "OK"
-        },
-        {
-          "zh": "揚州畫舫錄",
           "routeStatus": "OK"
         }
       ],
@@ -770,25 +874,25 @@
   "hypothesis": {
     "statement": "操作性的技术 and 市井文化 carry more shared structure per passage than the corpus as a whole.",
     "practicalAndUrbanBuilt": {
-      "works": 3,
-      "passages": 4369,
-      "readable": 350,
-      "pooled": 0.0801,
-      "median": 0.0569,
-      "min": 0.0067,
+      "works": 27,
+      "passages": 83273,
+      "readable": 1748,
+      "pooled": 0.021,
+      "median": 0.0174,
+      "min": 0,
       "max": 0.2629
     },
     "corpusBaseline": {
-      "works": 80,
-      "passages": 85944,
-      "readable": 20464,
-      "pooled": 0.2381,
-      "median": 0.3499,
+      "works": 106,
+      "passages": 166317,
+      "readable": 22195,
+      "pooled": 0.1334,
+      "median": 0.2425,
       "min": 0,
       "max": 1
     },
-    "verdict": "NOT SUPPORTED so far (-0.158 pooled, -0.293 median), 3/32 declared works built; confounded with era and edition, and this is a description of two groups, not a test.",
-    "pooledDelta": -0.158,
-    "medianDelta": -0.293
+    "verdict": "NOT SUPPORTED so far (-0.1124 pooled, -0.2251 median), 27/32 declared works built; confounded with era and edition, and this is a description of two groups, not a test.",
+    "pooledDelta": -0.1124,
+    "medianDelta": -0.2251
   }
 }
