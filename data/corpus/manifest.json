@@ -1,9 +1,10 @@
 {
   "schema": "wenyan.corpus.manifest.v1",
   "format": "wenyan.corpus.v1",
-  "generatedAt": "2026-09-23T14:08:41.077Z",
+  "generatedAt": "2026-09-23T14:19:28.465Z",
   "partialRebuild": {
     "only": [
+      "徐文長傳",
       "明史卷288"
     ],
     "note": "this run rebuilt a subset; other entries are carried over from the previous manifest"
@@ -24,10 +25,10 @@
     "ctextNotice": "ctext.org was NOT used. Its robots.txt and anti-scraping notice state that automated access is not authorized and direct researchers to subscribe; no content was retrieved from it."
   },
   "counts": {
-    "works": 136,
-    "sections": 4760,
-    "passages": 217429,
-    "characters": 26051126
+    "works": 138,
+    "sections": 5097,
+    "passages": 243970,
+    "characters": 29544900
   },
   "works": [
     {
@@ -3122,6 +3123,50 @@
       "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
       "limitations": [
         "结构因素探查（预注册见 tmp/fetch-6.mjs 头部）：笔记体史料，制度掌故＋记言。路由 mainPageLinks，3 章；授权标签 PD-old。"
+      ]
+    },
+    {
+      "id": "南詞敘錄",
+      "zh": "南詞敘錄",
+      "tradition": "philosophers",
+      "file": "works/南詞敘錄.json",
+      "sha256": "2ec2bbfbdc220ed5d1b628800353b3fdd72ad58da10286cb944b91902937ca9c",
+      "counts": {
+        "sections": 5,
+        "passages": 8,
+        "characters": 3278
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "single",
+      "licenseTemplates": {
+        "明朝作品": 1
+      },
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "第 0 任务（徐渭）：徐渭戏曲理论。路由 single，1 章；授权标签 明朝作品。"
+      ]
+    },
+    {
+      "id": "明史",
+      "zh": "明史",
+      "tradition": "historical",
+      "file": "works/明史.json",
+      "sha256": "8321cd159b3b41d2ec8c17396f64b7601fc5779beeaa1201ddf13d0fa6d49265",
+      "counts": {
+        "sections": 332,
+        "passages": 26533,
+        "characters": 3490496
+      },
+      "structuralMarkersRemoved": 89,
+      "flaggedShortPassages": 517,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {
+        "清朝作品": 308
+      },
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "第 0 任务（徐渭）：正史：卷288 文苑傳 徐渭传。路由 mainPageLinks，332 章；授权标签 清朝作品。"
       ]
     },
     {
