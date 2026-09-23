@@ -1,5 +1,7 @@
 import { analyzeInscription, InscriptionAnalysis } from "./analysis";
 import { readRelation } from "./relations";
+import { readChanges } from "./changes";
+import type { ChangesCatalog } from "./changes";
 import type { RelationModel, RelationReading } from "./relations";
 import {
   forwardTriCompute,
@@ -40,6 +42,7 @@ export type CoIterationStep = {
 };
 
 export type InscriptionPipelineSuccessResult = {
+  changes?: ReturnType<typeof readChanges>;
   relation?: RelationReading;
   blocked: false;
   entryWarning: string;
@@ -72,6 +75,7 @@ export const INSCRIPTION_ACK_REQUIRED_WARNING =
   "[warning] 请先确认这不是真实故事、只是探索游戏，然后再继续。";
 
 export type InscriptionPipelineOptions = {
+  changes?: { catalog: ChangesCatalog };
   relationModel?: RelationModel;
   steps?: number;
   target?: ReverseTarget;
@@ -303,6 +307,7 @@ export function runInscriptionPipeline(
 
   return {
     blocked: false,
+    ...(options.changes ? { changes: readChanges(txt, options.changes.catalog) } : {}),
     ...(options.relationModel ? { relation: readRelation(txt, options.relationModel) } : {}),
     entryWarning: INSCRIPTION_EXPERIMENT_WARNING,
     analysis,

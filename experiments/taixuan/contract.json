@@ -1,0 +1,44 @@
+{
+  "schema": "wenyan.taixuan.experiment-contract.v1",
+  "date": "2026-09-23",
+  "baseCommit": "a4f645ce8f407f230711ab42674a9adab0d34833",
+  "direction": "Mingli Yuan",
+  "implementationAndSupervision": "Codex (OpenAI), via Mingli Yuan; labels await Mingli review",
+  "sourceRevision": 2651096,
+  "sourceSha256": "22573659dec9e3bbf8a6001c9ad07a275fb76ab4b5e42b01bc1fd91aa7626258",
+  "counts": { "heads": 81, "ordinaryZans": 729, "extraZans": 2, "separableZanCePairs": 728, "unresolvedZanCePairs": 1 },
+  "encoding": "4 ternary head coordinates + 2 ternary zan-address coordinates; no dynamical or semantic isomorphism",
+  "task": "declared-evaluative-reading-v1",
+  "labels": {
+    "affirming": "The selected passage and its explicit commentary support or commend the described disposition/action.",
+    "adverse": "The selected passage and commentary warn against, criticize, or describe failure of the disposition/action.",
+    "qualified": "A conditional or insufficiently explicit reading; a supervisor label, not the runtime Unknown status."
+  },
+  "trainingHeads": ["中", "周", "礥"],
+  "heldOutHeads": ["閑", "少", "戾"],
+  "positions": [1, 5, 9],
+  "selection": "First six source heads in order; sample first, middle, last zan; first three heads train, next three held out. Fixed before running predictions.",
+  "protocol": "Train on 中 alone, then add 周 and 礥; evaluate the same nine held-out labels at each checkpoint. Held-out labels never enter the learning log. No hyperparameter selection on this holdout.",
+  "profiles": [
+    { "id": "taixuan-position-v1", "features": ["zan"] },
+    { "id": "taixuan-prefix-v1", "features": ["fang", "zhou", "bu", "zan"] },
+    { "id": "taixuan-context-v1", "features": ["digits", "zan"] }
+  ],
+  "metrics": ["total", "answered", "correct", "wrong", "unknown", "coverage", "accuracyAmongAnswered"],
+  "successCriteria": [
+    "Every address round-trips and each retrieved text span reconstructs from the pinned snapshot",
+    "Source anomalies are explicit; no silent repair or invented commentary",
+    "Whole-head holdout has zero overlap with active supervision",
+    "Counterexamples refute coarse features and uncovered contexts remain Unknown",
+    "Conflicts, retractions, provenance checks, replay and fuel bounds remain available",
+    "Generalized engine agrees with frozen Zhouyi learner on declared regression queries",
+    "All existing changes-grammar source hashes and learning log bytes remain unchanged"
+  ],
+  "nonclaims": [
+    "Not a blind study: the supervisor can read the complete corpus; this is a small diagnostic pilot, not a semantic benchmark",
+    "No requirement that semantic transfer succeeds; report negative results and abstentions",
+    "No treating ternary digit 2 as Unknown",
+    "No claim of general classical-Chinese understanding, historical logic completeness or Adva six-germ equivalence",
+    "No implicit transition, calendar, divination procedure or automatic execution"
+  ]
+}

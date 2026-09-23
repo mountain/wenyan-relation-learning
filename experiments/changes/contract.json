@@ -1,0 +1,12 @@
+{
+  "schema": "wenyan.changes.experiment.v1",
+  "version": "0.1.0",
+  "author": {"direction": "Mingli Yuan", "implementationAndSelfReview": "Codex (OpenAI), via Mingli Yuan's account"},
+  "bases": {"wenyan": "6143e22ca8319a8ebca89b59a29f20158812b63f", "wenyan-relation-learning": "1a389b572e9efcb5aed0771df94e359cc55c68e4"},
+  "structure": {"bitOrder": "bottom-to-top", "yin": 0, "yang": 1, "strata": [[1,2],[3,4],[5,6]], "correspondence": [[1,4],[2,5],[3,6]], "singleChanges": 384, "allMasks": 4096},
+  "corpus": {"source": "data/corpus/works/zhouyi.json", "ordinaryLines": 384, "extraUseLines": 2, "mandatory": ["passageId", "sourceRevid", "passageHash", "exact UTF-16 source span", "license"]},
+  "syllogisms": {"moods": 64, "figures": 4, "models": 255, "policies": ["boolean", "terms-nonempty"], "validCountsByFigure": {"boolean": [4,4,4,3], "terms-nonempty": [6,6,6,6]}, "fuelUnit": "one visited nonempty occupancy mask", "encoding": "quantity triple below quality triple"},
+  "learning": {"method": "finite feature-family elimination with append-only labelled evidence and retractions", "prediction": "CandidateReading only when all surviving hypotheses cover the query and agree", "conflict": "contradictory labels on the same context remain local and named", "extension": "explicit new profile id; old evidence and profiles retained"},
+  "gates": ["64 reversible encodings", "4096 change-mask roundtrips", "source replay for 64 statements and 386 line records", "512 syllogism/policy classifications against independent set semantics", "same mood different figure", "zero/partial fuel", "learning transfer, refutation, profile extension, retraction, locality", "legacy relation/semantic regressions", "shared core identical across repositories"],
+  "nonclaims": ["No proof of six original Adva words sharing Yao meanings", "No implementation or closure of Adva M6", "No classical text is a logical validity certificate", "No general classical-Chinese understanding", "No guarantee of perpetual progress or unlimited resources", "No changes to adva main"]
+}

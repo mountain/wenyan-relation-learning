@@ -1,0 +1,427 @@
+{
+  "schema": "wenyan.taixuan.supervision.v1",
+  "by": "Codex (OpenAI), via Mingli Yuan",
+  "status": "provisional-awaiting-Mingli-review",
+  "task": "declared-evaluative-reading-v1",
+  "sourceRevision": 2651096,
+  "notes": [
+    "Human-readable pilot annotations proposed by the implementing assistant, not by Mingli or scholarly consensus.",
+    "Source, historical commentary and modern rationale are distinct; no prediction results were used to choose these labels."
+  ],
+  "labels": [
+    {
+      "id": "taixuan-1-1",
+      "split": "train",
+      "context": {
+        "system": "taixuan",
+        "digits": "0000",
+        "zan": 1
+      },
+      "head": "中",
+      "label": "affirming",
+      "rationale": "测辞以“思之贞”解释潜在状态，暂读为肯定；这里不是直接行动建议。",
+      "source": {
+        "kind": "corpus",
+        "reference": {
+          "snapshotSha256": "22573659dec9e3bbf8a6001c9ad07a275fb76ab4b5e42b01bc1fd91aa7626258",
+          "start": 280,
+          "end": 300,
+          "unit": "UTF-16",
+          "part": "passage"
+        },
+        "text": "昆侖磅礴。幽。測曰：昆侖磅礴。思之貞也。"
+      }
+    },
+    {
+      "id": "taixuan-1-5",
+      "split": "train",
+      "context": {
+        "system": "taixuan",
+        "digits": "0000",
+        "zan": 5
+      },
+      "head": "中",
+      "label": "affirming",
+      "rationale": "赞辞“利用其辰作主”与测辞“贵当位”共同支持当位而行。",
+      "source": {
+        "kind": "corpus",
+        "reference": {
+          "snapshotSha256": "22573659dec9e3bbf8a6001c9ad07a275fb76ab4b5e42b01bc1fd91aa7626258",
+          "start": 397,
+          "end": 422,
+          "unit": "UTF-16",
+          "part": "passage"
+        },
+        "text": "日正于天。利用其辰作主。測曰：日正於天。貴當位也。"
+      }
+    },
+    {
+      "id": "taixuan-1-9",
+      "split": "train",
+      "context": {
+        "system": "taixuan",
+        "digits": "0000",
+        "zan": 9
+      },
+      "head": "中",
+      "label": "adverse",
+      "rationale": "测辞“时不克”明确指出时机不成。",
+      "source": {
+        "kind": "corpus",
+        "reference": {
+          "snapshotSha256": "22573659dec9e3bbf8a6001c9ad07a275fb76ab4b5e42b01bc1fd91aa7626258",
+          "start": 511,
+          "end": 530,
+          "unit": "UTF-16",
+          "part": "passage"
+        },
+        "text": "顛靈氣形反。測曰：顛靈之反。時不克也。"
+      }
+    },
+    {
+      "id": "taixuan-2-1",
+      "split": "train",
+      "context": {
+        "system": "taixuan",
+        "digits": "0001",
+        "zan": 1
+      },
+      "head": "周",
+      "label": "adverse",
+      "rationale": "原文有“否”，测辞以“中不恕”否定内在状态。",
+      "source": {
+        "kind": "corpus",
+        "reference": {
+          "snapshotSha256": "22573659dec9e3bbf8a6001c9ad07a275fb76ab4b5e42b01bc1fd91aa7626258",
+          "start": 563,
+          "end": 589,
+          "unit": "UTF-16",
+          "part": "passage"
+        },
+        "text": "還于天心。何德之僭。否。測曰：也還心之否。中不恕也。"
+      }
+    },
+    {
+      "id": "taixuan-2-5",
+      "split": "train",
+      "context": {
+        "system": "taixuan",
+        "digits": "0001",
+        "zan": 5
+      },
+      "head": "周",
+      "label": "adverse",
+      "rationale": "测辞“小人不克”提示不能胜任；此为对整段的暂定主导读法。",
+      "source": {
+        "kind": "corpus",
+        "reference": {
+          "snapshotSha256": "22573659dec9e3bbf8a6001c9ad07a275fb76ab4b5e42b01bc1fd91aa7626258",
+          "start": 675,
+          "end": 703,
+          "unit": "UTF-16",
+          "part": "passage"
+        },
+        "text": "土中其廬。設其金輿。厥戒渝。測曰：廬金戒渝。小人不克也。"
+      }
+    },
+    {
+      "id": "taixuan-2-9",
+      "split": "train",
+      "context": {
+        "system": "taixuan",
+        "digits": "0001",
+        "zan": 9
+      },
+      "head": "周",
+      "label": "adverse",
+      "rationale": "测辞“其道穷”说明终局受阻。",
+      "source": {
+        "kind": "corpus",
+        "reference": {
+          "snapshotSha256": "22573659dec9e3bbf8a6001c9ad07a275fb76ab4b5e42b01bc1fd91aa7626258",
+          "start": 794,
+          "end": 815,
+          "unit": "UTF-16",
+          "part": "passage"
+        },
+        "text": "還於喪。或棄之行。測曰：還於喪。其道窮也。"
+      }
+    },
+    {
+      "id": "taixuan-3-1",
+      "split": "train",
+      "context": {
+        "system": "taixuan",
+        "digits": "0002",
+        "zan": 1
+      },
+      "head": "礥",
+      "label": "qualified",
+      "rationale": "潜藏与化育的描述不直接给出成败，暂不归入肯定或否定。",
+      "source": {
+        "kind": "corpus",
+        "reference": {
+          "snapshotSha256": "22573659dec9e3bbf8a6001c9ad07a275fb76ab4b5e42b01bc1fd91aa7626258",
+          "start": 849,
+          "end": 877,
+          "unit": "UTF-16",
+          "part": "passage"
+        },
+        "text": "黃純於潛。不見其畛。藏郁於泉。測曰：黃純於潛。化在嘖也。"
+      }
+    },
+    {
+      "id": "taixuan-3-5",
+      "split": "train",
+      "context": {
+        "system": "taixuan",
+        "digits": "0002",
+        "zan": 5
+      },
+      "head": "礥",
+      "label": "affirming",
+      "rationale": "赞辞“宜于大人”肯定具备相应能力者，暂以此为主导读法。",
+      "source": {
+        "kind": "corpus",
+        "reference": {
+          "snapshotSha256": "22573659dec9e3bbf8a6001c9ad07a275fb76ab4b5e42b01bc1fd91aa7626258",
+          "start": 963,
+          "end": 986,
+          "unit": "UTF-16",
+          "part": "passage"
+        },
+        "text": "拔車山淵。宜於大人。測曰：拔車山淵。大位力也。"
+      }
+    },
+    {
+      "id": "taixuan-3-9",
+      "split": "train",
+      "context": {
+        "system": "taixuan",
+        "digits": "0002",
+        "zan": 9
+      },
+      "head": "礥",
+      "label": "qualified",
+      "rationale": "渡越有条件：测辞“不辑航不克”，不把有条件的可行读为无条件成功。",
+      "source": {
+        "kind": "corpus",
+        "reference": {
+          "snapshotSha256": "22573659dec9e3bbf8a6001c9ad07a275fb76ab4b5e42b01bc1fd91aa7626258",
+          "start": 1071,
+          "end": 1106,
+          "unit": "UTF-16",
+          "part": "passage"
+        },
+        "text": "崇崇高山。下有川波其人有輯航。可與過其。測曰：高山大川。不輯航不克也。"
+      }
+    },
+    {
+      "id": "taixuan-4-1",
+      "split": "held-out",
+      "context": {
+        "system": "taixuan",
+        "digits": "0010",
+        "zan": 1
+      },
+      "head": "閑",
+      "label": "adverse",
+      "rationale": "“终莫受施”及“君不君”共同构成否定。",
+      "source": {
+        "kind": "corpus",
+        "reference": {
+          "snapshotSha256": "22573659dec9e3bbf8a6001c9ad07a275fb76ab4b5e42b01bc1fd91aa7626258",
+          "start": 1138,
+          "end": 1166,
+          "unit": "UTF-16",
+          "part": "passage"
+        },
+        "text": "蛇伏於泥。無雄有雌。終莫受施。測曰：蛇伏於泥。君不君也。"
+      }
+    },
+    {
+      "id": "taixuan-4-5",
+      "split": "held-out",
+      "context": {
+        "system": "taixuan",
+        "digits": "0010",
+        "zan": 5
+      },
+      "head": "閑",
+      "label": "adverse",
+      "rationale": "赞辞“厉”、测辞“其敌坚”共同提示危险与阻力。",
+      "source": {
+        "kind": "corpus",
+        "reference": {
+          "snapshotSha256": "22573659dec9e3bbf8a6001c9ad07a275fb76ab4b5e42b01bc1fd91aa7626258",
+          "start": 1250,
+          "end": 1280,
+          "unit": "UTF-16",
+          "part": "passage"
+        },
+        "text": "礥而閑而。拔我奸而。非石如石。厲。測曰：礥閑如石。其敵堅也。"
+      }
+    },
+    {
+      "id": "taixuan-4-9",
+      "split": "held-out",
+      "context": {
+        "system": "taixuan",
+        "digits": "0010",
+        "zan": 9
+      },
+      "head": "閑",
+      "label": "adverse",
+      "rationale": "测辞“终不可实”否定最终实现。",
+      "source": {
+        "kind": "corpus",
+        "reference": {
+          "snapshotSha256": "22573659dec9e3bbf8a6001c9ad07a275fb76ab4b5e42b01bc1fd91aa7626258",
+          "start": 1373,
+          "end": 1394,
+          "unit": "UTF-16",
+          "part": "passage"
+        },
+        "text": "閑門以終。虛。測曰：閑門以虛。終不可實也。"
+      }
+    },
+    {
+      "id": "taixuan-5-1",
+      "split": "held-out",
+      "context": {
+        "system": "taixuan",
+        "digits": "0011",
+        "zan": 1
+      },
+      "head": "少",
+      "label": "adverse",
+      "rationale": "测辞“不见谦”否定这一次自少的表现，不能只凭首名判断。",
+      "source": {
+        "kind": "corpus",
+        "reference": {
+          "snapshotSha256": "22573659dec9e3bbf8a6001c9ad07a275fb76ab4b5e42b01bc1fd91aa7626258",
+          "start": 1427,
+          "end": 1447,
+          "unit": "UTF-16",
+          "part": "passage"
+        },
+        "text": "冥自少。眇于謙。測曰：冥自少。不見謙也。"
+      }
+    },
+    {
+      "id": "taixuan-5-5",
+      "split": "held-out",
+      "context": {
+        "system": "taixuan",
+        "digits": "0011",
+        "zan": 5
+      },
+      "head": "少",
+      "label": "affirming",
+      "rationale": "测辞“人之所圣”肯定自冲、处下的姿态。",
+      "source": {
+        "kind": "corpus",
+        "reference": {
+          "snapshotSha256": "22573659dec9e3bbf8a6001c9ad07a275fb76ab4b5e42b01bc1fd91aa7626258",
+          "start": 1533,
+          "end": 1554,
+          "unit": "UTF-16",
+          "part": "passage"
+        },
+        "text": "地自沖。下於川。測曰：地自沖。人之所聖也。"
+      }
+    },
+    {
+      "id": "taixuan-5-9",
+      "split": "held-out",
+      "context": {
+        "system": "taixuan",
+        "digits": "0011",
+        "zan": 9
+      },
+      "head": "少",
+      "label": "affirming",
+      "rationale": "测辞“谦之敬”肯定终位的谦德，与终位必衰的规则相反。",
+      "source": {
+        "kind": "corpus",
+        "reference": {
+          "snapshotSha256": "22573659dec9e3bbf8a6001c9ad07a275fb76ab4b5e42b01bc1fd91aa7626258",
+          "start": 1636,
+          "end": 1664,
+          "unit": "UTF-16",
+          "part": "passage"
+        },
+        "text": "密雨溟沐。潤於枯瀆。三日射穀。測曰：密雨射穀。謙之敬也。"
+      }
+    },
+    {
+      "id": "taixuan-6-1",
+      "split": "held-out",
+      "context": {
+        "system": "taixuan",
+        "digits": "0012",
+        "zan": 1
+      },
+      "head": "戾",
+      "label": "adverse",
+      "rationale": "“心有倾”与“怀不正”共同否定内在姿态。",
+      "source": {
+        "kind": "corpus",
+        "reference": {
+          "snapshotSha256": "22573659dec9e3bbf8a6001c9ad07a275fb76ab4b5e42b01bc1fd91aa7626258",
+          "start": 1698,
+          "end": 1718,
+          "unit": "UTF-16",
+          "part": "passage"
+        },
+        "text": "虛既邪。心有傾。測曰：虛邪心傾懷不正也。"
+      }
+    },
+    {
+      "id": "taixuan-6-5",
+      "split": "held-out",
+      "context": {
+        "system": "taixuan",
+        "digits": "0012",
+        "zan": 5
+      },
+      "head": "戾",
+      "label": "adverse",
+      "rationale": "测辞“不得其首”指出行动失去目标。",
+      "source": {
+        "kind": "corpus",
+        "reference": {
+          "snapshotSha256": "22573659dec9e3bbf8a6001c9ad07a275fb76ab4b5e42b01bc1fd91aa7626258",
+          "start": 1804,
+          "end": 1828,
+          "unit": "UTF-16",
+          "part": "passage"
+        },
+        "text": "東南射兕。西北其矢。測曰：東南射兕。不得其首也。"
+      }
+    },
+    {
+      "id": "taixuan-6-9",
+      "split": "held-out",
+      "context": {
+        "system": "taixuan",
+        "digits": "0012",
+        "zan": 9
+      },
+      "head": "戾",
+      "label": "adverse",
+      "rationale": "“岁之功乖”与“失作败”共同指出失败。",
+      "source": {
+        "kind": "corpus",
+        "reference": {
+          "snapshotSha256": "22573659dec9e3bbf8a6001c9ad07a275fb76ab4b5e42b01bc1fd91aa7626258",
+          "start": 1918,
+          "end": 1948,
+          "unit": "UTF-16",
+          "part": "passage"
+        },
+        "text": "倉靈之雌。不同宿而離失則歲之功乖。測曰：倉靈之雌。失作敗也。"
+      }
+    }
+  ]
+}
