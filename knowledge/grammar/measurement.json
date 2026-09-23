@@ -1,69 +1,70 @@
 {
   "schema": "wenyan.grammar.measurement.v1",
-  "generatedAt": "2026-09-23T13:03:28.203Z",
+  "generatedAt": "2026-09-23T13:55:58.220Z",
   "grammar": "wenyan.relations.reporting.v1",
   "corpus": {
-    "passages": 213390,
+    "passages": 217362,
     "maxPassageLength": 32773,
     "maxTextUnits": 2048
   },
   "reach": {
-    "uniqueParse": 30513,
-    "rate": 0.142992,
+    "uniqueParse": 39475,
+    "rate": 0.181609,
     "ambiguousFrameOccurrences": 0,
-    "tooLong": 282,
+    "tooLong": 291,
     "perConstruction": {
-      "wei-quote": 2135,
-      "wen-quote": 704,
-      "gao-quote": 441,
-      "yu-quote": 356,
-      "wen-plain": 708,
+      "wei-quote": 2162,
+      "wen-quote": 714,
+      "gao-quote": 456,
+      "yu-quote": 368,
+      "wen-plain": 721,
       "gao-plain": 200,
-      "yue-quote": 23517,
-      "yun-quote": 2452
+      "yue-quote": 24039,
+      "yun-quote": 3557,
+      "naming": 7258
     },
     "perWork": {
-      "analects": 449,
-      "mencius": 440,
+      "analects": 450,
+      "mencius": 451,
       "great-learning": 9,
-      "doctrine-of-the-mean": 25,
-      "classic-of-poetry": 1,
-      "book-of-documents": 205,
+      "doctrine-of-the-mean": 27,
+      "classic-of-poetry": 7,
+      "book-of-documents": 212,
       "zhouyi": 3,
-      "book-of-rites": 466,
-      "laozi": 3,
-      "zhuangzi": 521,
-      "xunzi": 163,
-      "hanfeizi": 408,
-      "mozi": 144,
-      "guanzi": 371,
-      "liezi": 115,
-      "sunzi": 1,
-      "zuozhuan": 328,
-      "gongyang": 59,
-      "yili": 74,
-      "shiji": 1572,
-      "hanshu": 2276,
-      "sanguozhi": 953,
-      "wenxian-tongkao": 1486,
-      "搜神記": 257,
-      "異苑": 135,
-      "談藪": 13,
-      "雲仙雜記": 99,
-      "獨異志": 180,
-      "廣異記": 248,
-      "冥報記": 99,
-      "括異誌": 109,
-      "稽神錄": 130,
-      "夷堅志": 2074,
-      "續夷堅志": 93,
-      "聊齋志異": 904,
-      "益智錄": 336,
-      "蟫史": 349,
-      "子不語": 970,
-      "玄怪錄": 207,
-      "續玄怪錄": 97,
-      "宣室志": 259,
+      "book-of-rites": 500,
+      "laozi": 11,
+      "zhuangzi": 545,
+      "xunzi": 188,
+      "hanfeizi": 430,
+      "mozi": 162,
+      "guanzi": 413,
+      "liezi": 119,
+      "sunzi": 6,
+      "zuozhuan": 368,
+      "gongyang": 80,
+      "yili": 76,
+      "shiji": 1757,
+      "hanshu": 2554,
+      "sanguozhi": 982,
+      "wenxian-tongkao": 1952,
+      "搜神記": 270,
+      "異苑": 143,
+      "談藪": 18,
+      "雲仙雜記": 112,
+      "獨異志": 192,
+      "廣異記": 249,
+      "冥報記": 101,
+      "括異誌": 110,
+      "稽神錄": 135,
+      "夷堅志": 2154,
+      "續夷堅志": 101,
+      "聊齋志異": 909,
+      "益智錄": 343,
+      "蟫史": 358,
+      "子不語": 983,
+      "玄怪錄": 208,
+      "續玄怪錄": 98,
+      "宣室志": 260,
       "定命錄": 17,
       "燕丹子": 3,
       "遊仙窟": 206,
@@ -75,72 +76,96 @@
       "鶯鶯傳": 5,
       "任氏傳": 9,
       "博異志": 32,
-      "剪燈新話": 198,
-      "剪燈餘話": 140,
-      "覓燈因話": 11,
-      "豔異編": 731,
-      "周禮": 4,
-      "春秋穀梁傳": 33,
+      "剪燈新話": 199,
+      "剪燈餘話": 142,
+      "覓燈因話": 12,
+      "豔異編": 746,
+      "大明奇俠傳": 8,
+      "周禮": 79,
+      "春秋穀梁傳": 55,
       "今文孝經": 19,
-      "四書章句集註": 764,
-      "楚辭": 3,
-      "玉臺新詠": 1,
-      "文選": 157,
-      "古文觀止": 118,
-      "國語": 411,
-      "戰國策": 782,
-      "逸周書": 34,
-      "山海經": 11,
-      "穆天子傳": 10,
-      "越絕書": 88,
-      "吳越春秋": 342,
+      "爾雅": 96,
+      "四書章句集註": 768,
+      "楚辭": 6,
+      "文心雕龍": 14,
+      "玉臺新詠": 2,
+      "文選": 709,
+      "唐詩三百首": 1,
+      "古文觀止": 157,
+      "國語": 423,
+      "戰國策": 792,
+      "逸周書": 43,
+      "山海經": 312,
+      "穆天子傳": 14,
+      "越絕書": 101,
+      "吳越春秋": 350,
       "晏子春秋": 214,
-      "齊民要術": 724,
-      "夢溪筆談": 233,
-      "農政全書": 368,
-      "天工開物": 4,
-      "洗冤集錄": 5,
-      "武經總要": 657,
-      "本草綱目": 26,
-      "農桑輯要": 75,
-      "王禎農書": 382,
-      "茶經": 36,
-      "北山酒經": 4,
-      "九章算術": 1,
-      "黃帝內經": 7,
-      "金瓶梅": 7,
-      "喻世明言": 149,
-      "警世通言": 66,
-      "醒世恆言": 72,
-      "初刻拍案驚奇": 14,
-      "二刻拍案驚奇": 17,
-      "儒林外史": 3,
-      "紅樓夢": 22,
-      "西遊記": 153,
-      "東京夢華錄": 4,
-      "武林舊事": 47,
-      "夢粱錄": 39,
-      "揚州畫舫錄": 313,
-      "大唐西域記": 145,
-      "六祖壇經": 226,
-      "初學記": 664,
-      "釋名": 2,
-      "說文解字": 972,
-      "通典": 2812,
-      "孫子算經": 1,
-      "太玄經": 1,
-      "周易正義": 1246
+      "齊民要術": 750,
+      "夢溪筆談": 362,
+      "農政全書": 579,
+      "天工開物": 81,
+      "營造法式": 211,
+      "洗冤集錄": 8,
+      "武經總要": 733,
+      "本草綱目": 914,
+      "農桑輯要": 92,
+      "王禎農書": 455,
+      "茶經": 55,
+      "北山酒經": 14,
+      "九章算術": 5,
+      "傷寒論": 31,
+      "黃帝內經": 139,
+      "金瓶梅": 24,
+      "喻世明言": 174,
+      "警世通言": 71,
+      "醒世恆言": 133,
+      "初刻拍案驚奇": 39,
+      "二刻拍案驚奇": 40,
+      "儒林外史": 20,
+      "紅樓夢": 104,
+      "西遊記": 171,
+      "東京夢華錄": 43,
+      "武林舊事": 61,
+      "夢粱錄": 93,
+      "揚州畫舫錄": 463,
+      "大唐西域記": 169,
+      "六祖壇經": 236,
+      "藝文類聚": 556,
+      "初學記": 1015,
+      "釋名": 18,
+      "說文解字": 1731,
+      "通典": 3177,
+      "周髀算經": 1,
+      "孫子算經": 3,
+      "太玄經": 5,
+      "周易正義": 1290,
+      "歷代名畫記": 126,
+      "圖畫見聞誌": 78,
+      "林泉高致": 6,
+      "苦瓜和尚畫語錄": 3,
+      "古畫品錄": 1,
+      "詩品": 12,
+      "滄浪詩話": 11,
+      "人間詞話": 35,
+      "六一詩話": 23,
+      "隨園詩話": 1265,
+      "書譜": 4,
+      "書斷": 18,
+      "續書譜": 7,
+      "藝舟雙楫": 60,
+      "海岳名言": 3,
+      "唐國史補": 135
     },
     "perWorkDensity": {
       "analects": {
         "passages": 507,
-        "readable": 449,
-        "density": 0.8856
+        "readable": 450,
+        "density": 0.8876
       },
       "mencius": {
         "passages": 742,
-        "readable": 440,
-        "density": 0.593
+        "readable": 451,
+        "density": 0.6078
       },
       "great-learning": {
         "passages": 11,
@@ -149,18 +174,18 @@
       },
       "doctrine-of-the-mean": {
         "passages": 34,
-        "readable": 25,
-        "density": 0.7353
+        "readable": 27,
+        "density": 0.7941
       },
       "classic-of-poetry": {
         "passages": 663,
-        "readable": 1,
-        "density": 0.0015
+        "readable": 7,
+        "density": 0.0106
       },
       "book-of-documents": {
         "passages": 412,
-        "readable": 205,
-        "density": 0.4976
+        "readable": 212,
+        "density": 0.5146
       },
       "zhouyi": {
         "passages": 324,
@@ -169,173 +194,173 @@
       },
       "book-of-rites": {
         "passages": 1332,
-        "readable": 466,
-        "density": 0.3498
+        "readable": 500,
+        "density": 0.3754
       },
       "laozi": {
         "passages": 434,
-        "readable": 3,
-        "density": 0.0069
+        "readable": 11,
+        "density": 0.0253
       },
       "zhuangzi": {
         "passages": 903,
-        "readable": 521,
-        "density": 0.577
+        "readable": 545,
+        "density": 0.6035
       },
       "xunzi": {
         "passages": 481,
-        "readable": 163,
-        "density": 0.3389
+        "readable": 188,
+        "density": 0.3909
       },
       "hanfeizi": {
         "passages": 744,
-        "readable": 408,
-        "density": 0.5484
+        "readable": 430,
+        "density": 0.578
       },
       "mozi": {
         "passages": 650,
-        "readable": 144,
-        "density": 0.2215
+        "readable": 162,
+        "density": 0.2492
       },
       "guanzi": {
         "passages": 688,
-        "readable": 371,
-        "density": 0.5392
+        "readable": 413,
+        "density": 0.6003
       },
       "liezi": {
         "passages": 139,
-        "readable": 115,
-        "density": 0.8273
+        "readable": 119,
+        "density": 0.8561
       },
       "sunzi": {
         "passages": 74,
-        "readable": 1,
-        "density": 0.0135
+        "readable": 6,
+        "density": 0.0811
       },
       "zuozhuan": {
         "passages": 2839,
-        "readable": 328,
-        "density": 0.1155
+        "readable": 368,
+        "density": 0.1296
       },
       "gongyang": {
         "passages": 1757,
-        "readable": 59,
-        "density": 0.0336
+        "readable": 80,
+        "density": 0.0455
       },
       "yili": {
         "passages": 453,
-        "readable": 74,
-        "density": 0.1634
+        "readable": 76,
+        "density": 0.1678
       },
       "shiji": {
         "passages": 4773,
-        "readable": 1572,
-        "density": 0.3294
+        "readable": 1757,
+        "density": 0.3681
       },
       "hanshu": {
         "passages": 8027,
-        "readable": 2276,
-        "density": 0.2835
+        "readable": 2554,
+        "density": 0.3182
       },
       "sanguozhi": {
         "passages": 2309,
-        "readable": 953,
-        "density": 0.4127
+        "readable": 982,
+        "density": 0.4253
       },
       "wenxian-tongkao": {
         "passages": 16957,
-        "readable": 1486,
-        "density": 0.0876
+        "readable": 1952,
+        "density": 0.1151
       },
       "搜神記": {
         "passages": 465,
-        "readable": 257,
-        "density": 0.5527
+        "readable": 270,
+        "density": 0.5806
       },
       "異苑": {
         "passages": 384,
-        "readable": 135,
-        "density": 0.3516
+        "readable": 143,
+        "density": 0.3724
       },
       "談藪": {
         "passages": 79,
-        "readable": 13,
-        "density": 0.1646
+        "readable": 18,
+        "density": 0.2278
       },
       "雲仙雜記": {
         "passages": 447,
-        "readable": 99,
-        "density": 0.2215
+        "readable": 112,
+        "density": 0.2506
       },
       "獨異志": {
         "passages": 432,
-        "readable": 180,
-        "density": 0.4167
+        "readable": 192,
+        "density": 0.4444
       },
       "廣異記": {
         "passages": 305,
-        "readable": 248,
-        "density": 0.8131
+        "readable": 249,
+        "density": 0.8164
       },
       "冥報記": {
         "passages": 232,
-        "readable": 99,
-        "density": 0.4267
+        "readable": 101,
+        "density": 0.4353
       },
       "括異誌": {
         "passages": 146,
-        "readable": 109,
-        "density": 0.7466
+        "readable": 110,
+        "density": 0.7534
       },
       "稽神錄": {
         "passages": 234,
-        "readable": 130,
-        "density": 0.5556
+        "readable": 135,
+        "density": 0.5769
       },
       "夷堅志": {
         "passages": 4755,
-        "readable": 2074,
-        "density": 0.4362
+        "readable": 2154,
+        "density": 0.453
       },
       "續夷堅志": {
         "passages": 294,
-        "readable": 93,
-        "density": 0.3163
+        "readable": 101,
+        "density": 0.3435
       },
       "聊齋志異": {
         "passages": 1193,
-        "readable": 904,
-        "density": 0.7578
+        "readable": 909,
+        "density": 0.7619
       },
       "益智錄": {
         "passages": 581,
-        "readable": 336,
-        "density": 0.5783
+        "readable": 343,
+        "density": 0.5904
       },
       "蟫史": {
         "passages": 1037,
-        "readable": 349,
-        "density": 0.3365
+        "readable": 358,
+        "density": 0.3452
       },
       "子不語": {
         "passages": 1635,
-        "readable": 970,
-        "density": 0.5933
+        "readable": 983,
+        "density": 0.6012
       },
       "玄怪錄": {
         "passages": 364,
-        "readable": 207,
-        "density": 0.5687
+        "readable": 208,
+        "density": 0.5714
       },
       "續玄怪錄": {
         "passages": 131,
-        "readable": 97,
-        "density": 0.7405
+        "readable": 98,
+        "density": 0.7481
       },
       "宣室志": {
         "passages": 424,
-        "readable": 259,
-        "density": 0.6108
+        "readable": 260,
+        "density": 0.6132
       },
       "定命錄": {
         "passages": 18,
@@ -394,38 +419,38 @@
       },
       "剪燈新話": {
         "passages": 571,
-        "readable": 198,
-        "density": 0.3468
+        "readable": 199,
+        "density": 0.3485
       },
       "剪燈餘話": {
         "passages": 477,
-        "readable": 140,
-        "density": 0.2935
+        "readable": 142,
+        "density": 0.2977
       },
       "覓燈因話": {
         "passages": 31,
-        "readable": 11,
-        "density": 0.3548
+        "readable": 12,
+        "density": 0.3871
       },
       "豔異編": {
         "passages": 2952,
-        "readable": 731,
-        "density": 0.2476
+        "readable": 746,
+        "density": 0.2527
       },
       "大明奇俠傳": {
         "passages": 1183,
-        "readable": 0,
-        "density": 0
+        "readable": 8,
+        "density": 0.0068
       },
       "周禮": {
         "passages": 877,
-        "readable": 4,
-        "density": 0.0046
+        "readable": 79,
+        "density": 0.0901
       },
       "春秋穀梁傳": {
         "passages": 1873,
-        "readable": 33,
-        "density": 0.0176
+        "readable": 55,
+        "density": 0.0294
       },
       "春秋經": {
         "passages": 520,
@@ -439,78 +464,78 @@
       },
       "爾雅": {
         "passages": 1092,
-        "readable": 0,
-        "density": 0
+        "readable": 96,
+        "density": 0.0879
       },
       "四書章句集註": {
         "passages": 892,
-        "readable": 764,
-        "density": 0.8565
+        "readable": 768,
+        "density": 0.861
       },
       "楚辭": {
         "passages": 191,
-        "readable": 3,
-        "density": 0.0157
+        "readable": 6,
+        "density": 0.0314
       },
       "文心雕龍": {
         "passages": 462,
-        "readable": 0,
-        "density": 0
+        "readable": 14,
+        "density": 0.0303
       },
       "玉臺新詠": {
         "passages": 1942,
-        "readable": 1,
-        "density": 0.0005
+        "readable": 2,
+        "density": 0.001
       },
       "文選": {
         "passages": 4837,
-        "readable": 157,
-        "density": 0.0325
+        "readable": 709,
+        "density": 0.1466
       },
       "唐詩三百首": {
         "passages": 329,
-        "readable": 0,
-        "density": 0
+        "readable": 1,
+        "density": 0.003
       },
       "古文觀止": {
         "passages": 863,
-        "readable": 118,
-        "density": 0.1367
+        "readable": 157,
+        "density": 0.1819
       },
       "國語": {
         "passages": 517,
-        "readable": 411,
-        "density": 0.795
+        "readable": 423,
+        "density": 0.8182
       },
       "戰國策": {
         "passages": 1005,
-        "readable": 782,
-        "density": 0.7781
+        "readable": 792,
+        "density": 0.7881
       },
       "逸周書": {
         "passages": 136,
-        "readable": 34,
-        "density": 0.25
+        "readable": 43,
+        "density": 0.3162
       },
       "山海經": {
         "passages": 874,
-        "readable": 11,
-        "density": 0.0126
+        "readable": 312,
+        "density": 0.357
       },
       "穆天子傳": {
         "passages": 123,
-        "readable": 10,
-        "density": 0.0813
+        "readable": 14,
+        "density": 0.1138
       },
       "越絕書": {
         "passages": 316,
-        "readable": 88,
-        "density": 0.2785
+        "readable": 101,
+        "density": 0.3196
       },
       "吳越春秋": {
         "passages": 502,
-        "readable": 342,
-        "density": 0.6813
+        "readable": 350,
+        "density": 0.6972
       },
       "晏子春秋": {
         "passages": 218,
@@ -519,173 +544,173 @@
       },
       "齊民要術": {
         "passages": 1575,
-        "readable": 724,
-        "density": 0.4597
+        "readable": 750,
+        "density": 0.4762
       },
       "夢溪筆談": {
         "passages": 601,
-        "readable": 233,
-        "density": 0.3877
+        "readable": 362,
+        "density": 0.6023
       },
       "農政全書": {
         "passages": 3319,
-        "readable": 368,
-        "density": 0.1109
+        "readable": 579,
+        "density": 0.1745
       },
       "天工開物": {
         "passages": 449,
-        "readable": 4,
-        "density": 0.0089
+        "readable": 81,
+        "density": 0.1804
       },
       "營造法式": {
         "passages": 2600,
-        "readable": 0,
-        "density": 0
+        "readable": 211,
+        "density": 0.0812
       },
       "洗冤集錄": {
         "passages": 172,
-        "readable": 5,
-        "density": 0.0291
+        "readable": 8,
+        "density": 0.0465
       },
       "武經總要": {
         "passages": 4270,
-        "readable": 657,
-        "density": 0.1539
+        "readable": 733,
+        "density": 0.1717
       },
       "本草綱目": {
         "passages": 42296,
-        "readable": 26,
-        "density": 0.0006
+        "readable": 914,
+        "density": 0.0216
       },
       "農桑輯要": {
         "passages": 984,
-        "readable": 75,
-        "density": 0.0762
+        "readable": 92,
+        "density": 0.0935
       },
       "王禎農書": {
         "passages": 1295,
-        "readable": 382,
-        "density": 0.295
+        "readable": 455,
+        "density": 0.3514
       },
       "茶經": {
         "passages": 270,
-        "readable": 36,
-        "density": 0.1333
+        "readable": 55,
+        "density": 0.2037
       },
       "北山酒經": {
         "passages": 127,
-        "readable": 4,
-        "density": 0.0315
+        "readable": 14,
+        "density": 0.1102
       },
       "九章算術": {
         "passages": 805,
-        "readable": 1,
-        "density": 0.0012
+        "readable": 5,
+        "density": 0.0062
       },
       "傷寒論": {
         "passages": 773,
-        "readable": 0,
-        "density": 0
+        "readable": 31,
+        "density": 0.0401
       },
       "黃帝內經": {
         "passages": 2962,
-        "readable": 7,
-        "density": 0.0024
+        "readable": 139,
+        "density": 0.0469
       },
       "金瓶梅": {
         "passages": 2515,
-        "readable": 7,
-        "density": 0.0028
+        "readable": 24,
+        "density": 0.0095
       },
       "喻世明言": {
         "passages": 2423,
-        "readable": 149,
-        "density": 0.0615
+        "readable": 174,
+        "density": 0.0718
       },
       "警世通言": {
         "passages": 804,
-        "readable": 66,
-        "density": 0.0821
+        "readable": 71,
+        "density": 0.0883
       },
       "醒世恆言": {
         "passages": 3140,
-        "readable": 72,
-        "density": 0.0229
+        "readable": 133,
+        "density": 0.0424
       },
       "初刻拍案驚奇": {
         "passages": 1872,
-        "readable": 14,
-        "density": 0.0075
+        "readable": 39,
+        "density": 0.0208
       },
       "二刻拍案驚奇": {
         "passages": 2678,
-        "readable": 17,
-        "density": 0.0063
+        "readable": 40,
+        "density": 0.0149
       },
       "儒林外史": {
         "passages": 703,
-        "readable": 3,
-        "density": 0.0043
+        "readable": 20,
+        "density": 0.0284
       },
       "紅樓夢": {
         "passages": 2843,
-        "readable": 22,
-        "density": 0.0077
+        "readable": 104,
+        "density": 0.0366
       },
       "西遊記": {
         "passages": 2539,
-        "readable": 153,
-        "density": 0.0603
+        "readable": 171,
+        "density": 0.0673
       },
       "東京夢華錄": {
         "passages": 86,
-        "readable": 4,
-        "density": 0.0465
+        "readable": 43,
+        "density": 0.5
       },
       "武林舊事": {
         "passages": 1385,
-        "readable": 47,
-        "density": 0.0339
+        "readable": 61,
+        "density": 0.044
       },
       "夢粱錄": {
         "passages": 202,
-        "readable": 39,
-        "density": 0.1931
+        "readable": 93,
+        "density": 0.4604
       },
       "揚州畫舫錄": {
         "passages": 1160,
-        "readable": 313,
-        "density": 0.2698
+        "readable": 463,
+        "density": 0.3991
       },
       "大唐西域記": {
         "passages": 839,
-        "readable": 145,
-        "density": 0.1728
+        "readable": 169,
+        "density": 0.2014
       },
       "六祖壇經": {
         "passages": 630,
-        "readable": 226,
-        "density": 0.3587
+        "readable": 236,
+        "density": 0.3746
       },
       "藝文類聚": {
         "passages": 14421,
-        "readable": 0,
-        "density": 0
+        "readable": 556,
+        "density": 0.0386
       },
       "初學記": {
         "passages": 5216,
-        "readable": 664,
-        "density": 0.1273
+        "readable": 1015,
+        "density": 0.1946
       },
       "釋名": {
         "passages": 31,
-        "readable": 2,
-        "density": 0.0645
+        "readable": 18,
+        "density": 0.5806
       },
       "說文解字": {
         "passages": 9617,
-        "readable": 972,
-        "density": 0.1011
+        "readable": 1731,
+        "density": 0.18
       },
       "玉篇": {
         "passages": 848,
@@ -694,8 +719,8 @@
       },
       "通典": {
         "passages": 10696,
-        "readable": 2812,
-        "density": 0.2629
+        "readable": 3177,
+        "density": 0.297
       },
       "神農本草經": {
         "passages": 371,
@@ -704,23 +729,103 @@
       },
       "周髀算經": {
         "passages": 289,
-        "readable": 0,
-        "density": 0
+        "readable": 1,
+        "density": 0.0035
       },
       "孫子算經": {
         "passages": 223,
-        "readable": 1,
-        "density": 0.0045
+        "readable": 3,
+        "density": 0.0135
       },
       "太玄經": {
         "passages": 864,
-        "readable": 1,
-        "density": 0.0012
+        "readable": 5,
+        "density": 0.0058
       },
       "周易正義": {
         "passages": 2922,
-        "readable": 1246,
-        "density": 0.4264
+        "readable": 1290,
+        "density": 0.4415
+      },
+      "歷代名畫記": {
+        "passages": 631,
+        "readable": 126,
+        "density": 0.1997
+      },
+      "圖畫見聞誌": {
+        "passages": 520,
+        "readable": 78,
+        "density": 0.15
+      },
+      "林泉高致": {
+        "passages": 71,
+        "readable": 6,
+        "density": 0.0845
+      },
+      "苦瓜和尚畫語錄": {
+        "passages": 18,
+        "readable": 3,
+        "density": 0.1667
+      },
+      "古畫品錄": {
+        "passages": 25,
+        "readable": 1,
+        "density": 0.04
+      },
+      "詩品": {
+        "passages": 60,
+        "readable": 12,
+        "density": 0.2
+      },
+      "滄浪詩話": {
+        "passages": 120,
+        "readable": 11,
+        "density": 0.0917
+      },
+      "人間詞話": {
+        "passages": 324,
+        "readable": 35,
+        "density": 0.108
+      },
+      "六一詩話": {
+        "passages": 29,
+        "readable": 23,
+        "density": 0.7931
+      },
+      "隨園詩話": {
+        "passages": 1387,
+        "readable": 1265,
+        "density": 0.912
+      },
+      "書譜": {
+        "passages": 5,
+        "readable": 4,
+        "density": 0.8
+      },
+      "書斷": {
+        "passages": 152,
+        "readable": 18,
+        "density": 0.1184
+      },
+      "續書譜": {
+        "passages": 21,
+        "readable": 7,
+        "density": 0.3333
+      },
+      "藝舟雙楫": {
+        "passages": 275,
+        "readable": 60,
+        "density": 0.2182
+      },
+      "海岳名言": {
+        "passages": 26,
+        "readable": 3,
+        "density": 0.1154
+      },
+      "唐國史補": {
+        "passages": 308,
+        "readable": 135,
+        "density": 0.4383
       }
     },
     "examples": {
@@ -852,6 +957,22 @@
           }
         ]
       },
+      "naming": {
+        "work": "analects",
+        "section": "analects.16",
+        "passageId": "16.14",
+        "sourcePage": "論語/季氏第十六",
+        "sourceRevid": 2178436,
+        "text": "邦君之妻，君稱之曰「夫人」，夫人自稱曰「小童」；邦人稱之曰「君夫人」，稱諸異邦曰「寡小君」；異邦人稱之，亦曰「君夫人」。",
+        "occurrences": [
+          {
+            "slot": 0,
+            "value": "君夫人",
+            "start": 55,
+            "end": 58
+          }
+        ]
+      },
       "gao-plain": {
         "work": "mencius",
         "section": "mencius.2",
@@ -929,8 +1050,8 @@
   },
   "answerable": {
     "evidenceRecords": 14,
-    "passages": 28061,
-    "rate": 0.131501,
+    "passages": 35918,
+    "rate": 0.165245,
     "note": "Requires every construction below to be pinned by supervised evidence; reach is the ceiling this can approach."
   }
 }

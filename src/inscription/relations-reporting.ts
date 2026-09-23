@@ -126,6 +126,11 @@ const ENTITY_NO_YUE = "(?:(?!曰)[^，。；：︰﹕「」？！、]){1,10}";
  *  「如是云」could put a conjunction in the agent slot and the frame would assert a speaker. */
 const ENTITY_NO_YUN = "(?:(?![謂問告語云])[^，。；：︰﹕「」？！、]){1,10}";
 const AGENT_THEME: RoleName[] = ['agent', 'theme'];
+/** The naming frame's single role. Declared as a one-element array because 謂之X／名曰X determine the
+ *  NAME and nothing else: there is no speaker, no addressee, and the thing named lies outside the frame.
+ *  See the doesNotLicence list of `naming` — the convention that `theme` holds the bestowed NAME rather
+ *  than the topic is stated there, because an unstated convention is the thing this grammar may not do. */
+const NAME_ONLY: RoleName[] = ['theme'];
 
 const FRAMES: { id: string; verb: string; source: string; roles: RoleName[] }[] = [
   // ORDER IS THE RULE, not a detail: the frames are tried most-explicit-first; a match that
@@ -161,6 +166,13 @@ const FRAMES: { id: string; verb: string; source: string; roles: RoleName[] }[] 
   // containment precedence lets a wider span SUPERSEDE a narrower one, so a frame appended here can
   // still take readings away. Measured before and after, not assumed.
   { id: 'yun-quote', verb: '云', source: `(${ENTITY_NO_YUN})云${COLON}${Q_OPEN}(${SPEECH})${Q_CLOSE}`, roles: AGENT_THEME },
+  // <M>：「<N>」 naming — NOT speech, and the first non-speech construction in this grammar.
+  // Evidence: 唐國史補's unread residue is 89% speechless, and a shape probe over 217,071 passages found
+  // 謂之/名曰/一曰/亦曰 in 6,800 unread passages across 111 works (top-3 share 0.307), with a supersede
+  // risk of 2 and 464 partial overlaps — the opposite of the quote-less speech frame's 1,847.
+  // The marker is fixed rather than free: 謂之X needs 之, which is exactly what keeps it out of the
+  // 謂…曰 speech frame, and 名曰/號曰/是為/一曰/亦曰 put the name after the marker in the same way.
+  { id: 'naming', verb: '謂之', source: `(?:謂之|名曰|號曰|是為|一曰|亦曰)${Q_OPEN}?([^，。；：︰﹕「」『』"“”？！、]{1,20})${Q_CLOSE}?`, roles: NAME_ONLY },
 ];
 
 export const CONSTRUCTION_IDS = FRAMES.map((f) => f.id);
@@ -286,6 +298,22 @@ export const CONSTRUCTIONS: Construction[] = [
       'that 云 means "said" wherever it occurs: 云 also means "thus", and only the frame with a quotation '
       + 'after it is read at all',
       'that a citation chain is one relation: A云 and B云 are one frame each and neither implies the other',
+    ],
+  },
+  {
+    id: 'naming', frame: '<M>：「<N>」', roles: NAME_ONLY,
+    interpretation: 'A name is bestowed: N is what the thing is called. Not speech — nothing is said by '
+      + 'anyone. The convention this construction relies on, STATED because it is not the usual reading of '
+      + 'the role name: `theme` holds the bestowed NAME, not the topic of the passage.',
+    reuseContract: 'One span, the name. The thing named (the definiendum) lies OUTSIDE the frame and is '
+      + 'deliberately not captured, so a caller that wants it must find it in the text and may not read it '
+      + 'out of `theme`. The marker set is closed and declared: 謂之, 名曰, 號曰, 是為, 一曰, 亦曰.',
+    doesNotLicence: [
+      'that anyone spoke: 謂之X and 名曰X report a naming practice, not an utterance, and filing them under '
+      + 'the speech frames would assert a speaker who never spoke',
+      'that the thing named is the theme: the definiendum is outside the frame, and `theme` here is the NAME',
+      'that the name is standard or accepted — 謂之「鄉葬」 records that people called it that, nothing more',
+      'that 謂…曰 is the same construction: 之 blocks 曰, and the speech frame needs the 曰',
     ],
   },
 ];

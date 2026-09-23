@@ -1,6 +1,6 @@
 {
   "schema": "wenyan.relations.readiness.v1",
-  "generatedAt": "2026-09-23T13:07:39.300Z",
+  "generatedAt": "2026-09-23T13:57:28.711Z",
   "grammar": "wenyan.relations.v1",
   "store": {
     "path": "knowledge/relations/evidence.jsonl",
@@ -188,9 +188,9 @@
     }
   ],
   "corpusCoverage": {
-    "passages": 213390,
-    "known": 28061,
-    "rate": 0.131501,
+    "passages": 217362,
+    "known": 35918,
+    "rate": 0.165245,
     "readErrors": 0,
     "firstReadError": null,
     "perGrammar": {
@@ -201,8 +201,8 @@
         "readErrors": 0
       },
       "wenyan.relations.reporting.v1": {
-        "known": 28061,
-        "rate": 0.131501,
+        "known": 35918,
+        "rate": 0.165245,
         "evidenceRecords": 14,
         "readErrors": 0
       }
@@ -286,7 +286,7 @@
       "name": "grounded in the target corpus",
       "required": false,
       "pass": true,
-      "evidence": "wenyan.relations.v1: 0/213390 (0, evidence 6); wenyan.relations.reporting.v1: 28061/213390 (0.131501, evidence 14) — floor 0.01, best grammar wenyan.relations.reporting.v1",
+      "evidence": "wenyan.relations.v1: 0/217362 (0, evidence 6); wenyan.relations.reporting.v1: 35918/217362 (0.165245, evidence 14) — floor 0.01, best grammar wenyan.relations.reporting.v1",
       "claimStatus": "bounded-experiment",
       "claimStatusBasis": "a coverage rate measured over the corpus by running each declared grammar over every passage",
       "claimStatusBounds": "one corpus build; a rebuild moves the denominator",
