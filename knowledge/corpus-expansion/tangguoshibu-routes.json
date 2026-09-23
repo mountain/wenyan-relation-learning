@@ -1,0 +1,18 @@
+{
+  "schema": "wenyan.corpus-expansion.routes.v1",
+  "routes": {
+    "唐國史補": {
+      "zh": "唐國史補",
+      "tradition": "historical",
+      "kind": "筆記体史料：制度掌故＋記言",
+      "resolvedTitle": "唐國史補",
+      "licenseTags": [
+        "PD-old"
+      ],
+      "route": "mainPageLinks",
+      "chapters": 3,
+      "status": "OK"
+    }
+  },
+  "preregistration": "见 tmp/fetch-6.mjs 头部注释"
+}

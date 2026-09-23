@@ -1,24 +1,10 @@
 {
   "schema": "wenyan.corpus.manifest.v1",
   "format": "wenyan.corpus.v1",
-  "generatedAt": "2026-09-23T13:15:14.770Z",
+  "generatedAt": "2026-09-23T13:33:55.050Z",
   "partialRebuild": {
     "only": [
-      "歷代名畫記",
-      "圖畫見聞誌",
-      "林泉高致",
-      "苦瓜和尚畫語錄",
-      "古畫品錄",
-      "詩品",
-      "滄浪詩話",
-      "人間詞話",
-      "六一詩話",
-      "隨園詩話",
-      "書譜",
-      "書斷",
-      "續書譜",
-      "藝舟雙楫",
-      "海岳名言"
+      "唐國史補"
     ],
     "note": "this run rebuilt a subset; other entries are carried over from the previous manifest"
   },
@@ -38,10 +24,10 @@
     "ctextNotice": "ctext.org was NOT used. Its robots.txt and anti-scraping notice state that automated access is not authorized and direct researchers to subscribe; no content was retrieved from it."
   },
   "counts": {
-    "works": 133,
-    "sections": 4740,
-    "passages": 217054,
-    "characters": 26016803
+    "works": 134,
+    "sections": 4743,
+    "passages": 217362,
+    "characters": 26040734
   },
   "works": [
     {
@@ -3116,6 +3102,26 @@
       "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
       "limitations": [
         "画论／诗论／书论（用户 2026-09-24 指定）。类别 书论。路由 single，1 章；授权标签 北宋作品。"
+      ]
+    },
+    {
+      "id": "唐國史補",
+      "zh": "唐國史補",
+      "tradition": "historical",
+      "file": "works/唐國史補.json",
+      "sha256": "de86f98c9066a2ed7355a66fb87449c636e01a4f81386dfa42d937d0ee0db3be",
+      "counts": {
+        "sections": 3,
+        "passages": 308,
+        "characters": 23931
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "mainPageLinks",
+      "licenseTemplates": {},
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "结构因素探查（预注册见 tmp/fetch-6.mjs 头部）：笔记体史料，制度掌故＋记言。路由 mainPageLinks，3 章；授权标签 PD-old。"
       ]
     }
   ],

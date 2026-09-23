@@ -1055,4 +1055,12 @@ export const WORKS = [
     discovery: { kind: 'single', page: "海嶽名言" },
     note: "画论／诗论／书论（用户 2026-09-24 指定）。类别 书论。路由 single，1 章；授权标签 北宋作品。",
   },
+  // ---------------- 第十二批：唐國史補（结构因素探查）----------------
+  {
+    id: "唐國史補",
+    zh: "唐國史補",
+    tradition: 'historical',
+    discovery: { kind: 'mainPageLinks', mainPage: "唐國史補" },
+    note: "结构因素探查（预注册见 tmp/fetch-6.mjs 头部）：笔记体史料，制度掌故＋记言。路由 mainPageLinks，3 章；授权标签 PD-old。",
+  },
 ];
