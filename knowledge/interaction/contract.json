@@ -1,0 +1,154 @@
+{
+  "schema": "wenyan.interaction.contract.v1",
+  "purpose": "What an interactive front end may show, and what it must show, when it displays this repository's answers. The answer OBJECT already exists — tools/dialogue/ask.mjs prints it as JSON — so this contract declares its shape and the rendering obligations that keep a UI from reproducing conflations the repository spent effort forbidding (knowledge/conflations.json).",
+  "questionTypes": {
+    "declaredIn": "tools/dialogue/contract.json",
+    "rule": "LINKED, NOT DUPLICATED. A front end must read the question types from there; a copy here would drift, and an undeclared question type is Refused by the contract rather than guessed at.",
+    "generator": "tools/interaction/generate.mjs (declared policy: stratified corpus sample + fixed diagnostics)"
+  },
+  "answerStates": {
+    "Answered": {
+      "shape": [
+        "state",
+        "<payload varies by question type>",
+        "warrant"
+      ],
+      "warrant": {
+        "kind": "store | derivation",
+        "refs": "evidence record ids",
+        "derivation": "string",
+        "noEvidence": "true only for a declared derivation over an EMPTY evidence set (contract I1)"
+      },
+      "mustRender": [
+        "warrant.derivation",
+        "warrant.refs, or the declared noEvidence case",
+        "every role, with null rendered as UNEXPRESSED rather than 'unknown', blank or hidden",
+        "additionalMatches when > 0 — the passage holds more frames than the one read"
+      ],
+      "mustNotRender": [
+        "the roles without the warrant (an answer shown as a bare fact)",
+        "a null role filled in from context, from the dialogue, or from another passage"
+      ]
+    },
+    "Unknown": {
+      "shape": [
+        "state",
+        "reason",
+        "missing"
+      ],
+      "mustRender": [
+        "reason AND missing — contract I2 requires both, so a UI showing only 'no answer' has dropped the contract"
+      ],
+      "mustNotRender": [
+        "a plausible reading in place of the reason; 'Unknown' is not a failure to be papered over"
+      ]
+    },
+    "Refused": {
+      "shape": [
+        "state",
+        "reason"
+      ],
+      "mustRender": [
+        "reason"
+      ],
+      "note": "an undeclared question type is refused, not guessed at"
+    },
+    "Inconsistent": {
+      "shape": [
+        "state",
+        "reason",
+        "missing"
+      ],
+      "mustRender": [
+        "reason",
+        "that the condition is STORE-WIDE: nothing is licensed while the store does not replay"
+      ],
+      "mustNotRender": [
+        "other answers presented as if the store were sound"
+      ]
+    },
+    "Contested": {
+      "shape": [
+        "state",
+        "disagreement"
+      ],
+      "disagreement": {
+        "holds": [],
+        "fails": []
+      },
+      "mustRender": [
+        "BOTH SIDES by name — a local disagreement is not a store-wide inconsistency"
+      ],
+      "mustNotRender": [
+        "a single side as the conclusion"
+      ]
+    }
+  },
+  "claimDisplays": {
+    "rule": "Any claim about what the system can do must carry the readiness gate's claimStatus (the five-rung ladder) and supportKind (evidence | proof | verification | measurement), both from tools/knowledge/claim-status.mjs.",
+    "why": "PASS alone conflates 'we ran a bounded measurement above a floor' with 'this holds'. The repository prints 'PASS G2 [bounded-verified / evidence]' for exactly this reason.",
+    "coverage": "A coverage figure may not appear without its denominator AND the measured ceiling: 22.43% of ALL passages (18,301/81,575), ceiling 0.244, aspirational target 0.5 NOT met, gate floor 0.15 (revised 2026-09-23 — see tools/knowledge/floors.mjs)."
+  },
+  "consumableArtifacts": [
+    {
+      "path": "data/corpus/manifest.json",
+      "schema": "wenyan.corpus.v1 manifest",
+      "derived": false,
+      "note": "77 works; each entry carries licence tags and a file"
+    },
+    {
+      "path": "data/corpus/works/*.json",
+      "schema": "wenyan.corpus.work.v1",
+      "derived": false,
+      "note": "passages with ids, source pages, revisions, per-work licence; sections carry sourcePage/sourceRevid"
+    },
+    {
+      "path": "knowledge/relations/evidence.jsonl",
+      "schema": "wenyan.relations.evidence.v1 + evidence-retraction.v1",
+      "derived": false,
+      "note": "append-only; RETRACTED records must not be shown as live"
+    },
+    {
+      "path": "knowledge/relations/readiness.json",
+      "derived": true,
+      "note": "per-gate claimStatus / supportKind / floors — refresh with readiness.mjs --write"
+    },
+    {
+      "path": "knowledge/dialogue/readiness.json",
+      "derived": true,
+      "note": "answerability per grammar; its denominator goes stale on every corpus rebuild (that happened once)"
+    },
+    {
+      "path": "knowledge/intertext/citations.jsonl",
+      "schema": "wenyan.intertext.citation.v1",
+      "derived": true,
+      "note": "918 citations with host/quote/status; verify with tools/intertext/verify.mjs"
+    },
+    {
+      "path": "knowledge/intertext/variants.json",
+      "derived": false,
+      "note": "the two ACCEPTED pairs; measuredNotAdmitted candidates are NOT applied"
+    },
+    {
+      "path": "knowledge/APERTURES.md",
+      "derived": true,
+      "note": "generated; do not edit"
+    },
+    {
+      "path": "knowledge/conflations.json",
+      "derived": false,
+      "note": "six forbidden conflations with witnesses"
+    }
+  ],
+  "licensing": {
+    "rule": "A front end that republishes corpus TEXT inherits the per-work licence. Read license.pageTemplates from each data/corpus/works/<id>.json; works with no tag fall to the site-wide default.",
+    "measured": "28 of 77 works carry no licence template and therefore fall to CC BY-SA 4.0 (attribution + ShareAlike). The rest carry public-domain templates (PD-old, 唐朝作品, …).",
+    "whyItMatters": "This is the one obligation a public site takes on that a local tool does not, and it is already measured (knowledge/APERTURES.md A6)."
+  },
+  "nonClaims": [
+    "A reading is a DECLARED CONVENTION pinned by supervised labels, not a factual claim about the text.",
+    "The citations are a measured textual relation, not influence history, and a quotation found is not proof that the host meant that work.",
+    "An unexpressed role is not an unknown role: the construction does not state it, and that is what the missing-role contract (tools/grammar/contract.json missingRoleSemantics) governs.",
+    "A front end may not present the repository's non-claims as satisfied: see each artifact above for its own."
+  ]
+}

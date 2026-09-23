@@ -1,0 +1,2802 @@
+{
+  "schema": "wenyan.interaction.answers.v1",
+  "generatedBy": "tools/interaction/generate.mjs",
+  "renderingObligations": "knowledge/interaction/contract.json — read it: this file is the data, that file says what a UI must and must not show for each answer state.",
+  "grammar": "wenyan.relations.reporting.v1",
+  "store": "knowledge/relations/evidence.jsonl",
+  "policy": {
+    "perWork": 1,
+    "diagnostics": 4,
+    "note": "stratified one-per-work plus fixed diagnostics"
+  },
+  "totals": {
+    "questions": 81,
+    "byState": {
+      "Answered": 21,
+      "Unknown": 60
+    },
+    "contractThrew": 0
+  },
+  "answers": [
+    {
+      "id": "corpus:analects:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "analects",
+        "section": "analects.1",
+        "passageId": "1.1",
+        "sourcePage": "論語/學而第一",
+        "sourceRevid": 2058123
+      },
+      "question": {
+        "type": "Q1",
+        "text": "子曰：「學而時習之，不亦說乎？有朋自遠方來，不亦樂乎？人不知而不慍，不亦君子乎？」",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Answered",
+        "roles": {
+          "agent": "子",
+          "recipient": null,
+          "theme": "學而時習之，不亦說乎？有朋自遠方來，不亦樂乎？人不知而不慍，不亦君子乎？"
+        },
+        "construction": "yue-quote",
+        "grammar": "wenyan.relations.reporting.v1",
+        "occurrences": [
+          {
+            "slot": 0,
+            "value": "子",
+            "start": 0,
+            "end": 1
+          },
+          {
+            "slot": 1,
+            "value": "學而時習之，不亦說乎？有朋自遠方來，不亦樂乎？人不知而不慍，不亦君子乎？",
+            "start": 4,
+            "end": 40
+          }
+        ],
+        "warrant": {
+          "kind": "evidence",
+          "refs": [
+            "corpus:analects:1.1:yue-quote",
+            "corpus:mencius:1.1:yue-quote"
+          ],
+          "derivation": "replay(evidence) leaves 1 of 2 role permutations for 'yue-quote' in wenyan.relations.reporting.v1"
+        },
+        "verified": {
+          "ok": true,
+          "note": "roles reproduce"
+        }
+      }
+    },
+    {
+      "id": "corpus:mencius:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "mencius",
+        "section": "mencius.1",
+        "passageId": "1.1",
+        "sourcePage": "孟子/梁惠王上",
+        "sourceRevid": 2642991
+      },
+      "question": {
+        "type": "Q1",
+        "text": "孟子見梁惠王。王曰：「叟！不遠千里而來，亦將有以利吾國乎？」",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Answered",
+        "roles": {
+          "agent": "王",
+          "recipient": null,
+          "theme": "叟！不遠千里而來，亦將有以利吾國乎？"
+        },
+        "construction": "yue-quote",
+        "grammar": "wenyan.relations.reporting.v1",
+        "occurrences": [
+          {
+            "slot": 0,
+            "value": "王",
+            "start": 7,
+            "end": 8
+          },
+          {
+            "slot": 1,
+            "value": "叟！不遠千里而來，亦將有以利吾國乎？",
+            "start": 11,
+            "end": 29
+          }
+        ],
+        "warrant": {
+          "kind": "evidence",
+          "refs": [
+            "corpus:analects:1.1:yue-quote",
+            "corpus:mencius:1.1:yue-quote"
+          ],
+          "derivation": "replay(evidence) leaves 1 of 2 role permutations for 'yue-quote' in wenyan.relations.reporting.v1"
+        },
+        "verified": {
+          "ok": true,
+          "note": "roles reproduce"
+        }
+      }
+    },
+    {
+      "id": "corpus:great-learning:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "great-learning",
+        "section": "great-learning.1",
+        "passageId": "1.1",
+        "sourcePage": "禮記/大學",
+        "sourceRevid": 2809685
+      },
+      "question": {
+        "type": "Q1",
+        "text": "大學之道，在明明德，在親民，在止於至善。知止而後有定，定而後能靜，靜而後能安，安而後能慮，慮而後能得。物有本末，事有終始，知所先後，則近道矣。古之欲明明德於天下者，先治其國；欲治其國者，先齊其家；欲齊其家者，先脩其身；欲脩其身者，先正其心；欲正其心者，先誠其意；欲誠其意者，先致其知，致知在格物。物格而後知致，知致而後意誠，意誠而後心正，心正而後身脩，身脩而後家齊，家齊而後國治，國治而後天下平。自天子以至於庶人，壹是皆以脩身爲本。其本亂而末治者否矣，其所厚者薄，而其所薄者厚，未之有也！此謂知本，此謂知之至也。",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Unknown",
+        "reason": "outside-declared-grammar",
+        "missing": "a declared grammar in which this text is in-grammar; tried wenyan.relations.reporting.v1 — 2 grammar(s) are declared",
+        "verified": {
+          "ok": true,
+          "note": "nothing to recompute"
+        }
+      }
+    },
+    {
+      "id": "corpus:doctrine-of-the-mean:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "doctrine-of-the-mean",
+        "section": "doctrine-of-the-mean.1",
+        "passageId": "1.1",
+        "sourcePage": "禮記/中庸",
+        "sourceRevid": 2346484
+      },
+      "question": {
+        "type": "Q1",
+        "text": "天命之謂性；率性之謂道；修道之謂敎。道也者，不可須臾離也；可離，非道也。是故君子戒愼乎其所不睹，恐懼乎其所不聞。莫見乎隱，莫顯乎微。故君子愼其獨也。喜怒哀樂之未發，謂之中。發而皆中節，謂之和。中也者，天下之大本也。和也者，天下之達道也。致中和，天地位焉，萬物育焉。",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Unknown",
+        "reason": "outside-declared-grammar",
+        "missing": "a declared grammar in which this text is in-grammar; tried wenyan.relations.reporting.v1 — 2 grammar(s) are declared",
+        "verified": {
+          "ok": true,
+          "note": "nothing to recompute"
+        }
+      }
+    },
+    {
+      "id": "corpus:classic-of-poetry:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "classic-of-poetry",
+        "section": "classic-of-poetry.1",
+        "passageId": "1.1",
+        "sourcePage": "詩經/關雎",
+        "sourceRevid": 2648636
+      },
+      "question": {
+        "type": "Q1",
+        "text": "關關雎鳩，在河之洲。\n窈窕淑女，君子好逑。",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Unknown",
+        "reason": "outside-declared-grammar",
+        "missing": "a declared grammar in which this text is in-grammar; tried wenyan.relations.reporting.v1 — 2 grammar(s) are declared",
+        "verified": {
+          "ok": true,
+          "note": "nothing to recompute"
+        }
+      }
+    },
+    {
+      "id": "corpus:book-of-documents:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "book-of-documents",
+        "section": "book-of-documents.1",
+        "passageId": "1.1",
+        "sourcePage": "尚書/堯典",
+        "sourceRevid": 8732107
+      },
+      "question": {
+        "type": "Q1",
+        "text": "曰若稽古帝堯：曰放勛。欽明文思安安。允恭克讓，光被四表，格于上下。克明俊德：以親九族，九族既睦；平章百姓，百姓昭明；協和萬邦，黎民於變時雍。",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Unknown",
+        "reason": "outside-declared-grammar",
+        "missing": "a declared grammar in which this text is in-grammar; tried wenyan.relations.reporting.v1 — 2 grammar(s) are declared",
+        "verified": {
+          "ok": true,
+          "note": "nothing to recompute"
+        }
+      }
+    },
+    {
+      "id": "corpus:zhouyi:1.3",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "zhouyi",
+        "section": "zhouyi.1",
+        "passageId": "1.3",
+        "sourcePage": "周易/乾",
+        "sourceRevid": 2404991
+      },
+      "question": {
+        "type": "Q1",
+        "text": "易經：\n乾：元亨。利貞。\n初九：潛龍勿用。\n九二：見龍在田，利見大人。\n九三：君子終日乾乾，夕惕若；厲，无咎。\n九四：或躍在淵，无咎。\n九五：飛龍在天，利見大人。\n上九：亢龍，有悔。\n用九：見羣龍无首，吉。",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Unknown",
+        "reason": "outside-declared-grammar",
+        "missing": "a declared grammar in which this text is in-grammar; tried wenyan.relations.reporting.v1 — 2 grammar(s) are declared",
+        "verified": {
+          "ok": true,
+          "note": "nothing to recompute"
+        }
+      }
+    },
+    {
+      "id": "corpus:book-of-rites:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "book-of-rites",
+        "section": "book-of-rites.1",
+        "passageId": "1.1",
+        "sourcePage": "禮記/曲禮上",
+        "sourceRevid": 2592817
+      },
+      "question": {
+        "type": "Q1",
+        "text": "《曲禮》曰：「毋不敬，儼若思，安定辭，安民哉。」",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Answered",
+        "roles": {
+          "agent": "《曲禮》",
+          "recipient": null,
+          "theme": "毋不敬，儼若思，安定辭，安民哉。"
+        },
+        "construction": "yue-quote",
+        "grammar": "wenyan.relations.reporting.v1",
+        "occurrences": [
+          {
+            "slot": 0,
+            "value": "《曲禮》",
+            "start": 0,
+            "end": 4
+          },
+          {
+            "slot": 1,
+            "value": "毋不敬，儼若思，安定辭，安民哉。",
+            "start": 7,
+            "end": 23
+          }
+        ],
+        "warrant": {
+          "kind": "evidence",
+          "refs": [
+            "corpus:analects:1.1:yue-quote",
+            "corpus:mencius:1.1:yue-quote"
+          ],
+          "derivation": "replay(evidence) leaves 1 of 2 role permutations for 'yue-quote' in wenyan.relations.reporting.v1"
+        },
+        "verified": {
+          "ok": true,
+          "note": "roles reproduce"
+        }
+      }
+    },
+    {
+      "id": "corpus:laozi:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "laozi",
+        "section": "laozi.1",
+        "passageId": "1.1",
+        "sourcePage": "道德經 (王弼本)",
+        "sourceRevid": 2354026
+      },
+      "question": {
+        "type": "Q1",
+        "text": "道可道，非常道，名可名，非常名；",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Unknown",
+        "reason": "outside-declared-grammar",
+        "missing": "a declared grammar in which this text is in-grammar; tried wenyan.relations.reporting.v1 — 2 grammar(s) are declared",
+        "verified": {
+          "ok": true,
+          "note": "nothing to recompute"
+        }
+      }
+    },
+    {
+      "id": "corpus:zhuangzi:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "zhuangzi",
+        "section": "zhuangzi.1",
+        "passageId": "1.1",
+        "sourcePage": "莊子/逍遙遊",
+        "sourceRevid": 9852766
+      },
+      "question": {
+        "type": "Q1",
+        "text": "北冥有魚，其名爲鯤。鯤之大，不知其幾千里也。化而爲鳥，其名爲鵬。鵬之背，不知其幾千里也；怒而飛，其翼若垂天之雲。是鳥也，海運則將徙於南冥。南冥者，天池也。《齊諧》者，志怪者也。《諧》之言曰：「鵬之徙於南冥也，水擊三千里，摶扶摇而上者九萬里，去以六月息者也。」野馬也，塵埃也，生物之以息相吹也。天之蒼蒼，其正色邪？其遠而無所至極邪？其視下也，亦若是則已矣。且夫水之積也不厚，則負大舟也無力。覆杯水於坳堂之上，則芥爲之舟；置杯焉則膠，水淺而舟大也。風之積也不厚，則其負大翼也無力。故九萬里，則風斯在下矣，而後乃今培風；背負青天而莫之夭閼者，而後乃今將圖南。",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Answered",
+        "roles": {
+          "agent": "《諧》之言",
+          "recipient": null,
+          "theme": "鵬之徙於南冥也，水擊三千里，摶扶摇而上者九萬里，去以六月息者也。"
+        },
+        "construction": "yue-quote",
+        "grammar": "wenyan.relations.reporting.v1",
+        "occurrences": [
+          {
+            "slot": 0,
+            "value": "《諧》之言",
+            "start": 88,
+            "end": 93
+          },
+          {
+            "slot": 1,
+            "value": "鵬之徙於南冥也，水擊三千里，摶扶摇而上者九萬里，去以六月息者也。",
+            "start": 96,
+            "end": 128
+          }
+        ],
+        "warrant": {
+          "kind": "evidence",
+          "refs": [
+            "corpus:analects:1.1:yue-quote",
+            "corpus:mencius:1.1:yue-quote"
+          ],
+          "derivation": "replay(evidence) leaves 1 of 2 role permutations for 'yue-quote' in wenyan.relations.reporting.v1"
+        },
+        "verified": {
+          "ok": true,
+          "note": "roles reproduce"
+        }
+      }
+    },
+    {
+      "id": "corpus:xunzi:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "xunzi",
+        "section": "xunzi.1",
+        "passageId": "1.1",
+        "sourcePage": "荀子/勸學篇",
+        "sourceRevid": 9869421
+      },
+      "question": {
+        "type": "Q1",
+        "text": "君子曰：學不可以已。靑，取之於藍而靑於藍；冰，水爲之而寒於水。木直中繩，輮以爲輪，其曲中規，雖有槁暴，不復挺者，輮使之然也。故木受繩則直，金就礪則利，君子博學而日參省乎己，則知明而行無過矣。故不登髙山，不知天之髙也；不臨深谿，不知地之厚也；不聞先王之遺言，不知學問之大也。于、越、夷、貉之子，生而同聲，長而異俗，教使之然也。《詩》曰：「嗟爾君子，無恆安息。靖共爾位，好是正直。神之聽之，介爾景福。」神莫大於化道，福莫長於無禍。吾嘗終日而思矣，不如須臾之所學也，吾嘗跂而望矣，不如登髙之博見也。登髙而招，臂非加長也，而見者遠；順風而呼，聲非加疾也，而聞者彰。假輿馬者，非利足也，而致千里；假舟楫者，非能水也，而絶江河。君子生非異也，善假於物也。南方有鳥焉，名曰蒙鳩，以羽爲巣而編之以髮，繫之葦苕，風至苕折，卵破子死。巣非不完也，所繫者然也。西方有木焉，名曰射干，莖長四寸，生於髙山之上，而臨百仞之淵，木莖非能長也，所立者然也。蓬生麻中，不扶而直。蘭槐之根是爲芷。其漸之滫，君子不近，庶人不服，其質非不美也，所漸者然也。故君子居必擇鄕，遊必就士，所以防邪僻而近中正也。物類之起，必有所始。榮辱之來，必象其德。肉腐出蟲，魚枯生蠹。怠慢忘身，禍災乃作。强自取柱，柔自取束。邪穢在身，怨之所構。施薪若一，火就燥也；平地若一，水就濕也。草木疇生，禽獸羣焉，物各從其類也。是故質的張而弓矢至焉，林木茂而斧斤至焉，樹成蔭而衆鳥息焉，醯酸而蜹聚焉。故言有召禍也，行有招辱也，君子愼其所立乎！",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Answered",
+        "roles": {
+          "agent": "《詩》",
+          "recipient": null,
+          "theme": "嗟爾君子，無恆安息。靖共爾位，好是正直。神之聽之，介爾景福。"
+        },
+        "construction": "yue-quote",
+        "grammar": "wenyan.relations.reporting.v1",
+        "occurrences": [
+          {
+            "slot": 0,
+            "value": "《詩》",
+            "start": 162,
+            "end": 165
+          },
+          {
+            "slot": 1,
+            "value": "嗟爾君子，無恆安息。靖共爾位，好是正直。神之聽之，介爾景福。",
+            "start": 168,
+            "end": 198
+          }
+        ],
+        "warrant": {
+          "kind": "evidence",
+          "refs": [
+            "corpus:analects:1.1:yue-quote",
+            "corpus:mencius:1.1:yue-quote"
+          ],
+          "derivation": "replay(evidence) leaves 1 of 2 role permutations for 'yue-quote' in wenyan.relations.reporting.v1"
+        },
+        "verified": {
+          "ok": true,
+          "note": "roles reproduce"
+        }
+      }
+    },
+    {
+      "id": "corpus:hanfeizi:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "hanfeizi",
+        "section": "hanfeizi.1",
+        "passageId": "1.1",
+        "sourcePage": "韓非子/初見秦",
+        "sourceRevid": 2327652
+      },
+      "question": {
+        "type": "Q1",
+        "text": "臣聞：「不知而言，不智；知而不言，不忠。」爲人臣不忠，當死；言而不當，亦當死。雖然，臣願悉言所聞，唯大王裁其罪。",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Unknown",
+        "reason": "outside-declared-grammar",
+        "missing": "a declared grammar in which this text is in-grammar; tried wenyan.relations.reporting.v1 — 2 grammar(s) are declared",
+        "verified": {
+          "ok": true,
+          "note": "nothing to recompute"
+        }
+      }
+    },
+    {
+      "id": "corpus:mozi:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "mozi",
+        "section": "mozi.1",
+        "passageId": "1.1",
+        "sourcePage": "墨子/親士",
+        "sourceRevid": 2637025
+      },
+      "question": {
+        "type": "Q1",
+        "text": "入國而不存其士，則亡國矣；見賢而不急，則緩其君矣。非賢無急，非士無與慮國。緩賢忘士而能以其國存者，未曾有也。",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Unknown",
+        "reason": "outside-declared-grammar",
+        "missing": "a declared grammar in which this text is in-grammar; tried wenyan.relations.reporting.v1 — 2 grammar(s) are declared",
+        "verified": {
+          "ok": true,
+          "note": "nothing to recompute"
+        }
+      }
+    },
+    {
+      "id": "corpus:guanzi:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "guanzi",
+        "section": "guanzi.1",
+        "passageId": "1.1",
+        "sourcePage": "管子/第01篇牧民",
+        "sourceRevid": 2341640
+      },
+      "question": {
+        "type": "Q1",
+        "text": "凡有地牧民者，務在四時，守在倉廩。國多財則遠者來，地辟舉則民留處，倉廩實則知禮節，衣食足則知榮辱，上服度則六親固，四維張則君令行。故省刑之要，在禁文巧；守國之度，在飾四維；順民之經，在明鬼神，祗山川，敬宗廟，恭祖舊。不務天時則財不生，不務地利則倉廩不盈。野蕪曠則民乃菅，上無量則民乃妄。文巧不禁則民乃淫，不墇兩原則刑乃繁。不明鬼神則陋民不悟，不祗山川則威令不聞，不敬宗廟則民乃上校，不恭祖舊則孝悌不備。四維不張，國乃滅亡。",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Unknown",
+        "reason": "outside-declared-grammar",
+        "missing": "a declared grammar in which this text is in-grammar; tried wenyan.relations.reporting.v1 — 2 grammar(s) are declared",
+        "verified": {
+          "ok": true,
+          "note": "nothing to recompute"
+        }
+      }
+    },
+    {
+      "id": "corpus:liezi:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "liezi",
+        "section": "liezi.1",
+        "passageId": "1.1",
+        "sourcePage": "列子/天瑞篇",
+        "sourceRevid": 2269059
+      },
+      "question": {
+        "type": "Q1",
+        "text": "子列子居鄭圃，四十年人無識者。國君卿大夫眎之，猶衆庶也。國不足，將嫁於衛。弟子曰：「先生往無反期，弟子敢有所謁，先生將何以教？先生不聞壺丘子林之言乎？」子列子笑曰：「壺子何言哉？雖然，夫子嘗語伯昏瞀人。吾側聞之，試以告女。其言曰：有生不生，有化不化。不生者能生生，不化者能化化。生者不能不生，化者不能不化。故常生常化。常生常化者，無時不生，無時不化。陰陽爾，四時爾，不生者疑獨，不化者往復。往復，其際不可終；疑獨，其道不可窮。《黃帝書》曰：『谷神不死，是謂玄牝。玄牝之門，是謂天地之根。綿綿若存，用之不勤。』故生物者不生，化物者不化。自生自化，自形自色，自智自力，自消自息。謂之生化形色智力消息者，非也。」",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Answered",
+        "roles": {
+          "agent": "弟子",
+          "recipient": null,
+          "theme": "先生往無反期，弟子敢有所謁，先生將何以教？先生不聞壺丘子林之言乎？"
+        },
+        "construction": "yue-quote",
+        "grammar": "wenyan.relations.reporting.v1",
+        "occurrences": [
+          {
+            "slot": 0,
+            "value": "弟子",
+            "start": 37,
+            "end": 39
+          },
+          {
+            "slot": 1,
+            "value": "先生往無反期，弟子敢有所謁，先生將何以教？先生不聞壺丘子林之言乎？",
+            "start": 42,
+            "end": 75
+          }
+        ],
+        "warrant": {
+          "kind": "evidence",
+          "refs": [
+            "corpus:analects:1.1:yue-quote",
+            "corpus:mencius:1.1:yue-quote"
+          ],
+          "derivation": "replay(evidence) leaves 1 of 2 role permutations for 'yue-quote' in wenyan.relations.reporting.v1"
+        },
+        "verified": {
+          "ok": true,
+          "note": "roles reproduce"
+        }
+      }
+    },
+    {
+      "id": "corpus:sunzi:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "sunzi",
+        "section": "sunzi.1",
+        "passageId": "1.1",
+        "sourcePage": "孫子兵法",
+        "sourceRevid": 7906064
+      },
+      "question": {
+        "type": "Q1",
+        "text": "孫子曰：兵者，國之大事，死生之地，存亡之道，不可不察也。故經之以五事，校之以七計，而索其情：一曰道，二曰天，三曰地，四曰將，五曰法。",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Unknown",
+        "reason": "outside-declared-grammar",
+        "missing": "a declared grammar in which this text is in-grammar; tried wenyan.relations.reporting.v1 — 2 grammar(s) are declared",
+        "verified": {
+          "ok": true,
+          "note": "nothing to recompute"
+        }
+      }
+    },
+    {
+      "id": "corpus:zuozhuan:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "zuozhuan",
+        "section": "zuozhuan.1",
+        "passageId": "1.1",
+        "sourcePage": "春秋左氏傳序",
+        "sourceRevid": 2675987
+      },
+      "question": {
+        "type": "Q1",
+        "text": "春秋者，魯史記之名也。記事者，以事繫日，以日繫月，以月繫時，以時繫年，所以紀遠近，別同異也。故史之所記，必表年以首事；年有四時，故錯舉以為所記之名也。周禮有史官，掌邦國四方之事，達四方之志。諸侯亦各有國史，大事書之於策，小事簡牘而已。孟子曰：「楚謂之檮杌，晉謂之乘，而魯謂之春秋，其實一也。」韓宣子適魯，見易象與魯春秋，曰：「周禮盡在魯矣。吾乃今知周公之德，與周之所以王也。」韓子所見，蓋周之舊典禮經也。",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Answered",
+        "roles": {
+          "agent": "孟子",
+          "recipient": null,
+          "theme": "楚謂之檮杌，晉謂之乘，而魯謂之春秋，其實一也。"
+        },
+        "construction": "yue-quote",
+        "grammar": "wenyan.relations.reporting.v1",
+        "occurrences": [
+          {
+            "slot": 0,
+            "value": "孟子",
+            "start": 117,
+            "end": 119
+          },
+          {
+            "slot": 1,
+            "value": "楚謂之檮杌，晉謂之乘，而魯謂之春秋，其實一也。",
+            "start": 122,
+            "end": 145
+          }
+        ],
+        "warrant": {
+          "kind": "evidence",
+          "refs": [
+            "corpus:analects:1.1:yue-quote",
+            "corpus:mencius:1.1:yue-quote"
+          ],
+          "derivation": "replay(evidence) leaves 1 of 2 role permutations for 'yue-quote' in wenyan.relations.reporting.v1"
+        },
+        "verified": {
+          "ok": true,
+          "note": "roles reproduce"
+        }
+      }
+    },
+    {
+      "id": "corpus:gongyang:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "gongyang",
+        "section": "gongyang.1",
+        "passageId": "1.1",
+        "sourcePage": "春秋公羊傳/隱公",
+        "sourceRevid": 2454699
+      },
+      "question": {
+        "type": "Q1",
+        "text": "元年春，王正月。元年者何？君之始年也。春者何？歲之始也。王者孰謂？謂文王也。曷為先言王而後言正月？王正月也。何言乎王正月？大一統也。公何以不言即位？成公意也。何成乎公之意？公將平國而反之桓。曷為反之桓？桓幼而貴，隱長而卑，其為尊卑也微，國人莫知。隱長又賢，諸大夫扳隱而立之。隱於是焉而辭立，則未知桓之將必得立也。且如桓立，則恐諸大夫之不能相幼君也，故凡隱之立為桓立也。隱長又賢，何以不宜立？立適以長不以賢，立子以貴不以長。桓何以貴？母貴也。母貴則子何以貴？子以母貴，母以子貴。",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Unknown",
+        "reason": "outside-declared-grammar",
+        "missing": "a declared grammar in which this text is in-grammar; tried wenyan.relations.reporting.v1 — 2 grammar(s) are declared",
+        "verified": {
+          "ok": true,
+          "note": "nothing to recompute"
+        }
+      }
+    },
+    {
+      "id": "corpus:yili:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "yili",
+        "section": "yili.1",
+        "passageId": "1.1",
+        "sourcePage": "儀禮/士冠禮",
+        "sourceRevid": 2571704
+      },
+      "question": {
+        "type": "Q1",
+        "text": "士冠禮。筮於庿門。主人玄冠，朝服，緇帶，素韠，即位於門東，西面。有司如主人服，即位於西方，東面，北上。筮與席、所卦者，具饌於西塾。布席於門中，闑西閾外，西面。筮人執筴，抽上韇，兼執之，進受命於主人。宰自右少退，賛命。筮人許諾，右還，即席坐，西面。卦者在左。卒筮，書卦，執以示主人。主人受眡，反之。筮人還，東面，旅占，卒，進，告吉。若不吉，則筮遠日，如初儀。徹筮席。宗人告事畢。",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Unknown",
+        "reason": "outside-declared-grammar",
+        "missing": "a declared grammar in which this text is in-grammar; tried wenyan.relations.reporting.v1 — 2 grammar(s) are declared",
+        "verified": {
+          "ok": true,
+          "note": "nothing to recompute"
+        }
+      }
+    },
+    {
+      "id": "corpus:shiji:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "shiji",
+        "section": "shiji.1",
+        "passageId": "1.1",
+        "sourcePage": "史記/卷001",
+        "sourceRevid": 7903634
+      },
+      "question": {
+        "type": "Q1",
+        "text": "黃帝者，少典之子，姓公孫，名曰軒轅。生而神靈，弱而能言，幼而徇齊，長而敦敏，成而聰明。",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Unknown",
+        "reason": "outside-declared-grammar",
+        "missing": "a declared grammar in which this text is in-grammar; tried wenyan.relations.reporting.v1 — 2 grammar(s) are declared",
+        "verified": {
+          "ok": true,
+          "note": "nothing to recompute"
+        }
+      }
+    },
+    {
+      "id": "corpus:hanshu:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "hanshu",
+        "section": "hanshu.1",
+        "passageId": "1.1",
+        "sourcePage": "漢書/卷001",
+        "sourceRevid": 2647884
+      },
+      "question": {
+        "type": "Q1",
+        "text": "高祖，沛豐邑中陽里人也，姓劉氏。母媼嘗息大澤之陂，夢與神遇。是時雷電晦冥，父太公往視，則見交龍於上。已而有娠，遂產高祖。",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Unknown",
+        "reason": "outside-declared-grammar",
+        "missing": "a declared grammar in which this text is in-grammar; tried wenyan.relations.reporting.v1 — 2 grammar(s) are declared",
+        "verified": {
+          "ok": true,
+          "note": "nothing to recompute"
+        }
+      }
+    },
+    {
+      "id": "corpus:sanguozhi:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "sanguozhi",
+        "section": "sanguozhi.1",
+        "passageId": "1.1",
+        "sourcePage": "三國志/卷01",
+        "sourceRevid": 2585429
+      },
+      "question": {
+        "type": "Q1",
+        "text": "太祖武皇帝，沛國譙人也，姓曹，諱操，字孟德，漢相國參之後。桓帝世，曹騰爲中常侍大長秋，封費亭侯。養子嵩嗣，官至太尉，莫能審其生出本末。嵩生太祖。",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Unknown",
+        "reason": "outside-declared-grammar",
+        "missing": "a declared grammar in which this text is in-grammar; tried wenyan.relations.reporting.v1 — 2 grammar(s) are declared",
+        "verified": {
+          "ok": true,
+          "note": "nothing to recompute"
+        }
+      }
+    },
+    {
+      "id": "corpus:wenxian-tongkao:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "wenxian-tongkao",
+        "section": "wenxian-tongkao.1",
+        "passageId": "1.1",
+        "sourcePage": "文獻通考/卷一",
+        "sourceRevid": 7904863
+      },
+      "question": {
+        "type": "Q1",
+        "text": "堯遭洪水，天下分絕，使禹平水土，別九州。冀州：厥土白壤，厥田惟中中，厥賦上上錯。兗州：厥土黑墳，厥田惟中下，厥賦貞，作十有三載乃同。青州：厥土白墳，厥田惟上下，厥賦中上。徐州：厥土赤埴墳，厥田惟上中，厥賦中中。揚州：厥土惟塗泥，厥田惟下下，厥賦下上上錯。荊州：厥土惟塗泥，厥田惟下中，厥賦上下。豫州：厥土惟壤，下土墳壚，厥田惟中上，厥賦錯上中。梁州：厥土青黎，厥田惟下上，厥賦下中三錯。雍州：厥土黃壤，厥田上上，厥賦中下。九州之地，定墾者九百一十萬八千二十頃。",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Unknown",
+        "reason": "outside-declared-grammar",
+        "missing": "a declared grammar in which this text is in-grammar; tried wenyan.relations.reporting.v1 — 2 grammar(s) are declared",
+        "verified": {
+          "ok": true,
+          "note": "nothing to recompute"
+        }
+      }
+    },
+    {
+      "id": "corpus:搜神記:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "搜神記",
+        "section": "搜神記.1",
+        "passageId": "1.1",
+        "sourcePage": "搜神記/序",
+        "sourceRevid": 2411940
+      },
+      "question": {
+        "type": "Q1",
+        "text": "建武中，有所感起，是用發憤焉。雖考先志於載籍，收遺逸於當時，蓋非一耳一目之所親聞睹也，亦安敢謂無失實者哉！衛朔失國，二傳互其所聞；呂望事周，子長存其兩說。若此比類，往往有焉。從此觀之，聞見之難，由來尚矣。夫書赴告之定辭，據國史之方策，猶尚若此；況仰述千載之前，記殊俗之表，綴片言於殘闕，訪行事於故老，將使事不二跡，言無異途，然後為信者，固亦前史之所病；然而國家不廢注記之官，學士不絕誦覽之業，豈不以其所失者小，所存者大乎？今之所集，設有承於前載者，則非余之罪也。若使采訪近世之事，苟有虛錯，願與先賢前儒，分其譏謗。及其著述，亦足以發明神道之不誣也。群言百家，不可勝覽；耳目所受，不可勝載。今粗取足以演八略之旨，成其微說而已。幸將來好事之士，録其根體，有以遊心寓目而無尤焉。",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Unknown",
+        "reason": "outside-declared-grammar",
+        "missing": "a declared grammar in which this text is in-grammar; tried wenyan.relations.reporting.v1 — 2 grammar(s) are declared",
+        "verified": {
+          "ok": true,
+          "note": "nothing to recompute"
+        }
+      }
+    },
+    {
+      "id": "corpus:異苑:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "異苑",
+        "section": "異苑.1",
+        "passageId": "1.1",
+        "sourcePage": "異苑/卷01",
+        "sourceRevid": 224219
+      },
+      "question": {
+        "type": "Q1",
+        "text": "古語有之曰：古者有夫妻荒年菜食而死，俱化成青絳，故俗呼「美人虹」。郭云：虹為雩，俗呼為美人。",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Unknown",
+        "reason": "outside-declared-grammar",
+        "missing": "a declared grammar in which this text is in-grammar; tried wenyan.relations.reporting.v1 — 2 grammar(s) are declared",
+        "verified": {
+          "ok": true,
+          "note": "nothing to recompute"
+        }
+      }
+    },
+    {
+      "id": "corpus:談藪:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "談藪",
+        "section": "談藪.1",
+        "passageId": "1.1",
+        "sourcePage": "談藪",
+        "sourceRevid": 2609233
+      },
+      "question": {
+        "type": "Q1",
+        "text": "王公袞字吉老，宣子尚書之弟。先墓在會稽西山，為掌墓人奚泗所發。公袞訴之郡，杖之而已，公袞憤甚。奚泗受杖，詣公袞謝罪，公袞呼前，勞以酒，拔劍斬之，持其首詣郡。宣子時為部郎，奏乞以己官贖罪。詔給舍集議。中書舍人張孝祥等議上，詔赦之，猶鐫一秩。當時公袞孝名聞天下，永嘉王十朋以詩美之。公袞性甚和，平居常若嬉笑，人謂之笑面虎。",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Unknown",
+        "reason": "outside-declared-grammar",
+        "missing": "a declared grammar in which this text is in-grammar; tried wenyan.relations.reporting.v1 — 2 grammar(s) are declared",
+        "verified": {
+          "ok": true,
+          "note": "nothing to recompute"
+        }
+      }
+    },
+    {
+      "id": "corpus:雲仙雜記:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "雲仙雜記",
+        "section": "雲仙雜記.1",
+        "passageId": "1.1",
+        "sourcePage": "雲仙雜記/卷一",
+        "sourceRevid": 2610375
+      },
+      "question": {
+        "type": "Q1",
+        "text": "司空圖隱於中條山，芟松枝為筆管，人問之，曰：「幽人筆正當如是。」（《汗漫錄》）",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Unknown",
+        "reason": "outside-declared-grammar",
+        "missing": "a declared grammar in which this text is in-grammar; tried wenyan.relations.reporting.v1 — 2 grammar(s) are declared",
+        "verified": {
+          "ok": true,
+          "note": "nothing to recompute"
+        }
+      }
+    },
+    {
+      "id": "corpus:獨異志:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "獨異志",
+        "section": "獨異志.1",
+        "passageId": "1.1",
+        "sourcePage": "獨異志",
+        "sourceRevid": 2627088
+      },
+      "question": {
+        "type": "Q1",
+        "text": "《獨異志》者，記世事之獨異也。自開闢以來迄於今世之經籍，耳目可見聞，神仙鬼怪，並所摭錄。然有紀載所繁者，俱不量虛薄，構成三卷。願傳博達，所貴解顏耳。",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Unknown",
+        "reason": "outside-declared-grammar",
+        "missing": "a declared grammar in which this text is in-grammar; tried wenyan.relations.reporting.v1 — 2 grammar(s) are declared",
+        "verified": {
+          "ok": true,
+          "note": "nothing to recompute"
+        }
+      }
+    },
+    {
+      "id": "corpus:廣異記:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "廣異記",
+        "section": "廣異記.1",
+        "passageId": "1.1",
+        "sourcePage": "廣異記",
+        "sourceRevid": 2609236
+      },
+      "question": {
+        "type": "Q1",
+        "text": "予欲觀天人之際，變化之兆，吉凶之源，聖有不知，神有不測。其有干元氣、汨五行，聖人所以示怪力亂神，禮樂刑政，著明聖道以糾之。故許氏之說天文垂象，蓋以示人也。古文「示」字如今文「不」字，儒有不本其意，云「子不語此」，大破格言，非觀象設教之本也。大鈞播氣，不滯一方，禱杌為黃熊，彭生為大豕，萇弘為碧，舒女為泉，牛哀為虎，黃母為黿，君子為猿鵠，小人為蟲沙，武都婦人化為男，成都男子化為女，周蛾殉墓十載卻活，羸諜暴市六日而蘇，蜀帝之魂曰杜鵑，炎帝之女曰精衛，洪荒窈窕，莫可紀極。古者青烏之相冢墓，白澤之窮神奸，舜之命夔以和神，湯之問革以語怪，音聞魯壁，形鏤夏鼎，玉牒石記，五圖九籥，說者紛然。故漢文帝召賈誼問鬼神之事，夜半前席。誌怪之士，劉子政之《列仙》，葛稚川之《神仙》，王子年之《拾遺》，東方朔之《神異》，張茂先之《博物》，郭子潢之《洞冥》，類黃門之《稽聖》，侯君素之《精一作旌異》，其中神奧。顧君《真誥》，周氏之《冥通》，而《異苑》，《搜神》、《山海》之經，《幽冥》之錄，《襄陽》之耆舊，《楚國》之先賢，《風俗》所通，《戚時》所記，《吳興》、《陽羨》、《南越》、《西京》，註引古今，辭𥛦淮海。裴松之、盛弘之、陸道瞻等，諸家之說，蔓延無窮。國朝燕公《梁四公傳》，唐臨《冥報記》，王度《古鏡記》，孔慎言《神怪志》，趙自勤《定命錄》，至如李庾成、張孝舉之徒，互相傳說。譙郡戴君孚，幽賾最深，安道之胤，若思之後，邈為晉僕射，逵為吳隱士，世濟文雅，不隕其名。至德初，天下肇亂，況始與同登一科。君自校書，終饒州錄事參軍，時年五十七，有文集二十卷。此書二十卷，用紙一千幅，蓋十餘萬言，雖景命不融，而鏗鏘之韻固可以輔於神明矣。二子鉞、雍，陳其先志，泣請父友況得而敘之。",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Unknown",
+        "reason": "outside-declared-grammar",
+        "missing": "a declared grammar in which this text is in-grammar; tried wenyan.relations.reporting.v1 — 2 grammar(s) are declared",
+        "verified": {
+          "ok": true,
+          "note": "nothing to recompute"
+        }
+      }
+    },
+    {
+      "id": "corpus:冥報記:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "冥報記",
+        "section": "冥報記.1",
+        "passageId": "1.1",
+        "sourcePage": "冥報記",
+        "sourceRevid": 2609237
+      },
+      "question": {
+        "type": "Q1",
+        "text": "夫含氣有生，無不有識；有識而有行，隨行善惡而受其報，如農夫之播植，隨所植而收之。此物之常理，固無所可疑也。上智達其本源，知而無見；下愚闇其蹤跡，迷而不返，皆絕言也。中品之人，未能自達，隨緣動見，遂見生疑，疑見多端，各懷異執；釋典論其分別，凡有六十二見，邪倒於是乎生者也。臨在中人之後，幸而悟其萬一，比見眾人不信因果者，說見雖多，同謂善惡無報。無報之說，略有三種：一者「自然」：言故無因果，唯當任欲待事而已。二者「滅盡」：言死而身滅，識無所住；身識都盡，誰受苦樂？以無受故，知無因果。三者「無報」：言見今人有修道德，貧賤早死；或行凶惡，富貴靈長。以是事故，知無因果。臨竊謂儒書論善惡之報甚多，近者報於當時，中者報於累年之外，遠者報於子孫之後。當時報者：若楚子吞蛭，痼疾皆癒；宋公不禱，妖星多退；淖齒凶逆，旋踵伏誅；趙高惑亂，俄而滅族之類是也。累年報者，如魏顆嫁妾，終以濟師；孫叔埋蛇，竟享多福；漢鴆如意，蒼狗成災；齊殺彭生，立豕為祟之類是也。子孫報者：若弗父恭於三命，廣宣尼之道；鄧訓歲活千人，遺和熹之慶；陳平陰計，自知無後；欒黶忲侈，盈被其殃之類是也。若乃虞舜以孝行登位，周文以仁賢受命，桀紂以殘忍亡國，幽厲以婬縱禍終。三代功德，卜祚長久；秦皇驕暴，及子而滅。若斯之比，觸類實繁；雖複大小有殊，亦皆善惡之驗。但事涉王道，理關天命，常談之際，非所宜言。今之所錄，蓋直取其微細證驗，冀以發起同類，貽告子孫，徵於人鬼之間，若斯而已也。釋氏說教，無非因果；因即是作，果即是報；無一法而非因，無一因而不報。然其說報，亦有三種：一者「現報」：謂於此身中作善惡業，即於此身而受報者，皆名現報。二者「生報」：謂此身作業，不即受之；隨業善惡，生於諸道，皆名生報。三者「後報」：謂過去身作善惡業，能得果報，應多身受；是以現在作業，未便受報，或於後生受，或五生十生，方始受之，是皆名後報。於此三報，攝一切法，無所不盡，足令諸見，渙然大悟！然今俗士，尚有惑之，多習因而忘果，疑耳而信目。是以聞說後報，則若存若亡；見有效驗，則驚嗟信服。昔晉高士謝敷、宋尚書令傅亮、太子中舍人張演、齊司徒事中郎陸杲，或一時令望，或當代名家，並錄《觀世音應驗記》，及齊竟陵王蕭子良作《宣驗記》，王琰作《冥祥記》，皆所以徵明善惡、勸戒將來，實使聞者，深心感悟。臨既慕其風旨，亦思以勸人，輒錄所聞，集為此記。仍具陳所受，及聞見由緣；言不飾文，事專揚確，庶後人見者，能留意焉。",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Unknown",
+        "reason": "outside-declared-grammar",
+        "missing": "a declared grammar in which this text is in-grammar; tried wenyan.relations.reporting.v1 — 2 grammar(s) are declared",
+        "verified": {
+          "ok": true,
+          "note": "nothing to recompute"
+        }
+      }
+    },
+    {
+      "id": "corpus:括異誌:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "括異誌",
+        "section": "括異誌.1",
+        "passageId": "1.1",
+        "sourcePage": "括異誌/01",
+        "sourceRevid": 812911
+      },
+      "question": {
+        "type": "Q1",
+        "text": "太祖仕周日，尚未領宋州節鉞。時有狂僧，攜彈走荊棘中，顧謂人曰：「此地當出天子。」又，顯德末，一人青巾白衫，登中書政事堂。吏批其頰曰：「汝是何人敢至此！」其人曰：「宋州官家遣我來擒見宰相范質。」質曰：「此病心耳，安足問？」遂叱去。其後太祖果自歸德軍節度使受禪，遂升宋州為應天府，後號南郡一名南郡，事具國史。",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Answered",
+        "roles": {
+          "agent": "顧",
+          "recipient": "人",
+          "theme": "此地當出天子。"
+        },
+        "construction": "wei-quote",
+        "grammar": "wenyan.relations.reporting.v1",
+        "occurrences": [
+          {
+            "slot": 0,
+            "value": "顧",
+            "start": 26,
+            "end": 27
+          },
+          {
+            "slot": 1,
+            "value": "人",
+            "start": 28,
+            "end": 29
+          },
+          {
+            "slot": 2,
+            "value": "此地當出天子。",
+            "start": 32,
+            "end": 39
+          }
+        ],
+        "warrant": {
+          "kind": "evidence",
+          "refs": [
+            "corpus:analects:2.21:wei-quote",
+            "corpus:mencius:4.22:wei-quote",
+            "corpus:book-of-rites:3.15:wei-quote",
+            "corpus:zhuangzi:1.6:wei-quote",
+            "corpus:xunzi:32.3:wei-quote",
+            "corpus:hanfeizi:7.1:wei-quote",
+            "corpus:mozi:38.2:wei-quote",
+            "corpus:guanzi:20.2:wei-quote",
+            "corpus:analects:6.4:wei-quote"
+          ],
+          "derivation": "replay(evidence) leaves 1 of 6 role permutations for 'wei-quote' in wenyan.relations.reporting.v1"
+        },
+        "verified": {
+          "ok": true,
+          "note": "roles reproduce"
+        }
+      }
+    },
+    {
+      "id": "corpus:稽神錄:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "稽神錄",
+        "section": "稽神錄.1",
+        "passageId": "1.1",
+        "sourcePage": "稽神錄/卷1",
+        "sourceRevid": 1161817
+      },
+      "question": {
+        "type": "Q1",
+        "text": "偽吳玉山主簿朱拯赴選至揚都（《廣記》作「州」）。夢入官署，堂上一紫衣，正坐旁一綠衣。紫衣起揖拯（《廣記》無「拯」字）曰：「君當以十千錢見與。」拯拜許諾，遂寤。頃之（毛本無「之」字），補安福令。既至，謁城隍神，廟宇神像皆如夢中。其神座後，屋漏梁壞。拯嘆曰：「十千豈非此耶？」即以私財葺之，費如其（《廣記》無「其」字）數。（《廣記》卷二百八十一）",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Answered",
+        "roles": {
+          "agent": "字）",
+          "recipient": null,
+          "theme": "君當以十千錢見與。"
+        },
+        "construction": "yue-quote",
+        "grammar": "wenyan.relations.reporting.v1",
+        "occurrences": [
+          {
+            "slot": 0,
+            "value": "字）",
+            "start": 56,
+            "end": 58
+          },
+          {
+            "slot": 1,
+            "value": "君當以十千錢見與。",
+            "start": 61,
+            "end": 70
+          }
+        ],
+        "warrant": {
+          "kind": "evidence",
+          "refs": [
+            "corpus:analects:1.1:yue-quote",
+            "corpus:mencius:1.1:yue-quote"
+          ],
+          "derivation": "replay(evidence) leaves 1 of 2 role permutations for 'yue-quote' in wenyan.relations.reporting.v1"
+        },
+        "verified": {
+          "ok": true,
+          "note": "roles reproduce"
+        }
+      }
+    },
+    {
+      "id": "corpus:夷堅志:1.2",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "夷堅志",
+        "section": "夷堅志.1",
+        "passageId": "1.2",
+        "sourcePage": "夷堅志/夷堅甲志",
+        "sourceRevid": 2646410
+      },
+      "question": {
+        "type": "Q1",
+        "text": "孫九鼎．字國鎮．忻州人．政和癸巳居太學．七夕日．出訪鄉人段浚儀於竹柵巷．沿汴北岸而行．忽有金紫人騎從甚都．呼之於稠人中．遽下馬曰．國鎮久別安樂．細視之．乃姊夫張兟也．指街北一酒肆．曰．可見邀於此少從容．孫曰．公富人也．豈可令窮措大買酒．曰．我錢不中使．遂坐肆中．飲自如．少頃．孫方悟其死．問之曰．公死已久矣．何為在此．我見之．得無不利乎．曰．不然．君福甚壯．乃說死時及孫送葬之事．無不知者．且曰．去年中秋我過家．令姊輩飲酒自若．並不相顧．我憤恨傾酒壺擊小女以出．孫曰．公今在何地．曰．見為皇城司註祿判官．孫喜即詣前程．曰．未也．此事每十年一下．尚未見姓名．多在三十歲以後．官職亦不卑下．孫曰．公平生酒色甚多．犯婦人者無月無之．焉得至此．曰．此吾之跡也．凡事當察其心．茍心不昧．亦何所不可．語未畢．有從者入報曰．交直矣．張乃起偕行．指行人曰．此我輩也．第世人不識之耳．至麗春門下與孫別．曰．公自此歸．切不得回顧．顧即死矣．公今已為陰氣所侵．來日當暴下．宜毋吃他藥．服平胃散足矣．既別．孫始懼甚．到竹柵巷見段君．段訝其面色不佳．沃之以酒．至暮歸學．明日大瀉三十餘行．服平胃散而愈．孫後連蹇無成．在金國十餘年．始狀元及第．為秘書少監．舊與家君同為通類齋生．至北方．屢相見．自說茲事．",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Unknown",
+        "reason": "outside-declared-grammar",
+        "missing": "a declared grammar in which this text is in-grammar; tried wenyan.relations.reporting.v1 — 2 grammar(s) are declared",
+        "verified": {
+          "ok": true,
+          "note": "nothing to recompute"
+        }
+      }
+    },
+    {
+      "id": "corpus:續夷堅志:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "續夷堅志",
+        "section": "續夷堅志.1",
+        "passageId": "1.1",
+        "sourcePage": "續夷堅志/序一",
+        "sourceRevid": 2493816
+      },
+      "question": {
+        "type": "Q1",
+        "text": "遺山先生當金源末造，備位下僚，浮湛散秩；洊登左司，旋遭䘮亂，淪落以終。晚年以著述自任，頗有志於國史，又爲人所沮。詩文之外，寄意於《中州》一集。文人少達而多窮，不信然哉！此《夷堅志》雖續洪氏，而適當百六之會，灾變頻仍，五行乖舛，有開必先，動關運會，非弔詭之卮言，實禨祥之外乘。不賢識小，又何譏焉？僕來豫，榮別駕慶出以相眎，乃其尊甫筠圃先生讀易樓藏本。書凡二卷，而宋子虗、王起善二跋皆云四卷，又稱其別有自序，而卷中無之，不復可考矣。書中大半東京瑣事。余初來，頗資聞見。因爲較其訛脫，仍分四卷，以還舊觀。手抄付梓，且依翁氏所輯遺山《年譜》，略爲表系，以附於後，庶覽者粗悉其平生云。",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Unknown",
+        "reason": "outside-declared-grammar",
+        "missing": "a declared grammar in which this text is in-grammar; tried wenyan.relations.reporting.v1 — 2 grammar(s) are declared",
+        "verified": {
+          "ok": true,
+          "note": "nothing to recompute"
+        }
+      }
+    },
+    {
+      "id": "corpus:聊齋志異:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "聊齋志異",
+        "section": "聊齋志異.1",
+        "passageId": "1.1",
+        "sourcePage": "聊齋志異/作者小傳",
+        "sourceRevid": 2346916
+      },
+      "question": {
+        "type": "Q1",
+        "text": "淄川蒲松齡，字留仙，號柳泉。辛卯歲貢。以文章風節著一時。弱冠應童子試，受知於施愚山先生，文名藉甚。乃決然舍去，一肆力於古文，悲憤感慨，自成一家言。性樸厚，篤交遊，重名義。與同邑李希梅、張歷友諸名士結為詩社，以風雅道義相切劘。新城王漁洋先生素奇其才，謂非尋常流輩所及也。家所藏著述頗富，而聊齋志異一書，尤膾炙人口云。",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Unknown",
+        "reason": "outside-declared-grammar",
+        "missing": "a declared grammar in which this text is in-grammar; tried wenyan.relations.reporting.v1 — 2 grammar(s) are declared",
+        "verified": {
+          "ok": true,
+          "note": "nothing to recompute"
+        }
+      }
+    },
+    {
+      "id": "corpus:益智錄:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "益智錄",
+        "section": "益智錄.1",
+        "passageId": "1.1",
+        "sourcePage": "益智錄/00",
+        "sourceRevid": 821262
+      },
+      "question": {
+        "type": "Q1",
+        "text": "庚申之春，余罷官後僑寓稷下，杜門養痾，惟以書籍自娛。客有言《益智錄》者，亟購其書讀之，亦搜神志怪之流；而筆意矯矯絕俗，迥非近今操觚家可比。其著名為歷城解子鏡，名鑒。爰訪其人，而歷邑鮮有知其姓字者。嗣聞其設帳於黃台山，在城北八里許，因宛轉招致之。無何，扣扉見訪，則皤然一白叟也。詢其生平，自云：少應童子試，至老不遇，卒未獲衿；家貧，恃訓蒙為業，今行年已六十矣。其人清臞鶴立，意致溫雅，語言訥訥，如不能出諸口。而於諸子百氏之書，多所涉獵，工文善詩，究心於古。此編則誦讀之餘，戲仿淄川蒲氏《聊齋志異》而成者。以此窺解子，猶泰岱之一拳，滄溟之一勺耳。談者見其規仿《聊齋》神肖，謂可與《聊齋》爭席，余謂不然。《聊齋》天才橫逸，學問奧博，後人詎易相踵？然《聊齋》以懷才不遇，特借此以抒其抑鬱，故其書呵神詈鬼，嬉笑怒罵，無所不有，殆亦發憤之所為作耳。解子少負雋才，一無遇合，至垂白之年，猶坐窮山中，訓童子以餬口，其窮厄視《聊齋》為何如？而所為書，無一骯髒語，無一輕薄語，勸善懲淫，一軌於正。雖與《聊齋》同一遊戲之筆，而是書獨能有裨於世道，是其讀書養氣之功，視《聊齋》差有一長也。然吾因之有感矣。人情好奇而厭常，震虛聲而寡真賞。《聊齋》以沉博絕麗之才，搜奇獵異，出幽入明，自足以耀士林之耳目。而其時又有名公卿負海內龍門之望，片言品題，聲價百倍，故雖窮困潦倒，而猶能聲華藉藉，傾動一時。解子才非不逮，徒以恂恂鄉黨，不慕浮華，不矜聲氣，坐使名字不出於里閈，士大夫幾無有知其誰何者，斯非一不平之事耶？顧余宰歷城時，解子猶應縣試，余以風塵栗六，竟未物色及之。今余解組將歸，解子已篤老，乃始相與扼腕而歎也。嗚呼，晚矣！",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Unknown",
+        "reason": "outside-declared-grammar",
+        "missing": "a declared grammar in which this text is in-grammar; tried wenyan.relations.reporting.v1 — 2 grammar(s) are declared",
+        "verified": {
+          "ok": true,
+          "note": "nothing to recompute"
+        }
+      }
+    },
+    {
+      "id": "corpus:蟫史:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "蟫史",
+        "section": "蟫史.1",
+        "passageId": "1.1",
+        "sourcePage": "蟫史/卷01",
+        "sourceRevid": 853845
+      },
+      "question": {
+        "type": "Q1",
+        "text": "望洋知道岸雲遙，觀海覺文瀾甚闊。蕭閑歲月，非著書何以發微；浩渺煙雲，豈坐井而能語大。",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Unknown",
+        "reason": "outside-declared-grammar",
+        "missing": "a declared grammar in which this text is in-grammar; tried wenyan.relations.reporting.v1 — 2 grammar(s) are declared",
+        "verified": {
+          "ok": true,
+          "note": "nothing to recompute"
+        }
+      }
+    },
+    {
+      "id": "corpus:子不語:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "子不語",
+        "section": "子不語.1",
+        "passageId": "1.1",
+        "sourcePage": "子不語/卷1",
+        "sourceRevid": 2632979
+      },
+      "question": {
+        "type": "Q1",
+        "text": "廣西李通判者，巨富也。家蓄七姬，珍寶山積。通判年二十七疾卒。有老僕者，素忠謹，傷其主早亡，與七姬共設齋醮。忽一道人持簿化緣，老僕嗬之曰：「吾家主早亡，無暇施汝。」道士笑曰：「爾亦思家主復生乎？吾能作法，令其返魂。」老僕驚，奔語諸姬，群訝然。出拜，則道士去矣。老僕與群妾悔輕慢神仙，致令化去，各相歸咎。",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Answered",
+        "roles": {
+          "agent": "老僕嗬之",
+          "recipient": null,
+          "theme": "吾家主早亡，無暇施汝。"
+        },
+        "construction": "yue-quote",
+        "grammar": "wenyan.relations.reporting.v1",
+        "occurrences": [
+          {
+            "slot": 0,
+            "value": "老僕嗬之",
+            "start": 62,
+            "end": 66
+          },
+          {
+            "slot": 1,
+            "value": "吾家主早亡，無暇施汝。",
+            "start": 69,
+            "end": 80
+          }
+        ],
+        "warrant": {
+          "kind": "evidence",
+          "refs": [
+            "corpus:analects:1.1:yue-quote",
+            "corpus:mencius:1.1:yue-quote"
+          ],
+          "derivation": "replay(evidence) leaves 1 of 2 role permutations for 'yue-quote' in wenyan.relations.reporting.v1"
+        },
+        "verified": {
+          "ok": true,
+          "note": "roles reproduce"
+        }
+      }
+    },
+    {
+      "id": "corpus:玄怪錄:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "玄怪錄",
+        "section": "玄怪錄.1",
+        "passageId": "1.1",
+        "sourcePage": "玄怪錄/卷1",
+        "sourceRevid": 7904071
+      },
+      "question": {
+        "type": "Q1",
+        "text": "杜子春者，周、隋間人。少落魄，不事家產，然以心氣閑縱，嗜酒邪遊。資產蕩盡，投於親故，皆以不事事之故見棄。方冬，衣破腹空，徒行長安中，日晚未食，仿徨不知所往，於東市西門，饑寒之色可掬，仰天長籲。有一老人策杖於前，問曰：「君子何嘆？」子春言其心，且憤其親戚疏薄也。感激之氣，發於顏色。老人曰：「幾緡則豐用？」子春曰：「三五萬則可以活矣。」老人曰：「未也，更言之。」「十萬。」曰：「未也。」乃言：「百萬。」曰：「未也。」曰：「三百萬。」乃曰：「可矣。」於是袖出一緡，曰：「給子今夕，明日午時俟子於西市波斯邸，慎無後期。」及時，子春往，老人果與錢三百萬，不告姓名而去。",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Answered",
+        "roles": {
+          "agent": "老人",
+          "recipient": null,
+          "theme": "幾緡則豐用？"
+        },
+        "construction": "yue-quote",
+        "grammar": "wenyan.relations.reporting.v1",
+        "occurrences": [
+          {
+            "slot": 0,
+            "value": "老人",
+            "start": 140,
+            "end": 142
+          },
+          {
+            "slot": 1,
+            "value": "幾緡則豐用？",
+            "start": 145,
+            "end": 151
+          }
+        ],
+        "warrant": {
+          "kind": "evidence",
+          "refs": [
+            "corpus:analects:1.1:yue-quote",
+            "corpus:mencius:1.1:yue-quote"
+          ],
+          "derivation": "replay(evidence) leaves 1 of 2 role permutations for 'yue-quote' in wenyan.relations.reporting.v1"
+        },
+        "verified": {
+          "ok": true,
+          "note": "roles reproduce"
+        }
+      }
+    },
+    {
+      "id": "corpus:續玄怪錄:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "續玄怪錄",
+        "section": "續玄怪錄.1",
+        "passageId": "1.1",
+        "sourcePage": "續玄怪錄",
+        "sourceRevid": 2646320
+      },
+      "question": {
+        "type": "Q1",
+        "text": "楊敬真，虢州閿鄉縣長壽鄉天仙村田家女也。年十八，適同村王清。其夫家貧力田，楊氏奉箕帚，供農婦之職甚謹，夫族目之曰「勤力新婦」。性沉靜，不好戲笑，有暇必灑掃靜室，閉門閑坐，雖鄰婦狎之，終不相往來。生三男一女，年二十四歲。元和十二年五月十二日夜，告其夫曰：「妾神識頗不安，惡聞人語，當於靜室寧之。請君與兒女暫居異室。」其夫以田作困，又保無他，因以許之，不問其故。楊氏遂沐浴著新衣，掃灑其室，焚香閉戶而坐。及明，訝其起遲，開門視之，衣服委於床上，若蟬蛻然，身已去矣。但覺異香滿屋，其夫驚，以告其父母。共歎之次，鄰人來曰：「昨夜夜半，有天樂從西而來，似若雲中下於君家，奏樂久之，稍稍上去。闔村皆聽之，君家聞否？」而異香酷烈，遍數十里。村吏以告縣令李邯，遣吏民遠近尋逐，皆無蹤跡。因令不動其衣，閉其戶，以棘環之，冀其或來也。",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Answered",
+        "roles": {
+          "agent": "其夫",
+          "recipient": null,
+          "theme": "妾神識頗不安，惡聞人語，當於靜室寧之。請君與兒女暫居異室。"
+        },
+        "construction": "yue-quote",
+        "grammar": "wenyan.relations.reporting.v1",
+        "occurrences": [
+          {
+            "slot": 0,
+            "value": "其夫",
+            "start": 122,
+            "end": 124
+          },
+          {
+            "slot": 1,
+            "value": "妾神識頗不安，惡聞人語，當於靜室寧之。請君與兒女暫居異室。",
+            "start": 127,
+            "end": 156
+          }
+        ],
+        "warrant": {
+          "kind": "evidence",
+          "refs": [
+            "corpus:analects:1.1:yue-quote",
+            "corpus:mencius:1.1:yue-quote"
+          ],
+          "derivation": "replay(evidence) leaves 1 of 2 role permutations for 'yue-quote' in wenyan.relations.reporting.v1"
+        },
+        "verified": {
+          "ok": true,
+          "note": "roles reproduce"
+        }
+      }
+    },
+    {
+      "id": "corpus:宣室志:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "宣室志",
+        "section": "宣室志.1",
+        "passageId": "1.1",
+        "sourcePage": "宣室志/卷01",
+        "sourceRevid": 2013411
+      },
+      "question": {
+        "type": "Q1",
+        "text": "李揆於乾元中為禮部侍郎，嘗一日晝坐於堂之前軒。忽聞堂中有聲極震，若牆圮。揆驚，入視之，見一蝦蟆俯於地，高數尺，魁然殊狀。揆且驚且異，莫窮其來。即命家童以一缶蓋之。客曰：「夫蝦蟆者，月中之物，亦天使也。今天使來公堂，豈非上帝以榮命付公乎？」黎明啟視之，已亡見矣。後數日，果拜中書侍郎平章事。",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Answered",
+        "roles": {
+          "agent": "客",
+          "recipient": null,
+          "theme": "夫蝦蟆者，月中之物，亦天使也。今天使來公堂，豈非上帝以榮命付公乎？"
+        },
+        "construction": "yue-quote",
+        "grammar": "wenyan.relations.reporting.v1",
+        "occurrences": [
+          {
+            "slot": 0,
+            "value": "客",
+            "start": 81,
+            "end": 82
+          },
+          {
+            "slot": 1,
+            "value": "夫蝦蟆者，月中之物，亦天使也。今天使來公堂，豈非上帝以榮命付公乎？",
+            "start": 85,
+            "end": 118
+          }
+        ],
+        "warrant": {
+          "kind": "evidence",
+          "refs": [
+            "corpus:analects:1.1:yue-quote",
+            "corpus:mencius:1.1:yue-quote"
+          ],
+          "derivation": "replay(evidence) leaves 1 of 2 role permutations for 'yue-quote' in wenyan.relations.reporting.v1"
+        },
+        "verified": {
+          "ok": true,
+          "note": "roles reproduce"
+        }
+      }
+    },
+    {
+      "id": "corpus:定命錄:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "定命錄",
+        "section": "定命錄.1",
+        "passageId": "1.1",
+        "sourcePage": "定命錄",
+        "sourceRevid": 2599447
+      },
+      "question": {
+        "type": "Q1",
+        "text": "王超者，嘗為汜水縣令，嚴損之曰：「公從此京官訖，即為河北二太守。」後果入為著作郎，出為真定太守，又改為京城守。超又為汜謂水令嚴迥云：「公宜修幅。」嚴不信，果被人訴，解官除名，配流而身亡也。（《廣記》卷一四七）",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Answered",
+        "roles": {
+          "agent": "嚴損之",
+          "recipient": null,
+          "theme": "公從此京官訖，即為河北二太守。"
+        },
+        "construction": "yue-quote",
+        "grammar": "wenyan.relations.reporting.v1",
+        "occurrences": [
+          {
+            "slot": 0,
+            "value": "嚴損之",
+            "start": 11,
+            "end": 14
+          },
+          {
+            "slot": 1,
+            "value": "公從此京官訖，即為河北二太守。",
+            "start": 17,
+            "end": 32
+          }
+        ],
+        "warrant": {
+          "kind": "evidence",
+          "refs": [
+            "corpus:analects:1.1:yue-quote",
+            "corpus:mencius:1.1:yue-quote"
+          ],
+          "derivation": "replay(evidence) leaves 1 of 2 role permutations for 'yue-quote' in wenyan.relations.reporting.v1"
+        },
+        "verified": {
+          "ok": true,
+          "note": "roles reproduce"
+        }
+      }
+    },
+    {
+      "id": "corpus:燕丹子:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "燕丹子",
+        "section": "燕丹子.1",
+        "passageId": "1.1",
+        "sourcePage": "燕丹子",
+        "sourceRevid": 2329765
+      },
+      "question": {
+        "type": "Q1",
+        "text": "燕丹子三卷，世無傳本。余初入詞館，紀大宗伯昀以此相授，云錄自《永樂大典》。核之《史記索引》、《唐宋人類書》所載，其詞略同，審非偽本，當由六國遊士，哀太子之志，綜其事跡，加之緣飾，故有「仰天歎、果鳥白頭、馬生角」、「秦王乞聽琴聲而死」之語，實不近情。史遷為文，削之甚當。然是先秦古書，嫻於辭令，其學在縱橫、小說兩家之間，較之《子華》、《尹文》蹈襲舊文三墳、陰符濫觴偽作，又不侔矣。此書本有劉向敘錄，一見《史記注》裴駰引劉向別錄云「督亢，膏腴之地」，一見《索隱》引劉向云「丹，燕王熹之太子」，不知佚於何時，文字亦有偽舛，應據各書所引訂正。",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Unknown",
+        "reason": "outside-declared-grammar",
+        "missing": "a declared grammar in which this text is in-grammar; tried wenyan.relations.reporting.v1 — 2 grammar(s) are declared",
+        "verified": {
+          "ok": true,
+          "note": "nothing to recompute"
+        }
+      }
+    },
+    {
+      "id": "corpus:遊仙窟:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "遊仙窟",
+        "section": "遊仙窟.1",
+        "passageId": "1.1",
+        "sourcePage": "遊仙窟",
+        "sourceRevid": 2569767
+      },
+      "question": {
+        "type": "Q1",
+        "text": "若夫積石山者，在乎金城西南，河所經也。《書》云：「導河積石，至於龍門。」即此山也。僕從汧隴，奉使河源。嗟命運之迍邅，歎鄉關之眇邈。張騫古蹟，十萬里之波濤；伯禹遺蹤，二千年之坂墱。深谷帶地，鑿穿崖岸之形；高領橫天，刀削崗巒之勢。煙霞子細，泉石分明。實天上之靈奇，乃人間之妙絕。目所不見，耳所不聞。日晚途遙，馬疲人乏。行至一所，險峻非常。向上則有青壁萬尋，直下則有碧潭千仞。古老相傳云：「此是神仙窟也。人跡罕及，鳥路纔通。每有香果瓊枝，天衣錫缽，自然浮出，不知從何而至。」余乃端仰一心，潔齋三日。緣細葛，泝輕舟。身體若飛，精靈似夢。須臾之間，忽至松柏岩，桃華澗，香風觸地，光彩遍天。",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Unknown",
+        "reason": "outside-declared-grammar",
+        "missing": "a declared grammar in which this text is in-grammar; tried wenyan.relations.reporting.v1 — 2 grammar(s) are declared",
+        "verified": {
+          "ok": true,
+          "note": "nothing to recompute"
+        }
+      }
+    },
+    {
+      "id": "corpus:枕中記:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "枕中記",
+        "section": "枕中記.1",
+        "passageId": "1.1",
+        "sourcePage": "枕中記",
+        "sourceRevid": 2263419
+      },
+      "question": {
+        "type": "Q1",
+        "text": "開元七年，道士有呂翁者，得神仙術，行邯鄲道中，息邸舍，攝帽弛帶隱（憑倚）囊而坐，俄見旅中少年，乃盧生也。衣短褐，乘青駒，將適於田，亦止於邸中，與翁共席而坐，言笑殊暢。",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Unknown",
+        "reason": "outside-declared-grammar",
+        "missing": "a declared grammar in which this text is in-grammar; tried wenyan.relations.reporting.v1 — 2 grammar(s) are declared",
+        "verified": {
+          "ok": true,
+          "note": "nothing to recompute"
+        }
+      }
+    },
+    {
+      "id": "corpus:集異記:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "集異記",
+        "section": "集異記.1",
+        "passageId": "1.1",
+        "sourcePage": "集異記",
+        "sourceRevid": 2326924
+      },
+      "question": {
+        "type": "Q1",
+        "text": "兗州人船行，忽見水上有浮鎖，牽取得數許丈，乃得一白牛。與常牛無異，而形甚光鮮可愛。知是神物，乃放之。牛於是入水，鎖亦隨去。御覽九百",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Unknown",
+        "reason": "outside-declared-grammar",
+        "missing": "a declared grammar in which this text is in-grammar; tried wenyan.relations.reporting.v1 — 2 grammar(s) are declared",
+        "verified": {
+          "ok": true,
+          "note": "nothing to recompute"
+        }
+      }
+    },
+    {
+      "id": "corpus:南柯太守傳:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "南柯太守傳",
+        "section": "南柯太守傳.1",
+        "passageId": "1.1",
+        "sourcePage": "南柯太守傳",
+        "sourceRevid": 2264164
+      },
+      "question": {
+        "type": "Q1",
+        "text": "東平淳于棼，吳楚遊俠之士，嗜酒使氣，不守細行，累巨產，養豪客。曾以武藝補淮南軍裨將，因使酒忤帥，斥逐落魄，縱誕飲酒為事。家住廣陵郡東十里，所居宅南有大古槐一株，枝幹修密，清陰數畝，淳於生日與群豪大飲其下。",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Unknown",
+        "reason": "outside-declared-grammar",
+        "missing": "a declared grammar in which this text is in-grammar; tried wenyan.relations.reporting.v1 — 2 grammar(s) are declared",
+        "verified": {
+          "ok": true,
+          "note": "nothing to recompute"
+        }
+      }
+    },
+    {
+      "id": "corpus:霍小玉傳:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "霍小玉傳",
+        "section": "霍小玉傳.1",
+        "passageId": "1.1",
+        "sourcePage": "霍小玉傳",
+        "sourceRevid": 2608870
+      },
+      "question": {
+        "type": "Q1",
+        "text": "大曆中，隴西李生名益，年二十，以進士擢第。其明年，拔萃，俟試於天官。夏六月，至長安，舍於新昌里。生門族清華，少有才思，麗詞嘉句，時謂無雙；先達丈人，翕然推伏。每自矜風調，思得佳偶，博求名妓，久而未諧。",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Unknown",
+        "reason": "outside-declared-grammar",
+        "missing": "a declared grammar in which this text is in-grammar; tried wenyan.relations.reporting.v1 — 2 grammar(s) are declared",
+        "verified": {
+          "ok": true,
+          "note": "nothing to recompute"
+        }
+      }
+    },
+    {
+      "id": "corpus:李娃傳:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "李娃傳",
+        "section": "李娃傳.1",
+        "passageId": "1.1",
+        "sourcePage": "李娃傳",
+        "sourceRevid": 1537810
+      },
+      "question": {
+        "type": "Q1",
+        "text": "汧國夫人李娃，長安之倡女也。節行瑰奇，有足稱者。故監察御史白行簡為傳述。",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Unknown",
+        "reason": "outside-declared-grammar",
+        "missing": "a declared grammar in which this text is in-grammar; tried wenyan.relations.reporting.v1 — 2 grammar(s) are declared",
+        "verified": {
+          "ok": true,
+          "note": "nothing to recompute"
+        }
+      }
+    },
+    {
+      "id": "corpus:鶯鶯傳:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "鶯鶯傳",
+        "section": "鶯鶯傳.1",
+        "passageId": "1.1",
+        "sourcePage": "鶯鶯傳",
+        "sourceRevid": 2589341
+      },
+      "question": {
+        "type": "Q1",
+        "text": "唐貞元中，有張生者，性溫茂，美風容，內秉堅孤，非禮不可入。或朋從遊宴，擾雜其間，他人皆洶洶拳拳，若將不及；張生容順而已，終不能亂。以是年二十三，未嘗近女色。知者詰之，謝而言曰：“登徒子非好色者，是有凶行。余真好色者，而適不我值。何以言之？大凡物之尤者，未嘗不留連於心，是知其非忘情者也。”詰者識之。",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Unknown",
+        "reason": "outside-declared-grammar",
+        "missing": "a declared grammar in which this text is in-grammar; tried wenyan.relations.reporting.v1 — 2 grammar(s) are declared",
+        "verified": {
+          "ok": true,
+          "note": "nothing to recompute"
+        }
+      }
+    },
+    {
+      "id": "corpus:任氏傳:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "任氏傳",
+        "section": "任氏傳.1",
+        "passageId": "1.1",
+        "sourcePage": "任氏傳",
+        "sourceRevid": 1308756
+      },
+      "question": {
+        "type": "Q1",
+        "text": "任氏，女妖也。有韋使君者，名崟，第九，信安王祎之外孫。少落拓，好飲酒。其從父妹婿曰鄭六，不記其名。早習武藝，亦好酒色，貧無家，托身於妻族；與崟相得，遊處不間。天寶九年夏六月，，崟與鄭子偕行於長安陌中，將會飲於新昌裏。至宣平之南，鄭子辭有故，請間去，繼至飲所。崟乘白馬而東。鄭子乘驢而南，入升平之北門。偶值三婦人行於道中，中有白衣者，容色姝麗。鄭子見之驚悅，策其驢，忽先之，忽後之，將挑而未敢。",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Unknown",
+        "reason": "outside-declared-grammar",
+        "missing": "a declared grammar in which this text is in-grammar; tried wenyan.relations.reporting.v1 — 2 grammar(s) are declared",
+        "verified": {
+          "ok": true,
+          "note": "nothing to recompute"
+        }
+      }
+    },
+    {
+      "id": "corpus:博異志:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "博異志",
+        "section": "博異志.1",
+        "passageId": "1.1",
+        "sourcePage": "博異志",
+        "sourceRevid": 1142987
+      },
+      "question": {
+        "type": "Q1",
+        "text": "夫習識譚妖，其來久矣，非博聞強識，何以知之。然須鈔錄，見知雌黃事類。語其虛，則源流具在；定其實，則姓氏罔差。既悟英彥之討論，亦是賓朋之節奏。若纂集克備，即應對如流。余放志西齋，從宦北闕；因尋往事，輒議編題，類成一卷，非徒但資笑語，抑亦粗顯箴規。或冀逆耳之辭，稍獲周身之誡。只求同己，何必標名。是稱谷神子。",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Unknown",
+        "reason": "outside-declared-grammar",
+        "missing": "a declared grammar in which this text is in-grammar; tried wenyan.relations.reporting.v1 — 2 grammar(s) are declared",
+        "verified": {
+          "ok": true,
+          "note": "nothing to recompute"
+        }
+      }
+    },
+    {
+      "id": "corpus:剪燈新話:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "剪燈新話",
+        "section": "剪燈新話.1",
+        "passageId": "1.1",
+        "sourcePage": "剪燈新話/0",
+        "sourceRevid": 2416407
+      },
+      "question": {
+        "type": "Q1",
+        "text": "余既編輯古今怪奇之事。以為《剪燈錄》，凡四十卷矣。好事者每以近事相聞，遠不出百年，近止在數載，襞積於中，日新月盛，習氣所溺，欲罷不能，乃援筆為文以紀之。其事皆可喜可悲，可驚可怪者。所惜筆路荒蕪，詞源淺狹，無嵬目鴻耳之論以發揚之耳。既成，又自以為涉於語怪，近於誨淫，藏之書笥，不欲傳出。客聞而求觀者眾，不能盡卻之，則又自解曰：「《詩》、《書》、《易》、《春秋》，皆聖筆之所述作，以為萬世大經大法者也；然而《易》言龍戰於野，《書》載雉雊於鼎，《國風》取淫奔之詩，《春秋》紀亂賊之事，是又不可執一論也。」今余此編，雖於世教民彝，莫之或補，而勸善懲惡，哀窮悼屈，其亦庶乎言者無罪，聞者足以戒之一義云爾。客以余言有理，故書之卷首。",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Answered",
+        "roles": {
+          "agent": "則又自解",
+          "recipient": null,
+          "theme": "《詩》、《書》、《易》、《春秋》，皆聖筆之所述作，以為萬世大經大法者也；然而《易》言龍戰於野，《書》載雉雊於鼎，《國風》取淫奔之詩，《春秋》紀亂賊之事，是又不可執一論也。"
+        },
+        "construction": "yue-quote",
+        "grammar": "wenyan.relations.reporting.v1",
+        "occurrences": [
+          {
+            "slot": 0,
+            "value": "則又自解",
+            "start": 156,
+            "end": 160
+          },
+          {
+            "slot": 1,
+            "value": "《詩》、《書》、《易》、《春秋》，皆聖筆之所述作，以為萬世大經大法者也；然而《易》言龍戰於野，《書》載雉雊於鼎，《國風》取淫奔之詩，《春秋》紀亂賊之事，是又不可執一論也。",
+            "start": 163,
+            "end": 248
+          }
+        ],
+        "warrant": {
+          "kind": "evidence",
+          "refs": [
+            "corpus:analects:1.1:yue-quote",
+            "corpus:mencius:1.1:yue-quote"
+          ],
+          "derivation": "replay(evidence) leaves 1 of 2 role permutations for 'yue-quote' in wenyan.relations.reporting.v1"
+        },
+        "verified": {
+          "ok": true,
+          "note": "roles reproduce"
+        }
+      }
+    },
+    {
+      "id": "corpus:剪燈餘話:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "剪燈餘話",
+        "section": "剪燈餘話.1",
+        "passageId": "1.1",
+        "sourcePage": "剪燈餘話/序",
+        "sourceRevid": 1343313
+      },
+      "question": {
+        "type": "Q1",
+        "text": "往年余董役長干寺，獲見睦人桂衡所製《柔柔傳》。愛其才思俊逸，意婉詞工，因述《還魂記》擬之。後七年，又役房山，客有以錢塘瞿氏《剪燈新話》貽余者。復愛之，銳欲效顰。雖奔走埃氛，心志荒落，然猶技癢弗已。受事之暇，捃摭謏聞，次為二十篇，名曰《剪燈餘話》，仍取《還魂記》續於篇末。以其成於羈旅，出於記憶，無書籍質證，慮多牴牾，不敢示人。既釋徽纆，寓順城門客舍，學士曾公子棨過余，偶見焉。乃撫掌曰：“茲所謂以文為戲者非耶？”輒冠以敘，稱其穠麗豐蔚，文采爛然。由是稍稍人知，競求抄錄，亟欲焚去以絕跡。而索者踵至，勢不容拒矣。因思在昔聖人謂：“飽食終日，無所用心。不有博弈者乎？為之猶賢乎已！”矧余兩涉憂患，飽食之日少，且性不好博弈，非藉楮墨吟弄，則何以豁懷抱，宣鬱悶乎？雖知其近於滑稽諧謔，而不遑恤者，亦猶疾痛之不免於呻吟耳，庸何諱哉？雖然，《高唐》《洛神》，意在言外，皆閑暇時作，宜其考事精詳，修辭縟麗，千載之下，膾炙人口；若余者，則負譴無聊，姑假此以自遣，初非平居有意為之，以取譏大雅，較諸飽食、博弈，或者其庶乎？遂不復焚，而並識其造作之由於編末，俾時自省覽，以毋忘前日之虞，而保其終吉。好事者觀之，可以一笑而已，又何必泥其事之有無也哉？",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Unknown",
+        "reason": "outside-declared-grammar",
+        "missing": "a declared grammar in which this text is in-grammar; tried wenyan.relations.reporting.v1 — 2 grammar(s) are declared",
+        "verified": {
+          "ok": true,
+          "note": "nothing to recompute"
+        }
+      }
+    },
+    {
+      "id": "corpus:覓燈因話:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "覓燈因話",
+        "section": "覓燈因話.1",
+        "passageId": "1.1",
+        "sourcePage": "覓燈因話",
+        "sourceRevid": 1324884
+      },
+      "question": {
+        "type": "Q1",
+        "text": "大德中，有施君名濟，吳之長洲人。君家故饒於財，犖犖負氣節。年四十而未有子，性獨嗜佳山水，暇輒往虎丘、天池、天平諸山遊憩焉。夏之日，獨掉小舟，登劍池，度真娘墓，遂避暑讀書臺。新蟬嘒柳，南薰度松。顧瞻之頃，忽聞有愁嘆聲，徐一再聽，而其人若不勝情者。君使覘之，則少同學桂生遷也。邀而問之，初難於言，既曲慰之曰：「足下父母無恙乎？」曰：「先二人謝世久矣。」曰：「然則壺內弗寧乎？」乃始輸其誠曰：「仆有田數畝，足供饘粥，不幸惑於人言，謂販與耕，利且相百，遂折券與李平章家，得金二十錠，貿易京師。天乎不余貸，而重之禍也！舟碎洪流，橐懸磬矣，所存者僅藐焉一身。今日竄歸，又為主者所覺，主者勢焰薰天，念薄田不足以償，一妻二子，將不復留，是以悲耳！」言訖而涕潸焉下。君為動容曰：「足下無慮，吾且為爾圖償之。」桂初以為戲。君曰：「吾與足下，交雖不深，然愛妻子之心一也。吾每恨無子，忍見有子棄之乎？且吾家素裕，固未急急於此不急之財；救足下於塗炭，推愛子之念，全足下之妻孥，是所甘心，何敢為戲。」桂乃反悲為喜，長跪且拜曰：「君如是，是仆之天也！異日尺寸有立，圖所報稱；若終於困窮，則公家豈無犬馬乎？」遂別去。翌日，桂果來謁，君輒如額與償之，不復責券。桂大感謝。無何，君偶以事過桂之居，念而造焉。其子迎門歡甚。桂趨出，禮恭而色沮喪，已而聞內飲泣，君更詰之，對曰：「向承厚德，等於天親，再生之余，何敢容隱！仆豚兒荊婦，幸賴保全，然薄田敝廬，皆為李氏所有，今旦夕被其驅逐，而出無所之，坐無所食，溝中之瘠，仆將不免。仆命已矣，君恩奈何！」君又憮然曰：「夫拯人之急，而不足全人之生，則亦徒耳！足下無慮，余前村有田十畝，桑棗數十株，盎往居焉。樹藝而給，無憂乏也。」桂謝且赧，良久，願奉幼子為質，以效犬馬之勞。君固卻之。再翌日，偕桂生至田處，以田及桑棗給之，中一株最高，俗傳有神棲焉，桂因結於下。居一年，覺其地甚寒，與他所異，桂疑之。一日，荷鋤歸，見純白鼠入室，逐之不見。謀於妻曰：「下豈有物乎？」卜之得古，遂與妻夜發之，果得白金一藏。生喜而遽呼曰：「是可以報施君矣。」妻搖手，急止之曰：「無以呼為也！此施氏地，安知非施氏所瘞？即不然，彼借口於己之地，固以為份內物也，雖盡與之，必不見德，如或不諒，將更疑子之匿其余，是欲報德而且生怨矣。且子終生，止欲作十畝田主人耶？盍於他鄉潛置產業，徐以己力為報，顧不美乎？暮夜無知，天啟其便，天與不取，反受其殃矣。」桂生聞妻之言，良心頓昧，而巧計潛滋，自是遂置施君於度外焉。乃倩舊識，置膏田脂產於會稽。歲往征租，則讬以朱門之幹謁；既還故郡，則詐為藍縷之形容。如是者十年，而施君殂矣。其子甫三歲。桂謂其妻曰：「此我揚眉吐氣時也！」乃以只雞鬥酒往奠施君曰：「先生之恩，所不能報，亦豈敢忘。今先生往矣，顧余何人，久占先生之田廬，豈無面目，靦顏殊甚！寧轉而之他，受凍餓以死耳。」施母留之再三，不可，灑泣而去，挈家居於會稽。桂素饒幹局，居積致富。施氏素豪宕，家不甚實，加以子幼妻弱，不十余年，而貲產蕭然，饔飧或不相繼。於是母與子謀曰：「爾父存日，施德於桂生，桂生似長者，今聞其富於會稽，盍與爾歸焉，上者可冀厚償，而次亦不失故值，諒不虛此行也。」乃買舟自吳抵越，母止旅店，其子先往。比至桂生家，則門庭奕然，非復曩時田舍翁氣象矣。施子驟喜，以為得所依也。遂投刺，閽者數輩，引入東廂，楹榱嚴整，扁題曰知稼，蓋楊鐵崖筆也。候久不出，俄履聲自內聞，乃逡巡卻立，再整衣冠。而桂生未遽見也，憩中庭，處分童仆，呼諾，語剌剌不可了。又久之，始出，心知為施氏子也，故為不識。施子備道其顛末，且雲：「老母在旅次。」桂乃延之西齋，留一飯，吐詞簡重，矜色尊嚴。徐問曰：「子今年幾何？」對曰：「昔先生垂吊時，不肖方三齡，今別先生十五年矣。」桂頷之，別無他語。飯已，更不問其母及家事。施子計窮，因微露其意。桂即變色曰：「吾知爾之來也。顧吾力亦能辦此，爾毋多言，令他人聞之，為吾辱。」施唯唯而退。初，施母以桂必迎己也，倚閭而望。及聞狀，不覺大慟曰：「桂生，而忘棲十畝時耶？」其子遽勸之曰：「姑待之，彼何物，戇癡而悖眊若是。蓋彼勢壓村中，習為驕慢，見我貧窶，不欲禮為上賓，而又諱言前負，故落落如是耳。犬馬之盟，言猶在耳，而矧今已赫赫乎？豈有負人桂叔子？」母意稍釋。過數日，施子以晨往候，日停午，而竟弗達。施不勝慚忿，攘袂直趨，大言曰：「我施生寧求人者？為人求我，而特取宿值耳，胡為其窘辱我？」頃之，其長男自外入。施整衣向前揖曰：「某姑蘇施生也。」言未竟，長男曰：「然則故人矣！門下不識耳！昨家君備道足下來意，正在措置，而足下遽發大怒，豈數十年之久，而不能待數日耶？然此亦不難，明旦可無負矣。」言訖竟去。施子方悔己之失言，又怨彼之無禮，涕泣而歸。其母復勸之曰：「吾與爾數百里投人，分宜謙下，若得原值二十錠，意望亦完，不必過為悲憤也。」明旦戒行，母復囑之曰：「慎毋英銳，坐失事機，以勞我心。」於是施子鞠躬屏氣，再候於桂之門下。久之，曰：「宿酒未醒也。」乃求見其長男，且曰：「得見長公，足矣，無煩主翁也。」又久之，則曰：「已往東莊催租矣。」問其次男，則曰：「已於西堂陪館賓矣。」施子怒氣填胸，羞顏滿面，然無可奈何。頃之，桂生乘騶而出，則就謁於馬首，甚恭。桂謾不為禮，曰：「爾施生耶？」顧一仆，以金二錠償之。施子視償，僅什一也，大駭，方欲一言白，而桂飄然已去，且使人來數曰：「爾昨何淺暴如是？本欲從容、從厚，今不能能矣。然猶念爾年幼遠來，故纖毫不缺，可速歸。」施子大失望，而不敢見於辭色。求賂閽者，通問於其妻。妻又令人數曰：「曩先公以為德，而子今以為負也。幸吾主翁長者，償之如數，夫復何言？無已，可歸取券來，雖百錠不負也。」施無以對，歸以語母。母郁抑不堪，遂抱疾還家，竟不起。而日所取償於桂生者，曾不足為道途喪葬之費。籲！亦悲矣夫！已而，桂生家益裕，產益夥。當元年，賦役繁增，桂甚苦之，每顰蹙曰：「某非國家之民，乃一老奴仆耳！」裏有劉生者，善滑稽，奔走要津有年矣。偵知桂意，說之曰：「方今賦稅不均，貴者千百頃而無科，賤者倍蓰輸而無算，以公之資，寧不能少入作顯客，而碌碌甘稅戶耶？」桂長嘆不答。劉笑曰：「公豈以廢舉子業久乎？公不見吳之張萬戶、李都赤，不識一丁，而食祿千石。是何人也？此皆仆為之斡旋。仆自恨無力耳，使有如公十分之一，今不知衣紫乎、衣朱乎。」桂聞其言，心動耳熱，因撫臂問曰：「費當幾何？」曰：「二千足矣，多則近三千耳。」桂甚喜，且曰：「卜吉即與君行。劉辭曰：「恐有為公惜者，必以仆言為誕。然以仆計，公賦歲不下千余，今所費僅三年賦役之耗耳，夫捐耗貲而躋崇秩，不愈於歲作輸戶而猶輒折腰墨綬耶？今為計，吾見來年之春，吏不敢晝入公之堂矣。語曰：『成大功者不謀於眾，圖大事者不惜小費。』必欲仆行，惟公裁之。」桂益惑。明日遂行。劉又辭以未有室家，桂乃以貲安其孥，挈金三千，與俱至都下，罄以金付之，不問出入。未逾月，金盡，則謬來賀曰：「旦夕貴矣！第非五千不可。」桂稍有難色，輒去不顧曰，「徒費前物，毋咎我也！」桂不得已，稱貸得金二千，而留其半，以半與之。又月余，或告桂生曰：「劉某已除親軍指揮使矣。」桂未信。少頃，從者奔入曰：「適見劉生，驟貴甚，呵擁塞道途。」桂且信且疑，倚門望焉。忽有四卒前曰：「大人致請。」桂曰：「大人何為者？」曰：「新親軍劉公也。」桂愕然，始信劉之賣己矣，大怒欲入，而卒掖之行。及至，桂猶意其以鄉曲見，而劉端坐如故，久始言曰：「曩貲便宜假我，決不爾負。但吾新蒞署，需錢甚急，爾前所留，幸並貸我，不數月，當悉償也。」即令卒押取之。卒去，而索貸者填門矣，乃令從者歸取償之。桂羞還故鄉，止居京邸，以厚價得利匕首，將俟劉入朝，刺殺之。然急於報仇，夜不能少寐，月光黯淡，而誤以為東方明矣；急奔出，則路杳無行人，禁漏方三催耳。乃倚身阛阓，少息焉。須臾，夢匍匐入高堂，一老翁據案坐，乃施君也。桂見之，大赧，不得已，搖尾前曰：「曩令嗣來，非敢忘德，恐其不克負荷，欲得當以報之耳。」君大叱曰：「是欲死耶！胡自吠其主也？」桂見訴不聽，見其子自內出，乃銜衣笑曰：「向辱惠顧，不能輒厚遺，幸無罪！」其子以足蹴之曰：「是欲速死耶！胡自嚙其主也？」桂不敢仰視，行至廚，見施母方分羹，乃蹲足叩首，乞哀曰：「向令嗣不能少待，以致薄母，罪不敢辭。今我餒甚，能以余羹食我乎？」母命大杖撲之。逃至後庭，則其妻與二子、少女鹹在焉，諦視之，皆成犬形，反自顧，亦無少異。乃大駭曰：「我輩何至此哉？」妻怒曰：「爾貴他人而辱妻子，獨不思負施君乎？施在堂，乞憐萬狀，而不見聽，比爾曩時侮慢其子，能相當否？」桂詈曰：「桑下得金，爾以為暮夜無知，致我如此，顧咎我耶？」妻復詈曰：「其子來時，誰為爾言而弗報也？」二子前解之曰：「此往事，言之何益，徒增傷痛耳！但自今以後，再世為人，其勉為無獸行哉！」相與欷歔久之。桂餒甚，索食之急，顧有小兒遺混池上，桂心知其穢惡，而見妻子攢聚欲食，亦不覺垂涎焉，見所遺墮落池中，深惜之。已而廚人奉主翁之命，烹其長男，驚懼而蘇，汗液浹背，乃一夢也。則曙色漸開而朝罷矣。桂幡然曰：「噫！有是戰！天道好還，絲粟不爽，人之不可輒負，彰彰矣！夫負人之與負於人，一也。今日之夢，是天以象告，非其實也，猶可得而悔悟。安知劉生不實受於此乎？則於劉何尤！」乃棄匕首河中而返。急至吳，訪施君之子，時年二十七矣。更厚葬其父母，載之至越，以女妻焉。居無何，劉果以贓敗，抄錄拷訊，備嘗窘辱。桂適以事赴京，偕子婿謁刑曹，會見劉，頸荷鐵徽，手交木葉，顏色枯槁，步履艱難；妻子自後來，與之訣別，或怨或啼，而旁觀者益怒。忽見桂生，悲慚伏地曰：「向負大人，故有今日。」其冀食乞哀之情，怨悔顛連之狀，宛若曩時夢中故態。桂不覺心動，以錢數十貫贈焉。劉跽而受之曰：「今生已矣，俟來世為犬馬以報德也。」桂因大感嘆，與子婿歸，三分其財產，遂為會稽名家。江左之人，迄今猶有能道其詳者。",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Unknown",
+        "reason": "outside-declared-grammar",
+        "missing": "a declared grammar in which this text is in-grammar; tried wenyan.relations.reporting.v1 — 2 grammar(s) are declared",
+        "verified": {
+          "ok": true,
+          "note": "nothing to recompute"
+        }
+      }
+    },
+    {
+      "id": "corpus:豔異編:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "豔異編",
+        "section": "豔異編.1",
+        "passageId": "1.1",
+        "sourcePage": "豔異編/00",
+        "sourceRevid": 865759
+      },
+      "question": {
+        "type": "Q1",
+        "text": "嘗聞宇宙大矣，何所不有。宣尼「不語怪」，非謂無怪之可語也。乃齷齪，老儒謂「目不親非聖之書」，抑何坐井觀天耶！泥丸封口，自甘固陋。獨不觀乎天之風月，地之花鳥，人之歌舞，非此不成其為三才乎？從來可欣可羨可駭可愕之事，自曲士觀之甚奇，自達人觀之甚平。吾嘗浮沉八股道中，無一生趣。月之夕，花之晨，銜觴賦詩之餘，登山臨水之際，稗官野史，時一展玩。諸凡神仙妖怪，國士名姝，風流得意，慷慨情深等語，千轉萬變，靡不錯陳於前，亦足以送居諸而破岑寂。豈其詹詹學一先生之言、而以號於人曰「此夫出自齊諧之口者也」、而擯不復道耶？雖然詩三百篇，不廢鄭衛，要以「無邪」為歸。假令不善讀詩者，而徒侈淫哇之詞，領忘懲創之旨，雖多亦奚以為！是集也，奇而法，正而葩，纖合度，修短中程，才情妙敏，蹤跡幽玄。其為物也多姿，其為態也屢遷。斯亦小言中之白眉者矣。昔人云：「我能轉法華，不為法華轉。」得其說而並得其所以說，則樂而不淫，哀而不傷，縱橫流漫而不納於邪，詭譎浮誇而不離於正。不然，始而惑，既而溺，終而蕩。「盡信書則不如無書」，有味乎於輿氏之言哉。不佞，懶如嵇，狂如阮，慢如長卿，迂如元稹，一世不可餘，餘亦不可一世。蕭蕭此君而外，更無知已。嘯詠時每手一編，未嘗不臨文感慨，不能喻之於人。竊謂開卷有益，夫固善取益者自為益耳。戊午，天孫渡河後三日，晏坐南窗，涼風颯至，綠筠弄影。左蟹鼇，右酒杯，拍浮，漫興書此，以告夫世之讀《豔異編》者。",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Unknown",
+        "reason": "outside-declared-grammar",
+        "missing": "a declared grammar in which this text is in-grammar; tried wenyan.relations.reporting.v1 — 2 grammar(s) are declared",
+        "verified": {
+          "ok": true,
+          "note": "nothing to recompute"
+        }
+      }
+    },
+    {
+      "id": "corpus:大明奇俠傳:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "大明奇俠傳",
+        "section": "大明奇俠傳.1",
+        "passageId": "1.1",
+        "sourcePage": "大明奇俠傳/00",
+        "sourceRevid": 860862
+      },
+      "question": {
+        "type": "Q1",
+        "text": "夫人生之初，渾然天理，無所謂善，又何有惡？至嗜慾深而性漸乖，遂至始於家庭，終於邦國。古人著書以相戒勸，正言之而不能行者，則微言之，微言之而不能行者，則創為傳奇小說，以告戒於世。庸夫愚婦無不口談心講，以悅耳目。其苦心孤詣，更有功於警迷覺悟耳。",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Unknown",
+        "reason": "outside-declared-grammar",
+        "missing": "a declared grammar in which this text is in-grammar; tried wenyan.relations.reporting.v1 — 2 grammar(s) are declared",
+        "verified": {
+          "ok": true,
+          "note": "nothing to recompute"
+        }
+      }
+    },
+    {
+      "id": "corpus:周禮:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "周禮",
+        "section": "周禮.1",
+        "passageId": "1.1",
+        "sourcePage": "周禮/天官冢宰",
+        "sourceRevid": 2605877
+      },
+      "question": {
+        "type": "Q1",
+        "text": "惟王建國，辨方正位，體國經野，設官分職，以為民極。乃立天官冢宰，使帥其屬而掌邦治，以佐王均邦國。治官之屬：",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Unknown",
+        "reason": "outside-declared-grammar",
+        "missing": "a declared grammar in which this text is in-grammar; tried wenyan.relations.reporting.v1 — 2 grammar(s) are declared",
+        "verified": {
+          "ok": true,
+          "note": "nothing to recompute"
+        }
+      }
+    },
+    {
+      "id": "corpus:春秋穀梁傳:1.2",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "春秋穀梁傳",
+        "section": "春秋穀梁傳.1",
+        "passageId": "1.2",
+        "sourcePage": "春秋穀梁傳/隱公",
+        "sourceRevid": 1999666
+      },
+      "question": {
+        "type": "Q1",
+        "text": "元年春，王正月。雖無事，必舉正月，謹始也。公何以不言即位？成公志也。焉成之？言君之不取為公也。君之不取為公，何也？將以讓桓也。讓桓正乎？曰：不正。《春秋》成人之美，不成人之惡。隱不正而成之，何也？將以惡桓也。其惡桓，何也？隱將讓而桓弒之，則桓惡矣；桓弒而隱讓，則隱善矣。善則其不正焉，何也？《春秋》貴義而不貴惠，信道而不信邪。孝子揚父之美，不揚父之惡。先君之欲與桓，非正也，邪也；雖然，既勝其邪心以與隱矣。己探先君之邪志，而遂以與桓，則是成父之惡也。兄弟，天倫也。為子受之父，為諸侯受之君。己廢天倫，而忘君父，以行小惠，曰小道也。若隱者，可謂輕千乘之國。蹈道，則未也。",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Unknown",
+        "reason": "outside-declared-grammar",
+        "missing": "a declared grammar in which this text is in-grammar; tried wenyan.relations.reporting.v1 — 2 grammar(s) are declared",
+        "verified": {
+          "ok": true,
+          "note": "nothing to recompute"
+        }
+      }
+    },
+    {
+      "id": "corpus:春秋經:1.3",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "春秋經",
+        "section": "春秋經.1",
+        "passageId": "1.3",
+        "sourcePage": "春秋經/隱公",
+        "sourceRevid": 2184546
+      },
+      "question": {
+        "type": "Q1",
+        "text": "三月，公及邾儀父盟于蔑。",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Unknown",
+        "reason": "outside-declared-grammar",
+        "missing": "a declared grammar in which this text is in-grammar; tried wenyan.relations.reporting.v1 — 2 grammar(s) are declared",
+        "verified": {
+          "ok": true,
+          "note": "nothing to recompute"
+        }
+      }
+    },
+    {
+      "id": "corpus:今文孝經:1.2",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "今文孝經",
+        "section": "今文孝經.1",
+        "passageId": "1.2",
+        "sourcePage": "今文孝經",
+        "sourceRevid": 1797788
+      },
+      "question": {
+        "type": "Q1",
+        "text": "子曰：「先王有至德要道，以順天下，民用和睦，上下無怨，汝知之乎？」",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Answered",
+        "roles": {
+          "agent": "子",
+          "recipient": null,
+          "theme": "先王有至德要道，以順天下，民用和睦，上下無怨，汝知之乎？"
+        },
+        "construction": "yue-quote",
+        "grammar": "wenyan.relations.reporting.v1",
+        "occurrences": [
+          {
+            "slot": 0,
+            "value": "子",
+            "start": 0,
+            "end": 1
+          },
+          {
+            "slot": 1,
+            "value": "先王有至德要道，以順天下，民用和睦，上下無怨，汝知之乎？",
+            "start": 4,
+            "end": 32
+          }
+        ],
+        "warrant": {
+          "kind": "evidence",
+          "refs": [
+            "corpus:analects:1.1:yue-quote",
+            "corpus:mencius:1.1:yue-quote"
+          ],
+          "derivation": "replay(evidence) leaves 1 of 2 role permutations for 'yue-quote' in wenyan.relations.reporting.v1"
+        },
+        "verified": {
+          "ok": true,
+          "note": "roles reproduce"
+        }
+      }
+    },
+    {
+      "id": "corpus:爾雅:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "爾雅",
+        "section": "爾雅.1",
+        "passageId": "1.1",
+        "sourcePage": "爾雅",
+        "sourceRevid": 9736004
+      },
+      "question": {
+        "type": "Q1",
+        "text": "初、哉、首、基、肇、祖、元、胎、俶、落、權輿，始也。",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Unknown",
+        "reason": "outside-declared-grammar",
+        "missing": "a declared grammar in which this text is in-grammar; tried wenyan.relations.reporting.v1 — 2 grammar(s) are declared",
+        "verified": {
+          "ok": true,
+          "note": "nothing to recompute"
+        }
+      }
+    },
+    {
+      "id": "corpus:四書章句集註:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "四書章句集註",
+        "section": "四書章句集註.1",
+        "passageId": "1.1",
+        "sourcePage": "四書章句集註/大學章句序",
+        "sourceRevid": 2200150
+      },
+      "question": {
+        "type": "Q1",
+        "text": "大學之書，古之大學所以敎人之法也。蓋自天降生民，則既莫不與之以仁義禮智之性矣。然其氣質之稟或不能齊，是以不能皆有以知其性之所有而全之也。一有聰明睿智能盡其性者出於其閒，則天必命之以爲億兆之君師，使之治而敎之，以復其性。此伏羲、神農、黃帝、堯、舜，所以繼天立極，而司徒之職、典樂之官所由設也。",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Unknown",
+        "reason": "outside-declared-grammar",
+        "missing": "a declared grammar in which this text is in-grammar; tried wenyan.relations.reporting.v1 — 2 grammar(s) are declared",
+        "verified": {
+          "ok": true,
+          "note": "nothing to recompute"
+        }
+      }
+    },
+    {
+      "id": "corpus:楚辭:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "楚辭",
+        "section": "楚辭.1",
+        "passageId": "1.1",
+        "sourcePage": "離騷",
+        "sourceRevid": 9685531
+      },
+      "question": {
+        "type": "Q1",
+        "text": "帝高陽之苗裔兮，朕皇考曰伯庸。\n攝提貞于孟陬兮，惟庚寅吾以降。\n皇覽揆余初度兮，肇錫余以嘉名。\n名余曰正則兮，字余曰靈均。\n紛吾既有此內美兮，又重之以脩能。\n扈江離與辟芷兮，紉秋蘭以為佩。\n汩余若將不及兮，恐年歲之不吾與。\n朝搴阰之木蘭兮，夕攬洲之宿莽。\n日月忽其不淹兮，春與秋其代序。\n惟草木之零落兮，恐美人之遲暮。\n不撫壯而棄穢兮，何不改乎此度？\n乘騏驥以馳騁兮，來吾道夫先路。\n昔三后之純粹兮，固衆芳之所在。\n雜申椒與菌桂兮，豈維紉夫蕙茝？\n彼堯舜之耿介兮，既遵道而得路。\n何桀紂之猖披兮，夫唯捷徑以窘步。\n惟夫黨人之偷樂兮，路幽昧以險隘。\n豈余身之憚殃兮，恐皇輿之敗績。\n忽奔走以先後兮，及前王之踵武。\n荃不察余之忠情兮，反信讒而齌怒。\n余固知謇謇之為患兮，忍而不能舍也。\n指九天以為正兮，夫唯靈脩之故也。\n曰黃昏以為期兮，羌中道而改路。\n初既與余成言兮，後悔遁而有他。\n余既不難夫離別兮，傷靈脩之數化。\n余既滋蘭之九畹兮，又樹蕙之百畝。\n畦留夷與揭車兮，雜杜衡與芳芷。\n冀枝葉之峻茂兮，願竢時乎吾將刈。\n雖萎絕其亦何傷兮，哀衆芳之蕪穢。\n衆皆競進以貪婪兮，憑不猒乎求索。\n羌內恕己以量人兮，各興心而嫉妒。\n忽馳騖以追逐兮，非余心之所急。\n老冉冉其將至兮，恐脩名之不立。\n朝飲木蘭之墜露兮，夕餐秋菊之落英。\n苟余情其信姱以練要兮，長顑頷亦何傷？\n攬木根以結茝兮，貫薜荔之落蕊。\n矯菌桂以紉蕙兮，索胡繩之𫄥𫄥。\n謇吾法夫前脩兮，非時俗之所服。\n雖不周於今之人兮，願依彭咸之遺則。\n長太息以掩涕兮，哀民生之多艱。\n余雖好脩姱以𩉜羈兮，謇朝誶而夕替。\n既替余以蕙纕兮，又申之㠯攬茝。\n亦余心之所善兮，雖九死其猶未悔。\n怨靈脩之浩蕩兮，終不察夫民心。\n衆女嫉余之蛾眉兮，謠諑謂余以善淫。\n固時俗之工巧兮，偭規矩而改錯。\n背繩墨以追曲兮，競周容以為度。\n忳鬱邑余侘傺兮，吾獨窮困乎此時也。\n寧溘死以流亡兮，余不忍為此態也。\n鷙鳥之不羣兮，自前世而固然。\n何方圜之能周兮，夫孰異道而相安。\n屈心而抑志兮，忍尤而攘詬。\n伏清白以死直兮，固前聖之所厚。\n悔相道之不察兮，延佇乎吾將反。\n回朕車以復路兮，及行迷之未遠。\n步余馬於蘭臯兮，馳椒丘且焉止息。\n進不入以離尤兮，退將復脩吾初服。\n製芰荷以為衣兮，集芙蓉以為裳。\n不吾知其亦已兮，苟余情其信芳。\n高余冠之岌岌兮，長余佩之陸離。\n芳與澤其雜糅兮，唯昭質其猶未虧。\n忽反顧以遊目兮，將往觀乎四荒。\n佩繽紛其繁飾兮，芳菲菲其彌章。\n民生各有所樂兮，余獨好脩以為常。\n雖體解吾猶未變兮，豈余心之可懲。\n女嬃之嬋媛兮，申申其詈予。\n曰鯀婞直以亡身兮，終然殀乎羽之野。\n汝何博謇而好脩兮，紛獨有此姱節。\n薋菉葹以盈室兮，判獨離而不服。\n衆不可戶說兮，孰云察余之中情。\n世並舉而好朋兮，夫何煢獨而不予聽。\n依前聖以節中兮，喟憑心而歷玆。\n濟沅湘以南征兮，就重華而敶詞：\n啟《九辯》與《九歌》兮，夏康娛以自縱。\n不顧難以圖後兮，五子用失乎家巷。\n羿淫遊以佚畋兮，又好射夫封狐。\n固亂流其鮮終兮，浞又貪夫厥家。\n澆身被服強圉兮，縱欲而不忍。\n日康娛而自忘兮，厥首用夫顛隕。\n夏桀之常違兮，乃遂焉而逢殃。\n后辛之菹醢兮，殷宗用而不長。\n湯禹儼而祗敬兮，周論道而莫差。\n舉賢而授能兮，循繩墨而不頗。\n皇天無私阿兮，覽民德焉錯輔。\n夫維聖哲以茂行兮，苟得用此下土。\n瞻前而顧後兮，相觀民之計極。\n夫孰非義而可用兮，孰非善而可服。\n阽余身而危死兮，覽余初其猶未悔。\n不量鑿而正枘兮，固前脩以菹醢。\n曾歔欷余鬱邑兮，哀朕時之不當。\n攬茹蕙以掩涕兮，霑余襟之浪浪。\n跪敷衽以陳辭兮，耿吾既得此中正；\n駟玉虬以乘鷖兮，溘埃風余上征。\n朝發軔於蒼梧兮，夕余至乎縣圃；\n欲少留此靈瑣兮，日忽忽其將暮。\n吾令羲和弭節兮，望崦嵫而勿迫。\n路曼曼其脩遠兮，吾將上下而求索。\n飲余馬於咸池兮，總余轡乎扶桑。\n折若木以拂日兮，聊逍遙以相羊。\n前望舒使先驅兮，後飛廉使奔屬。\n鸞皇為余先戒兮，雷師告余以未具。\n吾令鳳鳥飛騰兮，繼之以日夜。\n飄風屯其相離兮，帥雲霓而來御。\n紛緫緫其離合兮，斑陸離其上下。\n吾令帝閽開關兮，倚閶闔而望予。\n時曖曖其將罷兮，結幽蘭而延佇。\n世溷濁而不分兮，好蔽美而嫉妒。\n朝吾將濟於白水兮，登閬風而绁馬。\n忽反顧以流涕兮，哀高丘之無女。\n溘吾遊此春宮兮，折瓊枝以繼佩。\n及榮華之未落兮，相下女之可詒。\n吾令豐隆椉雲兮，求宓妃之所在。\n解佩纕以結言兮，吾令蹇脩以為理。\n紛緫緫其離合兮，忽緯繣其難遷。\n夕歸次於窮石兮，朝濯髮乎洧盤。\n保厥美以驕傲兮，日康娛以淫遊。\n雖信美而無禮兮，來違棄而改求。\n覽相觀於四極兮，周流乎天余乃下。\n望瑤臺之偃蹇兮，見有娀之佚女。\n吾令鴆為媒兮，鴆告余以不好。\n雄鳩之鳴逝兮，余猶惡其佻巧。\n心猶豫而狐疑兮，欲自適而不可。\n鳳皇既受詒兮，恐高辛之先我。\n欲遠集而無所止兮，聊浮遊以逍遙。\n及少康之未家兮，留有虞之二姚。\n理弱而媒拙兮，恐導言之不固。\n世溷濁而嫉賢兮，好蔽美而稱惡。\n閨中既以邃遠兮，哲王又不寤。\n懷朕情而不發兮，余焉能忍與此終古。\n索藑茅以筳篿兮，命靈氛為余占之。\n曰：兩美其必合兮，孰信脩而慕之？\n思九州之博大兮，豈唯是其有女？\n曰：勉遠逝而無狐疑兮，孰求美而釋女？\n何所獨無芳草兮，爾何懷乎故宇？\n世幽昧以昡曜兮，孰云察余之善惡。\n民好惡其不同兮，惟此黨人其獨異。\n戶服艾以盈要兮，謂幽蘭其不可佩。\n覽察草木其猶未得兮，豈珵美之能當？\n蘇糞壤㠯充幃兮，謂申椒其不芳。\n欲從靈氛之吉占兮，心猶豫而狐疑。\n巫咸將夕降兮，懷椒糈而要之。\n百神翳其備降兮，九疑繽其並迎。\n皇剡剡其揚靈兮，告余以吉故。\n曰：勉升降以上下兮，求榘矱之所同。\n湯禹嚴而求合兮，摯咎繇而能調。\n苟中情其好脩兮，何必用夫行媒。\n說操築於傳巖兮，武丁用而不疑。\n呂望之鼓刀兮，遭周文而得舉。\n甯戚之謳歌兮，齊桓聞以該輔。\n及年歲之未宴兮，時亦猶其未央。\n恐鵜鴃之先鳴兮，使百草為之不芳。\n何瓊佩之偃蹇兮，衆薆然而蔽之。\n惟此黨人之不諒兮，恐嫉妒而折之。\n時繽紛其變易兮，又何可以淹留。\n蘭芷變而不芳兮，荃蕙化而為茅。\n何昔日之芳草兮，今直為此蕭艾也。\n豈其有他故兮，莫好脩之害也。\n余以蘭為可恃兮，羌無實而容長。\n委厥美以從俗兮，苟得列乎衆芳。\n椒專佞以慢慆兮，樧又欲充夫佩幃。\n既干進而務入兮，又何芳之能祗。\n固時俗之流從兮，又孰能無變化。\n覽椒蘭其若玆兮，又況揭車與江離。\n惟玆佩之可貴兮，委厥美而歷玆。\n芳菲菲而難虧兮，芬至今猶未沬。\n和調度以自娛兮，聊浮游而求女。\n及余飾之方壯兮，周流觀乎上下。\n靈氛既告余以吉占兮，歷吉日乎吾將行。\n折瓊枝以為羞兮，精瓊爢以為粻。\n為余駕飛龍兮，雜瑤象以為車。\n何離心之可同兮，吾將遠逝以自疏。\n邅吾道夫崑崙兮，路脩遠以周流。\n揚雲霓之晻藹兮，鳴玉鸞之啾啾。\n朝發軔於天津兮，夕余至乎西極。\n鳳皇翼其承旂兮，高翱翔之翼翼。\n忽吾行此流沙兮，遵赤水而容與。\n麾蛟龍使梁津兮，詔西皇使涉予。\n路脩遠以多艱兮，騰衆車使徑待。\n路不周以左轉兮，指西海以為期。\n屯余車其千乘兮，齊玉軑而並馳。\n駕八龍之婉婉兮，載雲旗之委蛇。\n抑志而弭節兮，神高馳之邈邈。\n奏《九歌》而舞《韶》兮，聊假日以媮樂。\n陟升皇之赫戲兮，忽臨睨夫舊鄉。\n僕夫悲余馬懷兮，蜷局顧而不行。\n亂曰：已矣哉，\n國無人莫我知兮，又何懷乎故都？\n既莫足與為美政兮，吾將從彭咸之所居。",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Unknown",
+        "reason": "outside-declared-grammar",
+        "missing": "a declared grammar in which this text is in-grammar; tried wenyan.relations.reporting.v1 — 2 grammar(s) are declared",
+        "verified": {
+          "ok": true,
+          "note": "nothing to recompute"
+        }
+      }
+    },
+    {
+      "id": "corpus:文心雕龍:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "文心雕龍",
+        "section": "文心雕龍.1",
+        "passageId": "1.1",
+        "sourcePage": "文心雕龍/原道",
+        "sourceRevid": 7912895
+      },
+      "question": {
+        "type": "Q1",
+        "text": "文之為德也大矣，與天地並生者何哉！夫玄黃色雜，方圓體分，日月疊璧，以垂麗天之象；山川煥綺，以鋪理地之形；此蓋道之文也。仰觀吐曜，俯察含章，高卑定位，故兩儀既生矣。惟人參之，性靈所鍾，是謂三才。為五行之秀，實天地之心，心生而言立，言立而文明，自然之道也。傍及萬品，動植皆文︰龍鳳以藻繪呈瑞，虎豹以炳蔚凝姿；雲霞雕色，有踰畫工之妙；草木賁華，無待錦匠之奇；夫豈外飾，蓋自然耳。至於林籟結響，調如竽瑟；泉石激韻，和若球鍠；故形立則章成矣，聲發則文生矣。夫以無識之物，郁然有彩，有心之器，其無文歟！",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Unknown",
+        "reason": "outside-declared-grammar",
+        "missing": "a declared grammar in which this text is in-grammar; tried wenyan.relations.reporting.v1 — 2 grammar(s) are declared",
+        "verified": {
+          "ok": true,
+          "note": "nothing to recompute"
+        }
+      }
+    },
+    {
+      "id": "corpus:玉臺新詠:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "玉臺新詠",
+        "section": "玉臺新詠.1",
+        "passageId": "1.1",
+        "sourcePage": "玉臺新詠/序",
+        "sourceRevid": 2325670
+      },
+      "question": {
+        "type": "Q1",
+        "text": "夫凌雲槩日，由余之所未窺；千門萬戶，張衡之所曾賦。周王璧臺之上，漢帝金屋之中，玉樹以珊瑚作枝，珠簾以玳瑁為押，其中有麗人焉。其人五陵豪族，充選掖庭；四姓良家，馳名永巷。亦有潁川、新市，河間、觀津，本號嬌娥，曾名巧笑。楚王宮裏，無不推其細腰；衛國佳人，俱言訝其纎手。閱詩敦禮，豈東隣之自媒，婉約風流，異西施之被教。弟兄協律，生小學歌，少長河陽，由來能舞。琵琶新曲，無待石崇；箜篌雜引，非關曹植。傳鼓瑟於楊家，得吹簫於秦女。至若寵聞長樂，陳后知而不平；畫出天仙，閼氏覽而遙妬。至如東隣巧笑，來侍寢于更衣；西子微顰，得橫陳於甲帳。陪遊馺娑，騁纎腰於結風；長樂鴛鴦，奏新聲於度曲。妝鳴蟬之薄鬢，照墮馬之垂鬟。反插金鈿，橫抽寶樹。南都石黛，最發雙蛾；北地燕脂，偏開兩靨。亦有嶺上仙童，分丸魏帝；腰中寶鳳，授㻺軒轅。金星將婺女爭華，麝月與嫦娥競爽。驚鸞冶袖，時飄韓掾之香；飛燕長裾，宜結陳王之珮。雖非圖畫，入甘泉而不分；言異神仙，戲陽臺而無別。真可謂傾國傾城，無對無雙者也。",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Unknown",
+        "reason": "outside-declared-grammar",
+        "missing": "a declared grammar in which this text is in-grammar; tried wenyan.relations.reporting.v1 — 2 grammar(s) are declared",
+        "verified": {
+          "ok": true,
+          "note": "nothing to recompute"
+        }
+      }
+    },
+    {
+      "id": "corpus:文選:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "文選",
+        "section": "文選.1",
+        "passageId": "1.1",
+        "sourcePage": "昭明文選/卷1",
+        "sourceRevid": 2010132
+      },
+      "question": {
+        "type": "Q1",
+        "text": "賦甲\n賦甲者，舊題甲乙，所以紀卷先後。今卷旣改，故甲乙並除，存其首題，以明舊式。",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Unknown",
+        "reason": "outside-declared-grammar",
+        "missing": "a declared grammar in which this text is in-grammar; tried wenyan.relations.reporting.v1 — 2 grammar(s) are declared",
+        "verified": {
+          "ok": true,
+          "note": "nothing to recompute"
+        }
+      }
+    },
+    {
+      "id": "corpus:唐詩三百首:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "唐詩三百首",
+        "section": "唐詩三百首.1",
+        "passageId": "1.1",
+        "sourcePage": "賊退示官吏",
+        "sourceRevid": 2619200
+      },
+      "question": {
+        "type": "Q1",
+        "text": "昔歲逢太平，山林二十年。\n泉源在庭戶，洞壑當門前。\n井稅有常期，日晏猶得眠。\n忽然遭世變，數歲親戎旃。\n今來典斯郡，山夷又紛然。\n城小賊不屠，人貧傷可憐。\n是以陷隣境，此州獨見全。\n使臣將王命，豈不如賊焉。\n令彼徵斂者，迫之如火煎。\n誰能絕人命，以作時世賢。\n思欲委符節，引竿自刺船。\n將家就魚麥，歸老江湖邊。",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Unknown",
+        "reason": "outside-declared-grammar",
+        "missing": "a declared grammar in which this text is in-grammar; tried wenyan.relations.reporting.v1 — 2 grammar(s) are declared",
+        "verified": {
+          "ok": true,
+          "note": "nothing to recompute"
+        }
+      }
+    },
+    {
+      "id": "corpus:古文觀止:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "古文觀止",
+        "section": "古文觀止.1",
+        "passageId": "1.1",
+        "sourcePage": "古文觀止/序",
+        "sourceRevid": 2376315
+      },
+      "question": {
+        "type": "Q1",
+        "text": "序一\n余束髮就學時，輒喜讀古人書傳，每縱觀大意，於源流得失之故，亦嘗探其要領。若乃析義理於精微之蘊，辯字句於毫髮之間，此衷蓋闕如也。",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Unknown",
+        "reason": "outside-declared-grammar",
+        "missing": "a declared grammar in which this text is in-grammar; tried wenyan.relations.reporting.v1 — 2 grammar(s) are declared",
+        "verified": {
+          "ok": true,
+          "note": "nothing to recompute"
+        }
+      }
+    },
+    {
+      "id": "corpus:國語:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "國語",
+        "section": "國語.1",
+        "passageId": "1.1",
+        "sourcePage": "國語/國語解敘",
+        "sourceRevid": 369315
+      },
+      "question": {
+        "type": "Q1",
+        "text": "昔孔子發憤於舊史，垂法於素王。左丘明因聖言以攄意，託王義以流藻，其淵原深大，沈懿雅麗，可謂命世之才，博物善作者也。其明識高遠，雅思未盡，故復采錄前世穆王以來，下訖魯悼智伯之誅，邦國成敗，嘉言善語。陰陽律呂，天時人事逆順之數，以為《國語》。其文不主於經，故號曰「《外傳》」。所以包羅天地，探測禍福，發起幽微，章表善惡者，昭然甚明，實與經藝竝陳，非特諸子之倫也。遭秦之亂，幽而復光。賈生、史遷頗綜述焉。及劉光祿於漢成世始更考校，是正疑謬。至於章帝，鄭大司農為之訓注，解疑釋滯，昭晰可觀。至於細碎，有所闕略。侍中賈君敷而衍之，其所發明，大義略舉，為已憭矣，然於文閒時有遺忘。建安、黃武之間，故侍御史會稽虞君、尚書僕射丹陽唐君，皆英才碩儒，洽聞之士也，采摭所見，因賈為主而損益之。觀其辭義，信多善者，然所理釋，猶有異同。",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Unknown",
+        "reason": "outside-declared-grammar",
+        "missing": "a declared grammar in which this text is in-grammar; tried wenyan.relations.reporting.v1 — 2 grammar(s) are declared",
+        "verified": {
+          "ok": true,
+          "note": "nothing to recompute"
+        }
+      }
+    },
+    {
+      "id": "corpus:戰國策:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "戰國策",
+        "section": "戰國策.1",
+        "passageId": "1.1",
+        "sourcePage": "戰國策 (士禮居叢書本)/東周",
+        "sourceRevid": 2458631
+      },
+      "question": {
+        "type": "Q1",
+        "text": "鮑本東周　漢志，河南鞏，東周君所居。正曰：東周當從舊，居卷首，說見前。　大事記云，東周惠公班秉政洛陽，采邑在鞏。漢志說非。餘見前。",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Unknown",
+        "reason": "outside-declared-grammar",
+        "missing": "a declared grammar in which this text is in-grammar; tried wenyan.relations.reporting.v1 — 2 grammar(s) are declared",
+        "verified": {
+          "ok": true,
+          "note": "nothing to recompute"
+        }
+      }
+    },
+    {
+      "id": "corpus:逸周書:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "逸周書",
+        "section": "逸周書.1",
+        "passageId": "1.1",
+        "sourcePage": "逸周書/卷一",
+        "sourceRevid": 5977205
+      },
+      "question": {
+        "type": "Q1",
+        "text": "天生民而制其度。聖人為制法度。度小大以正，權輕重以極，明本末以立中。制法度，所以立中正。立中以補損，補損以知足。損益以中為制，故知足也。□爵以明等極，極，中也。貴賤之等，尊卑之中也。極以正民。正中外以成命，內外正，則大命成也。正上下以順政。順其政教。政以內□，□□自邇，彌興自遠，遠邇備極。終也。□微補在□□，分微在明。知精□□□□微分理有明故。明王是以敬微而順分，分次以知和，知和以知樂，知樂以知哀。哀樂以知慧，內外以知人。慧者甚明，所以知人。凡民生而有好有惡，小得其所好則喜，大得其所好則樂；小遭其所惡則憂，大遭其所惡則哀。言其性之自然。凡民之所好惡，生物是好，死物是惡。民至有好而不讓，不從其所好，必犯法，無以事上。不必讓則爭，爭則犯法矣。民至有惡不讓。不去其所惡，必犯法，無以事上。遍行於此，尚有頑民，而況曰以可去其所惡而得其所好，民能居乎？遍為兼行好惡也。能居乎，言不能居好也。若不□力，何以求之？言力爭也。力爭則力政，力政則無讓，無讓則無禮，無禮，雖得所好，民樂乎？爭則不樂。若不樂，乃所惡也。凡民不忍好惡，不能分次，忍為持久，堅以次第。不次則奪，奪則戰；戰則何以養老幼，何以救痛疾死喪，何以胥役也？胥，相也。明王是以極等以斷好惡。教民次分力竟。任壯養老，長幼有報，壯者任之，老者養之，幼者長之，使相報，此謂力竟也。民是以胥役也。夫力竟非眾不尅，眾非和不眾，和之以懷眾。和非中不立，中非禮不慎，禮非樂不履。明王是以無樂非人，無哀非人，言明王所樂、所哀非人也。人是以眾。人眾，賞多罰少，政之美也；罰多賞少，政之惡也。罰多則困，賞多則乏，乏困無醜，教乃不至。醜，謂所厚。是故民主明醜以長子孫，子孫習服鳥獸。仁德土宜天時，歸其仁德。土之所宜，天時所生，皆行其物。百物行治，治之初厲初哉，治化則順。是故無順非厲。明醜以使之，所以成順者也。長幼成而生曰順極。言使小人、大人皆成其事上之心而生其義，順之至也。",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Unknown",
+        "reason": "outside-declared-grammar",
+        "missing": "a declared grammar in which this text is in-grammar; tried wenyan.relations.reporting.v1 — 2 grammar(s) are declared",
+        "verified": {
+          "ok": true,
+          "note": "nothing to recompute"
+        }
+      }
+    },
+    {
+      "id": "corpus:山海經:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "山海經",
+        "section": "山海經.1",
+        "passageId": "1.1",
+        "sourcePage": "山海經/郭璞序",
+        "sourceRevid": 203382
+      },
+      "question": {
+        "type": "Q1",
+        "text": "世之覽山海經者，皆以其閎誕迂誇，多奇怪俶儻之言，莫不疑焉。嘗試論之曰，莊生有云：「人之所知，莫若其所不知。」吾於山海經見之矣。夫以宇宙之寥廓，群生之紛紜，陰陽之煦蒸，萬殊之區分，精氣渾淆，自相濆薄，遊魂靈怪，觸象而構，流形於山川，麗狀於木石者，惡可勝言乎？然則總其所以乖，鼓之於一響；成其所以變，混之於一象。世之所謂異，未知其所以異；世之所謂不異，未知其所以不異。何者？物不自異，待我而後異，異果在我，非物異也。故胡人見布而疑黂，越人見罽而駭毳。夫翫所（珂案：夫翫所三字何焯校作蓋信其）習見而奇所希聞，此人情之常蔽也。今略舉可以明之者：陽火出於冰水，陰鼠生於炎山，而俗之論者，莫之或怪；及談山海經所載，而咸怪之：是不怪所可怪而怪所不可怪也。不怪所可怪，則幾於無怪矣；怪所不可怪，則未始有可怪也。夫能然所不可，不可所不可然，則理無不然矣。案汲郡竹書及穆天子傳：穆王西征見西王母，執璧帛之好，獻錦組之屬。穆王享王母於瑤池之上，賦詩往來，辭義可觀。遂襲昆侖之丘，遊軒轅之宮，眺鍾山之嶺，玩帝者之寶，勒石王母之山，紀跡玄圃之上。乃取其嘉木豔草奇鳥怪獸玉石珍瑰之器，金膏燭銀之寶，歸而殖養之於中國。穆王駕八駿之乘，右服盜驪，左驂騄耳，造父為御，奔戎為右，萬里長騖，以周歷四荒，名山大川，靡不登濟。東升大人之堂，西燕王母之廬，南轢黿鼉之梁，北躡積羽之衢。窮歡極娛，然後旋歸。案史記說穆王得盜驪騄耳驊騮之驥，使造父御之，以西巡狩，見西王母，樂而忘歸，亦與竹書同。左傳曰：「穆王欲肆其心，使天下皆有車轍馬跡焉。」竹書所載，則是其事也。而譙周之徒，足為通識瑰儒，而雅不平此，驗之史考，以著其妄。司馬遷敘大宛傳亦云：「自張騫使大夏之後，窮河源，惡睹所謂昆侖者乎？至禹本紀、山海經所有怪物，余不敢言也。」不亦悲乎！若竹書不潛出於千載，以作徵於今日者，則山海之言，其幾乎廢矣。若乃東方生曉畢方之名，劉子政辨盜械之尸，王頎訪兩面之客，海民獲長臂之衣：精驗潛效，絕代縣符。於戲！群惑者其可以少寤乎？是故聖皇原化以極變，象物以應怪，鑒無滯賾，曲盡幽情，神焉廋哉！神焉廋哉！蓋此書跨世七代，歷載三千，雖暫顯於漢而尋亦寢廢。其山川名號，所在多有舛謬，與今不同，師訓莫傳，遂將湮泯。道之所存，俗之喪，悲夫！余有懼焉，故為之創傳，疏其壅閡，闢其茀蕪，領其玄致，標其洞涉。庶幾令逸文不墜於世，奇言不絕於今，夏后之跡，靡刋於將來；八荒之事，有聞於後裔，不亦可乎。夫蘙薈之翔，叵以論垂天之凌；蹏涔之遊，無以知絳虯之騰；鈞天之庭，豈伶人之所躡；無航之津，豈蒼兕之所涉：非天下之至通，難與言山海之義矣。嗚呼！達觀博物之客，其鑒之哉。",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Answered",
+        "roles": {
+          "agent": "左傳",
+          "recipient": null,
+          "theme": "穆王欲肆其心，使天下皆有車轍馬跡焉。"
+        },
+        "construction": "yue-quote",
+        "grammar": "wenyan.relations.reporting.v1",
+        "occurrences": [
+          {
+            "slot": 0,
+            "value": "左傳",
+            "start": 624,
+            "end": 626
+          },
+          {
+            "slot": 1,
+            "value": "穆王欲肆其心，使天下皆有車轍馬跡焉。",
+            "start": 629,
+            "end": 647
+          }
+        ],
+        "warrant": {
+          "kind": "evidence",
+          "refs": [
+            "corpus:analects:1.1:yue-quote",
+            "corpus:mencius:1.1:yue-quote"
+          ],
+          "derivation": "replay(evidence) leaves 1 of 2 role permutations for 'yue-quote' in wenyan.relations.reporting.v1"
+        },
+        "verified": {
+          "ok": true,
+          "note": "roles reproduce"
+        }
+      }
+    },
+    {
+      "id": "corpus:穆天子傳:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "穆天子傳",
+        "section": "穆天子傳.1",
+        "passageId": "1.1",
+        "sourcePage": "穆天子傳/序一",
+        "sourceRevid": 1554640
+      },
+      "question": {
+        "type": "Q1",
+        "text": "《穆天子傳》出汲冢。晉荀朂校定為六卷，有序，言其事雖不典，其文甚古，頗可觀覽。予攷書序，稱穆王饗國百年，耄荒。太史公記穆王賔西王母事，與諸傳說所載多合。則此書蓋備記一時之詳，不可厚誣也。春秋之時，諸侯各有國史，多龎雜之言。下逮戰國，王迹熄而聖言湮，處士橫議而異端起，人人家自為說，求其欲不龎雜，其可得乎？其書紀王與七萃之士，廵行天下，然則徒衛簡而徵求寡矣！非有如秦漢之千騎萬乗空國而出也。王之自數其過，及七萃之規，未聞以為迕也。登羣玉山，命邢侯攻玉，而不受其牢，是先王恤民之法，未甞不行。至遇雨雪，士皆使休，獨王之八駿起騰以先待輒旬日，然後復發去，是非督令致期也。其承成康熙洽之餘，百姓晏然，雖以徐偃王之力行仁義，不足以為倡而搖天下，以知非有暴行虐政。而君子猶以王為獲沒於祗宮為深幸，足以見人心之危之如此也。是豈可效哉！是豈可效哉！存其書者固可以覽其古，徵其事者又安可不攷其是非歟？南臺都事海岱劉貞庭幹舊藏是書，懼其無傳，暇日稍加讎校訛舛，命金陵學官重刊，與博雅之士共之，諗予題其篇端云。時至正十年，歲在庚寅，春二月二十七日壬子。北岳王漸玄翰序。",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Unknown",
+        "reason": "outside-declared-grammar",
+        "missing": "a declared grammar in which this text is in-grammar; tried wenyan.relations.reporting.v1 — 2 grammar(s) are declared",
+        "verified": {
+          "ok": true,
+          "note": "nothing to recompute"
+        }
+      }
+    },
+    {
+      "id": "corpus:越絕書:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "越絕書",
+        "section": "越絕書.1",
+        "passageId": "1.1",
+        "sourcePage": "越絕書/卷一",
+        "sourceRevid": 2276022
+      },
+      "question": {
+        "type": "Q1",
+        "text": "問曰：「何謂越絕？」「越者，國之氏也。」「何以言之？」「按《春秋》序齊魯，皆以國為氏姓，是以明之。絕者，絕也。謂句踐時也。當是之時，齊將伐魯，孔子耻之，故子貢說齊以安魯。子貢一出，亂齊，破吳，興晉，彊越。其後賢者辯士，見夫子作《春秋》而畧吳越，又見子貢與聖人相去不遠，脣之與齒，表之與裏，葢要其意，覽史記而述其事也。」",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Unknown",
+        "reason": "outside-declared-grammar",
+        "missing": "a declared grammar in which this text is in-grammar; tried wenyan.relations.reporting.v1 — 2 grammar(s) are declared",
+        "verified": {
+          "ok": true,
+          "note": "nothing to recompute"
+        }
+      }
+    },
+    {
+      "id": "corpus:吳越春秋:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "吳越春秋",
+        "section": "吳越春秋.1",
+        "passageId": "1.1",
+        "sourcePage": "吳越春秋/吳太伯傳",
+        "sourceRevid": 2325697
+      },
+      "question": {
+        "type": "Q1",
+        "text": "吳之前君太伯者，后稷之苗裔也。后稷其母台氏之女姜嫄，為帝嚳元妃。年少未孕，出游於野，見大人跡而觀之，中心歡然，喜其形像，因履而踐之。身動，意若為人所感。後妊娠。恐被淫泆之禍，遂祭祀以求，謂無子履上帝之跡，天猶令有之。姜嫄怪而棄于阨狹之巷，牛馬過者折易而避之。復棄于林中，適會伐木之人多。復置于澤中冰上，眾鳥以羽覆之。后稷遂得不死。姜嫄以為神，收而養之，長因名棄。為兒時，好種樹禾、黍、桑、麻五榖、相五土之宜，青、赤、黃、黑，陵、水、高、下，粢、稷、黍、禾、蕖、麥、豆、稻，各得其理。堯遭洪水，人民泛濫，遂高而居。堯聘棄使教民山居，隨地造區，研營種之術。三年餘，行人無飢乏之色。乃拜棄為農師，封之台，號為后稷，姓姬氏。后稷就國為諸侯。卒，子不窋立。遭夏氏世衰，失官奔戎狄之間。",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Unknown",
+        "reason": "outside-declared-grammar",
+        "missing": "a declared grammar in which this text is in-grammar; tried wenyan.relations.reporting.v1 — 2 grammar(s) are declared",
+        "verified": {
+          "ok": true,
+          "note": "nothing to recompute"
+        }
+      }
+    },
+    {
+      "id": "corpus:晏子春秋:1.1",
+      "origin": "stratified-corpus-sample",
+      "why": null,
+      "source": {
+        "work": "晏子春秋",
+        "section": "晏子春秋.1",
+        "passageId": "1.1",
+        "sourcePage": "晏子春秋/卷一",
+        "sourceRevid": 2184646
+      },
+      "question": {
+        "type": "Q1",
+        "text": "莊公奮乎勇力，不顧於行義。勇力之士，無忌于國，貴戚不薦善，逼邇不引過，故晏子見公。公曰：「古者亦有徒以勇力立於世者乎？」晏子對曰：「嬰聞之，輕死以行禮謂之勇，誅暴不避強謂之力。故勇力之立也，以行其禮義也。湯武用兵而不為逆，並國而不為貪，仁義之禮也。誅暴不避強，替罪不避眾，勇力之行也。古之為勇力者，行禮義也。今上無仁義之理，下無替罪誅暴之行，而徒以勇力立於世，則諸侯行之以國危，匹夫行之以家殘。昔夏之衰也，有推侈、大戲；殷之衰也，有費仲，惡來。足走千里，手裂兕虎，任之以力，淩轢天下，威戮無罪，崇尚勇力，不顧義理，是以桀紂以滅，殷夏以衰。今公自奮乎勇力，不顧乎行義，勇力之士，無忌于國，身立威強，行本淫暴，貴戚不薦善，逼邇不引過，反聖王之德，而循滅君之行，用此存者，嬰未聞有也。」",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Answered",
+        "roles": {
+          "agent": "公",
+          "recipient": null,
+          "theme": "古者亦有徒以勇力立於世者乎？"
+        },
+        "construction": "yue-quote",
+        "grammar": "wenyan.relations.reporting.v1",
+        "occurrences": [
+          {
+            "slot": 0,
+            "value": "公",
+            "start": 41,
+            "end": 42
+          },
+          {
+            "slot": 1,
+            "value": "古者亦有徒以勇力立於世者乎？",
+            "start": 45,
+            "end": 59
+          }
+        ],
+        "warrant": {
+          "kind": "evidence",
+          "refs": [
+            "corpus:analects:1.1:yue-quote",
+            "corpus:mencius:1.1:yue-quote"
+          ],
+          "derivation": "replay(evidence) leaves 1 of 2 role permutations for 'yue-quote' in wenyan.relations.reporting.v1"
+        },
+        "verified": {
+          "ok": true,
+          "note": "roles reproduce"
+        }
+      }
+    },
+    {
+      "id": "diag:two-slot",
+      "origin": "declared-diagnostic",
+      "why": "two-slot construction: recipient is UNEXPRESSED, not unknown",
+      "source": {
+        "work": null,
+        "section": null,
+        "passageId": null,
+        "sourcePage": null,
+        "sourceRevid": null
+      },
+      "question": {
+        "type": "Q1",
+        "text": "子曰：「學而時習之。」",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Answered",
+        "roles": {
+          "agent": "子",
+          "recipient": null,
+          "theme": "學而時習之。"
+        },
+        "construction": "yue-quote",
+        "grammar": "wenyan.relations.reporting.v1",
+        "occurrences": [
+          {
+            "slot": 0,
+            "value": "子",
+            "start": 0,
+            "end": 1
+          },
+          {
+            "slot": 1,
+            "value": "學而時習之。",
+            "start": 4,
+            "end": 10
+          }
+        ],
+        "warrant": {
+          "kind": "evidence",
+          "refs": [
+            "corpus:analects:1.1:yue-quote",
+            "corpus:mencius:1.1:yue-quote"
+          ],
+          "derivation": "replay(evidence) leaves 1 of 2 role permutations for 'yue-quote' in wenyan.relations.reporting.v1"
+        },
+        "verified": {
+          "ok": true,
+          "note": "roles reproduce"
+        }
+      }
+    },
+    {
+      "id": "diag:three-slot",
+      "origin": "declared-diagnostic",
+      "why": "three-slot construction: all three roles are stated",
+      "source": {
+        "work": null,
+        "section": null,
+        "passageId": null,
+        "sourcePage": null,
+        "sourceRevid": null
+      },
+      "question": {
+        "type": "Q1",
+        "text": "孔子謂弟子曰：「學而時習之。」",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Answered",
+        "roles": {
+          "agent": "孔子",
+          "recipient": "弟子",
+          "theme": "學而時習之。"
+        },
+        "construction": "wei-quote",
+        "grammar": "wenyan.relations.reporting.v1",
+        "occurrences": [
+          {
+            "slot": 0,
+            "value": "孔子",
+            "start": 0,
+            "end": 2
+          },
+          {
+            "slot": 1,
+            "value": "弟子",
+            "start": 3,
+            "end": 5
+          },
+          {
+            "slot": 2,
+            "value": "學而時習之。",
+            "start": 8,
+            "end": 14
+          }
+        ],
+        "warrant": {
+          "kind": "evidence",
+          "refs": [
+            "corpus:analects:2.21:wei-quote",
+            "corpus:mencius:4.22:wei-quote",
+            "corpus:book-of-rites:3.15:wei-quote",
+            "corpus:zhuangzi:1.6:wei-quote",
+            "corpus:xunzi:32.3:wei-quote",
+            "corpus:hanfeizi:7.1:wei-quote",
+            "corpus:mozi:38.2:wei-quote",
+            "corpus:guanzi:20.2:wei-quote",
+            "corpus:analects:6.4:wei-quote"
+          ],
+          "derivation": "replay(evidence) leaves 1 of 6 role permutations for 'wei-quote' in wenyan.relations.reporting.v1"
+        },
+        "verified": {
+          "ok": true,
+          "note": "roles reproduce"
+        }
+      }
+    },
+    {
+      "id": "diag:out-of-grammar",
+      "origin": "declared-diagnostic",
+      "why": "outside every declared construction: must be Unknown with a reason",
+      "source": {
+        "work": null,
+        "section": null,
+        "passageId": null,
+        "sourcePage": null,
+        "sourceRevid": null
+      },
+      "question": {
+        "type": "Q1",
+        "text": "甲给乙一本书。",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Unknown",
+        "reason": "outside-declared-grammar",
+        "missing": "a declared grammar in which this text is in-grammar; tried wenyan.relations.reporting.v1 — 2 grammar(s) are declared",
+        "verified": {
+          "ok": true,
+          "note": "nothing to recompute"
+        }
+      }
+    },
+    {
+      "id": "diag:bare-yue",
+      "origin": "declared-diagnostic",
+      "why": "bare 曰 with no reporting verb and no addressee",
+      "source": {
+        "work": null,
+        "section": null,
+        "passageId": null,
+        "sourcePage": null,
+        "sourceRevid": null
+      },
+      "question": {
+        "type": "Q1",
+        "text": "王曰：「何謂也？」",
+        "grammar": "wenyan.relations.reporting.v1"
+      },
+      "answer": {
+        "type": "Q1",
+        "state": "Answered",
+        "roles": {
+          "agent": "王",
+          "recipient": null,
+          "theme": "何謂也？"
+        },
+        "construction": "yue-quote",
+        "grammar": "wenyan.relations.reporting.v1",
+        "occurrences": [
+          {
+            "slot": 0,
+            "value": "王",
+            "start": 0,
+            "end": 1
+          },
+          {
+            "slot": 1,
+            "value": "何謂也？",
+            "start": 4,
+            "end": 8
+          }
+        ],
+        "warrant": {
+          "kind": "evidence",
+          "refs": [
+            "corpus:analects:1.1:yue-quote",
+            "corpus:mencius:1.1:yue-quote"
+          ],
+          "derivation": "replay(evidence) leaves 1 of 2 role permutations for 'yue-quote' in wenyan.relations.reporting.v1"
+        },
+        "verified": {
+          "ok": true,
+          "note": "roles reproduce"
+        }
+      }
+    }
+  ]
+}

@@ -176,7 +176,11 @@ const HANDLERS = {
     if (r.status !== 'KnownFiniteGrammar') {
       return unknown(r.reason ?? 'ambiguous-role-mapping',
         `at least one more labelled example for construction '${r.construction}' in ${impl.id}; ` +
-        `${r.candidates.length} of 6 role permutations still survive`);
+        `${r.candidates.length} of ${impl.module.ROLES_FOR_CONSTRUCTION
+      ? [1, 1, 2, 6, 24, 120][impl.module.ROLES_FOR_CONSTRUCTION(r.construction).length] : 6} role permutations still survive`);
+      // The denominator is the construction's OWN permutation space. Hard-coding 6 told a
+      // two-slot construction it had 6 orderings — the same error fixed earlier in readiness's
+      // display, here inside the warrant a front end shows to a reader.
     }
     const refs = ctx.records
       .filter((x) => x.grammar === impl.id && impl.constructionOf(x.text) === r.construction)
@@ -184,7 +188,8 @@ const HANDLERS = {
     return answered(
       { roles: r.candidates[0], construction: r.construction, grammar: impl.id, occurrences: r.occurrences },
       { kind: 'evidence', refs,
-        derivation: `replay(evidence) leaves 1 of 6 role permutations for '${r.construction}' in ${impl.id}` });
+        derivation: `replay(evidence) leaves 1 of ${impl.module.ROLES_FOR_CONSTRUCTION
+      ? [1, 1, 2, 6, 24, 120][impl.module.ROLES_FOR_CONSTRUCTION(r.construction).length] : 6} role permutations for '${r.construction}' in ${impl.id}` });
   },
 
   /** Q2 comparison */
