@@ -1,11 +1,14 @@
 {
   "schema": "wenyan.corpus.manifest.v1",
   "format": "wenyan.corpus.v1",
-  "generatedAt": "2026-09-23T14:19:28.465Z",
+  "generatedAt": "2026-09-23T16:04:24.731Z",
   "partialRebuild": {
     "only": [
-      "徐文長傳",
-      "明史卷288"
+      "唯識二十論",
+      "唯識論",
+      "大乘唯識論",
+      "唯識三十論",
+      "唯識三十論頌"
     ],
     "note": "this run rebuilt a subset; other entries are carried over from the previous manifest"
   },
@@ -25,10 +28,10 @@
     "ctextNotice": "ctext.org was NOT used. Its robots.txt and anti-scraping notice state that automated access is not authorized and direct researchers to subscribe; no content was retrieved from it."
   },
   "counts": {
-    "works": 138,
-    "sections": 5097,
-    "passages": 243970,
-    "characters": 29544900
+    "works": 143,
+    "sections": 5102,
+    "passages": 244386,
+    "characters": 29567452
   },
   "works": [
     {
@@ -3211,6 +3214,114 @@
       "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
       "limitations": [
         "第 0 任务（徐渭）历史记载侧：正史本传（文苑四，含徐渭）。正文 10966 字；门槛按篇定为 200 字。授权标签 清朝作品。"
+      ]
+    },
+    {
+      "id": "唯識二十論",
+      "zh": "唯識二十論",
+      "tradition": "philosophers",
+      "file": "works/唯識二十論.json",
+      "sha256": "33383c7e762d64860ae542fd5d68c8b3e19ca3a348e92559cd593eeceba0f9fe",
+      "counts": {
+        "sections": 1,
+        "passages": 49,
+        "characters": 4160
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "single",
+      "licenseTemplates": {
+        "PD-old": 1
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: PD-old.",
+      "limitations": [
+        "唯识：玄奘译（二十论三译之一）。单页 4890 字；授权标签 PD-old。"
+      ]
+    },
+    {
+      "id": "唯識論",
+      "zh": "唯識論",
+      "tradition": "philosophers",
+      "file": "works/唯識論.json",
+      "sha256": "28f5ae8b2368dd5de14bc1a4c9dd22c69e3c52af0aabfbee7e312142966f537b",
+      "counts": {
+        "sections": 1,
+        "passages": 138,
+        "characters": 9628
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "single",
+      "licenseTemplates": {
+        "PD-old": 1
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: PD-old.",
+      "limitations": [
+        "唯识：菩提流支译（二十论三译之二）。单页 10251 字；授权标签 PD-old。"
+      ]
+    },
+    {
+      "id": "大乘唯識論",
+      "zh": "大乘唯識論",
+      "tradition": "philosophers",
+      "file": "works/大乘唯識論.json",
+      "sha256": "096f52335c163316b357c2becab2fbc26335259496492aa8973734f6e62fe7bd",
+      "counts": {
+        "sections": 1,
+        "passages": 131,
+        "characters": 5896
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "single",
+      "licenseTemplates": {
+        "PD-old": 1
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: PD-old.",
+      "limitations": [
+        "唯识：真諦译（二十论三译之三）。单页 6520 字；授权标签 PD-old。"
+      ]
+    },
+    {
+      "id": "唯識三十論",
+      "zh": "唯識三十論",
+      "tradition": "philosophers",
+      "file": "works/唯識三十論.json",
+      "sha256": "9dd6d421f00f62c161e7d9ca99ae3212a3e3ac40182d5ead74fcd0e06fa7dc35",
+      "counts": {
+        "sections": 1,
+        "passages": 79,
+        "characters": 1383
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "single",
+      "licenseTemplates": {},
+      "licenseStatus": "The pages used carry no license template; the site-wide default (see manifest.source.license.siteDefault) applies.",
+      "limitations": [
+        "唯识：三十颂。单页 1769 字；授权标签 无标签 → CC BY-SA 4.0。"
+      ]
+    },
+    {
+      "id": "唯識三十論頌",
+      "zh": "唯識三十論頌",
+      "tradition": "philosophers",
+      "file": "works/唯識三十論頌.json",
+      "sha256": "0ef1fc438b9dcc9e0befb855bc7cf0e9b39504065d4399716bc696efb0993d51",
+      "counts": {
+        "sections": 1,
+        "passages": 19,
+        "characters": 1485
+      },
+      "structuralMarkersRemoved": 0,
+      "flaggedShortPassages": 0,
+      "discoveryRoute": "single",
+      "licenseTemplates": {
+        "PD-old": 1
+      },
+      "licenseStatus": "Public-domain templates present on the pages used: PD-old.",
+      "limitations": [
+        "唯识：三十颂（颂文单行）。单页 1877 字；授权标签 PD-old。"
       ]
     }
   ],

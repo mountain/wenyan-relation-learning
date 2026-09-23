@@ -1095,4 +1095,111 @@ export const WORKS = [
     discovery: { kind: 'single', page: "明史/卷288" },
     note: "第 0 任务（徐渭）历史记载侧：正史本传（文苑四，含徐渭）。正文 10966 字；门槛按篇定为 200 字。授权标签 清朝作品。",
   },
+  // ---------------- 唯识：二十论三译与三十论 ----------------
+  {
+    id: "唯識二十論",
+    zh: "唯識二十論",
+    tradition: 'philosophers',
+    discovery: { kind: 'single', page: "唯識二十論" },
+    note: "唯识：玄奘译（二十论三译之一）。单页 4890 字；授权标签 PD-old。"
+  },
+  {
+    id: "唯識論",
+    zh: "唯識論",
+    tradition: 'philosophers',
+    discovery: { kind: 'single', page: "唯識論" },
+    note: "唯识：菩提流支译（二十论三译之二）。单页 10251 字；授权标签 PD-old。"
+  },
+  {
+    id: "大乘唯識論",
+    zh: "大乘唯識論",
+    tradition: 'philosophers',
+    discovery: { kind: 'single', page: "大乘唯識論" },
+    note: "唯识：真諦译（二十论三译之三）。单页 6520 字；授权标签 PD-old。"
+  },
+  {
+    id: "唯識三十論",
+    zh: "唯識三十論",
+    tradition: 'philosophers',
+    discovery: { kind: 'single', page: "唯識三十論" },
+    note: "唯识：三十颂。单页 1769 字；授权标签 无标签 → CC BY-SA 4.0。"
+  },
+  {
+    id: "唯識三十論頌",
+    zh: "唯識三十論頌",
+    tradition: 'philosophers',
+    discovery: { kind: 'single', page: "唯識三十論頌" },
+    note: "唯识：三十颂（颂文单行）。单页 1877 字；授权标签 PD-old。"
+  },
+  // ---------------- 唯识核心（三十颂载体、所依经、瑜伽行派根本论） ----------------
+  {
+    id: "成唯識論",
+    zh: "成唯識論",
+    tradition: 'philosophers',
+    discovery: { kind: 'mainPageLinks', mainPage: "成唯識論" },
+    note: "唯识：三十颂的载体（糅译十师释）。路由 mainPageLinks，11 章；授权标签 PD-old。"
+  },
+  {
+    id: "轉識論",
+    zh: "轉識論",
+    tradition: 'philosophers',
+    discovery: { kind: 'single', page: "轉識論" },
+    note: "唯识：真谛本（三十颂平行）。路由 single，1 章；授权标签 PD-old。"
+  },
+  {
+    id: "解深密經",
+    zh: "解深密經",
+    tradition: 'philosophers',
+    discovery: { kind: 'mainPageLinks', mainPage: "解深密經" },
+    note: "唯识：唯识所依经。路由 mainPageLinks，5 章；授权标签 唐朝作品。"
+  },
+  {
+    id: "辯中邊論",
+    zh: "辯中邊論",
+    tradition: 'philosophers',
+    discovery: { kind: 'single', page: "辯中邊論" },
+    note: "唯识：弥勒—世亲系。路由 single，1 章；授权标签 PD-old。"
+  },
+  {
+    id: "攝大乘論本",
+    zh: "攝大乘論本",
+    tradition: 'philosophers',
+    discovery: { kind: 'single', page: "攝大乘論本" },
+    note: "唯识：无著。路由 single，1 章；授权标签 PD-old。"
+  },
+  {
+    id: "大乘阿毗達磨集論",
+    zh: "大乘阿毗達磨集論",
+    tradition: 'philosophers',
+    discovery: { kind: 'single', page: "大乘阿毗達磨集論" },
+    note: "唯识：无著。路由 single，1 章；授权标签 无标签 → CC BY-SA 4.0。"
+  },
+  {
+    id: "因明入正理論",
+    zh: "因明入正理論",
+    tradition: 'philosophers',
+    discovery: { kind: 'single', page: "因明入正理論" },
+    note: "唯识：因明。路由 single，1 章；授权标签 PD-old。"
+  },
+  {
+    id: "觀所緣緣論",
+    zh: "觀所緣緣論",
+    tradition: 'philosophers',
+    discovery: { kind: 'single', page: "觀所緣緣論" },
+    note: "唯识：陈那。路由 single，1 章；授权标签 PD-old。"
+  },
+  {
+    id: "顯揚聖教論",
+    zh: "顯揚聖教論",
+    tradition: 'philosophers',
+    discovery: { kind: 'mainPageLinks', mainPage: "顯揚聖教論" },
+    note: "唯识：无著。路由 mainPageLinks，20 章；授权标签 PD-old。"
+  },
+  {
+    id: "瑜伽師地論",
+    zh: "瑜伽師地論",
+    tradition: 'philosophers',
+    discovery: { kind: 'mainPageLinks', mainPage: "瑜伽師地論" },
+    note: "唯识：根本论（101 章）。路由 mainPageLinks，101 章；授权标签 PD-old。"
+  },
 ];

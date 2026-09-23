@@ -1,0 +1,157 @@
+{
+  "schema": "wenyan.corpus.work.v1",
+  "id": "唯識三十論頌",
+  "title": {
+    "zh": "唯識三十論頌"
+  },
+  "tradition": "philosophers",
+  "source": {
+    "site": "zh.wikisource.org",
+    "discovery": {
+      "route": "single",
+      "chainLength": null,
+      "notReachedByChain": [],
+      "chainStopReason": null,
+      "chainSubstitutions": [],
+      "chainExcluded": []
+    }
+  },
+  "counts": {
+    "sections": 1,
+    "passages": 19,
+    "characters": 1485
+  },
+  "license": {
+    "pageTemplates": {
+      "PD-old": 1
+    },
+    "status": "Public-domain templates present on the pages used: PD-old.",
+    "basis": "The underlying classical works are public domain by age. What is taken from Wikisource is its transcription: choice of recension, modern punctuation, paragraphing and character forms. Attribution is recorded per section via sourcePage/sourceRevid. This build also modifies the material (template and commentary removal, re-segmentation), and selects recensions and first readings — decisions recorded in textEdition, extraction and limitations."
+  },
+  "extraction": {
+    "removed": {
+      "annotationsDropped": 0,
+      "annotationsKept": 6,
+      "declaredElementsDropped": 0,
+      "declaredTemplatesDropped": 0,
+      "annotationRegionsDropped": 0,
+      "templates": 2,
+      "contentTemplates": 0,
+      "uncertainGlyphs": 0,
+      "refFootnotes": 0,
+      "unbalancedTemplates": 0,
+      "htmlTags": 0,
+      "files": 0,
+      "externalLinks": 0,
+      "conversionMarkers": 0,
+      "licenseTemplates": {
+        "PD-old": 1
+      },
+      "anchorsLifted": 0,
+      "behaviourSwitches": 0,
+      "navigationLines": 0
+    },
+    "droppedSubsections": [],
+    "skippedNoText": [],
+    "droppedFrontMatter": [],
+    "droppedLines": 0,
+    "demotedHeadingLines": 0,
+    "structuralMarkers": [],
+    "flaggedShortPassages": [],
+    "untitledSections": [],
+    "notes": "Annotations ({{*|…}}) and site templates are removed; list/verse nesting is flattened; verse line breaks are preserved inside passage text."
+  },
+  "limitations": [
+    "唯识：三十颂（颂文单行）。单页 1877 字；授权标签 PD-old。"
+  ],
+  "sections": [
+    {
+      "id": "唯識三十論頌.1",
+      "ordinal": 1,
+      "title": "唯識三十論頌",
+      "sourcePage": "唯識三十論頌",
+      "sourceRevid": 2601284,
+      "sourcePages": [
+        "唯識三十論頌"
+      ],
+      "passages": [
+        {
+          "id": "1.1",
+          "text": "世親菩薩造"
+        },
+        {
+          "id": "1.2",
+          "text": "大唐三藏法師玄奘奉　詔譯"
+        },
+        {
+          "id": "1.3",
+          "text": "護法等菩薩。約此三十頌造成唯識。今略標所以。謂此三十頌中。初二十四行頌明唯識相。次一行頌明唯識性。後五行頌明唯識行位。就二十四行頌中。初一行半略辯唯識相。次二十二行半廣辯唯識相。謂外問言。若唯有識。云何世間及諸聖教說有我法。舉頌詶答頌曰："
+        },
+        {
+          "id": "1.4",
+          "text": "１由假說我法　　有種種相轉　　彼依識所變　　此能變唯三"
+        },
+        {
+          "id": "1.5",
+          "text": "２謂異熟思量　　及了別境識　次二十二行半廣辯唯識相者。由前頌文略標三能變。今廣明三變相。且初能變其相云何。頌曰：　初阿賴耶識　　異熟一切種"
+        },
+        {
+          "id": "1.6",
+          "text": "３不可知執受　　處了常與觸　　作意受想思　　相應唯捨受"
+        },
+        {
+          "id": "1.7",
+          "text": "４是無覆無記　　觸等亦如是　　恒轉如瀑流　　阿羅漢位捨已說初能變。第二能變其相云何。頌曰："
+        },
+        {
+          "id": "1.8",
+          "text": "５次第二能變　　是識名末那　　依彼轉緣彼　　思量為性相"
+        },
+        {
+          "id": "1.9",
+          "text": "６四煩惱常俱　　謂我癡我見　　并我慢我愛　　及餘觸等俱"
+        },
+        {
+          "id": "1.10",
+          "text": "７有覆無記攝　　隨所生所繫　　阿羅漢滅定　　出世道無有如是已說第二能變。第三能變其相云何。頌曰："
+        },
+        {
+          "id": "1.11",
+          "text": "８次第三能變　　差別有六種　　了境為性相　　善不善俱非"
+        },
+        {
+          "id": "1.12",
+          "text": "９此心所遍行　　別境善煩惱　　隨煩惱不定　　皆三受相應"
+        },
+        {
+          "id": "1.13",
+          "text": "１０初遍行觸等　　次別境謂欲　　勝解念定慧　　所緣事不同"
+        },
+        {
+          "id": "1.14",
+          "text": "１１善謂信慚愧　　無貪等三根　　勤安不放逸　　行捨及不害"
+        },
+        {
+          "id": "1.15",
+          "text": "１２煩惱謂貪瞋　　癡慢疑惡見　　隨煩惱謂忿　　恨覆惱嫉慳"
+        },
+        {
+          "id": "1.16",
+          "text": "１３誑諂與害憍　　無慚及無愧　　掉舉與惛沈　　不信并懈怠"
+        },
+        {
+          "id": "1.17",
+          "text": "１４放逸及失念　　散亂不正知　　不定謂悔眠　　尋伺二各二已說六識心所相應。云何應知現起分位。頌曰："
+        },
+        {
+          "id": "1.18",
+          "text": "１５依止根本識　　五識隨緣現　　或俱或不俱　　如濤波依水"
+        },
+        {
+          "id": "1.19",
+          "text": "１６意識常現起　　除生無想天　　及無心二定　　睡眠與悶絕　　　已廣分別三能變相為自所變。二分所依云何應知依識所變假說我法非別實有。由斯一切唯有識耶。頌曰：\n１７是諸識轉變　　分別所分別\n由此彼皆無　　故一切唯識\n若唯有識都無外緣。由何而生。種種分別。頌曰\n１８由一切種識　　如是如是變\n以展轉力故　　彼彼分別生\n雖有內識而無外緣。由何有情生死相續。頌曰\n１９由諸業習氣　　二取習氣俱\n前異熟既盡　　復生餘異熟\n若唯有識。何故世尊處處經中說有三性。應知三性亦不離識。所以者何。頌曰\n２０由彼彼遍計　　遍計種種物\n此遍計所執　　自性無所有\n２１依他起自性　　分別緣所生\n圓成實於彼　　常遠離前性\n２２故此與依他　　非異非不異\n如無常等性　　非不見此彼\n若有三性。如何世尊說一切法皆無自性。頌曰\nP. 3\n２３即依此三性　　立彼三無性\n故佛密意說　　一切法無性\n２４初即相無性　　次無自然性\n後由遠離前　　所執我法性\n２５此諸法勝義　　亦即是真如\n常如其性故　　即唯識實性\n後五行頌明唯識行位者。論曰。如是所成唯識性相。誰依幾位如何悟入。謂具大\n乘二種種性。一本性種性。謂無始來依附本識法爾。所得無漏法因。二謂習所成種性\n。謂聞法界等流法已。聞所成等熏習所成。具此二性方能悟入。何謂五位。一資糧位\n。謂修大乘順解脫分。依識性相能深信解。其相云何。頌曰\n２６乃至未起識　　求住唯識性\n於二取隨眠　　猶未能伏滅\n二加行位。謂修大乘順決擇分。在加行位能漸伏除所取能取。其相云何\n２７現前立少物　　謂是唯識性\n以有所得故　　非實住唯識\n三通達位。謂諸菩薩所住見道。在通達位如實通達。其相云何\n２８若時於所緣　　智都無所得\n爾時住唯識　　離二取相故\n四修習位。謂諸菩薩所住修道。修習位中如實見理數數修習。其相云何\n２９無得不思議　　是出世間智\n捨二麁重故　　便證得轉依\n五究竟位。謂住無上正等菩提。出障圓明能盡未來化有情類。其相云何\n３０此即無漏界　　不思議善常\n安樂解脫身　　大牟尼名法"
+        }
+      ]
+    }
+  ]
+}

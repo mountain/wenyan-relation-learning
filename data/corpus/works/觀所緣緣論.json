@@ -1,0 +1,197 @@
+{
+  "schema": "wenyan.corpus.work.v1",
+  "id": "觀所緣緣論",
+  "title": {
+    "zh": "觀所緣緣論"
+  },
+  "tradition": "philosophers",
+  "source": {
+    "site": "zh.wikisource.org",
+    "discovery": {
+      "route": "single",
+      "chainLength": null,
+      "notReachedByChain": [],
+      "chainStopReason": null,
+      "chainSubstitutions": [],
+      "chainExcluded": []
+    }
+  },
+  "counts": {
+    "sections": 1,
+    "passages": 29,
+    "characters": 1062
+  },
+  "license": {
+    "pageTemplates": {
+      "PD-old": 1
+    },
+    "status": "Public-domain templates present on the pages used: PD-old.",
+    "basis": "The underlying classical works are public domain by age. What is taken from Wikisource is its transcription: choice of recension, modern punctuation, paragraphing and character forms. Attribution is recorded per section via sourcePage/sourceRevid. This build also modifies the material (template and commentary removal, re-segmentation), and selects recensions and first readings — decisions recorded in textEdition, extraction and limitations."
+  },
+  "extraction": {
+    "removed": {
+      "annotationsDropped": 0,
+      "annotationsKept": 0,
+      "declaredElementsDropped": 0,
+      "declaredTemplatesDropped": 0,
+      "annotationRegionsDropped": 0,
+      "templates": 2,
+      "contentTemplates": 0,
+      "uncertainGlyphs": 0,
+      "refFootnotes": 0,
+      "unbalancedTemplates": 0,
+      "htmlTags": 0,
+      "files": 0,
+      "externalLinks": 0,
+      "conversionMarkers": 0,
+      "licenseTemplates": {
+        "PD-old": 1
+      },
+      "anchorsLifted": 0,
+      "behaviourSwitches": 0,
+      "navigationLines": 0
+    },
+    "droppedSubsections": [],
+    "skippedNoText": [],
+    "droppedFrontMatter": [],
+    "droppedLines": 0,
+    "demotedHeadingLines": 0,
+    "structuralMarkers": [],
+    "flaggedShortPassages": [],
+    "untitledSections": [],
+    "notes": "Annotations ({{*|…}}) and site templates are removed; list/verse nesting is flattened; verse line breaks are preserved inside passage text."
+  },
+  "limitations": [
+    "唯识：陈那。路由 single，1 章；授权标签 PD-old。"
+  ],
+  "sections": [
+    {
+      "id": "觀所緣緣論.1",
+      "ordinal": 1,
+      "title": "觀所緣緣論",
+      "sourcePage": "觀所緣緣論",
+      "sourceRevid": 2601105,
+      "sourcePages": [
+        "觀所緣緣論"
+      ],
+      "passages": [
+        {
+          "id": "1.1",
+          "text": "大乘論·第1167部"
+        },
+        {
+          "id": "1.2",
+          "text": "觀所緣緣論一卷"
+        },
+        {
+          "id": "1.3",
+          "text": "陳那菩薩造唐三藏法師玄奘奉詔譯"
+        },
+        {
+          "id": "1.4",
+          "text": "觀所緣緣論"
+        },
+        {
+          "id": "1.5",
+          "text": "諸有欲令眼等五識。以外色作所緣緣者。或執極微許有實體。能生識故或執和合。以識生時帶彼相故。二俱非理。所以者何。"
+        },
+        {
+          "id": "1.6",
+          "text": "極微於五識　　設緣非所緣"
+        },
+        {
+          "id": "1.7",
+          "text": "彼相識無故　　猶如眼根等"
+        },
+        {
+          "id": "1.8",
+          "text": "所緣緣者。謂能緣識帶彼相起及有實體。令能緣識托彼而生色等極微。設有實體能生五識容有緣義。然非所緣。如眼根等於眼等識無彼相故。如是極微於眼等識。無所緣義。"
+        },
+        {
+          "id": "1.9",
+          "text": "和合於五識　　設所緣非緣"
+        },
+        {
+          "id": "1.10",
+          "text": "彼體實無故　　猶如第二月"
+        },
+        {
+          "id": "1.11",
+          "text": "色等和合於眼識等有彼相故。設作所緣然無緣義。如眼錯亂見第二月。彼無實體不能生故。如是和合於眼等識無有緣義故。外二事於所緣緣互闕一支。俱不應理。有執色等各有多相。於中一分是現量境故。諸極微相資各有一和集相。此相實有各能發生。似己相識故與五識作所緣緣。此亦非理。所以者何。"
+        },
+        {
+          "id": "1.12",
+          "text": "和集如堅等　　設於眼等識"
+        },
+        {
+          "id": "1.13",
+          "text": "是緣非所緣　　許極微相故"
+        },
+        {
+          "id": "1.14",
+          "text": "如堅等相雖是實有。於眼等識容有緣義。而非所緣。眼等識上無彼相故。色等極微諸和集相。理亦應爾。彼俱執爲極微相故。執眼等識能緣極微。諸和集相復有別失。"
+        },
+        {
+          "id": "1.15",
+          "text": "瓶甌等覺相　　彼執應無別"
+        },
+        {
+          "id": "1.16",
+          "text": "非形別故別　　形別非實故"
+        },
+        {
+          "id": "1.17",
+          "text": "瓶甌等物大小等者。能成極微多少同故。緣彼覺相應無差別。若謂彼物形相別故覺相別者。理亦不然。頂等別形唯在瓶等假法上有。非極微故彼不應執。極微亦有差別形相所以者何。"
+        },
+        {
+          "id": "1.18",
+          "text": "極微量等故　　形別惟在假"
+        },
+        {
+          "id": "1.19",
+          "text": "析彼至極微　　彼覺定舍故"
+        },
+        {
+          "id": "1.20",
+          "text": "非瓶甌等能成極微有形量別。舍微圓相故。知別形在假非實。又形別物析至極微。彼覺定舍非青等物。析至極微彼覺可舍。由此形別唯世俗有。非如青等亦在實物。是故五識所緣緣體非外色等其理極成。彼所緣緣豈全不有。非全不有。若爾云何。"
+        },
+        {
+          "id": "1.21",
+          "text": "內色如外現　　爲識所緣緣"
+        },
+        {
+          "id": "1.22",
+          "text": "許彼相在識　　及能生識故"
+        },
+        {
+          "id": "1.23",
+          "text": "外境雖無。而有內色似外境現。爲所緣緣。許眼等識帶彼相起及從彼生。具二義故。此內境相既不離識。如何俱起。能作識緣。"
+        },
+        {
+          "id": "1.24",
+          "text": "決定相隨故　　俱時亦作緣"
+        },
+        {
+          "id": "1.25",
+          "text": "或前爲後緣　　引彼功能故"
+        },
+        {
+          "id": "1.26",
+          "text": "境相與識定相隨故。雖俱時起亦作識緣。因明者說。若此與彼有無相隨。雖俱時生而亦得有因果相故。或前識相爲後識緣。引本識中生似自果功能令起不違理故。若五識生唯緣內色。如何亦說眼等爲緣。"
+        },
+        {
+          "id": "1.27",
+          "text": "識上色功能　　名五根應理"
+        },
+        {
+          "id": "1.28",
+          "text": "功能與境色　　無始互爲因"
+        },
+        {
+          "id": "1.29",
+          "text": "以能發識比知有根。此但功能非外所造故。本識上五色功能名眼等根。亦不違理。功能發識理無別故。在識在余雖不可說。而外諸法理非有故。定應許此在識非余。此根功能與前境色。從無始際展轉爲因。謂此功能至成熟位。生現識上五內境色。此內境色復能引起異熟識上五根功能。根境二色與識一異或非一異。隨樂應說。如是諸識。惟內境相爲所緣緣。理善成立。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "schema": "wenyan.corpus-expansion.routes.v1",
+  "routes": {
+    "唯識二十論": {
+      "zh": "唯識二十論",
+      "tradition": "philosophers",
+      "use": "玄奘译（二十论三译之一）",
+      "chars": 4890,
+      "licenseTags": [
+        "PD-old"
+      ],
+      "status": "OK",
+      "route": "single"
+    },
+    "唯識論": {
+      "zh": "唯識論",
+      "tradition": "philosophers",
+      "use": "菩提流支译（二十论三译之二）",
+      "chars": 10251,
+      "licenseTags": [
+        "PD-old"
+      ],
+      "status": "OK",
+      "route": "single"
+    },
+    "大乘唯識論": {
+      "zh": "大乘唯識論",
+      "tradition": "philosophers",
+      "use": "真諦译（二十论三译之三）",
+      "chars": 6520,
+      "licenseTags": [
+        "PD-old"
+      ],
+      "status": "OK",
+      "route": "single"
+    },
+    "唯識三十論": {
+      "zh": "唯識三十論",
+      "tradition": "philosophers",
+      "use": "三十颂",
+      "chars": 1769,
+      "licenseTags": [],
+      "status": "OK",
+      "route": "single"
+    },
+    "唯識三十論頌": {
+      "zh": "唯識三十論頌",
+      "tradition": "philosophers",
+      "use": "三十颂（颂文单行）",
+      "chars": 1877,
+      "licenseTags": [
+        "PD-old"
+      ],
+      "status": "OK",
+      "route": "single"
+    }
+  },
+  "task": "唯识二十论三译 + 三十论"
+}

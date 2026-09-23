@@ -1,0 +1,174 @@
+{
+  "schema": "wenyan.corpus-expansion.title-probe.v1",
+  "task": "唯识诸论标题探测（不建仓）",
+  "groups": {
+    "二十论三译": [
+      {
+        "title": "唯識二十論",
+        "exists": true,
+        "chapters": 0,
+        "sample": []
+      },
+      {
+        "title": "唯識論",
+        "exists": true,
+        "chapters": 0,
+        "sample": []
+      },
+      {
+        "title": "大乘唯識論",
+        "exists": true,
+        "chapters": 0,
+        "sample": []
+      },
+      {
+        "title": "唯識二十論述記",
+        "exists": true,
+        "chapters": 2,
+        "sample": [
+          "卷001/",
+          "卷002/"
+        ]
+      }
+    ],
+    "三十颂与成唯识论": [
+      {
+        "title": "唯識三十論",
+        "exists": true,
+        "chapters": 0,
+        "sample": []
+      },
+      {
+        "title": "唯識三十論頌",
+        "exists": true,
+        "chapters": 0,
+        "sample": []
+      },
+      {
+        "title": "成唯識論",
+        "exists": true,
+        "chapters": 11,
+        "sample": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06"
+        ]
+      },
+      {
+        "title": "成唯識論述記",
+        "exists": true,
+        "chapters": 10,
+        "sample": [
+          "卷001/",
+          "卷002/",
+          "卷003/",
+          "卷004/",
+          "卷005/",
+          "卷006/"
+        ]
+      },
+      {
+        "title": "轉識論",
+        "exists": true,
+        "chapters": 0,
+        "sample": []
+      }
+    ],
+    "相关经论（背景）": [
+      {
+        "title": "解深密經",
+        "exists": true,
+        "chapters": 5,
+        "sample": [
+          "卷01",
+          "卷02",
+          "卷03",
+          "卷04",
+          "卷05"
+        ]
+      },
+      {
+        "title": "瑜伽師地論",
+        "exists": true,
+        "chapters": 101,
+        "sample": [
+          "001",
+          "004",
+          "011",
+          "013",
+          "016",
+          "020"
+        ]
+      },
+      {
+        "title": "攝大乘論",
+        "exists": false
+      },
+      {
+        "title": "攝大乘論本",
+        "exists": true,
+        "chapters": 0,
+        "sample": []
+      },
+      {
+        "title": "顯揚聖教論",
+        "exists": true,
+        "chapters": 20,
+        "sample": [
+          "卷一",
+          "卷二",
+          "卷三",
+          "卷四",
+          "卷五",
+          "卷六"
+        ]
+      },
+      {
+        "title": "辯中邊論",
+        "exists": true,
+        "chapters": 0,
+        "sample": []
+      },
+      {
+        "title": "大乘阿毗達磨集論",
+        "exists": true,
+        "chapters": 0,
+        "sample": []
+      },
+      {
+        "title": "因明入正理論",
+        "exists": true,
+        "chapters": 0,
+        "sample": []
+      },
+      {
+        "title": "觀所緣緣論",
+        "exists": true,
+        "chapters": 0,
+        "sample": []
+      }
+    ]
+  },
+  "found": [
+    "唯識二十論",
+    "唯識論",
+    "大乘唯識論",
+    "唯識二十論述記",
+    "唯識三十論",
+    "唯識三十論頌",
+    "成唯識論",
+    "成唯識論述記",
+    "轉識論",
+    "解深密經",
+    "瑜伽師地論",
+    "攝大乘論本",
+    "顯揚聖教論",
+    "辯中邊論",
+    "大乘阿毗達磨集論",
+    "因明入正理論",
+    "觀所緣緣論"
+  ]
+}

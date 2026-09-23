@@ -1,0 +1,114 @@
+{
+  "schema": "wenyan.corpus-expansion.routes.v1",
+  "routes": {
+    "成唯識論": {
+      "zh": "成唯識論",
+      "tradition": "philosophers",
+      "use": "三十颂的载体（糅译十师释）",
+      "licenseTags": [
+        "PD-old"
+      ],
+      "route": "mainPageLinks",
+      "chapters": 11,
+      "status": "OK"
+    },
+    "轉識論": {
+      "zh": "轉識論",
+      "tradition": "philosophers",
+      "use": "真谛本（三十颂平行）",
+      "licenseTags": [
+        "PD-old"
+      ],
+      "route": "single",
+      "chapters": 1,
+      "status": "OK"
+    },
+    "解深密經": {
+      "zh": "解深密經",
+      "tradition": "philosophers",
+      "use": "唯识所依经",
+      "licenseTags": [
+        "唐朝作品"
+      ],
+      "route": "mainPageLinks",
+      "chapters": 5,
+      "status": "OK"
+    },
+    "辯中邊論": {
+      "zh": "辯中邊論",
+      "tradition": "philosophers",
+      "use": "弥勒—世亲系",
+      "licenseTags": [
+        "PD-old"
+      ],
+      "route": "single",
+      "chapters": 1,
+      "status": "OK"
+    },
+    "攝大乘論本": {
+      "zh": "攝大乘論本",
+      "tradition": "philosophers",
+      "use": "无著",
+      "licenseTags": [
+        "PD-old"
+      ],
+      "route": "single",
+      "chapters": 1,
+      "status": "OK"
+    },
+    "大乘阿毗達磨集論": {
+      "zh": "大乘阿毗達磨集論",
+      "tradition": "philosophers",
+      "use": "无著",
+      "licenseTags": [],
+      "route": "single",
+      "chapters": 1,
+      "status": "OK"
+    },
+    "因明入正理論": {
+      "zh": "因明入正理論",
+      "tradition": "philosophers",
+      "use": "因明",
+      "licenseTags": [
+        "PD-old"
+      ],
+      "route": "single",
+      "chapters": 1,
+      "status": "OK"
+    },
+    "觀所緣緣論": {
+      "zh": "觀所緣緣論",
+      "tradition": "philosophers",
+      "use": "陈那",
+      "licenseTags": [
+        "PD-old"
+      ],
+      "route": "single",
+      "chapters": 1,
+      "status": "OK"
+    },
+    "顯揚聖教論": {
+      "zh": "顯揚聖教論",
+      "tradition": "philosophers",
+      "use": "无著",
+      "licenseTags": [
+        "PD-old"
+      ],
+      "route": "mainPageLinks",
+      "chapters": 20,
+      "status": "OK"
+    },
+    "瑜伽師地論": {
+      "zh": "瑜伽師地論",
+      "tradition": "philosophers",
+      "use": "根本论（101 章）",
+      "licenseTags": [
+        "PD-old"
+      ],
+      "route": "mainPageLinks",
+      "chapters": 101,
+      "status": "OK"
+    }
+  },
+  "task": "唯识核心建仓"
+}
