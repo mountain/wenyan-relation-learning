@@ -154,8 +154,25 @@ reverse check in this repository). It REFUSES to run when the upstream clone is 
 declared base, because a patch silently re-anchored to a moving branch is not pinned.
 The first re-anchoring was done from a scratch script that was then deleted, which made the
 operation unrepeatable; that script is now this tool. Full repository type checking, Jest,
-CLI/browser packaging and remote CI remain integration gates. This deliverable
-is a reviewed local patch, not a remote commit or an edit to upstream PR #717.
+CLI/browser packaging and remote CI remain integration gates.
+
+## Delivery: this line now goes into PR #717
+
+Until 2026-09-23 this section said the deliverable was "a reviewed local patch, not a remote
+commit or an edit to upstream PR #717". **That is no longer true, and the change is recorded
+rather than edited away**: at Mingli Yuan's direction the relations line is delivered as a
+commit on `mountain/wenyan` `master`, which is the head branch of PR #717 (base
+`wenyan-lang/wenyan` `master`, head `bcd05ba`). So the statement above would now be false.
+
+What did NOT change: the patch is still the artefact of record in this repository, and the
+upstream commit is generated FROM it by `tools/relations/rebuild-patch.mjs` — generate,
+verify four ways, apply, commit. The 7 files in the commit are byte-identical to this
+repository's copies, and that equality is what the tool checks, so the commit cannot drift
+from the patch it came from.
+
+The re-anchoring still matters as much as it did: `bcd05ba` is a moving PR head, and the
+next commit to that branch can break the patch at the same two lines. `rebuild-patch.mjs`
+refuses to run when the upstream clone is not at its declared base for exactly that reason.
 
 Direct Git cloning was unavailable in the current environment; the three
 dependency modules were fetched through GitHub at the pinned commit. The
