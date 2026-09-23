@@ -1,0 +1,35 @@
+{
+  "schema": "wenyan.corpus-expansion.routes.v1",
+  "routes": {
+    "太玄經": {
+      "zh": "太玄經",
+      "tradition": "philosophers",
+      "use": "太玄本体：方州部家／首贊／玄測玄衝玄錯",
+      "resolvedTitle": "太玄經",
+      "licenseTags": [
+        "西漢作品"
+      ],
+      "route": "single",
+      "chapters": 1,
+      "status": "OK"
+    },
+    "周易注": {
+      "zh": "周易注",
+      "tradition": "philosophers",
+      "use": "王弼注：爻位与断辞的解释层",
+      "status": "MISSING"
+    },
+    "周易正義": {
+      "zh": "周易正義",
+      "tradition": "philosophers",
+      "use": "孔颖达疏：注疏层，解释链更长",
+      "resolvedTitle": "周易正義",
+      "licenseTags": [
+        "PD-old"
+      ],
+      "route": "mainPageLinks",
+      "chapters": 98,
+      "status": "OK"
+    }
+  }
+}

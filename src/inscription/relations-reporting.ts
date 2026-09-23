@@ -69,6 +69,10 @@ export type ReportingReading = {
   source: string;
   construction?: string;
   candidates: Roles[];
+  /** Offsets of the matched span in `source`. Exposed so a caller can ask which text a reading came
+   *  from — the question a wider frame's replacement risk is made of. */
+  spanStart?: number;
+  spanEnd?: number;
   occurrences: Occurrence[];
   ambiguousMatches?: number;
   /**
@@ -422,7 +426,12 @@ function parse(text: string): Parsed | undefined {
   if (!found.length) return undefined;
   if (found.length > 1) {
     return { construction: found[0].construction, slots: found[0].slots,
-      roles: found[0].roles, occurrences: found[0].occurrences, matches: found.length };
+      roles: found[0].roles, occurrences: found[0].occurrences, matches: found.length,
+      // The span must survive this rebuild. It did not at first: this branch returns a NEW object for
+      // the multi-match case, so 13,432 of 30,513 readable readings came back with no span — the
+      // replacement-risk number was then computed over the other half only. A partial measurement that
+      // looks complete is the failure mode this whole probe keeps hitting.
+      spanStart: found[0].spanStart, spanEnd: found[0].spanEnd };
   }
   return found[0];
 }
@@ -472,6 +481,13 @@ export function readReporting(text: string, model: ReportingModel): ReportingRea
     construction: p.construction,
     candidates,
     occurrences: p.occurrences,
+    // The SPAN of the reading, exposed on 2026-09-24. Without it a caller can see WHICH construction
+    // was read but not WHICH TEXT it was read from, so no containment question can be asked — and the
+    // quote-less frame probe answered "SUPERSEDED 0" three times for three different reasons that all
+    // reduced to this field being absent. Measuring whether a wider frame REPLACES an existing reading
+    // is not possible without it; nothing else needs it to be absent.
+    spanStart: p.spanStart,
+    spanEnd: p.spanEnd,
     ...(p.matches > 1 ? { additionalMatches: p.matches - 1 } : {}),
   };
 }

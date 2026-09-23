@@ -1,26 +1,26 @@
 {
   "schema": "wenyan.grammar.measurement.v1",
-  "generatedAt": "2026-09-23T12:42:53.620Z",
+  "generatedAt": "2026-09-23T13:03:28.203Z",
   "grammar": "wenyan.relations.reporting.v1",
   "corpus": {
-    "passages": 209604,
+    "passages": 213390,
     "maxPassageLength": 32773,
     "maxTextUnits": 2048
   },
   "reach": {
-    "uniqueParse": 29266,
-    "rate": 0.139625,
+    "uniqueParse": 30513,
+    "rate": 0.142992,
     "ambiguousFrameOccurrences": 0,
     "tooLong": 282,
     "perConstruction": {
       "wei-quote": 2135,
       "wen-quote": 704,
       "gao-quote": 441,
-      "yu-quote": 355,
+      "yu-quote": 356,
       "wen-plain": 708,
       "gao-plain": 200,
-      "yue-quote": 22311,
-      "yun-quote": 2412
+      "yue-quote": 23517,
+      "yun-quote": 2452
     },
     "perWork": {
       "analects": 449,
@@ -127,7 +127,9 @@
       "釋名": 2,
       "說文解字": 972,
       "通典": 2812,
-      "孫子算經": 1
+      "孫子算經": 1,
+      "太玄經": 1,
+      "周易正義": 1246
     },
     "perWorkDensity": {
       "analects": {
@@ -709,6 +711,16 @@
         "passages": 223,
         "readable": 1,
         "density": 0.0045
+      },
+      "太玄經": {
+        "passages": 864,
+        "readable": 1,
+        "density": 0.0012
+      },
+      "周易正義": {
+        "passages": 2922,
+        "readable": 1246,
+        "density": 0.4264
       }
     },
     "examples": {
@@ -917,8 +929,8 @@
   },
   "answerable": {
     "evidenceRecords": 14,
-    "passages": 26854,
-    "rate": 0.128118,
+    "passages": 28061,
+    "rate": 0.131501,
     "note": "Requires every construction below to be pinned by supervised evidence; reach is the ceiling this can approach."
   }
 }

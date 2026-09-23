@@ -87,13 +87,14 @@ for (const r of rows) {
     gain += 1;
     if (gainEx.length < 5) gainEx.push({ work: r.work, at: r.at, match: hits[0][0].slice(0, 60), text: r.text.slice(0, 90) });
   } else {
-    // SPANS ARE NOT ON THE RESULT. readReporting returns {status, reason, source, construction,
-    // candidates, occurrences}; the span lives on candidates[0]. The first version read cur.spanStart,
-    // which is undefined — so `contains` could never be true and the zero it printed measured nothing.
+    // SPANS ARE NOT ON THE RESULT. readReporting now DOES expose spanStart/spanEnd (added
+    // 2026-09-24 for exactly this question). Before that the field did not exist, the first version read
+    // cur.spanStart and got undefined, `contains` could never be true, and the zero it printed measured
+    // nothing.
     // That is the SECOND zero this probe produced that measured nothing (the first was the skip), and
     // both are kept in the record: a probe's failure mode is to look like evidence.
-    const cs = cur.candidates?.[0]?.spanStart ?? null;
-    const ce = cur.candidates?.[0]?.spanEnd ?? null;
+    const cs = cur.spanStart ?? null;
+    const ce = cur.spanEnd ?? null;
     if (cs === null) spanMissing += 1;
     const contains = cs !== null && cs >= spanStart && ce <= spanEnd;
     const overlaps = cs !== null && spanStart < ce && cs < spanEnd;

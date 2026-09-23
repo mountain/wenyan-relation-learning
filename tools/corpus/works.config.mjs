@@ -934,4 +934,19 @@ export const WORKS = [
     discovery: { kind: 'single', page: "孫子算經" },
     note: "未声明结构优先批（体裁假说：算經）。路由 single，1 章；授权标签 （无 → 站点预设 CC BY-SA 4.0）。密度与未声明结构密度实测后置。",
   },
+  // ---------------- 第十批：易与太玄（解释增强的语料前置）----------------
+  {
+    id: "太玄經",
+    zh: "太玄經",
+    tradition: 'philosophers',
+    discovery: { kind: 'single', page: "太玄經" },
+    note: "易与太玄解释增强（用户 2026-09-24 指定方向）。太玄本体：方州部家／首贊／玄測玄衝玄錯。路由 single，1 章；授权标签 西漢作品。",
+  },
+  {
+    id: "周易正義",
+    zh: "周易正義",
+    tradition: 'philosophers',
+    discovery: { kind: 'mainPageLinks', mainPage: "周易正義" },
+    note: "易与太玄解释增强（用户 2026-09-24 指定方向）。孔颖达疏：注疏层，解释链更长。路由 mainPageLinks，98 章；授权标签 PD-old。",
+  },
 ];

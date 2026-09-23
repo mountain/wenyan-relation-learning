@@ -1,25 +1,25 @@
 {
   "schema": "wenyan.relations.noquote-probe.v1",
-  "generatedAt": "2026-09-23T12:19:15.618Z",
+  "generatedAt": "2026-09-23T13:00:26.969Z",
   "status": "PROBE — nothing here is declared, stored or licensed. A candidate frame is measured before it is adopted.",
   "boundaryRule": "speech = from the character after the colon to the first 。／；／！？ outside 「」『』（）, or the end of the passage; rejected if empty or longer than 300 characters",
   "frame": "<E>曰|云[：︰﹕]<S>  with E = the grammar's entity class, re-declared inside the probe",
   "scope": {
-    "passagesOnDisk": 156414,
-    "readableNow": 21685
+    "passagesOnDisk": 213108,
+    "readableNow": 30513
   },
   "result": {
     "gain": {
-      "passages": 25468,
-      "shareOfCorpus": 0.1628
+      "passages": 29341,
+      "shareOfCorpus": 0.1377
     },
     "superseded": {
-      "passages": 0,
-      "shareOfReadable": 0
+      "passages": 1847,
+      "shareOfReadable": 0.0605
     },
-    "partialOverlap": 0,
-    "readableWithoutSpan": 21682,
-    "verdict": "UNMEASURED — no readable reading exposes a span, so replacement could not be checked at all. It is NOT zero: exposing the span on the reading is a change to src/ and has not been made. The GAIN figure is unaffected (it is a count, not a comparison)."
+    "partialOverlap": 24299,
+    "readableWithoutSpan": 0,
+    "verdict": "TOO DESTRUCTIVE AS STATED: 1847 existing readings would be swallowed. Needs a narrower boundary before it is declared."
   },
   "examples": {
     "gain": [
@@ -54,7 +54,43 @@
         "text": "「庶士、有正，越庶伯、君子，其爾典聽朕教：爾大克羞耇惟君，爾乃飲食醉飽。丕惟曰：爾克永觀省，作稽中德，爾尚克羞饋祀，爾乃自介（匄）用逸。兹乃允惟王正事之臣；兹亦惟天若元德，永不忘（"
       }
     ],
-    "superseded": []
+    "superseded": [
+      {
+        "work": "analects",
+        "at": "analects.12#12.17",
+        "current": "yue-quote",
+        "match": "孔子對曰：「『政』者，正也",
+        "text": "季康子問「政」於孔子。孔子對曰：「『政』者，正也。子帥以正，孰敢不正？」"
+      },
+      {
+        "work": "analects",
+        "at": "analects.12#12.20",
+        "current": "yue-quote",
+        "match": "子曰：「何哉，爾所謂『達』者",
+        "text": "子張問：「士何如斯可謂之『達』矣？」子曰：「何哉，爾所謂『達』者？」子張對曰：「在邦必聞，在家必聞。」子曰：「是『聞』也，非『達』也。夫『達』也者，質直而好義，察言而觀色，慮以下人"
+      },
+      {
+        "work": "analects",
+        "at": "analects.13#13.20",
+        "current": "wen-plain",
+        "match": "子貢問曰：「何如斯可謂之『士』矣",
+        "text": "子貢問曰：「何如斯可謂之『士』矣？」子曰：「行己有恥，使於四方，不辱君命；可謂『士』矣。」曰：「敢問其次。」曰：「宗族稱孝焉，鄉黨稱弟焉。」曰：「敢問其次。」曰：「言必信，行必果，"
+      },
+      {
+        "work": "analects",
+        "at": "analects.13#13.22",
+        "current": "yue-quote",
+        "match": "子曰：「南人有言曰：『人而無恆，不可以作巫醫』",
+        "text": "子曰：「南人有言曰：『人而無恆，不可以作巫醫』。「善夫！『不恆其德，或承之羞』」子曰：「不占而已矣。」"
+      },
+      {
+        "work": "analects",
+        "at": "analects.13#13.28",
+        "current": "wen-plain",
+        "match": "子路問曰：「何如斯可謂之『士』矣",
+        "text": "子路問曰：「何如斯可謂之『士』矣？」子曰：「切切偲偲、怡怡如也，可謂『士』矣。朋友切切偲偲，兄弟怡怡。」"
+      }
+    ]
   },
   "nonClaims": [
     "GAIN is not a promise: a passage may contain several 曰 and the probe reads only the first.",
