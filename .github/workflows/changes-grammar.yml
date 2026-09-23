@@ -14,6 +14,7 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
       - run: node --max-old-space-size=256 tools/changes/selftest.mjs
+      - run: node --max-old-space-size=256 tools/taixuan/selftest.mjs
       - run: npm install --prefix /tmp/wenyan-typecheck --ignore-scripts --no-package-lock typescript@4.2.4
       - run: /tmp/wenyan-typecheck/node_modules/.bin/tsc --noEmit --target ES5 --module commonjs --lib ES2020,DOM src/inscription/changes.ts src/inscription/syllogism.ts src/inscription/pipeline.ts
       - run: node experiments/relations/run.cjs

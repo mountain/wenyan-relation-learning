@@ -29,5 +29,21 @@ node --max-old-space-size=256 tools/changes/selftest.mjs
 [证据与撤回](tools/knowledge/README.md)、[报道语法](tools/grammar/README.md)、
 [受约束对话](tools/dialogue/README.md)、[语义分歧](tools/semantics/README.md)。
 
+**《太玄》情境实验 v0.1**：扬雄《太玄》固定修订的 81 首、729 普通赞位及踦／嬴二赞，
+分开保存可明确分隔的赞辞、测辞和现代监督解释。六个三值坐标只用来编址，第三值不等于 Unknown。
+“达”次二缺少“测曰”标记，完整原文保留，分层待辨。
+
+```sh
+node tools/taixuan/ask.mjs text '觀「少」之九贊。'
+node tools/taixuan/ask.mjs address 000022
+node tools/taixuan/ask.mjs predict taixuan-context-v1 --store knowledge/taixuan/learning.jsonl --digits 0000 --zan 5
+node --max-old-space-size=256 tools/taixuan/selftest.mjs
+```
+
+首轮跨首实验使用 Codex 提出的 18 条暂定标注（尚待明理审定）。仅凭“中”的赞位推广，在
+9 条整首留出标注上正确 3 条；新反例否决粗规则后，细规则能复现训练标注，但留出覆盖为 0。
+这不是语义迁移成功。详见[结构、来源、协议与完整结果](experiments/taixuan/README.md)。
+
 设计方向：苑明理。六爻 v0.1 实现与自审：Codex（OpenAI），通过苑明理账号提交。
+《太玄》v0.1 实现、暂定监督标注与自审：Codex（OpenAI），通过苑明理账号提交。
 新增程序采用 MIT 许可；原有程序及古籍转录的来源与许可分别保留，详见各记录及 `LICENSE.upstream`。

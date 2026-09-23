@@ -1,0 +1,2881 @@
+{
+  "schema": "wenyan.taixuan.holdout.v1",
+  "task": "declared-evaluative-reading-v1",
+  "supervision": {
+    "by": "Codex (OpenAI), via Mingli Yuan",
+    "status": "provisional-awaiting-Mingli-review",
+    "training": 9,
+    "heldOut": 9,
+    "blind": false
+  },
+  "checkpoints": [
+    {
+      "addedHead": "中",
+      "trainingExamples": 3,
+      "trainingHeads": [
+        "中"
+      ],
+      "logHead": "902b915794c6ea2e92023af44805d5ac212b8e72e9aafb20073b046596960de2",
+      "heldOutHeadOverlap": 0,
+      "profiles": [
+        {
+          "profile": "taixuan-position-v1",
+          "features": [
+            "zan"
+          ],
+          "metrics": {
+            "total": 9,
+            "answered": 9,
+            "correct": 3,
+            "wrong": 6,
+            "unknown": 0,
+            "coverage": 1,
+            "accuracyAmongAnswered": 0.3333333333333333
+          },
+          "predictions": [
+            {
+              "id": "taixuan-4-1",
+              "head": "閑",
+              "zan": 1,
+              "expected": "adverse",
+              "result": {
+                "status": "CandidateReading",
+                "label": "affirming",
+                "authority": "conditional-on-supervisor-labels-and-declared-feature-family",
+                "warrant": {
+                  "profile": "taixuan-position-v1",
+                  "refs": [
+                    "taixuan-1-1",
+                    "taixuan-1-5",
+                    "taixuan-1-9"
+                  ]
+                },
+                "profile": "taixuan-position-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0010",
+                  "zan": 1
+                },
+                "checked": 3,
+                "survivors": [
+                  {
+                    "features": [
+                      "zan"
+                    ],
+                    "prediction": {
+                      "label": "affirming",
+                      "refs": [
+                        "taixuan-1-1"
+                      ]
+                    }
+                  }
+                ],
+                "refuted": [],
+                "excludedConflicts": [],
+                "head": "902b915794c6ea2e92023af44805d5ac212b8e72e9aafb20073b046596960de2"
+              }
+            },
+            {
+              "id": "taixuan-4-5",
+              "head": "閑",
+              "zan": 5,
+              "expected": "adverse",
+              "result": {
+                "status": "CandidateReading",
+                "label": "affirming",
+                "authority": "conditional-on-supervisor-labels-and-declared-feature-family",
+                "warrant": {
+                  "profile": "taixuan-position-v1",
+                  "refs": [
+                    "taixuan-1-1",
+                    "taixuan-1-5",
+                    "taixuan-1-9"
+                  ]
+                },
+                "profile": "taixuan-position-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0010",
+                  "zan": 5
+                },
+                "checked": 3,
+                "survivors": [
+                  {
+                    "features": [
+                      "zan"
+                    ],
+                    "prediction": {
+                      "label": "affirming",
+                      "refs": [
+                        "taixuan-1-5"
+                      ]
+                    }
+                  }
+                ],
+                "refuted": [],
+                "excludedConflicts": [],
+                "head": "902b915794c6ea2e92023af44805d5ac212b8e72e9aafb20073b046596960de2"
+              }
+            },
+            {
+              "id": "taixuan-4-9",
+              "head": "閑",
+              "zan": 9,
+              "expected": "adverse",
+              "result": {
+                "status": "CandidateReading",
+                "label": "adverse",
+                "authority": "conditional-on-supervisor-labels-and-declared-feature-family",
+                "warrant": {
+                  "profile": "taixuan-position-v1",
+                  "refs": [
+                    "taixuan-1-1",
+                    "taixuan-1-5",
+                    "taixuan-1-9"
+                  ]
+                },
+                "profile": "taixuan-position-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0010",
+                  "zan": 9
+                },
+                "checked": 3,
+                "survivors": [
+                  {
+                    "features": [
+                      "zan"
+                    ],
+                    "prediction": {
+                      "label": "adverse",
+                      "refs": [
+                        "taixuan-1-9"
+                      ]
+                    }
+                  }
+                ],
+                "refuted": [],
+                "excludedConflicts": [],
+                "head": "902b915794c6ea2e92023af44805d5ac212b8e72e9aafb20073b046596960de2"
+              }
+            },
+            {
+              "id": "taixuan-5-1",
+              "head": "少",
+              "zan": 1,
+              "expected": "adverse",
+              "result": {
+                "status": "CandidateReading",
+                "label": "affirming",
+                "authority": "conditional-on-supervisor-labels-and-declared-feature-family",
+                "warrant": {
+                  "profile": "taixuan-position-v1",
+                  "refs": [
+                    "taixuan-1-1",
+                    "taixuan-1-5",
+                    "taixuan-1-9"
+                  ]
+                },
+                "profile": "taixuan-position-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0011",
+                  "zan": 1
+                },
+                "checked": 3,
+                "survivors": [
+                  {
+                    "features": [
+                      "zan"
+                    ],
+                    "prediction": {
+                      "label": "affirming",
+                      "refs": [
+                        "taixuan-1-1"
+                      ]
+                    }
+                  }
+                ],
+                "refuted": [],
+                "excludedConflicts": [],
+                "head": "902b915794c6ea2e92023af44805d5ac212b8e72e9aafb20073b046596960de2"
+              }
+            },
+            {
+              "id": "taixuan-5-5",
+              "head": "少",
+              "zan": 5,
+              "expected": "affirming",
+              "result": {
+                "status": "CandidateReading",
+                "label": "affirming",
+                "authority": "conditional-on-supervisor-labels-and-declared-feature-family",
+                "warrant": {
+                  "profile": "taixuan-position-v1",
+                  "refs": [
+                    "taixuan-1-1",
+                    "taixuan-1-5",
+                    "taixuan-1-9"
+                  ]
+                },
+                "profile": "taixuan-position-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0011",
+                  "zan": 5
+                },
+                "checked": 3,
+                "survivors": [
+                  {
+                    "features": [
+                      "zan"
+                    ],
+                    "prediction": {
+                      "label": "affirming",
+                      "refs": [
+                        "taixuan-1-5"
+                      ]
+                    }
+                  }
+                ],
+                "refuted": [],
+                "excludedConflicts": [],
+                "head": "902b915794c6ea2e92023af44805d5ac212b8e72e9aafb20073b046596960de2"
+              }
+            },
+            {
+              "id": "taixuan-5-9",
+              "head": "少",
+              "zan": 9,
+              "expected": "affirming",
+              "result": {
+                "status": "CandidateReading",
+                "label": "adverse",
+                "authority": "conditional-on-supervisor-labels-and-declared-feature-family",
+                "warrant": {
+                  "profile": "taixuan-position-v1",
+                  "refs": [
+                    "taixuan-1-1",
+                    "taixuan-1-5",
+                    "taixuan-1-9"
+                  ]
+                },
+                "profile": "taixuan-position-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0011",
+                  "zan": 9
+                },
+                "checked": 3,
+                "survivors": [
+                  {
+                    "features": [
+                      "zan"
+                    ],
+                    "prediction": {
+                      "label": "adverse",
+                      "refs": [
+                        "taixuan-1-9"
+                      ]
+                    }
+                  }
+                ],
+                "refuted": [],
+                "excludedConflicts": [],
+                "head": "902b915794c6ea2e92023af44805d5ac212b8e72e9aafb20073b046596960de2"
+              }
+            },
+            {
+              "id": "taixuan-6-1",
+              "head": "戾",
+              "zan": 1,
+              "expected": "adverse",
+              "result": {
+                "status": "CandidateReading",
+                "label": "affirming",
+                "authority": "conditional-on-supervisor-labels-and-declared-feature-family",
+                "warrant": {
+                  "profile": "taixuan-position-v1",
+                  "refs": [
+                    "taixuan-1-1",
+                    "taixuan-1-5",
+                    "taixuan-1-9"
+                  ]
+                },
+                "profile": "taixuan-position-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0012",
+                  "zan": 1
+                },
+                "checked": 3,
+                "survivors": [
+                  {
+                    "features": [
+                      "zan"
+                    ],
+                    "prediction": {
+                      "label": "affirming",
+                      "refs": [
+                        "taixuan-1-1"
+                      ]
+                    }
+                  }
+                ],
+                "refuted": [],
+                "excludedConflicts": [],
+                "head": "902b915794c6ea2e92023af44805d5ac212b8e72e9aafb20073b046596960de2"
+              }
+            },
+            {
+              "id": "taixuan-6-5",
+              "head": "戾",
+              "zan": 5,
+              "expected": "adverse",
+              "result": {
+                "status": "CandidateReading",
+                "label": "affirming",
+                "authority": "conditional-on-supervisor-labels-and-declared-feature-family",
+                "warrant": {
+                  "profile": "taixuan-position-v1",
+                  "refs": [
+                    "taixuan-1-1",
+                    "taixuan-1-5",
+                    "taixuan-1-9"
+                  ]
+                },
+                "profile": "taixuan-position-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0012",
+                  "zan": 5
+                },
+                "checked": 3,
+                "survivors": [
+                  {
+                    "features": [
+                      "zan"
+                    ],
+                    "prediction": {
+                      "label": "affirming",
+                      "refs": [
+                        "taixuan-1-5"
+                      ]
+                    }
+                  }
+                ],
+                "refuted": [],
+                "excludedConflicts": [],
+                "head": "902b915794c6ea2e92023af44805d5ac212b8e72e9aafb20073b046596960de2"
+              }
+            },
+            {
+              "id": "taixuan-6-9",
+              "head": "戾",
+              "zan": 9,
+              "expected": "adverse",
+              "result": {
+                "status": "CandidateReading",
+                "label": "adverse",
+                "authority": "conditional-on-supervisor-labels-and-declared-feature-family",
+                "warrant": {
+                  "profile": "taixuan-position-v1",
+                  "refs": [
+                    "taixuan-1-1",
+                    "taixuan-1-5",
+                    "taixuan-1-9"
+                  ]
+                },
+                "profile": "taixuan-position-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0012",
+                  "zan": 9
+                },
+                "checked": 3,
+                "survivors": [
+                  {
+                    "features": [
+                      "zan"
+                    ],
+                    "prediction": {
+                      "label": "adverse",
+                      "refs": [
+                        "taixuan-1-9"
+                      ]
+                    }
+                  }
+                ],
+                "refuted": [],
+                "excludedConflicts": [],
+                "head": "902b915794c6ea2e92023af44805d5ac212b8e72e9aafb20073b046596960de2"
+              }
+            }
+          ]
+        },
+        {
+          "profile": "taixuan-prefix-v1",
+          "features": [
+            "fang",
+            "zhou",
+            "bu",
+            "zan"
+          ],
+          "metrics": {
+            "total": 9,
+            "answered": 0,
+            "correct": 0,
+            "wrong": 0,
+            "unknown": 9,
+            "coverage": 0,
+            "accuracyAmongAnswered": null
+          },
+          "predictions": [
+            {
+              "id": "taixuan-4-1",
+              "head": "閑",
+              "zan": 1,
+              "expected": "adverse",
+              "result": {
+                "status": "Unknown",
+                "reason": "uncovered-context",
+                "profile": "taixuan-prefix-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0010",
+                  "zan": 1
+                },
+                "checked": 3,
+                "survivors": [
+                  {
+                    "features": [
+                      "fang",
+                      "zhou",
+                      "bu",
+                      "zan"
+                    ],
+                    "prediction": null
+                  }
+                ],
+                "refuted": [],
+                "excludedConflicts": [],
+                "head": "902b915794c6ea2e92023af44805d5ac212b8e72e9aafb20073b046596960de2"
+              }
+            },
+            {
+              "id": "taixuan-4-5",
+              "head": "閑",
+              "zan": 5,
+              "expected": "adverse",
+              "result": {
+                "status": "Unknown",
+                "reason": "uncovered-context",
+                "profile": "taixuan-prefix-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0010",
+                  "zan": 5
+                },
+                "checked": 3,
+                "survivors": [
+                  {
+                    "features": [
+                      "fang",
+                      "zhou",
+                      "bu",
+                      "zan"
+                    ],
+                    "prediction": null
+                  }
+                ],
+                "refuted": [],
+                "excludedConflicts": [],
+                "head": "902b915794c6ea2e92023af44805d5ac212b8e72e9aafb20073b046596960de2"
+              }
+            },
+            {
+              "id": "taixuan-4-9",
+              "head": "閑",
+              "zan": 9,
+              "expected": "adverse",
+              "result": {
+                "status": "Unknown",
+                "reason": "uncovered-context",
+                "profile": "taixuan-prefix-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0010",
+                  "zan": 9
+                },
+                "checked": 3,
+                "survivors": [
+                  {
+                    "features": [
+                      "fang",
+                      "zhou",
+                      "bu",
+                      "zan"
+                    ],
+                    "prediction": null
+                  }
+                ],
+                "refuted": [],
+                "excludedConflicts": [],
+                "head": "902b915794c6ea2e92023af44805d5ac212b8e72e9aafb20073b046596960de2"
+              }
+            },
+            {
+              "id": "taixuan-5-1",
+              "head": "少",
+              "zan": 1,
+              "expected": "adverse",
+              "result": {
+                "status": "Unknown",
+                "reason": "uncovered-context",
+                "profile": "taixuan-prefix-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0011",
+                  "zan": 1
+                },
+                "checked": 3,
+                "survivors": [
+                  {
+                    "features": [
+                      "fang",
+                      "zhou",
+                      "bu",
+                      "zan"
+                    ],
+                    "prediction": null
+                  }
+                ],
+                "refuted": [],
+                "excludedConflicts": [],
+                "head": "902b915794c6ea2e92023af44805d5ac212b8e72e9aafb20073b046596960de2"
+              }
+            },
+            {
+              "id": "taixuan-5-5",
+              "head": "少",
+              "zan": 5,
+              "expected": "affirming",
+              "result": {
+                "status": "Unknown",
+                "reason": "uncovered-context",
+                "profile": "taixuan-prefix-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0011",
+                  "zan": 5
+                },
+                "checked": 3,
+                "survivors": [
+                  {
+                    "features": [
+                      "fang",
+                      "zhou",
+                      "bu",
+                      "zan"
+                    ],
+                    "prediction": null
+                  }
+                ],
+                "refuted": [],
+                "excludedConflicts": [],
+                "head": "902b915794c6ea2e92023af44805d5ac212b8e72e9aafb20073b046596960de2"
+              }
+            },
+            {
+              "id": "taixuan-5-9",
+              "head": "少",
+              "zan": 9,
+              "expected": "affirming",
+              "result": {
+                "status": "Unknown",
+                "reason": "uncovered-context",
+                "profile": "taixuan-prefix-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0011",
+                  "zan": 9
+                },
+                "checked": 3,
+                "survivors": [
+                  {
+                    "features": [
+                      "fang",
+                      "zhou",
+                      "bu",
+                      "zan"
+                    ],
+                    "prediction": null
+                  }
+                ],
+                "refuted": [],
+                "excludedConflicts": [],
+                "head": "902b915794c6ea2e92023af44805d5ac212b8e72e9aafb20073b046596960de2"
+              }
+            },
+            {
+              "id": "taixuan-6-1",
+              "head": "戾",
+              "zan": 1,
+              "expected": "adverse",
+              "result": {
+                "status": "Unknown",
+                "reason": "uncovered-context",
+                "profile": "taixuan-prefix-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0012",
+                  "zan": 1
+                },
+                "checked": 3,
+                "survivors": [
+                  {
+                    "features": [
+                      "fang",
+                      "zhou",
+                      "bu",
+                      "zan"
+                    ],
+                    "prediction": null
+                  }
+                ],
+                "refuted": [],
+                "excludedConflicts": [],
+                "head": "902b915794c6ea2e92023af44805d5ac212b8e72e9aafb20073b046596960de2"
+              }
+            },
+            {
+              "id": "taixuan-6-5",
+              "head": "戾",
+              "zan": 5,
+              "expected": "adverse",
+              "result": {
+                "status": "Unknown",
+                "reason": "uncovered-context",
+                "profile": "taixuan-prefix-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0012",
+                  "zan": 5
+                },
+                "checked": 3,
+                "survivors": [
+                  {
+                    "features": [
+                      "fang",
+                      "zhou",
+                      "bu",
+                      "zan"
+                    ],
+                    "prediction": null
+                  }
+                ],
+                "refuted": [],
+                "excludedConflicts": [],
+                "head": "902b915794c6ea2e92023af44805d5ac212b8e72e9aafb20073b046596960de2"
+              }
+            },
+            {
+              "id": "taixuan-6-9",
+              "head": "戾",
+              "zan": 9,
+              "expected": "adverse",
+              "result": {
+                "status": "Unknown",
+                "reason": "uncovered-context",
+                "profile": "taixuan-prefix-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0012",
+                  "zan": 9
+                },
+                "checked": 3,
+                "survivors": [
+                  {
+                    "features": [
+                      "fang",
+                      "zhou",
+                      "bu",
+                      "zan"
+                    ],
+                    "prediction": null
+                  }
+                ],
+                "refuted": [],
+                "excludedConflicts": [],
+                "head": "902b915794c6ea2e92023af44805d5ac212b8e72e9aafb20073b046596960de2"
+              }
+            }
+          ]
+        },
+        {
+          "profile": "taixuan-context-v1",
+          "features": [
+            "digits",
+            "zan"
+          ],
+          "metrics": {
+            "total": 9,
+            "answered": 0,
+            "correct": 0,
+            "wrong": 0,
+            "unknown": 9,
+            "coverage": 0,
+            "accuracyAmongAnswered": null
+          },
+          "predictions": [
+            {
+              "id": "taixuan-4-1",
+              "head": "閑",
+              "zan": 1,
+              "expected": "adverse",
+              "result": {
+                "status": "Unknown",
+                "reason": "uncovered-context",
+                "profile": "taixuan-context-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0010",
+                  "zan": 1
+                },
+                "checked": 3,
+                "survivors": [
+                  {
+                    "features": [
+                      "digits",
+                      "zan"
+                    ],
+                    "prediction": null
+                  }
+                ],
+                "refuted": [],
+                "excludedConflicts": [],
+                "head": "902b915794c6ea2e92023af44805d5ac212b8e72e9aafb20073b046596960de2"
+              }
+            },
+            {
+              "id": "taixuan-4-5",
+              "head": "閑",
+              "zan": 5,
+              "expected": "adverse",
+              "result": {
+                "status": "Unknown",
+                "reason": "uncovered-context",
+                "profile": "taixuan-context-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0010",
+                  "zan": 5
+                },
+                "checked": 3,
+                "survivors": [
+                  {
+                    "features": [
+                      "digits",
+                      "zan"
+                    ],
+                    "prediction": null
+                  }
+                ],
+                "refuted": [],
+                "excludedConflicts": [],
+                "head": "902b915794c6ea2e92023af44805d5ac212b8e72e9aafb20073b046596960de2"
+              }
+            },
+            {
+              "id": "taixuan-4-9",
+              "head": "閑",
+              "zan": 9,
+              "expected": "adverse",
+              "result": {
+                "status": "Unknown",
+                "reason": "uncovered-context",
+                "profile": "taixuan-context-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0010",
+                  "zan": 9
+                },
+                "checked": 3,
+                "survivors": [
+                  {
+                    "features": [
+                      "digits",
+                      "zan"
+                    ],
+                    "prediction": null
+                  }
+                ],
+                "refuted": [],
+                "excludedConflicts": [],
+                "head": "902b915794c6ea2e92023af44805d5ac212b8e72e9aafb20073b046596960de2"
+              }
+            },
+            {
+              "id": "taixuan-5-1",
+              "head": "少",
+              "zan": 1,
+              "expected": "adverse",
+              "result": {
+                "status": "Unknown",
+                "reason": "uncovered-context",
+                "profile": "taixuan-context-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0011",
+                  "zan": 1
+                },
+                "checked": 3,
+                "survivors": [
+                  {
+                    "features": [
+                      "digits",
+                      "zan"
+                    ],
+                    "prediction": null
+                  }
+                ],
+                "refuted": [],
+                "excludedConflicts": [],
+                "head": "902b915794c6ea2e92023af44805d5ac212b8e72e9aafb20073b046596960de2"
+              }
+            },
+            {
+              "id": "taixuan-5-5",
+              "head": "少",
+              "zan": 5,
+              "expected": "affirming",
+              "result": {
+                "status": "Unknown",
+                "reason": "uncovered-context",
+                "profile": "taixuan-context-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0011",
+                  "zan": 5
+                },
+                "checked": 3,
+                "survivors": [
+                  {
+                    "features": [
+                      "digits",
+                      "zan"
+                    ],
+                    "prediction": null
+                  }
+                ],
+                "refuted": [],
+                "excludedConflicts": [],
+                "head": "902b915794c6ea2e92023af44805d5ac212b8e72e9aafb20073b046596960de2"
+              }
+            },
+            {
+              "id": "taixuan-5-9",
+              "head": "少",
+              "zan": 9,
+              "expected": "affirming",
+              "result": {
+                "status": "Unknown",
+                "reason": "uncovered-context",
+                "profile": "taixuan-context-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0011",
+                  "zan": 9
+                },
+                "checked": 3,
+                "survivors": [
+                  {
+                    "features": [
+                      "digits",
+                      "zan"
+                    ],
+                    "prediction": null
+                  }
+                ],
+                "refuted": [],
+                "excludedConflicts": [],
+                "head": "902b915794c6ea2e92023af44805d5ac212b8e72e9aafb20073b046596960de2"
+              }
+            },
+            {
+              "id": "taixuan-6-1",
+              "head": "戾",
+              "zan": 1,
+              "expected": "adverse",
+              "result": {
+                "status": "Unknown",
+                "reason": "uncovered-context",
+                "profile": "taixuan-context-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0012",
+                  "zan": 1
+                },
+                "checked": 3,
+                "survivors": [
+                  {
+                    "features": [
+                      "digits",
+                      "zan"
+                    ],
+                    "prediction": null
+                  }
+                ],
+                "refuted": [],
+                "excludedConflicts": [],
+                "head": "902b915794c6ea2e92023af44805d5ac212b8e72e9aafb20073b046596960de2"
+              }
+            },
+            {
+              "id": "taixuan-6-5",
+              "head": "戾",
+              "zan": 5,
+              "expected": "adverse",
+              "result": {
+                "status": "Unknown",
+                "reason": "uncovered-context",
+                "profile": "taixuan-context-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0012",
+                  "zan": 5
+                },
+                "checked": 3,
+                "survivors": [
+                  {
+                    "features": [
+                      "digits",
+                      "zan"
+                    ],
+                    "prediction": null
+                  }
+                ],
+                "refuted": [],
+                "excludedConflicts": [],
+                "head": "902b915794c6ea2e92023af44805d5ac212b8e72e9aafb20073b046596960de2"
+              }
+            },
+            {
+              "id": "taixuan-6-9",
+              "head": "戾",
+              "zan": 9,
+              "expected": "adverse",
+              "result": {
+                "status": "Unknown",
+                "reason": "uncovered-context",
+                "profile": "taixuan-context-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0012",
+                  "zan": 9
+                },
+                "checked": 3,
+                "survivors": [
+                  {
+                    "features": [
+                      "digits",
+                      "zan"
+                    ],
+                    "prediction": null
+                  }
+                ],
+                "refuted": [],
+                "excludedConflicts": [],
+                "head": "902b915794c6ea2e92023af44805d5ac212b8e72e9aafb20073b046596960de2"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "addedHead": "周",
+      "trainingExamples": 6,
+      "trainingHeads": [
+        "中",
+        "周"
+      ],
+      "logHead": "bcc7da1858cb1e5c6e3265752e052853cef5a6b8a5ab029d1649042d36da55b8",
+      "heldOutHeadOverlap": 0,
+      "profiles": [
+        {
+          "profile": "taixuan-position-v1",
+          "features": [
+            "zan"
+          ],
+          "metrics": {
+            "total": 9,
+            "answered": 0,
+            "correct": 0,
+            "wrong": 0,
+            "unknown": 9,
+            "coverage": 0,
+            "accuracyAmongAnswered": null
+          },
+          "predictions": [
+            {
+              "id": "taixuan-4-1",
+              "head": "閑",
+              "zan": 1,
+              "expected": "adverse",
+              "result": {
+                "status": "Unknown",
+                "reason": "hypothesis-family-refuted",
+                "profile": "taixuan-position-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0010",
+                  "zan": 1
+                },
+                "checked": 4,
+                "survivors": [],
+                "refuted": [
+                  {
+                    "features": [
+                      "zan"
+                    ],
+                    "counterexample": [
+                      "taixuan-1-1",
+                      "taixuan-2-1"
+                    ]
+                  }
+                ],
+                "excludedConflicts": [],
+                "head": "bcc7da1858cb1e5c6e3265752e052853cef5a6b8a5ab029d1649042d36da55b8"
+              }
+            },
+            {
+              "id": "taixuan-4-5",
+              "head": "閑",
+              "zan": 5,
+              "expected": "adverse",
+              "result": {
+                "status": "Unknown",
+                "reason": "hypothesis-family-refuted",
+                "profile": "taixuan-position-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0010",
+                  "zan": 5
+                },
+                "checked": 4,
+                "survivors": [],
+                "refuted": [
+                  {
+                    "features": [
+                      "zan"
+                    ],
+                    "counterexample": [
+                      "taixuan-1-1",
+                      "taixuan-2-1"
+                    ]
+                  }
+                ],
+                "excludedConflicts": [],
+                "head": "bcc7da1858cb1e5c6e3265752e052853cef5a6b8a5ab029d1649042d36da55b8"
+              }
+            },
+            {
+              "id": "taixuan-4-9",
+              "head": "閑",
+              "zan": 9,
+              "expected": "adverse",
+              "result": {
+                "status": "Unknown",
+                "reason": "hypothesis-family-refuted",
+                "profile": "taixuan-position-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0010",
+                  "zan": 9
+                },
+                "checked": 4,
+                "survivors": [],
+                "refuted": [
+                  {
+                    "features": [
+                      "zan"
+                    ],
+                    "counterexample": [
+                      "taixuan-1-1",
+                      "taixuan-2-1"
+                    ]
+                  }
+                ],
+                "excludedConflicts": [],
+                "head": "bcc7da1858cb1e5c6e3265752e052853cef5a6b8a5ab029d1649042d36da55b8"
+              }
+            },
+            {
+              "id": "taixuan-5-1",
+              "head": "少",
+              "zan": 1,
+              "expected": "adverse",
+              "result": {
+                "status": "Unknown",
+                "reason": "hypothesis-family-refuted",
+                "profile": "taixuan-position-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0011",
+                  "zan": 1
+                },
+                "checked": 4,
+                "survivors": [],
+                "refuted": [
+                  {
+                    "features": [
+                      "zan"
+                    ],
+                    "counterexample": [
+                      "taixuan-1-1",
+                      "taixuan-2-1"
+                    ]
+                  }
+                ],
+                "excludedConflicts": [],
+                "head": "bcc7da1858cb1e5c6e3265752e052853cef5a6b8a5ab029d1649042d36da55b8"
+              }
+            },
+            {
+              "id": "taixuan-5-5",
+              "head": "少",
+              "zan": 5,
+              "expected": "affirming",
+              "result": {
+                "status": "Unknown",
+                "reason": "hypothesis-family-refuted",
+                "profile": "taixuan-position-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0011",
+                  "zan": 5
+                },
+                "checked": 4,
+                "survivors": [],
+                "refuted": [
+                  {
+                    "features": [
+                      "zan"
+                    ],
+                    "counterexample": [
+                      "taixuan-1-1",
+                      "taixuan-2-1"
+                    ]
+                  }
+                ],
+                "excludedConflicts": [],
+                "head": "bcc7da1858cb1e5c6e3265752e052853cef5a6b8a5ab029d1649042d36da55b8"
+              }
+            },
+            {
+              "id": "taixuan-5-9",
+              "head": "少",
+              "zan": 9,
+              "expected": "affirming",
+              "result": {
+                "status": "Unknown",
+                "reason": "hypothesis-family-refuted",
+                "profile": "taixuan-position-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0011",
+                  "zan": 9
+                },
+                "checked": 4,
+                "survivors": [],
+                "refuted": [
+                  {
+                    "features": [
+                      "zan"
+                    ],
+                    "counterexample": [
+                      "taixuan-1-1",
+                      "taixuan-2-1"
+                    ]
+                  }
+                ],
+                "excludedConflicts": [],
+                "head": "bcc7da1858cb1e5c6e3265752e052853cef5a6b8a5ab029d1649042d36da55b8"
+              }
+            },
+            {
+              "id": "taixuan-6-1",
+              "head": "戾",
+              "zan": 1,
+              "expected": "adverse",
+              "result": {
+                "status": "Unknown",
+                "reason": "hypothesis-family-refuted",
+                "profile": "taixuan-position-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0012",
+                  "zan": 1
+                },
+                "checked": 4,
+                "survivors": [],
+                "refuted": [
+                  {
+                    "features": [
+                      "zan"
+                    ],
+                    "counterexample": [
+                      "taixuan-1-1",
+                      "taixuan-2-1"
+                    ]
+                  }
+                ],
+                "excludedConflicts": [],
+                "head": "bcc7da1858cb1e5c6e3265752e052853cef5a6b8a5ab029d1649042d36da55b8"
+              }
+            },
+            {
+              "id": "taixuan-6-5",
+              "head": "戾",
+              "zan": 5,
+              "expected": "adverse",
+              "result": {
+                "status": "Unknown",
+                "reason": "hypothesis-family-refuted",
+                "profile": "taixuan-position-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0012",
+                  "zan": 5
+                },
+                "checked": 4,
+                "survivors": [],
+                "refuted": [
+                  {
+                    "features": [
+                      "zan"
+                    ],
+                    "counterexample": [
+                      "taixuan-1-1",
+                      "taixuan-2-1"
+                    ]
+                  }
+                ],
+                "excludedConflicts": [],
+                "head": "bcc7da1858cb1e5c6e3265752e052853cef5a6b8a5ab029d1649042d36da55b8"
+              }
+            },
+            {
+              "id": "taixuan-6-9",
+              "head": "戾",
+              "zan": 9,
+              "expected": "adverse",
+              "result": {
+                "status": "Unknown",
+                "reason": "hypothesis-family-refuted",
+                "profile": "taixuan-position-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0012",
+                  "zan": 9
+                },
+                "checked": 4,
+                "survivors": [],
+                "refuted": [
+                  {
+                    "features": [
+                      "zan"
+                    ],
+                    "counterexample": [
+                      "taixuan-1-1",
+                      "taixuan-2-1"
+                    ]
+                  }
+                ],
+                "excludedConflicts": [],
+                "head": "bcc7da1858cb1e5c6e3265752e052853cef5a6b8a5ab029d1649042d36da55b8"
+              }
+            }
+          ]
+        },
+        {
+          "profile": "taixuan-prefix-v1",
+          "features": [
+            "fang",
+            "zhou",
+            "bu",
+            "zan"
+          ],
+          "metrics": {
+            "total": 9,
+            "answered": 0,
+            "correct": 0,
+            "wrong": 0,
+            "unknown": 9,
+            "coverage": 0,
+            "accuracyAmongAnswered": null
+          },
+          "predictions": [
+            {
+              "id": "taixuan-4-1",
+              "head": "閑",
+              "zan": 1,
+              "expected": "adverse",
+              "result": {
+                "status": "Unknown",
+                "reason": "hypothesis-family-refuted",
+                "profile": "taixuan-prefix-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0010",
+                  "zan": 1
+                },
+                "checked": 4,
+                "survivors": [],
+                "refuted": [
+                  {
+                    "features": [
+                      "fang",
+                      "zhou",
+                      "bu",
+                      "zan"
+                    ],
+                    "counterexample": [
+                      "taixuan-1-1",
+                      "taixuan-2-1"
+                    ]
+                  }
+                ],
+                "excludedConflicts": [],
+                "head": "bcc7da1858cb1e5c6e3265752e052853cef5a6b8a5ab029d1649042d36da55b8"
+              }
+            },
+            {
+              "id": "taixuan-4-5",
+              "head": "閑",
+              "zan": 5,
+              "expected": "adverse",
+              "result": {
+                "status": "Unknown",
+                "reason": "hypothesis-family-refuted",
+                "profile": "taixuan-prefix-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0010",
+                  "zan": 5
+                },
+                "checked": 4,
+                "survivors": [],
+                "refuted": [
+                  {
+                    "features": [
+                      "fang",
+                      "zhou",
+                      "bu",
+                      "zan"
+                    ],
+                    "counterexample": [
+                      "taixuan-1-1",
+                      "taixuan-2-1"
+                    ]
+                  }
+                ],
+                "excludedConflicts": [],
+                "head": "bcc7da1858cb1e5c6e3265752e052853cef5a6b8a5ab029d1649042d36da55b8"
+              }
+            },
+            {
+              "id": "taixuan-4-9",
+              "head": "閑",
+              "zan": 9,
+              "expected": "adverse",
+              "result": {
+                "status": "Unknown",
+                "reason": "hypothesis-family-refuted",
+                "profile": "taixuan-prefix-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0010",
+                  "zan": 9
+                },
+                "checked": 4,
+                "survivors": [],
+                "refuted": [
+                  {
+                    "features": [
+                      "fang",
+                      "zhou",
+                      "bu",
+                      "zan"
+                    ],
+                    "counterexample": [
+                      "taixuan-1-1",
+                      "taixuan-2-1"
+                    ]
+                  }
+                ],
+                "excludedConflicts": [],
+                "head": "bcc7da1858cb1e5c6e3265752e052853cef5a6b8a5ab029d1649042d36da55b8"
+              }
+            },
+            {
+              "id": "taixuan-5-1",
+              "head": "少",
+              "zan": 1,
+              "expected": "adverse",
+              "result": {
+                "status": "Unknown",
+                "reason": "hypothesis-family-refuted",
+                "profile": "taixuan-prefix-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0011",
+                  "zan": 1
+                },
+                "checked": 4,
+                "survivors": [],
+                "refuted": [
+                  {
+                    "features": [
+                      "fang",
+                      "zhou",
+                      "bu",
+                      "zan"
+                    ],
+                    "counterexample": [
+                      "taixuan-1-1",
+                      "taixuan-2-1"
+                    ]
+                  }
+                ],
+                "excludedConflicts": [],
+                "head": "bcc7da1858cb1e5c6e3265752e052853cef5a6b8a5ab029d1649042d36da55b8"
+              }
+            },
+            {
+              "id": "taixuan-5-5",
+              "head": "少",
+              "zan": 5,
+              "expected": "affirming",
+              "result": {
+                "status": "Unknown",
+                "reason": "hypothesis-family-refuted",
+                "profile": "taixuan-prefix-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0011",
+                  "zan": 5
+                },
+                "checked": 4,
+                "survivors": [],
+                "refuted": [
+                  {
+                    "features": [
+                      "fang",
+                      "zhou",
+                      "bu",
+                      "zan"
+                    ],
+                    "counterexample": [
+                      "taixuan-1-1",
+                      "taixuan-2-1"
+                    ]
+                  }
+                ],
+                "excludedConflicts": [],
+                "head": "bcc7da1858cb1e5c6e3265752e052853cef5a6b8a5ab029d1649042d36da55b8"
+              }
+            },
+            {
+              "id": "taixuan-5-9",
+              "head": "少",
+              "zan": 9,
+              "expected": "affirming",
+              "result": {
+                "status": "Unknown",
+                "reason": "hypothesis-family-refuted",
+                "profile": "taixuan-prefix-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0011",
+                  "zan": 9
+                },
+                "checked": 4,
+                "survivors": [],
+                "refuted": [
+                  {
+                    "features": [
+                      "fang",
+                      "zhou",
+                      "bu",
+                      "zan"
+                    ],
+                    "counterexample": [
+                      "taixuan-1-1",
+                      "taixuan-2-1"
+                    ]
+                  }
+                ],
+                "excludedConflicts": [],
+                "head": "bcc7da1858cb1e5c6e3265752e052853cef5a6b8a5ab029d1649042d36da55b8"
+              }
+            },
+            {
+              "id": "taixuan-6-1",
+              "head": "戾",
+              "zan": 1,
+              "expected": "adverse",
+              "result": {
+                "status": "Unknown",
+                "reason": "hypothesis-family-refuted",
+                "profile": "taixuan-prefix-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0012",
+                  "zan": 1
+                },
+                "checked": 4,
+                "survivors": [],
+                "refuted": [
+                  {
+                    "features": [
+                      "fang",
+                      "zhou",
+                      "bu",
+                      "zan"
+                    ],
+                    "counterexample": [
+                      "taixuan-1-1",
+                      "taixuan-2-1"
+                    ]
+                  }
+                ],
+                "excludedConflicts": [],
+                "head": "bcc7da1858cb1e5c6e3265752e052853cef5a6b8a5ab029d1649042d36da55b8"
+              }
+            },
+            {
+              "id": "taixuan-6-5",
+              "head": "戾",
+              "zan": 5,
+              "expected": "adverse",
+              "result": {
+                "status": "Unknown",
+                "reason": "hypothesis-family-refuted",
+                "profile": "taixuan-prefix-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0012",
+                  "zan": 5
+                },
+                "checked": 4,
+                "survivors": [],
+                "refuted": [
+                  {
+                    "features": [
+                      "fang",
+                      "zhou",
+                      "bu",
+                      "zan"
+                    ],
+                    "counterexample": [
+                      "taixuan-1-1",
+                      "taixuan-2-1"
+                    ]
+                  }
+                ],
+                "excludedConflicts": [],
+                "head": "bcc7da1858cb1e5c6e3265752e052853cef5a6b8a5ab029d1649042d36da55b8"
+              }
+            },
+            {
+              "id": "taixuan-6-9",
+              "head": "戾",
+              "zan": 9,
+              "expected": "adverse",
+              "result": {
+                "status": "Unknown",
+                "reason": "hypothesis-family-refuted",
+                "profile": "taixuan-prefix-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0012",
+                  "zan": 9
+                },
+                "checked": 4,
+                "survivors": [],
+                "refuted": [
+                  {
+                    "features": [
+                      "fang",
+                      "zhou",
+                      "bu",
+                      "zan"
+                    ],
+                    "counterexample": [
+                      "taixuan-1-1",
+                      "taixuan-2-1"
+                    ]
+                  }
+                ],
+                "excludedConflicts": [],
+                "head": "bcc7da1858cb1e5c6e3265752e052853cef5a6b8a5ab029d1649042d36da55b8"
+              }
+            }
+          ]
+        },
+        {
+          "profile": "taixuan-context-v1",
+          "features": [
+            "digits",
+            "zan"
+          ],
+          "metrics": {
+            "total": 9,
+            "answered": 0,
+            "correct": 0,
+            "wrong": 0,
+            "unknown": 9,
+            "coverage": 0,
+            "accuracyAmongAnswered": null
+          },
+          "predictions": [
+            {
+              "id": "taixuan-4-1",
+              "head": "閑",
+              "zan": 1,
+              "expected": "adverse",
+              "result": {
+                "status": "Unknown",
+                "reason": "uncovered-context",
+                "profile": "taixuan-context-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0010",
+                  "zan": 1
+                },
+                "checked": 6,
+                "survivors": [
+                  {
+                    "features": [
+                      "digits",
+                      "zan"
+                    ],
+                    "prediction": null
+                  }
+                ],
+                "refuted": [],
+                "excludedConflicts": [],
+                "head": "bcc7da1858cb1e5c6e3265752e052853cef5a6b8a5ab029d1649042d36da55b8"
+              }
+            },
+            {
+              "id": "taixuan-4-5",
+              "head": "閑",
+              "zan": 5,
+              "expected": "adverse",
+              "result": {
+                "status": "Unknown",
+                "reason": "uncovered-context",
+                "profile": "taixuan-context-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0010",
+                  "zan": 5
+                },
+                "checked": 6,
+                "survivors": [
+                  {
+                    "features": [
+                      "digits",
+                      "zan"
+                    ],
+                    "prediction": null
+                  }
+                ],
+                "refuted": [],
+                "excludedConflicts": [],
+                "head": "bcc7da1858cb1e5c6e3265752e052853cef5a6b8a5ab029d1649042d36da55b8"
+              }
+            },
+            {
+              "id": "taixuan-4-9",
+              "head": "閑",
+              "zan": 9,
+              "expected": "adverse",
+              "result": {
+                "status": "Unknown",
+                "reason": "uncovered-context",
+                "profile": "taixuan-context-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0010",
+                  "zan": 9
+                },
+                "checked": 6,
+                "survivors": [
+                  {
+                    "features": [
+                      "digits",
+                      "zan"
+                    ],
+                    "prediction": null
+                  }
+                ],
+                "refuted": [],
+                "excludedConflicts": [],
+                "head": "bcc7da1858cb1e5c6e3265752e052853cef5a6b8a5ab029d1649042d36da55b8"
+              }
+            },
+            {
+              "id": "taixuan-5-1",
+              "head": "少",
+              "zan": 1,
+              "expected": "adverse",
+              "result": {
+                "status": "Unknown",
+                "reason": "uncovered-context",
+                "profile": "taixuan-context-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0011",
+                  "zan": 1
+                },
+                "checked": 6,
+                "survivors": [
+                  {
+                    "features": [
+                      "digits",
+                      "zan"
+                    ],
+                    "prediction": null
+                  }
+                ],
+                "refuted": [],
+                "excludedConflicts": [],
+                "head": "bcc7da1858cb1e5c6e3265752e052853cef5a6b8a5ab029d1649042d36da55b8"
+              }
+            },
+            {
+              "id": "taixuan-5-5",
+              "head": "少",
+              "zan": 5,
+              "expected": "affirming",
+              "result": {
+                "status": "Unknown",
+                "reason": "uncovered-context",
+                "profile": "taixuan-context-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0011",
+                  "zan": 5
+                },
+                "checked": 6,
+                "survivors": [
+                  {
+                    "features": [
+                      "digits",
+                      "zan"
+                    ],
+                    "prediction": null
+                  }
+                ],
+                "refuted": [],
+                "excludedConflicts": [],
+                "head": "bcc7da1858cb1e5c6e3265752e052853cef5a6b8a5ab029d1649042d36da55b8"
+              }
+            },
+            {
+              "id": "taixuan-5-9",
+              "head": "少",
+              "zan": 9,
+              "expected": "affirming",
+              "result": {
+                "status": "Unknown",
+                "reason": "uncovered-context",
+                "profile": "taixuan-context-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0011",
+                  "zan": 9
+                },
+                "checked": 6,
+                "survivors": [
+                  {
+                    "features": [
+                      "digits",
+                      "zan"
+                    ],
+                    "prediction": null
+                  }
+                ],
+                "refuted": [],
+                "excludedConflicts": [],
+                "head": "bcc7da1858cb1e5c6e3265752e052853cef5a6b8a5ab029d1649042d36da55b8"
+              }
+            },
+            {
+              "id": "taixuan-6-1",
+              "head": "戾",
+              "zan": 1,
+              "expected": "adverse",
+              "result": {
+                "status": "Unknown",
+                "reason": "uncovered-context",
+                "profile": "taixuan-context-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0012",
+                  "zan": 1
+                },
+                "checked": 6,
+                "survivors": [
+                  {
+                    "features": [
+                      "digits",
+                      "zan"
+                    ],
+                    "prediction": null
+                  }
+                ],
+                "refuted": [],
+                "excludedConflicts": [],
+                "head": "bcc7da1858cb1e5c6e3265752e052853cef5a6b8a5ab029d1649042d36da55b8"
+              }
+            },
+            {
+              "id": "taixuan-6-5",
+              "head": "戾",
+              "zan": 5,
+              "expected": "adverse",
+              "result": {
+                "status": "Unknown",
+                "reason": "uncovered-context",
+                "profile": "taixuan-context-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0012",
+                  "zan": 5
+                },
+                "checked": 6,
+                "survivors": [
+                  {
+                    "features": [
+                      "digits",
+                      "zan"
+                    ],
+                    "prediction": null
+                  }
+                ],
+                "refuted": [],
+                "excludedConflicts": [],
+                "head": "bcc7da1858cb1e5c6e3265752e052853cef5a6b8a5ab029d1649042d36da55b8"
+              }
+            },
+            {
+              "id": "taixuan-6-9",
+              "head": "戾",
+              "zan": 9,
+              "expected": "adverse",
+              "result": {
+                "status": "Unknown",
+                "reason": "uncovered-context",
+                "profile": "taixuan-context-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0012",
+                  "zan": 9
+                },
+                "checked": 6,
+                "survivors": [
+                  {
+                    "features": [
+                      "digits",
+                      "zan"
+                    ],
+                    "prediction": null
+                  }
+                ],
+                "refuted": [],
+                "excludedConflicts": [],
+                "head": "bcc7da1858cb1e5c6e3265752e052853cef5a6b8a5ab029d1649042d36da55b8"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "addedHead": "礥",
+      "trainingExamples": 9,
+      "trainingHeads": [
+        "中",
+        "周",
+        "礥"
+      ],
+      "logHead": "2e775794b7f94c907f9ebc7691e7c8a1a40f3a264dcf230f59f64403bd502622",
+      "heldOutHeadOverlap": 0,
+      "profiles": [
+        {
+          "profile": "taixuan-position-v1",
+          "features": [
+            "zan"
+          ],
+          "metrics": {
+            "total": 9,
+            "answered": 0,
+            "correct": 0,
+            "wrong": 0,
+            "unknown": 9,
+            "coverage": 0,
+            "accuracyAmongAnswered": null
+          },
+          "predictions": [
+            {
+              "id": "taixuan-4-1",
+              "head": "閑",
+              "zan": 1,
+              "expected": "adverse",
+              "result": {
+                "status": "Unknown",
+                "reason": "hypothesis-family-refuted",
+                "profile": "taixuan-position-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0010",
+                  "zan": 1
+                },
+                "checked": 4,
+                "survivors": [],
+                "refuted": [
+                  {
+                    "features": [
+                      "zan"
+                    ],
+                    "counterexample": [
+                      "taixuan-1-1",
+                      "taixuan-2-1"
+                    ]
+                  }
+                ],
+                "excludedConflicts": [],
+                "head": "2e775794b7f94c907f9ebc7691e7c8a1a40f3a264dcf230f59f64403bd502622"
+              }
+            },
+            {
+              "id": "taixuan-4-5",
+              "head": "閑",
+              "zan": 5,
+              "expected": "adverse",
+              "result": {
+                "status": "Unknown",
+                "reason": "hypothesis-family-refuted",
+                "profile": "taixuan-position-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0010",
+                  "zan": 5
+                },
+                "checked": 4,
+                "survivors": [],
+                "refuted": [
+                  {
+                    "features": [
+                      "zan"
+                    ],
+                    "counterexample": [
+                      "taixuan-1-1",
+                      "taixuan-2-1"
+                    ]
+                  }
+                ],
+                "excludedConflicts": [],
+                "head": "2e775794b7f94c907f9ebc7691e7c8a1a40f3a264dcf230f59f64403bd502622"
+              }
+            },
+            {
+              "id": "taixuan-4-9",
+              "head": "閑",
+              "zan": 9,
+              "expected": "adverse",
+              "result": {
+                "status": "Unknown",
+                "reason": "hypothesis-family-refuted",
+                "profile": "taixuan-position-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0010",
+                  "zan": 9
+                },
+                "checked": 4,
+                "survivors": [],
+                "refuted": [
+                  {
+                    "features": [
+                      "zan"
+                    ],
+                    "counterexample": [
+                      "taixuan-1-1",
+                      "taixuan-2-1"
+                    ]
+                  }
+                ],
+                "excludedConflicts": [],
+                "head": "2e775794b7f94c907f9ebc7691e7c8a1a40f3a264dcf230f59f64403bd502622"
+              }
+            },
+            {
+              "id": "taixuan-5-1",
+              "head": "少",
+              "zan": 1,
+              "expected": "adverse",
+              "result": {
+                "status": "Unknown",
+                "reason": "hypothesis-family-refuted",
+                "profile": "taixuan-position-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0011",
+                  "zan": 1
+                },
+                "checked": 4,
+                "survivors": [],
+                "refuted": [
+                  {
+                    "features": [
+                      "zan"
+                    ],
+                    "counterexample": [
+                      "taixuan-1-1",
+                      "taixuan-2-1"
+                    ]
+                  }
+                ],
+                "excludedConflicts": [],
+                "head": "2e775794b7f94c907f9ebc7691e7c8a1a40f3a264dcf230f59f64403bd502622"
+              }
+            },
+            {
+              "id": "taixuan-5-5",
+              "head": "少",
+              "zan": 5,
+              "expected": "affirming",
+              "result": {
+                "status": "Unknown",
+                "reason": "hypothesis-family-refuted",
+                "profile": "taixuan-position-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0011",
+                  "zan": 5
+                },
+                "checked": 4,
+                "survivors": [],
+                "refuted": [
+                  {
+                    "features": [
+                      "zan"
+                    ],
+                    "counterexample": [
+                      "taixuan-1-1",
+                      "taixuan-2-1"
+                    ]
+                  }
+                ],
+                "excludedConflicts": [],
+                "head": "2e775794b7f94c907f9ebc7691e7c8a1a40f3a264dcf230f59f64403bd502622"
+              }
+            },
+            {
+              "id": "taixuan-5-9",
+              "head": "少",
+              "zan": 9,
+              "expected": "affirming",
+              "result": {
+                "status": "Unknown",
+                "reason": "hypothesis-family-refuted",
+                "profile": "taixuan-position-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0011",
+                  "zan": 9
+                },
+                "checked": 4,
+                "survivors": [],
+                "refuted": [
+                  {
+                    "features": [
+                      "zan"
+                    ],
+                    "counterexample": [
+                      "taixuan-1-1",
+                      "taixuan-2-1"
+                    ]
+                  }
+                ],
+                "excludedConflicts": [],
+                "head": "2e775794b7f94c907f9ebc7691e7c8a1a40f3a264dcf230f59f64403bd502622"
+              }
+            },
+            {
+              "id": "taixuan-6-1",
+              "head": "戾",
+              "zan": 1,
+              "expected": "adverse",
+              "result": {
+                "status": "Unknown",
+                "reason": "hypothesis-family-refuted",
+                "profile": "taixuan-position-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0012",
+                  "zan": 1
+                },
+                "checked": 4,
+                "survivors": [],
+                "refuted": [
+                  {
+                    "features": [
+                      "zan"
+                    ],
+                    "counterexample": [
+                      "taixuan-1-1",
+                      "taixuan-2-1"
+                    ]
+                  }
+                ],
+                "excludedConflicts": [],
+                "head": "2e775794b7f94c907f9ebc7691e7c8a1a40f3a264dcf230f59f64403bd502622"
+              }
+            },
+            {
+              "id": "taixuan-6-5",
+              "head": "戾",
+              "zan": 5,
+              "expected": "adverse",
+              "result": {
+                "status": "Unknown",
+                "reason": "hypothesis-family-refuted",
+                "profile": "taixuan-position-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0012",
+                  "zan": 5
+                },
+                "checked": 4,
+                "survivors": [],
+                "refuted": [
+                  {
+                    "features": [
+                      "zan"
+                    ],
+                    "counterexample": [
+                      "taixuan-1-1",
+                      "taixuan-2-1"
+                    ]
+                  }
+                ],
+                "excludedConflicts": [],
+                "head": "2e775794b7f94c907f9ebc7691e7c8a1a40f3a264dcf230f59f64403bd502622"
+              }
+            },
+            {
+              "id": "taixuan-6-9",
+              "head": "戾",
+              "zan": 9,
+              "expected": "adverse",
+              "result": {
+                "status": "Unknown",
+                "reason": "hypothesis-family-refuted",
+                "profile": "taixuan-position-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0012",
+                  "zan": 9
+                },
+                "checked": 4,
+                "survivors": [],
+                "refuted": [
+                  {
+                    "features": [
+                      "zan"
+                    ],
+                    "counterexample": [
+                      "taixuan-1-1",
+                      "taixuan-2-1"
+                    ]
+                  }
+                ],
+                "excludedConflicts": [],
+                "head": "2e775794b7f94c907f9ebc7691e7c8a1a40f3a264dcf230f59f64403bd502622"
+              }
+            }
+          ]
+        },
+        {
+          "profile": "taixuan-prefix-v1",
+          "features": [
+            "fang",
+            "zhou",
+            "bu",
+            "zan"
+          ],
+          "metrics": {
+            "total": 9,
+            "answered": 0,
+            "correct": 0,
+            "wrong": 0,
+            "unknown": 9,
+            "coverage": 0,
+            "accuracyAmongAnswered": null
+          },
+          "predictions": [
+            {
+              "id": "taixuan-4-1",
+              "head": "閑",
+              "zan": 1,
+              "expected": "adverse",
+              "result": {
+                "status": "Unknown",
+                "reason": "hypothesis-family-refuted",
+                "profile": "taixuan-prefix-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0010",
+                  "zan": 1
+                },
+                "checked": 4,
+                "survivors": [],
+                "refuted": [
+                  {
+                    "features": [
+                      "fang",
+                      "zhou",
+                      "bu",
+                      "zan"
+                    ],
+                    "counterexample": [
+                      "taixuan-1-1",
+                      "taixuan-2-1"
+                    ]
+                  }
+                ],
+                "excludedConflicts": [],
+                "head": "2e775794b7f94c907f9ebc7691e7c8a1a40f3a264dcf230f59f64403bd502622"
+              }
+            },
+            {
+              "id": "taixuan-4-5",
+              "head": "閑",
+              "zan": 5,
+              "expected": "adverse",
+              "result": {
+                "status": "Unknown",
+                "reason": "hypothesis-family-refuted",
+                "profile": "taixuan-prefix-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0010",
+                  "zan": 5
+                },
+                "checked": 4,
+                "survivors": [],
+                "refuted": [
+                  {
+                    "features": [
+                      "fang",
+                      "zhou",
+                      "bu",
+                      "zan"
+                    ],
+                    "counterexample": [
+                      "taixuan-1-1",
+                      "taixuan-2-1"
+                    ]
+                  }
+                ],
+                "excludedConflicts": [],
+                "head": "2e775794b7f94c907f9ebc7691e7c8a1a40f3a264dcf230f59f64403bd502622"
+              }
+            },
+            {
+              "id": "taixuan-4-9",
+              "head": "閑",
+              "zan": 9,
+              "expected": "adverse",
+              "result": {
+                "status": "Unknown",
+                "reason": "hypothesis-family-refuted",
+                "profile": "taixuan-prefix-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0010",
+                  "zan": 9
+                },
+                "checked": 4,
+                "survivors": [],
+                "refuted": [
+                  {
+                    "features": [
+                      "fang",
+                      "zhou",
+                      "bu",
+                      "zan"
+                    ],
+                    "counterexample": [
+                      "taixuan-1-1",
+                      "taixuan-2-1"
+                    ]
+                  }
+                ],
+                "excludedConflicts": [],
+                "head": "2e775794b7f94c907f9ebc7691e7c8a1a40f3a264dcf230f59f64403bd502622"
+              }
+            },
+            {
+              "id": "taixuan-5-1",
+              "head": "少",
+              "zan": 1,
+              "expected": "adverse",
+              "result": {
+                "status": "Unknown",
+                "reason": "hypothesis-family-refuted",
+                "profile": "taixuan-prefix-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0011",
+                  "zan": 1
+                },
+                "checked": 4,
+                "survivors": [],
+                "refuted": [
+                  {
+                    "features": [
+                      "fang",
+                      "zhou",
+                      "bu",
+                      "zan"
+                    ],
+                    "counterexample": [
+                      "taixuan-1-1",
+                      "taixuan-2-1"
+                    ]
+                  }
+                ],
+                "excludedConflicts": [],
+                "head": "2e775794b7f94c907f9ebc7691e7c8a1a40f3a264dcf230f59f64403bd502622"
+              }
+            },
+            {
+              "id": "taixuan-5-5",
+              "head": "少",
+              "zan": 5,
+              "expected": "affirming",
+              "result": {
+                "status": "Unknown",
+                "reason": "hypothesis-family-refuted",
+                "profile": "taixuan-prefix-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0011",
+                  "zan": 5
+                },
+                "checked": 4,
+                "survivors": [],
+                "refuted": [
+                  {
+                    "features": [
+                      "fang",
+                      "zhou",
+                      "bu",
+                      "zan"
+                    ],
+                    "counterexample": [
+                      "taixuan-1-1",
+                      "taixuan-2-1"
+                    ]
+                  }
+                ],
+                "excludedConflicts": [],
+                "head": "2e775794b7f94c907f9ebc7691e7c8a1a40f3a264dcf230f59f64403bd502622"
+              }
+            },
+            {
+              "id": "taixuan-5-9",
+              "head": "少",
+              "zan": 9,
+              "expected": "affirming",
+              "result": {
+                "status": "Unknown",
+                "reason": "hypothesis-family-refuted",
+                "profile": "taixuan-prefix-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0011",
+                  "zan": 9
+                },
+                "checked": 4,
+                "survivors": [],
+                "refuted": [
+                  {
+                    "features": [
+                      "fang",
+                      "zhou",
+                      "bu",
+                      "zan"
+                    ],
+                    "counterexample": [
+                      "taixuan-1-1",
+                      "taixuan-2-1"
+                    ]
+                  }
+                ],
+                "excludedConflicts": [],
+                "head": "2e775794b7f94c907f9ebc7691e7c8a1a40f3a264dcf230f59f64403bd502622"
+              }
+            },
+            {
+              "id": "taixuan-6-1",
+              "head": "戾",
+              "zan": 1,
+              "expected": "adverse",
+              "result": {
+                "status": "Unknown",
+                "reason": "hypothesis-family-refuted",
+                "profile": "taixuan-prefix-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0012",
+                  "zan": 1
+                },
+                "checked": 4,
+                "survivors": [],
+                "refuted": [
+                  {
+                    "features": [
+                      "fang",
+                      "zhou",
+                      "bu",
+                      "zan"
+                    ],
+                    "counterexample": [
+                      "taixuan-1-1",
+                      "taixuan-2-1"
+                    ]
+                  }
+                ],
+                "excludedConflicts": [],
+                "head": "2e775794b7f94c907f9ebc7691e7c8a1a40f3a264dcf230f59f64403bd502622"
+              }
+            },
+            {
+              "id": "taixuan-6-5",
+              "head": "戾",
+              "zan": 5,
+              "expected": "adverse",
+              "result": {
+                "status": "Unknown",
+                "reason": "hypothesis-family-refuted",
+                "profile": "taixuan-prefix-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0012",
+                  "zan": 5
+                },
+                "checked": 4,
+                "survivors": [],
+                "refuted": [
+                  {
+                    "features": [
+                      "fang",
+                      "zhou",
+                      "bu",
+                      "zan"
+                    ],
+                    "counterexample": [
+                      "taixuan-1-1",
+                      "taixuan-2-1"
+                    ]
+                  }
+                ],
+                "excludedConflicts": [],
+                "head": "2e775794b7f94c907f9ebc7691e7c8a1a40f3a264dcf230f59f64403bd502622"
+              }
+            },
+            {
+              "id": "taixuan-6-9",
+              "head": "戾",
+              "zan": 9,
+              "expected": "adverse",
+              "result": {
+                "status": "Unknown",
+                "reason": "hypothesis-family-refuted",
+                "profile": "taixuan-prefix-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0012",
+                  "zan": 9
+                },
+                "checked": 4,
+                "survivors": [],
+                "refuted": [
+                  {
+                    "features": [
+                      "fang",
+                      "zhou",
+                      "bu",
+                      "zan"
+                    ],
+                    "counterexample": [
+                      "taixuan-1-1",
+                      "taixuan-2-1"
+                    ]
+                  }
+                ],
+                "excludedConflicts": [],
+                "head": "2e775794b7f94c907f9ebc7691e7c8a1a40f3a264dcf230f59f64403bd502622"
+              }
+            }
+          ]
+        },
+        {
+          "profile": "taixuan-context-v1",
+          "features": [
+            "digits",
+            "zan"
+          ],
+          "metrics": {
+            "total": 9,
+            "answered": 0,
+            "correct": 0,
+            "wrong": 0,
+            "unknown": 9,
+            "coverage": 0,
+            "accuracyAmongAnswered": null
+          },
+          "predictions": [
+            {
+              "id": "taixuan-4-1",
+              "head": "閑",
+              "zan": 1,
+              "expected": "adverse",
+              "result": {
+                "status": "Unknown",
+                "reason": "uncovered-context",
+                "profile": "taixuan-context-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0010",
+                  "zan": 1
+                },
+                "checked": 9,
+                "survivors": [
+                  {
+                    "features": [
+                      "digits",
+                      "zan"
+                    ],
+                    "prediction": null
+                  }
+                ],
+                "refuted": [],
+                "excludedConflicts": [],
+                "head": "2e775794b7f94c907f9ebc7691e7c8a1a40f3a264dcf230f59f64403bd502622"
+              }
+            },
+            {
+              "id": "taixuan-4-5",
+              "head": "閑",
+              "zan": 5,
+              "expected": "adverse",
+              "result": {
+                "status": "Unknown",
+                "reason": "uncovered-context",
+                "profile": "taixuan-context-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0010",
+                  "zan": 5
+                },
+                "checked": 9,
+                "survivors": [
+                  {
+                    "features": [
+                      "digits",
+                      "zan"
+                    ],
+                    "prediction": null
+                  }
+                ],
+                "refuted": [],
+                "excludedConflicts": [],
+                "head": "2e775794b7f94c907f9ebc7691e7c8a1a40f3a264dcf230f59f64403bd502622"
+              }
+            },
+            {
+              "id": "taixuan-4-9",
+              "head": "閑",
+              "zan": 9,
+              "expected": "adverse",
+              "result": {
+                "status": "Unknown",
+                "reason": "uncovered-context",
+                "profile": "taixuan-context-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0010",
+                  "zan": 9
+                },
+                "checked": 9,
+                "survivors": [
+                  {
+                    "features": [
+                      "digits",
+                      "zan"
+                    ],
+                    "prediction": null
+                  }
+                ],
+                "refuted": [],
+                "excludedConflicts": [],
+                "head": "2e775794b7f94c907f9ebc7691e7c8a1a40f3a264dcf230f59f64403bd502622"
+              }
+            },
+            {
+              "id": "taixuan-5-1",
+              "head": "少",
+              "zan": 1,
+              "expected": "adverse",
+              "result": {
+                "status": "Unknown",
+                "reason": "uncovered-context",
+                "profile": "taixuan-context-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0011",
+                  "zan": 1
+                },
+                "checked": 9,
+                "survivors": [
+                  {
+                    "features": [
+                      "digits",
+                      "zan"
+                    ],
+                    "prediction": null
+                  }
+                ],
+                "refuted": [],
+                "excludedConflicts": [],
+                "head": "2e775794b7f94c907f9ebc7691e7c8a1a40f3a264dcf230f59f64403bd502622"
+              }
+            },
+            {
+              "id": "taixuan-5-5",
+              "head": "少",
+              "zan": 5,
+              "expected": "affirming",
+              "result": {
+                "status": "Unknown",
+                "reason": "uncovered-context",
+                "profile": "taixuan-context-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0011",
+                  "zan": 5
+                },
+                "checked": 9,
+                "survivors": [
+                  {
+                    "features": [
+                      "digits",
+                      "zan"
+                    ],
+                    "prediction": null
+                  }
+                ],
+                "refuted": [],
+                "excludedConflicts": [],
+                "head": "2e775794b7f94c907f9ebc7691e7c8a1a40f3a264dcf230f59f64403bd502622"
+              }
+            },
+            {
+              "id": "taixuan-5-9",
+              "head": "少",
+              "zan": 9,
+              "expected": "affirming",
+              "result": {
+                "status": "Unknown",
+                "reason": "uncovered-context",
+                "profile": "taixuan-context-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0011",
+                  "zan": 9
+                },
+                "checked": 9,
+                "survivors": [
+                  {
+                    "features": [
+                      "digits",
+                      "zan"
+                    ],
+                    "prediction": null
+                  }
+                ],
+                "refuted": [],
+                "excludedConflicts": [],
+                "head": "2e775794b7f94c907f9ebc7691e7c8a1a40f3a264dcf230f59f64403bd502622"
+              }
+            },
+            {
+              "id": "taixuan-6-1",
+              "head": "戾",
+              "zan": 1,
+              "expected": "adverse",
+              "result": {
+                "status": "Unknown",
+                "reason": "uncovered-context",
+                "profile": "taixuan-context-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0012",
+                  "zan": 1
+                },
+                "checked": 9,
+                "survivors": [
+                  {
+                    "features": [
+                      "digits",
+                      "zan"
+                    ],
+                    "prediction": null
+                  }
+                ],
+                "refuted": [],
+                "excludedConflicts": [],
+                "head": "2e775794b7f94c907f9ebc7691e7c8a1a40f3a264dcf230f59f64403bd502622"
+              }
+            },
+            {
+              "id": "taixuan-6-5",
+              "head": "戾",
+              "zan": 5,
+              "expected": "adverse",
+              "result": {
+                "status": "Unknown",
+                "reason": "uncovered-context",
+                "profile": "taixuan-context-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0012",
+                  "zan": 5
+                },
+                "checked": 9,
+                "survivors": [
+                  {
+                    "features": [
+                      "digits",
+                      "zan"
+                    ],
+                    "prediction": null
+                  }
+                ],
+                "refuted": [],
+                "excludedConflicts": [],
+                "head": "2e775794b7f94c907f9ebc7691e7c8a1a40f3a264dcf230f59f64403bd502622"
+              }
+            },
+            {
+              "id": "taixuan-6-9",
+              "head": "戾",
+              "zan": 9,
+              "expected": "adverse",
+              "result": {
+                "status": "Unknown",
+                "reason": "uncovered-context",
+                "profile": "taixuan-context-v1",
+                "context": {
+                  "system": "taixuan",
+                  "digits": "0012",
+                  "zan": 9
+                },
+                "checked": 9,
+                "survivors": [
+                  {
+                    "features": [
+                      "digits",
+                      "zan"
+                    ],
+                    "prediction": null
+                  }
+                ],
+                "refuted": [],
+                "excludedConflicts": [],
+                "head": "2e775794b7f94c907f9ebc7691e7c8a1a40f3a264dcf230f59f64403bd502622"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "finalKnown": [
+    {
+      "id": "taixuan-1-1",
+      "expected": "affirming",
+      "status": "CandidateReading",
+      "proposed": "affirming"
+    },
+    {
+      "id": "taixuan-1-5",
+      "expected": "affirming",
+      "status": "CandidateReading",
+      "proposed": "affirming"
+    },
+    {
+      "id": "taixuan-1-9",
+      "expected": "adverse",
+      "status": "CandidateReading",
+      "proposed": "adverse"
+    },
+    {
+      "id": "taixuan-2-1",
+      "expected": "adverse",
+      "status": "CandidateReading",
+      "proposed": "adverse"
+    },
+    {
+      "id": "taixuan-2-5",
+      "expected": "adverse",
+      "status": "CandidateReading",
+      "proposed": "adverse"
+    },
+    {
+      "id": "taixuan-2-9",
+      "expected": "adverse",
+      "status": "CandidateReading",
+      "proposed": "adverse"
+    },
+    {
+      "id": "taixuan-3-1",
+      "expected": "qualified",
+      "status": "CandidateReading",
+      "proposed": "qualified"
+    },
+    {
+      "id": "taixuan-3-5",
+      "expected": "affirming",
+      "status": "CandidateReading",
+      "proposed": "affirming"
+    },
+    {
+      "id": "taixuan-3-9",
+      "expected": "qualified",
+      "status": "CandidateReading",
+      "proposed": "qualified"
+    }
+  ],
+  "interpretation": "Diagnostic of proposed annotations: feature refinement may memorize training contexts while abstaining on every held-out head. No semantic-transfer success is assumed."
+}

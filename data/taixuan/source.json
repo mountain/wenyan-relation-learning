@@ -1,0 +1,27 @@
+{
+  "schema": "wenyan.taixuan.source.v1",
+  "title": "太玄經",
+  "author": "揚雄",
+  "pageId": 25543,
+  "revision": 2651096,
+  "parentRevision": 2651093,
+  "timestamp": "2026-02-23T02:04:43Z",
+  "page": "https://zh.wikisource.org/wiki/太玄經",
+  "permalink": "https://zh.wikisource.org/w/index.php?title=太玄經&oldid=2651096",
+  "history": "https://zh.wikisource.org/w/index.php?title=太玄經&action=history",
+  "file": "data/taixuan/source.wiki",
+  "sha256": "22573659dec9e3bbf8a6001c9ad07a275fb76ab4b5e42b01bc1fd91aa7626258",
+  "license": {
+    "original": "Public domain; 西漢作品 template present in this revision",
+    "transcription": "CC BY-SA 4.0 site default retained conservatively for transcription and punctuation",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "attribution": "揚雄; Wikisource contributors, revision 2651096 and linked page history",
+    "codeLicenseDoesNotOverrideSource": true
+  },
+  "extraction": "Raw main-slot wikitext from MediaWiki revision API; no character or punctuation correction. Derived index separates explicit markers only.",
+  "limitations": [
+    "Single Wikisource transcription; not a collated scholarly edition.",
+    "Source anomalies and uncertain segmentation are retained.",
+    "No ctext content or Unicode chart image is included."
+  ]
+}
