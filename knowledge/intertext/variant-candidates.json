@@ -1,0 +1,1409 @@
+{
+  "schema": "wenyan.intertext.variant-candidates.v1",
+  "method": "a marked citation that is ONE character away from text in the cited work; the differing character is the candidate and the citation is its witness",
+  "statusOfTheseEntries": "CANDIDATES, not variants. A one-character difference is equally consistent with a genuine difference between recensions, and this tool cannot tell the two apart. Admission into knowledge/intertext/variants.json stays under the rule stated there (same word written two ways, never a phonetic loan) and under human judgement.",
+  "scannedNotYetMatched": 435,
+  "explainedByOneEdit": 99,
+  "candidates": [
+    {
+      "hostChar": "惟",
+      "sourceChar": "維",
+      "count": 8,
+      "witnesses": [
+        {
+          "host": "mencius:9.22",
+          "cited": "classic-of-poetry",
+          "quote": "永言孝思，孝思惟則",
+          "sourceWindow": "永言孝思孝思維則",
+          "sourceAt": {
+            "section": "classic-of-poetry.243",
+            "passageId": "243.1"
+          }
+        },
+        {
+          "host": "great-learning:1.5",
+          "cited": "classic-of-poetry",
+          "quote": "周雖舊邦，其命惟新。",
+          "sourceWindow": "周雖舊邦其命維新",
+          "sourceAt": {
+            "section": "classic-of-poetry.235",
+            "passageId": "235.1"
+          }
+        },
+        {
+          "host": "book-of-rites:42.5",
+          "cited": "classic-of-poetry",
+          "quote": "周雖舊邦，其命惟新。",
+          "sourceWindow": "周雖舊邦其命維新",
+          "sourceAt": {
+            "section": "classic-of-poetry.235",
+            "passageId": "235.1"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "毋",
+      "sourceChar": "無",
+      "count": 4,
+      "witnesses": [
+        {
+          "host": "zuozhuan:7.28",
+          "cited": "classic-of-poetry",
+          "quote": "毋念爾祖，聿脩厥德。",
+          "sourceWindow": "無念爾祖聿脩厥德",
+          "sourceAt": {
+            "section": "classic-of-poetry.235",
+            "passageId": "235.6"
+          }
+        },
+        {
+          "host": "hanshu:29.112",
+          "cited": "classic-of-poetry",
+          "quote": "毋曰高高在上，陟降厥士，日監在茲",
+          "sourceWindow": "無曰高高在上陟降厥士日監在茲",
+          "sourceAt": {
+            "section": "classic-of-poetry.288",
+            "passageId": "288.1"
+          }
+        },
+        {
+          "host": "hanshu:30.112",
+          "cited": "classic-of-poetry",
+          "quote": "毋曰高高在上，陟降厥士，日監在茲",
+          "sourceWindow": "無曰高高在上陟降厥士日監在茲",
+          "sourceAt": {
+            "section": "classic-of-poetry.288",
+            "passageId": "288.1"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "後",
+      "sourceChar": "后",
+      "count": 4,
+      "witnesses": [
+        {
+          "host": "hanshu:33.182",
+          "cited": "zhouyi",
+          "quote": "鳥焚其巢，旅人先笑後號咷。",
+          "sourceWindow": "鳥焚其巢旅人先笑后號咷",
+          "sourceAt": {
+            "section": "zhouyi.56",
+            "passageId": "56.3"
+          }
+        },
+        {
+          "host": "hanshu:34.182",
+          "cited": "zhouyi",
+          "quote": "鳥焚其巢，旅人先笑後號咷。",
+          "sourceWindow": "鳥焚其巢旅人先笑后號咷",
+          "sourceAt": {
+            "section": "zhouyi.56",
+            "passageId": "56.3"
+          }
+        },
+        {
+          "host": "hanshu:114.10",
+          "cited": "zhouyi",
+          "quote": "鳥焚其巢，旅人先笑後號咷。喪牛于易，凶。",
+          "sourceWindow": "鳥焚其巢旅人先笑后號咷喪牛于易凶",
+          "sourceAt": {
+            "section": "zhouyi.56",
+            "passageId": "56.3"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "醤",
+      "sourceChar": "烕",
+      "count": 4,
+      "witnesses": [
+        {
+          "host": "hanshu:33.279",
+          "cited": "classic-of-poetry",
+          "quote": "赫赫宗周，褒姒醤之。",
+          "sourceWindow": "赫赫宗周褒姒烕之",
+          "sourceAt": {
+            "section": "classic-of-poetry.192",
+            "passageId": "192.8"
+          }
+        },
+        {
+          "host": "hanshu:33.398",
+          "cited": "classic-of-poetry",
+          "quote": "赫赫宗周、褒姒醤之。",
+          "sourceWindow": "赫赫宗周褒姒烕之",
+          "sourceAt": {
+            "section": "classic-of-poetry.192",
+            "passageId": "192.8"
+          }
+        },
+        {
+          "host": "hanshu:34.279",
+          "cited": "classic-of-poetry",
+          "quote": "赫赫宗周，褒姒醤之。",
+          "sourceWindow": "赫赫宗周褒姒烕之",
+          "sourceAt": {
+            "section": "classic-of-poetry.192",
+            "passageId": "192.8"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "緡",
+      "sourceChar": "緜",
+      "count": 3,
+      "witnesses": [
+        {
+          "host": "great-learning:1.6",
+          "cited": "classic-of-poetry",
+          "quote": "緡蠻黃鳥，止于丘隅。",
+          "sourceWindow": "緜蠻黃鳥止于丘隅",
+          "sourceAt": {
+            "section": "classic-of-poetry.230",
+            "passageId": "230.2"
+          }
+        },
+        {
+          "host": "book-of-rites:42.6",
+          "cited": "classic-of-poetry",
+          "quote": "緡蠻黃鳥，止于丘隅。",
+          "sourceWindow": "緜蠻黃鳥止于丘隅",
+          "sourceAt": {
+            "section": "classic-of-poetry.230",
+            "passageId": "230.2"
+          }
+        },
+        {
+          "host": "四書章句集註:2.8",
+          "cited": "classic-of-poetry",
+          "quote": "緡蠻黃鳥，止于丘隅。",
+          "sourceWindow": "緜蠻黃鳥止于丘隅",
+          "sourceAt": {
+            "section": "classic-of-poetry.230",
+            "passageId": "230.2"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "昭",
+      "sourceChar": "炤",
+      "count": 3,
+      "witnesses": [
+        {
+          "host": "doctrine-of-the-mean:1.34",
+          "cited": "classic-of-poetry",
+          "quote": "潛雖伏矣，亦孔之昭。",
+          "sourceWindow": "潛雖伏矣亦孔之炤",
+          "sourceAt": {
+            "section": "classic-of-poetry.192",
+            "passageId": "192.11"
+          }
+        },
+        {
+          "host": "book-of-rites:31.34",
+          "cited": "classic-of-poetry",
+          "quote": "潛雖伏矣，亦孔之昭。",
+          "sourceWindow": "潛雖伏矣亦孔之炤",
+          "sourceAt": {
+            "section": "classic-of-poetry.192",
+            "passageId": "192.11"
+          }
+        },
+        {
+          "host": "四書章句集註:4.38",
+          "cited": "classic-of-poetry",
+          "quote": "潛雖伏矣，亦孔之昭！",
+          "sourceWindow": "潛雖伏矣亦孔之炤",
+          "sourceAt": {
+            "section": "classic-of-poetry.192",
+            "passageId": "192.11"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "雍",
+      "sourceChar": "雝",
+      "count": 3,
+      "witnesses": [
+        {
+          "host": "book-of-rites:19.41",
+          "cited": "classic-of-poetry",
+          "quote": "肅雍和鳴，先祖是聽。",
+          "sourceWindow": "肅雝和鳴先祖是聽",
+          "sourceAt": {
+            "section": "classic-of-poetry.280",
+            "passageId": "280.1"
+          }
+        },
+        {
+          "host": "shiji:24.43",
+          "cited": "classic-of-poetry",
+          "quote": "肅雍和鳴，先祖是聽。",
+          "sourceWindow": "肅雝和鳴先祖是聽",
+          "sourceAt": {
+            "section": "classic-of-poetry.280",
+            "passageId": "280.1"
+          }
+        },
+        {
+          "host": "hanshu:45.21",
+          "cited": "classic-of-poetry",
+          "quote": "於穆清廟，肅雍顯相；濟濟多士，秉文之德。",
+          "sourceWindow": "于穆清廟肅雝顯相濟濟多士秉文之德",
+          "sourceAt": {
+            "section": "classic-of-poetry.266",
+            "passageId": "266.1"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "爲",
+      "sourceChar": "為",
+      "count": 3,
+      "witnesses": [
+        {
+          "host": "book-of-rites:33.23",
+          "cited": "classic-of-poetry",
+          "quote": "白圭之玷，尚可磨也；斯言之玷，不可爲也。",
+          "sourceWindow": "白圭之玷尚可磨也斯言之玷不可為也",
+          "sourceAt": {
+            "section": "classic-of-poetry.256",
+            "passageId": "256.5"
+          }
+        },
+        {
+          "host": "xunzi:13.6",
+          "cited": "classic-of-poetry",
+          "quote": "不僭不賊，鮮不爲則。",
+          "sourceWindow": "不僭不賊鮮不為則",
+          "sourceAt": {
+            "section": "classic-of-poetry.256",
+            "passageId": "256.8"
+          }
+        },
+        {
+          "host": "文選:1.11",
+          "cited": "周禮",
+          "quote": "虞人萊所田之野爲表",
+          "sourceWindow": "虞人萊所田之野為表",
+          "sourceAt": {
+            "section": "周禮.4",
+            "passageId": "4.73"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "普",
+      "sourceChar": "溥",
+      "count": 2,
+      "witnesses": [
+        {
+          "host": "mencius:9.21",
+          "cited": "classic-of-poetry",
+          "quote": "普天之下，莫非王土；率土之濱，莫非王臣。",
+          "sourceWindow": "溥天之下莫非王土率土之濱莫非王臣",
+          "sourceAt": {
+            "section": "classic-of-poetry.205",
+            "passageId": "205.1"
+          }
+        },
+        {
+          "host": "xunzi:24.1",
+          "cited": "classic-of-poetry",
+          "quote": "普天之下，莫非王土；率土之濱，莫非王臣。",
+          "sourceWindow": "溥天之下莫非王土率土之濱莫非王臣",
+          "sourceAt": {
+            "section": "classic-of-poetry.205",
+            "passageId": "205.1"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "協",
+      "sourceChar": "洽",
+      "count": 2,
+      "witnesses": [
+        {
+          "host": "zuozhuan:6.280",
+          "cited": "classic-of-poetry",
+          "quote": "協比其鄰，昏姻孔云。",
+          "sourceWindow": "洽比其鄰昏姻孔云",
+          "sourceAt": {
+            "section": "classic-of-poetry.192",
+            "passageId": "192.12"
+          }
+        },
+        {
+          "host": "古文觀止:3.59",
+          "cited": "classic-of-poetry",
+          "quote": "辭之輯矣，民之協矣，辭之懌矣，民之莫矣。",
+          "sourceWindow": "辭之輯矣民之洽矣辭之懌矣民之莫矣",
+          "sourceAt": {
+            "section": "classic-of-poetry.254",
+            "passageId": "254.2"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "監",
+      "sourceChar": "鑒",
+      "count": 2,
+      "witnesses": [
+        {
+          "host": "hanshu:45.49",
+          "cited": "classic-of-poetry",
+          "quote": "殷監不遠，在夏后之世",
+          "sourceWindow": "殷鑒不遠在夏后之世",
+          "sourceAt": {
+            "section": "classic-of-poetry.255",
+            "passageId": "255.8"
+          }
+        },
+        {
+          "host": "hanshu:97.27",
+          "cited": "classic-of-poetry",
+          "quote": "殷監不遠，在夏后之世。",
+          "sourceWindow": "殷鑒不遠在夏后之世",
+          "sourceAt": {
+            "section": "classic-of-poetry.255",
+            "passageId": "255.8"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "遍",
+      "sourceChar": "徧",
+      "count": 2,
+      "witnesses": [
+        {
+          "host": "wenxian-tongkao:73.53",
+          "cited": "book-of-documents",
+          "quote": "'肆類於上帝，禋於六宗，望於山川，遍於群神",
+          "sourceWindow": "肆類于上帝禋于六宗望于山川徧于群神",
+          "sourceAt": {
+            "section": "book-of-documents.2",
+            "passageId": "2.4"
+          }
+        },
+        {
+          "host": "wenxian-tongkao:83.19",
+          "cited": "book-of-documents",
+          "quote": "肆類于上帝，禋于六宗，望於山川，遍于羣神。",
+          "sourceWindow": "肆類于上帝禋于六宗望于山川徧于羣神",
+          "sourceAt": {
+            "section": "book-of-documents.1",
+            "passageId": "1.33"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "以",
+      "sourceChar": "與",
+      "count": 2,
+      "witnesses": [
+        {
+          "host": "wenxian-tongkao:83.24",
+          "cited": "classic-of-poetry",
+          "quote": "以我犧羊，以社以方。",
+          "sourceWindow": "與我犧羊以社以方",
+          "sourceAt": {
+            "section": "classic-of-poetry.211",
+            "passageId": "211.2"
+          }
+        },
+        {
+          "host": "wenxian-tongkao:83.24",
+          "cited": "classic-of-poetry",
+          "quote": "以我犧羊，以社以方。",
+          "sourceWindow": "與我犧羊以社以方",
+          "sourceAt": {
+            "section": "classic-of-poetry.211",
+            "passageId": "211.2"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "乎",
+      "sourceChar": "恭",
+      "count": 1,
+      "witnesses": [
+        {
+          "host": "analects:2.21",
+          "cited": "book-of-documents",
+          "quote": "孝乎惟孝，友於兄弟。",
+          "sourceWindow": "孝恭惟孝友于兄弟",
+          "sourceAt": {
+            "section": "book-of-documents.54",
+            "passageId": "54.1"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "此",
+      "sourceChar": "女",
+      "count": 1,
+      "witnesses": [
+        {
+          "host": "mencius:3.36",
+          "cited": "classic-of-poetry",
+          "quote": "迨天之未陰雨，徹彼桑土，綢繆牖戶。今此下民，或敢侮予？",
+          "sourceWindow": "迨天之未陰雨徹彼桑土綢繆牖戶今女下民或敢侮予",
+          "sourceAt": {
+            "section": "classic-of-poetry.155",
+            "passageId": "155.1"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "绹",
+      "sourceChar": "綯",
+      "count": 1,
+      "witnesses": [
+        {
+          "host": "mencius:5.14",
+          "cited": "classic-of-poetry",
+          "quote": "晝爾于茅，宵爾索绹。亟其乘屋，其始播百穀。",
+          "sourceWindow": "晝爾于茅宵爾索綯亟其乘屋其始播百穀",
+          "sourceAt": {
+            "section": "classic-of-poetry.154",
+            "passageId": "154.7"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "娶",
+      "sourceChar": "取",
+      "count": 1,
+      "witnesses": [
+        {
+          "host": "mencius:9.5",
+          "cited": "classic-of-poetry",
+          "quote": "娶妻如之何？必告父母。",
+          "sourceWindow": "取妻如之何必告父母",
+          "sourceAt": {
+            "section": "classic-of-poetry.101",
+            "passageId": "101.1"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "底",
+      "sourceChar": "砥",
+      "count": 1,
+      "witnesses": [
+        {
+          "host": "mencius:10.48",
+          "cited": "classic-of-poetry",
+          "quote": "周道如底，其直如矢；君子所履，小人所視。",
+          "sourceWindow": "周道如砥其直如矢君子所履小人所視",
+          "sourceAt": {
+            "section": "classic-of-poetry.203",
+            "passageId": "203.1"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "蒸",
+      "sourceChar": "烝",
+      "count": 1,
+      "witnesses": [
+        {
+          "host": "mencius:11.29",
+          "cited": "classic-of-poetry",
+          "quote": "天生蒸民，有物有則。民之秉彝，好是懿德。",
+          "sourceWindow": "天生烝民有物有則民之秉彝好是懿德",
+          "sourceAt": {
+            "section": "classic-of-poetry.260",
+            "passageId": "260.1"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "凱",
+      "sourceChar": "豈",
+      "count": 1,
+      "witnesses": [
+        {
+          "host": "book-of-rites:29.2",
+          "cited": "classic-of-poetry",
+          "quote": "凱弟君子，民之父母",
+          "sourceWindow": "豈弟君子民之父母",
+          "sourceAt": {
+            "section": "classic-of-poetry.251",
+            "passageId": "251.1"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "‘",
+      "sourceChar": "笑",
+      "count": 1,
+      "witnesses": [
+        {
+          "host": "book-of-rites:30.12",
+          "cited": "classic-of-poetry",
+          "quote": "‘先民有言，詢於芻蕘",
+          "sourceWindow": "笑先民有言詢于芻蕘",
+          "sourceAt": {
+            "section": "classic-of-poetry.254",
+            "passageId": "254.3"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "‘",
+      "sourceChar": "行",
+      "count": 1,
+      "witnesses": [
+        {
+          "host": "book-of-rites:30.17",
+          "cited": "analects",
+          "quote": "‘三年無改於父之道，可謂孝矣",
+          "sourceWindow": "行三年無改于父之道可謂孝矣",
+          "sourceAt": {
+            "section": "analects.1",
+            "passageId": "1.11"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "‘",
+      "sourceChar": "矣",
+      "count": 1,
+      "witnesses": [
+        {
+          "host": "book-of-rites:30.19",
+          "cited": "classic-of-poetry",
+          "quote": "‘此令兄弟，綽綽有裕；不令兄弟，交相為瘉",
+          "sourceWindow": "矣此令兄弟綽綽有裕不令兄弟交相為瘉",
+          "sourceAt": {
+            "section": "classic-of-poetry.223",
+            "passageId": "223.1"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "‘",
+      "sourceChar": "五",
+      "count": 1,
+      "witnesses": [
+        {
+          "host": "book-of-rites:30.24",
+          "cited": "zhouyi",
+          "quote": "‘東鄰殺牛，不如西鄰之禴祭，實受其福",
+          "sourceWindow": "五東鄰殺牛不如西鄰之禴祭實受其福",
+          "sourceAt": {
+            "section": "zhouyi.63",
+            "passageId": "63.3"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "‘",
+      "sourceChar": "錯",
+      "count": 1,
+      "witnesses": [
+        {
+          "host": "book-of-rites:30.25",
+          "cited": "classic-of-poetry",
+          "quote": "‘禮儀卒度，笑語卒獲",
+          "sourceWindow": "錯禮儀卒度笑語卒獲",
+          "sourceAt": {
+            "section": "classic-of-poetry.209",
+            "passageId": "209.3"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "‘",
+      "sourceChar": "怒",
+      "count": 1,
+      "witnesses": [
+        {
+          "host": "book-of-rites:30.30",
+          "cited": "classic-of-poetry",
+          "quote": "‘采葑采菲，無以下體，德音莫違，及爾同死",
+          "sourceWindow": "怒采葑采菲無以下體德音莫違及爾同死",
+          "sourceAt": {
+            "section": "classic-of-poetry.35",
+            "passageId": "35.1"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "梏",
+      "sourceChar": "覺",
+      "count": 1,
+      "witnesses": [
+        {
+          "host": "book-of-rites:33.6",
+          "cited": "classic-of-poetry",
+          "quote": "有梏德行，四國順之。",
+          "sourceWindow": "有覺德行四國順之",
+          "sourceAt": {
+            "section": "classic-of-poetry.256",
+            "passageId": "256.2"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "讎",
+      "sourceChar": "仇",
+      "count": 1,
+      "witnesses": [
+        {
+          "host": "book-of-rites:33.15",
+          "cited": "classic-of-poetry",
+          "quote": "彼求我則，如不我得：執我仇讎，亦不我力。",
+          "sourceWindow": "彼求我則如不我得執我仇仇亦不我力",
+          "sourceAt": {
+            "section": "classic-of-poetry.192",
+            "passageId": "192.7"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "也",
+      "sourceChar": "兮",
+      "count": 1,
+      "witnesses": [
+        {
+          "host": "book-of-rites:33.18",
+          "cited": "classic-of-poetry",
+          "quote": "淑人君子，其儀一也。",
+          "sourceWindow": "淑人君子其儀一兮",
+          "sourceAt": {
+            "section": "classic-of-poetry.152",
+            "passageId": "152.2"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "坤",
+      "sourceChar": "也",
+      "count": 1,
+      "witnesses": [
+        {
+          "host": "book-of-rites:39.3",
+          "cited": "zhouyi",
+          "quote": "坤六二之動，直以方也。",
+          "sourceWindow": "也六二之動直以方也",
+          "sourceAt": {
+            "section": "zhouyi.2",
+            "passageId": "2.5"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "尸",
+      "sourceChar": "鳲",
+      "count": 1,
+      "witnesses": [
+        {
+          "host": "xunzi:1.2",
+          "cited": "classic-of-poetry",
+          "quote": "尸鳩在桑，其子七兮。淑人君子，其儀一兮。其儀一兮，心如結兮。",
+          "sourceWindow": "鳲鳩在桑其子七兮淑人君子其儀一兮其儀一兮心如結兮",
+          "sourceAt": {
+            "section": "classic-of-poetry.152",
+            "passageId": "152.2"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "己",
+      "sourceChar": "已",
+      "count": 1,
+      "witnesses": [
+        {
+          "host": "xunzi:8.4",
+          "cited": "classic-of-poetry",
+          "quote": "民之無良，相怨一方。受爵不讓，至于己斯亡。",
+          "sourceWindow": "民之無良相怨一方受爵不讓至于已斯亡",
+          "sourceAt": {
+            "section": "classic-of-poetry.223",
+            "passageId": "223.1"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "羣",
+      "sourceChar": "群",
+      "count": 1,
+      "witnesses": [
+        {
+          "host": "xunzi:28.2",
+          "cited": "classic-of-poetry",
+          "quote": "憂心悄悄，慍於羣小。",
+          "sourceWindow": "憂心悄悄慍于群小",
+          "sourceAt": {
+            "section": "classic-of-poetry.26",
+            "passageId": "26.4"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "諮",
+      "sourceChar": "咨",
+      "count": 1,
+      "witnesses": [
+        {
+          "host": "mozi:12.13",
+          "cited": "classic-of-poetry",
+          "quote": "我馬維駱，六轡沃若。載馳載驅，周爰諮度。",
+          "sourceWindow": "我馬維駱六轡沃若載馳載驅周爰咨度",
+          "sourceAt": {
+            "section": "classic-of-poetry.163",
+            "passageId": "163.1"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "僔",
+      "sourceChar": "噂",
+      "count": 1,
+      "witnesses": [
+        {
+          "host": "zuozhuan:6.187",
+          "cited": "classic-of-poetry",
+          "quote": "下民之孽，匪降自天。僔沓背憎，職競由人。",
+          "sourceWindow": "下民之孽匪降自天噂沓背憎職競由人",
+          "sourceAt": {
+            "section": "classic-of-poetry.193",
+            "passageId": "193.7"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "己",
+      "sourceChar": "其",
+      "count": 1,
+      "witnesses": [
+        {
+          "host": "zuozhuan:6.332",
+          "cited": "classic-of-poetry",
+          "quote": "彼己之子，不稱其服。",
+          "sourceWindow": "彼其之子不稱其服",
+          "sourceAt": {
+            "section": "classic-of-poetry.151",
+            "passageId": "151.1"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "何",
+      "sourceChar": "胡",
+      "count": 1,
+      "witnesses": [
+        {
+          "host": "shiji:68.9",
+          "cited": "classic-of-poetry",
+          "quote": "相鼠有體，人而無禮，人而無禮，何不遄死。",
+          "sourceWindow": "相鼠有體人而無禮人而無禮胡不遄死",
+          "sourceAt": {
+            "section": "classic-of-poetry.52",
+            "passageId": "52.1"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "遏",
+      "sourceChar": "曷",
+      "count": 1,
+      "witnesses": [
+        {
+          "host": "hanshu:25.5",
+          "cited": "classic-of-poetry",
+          "quote": "武王載旆，有虔秉鉞，如火烈烈，則莫我敢遏。",
+          "sourceWindow": "武王載旆有虔秉鉞如火烈烈則莫我敢曷",
+          "sourceAt": {
+            "section": "classic-of-poetry.304",
+            "passageId": "304.6"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "德",
+      "sourceChar": "典",
+      "count": 1,
+      "witnesses": [
+        {
+          "host": "hanshu:25.11",
+          "cited": "classic-of-poetry",
+          "quote": "儀式刑文王之德，日靖四方。",
+          "sourceWindow": "儀式刑文王之典日靖四方",
+          "sourceAt": {
+            "section": "classic-of-poetry.272",
+            "passageId": "272.1"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "愷",
+      "sourceChar": "豈",
+      "count": 1,
+      "witnesses": [
+        {
+          "host": "hanshu:25.17",
+          "cited": "classic-of-poetry",
+          "quote": "愷弟君子，民之父母。",
+          "sourceWindow": "豈弟君子民之父母",
+          "sourceAt": {
+            "section": "classic-of-poetry.251",
+            "passageId": "251.1"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "羞",
+      "sourceChar": "敬",
+      "count": 1,
+      "witnesses": [
+        {
+          "host": "hanshu:39.190",
+          "cited": "book-of-documents",
+          "quote": "初一曰五行，次二曰羞用五事",
+          "sourceWindow": "初一曰五行次二曰敬用五事",
+          "sourceAt": {
+            "section": "book-of-documents.36",
+            "passageId": "36.4"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "聚",
+      "sourceChar": "造",
+      "count": 1,
+      "witnesses": [
+        {
+          "host": "hanshu:45.26",
+          "cited": "zhouyi",
+          "quote": "飛龍在天，大人聚也",
+          "sourceWindow": "飛龍在天大人造也",
+          "sourceAt": {
+            "section": "zhouyi.1",
+            "passageId": "1.5"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "唯",
+      "sourceChar": "維",
+      "count": 1,
+      "witnesses": [
+        {
+          "host": "hanshu:62.34",
+          "cited": "classic-of-poetry",
+          "quote": "我心憂傷，惄焉如擣；假寐永歎，唯憂用老；心之憂矣，疢如疾首",
+          "sourceWindow": "我心憂傷惄焉如擣假寐永歎維憂用老心之憂矣疢如疾首",
+          "sourceAt": {
+            "section": "classic-of-poetry.197",
+            "passageId": "197.2"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "旣",
+      "sourceChar": "既",
+      "count": 1,
+      "witnesses": [
+        {
+          "host": "hanshu:75.11",
+          "cited": "classic-of-poetry",
+          "quote": "王猶允塞，徐方旣來",
+          "sourceWindow": "王猶允塞徐方既來",
+          "sourceAt": {
+            "section": "classic-of-poetry.263",
+            "passageId": "263.6"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "鐘",
+      "sourceChar": "鍾",
+      "count": 1,
+      "witnesses": [
+        {
+          "host": "hanshu:77.25",
+          "cited": "classic-of-poetry",
+          "quote": "鼓鐘于宮，聲聞于外。",
+          "sourceWindow": "鼓鍾于宮聲聞于外",
+          "sourceAt": {
+            "section": "classic-of-poetry.229",
+            "passageId": "229.1"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "揭",
+      "sourceChar": "偈",
+      "count": 1,
+      "witnesses": [
+        {
+          "host": "hanshu:84.6",
+          "cited": "classic-of-poetry",
+          "quote": "匪風發兮，匪車揭兮，顧瞻周道，中心怛兮。",
+          "sourceWindow": "匪風發兮匪車偈兮顧瞻周道中心怛兮",
+          "sourceAt": {
+            "section": "classic-of-poetry.149",
+            "passageId": "149.1"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "禮",
+      "sourceChar": "履",
+      "count": 1,
+      "witnesses": [
+        {
+          "host": "hanshu:90.15",
+          "cited": "classic-of-poetry",
+          "quote": "率禮不越，遂視既發；相土烈烈，海外有截。",
+          "sourceWindow": "率履不越遂視既發相土烈烈海外有截",
+          "sourceAt": {
+            "section": "classic-of-poetry.304",
+            "passageId": "304.2"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "仇",
+      "sourceChar": "逑",
+      "count": 1,
+      "witnesses": [
+        {
+          "host": "hanshu:93.17",
+          "cited": "classic-of-poetry",
+          "quote": "窈窕淑女，君子好仇。",
+          "sourceWindow": "窈窕淑女君子好逑",
+          "sourceAt": {
+            "section": "classic-of-poetry.1",
+            "passageId": "1.1"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "悴",
+      "sourceChar": "瘁",
+      "count": 1,
+      "witnesses": [
+        {
+          "host": "hanshu:117.23",
+          "cited": "classic-of-poetry",
+          "quote": "人之云亡，邦國殄悴",
+          "sourceWindow": "人之云亡邦國殄瘁",
+          "sourceAt": {
+            "section": "classic-of-poetry.264",
+            "passageId": "264.5"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "谷",
+      "sourceChar": "穀",
+      "count": 1,
+      "witnesses": [
+        {
+          "host": "sanguozhi:34.3",
+          "cited": "classic-of-poetry",
+          "quote": "谷則異室，死則同穴。",
+          "sourceWindow": "穀則異室死則同穴",
+          "sourceAt": {
+            "section": "classic-of-poetry.73",
+            "passageId": "73.1"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "︰",
+      "sourceChar": "茅",
+      "count": 1,
+      "witnesses": [
+        {
+          "host": "sanguozhi:38.24",
+          "cited": "classic-of-poetry",
+          "quote": "︰『天步艱難，之子不猶",
+          "sourceWindow": "茅天步艱難之子不猶",
+          "sourceAt": {
+            "section": "classic-of-poetry.229",
+            "passageId": "229.1"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "‘",
+      "sourceChar": "重",
+      "count": 1,
+      "witnesses": [
+        {
+          "host": "sanguozhi:58.25",
+          "cited": "book-of-documents",
+          "quote": "‘與其殺不辜，寧失不經",
+          "sourceWindow": "重與其殺不辜寧失不經",
+          "sourceAt": {
+            "section": "book-of-documents.3",
+            "passageId": "3.2"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "已",
+      "sourceChar": "巳",
+      "count": 1,
+      "witnesses": [
+        {
+          "host": "wenxian-tongkao:71.53",
+          "cited": "book-of-documents",
+          "quote": "'越三日丁已，用牲於郊，牛二",
+          "sourceWindow": "越三日丁巳用牲于郊牛二",
+          "sourceAt": {
+            "section": "book-of-documents.45",
+            "passageId": "45.3"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "復",
+      "sourceChar": "其",
+      "count": 1,
+      "witnesses": [
+        {
+          "host": "wenxian-tongkao:72.58",
+          "cited": "zhouyi",
+          "quote": "'《復》，見天地之心乎",
+          "sourceWindow": "其見天地之心乎",
+          "sourceAt": {
+            "section": "zhouyi.24",
+            "passageId": "24.4"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "泮",
+      "sourceChar": "頖",
+      "count": 1,
+      "witnesses": [
+        {
+          "host": "wenxian-tongkao:73.46",
+          "cited": "book-of-rites",
+          "quote": "'魯人將有事於上帝，必先有事於泮宮",
+          "sourceWindow": "魯人將有事于上帝必先有事于頖宮",
+          "sourceAt": {
+            "section": "book-of-rites.10",
+            "passageId": "10.22"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "祚",
+      "sourceChar": "阼",
+      "count": 1,
+      "witnesses": [
+        {
+          "host": "wenxian-tongkao:82.64",
+          "cited": "book-of-rites",
+          "quote": "'踐祚臨祭祀，內事曰孝王某，外事曰嗣王某",
+          "sourceWindow": "踐阼臨祭祀內事曰孝王某外事曰嗣王某",
+          "sourceAt": {
+            "section": "book-of-rites.2",
+            "passageId": "2.20"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "醜",
+      "sourceChar": "丑",
+      "count": 1,
+      "witnesses": [
+        {
+          "host": "子不語:6.43",
+          "cited": "zhouyi",
+          "quote": "窺觀女貞，亦可醜也。",
+          "sourceWindow": "窺觀女貞亦可丑也",
+          "sourceAt": {
+            "section": "zhouyi.20",
+            "passageId": "20.5"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "射",
+      "sourceChar": "斁",
+      "count": 1,
+      "witnesses": [
+        {
+          "host": "四書章句集註:4.34",
+          "cited": "classic-of-poetry",
+          "quote": "在彼無惡，在此無射；庶幾夙夜，以永終譽！",
+          "sourceWindow": "在彼無惡在此無斁庶幾夙夜以永終譽",
+          "sourceAt": {
+            "section": "classic-of-poetry.278",
+            "passageId": "278.1"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "奏",
+      "sourceChar": "鬷",
+      "count": 1,
+      "witnesses": [
+        {
+          "host": "四書章句集註:4.38",
+          "cited": "classic-of-poetry",
+          "quote": "奏假無言，時靡有爭。",
+          "sourceWindow": "鬷假無言時靡有爭",
+          "sourceAt": {
+            "section": "classic-of-poetry.302",
+            "passageId": "302.2"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "室",
+      "sourceChar": "廟",
+      "count": 1,
+      "witnesses": [
+        {
+          "host": "文選:1.10",
+          "cited": "爾雅",
+          "quote": "室無東西廂，有室曰寢",
+          "sourceWindow": "廟無東西廂有室曰寢",
+          "sourceAt": {
+            "section": "爾雅.5",
+            "passageId": "5.18"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "蓺",
+      "sourceChar": "藝",
+      "count": 1,
+      "witnesses": [
+        {
+          "host": "文選:1.10",
+          "cited": "周禮",
+          "quote": "《六蓺》：禮、樂、射、御、書、數",
+          "sourceWindow": "六藝禮樂射御書數",
+          "sourceAt": {
+            "section": "周禮.2",
+            "passageId": "2.76"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "猊",
+      "sourceChar": "麑",
+      "count": 1,
+      "witnesses": [
+        {
+          "host": "文選:1.11",
+          "cited": "爾雅",
+          "quote": "狻猊，如虦貓，食虎豹",
+          "sourceWindow": "狻麑如虦貓食虎豹",
+          "sourceAt": {
+            "section": "爾雅.18",
+            "passageId": "18.26"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "人",
+      "sourceChar": "民",
+      "count": 1,
+      "witnesses": [
+        {
+          "host": "文選:1.15",
+          "cited": "國語",
+          "quote": "古曰在昔，昔曰先人",
+          "sourceWindow": "古曰在昔昔曰先民",
+          "sourceAt": {
+            "section": "國語.6",
+            "passageId": "6.26"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "温",
+      "sourceChar": "溫",
+      "count": 1,
+      "witnesses": [
+        {
+          "host": "文選:1.18",
+          "cited": "analects",
+          "quote": "温故而知新，可以爲師矣",
+          "sourceWindow": "溫故而知新可以爲師矣",
+          "sourceAt": {
+            "section": "analects.2",
+            "passageId": "2.11"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "暮",
+      "sourceChar": "莫",
+      "count": 1,
+      "witnesses": [
+        {
+          "host": "文選:25.71",
+          "cited": "analects",
+          "quote": "暮春者，春服既成",
+          "sourceWindow": "莫春者春服既成",
+          "sourceAt": {
+            "section": "analects.11",
+            "passageId": "11.29"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "甯",
+      "sourceChar": "寧",
+      "count": 1,
+      "witnesses": [
+        {
+          "host": "古文觀止:11.68",
+          "cited": "book-of-documents",
+          "quote": "罪疑惟輕，功疑惟重。與其殺不辜，甯失不經。",
+          "sourceWindow": "罪疑惟輕功疑惟重與其殺不辜寧失不經",
+          "sourceAt": {
+            "section": "book-of-documents.3",
+            "passageId": "3.2"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "王",
+      "sourceChar": "享",
+      "count": 1,
+      "witnesses": [
+        {
+          "host": "國語:2.3",
+          "cited": "classic-of-poetry",
+          "quote": "自彼氐、羌，莫敢不來王。",
+          "sourceWindow": "自彼氐羌莫敢不來享",
+          "sourceAt": {
+            "section": "classic-of-poetry.305",
+            "passageId": "305.2"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "也",
+      "sourceChar": "邑",
+      "count": 1,
+      "witnesses": [
+        {
+          "host": "國語:2.6",
+          "cited": "zhouyi",
+          "quote": "王用三驅，失前禽也。",
+          "sourceWindow": "王用三驅失前禽邑",
+          "sourceAt": {
+            "section": "zhouyi.8",
+            "passageId": "8.3"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "僚",
+      "sourceChar": "寮",
+      "count": 1,
+      "witnesses": [
+        {
+          "host": "國語:6.26",
+          "cited": "classic-of-poetry",
+          "quote": "我雖異事，及爾同僚。",
+          "sourceWindow": "我雖異事及爾同寮",
+          "sourceAt": {
+            "section": "classic-of-poetry.254",
+            "passageId": "254.3"
+          }
+        }
+      ]
+    },
+    {
+      "hostChar": "恫",
+      "sourceChar": "怨",
+      "count": 1,
+      "witnesses": [
+        {
+          "host": "國語:11.39",
+          "cited": "classic-of-poetry",
+          "quote": "惠于宗公，神罔時恫。",
+          "sourceWindow": "惠于宗公神罔時怨",
+          "sourceAt": {
+            "section": "classic-of-poetry.240",
+            "passageId": "240.1"
+          }
+        }
+      ]
+    }
+  ]
+}

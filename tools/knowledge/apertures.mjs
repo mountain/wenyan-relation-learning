@@ -113,8 +113,14 @@ const APERTURES = [
     id: 'A7', name: 'Variant character forms',
     what: 'The site uses non-standard forms in page names (女曰鷄鳴 for 雞鳴, 鳬鷖 for 鳧鷖), so one word '
       + 'appears in two forms across the corpus.',
-    leaks: 'A search or a co-occurrence count for the conventional form misses those pages.',
-    state: 'open, NOT automatically measured',
+    leaks: 'A search or a co-occurrence count for the conventional form misses those pages, and a quotation '
+      + 'that differs by one character fails to match. Measured: of 435 citations not found in their cited work, '
+      + '99 (23%) are ONE character away from text that does occur there, and the top candidates are the '
+      + 'well-attested pairs (惟/維, 毋/無, 雝/雍, 昭/炤, 溥/普, 為/爲, 緜/緡). '
+      + 'tools/intertext/variant-candidates.mjs proposes them with their witnesses; admission stays manual, '
+      + 'because the same signal also produces non-variants — 醤→烕 is one, and it is recorded as the '
+      + 'counter-example that justifies proposing rather than admitting.',
+    state: 'open; discovery is now measured, admission is manual',
   },
   {
     id: 'A8', name: 'A pin on a derived file drifts',
@@ -160,7 +166,9 @@ const MEASURED = {
   A4: dupTitles.length ? dupTitles.map((x) => `${x.id}: ${x.d.join(', ')}`).join('; ') : 'none',
   A5: unitViolations,
   A6: `${untagged.length} work(s) of ${works.length}: ${untagged.join(', ')}`,
-  A7: 'unmeasured — no scanner distinguishes a variant form from a different character',
+  A7: 'discovery measured: 99 of 435 unmatched citations explained by ONE character; 70 candidate pairs '
+    + 'proposed with witnesses (knowledge/intertext/variant-candidates.json). ADMISSION still manual, '
+    + 'because one character apart is equally consistent with a genuine difference between recensions.',
   A8: drift,
 };
 
