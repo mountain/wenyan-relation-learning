@@ -4,7 +4,7 @@
   "purpose": "Bounded documentary intake of the current-source relation replay before any native Adva adapter is selected.",
   "input": {
     "path": "experiments/relations/evidence.replay-2026-10-09.json",
-    "sha256": "6e8af651e870249e94677384dfbcec2af765f45e212f2114474838d56cf4cdcb",
+    "sha256": "14f48e06e20632412382823a583d5f777f0df650999e4016f89cd899a3dcad19",
     "max_bytes": 262144,
     "schema": "wenyan.relation-replay-audit.v1",
     "repository": "mountain/wenyan-relation-learning",
