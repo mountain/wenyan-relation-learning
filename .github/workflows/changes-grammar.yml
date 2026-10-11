@@ -19,8 +19,8 @@ jobs:
       - run: /tmp/wenyan-typecheck/node_modules/.bin/tsc --noEmit --target ES5 --module commonjs --lib ES2020,DOM src/inscription/changes.ts src/inscription/syllogism.ts src/inscription/pipeline.ts
       - run: node experiments/relations/run.cjs
       - run: node tools/relations/check-receiving-contract.mjs --selftest
+      - run: node tools/relations/check-adva-interface-selection.mjs --selftest
       - run: node tools/knowledge/selftest.mjs
       - run: node tools/grammar/selftest.mjs
       - run: node tools/dialogue/selftest.mjs
       - run: node tools/semantics/selftest.mjs
-
