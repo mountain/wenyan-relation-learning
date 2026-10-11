@@ -77,6 +77,7 @@ function validate(contract, evidence, evidenceBytes) {
     )
   );
 
+  assert.equal(contract.authority.accepted_status, "DocumentaryAccepted");
   assert.equal(contract.authority.scope, "external-evidence-only");
   assert.equal(contract.authority.native_admission, false);
   assert.equal(contract.authority.may_select_or_invoke_adva_learner, false);
@@ -84,7 +85,7 @@ function validate(contract, evidence, evidenceBytes) {
 
   return {
     schema: "wenyan.relation-evidence-receipt.v1",
-    status: contract.authority.accepted_status,
+    status: "DocumentaryAccepted",
     contract_sha256: sha256(readFileSync(contractPath)),
     evidence_sha256: sha256(evidenceBytes),
     source_commit: evidence.source.commit,
@@ -133,6 +134,23 @@ if (process.argv.includes("--selftest")) {
   });
   expectReject(contract, evidence, evidenceBytes, (item) => {
     item.authority.native_admission = true;
+  });
+  for (const status of ["NativeAccepted", "Accepted", "", null, undefined]) {
+    expectReject(contract, evidence, evidenceBytes, (item) => {
+      item.authority.accepted_status = status;
+    });
+  }
+  for (const field of [
+    "scope",
+    "may_select_or_invoke_adva_learner",
+    "may_promote_semantic_claims"
+  ]) {
+    expectReject(contract, evidence, evidenceBytes, (item) => {
+      item.authority[field] = field === "scope" ? "native" : true;
+    });
+  }
+  expectReject(contract, evidence, evidenceBytes, (_contract, item) => {
+    item.source.gitBlobShas["src/inscription/relations.ts"] = "0".repeat(40);
   });
   const tamperedBytes = Buffer.from(
     evidenceBytes.toString("utf8").replace(
