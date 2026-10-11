@@ -1,0 +1,61 @@
+{
+  "schema": "wenyan.relation-evidence-receiving-contract.v1",
+  "revision": 1,
+  "purpose": "Bounded documentary intake of the current-source relation replay before any native Adva adapter is selected.",
+  "input": {
+    "path": "experiments/relations/evidence.replay-2026-10-09.json",
+    "sha256": "14f48e06e20632412382823a583d5f777f0df650999e4016f89cd899a3dcad19",
+    "max_bytes": 262144,
+    "schema": "wenyan.relation-replay-audit.v1",
+    "repository": "mountain/wenyan-relation-learning",
+    "source_commit": "cfb6e4dc18425312447b01efd75b646d2ab1473e"
+  },
+  "required_source_blobs": {
+    "src/inscription/analysis.ts": "4110fa17c93629ec34c0ef90408f2c0a229db3ca",
+    "src/inscription/reverse.ts": "d67b9c6220e3eb66ea36e0ccf75c243715f92c53",
+    "src/inscription/pipeline.ts": "3ffb4608f7b66280c5d029b61da82f30e5c80f88",
+    "src/inscription/relations.ts": "27dcef4f122b397849b771b098f4f0f714b5178a",
+    "src/inscription/changes.ts": "9b6e4917c97488f7a76c2ee6c761bbe5596cdde5",
+    "src/inscription/syllogism.ts": "4ab86ea3889581d987b70d87e368277e6268a852",
+    "experiments/relations/run.cjs": "5f8711b625ba05f237544f9ea658289918ff10fc",
+    "experiments/relations/evidence.json": "2a2a6949c0056e6076ff06849fa00fef7308d119"
+  },
+  "required_result": {
+    "status": "PassedFiniteScope",
+    "training": 3,
+    "held_out_entities": 9,
+    "positive_pairs": 9,
+    "role_reversals": 9,
+    "legacy_hypothesis_collisions": 9,
+    "controls": [
+      "zero-fuel",
+      "partial-fuel",
+      "conflicting-label",
+      "unseen-construction",
+      "negation",
+      "out-of-grammar",
+      "stale-version",
+      "duplicate-evidence-id",
+      "nonfinite-fuel",
+      "inconsistent-replay",
+      "existing-ack-gate",
+      "distinct-occurrences"
+    ]
+  },
+  "authority": {
+    "accepted_status": "DocumentaryAccepted",
+    "scope": "external-evidence-only",
+    "native_admission": false,
+    "may_select_or_invoke_adva_learner": false,
+    "may_promote_semantic_claims": false
+  },
+  "policy_reference": "mountain/adva@79f6353511d736ae743b109f1c573b652eff170a/docs/research/0131-finite-learner-judgment-and-reuse.md",
+  "nonclaims": [
+    "general Wenyan understanding",
+    "discovery of synonymy",
+    "six-germ or six-shu semantic identity",
+    "64 syllogistic moods are 64 tautologies",
+    "native Adva learning or semantic admission",
+    "upstream wenyan-lang acceptance"
+  ]
+}
