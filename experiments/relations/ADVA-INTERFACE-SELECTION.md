@@ -33,7 +33,8 @@ node tools/relations/check-adva-interface-selection.mjs --selftest
 ```
 
 检查器会确认两个候选均不合格、没有选择或调用、接收收据没有被提升为原生 admission，
-并执行 11 个负对照。
+并执行 20 个负对照。除拒绝候选提权与来源 blob 漂移外，还固定来源路径、完整阻塞理由、
+盘点范围、选择理由及下一道闸门，防止在字段数量不变时悄悄改写审计语义。
 
 ## 解除阻塞的最小行动
 
