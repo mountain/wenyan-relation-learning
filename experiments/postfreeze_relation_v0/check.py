@@ -20,6 +20,16 @@ def parse(text):
     return endings.index(tails),slots
 
 def verify(req,out):
+    if set(req)!={'schema','task','observer','training','queries','fuel'}:raise ValueError('request fields')
+    if req['schema']!='wenyan.external-role-inference.v0.1' or req['task']!='three-controlled-transfer-constructions-v0' or req['observer']!='ordered-agent-recipient-theme-v0':raise ValueError('request identity')
+    if type(req['fuel']) is not int or not 0<=req['fuel']<=18:raise ValueError('fuel')
+    if not isinstance(req['training'],list) or len(req['training'])>32:raise ValueError('training bound')
+    if not isinstance(req['queries'],list) or len(req['queries'])>64 or any(not isinstance(x,str) or len(x)>256 for x in req['queries']):raise ValueError('query bound')
+    ids=set()
+    for row in req['training']:
+        if set(row)!={'id','text','roles'} or not isinstance(row['id'],str) or row['id'] in ids or parse(row['text']) is None:raise ValueError('training schema')
+        ids.add(row['id'])
+        if not isinstance(row['roles'],list) or len(row['roles'])!=3 or any(not isinstance(v,str) or not 0<len(v)<=32 for v in row['roles']):raise ValueError('supervision schema')
     if set(out)!={'schema','task','observer','training','answers','native_admission','native_state_write'}:raise ValueError('output fields')
     for name in ['schema','task','observer']:
         if out[name]!=req[name]:raise ValueError('identity drift')
@@ -41,6 +51,6 @@ def verify(req,out):
         candidates=r['state'][i]
         if len(candidates)!=1:answers.append(dict(status='Unknown',reason='ambiguous'));continue
         # Role-wise lookup is independent of the worker's comprehension.
-        o=candidates[0];answers.append(dict(status='KnownFiniteGrammar',roles=[slots[o[0]],slots[o[1]],slots[o[2]]))
+        o=candidates[0];answers.append(dict(status='KnownFiniteGrammar',roles=[slots[o[0]],slots[o[1]],slots[o[2]]]))
     if canonical(out['answers'])!=canonical(answers):raise ValueError('inference mismatch')
     return out

@@ -52,6 +52,11 @@ def campaign():
         try:verify(req,bad)
         except (ValueError,AssertionError):negative.append(name)
         else:raise ValueError('negative accepted '+name)
+    for name,mutate in [('request-task',lambda q:q.update(task='other')),('holdout-label-injection',lambda q:q.update(expected=['fixed'])),('fuel-bool',lambda q:q.update(fuel=True)),('query-limit',lambda q:q.update(queries=['x']*65))]:
+        bad_req=copy.deepcopy(req);mutate(bad_req)
+        try:verify(bad_req,out)
+        except (ValueError,AssertionError):negative.append(name)
+        else:raise ValueError('request negative accepted '+name)
     # Demonstrate the old type-equality issue without altering frozen source.
     from check import old
     bad=copy.deepcopy(out['training']);bad['state'][0][0][0]=False
