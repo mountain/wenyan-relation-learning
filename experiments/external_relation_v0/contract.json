@@ -1,0 +1,27 @@
+{
+  "version": "external-wenyan-role-permutations-v0",
+  "task": "three-controlled-transfer-constructions-v0",
+  "observer": "ordered-agent-recipient-theme-v0",
+  "supervision": "project-authored synthetic role annotations; not historical linguistic truth",
+  "budget": {
+    "candidate_checks": 18,
+    "wall_seconds": 5,
+    "memory_bytes": 134217728,
+    "evidence_bytes": 65536
+  },
+  "authority": {
+    "external_invocation": true,
+    "native_admission": false,
+    "native_state_write": false
+  },
+  "split": {
+    "train.json": "36aa3789a6a3d1769d70f3ebce63d8b4a2d57730be45708d37f3470aa85f583d",
+    "holdout.json": "fb8720be754a3451722c95f58ff142bad6403224a448f9e6a1e6789e0aa96308"
+  },
+  "source_commit": "86c5295d01d126dec02f12f009f4cf3fbab0db17",
+  "receipt_files": {
+    "experiments/relations/receiving-contract-v0.1.json": "f9c3094b740a529ea6544ee0171c9bf00a8d2853b891a94cbed70e7c452385f5",
+    "experiments/relations/evidence.replay-2026-10-09.json": "14f48e06e20632412382823a583d5f777f0df650999e4016f89cd899a3dcad19",
+    "tools/relations/check-receiving-contract.mjs": "64091c5d98d99efcfc965cc0b0209cea5f9fc7ca349142c29795ccea6afa4877"
+  }
+}
