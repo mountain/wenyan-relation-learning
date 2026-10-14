@@ -1,0 +1,103 @@
+{
+  "schema": "wenyan.relation-learning.adva-interface-selection.v0",
+  "date": "2026-10-11",
+  "status": "NoEligibleInterfaceInBoundedInventory",
+  "scope": {
+    "repository": "mountain/adva",
+    "branch": "main",
+    "commit": "1b9bd090b2c4710916b6a0ccca0ad88fb7d323bd",
+    "tree": "bc5774f1e810bf95a66cfa09ffc89bd5a8a91831",
+    "method": "Current-main code search for learner and relation candidates, followed by source inspection of the two closest interfaces",
+    "exhaustive_history_search": false
+  },
+  "input_receipt": {
+    "repository": "mountain/wenyan-relation-learning",
+    "commit": "86c5295d01d126dec02f12f009f4cf3fbab0db17",
+    "contract_path": "experiments/relations/receiving-contract-v0.1.json",
+    "contract_git_blob": "97950fffbddd19de987f13b9c97f4b1e680aeccd",
+    "evidence_path": "experiments/relations/evidence.replay-2026-10-09.json",
+    "evidence_git_blob": "e52d65dd961dc476b096b712a450bd0617b180b1",
+    "checker_path": "tools/relations/check-receiving-contract.mjs",
+    "checker_git_blob": "367baf1a6729c6220c0522c3a61135c8d1826c5b",
+    "required_status": "DocumentaryAccepted"
+  },
+  "required_interface_fields": [
+    "exact learner implementation and version",
+    "task and observer identity",
+    "supervision source and train/holdout isolation",
+    "work, time and evidence budgets",
+    "Accepted, Refuted, Unknown and NotRun transitions",
+    "failure and partial-evidence retention",
+    "independent output verifier",
+    "receiving-side invocation and update authority"
+  ],
+  "candidates": [
+    {
+      "id": "adva-external-f7-quadratic-v0",
+      "classification": "ExecutableExternalCalibration",
+      "implementation": {
+        "path": "experiments/finite_learner/calibration.py",
+        "git_blob": "b59d9d9d26fd0a3a64e9516b61bdba24b512384e",
+        "declared_version": "external-f7-quadratic-v0"
+      },
+      "boundary_note": {
+        "path": "docs/research/0131-finite-learner-judgment-and-reuse.md",
+        "git_blob": "cdea6309c7004822f7c5f28ccdb7c5a26ba89bfe"
+      },
+      "eligible": false,
+      "blockers": [
+        "fixed F7 quadratic grammar rather than the Wenyan transfer-relation grammar",
+        "accepts arithmetic task and trial records, not DocumentaryAccepted relation receipts",
+        "declares external finite model with no native Adva types, identities or commands",
+        "supplied substitution and fixed-family reuse do not authorize cross-task adaptation",
+        "no receiving-side authority for this evidence or state update"
+      ]
+    },
+    {
+      "id": "adva-six-relation-queries-arrangement-v0",
+      "classification": "RelatedPreparationOnlyProposal",
+      "plan": {
+        "path": "experiments/six_relation_queries/plan.json",
+        "git_blob": "f1f29b8795e3e3624e02f99eb4b041aa05c2ef6e",
+        "status": "PreparationOnly",
+        "frozen": false,
+        "implemented": false,
+        "run_ready": false,
+        "campaign_runs": 0,
+        "g0": "Open",
+        "experiment_statuses": ["NotRun", "NotRun", "NotRun", "NotRun", "NotRun", "NotRun"]
+      },
+      "reconciliation": {
+        "path": "experiments/six_relation_queries/SOURCE_RECONCILIATION.md",
+        "git_blob": "d4706eb919cee4e199fde0a763dcc9472357c481"
+      },
+      "eligible": false,
+      "blockers": [
+        "implementation contract is not frozen",
+        "relation, checker and supervisor are not implemented",
+        "task split, features, algorithms, accounting and environment hashes remain unset",
+        "all six experiments are NotRun",
+        "external F5 relation-query task is not an adapter for the Wenyan receipt",
+        "no native admission or receiving-side invocation authority"
+      ]
+    }
+  ],
+  "semantic_scope": {
+    "path": "docs/SEMANTIC_SCOPE.md",
+    "git_blob": "1d255f47cc9c9c68206cb818ed74d387e537a5fc",
+    "current_boundary": "No stable learner or general convergence detector is installed"
+  },
+  "selection": {
+    "selected_candidate": null,
+    "invocation_status": "NotRun",
+    "write_authority": false,
+    "native_admission": false,
+    "reason": "Neither inspected candidate satisfies the required interface and authority fields"
+  },
+  "next_gate": {
+    "status": "Blocked",
+    "minimum_action": "A receiving-side maintainer must select or implement one exact learner interface and freeze every required interface field before any invocation",
+    "may_reuse_documentary_receipt_as_input_precondition": true,
+    "may_treat_receipt_as_native_admission": false
+  }
+}

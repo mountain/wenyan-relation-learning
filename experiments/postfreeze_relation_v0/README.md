@@ -98,3 +98,70 @@ family. A new verb currently needs a new adapter/profile, not a native learner c
 Native execution still requires the receiving-side types, candidate operations,
 evidence-ledger transitions, independent verifier and separate invocation/update
 capabilities enumerated in v0. PR #6 remains the preserved baseline.
+
+## Integration audit and strict receiving entry (2026-10-14)
+
+`strict_check.verify(request, decoded_output)` is the current untrusted JSON
+receiving entry. It checks exact dict/list/string/integer/boolean types and field
+sets at every level, bounded JSON depth/nodes/bytes, list shapes and role
+permutations, then reconstructs the entire training transcript and inference.
+It imports no worker or learner. The profile parser is reused from the frozen
+v0.1 checker; it is independent of the producer's regular expressions, but this
+reuse is not a separately authored third-party grammar specification. Explicit
+verdict comparisons remain active under Python `-O`. Frozen `verify.py` and
+`check.py` remain historical replay components, not standalone receiving gates.
+The existing two campaign outputs and their source hashes are untouched.
+
+`strict_selftest.py` runs the actual worker and independently checks the complete
+2 entity triples × 6 permutations × 3 constructions and all eight boundary cases.
+It verifies entity separation, train-only learner calls, 22 valid transcripts
+(including every fuel value 0–18, ambiguity and contradiction), 5,700 rejected type
+or value changes and 336 rejected structure changes. Both normal Python and `-O`
+execute the same checks in Node 24/26 CI. The counters enumerate deterministic
+mutations, not statistical confidence or exhaustive coverage of all possible JSON.
+Four legacy forgeries are reproduced: bool ordinal, float ordinal, float count,
+and integer match flag. None passes the new receiver. Parsing boundary probes
+compare the distinct worker/checker implementations on quotes, line breaks,
+entity lengths and terminal punctuation. The train-only interface audit is not
+an adversarial filesystem sandbox.
+
+The main/#6 conflict was exclusively in the CI workflow. Integration keeps the
+main interface-selection selftest and both experiment replays. #6 is integrated
+first, preserving its baseline identity; #7 is then retargeted to main and checked
+against the merged tree. No dependency lock, native receiving policy or historical
+DocumentaryAccepted receipt is changed.
+
+### Mathematical scope
+
+Within a predeclared three-slot construction and its six permutation hypotheses,
+a labelled example with three distinct entities uniquely determines the role map.
+The checker verifies exhaustive elimination and charged work. Repeated entities
+can leave multiple hypotheses; coherent incorrect supervision can identify an
+incorrect map. The 36 cases cover the stated finite factorial design, not arbitrary
+sentences. Eight Unknown cases test refusal at the declared parsing boundary,
+not discovery of new grammar. No general language or native learner theorem follows.
+
+### Minimum next independent supervision / blind-test gate
+
+1. Freeze the exact learner, adapter, checker, hypothesis family, metrics, budgets
+   and Unknown policy by full commit and source digests **before** label authoring.
+2. A person or genuinely separate evaluator authors supervision under the explicit
+   agent/recipient/theme observer. Record author, sources, licensing, ambiguities
+   and disagreement resolution; keep DocumentaryAccepted provenance separate from
+   correctness of labels. Synthetic templates alone remain synthetic supervision.
+3. A separate custodian authors a new cohort, with new entities and role permutations,
+   plus agreed ambiguous and outside-profile inputs. Commit the cohort/labels in a
+   private store and publish its digest before evaluation. Neither implementation
+   author nor learner may inspect test labels; the implementation author also must
+   not tune to test queries. A new construction requires a separately frozen profile.
+4. Run in a clean container/process with only frozen program, approved training and
+   query texts mounted: no labels, repository checkout containing labels, network,
+   or previous model. Retain exact input/output digests, resource limits and failures.
+5. Lock producer outputs before the custodian reveals labels. An independent checker
+   verifies execution; the custodian scores correctness, Unknown/coverage and all
+   declared controls, without retries or post-result edits. Any changed implementation
+   needs a fresh unseen cohort. Record the evaluator's identity and review separately.
+
+This can establish an independently supervised, prospectively blinded **external
+finite** result. Native task/observer admission, invocation and state update still
+require all seven receiving-side gates listed in v0; these tests grant none of them.
