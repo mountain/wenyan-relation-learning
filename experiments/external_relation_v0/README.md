@@ -116,3 +116,12 @@ shortcut, establish broad generalization, or measure learning efficiency statist
 No external correctness count closes these gates. The next useful experiment is to freeze
 this learner before independently authoring new constructions/tasks, and then measure
 which unseen variations require new parsing rules or a richer hypothesis family.
+
+## Receiving-boundary audit (2026-10-14)
+
+The frozen `verify.py` compares Python structures and accepts boolean or float
+substitutions for integer ordinals/counts (`False == 0`, `1.0 == 1`). Preserve it
+only for historical replay; it is not a safe untrusted-input receiver. PR #7 adds
+a strict versioned receiver and regression controls without changing these seven
+frozen files. Accepted still means finite computation against supplied labels,
+not independently correct supervision or native authority.

@@ -21,8 +21,8 @@ jobs:
       - run: node tools/relations/check-receiving-contract.mjs --selftest
       - run: python3 experiments/external_relation_v0/run.py > /tmp/external-relation-evidence.json
       - run: diff experiments/external_relation_v0/evidence.json /tmp/external-relation-evidence.json
+      - run: node tools/relations/check-adva-interface-selection.mjs --selftest
       - run: node tools/knowledge/selftest.mjs
       - run: node tools/grammar/selftest.mjs
       - run: node tools/dialogue/selftest.mjs
       - run: node tools/semantics/selftest.mjs
-
