@@ -1,0 +1,1019 @@
+{
+  "version": "external-wenyan-role-permutations-v0",
+  "task": "three-controlled-transfer-constructions-v0",
+  "observer": "ordered-agent-recipient-theme-v0",
+  "contract_sha256": "eac7314a6592ba14b2aedd1fc62114c3b8793ed610a89cd3f1d1c838b208ee2d",
+  "receipt": {
+    "schema": "wenyan.relation-evidence-receipt.v1",
+    "status": "DocumentaryAccepted",
+    "contract_sha256": "f9c3094b740a529ea6544ee0171c9bf00a8d2853b891a94cbed70e7c452385f5",
+    "evidence_sha256": "14f48e06e20632412382823a583d5f777f0df650999e4016f89cd899a3dcad19",
+    "source_commit": "cfb6e4dc18425312447b01efd75b646d2ab1473e",
+    "result": {
+      "training": 3,
+      "positive_pairs": 9,
+      "role_reversals": 9,
+      "controls": 12
+    },
+    "authority": {
+      "scope": "external-evidence-only",
+      "native_admission": false
+    }
+  },
+  "source_sha256": {
+    "learner.py": "7c28827844f20972b136f47b00033f6b41f2da986410e37c4f4d4e96678b4086",
+    "verify.py": "d6094dbdfce036ddbe00d3374ced8997ee3b6c6a451fefea3f6db760a44762af",
+    "run.py": "5d0cb41232a854400d690064576907f1074467678b52b9dd1c2af36c539df3e4"
+  },
+  "status": "ExternalFiniteCalibrationAccepted",
+  "native_admission": false,
+  "native_state_write": false,
+  "holdout_correct": 18,
+  "holdout_total": 18,
+  "no_training_correct": 0,
+  "swapped_supervision_correct": 0,
+  "fixed_identity_rule_correct": 6,
+  "lookup_correct": 0,
+  "negative_output_controls": 4,
+  "runs": {
+    "learned": {
+      "status": "Accepted",
+      "state": [
+        [
+          [
+            0,
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            0,
+            2,
+            1
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            2
+          ]
+        ]
+      ],
+      "trace": [
+        {
+          "id": "train-0",
+          "order": [
+            0,
+            1,
+            2
+          ],
+          "actual": [
+            "甲",
+            "乙",
+            "书"
+          ],
+          "matches": true
+        },
+        {
+          "id": "train-0",
+          "order": [
+            0,
+            2,
+            1
+          ],
+          "actual": [
+            "甲",
+            "书",
+            "乙"
+          ],
+          "matches": false
+        },
+        {
+          "id": "train-0",
+          "order": [
+            1,
+            0,
+            2
+          ],
+          "actual": [
+            "乙",
+            "甲",
+            "书"
+          ],
+          "matches": false
+        },
+        {
+          "id": "train-0",
+          "order": [
+            1,
+            2,
+            0
+          ],
+          "actual": [
+            "乙",
+            "书",
+            "甲"
+          ],
+          "matches": false
+        },
+        {
+          "id": "train-0",
+          "order": [
+            2,
+            0,
+            1
+          ],
+          "actual": [
+            "书",
+            "甲",
+            "乙"
+          ],
+          "matches": false
+        },
+        {
+          "id": "train-0",
+          "order": [
+            2,
+            1,
+            0
+          ],
+          "actual": [
+            "书",
+            "乙",
+            "甲"
+          ],
+          "matches": false
+        },
+        {
+          "id": "train-1",
+          "order": [
+            0,
+            1,
+            2
+          ],
+          "actual": [
+            "甲",
+            "书",
+            "乙"
+          ],
+          "matches": false
+        },
+        {
+          "id": "train-1",
+          "order": [
+            0,
+            2,
+            1
+          ],
+          "actual": [
+            "甲",
+            "乙",
+            "书"
+          ],
+          "matches": true
+        },
+        {
+          "id": "train-1",
+          "order": [
+            1,
+            0,
+            2
+          ],
+          "actual": [
+            "书",
+            "甲",
+            "乙"
+          ],
+          "matches": false
+        },
+        {
+          "id": "train-1",
+          "order": [
+            1,
+            2,
+            0
+          ],
+          "actual": [
+            "书",
+            "乙",
+            "甲"
+          ],
+          "matches": false
+        },
+        {
+          "id": "train-1",
+          "order": [
+            2,
+            0,
+            1
+          ],
+          "actual": [
+            "乙",
+            "甲",
+            "书"
+          ],
+          "matches": false
+        },
+        {
+          "id": "train-1",
+          "order": [
+            2,
+            1,
+            0
+          ],
+          "actual": [
+            "乙",
+            "书",
+            "甲"
+          ],
+          "matches": false
+        },
+        {
+          "id": "train-2",
+          "order": [
+            0,
+            1,
+            2
+          ],
+          "actual": [
+            "乙",
+            "甲",
+            "书"
+          ],
+          "matches": false
+        },
+        {
+          "id": "train-2",
+          "order": [
+            0,
+            2,
+            1
+          ],
+          "actual": [
+            "乙",
+            "书",
+            "甲"
+          ],
+          "matches": false
+        },
+        {
+          "id": "train-2",
+          "order": [
+            1,
+            0,
+            2
+          ],
+          "actual": [
+            "甲",
+            "乙",
+            "书"
+          ],
+          "matches": true
+        },
+        {
+          "id": "train-2",
+          "order": [
+            1,
+            2,
+            0
+          ],
+          "actual": [
+            "甲",
+            "书",
+            "乙"
+          ],
+          "matches": false
+        },
+        {
+          "id": "train-2",
+          "order": [
+            2,
+            0,
+            1
+          ],
+          "actual": [
+            "书",
+            "乙",
+            "甲"
+          ],
+          "matches": false
+        },
+        {
+          "id": "train-2",
+          "order": [
+            2,
+            1,
+            0
+          ],
+          "actual": [
+            "书",
+            "甲",
+            "乙"
+          ],
+          "matches": false
+        }
+      ],
+      "checked": 18,
+      "reason": "unique-mappings"
+    },
+    "no_training": {
+      "status": "Unknown",
+      "state": [
+        [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            2,
+            1
+          ],
+          [
+            1,
+            0,
+            2
+          ],
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            2,
+            0,
+            1
+          ],
+          [
+            2,
+            1,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            2,
+            1
+          ],
+          [
+            1,
+            0,
+            2
+          ],
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            2,
+            0,
+            1
+          ],
+          [
+            2,
+            1,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            2,
+            1
+          ],
+          [
+            1,
+            0,
+            2
+          ],
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            2,
+            0,
+            1
+          ],
+          [
+            2,
+            1,
+            0
+          ]
+        ]
+      ],
+      "trace": [],
+      "checked": 0,
+      "reason": "ambiguous"
+    },
+    "swapped_supervision": {
+      "status": "Accepted",
+      "state": [
+        [
+          [
+            1,
+            0,
+            2
+          ]
+        ],
+        [
+          [
+            2,
+            0,
+            1
+          ]
+        ],
+        [
+          [
+            0,
+            1,
+            2
+          ]
+        ]
+      ],
+      "trace": [
+        {
+          "id": "train-0",
+          "order": [
+            0,
+            1,
+            2
+          ],
+          "actual": [
+            "甲",
+            "乙",
+            "书"
+          ],
+          "matches": false
+        },
+        {
+          "id": "train-0",
+          "order": [
+            0,
+            2,
+            1
+          ],
+          "actual": [
+            "甲",
+            "书",
+            "乙"
+          ],
+          "matches": false
+        },
+        {
+          "id": "train-0",
+          "order": [
+            1,
+            0,
+            2
+          ],
+          "actual": [
+            "乙",
+            "甲",
+            "书"
+          ],
+          "matches": true
+        },
+        {
+          "id": "train-0",
+          "order": [
+            1,
+            2,
+            0
+          ],
+          "actual": [
+            "乙",
+            "书",
+            "甲"
+          ],
+          "matches": false
+        },
+        {
+          "id": "train-0",
+          "order": [
+            2,
+            0,
+            1
+          ],
+          "actual": [
+            "书",
+            "甲",
+            "乙"
+          ],
+          "matches": false
+        },
+        {
+          "id": "train-0",
+          "order": [
+            2,
+            1,
+            0
+          ],
+          "actual": [
+            "书",
+            "乙",
+            "甲"
+          ],
+          "matches": false
+        },
+        {
+          "id": "train-1",
+          "order": [
+            0,
+            1,
+            2
+          ],
+          "actual": [
+            "甲",
+            "书",
+            "乙"
+          ],
+          "matches": false
+        },
+        {
+          "id": "train-1",
+          "order": [
+            0,
+            2,
+            1
+          ],
+          "actual": [
+            "甲",
+            "乙",
+            "书"
+          ],
+          "matches": false
+        },
+        {
+          "id": "train-1",
+          "order": [
+            1,
+            0,
+            2
+          ],
+          "actual": [
+            "书",
+            "甲",
+            "乙"
+          ],
+          "matches": false
+        },
+        {
+          "id": "train-1",
+          "order": [
+            1,
+            2,
+            0
+          ],
+          "actual": [
+            "书",
+            "乙",
+            "甲"
+          ],
+          "matches": false
+        },
+        {
+          "id": "train-1",
+          "order": [
+            2,
+            0,
+            1
+          ],
+          "actual": [
+            "乙",
+            "甲",
+            "书"
+          ],
+          "matches": true
+        },
+        {
+          "id": "train-1",
+          "order": [
+            2,
+            1,
+            0
+          ],
+          "actual": [
+            "乙",
+            "书",
+            "甲"
+          ],
+          "matches": false
+        },
+        {
+          "id": "train-2",
+          "order": [
+            0,
+            1,
+            2
+          ],
+          "actual": [
+            "乙",
+            "甲",
+            "书"
+          ],
+          "matches": true
+        },
+        {
+          "id": "train-2",
+          "order": [
+            0,
+            2,
+            1
+          ],
+          "actual": [
+            "乙",
+            "书",
+            "甲"
+          ],
+          "matches": false
+        },
+        {
+          "id": "train-2",
+          "order": [
+            1,
+            0,
+            2
+          ],
+          "actual": [
+            "甲",
+            "乙",
+            "书"
+          ],
+          "matches": false
+        },
+        {
+          "id": "train-2",
+          "order": [
+            1,
+            2,
+            0
+          ],
+          "actual": [
+            "甲",
+            "书",
+            "乙"
+          ],
+          "matches": false
+        },
+        {
+          "id": "train-2",
+          "order": [
+            2,
+            0,
+            1
+          ],
+          "actual": [
+            "书",
+            "乙",
+            "甲"
+          ],
+          "matches": false
+        },
+        {
+          "id": "train-2",
+          "order": [
+            2,
+            1,
+            0
+          ],
+          "actual": [
+            "书",
+            "甲",
+            "乙"
+          ],
+          "matches": false
+        }
+      ],
+      "checked": 18,
+      "reason": "unique-mappings"
+    },
+    "partial": {
+      "status": "Unknown",
+      "state": [
+        [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            2,
+            1
+          ],
+          [
+            1,
+            0,
+            2
+          ],
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            2,
+            0,
+            1
+          ],
+          [
+            2,
+            1,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            2,
+            1
+          ],
+          [
+            1,
+            0,
+            2
+          ],
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            2,
+            0,
+            1
+          ],
+          [
+            2,
+            1,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            2,
+            1
+          ],
+          [
+            1,
+            0,
+            2
+          ],
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            2,
+            0,
+            1
+          ],
+          [
+            2,
+            1,
+            0
+          ]
+        ]
+      ],
+      "trace": [
+        {
+          "id": "train-0",
+          "order": [
+            0,
+            1,
+            2
+          ],
+          "actual": [
+            "甲",
+            "乙",
+            "书"
+          ],
+          "matches": true
+        },
+        {
+          "id": "train-0",
+          "order": [
+            0,
+            2,
+            1
+          ],
+          "actual": [
+            "甲",
+            "书",
+            "乙"
+          ],
+          "matches": false
+        }
+      ],
+      "checked": 2,
+      "reason": "budget"
+    },
+    "conflict": {
+      "status": "Refuted",
+      "state": [
+        [
+          [
+            0,
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            2,
+            1
+          ],
+          [
+            1,
+            0,
+            2
+          ],
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            2,
+            0,
+            1
+          ],
+          [
+            2,
+            1,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            2,
+            1
+          ],
+          [
+            1,
+            0,
+            2
+          ],
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            2,
+            0,
+            1
+          ],
+          [
+            2,
+            1,
+            0
+          ]
+        ]
+      ],
+      "trace": [
+        {
+          "id": "train-0",
+          "order": [
+            0,
+            1,
+            2
+          ],
+          "actual": [
+            "甲",
+            "乙",
+            "书"
+          ],
+          "matches": true
+        },
+        {
+          "id": "train-0",
+          "order": [
+            0,
+            2,
+            1
+          ],
+          "actual": [
+            "甲",
+            "书",
+            "乙"
+          ],
+          "matches": false
+        },
+        {
+          "id": "train-0",
+          "order": [
+            1,
+            0,
+            2
+          ],
+          "actual": [
+            "乙",
+            "甲",
+            "书"
+          ],
+          "matches": false
+        },
+        {
+          "id": "train-0",
+          "order": [
+            1,
+            2,
+            0
+          ],
+          "actual": [
+            "乙",
+            "书",
+            "甲"
+          ],
+          "matches": false
+        },
+        {
+          "id": "train-0",
+          "order": [
+            2,
+            0,
+            1
+          ],
+          "actual": [
+            "书",
+            "甲",
+            "乙"
+          ],
+          "matches": false
+        },
+        {
+          "id": "train-0",
+          "order": [
+            2,
+            1,
+            0
+          ],
+          "actual": [
+            "书",
+            "乙",
+            "甲"
+          ],
+          "matches": false
+        },
+        {
+          "id": "conflict",
+          "order": [
+            0,
+            1,
+            2
+          ],
+          "actual": [
+            "甲",
+            "乙",
+            "书"
+          ],
+          "matches": false
+        }
+      ],
+      "checked": 7,
+      "reason": "inconsistent-supervision"
+    }
+  }
+}
