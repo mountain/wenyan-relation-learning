@@ -1,0 +1,542 @@
+[
+  {
+    "id": "new-0-0-0",
+    "text": "「柳生」授「梅客」「铜镜」。",
+    "expected": {
+      "status": "KnownFiniteGrammar",
+      "roles": [
+        "柳生",
+        "梅客",
+        "铜镜"
+      ]
+    },
+    "category": "new-entity-role-permutation"
+  },
+  {
+    "id": "new-0-0-1",
+    "text": "「柳生」把「铜镜」交给「梅客」。",
+    "expected": {
+      "status": "KnownFiniteGrammar",
+      "roles": [
+        "柳生",
+        "梅客",
+        "铜镜"
+      ]
+    },
+    "category": "new-entity-role-permutation"
+  },
+  {
+    "id": "new-0-0-2",
+    "text": "「梅客」获「柳生」所授「铜镜」。",
+    "expected": {
+      "status": "KnownFiniteGrammar",
+      "roles": [
+        "柳生",
+        "梅客",
+        "铜镜"
+      ]
+    },
+    "category": "new-entity-role-permutation"
+  },
+  {
+    "id": "new-0-1-0",
+    "text": "「柳生」授「铜镜」「梅客」。",
+    "expected": {
+      "status": "KnownFiniteGrammar",
+      "roles": [
+        "柳生",
+        "铜镜",
+        "梅客"
+      ]
+    },
+    "category": "new-entity-role-permutation"
+  },
+  {
+    "id": "new-0-1-1",
+    "text": "「柳生」把「梅客」交给「铜镜」。",
+    "expected": {
+      "status": "KnownFiniteGrammar",
+      "roles": [
+        "柳生",
+        "铜镜",
+        "梅客"
+      ]
+    },
+    "category": "new-entity-role-permutation"
+  },
+  {
+    "id": "new-0-1-2",
+    "text": "「铜镜」获「柳生」所授「梅客」。",
+    "expected": {
+      "status": "KnownFiniteGrammar",
+      "roles": [
+        "柳生",
+        "铜镜",
+        "梅客"
+      ]
+    },
+    "category": "new-entity-role-permutation"
+  },
+  {
+    "id": "new-0-2-0",
+    "text": "「梅客」授「柳生」「铜镜」。",
+    "expected": {
+      "status": "KnownFiniteGrammar",
+      "roles": [
+        "梅客",
+        "柳生",
+        "铜镜"
+      ]
+    },
+    "category": "new-entity-role-permutation"
+  },
+  {
+    "id": "new-0-2-1",
+    "text": "「梅客」把「铜镜」交给「柳生」。",
+    "expected": {
+      "status": "KnownFiniteGrammar",
+      "roles": [
+        "梅客",
+        "柳生",
+        "铜镜"
+      ]
+    },
+    "category": "new-entity-role-permutation"
+  },
+  {
+    "id": "new-0-2-2",
+    "text": "「柳生」获「梅客」所授「铜镜」。",
+    "expected": {
+      "status": "KnownFiniteGrammar",
+      "roles": [
+        "梅客",
+        "柳生",
+        "铜镜"
+      ]
+    },
+    "category": "new-entity-role-permutation"
+  },
+  {
+    "id": "new-0-3-0",
+    "text": "「梅客」授「铜镜」「柳生」。",
+    "expected": {
+      "status": "KnownFiniteGrammar",
+      "roles": [
+        "梅客",
+        "铜镜",
+        "柳生"
+      ]
+    },
+    "category": "new-entity-role-permutation"
+  },
+  {
+    "id": "new-0-3-1",
+    "text": "「梅客」把「柳生」交给「铜镜」。",
+    "expected": {
+      "status": "KnownFiniteGrammar",
+      "roles": [
+        "梅客",
+        "铜镜",
+        "柳生"
+      ]
+    },
+    "category": "new-entity-role-permutation"
+  },
+  {
+    "id": "new-0-3-2",
+    "text": "「铜镜」获「梅客」所授「柳生」。",
+    "expected": {
+      "status": "KnownFiniteGrammar",
+      "roles": [
+        "梅客",
+        "铜镜",
+        "柳生"
+      ]
+    },
+    "category": "new-entity-role-permutation"
+  },
+  {
+    "id": "new-0-4-0",
+    "text": "「铜镜」授「柳生」「梅客」。",
+    "expected": {
+      "status": "KnownFiniteGrammar",
+      "roles": [
+        "铜镜",
+        "柳生",
+        "梅客"
+      ]
+    },
+    "category": "new-entity-role-permutation"
+  },
+  {
+    "id": "new-0-4-1",
+    "text": "「铜镜」把「梅客」交给「柳生」。",
+    "expected": {
+      "status": "KnownFiniteGrammar",
+      "roles": [
+        "铜镜",
+        "柳生",
+        "梅客"
+      ]
+    },
+    "category": "new-entity-role-permutation"
+  },
+  {
+    "id": "new-0-4-2",
+    "text": "「柳生」获「铜镜」所授「梅客」。",
+    "expected": {
+      "status": "KnownFiniteGrammar",
+      "roles": [
+        "铜镜",
+        "柳生",
+        "梅客"
+      ]
+    },
+    "category": "new-entity-role-permutation"
+  },
+  {
+    "id": "new-0-5-0",
+    "text": "「铜镜」授「梅客」「柳生」。",
+    "expected": {
+      "status": "KnownFiniteGrammar",
+      "roles": [
+        "铜镜",
+        "梅客",
+        "柳生"
+      ]
+    },
+    "category": "new-entity-role-permutation"
+  },
+  {
+    "id": "new-0-5-1",
+    "text": "「铜镜」把「柳生」交给「梅客」。",
+    "expected": {
+      "status": "KnownFiniteGrammar",
+      "roles": [
+        "铜镜",
+        "梅客",
+        "柳生"
+      ]
+    },
+    "category": "new-entity-role-permutation"
+  },
+  {
+    "id": "new-0-5-2",
+    "text": "「梅客」获「铜镜」所授「柳生」。",
+    "expected": {
+      "status": "KnownFiniteGrammar",
+      "roles": [
+        "铜镜",
+        "梅客",
+        "柳生"
+      ]
+    },
+    "category": "new-entity-role-permutation"
+  },
+  {
+    "id": "new-1-0-0",
+    "text": "「北辰」授「南斗」「星图」。",
+    "expected": {
+      "status": "KnownFiniteGrammar",
+      "roles": [
+        "北辰",
+        "南斗",
+        "星图"
+      ]
+    },
+    "category": "new-entity-role-permutation"
+  },
+  {
+    "id": "new-1-0-1",
+    "text": "「北辰」把「星图」交给「南斗」。",
+    "expected": {
+      "status": "KnownFiniteGrammar",
+      "roles": [
+        "北辰",
+        "南斗",
+        "星图"
+      ]
+    },
+    "category": "new-entity-role-permutation"
+  },
+  {
+    "id": "new-1-0-2",
+    "text": "「南斗」获「北辰」所授「星图」。",
+    "expected": {
+      "status": "KnownFiniteGrammar",
+      "roles": [
+        "北辰",
+        "南斗",
+        "星图"
+      ]
+    },
+    "category": "new-entity-role-permutation"
+  },
+  {
+    "id": "new-1-1-0",
+    "text": "「北辰」授「星图」「南斗」。",
+    "expected": {
+      "status": "KnownFiniteGrammar",
+      "roles": [
+        "北辰",
+        "星图",
+        "南斗"
+      ]
+    },
+    "category": "new-entity-role-permutation"
+  },
+  {
+    "id": "new-1-1-1",
+    "text": "「北辰」把「南斗」交给「星图」。",
+    "expected": {
+      "status": "KnownFiniteGrammar",
+      "roles": [
+        "北辰",
+        "星图",
+        "南斗"
+      ]
+    },
+    "category": "new-entity-role-permutation"
+  },
+  {
+    "id": "new-1-1-2",
+    "text": "「星图」获「北辰」所授「南斗」。",
+    "expected": {
+      "status": "KnownFiniteGrammar",
+      "roles": [
+        "北辰",
+        "星图",
+        "南斗"
+      ]
+    },
+    "category": "new-entity-role-permutation"
+  },
+  {
+    "id": "new-1-2-0",
+    "text": "「南斗」授「北辰」「星图」。",
+    "expected": {
+      "status": "KnownFiniteGrammar",
+      "roles": [
+        "南斗",
+        "北辰",
+        "星图"
+      ]
+    },
+    "category": "new-entity-role-permutation"
+  },
+  {
+    "id": "new-1-2-1",
+    "text": "「南斗」把「星图」交给「北辰」。",
+    "expected": {
+      "status": "KnownFiniteGrammar",
+      "roles": [
+        "南斗",
+        "北辰",
+        "星图"
+      ]
+    },
+    "category": "new-entity-role-permutation"
+  },
+  {
+    "id": "new-1-2-2",
+    "text": "「北辰」获「南斗」所授「星图」。",
+    "expected": {
+      "status": "KnownFiniteGrammar",
+      "roles": [
+        "南斗",
+        "北辰",
+        "星图"
+      ]
+    },
+    "category": "new-entity-role-permutation"
+  },
+  {
+    "id": "new-1-3-0",
+    "text": "「南斗」授「星图」「北辰」。",
+    "expected": {
+      "status": "KnownFiniteGrammar",
+      "roles": [
+        "南斗",
+        "星图",
+        "北辰"
+      ]
+    },
+    "category": "new-entity-role-permutation"
+  },
+  {
+    "id": "new-1-3-1",
+    "text": "「南斗」把「北辰」交给「星图」。",
+    "expected": {
+      "status": "KnownFiniteGrammar",
+      "roles": [
+        "南斗",
+        "星图",
+        "北辰"
+      ]
+    },
+    "category": "new-entity-role-permutation"
+  },
+  {
+    "id": "new-1-3-2",
+    "text": "「星图」获「南斗」所授「北辰」。",
+    "expected": {
+      "status": "KnownFiniteGrammar",
+      "roles": [
+        "南斗",
+        "星图",
+        "北辰"
+      ]
+    },
+    "category": "new-entity-role-permutation"
+  },
+  {
+    "id": "new-1-4-0",
+    "text": "「星图」授「北辰」「南斗」。",
+    "expected": {
+      "status": "KnownFiniteGrammar",
+      "roles": [
+        "星图",
+        "北辰",
+        "南斗"
+      ]
+    },
+    "category": "new-entity-role-permutation"
+  },
+  {
+    "id": "new-1-4-1",
+    "text": "「星图」把「南斗」交给「北辰」。",
+    "expected": {
+      "status": "KnownFiniteGrammar",
+      "roles": [
+        "星图",
+        "北辰",
+        "南斗"
+      ]
+    },
+    "category": "new-entity-role-permutation"
+  },
+  {
+    "id": "new-1-4-2",
+    "text": "「北辰」获「星图」所授「南斗」。",
+    "expected": {
+      "status": "KnownFiniteGrammar",
+      "roles": [
+        "星图",
+        "北辰",
+        "南斗"
+      ]
+    },
+    "category": "new-entity-role-permutation"
+  },
+  {
+    "id": "new-1-5-0",
+    "text": "「星图」授「南斗」「北辰」。",
+    "expected": {
+      "status": "KnownFiniteGrammar",
+      "roles": [
+        "星图",
+        "南斗",
+        "北辰"
+      ]
+    },
+    "category": "new-entity-role-permutation"
+  },
+  {
+    "id": "new-1-5-1",
+    "text": "「星图」把「北辰」交给「南斗」。",
+    "expected": {
+      "status": "KnownFiniteGrammar",
+      "roles": [
+        "星图",
+        "南斗",
+        "北辰"
+      ]
+    },
+    "category": "new-entity-role-permutation"
+  },
+  {
+    "id": "new-1-5-2",
+    "text": "「南斗」获「星图」所授「北辰」。",
+    "expected": {
+      "status": "KnownFiniteGrammar",
+      "roles": [
+        "星图",
+        "南斗",
+        "北辰"
+      ]
+    },
+    "category": "new-entity-role-permutation"
+  },
+  {
+    "id": "boundary-0",
+    "text": "「柳生」赠「梅客」「铜镜」。",
+    "expected": {
+      "status": "Unknown",
+      "reason": "outside-profile"
+    },
+    "category": "grammar-boundary"
+  },
+  {
+    "id": "boundary-1",
+    "text": "柳生授梅客铜镜。",
+    "expected": {
+      "status": "Unknown",
+      "reason": "outside-profile"
+    },
+    "category": "grammar-boundary"
+  },
+  {
+    "id": "boundary-2",
+    "text": "「柳生」授「梅客」「铜镜」",
+    "expected": {
+      "status": "Unknown",
+      "reason": "outside-profile"
+    },
+    "category": "grammar-boundary"
+  },
+  {
+    "id": "boundary-3",
+    "text": "「柳生」授「梅客」「铜镜」。余文",
+    "expected": {
+      "status": "Unknown",
+      "reason": "outside-profile"
+    },
+    "category": "grammar-boundary"
+  },
+  {
+    "id": "boundary-4",
+    "text": "「柳生\n」授「梅客」「铜镜」。",
+    "expected": {
+      "status": "Unknown",
+      "reason": "outside-profile"
+    },
+    "category": "grammar-boundary"
+  },
+  {
+    "id": "boundary-5",
+    "text": "「柳柳柳柳柳柳柳柳柳柳柳柳柳柳柳柳柳柳柳柳柳柳柳柳柳柳柳柳柳柳柳柳柳」授「梅客」「铜镜」。",
+    "expected": {
+      "status": "Unknown",
+      "reason": "outside-profile"
+    },
+    "category": "grammar-boundary"
+  },
+  {
+    "id": "boundary-6",
+    "text": "「柳「生」授「梅客」「铜镜」。",
+    "expected": {
+      "status": "Unknown",
+      "reason": "outside-profile"
+    },
+    "category": "grammar-boundary"
+  },
+  {
+    "id": "boundary-7",
+    "text": "「柳生」授「梅客」。",
+    "expected": {
+      "status": "Unknown",
+      "reason": "outside-profile"
+    },
+    "category": "grammar-boundary"
+  }
+]

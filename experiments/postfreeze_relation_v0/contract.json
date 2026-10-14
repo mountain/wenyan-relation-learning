@@ -1,0 +1,30 @@
+{
+  "schema": "wenyan.postfreeze-role-evaluation.v0",
+  "frozen_repository": "mountain/wenyan-relation-learning",
+  "frozen_commit": "452cc20718d689f9af151baede060085608d9648",
+  "frozen_files": {
+    "learner.py": "7c28827844f20972b136f47b00033f6b41f2da986410e37c4f4d4e96678b4086",
+    "verify.py": "d6094dbdfce036ddbe00d3374ced8997ee3b6c6a451fefea3f6db760a44762af",
+    "run.py": "5d0cb41232a854400d690064576907f1074467678b52b9dd1c2af36c539df3e4",
+    "train.json": "36aa3789a6a3d1769d70f3ebce63d8b4a2d57730be45708d37f3470aa85f583d",
+    "holdout.json": "fb8720be754a3451722c95f58ff142bad6403224a448f9e6a1e6789e0aa96308",
+    "contract.json": "eac7314a6592ba14b2aedd1fc62114c3b8793ed610a89cd3f1d1c838b208ee2d",
+    "evidence.json": "3dc6c45ed1b2814ceacf43b38fc53a7deeb37e8835cdc55eed721392554e5569"
+  },
+  "cohort_sha256": "ca329f6e485b7493cd47abe33868ae94c7cc82bf5682d54c53e34868b43ebc49",
+  "evaluation": "post-implementation authored synthetic cohort; same author; not independent blinded evaluation",
+  "task": "three-controlled-transfer-constructions-v0",
+  "observer": "ordered-agent-recipient-theme-v0",
+  "authority": {
+    "native_admission": false,
+    "native_state_write": false
+  },
+  "budget": {
+    "fuel": 18,
+    "wall_seconds": 5,
+    "memory_bytes": 134217728,
+    "input_output_bytes": 65536,
+    "maximum_queries": 64
+  },
+  "profile": "strict quoted entities: nonempty, <=32 chars, no brackets or CR/LF; exactly one terminal full stop"
+}

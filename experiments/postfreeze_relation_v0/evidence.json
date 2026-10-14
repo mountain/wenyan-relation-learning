@@ -1,0 +1,1132 @@
+{
+  "schema": "wenyan.postfreeze-role-evaluation.v0",
+  "status": "PostFreezeFiniteEvaluationPassed",
+  "frozen_commit": "452cc20718d689f9af151baede060085608d9648",
+  "contract_sha256": "4bc287337e836a8f62471fd0619f90965173a20920f56c4567986969f0863d8c",
+  "source_sha256": {
+    "worker.py": "3952553f0f8586f88e7507a2517f1c1289ebe95a32533b833084541289186e08",
+    "check.py": "08a2709b320cfcd05dbac7dc2700122ff5b27d89a67f9c88affd48340b20b40d",
+    "run.py": "61a3c88c8602d4921dd386a9e4b4ce426891a7d418b440adc4de3ed9461bdc15"
+  },
+  "cohort_sha256": "ca329f6e485b7493cd47abe33868ae94c7cc82bf5682d54c53e34868b43ebc49",
+  "native_admission": false,
+  "native_state_write": false,
+  "known_correct": 36,
+  "boundary_unknown": 8,
+  "no_training_correct": 0,
+  "wrong_supervision_correct": 0,
+  "ambiguous_training_status": "Unknown",
+  "negative_controls": [
+    "authority",
+    "task",
+    "answer",
+    "ordinal-bool",
+    "match-int",
+    "missing-answer",
+    "request-task",
+    "holdout-label-injection",
+    "fuel-bool",
+    "query-limit"
+  ],
+  "legacy_bool_ordinal_accepted": true,
+  "rows": [
+    {
+      "id": "new-0-0-0",
+      "category": "new-entity-role-permutation",
+      "actual": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "柳生",
+          "梅客",
+          "铜镜"
+        ]
+      },
+      "expected": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "柳生",
+          "梅客",
+          "铜镜"
+        ]
+      }
+    },
+    {
+      "id": "new-0-0-1",
+      "category": "new-entity-role-permutation",
+      "actual": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "柳生",
+          "梅客",
+          "铜镜"
+        ]
+      },
+      "expected": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "柳生",
+          "梅客",
+          "铜镜"
+        ]
+      }
+    },
+    {
+      "id": "new-0-0-2",
+      "category": "new-entity-role-permutation",
+      "actual": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "柳生",
+          "梅客",
+          "铜镜"
+        ]
+      },
+      "expected": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "柳生",
+          "梅客",
+          "铜镜"
+        ]
+      }
+    },
+    {
+      "id": "new-0-1-0",
+      "category": "new-entity-role-permutation",
+      "actual": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "柳生",
+          "铜镜",
+          "梅客"
+        ]
+      },
+      "expected": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "柳生",
+          "铜镜",
+          "梅客"
+        ]
+      }
+    },
+    {
+      "id": "new-0-1-1",
+      "category": "new-entity-role-permutation",
+      "actual": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "柳生",
+          "铜镜",
+          "梅客"
+        ]
+      },
+      "expected": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "柳生",
+          "铜镜",
+          "梅客"
+        ]
+      }
+    },
+    {
+      "id": "new-0-1-2",
+      "category": "new-entity-role-permutation",
+      "actual": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "柳生",
+          "铜镜",
+          "梅客"
+        ]
+      },
+      "expected": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "柳生",
+          "铜镜",
+          "梅客"
+        ]
+      }
+    },
+    {
+      "id": "new-0-2-0",
+      "category": "new-entity-role-permutation",
+      "actual": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "梅客",
+          "柳生",
+          "铜镜"
+        ]
+      },
+      "expected": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "梅客",
+          "柳生",
+          "铜镜"
+        ]
+      }
+    },
+    {
+      "id": "new-0-2-1",
+      "category": "new-entity-role-permutation",
+      "actual": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "梅客",
+          "柳生",
+          "铜镜"
+        ]
+      },
+      "expected": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "梅客",
+          "柳生",
+          "铜镜"
+        ]
+      }
+    },
+    {
+      "id": "new-0-2-2",
+      "category": "new-entity-role-permutation",
+      "actual": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "梅客",
+          "柳生",
+          "铜镜"
+        ]
+      },
+      "expected": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "梅客",
+          "柳生",
+          "铜镜"
+        ]
+      }
+    },
+    {
+      "id": "new-0-3-0",
+      "category": "new-entity-role-permutation",
+      "actual": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "梅客",
+          "铜镜",
+          "柳生"
+        ]
+      },
+      "expected": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "梅客",
+          "铜镜",
+          "柳生"
+        ]
+      }
+    },
+    {
+      "id": "new-0-3-1",
+      "category": "new-entity-role-permutation",
+      "actual": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "梅客",
+          "铜镜",
+          "柳生"
+        ]
+      },
+      "expected": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "梅客",
+          "铜镜",
+          "柳生"
+        ]
+      }
+    },
+    {
+      "id": "new-0-3-2",
+      "category": "new-entity-role-permutation",
+      "actual": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "梅客",
+          "铜镜",
+          "柳生"
+        ]
+      },
+      "expected": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "梅客",
+          "铜镜",
+          "柳生"
+        ]
+      }
+    },
+    {
+      "id": "new-0-4-0",
+      "category": "new-entity-role-permutation",
+      "actual": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "铜镜",
+          "柳生",
+          "梅客"
+        ]
+      },
+      "expected": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "铜镜",
+          "柳生",
+          "梅客"
+        ]
+      }
+    },
+    {
+      "id": "new-0-4-1",
+      "category": "new-entity-role-permutation",
+      "actual": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "铜镜",
+          "柳生",
+          "梅客"
+        ]
+      },
+      "expected": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "铜镜",
+          "柳生",
+          "梅客"
+        ]
+      }
+    },
+    {
+      "id": "new-0-4-2",
+      "category": "new-entity-role-permutation",
+      "actual": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "铜镜",
+          "柳生",
+          "梅客"
+        ]
+      },
+      "expected": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "铜镜",
+          "柳生",
+          "梅客"
+        ]
+      }
+    },
+    {
+      "id": "new-0-5-0",
+      "category": "new-entity-role-permutation",
+      "actual": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "铜镜",
+          "梅客",
+          "柳生"
+        ]
+      },
+      "expected": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "铜镜",
+          "梅客",
+          "柳生"
+        ]
+      }
+    },
+    {
+      "id": "new-0-5-1",
+      "category": "new-entity-role-permutation",
+      "actual": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "铜镜",
+          "梅客",
+          "柳生"
+        ]
+      },
+      "expected": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "铜镜",
+          "梅客",
+          "柳生"
+        ]
+      }
+    },
+    {
+      "id": "new-0-5-2",
+      "category": "new-entity-role-permutation",
+      "actual": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "铜镜",
+          "梅客",
+          "柳生"
+        ]
+      },
+      "expected": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "铜镜",
+          "梅客",
+          "柳生"
+        ]
+      }
+    },
+    {
+      "id": "new-1-0-0",
+      "category": "new-entity-role-permutation",
+      "actual": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "北辰",
+          "南斗",
+          "星图"
+        ]
+      },
+      "expected": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "北辰",
+          "南斗",
+          "星图"
+        ]
+      }
+    },
+    {
+      "id": "new-1-0-1",
+      "category": "new-entity-role-permutation",
+      "actual": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "北辰",
+          "南斗",
+          "星图"
+        ]
+      },
+      "expected": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "北辰",
+          "南斗",
+          "星图"
+        ]
+      }
+    },
+    {
+      "id": "new-1-0-2",
+      "category": "new-entity-role-permutation",
+      "actual": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "北辰",
+          "南斗",
+          "星图"
+        ]
+      },
+      "expected": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "北辰",
+          "南斗",
+          "星图"
+        ]
+      }
+    },
+    {
+      "id": "new-1-1-0",
+      "category": "new-entity-role-permutation",
+      "actual": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "北辰",
+          "星图",
+          "南斗"
+        ]
+      },
+      "expected": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "北辰",
+          "星图",
+          "南斗"
+        ]
+      }
+    },
+    {
+      "id": "new-1-1-1",
+      "category": "new-entity-role-permutation",
+      "actual": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "北辰",
+          "星图",
+          "南斗"
+        ]
+      },
+      "expected": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "北辰",
+          "星图",
+          "南斗"
+        ]
+      }
+    },
+    {
+      "id": "new-1-1-2",
+      "category": "new-entity-role-permutation",
+      "actual": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "北辰",
+          "星图",
+          "南斗"
+        ]
+      },
+      "expected": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "北辰",
+          "星图",
+          "南斗"
+        ]
+      }
+    },
+    {
+      "id": "new-1-2-0",
+      "category": "new-entity-role-permutation",
+      "actual": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "南斗",
+          "北辰",
+          "星图"
+        ]
+      },
+      "expected": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "南斗",
+          "北辰",
+          "星图"
+        ]
+      }
+    },
+    {
+      "id": "new-1-2-1",
+      "category": "new-entity-role-permutation",
+      "actual": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "南斗",
+          "北辰",
+          "星图"
+        ]
+      },
+      "expected": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "南斗",
+          "北辰",
+          "星图"
+        ]
+      }
+    },
+    {
+      "id": "new-1-2-2",
+      "category": "new-entity-role-permutation",
+      "actual": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "南斗",
+          "北辰",
+          "星图"
+        ]
+      },
+      "expected": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "南斗",
+          "北辰",
+          "星图"
+        ]
+      }
+    },
+    {
+      "id": "new-1-3-0",
+      "category": "new-entity-role-permutation",
+      "actual": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "南斗",
+          "星图",
+          "北辰"
+        ]
+      },
+      "expected": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "南斗",
+          "星图",
+          "北辰"
+        ]
+      }
+    },
+    {
+      "id": "new-1-3-1",
+      "category": "new-entity-role-permutation",
+      "actual": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "南斗",
+          "星图",
+          "北辰"
+        ]
+      },
+      "expected": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "南斗",
+          "星图",
+          "北辰"
+        ]
+      }
+    },
+    {
+      "id": "new-1-3-2",
+      "category": "new-entity-role-permutation",
+      "actual": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "南斗",
+          "星图",
+          "北辰"
+        ]
+      },
+      "expected": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "南斗",
+          "星图",
+          "北辰"
+        ]
+      }
+    },
+    {
+      "id": "new-1-4-0",
+      "category": "new-entity-role-permutation",
+      "actual": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "星图",
+          "北辰",
+          "南斗"
+        ]
+      },
+      "expected": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "星图",
+          "北辰",
+          "南斗"
+        ]
+      }
+    },
+    {
+      "id": "new-1-4-1",
+      "category": "new-entity-role-permutation",
+      "actual": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "星图",
+          "北辰",
+          "南斗"
+        ]
+      },
+      "expected": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "星图",
+          "北辰",
+          "南斗"
+        ]
+      }
+    },
+    {
+      "id": "new-1-4-2",
+      "category": "new-entity-role-permutation",
+      "actual": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "星图",
+          "北辰",
+          "南斗"
+        ]
+      },
+      "expected": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "星图",
+          "北辰",
+          "南斗"
+        ]
+      }
+    },
+    {
+      "id": "new-1-5-0",
+      "category": "new-entity-role-permutation",
+      "actual": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "星图",
+          "南斗",
+          "北辰"
+        ]
+      },
+      "expected": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "星图",
+          "南斗",
+          "北辰"
+        ]
+      }
+    },
+    {
+      "id": "new-1-5-1",
+      "category": "new-entity-role-permutation",
+      "actual": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "星图",
+          "南斗",
+          "北辰"
+        ]
+      },
+      "expected": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "星图",
+          "南斗",
+          "北辰"
+        ]
+      }
+    },
+    {
+      "id": "new-1-5-2",
+      "category": "new-entity-role-permutation",
+      "actual": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "星图",
+          "南斗",
+          "北辰"
+        ]
+      },
+      "expected": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "星图",
+          "南斗",
+          "北辰"
+        ]
+      }
+    },
+    {
+      "id": "boundary-0",
+      "category": "grammar-boundary",
+      "actual": {
+        "status": "Unknown",
+        "reason": "outside-profile"
+      },
+      "expected": {
+        "status": "Unknown",
+        "reason": "outside-profile"
+      }
+    },
+    {
+      "id": "boundary-1",
+      "category": "grammar-boundary",
+      "actual": {
+        "status": "Unknown",
+        "reason": "outside-profile"
+      },
+      "expected": {
+        "status": "Unknown",
+        "reason": "outside-profile"
+      }
+    },
+    {
+      "id": "boundary-2",
+      "category": "grammar-boundary",
+      "actual": {
+        "status": "Unknown",
+        "reason": "outside-profile"
+      },
+      "expected": {
+        "status": "Unknown",
+        "reason": "outside-profile"
+      }
+    },
+    {
+      "id": "boundary-3",
+      "category": "grammar-boundary",
+      "actual": {
+        "status": "Unknown",
+        "reason": "outside-profile"
+      },
+      "expected": {
+        "status": "Unknown",
+        "reason": "outside-profile"
+      }
+    },
+    {
+      "id": "boundary-4",
+      "category": "grammar-boundary",
+      "actual": {
+        "status": "Unknown",
+        "reason": "outside-profile"
+      },
+      "expected": {
+        "status": "Unknown",
+        "reason": "outside-profile"
+      }
+    },
+    {
+      "id": "boundary-5",
+      "category": "grammar-boundary",
+      "actual": {
+        "status": "Unknown",
+        "reason": "outside-profile"
+      },
+      "expected": {
+        "status": "Unknown",
+        "reason": "outside-profile"
+      }
+    },
+    {
+      "id": "boundary-6",
+      "category": "grammar-boundary",
+      "actual": {
+        "status": "Unknown",
+        "reason": "outside-profile"
+      },
+      "expected": {
+        "status": "Unknown",
+        "reason": "outside-profile"
+      }
+    },
+    {
+      "id": "boundary-7",
+      "category": "grammar-boundary",
+      "actual": {
+        "status": "Unknown",
+        "reason": "outside-profile"
+      },
+      "expected": {
+        "status": "Unknown",
+        "reason": "outside-profile"
+      }
+    }
+  ],
+  "training_transcript": {
+    "status": "Accepted",
+    "state": [
+      [
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      [
+        [
+          0,
+          2,
+          1
+        ]
+      ],
+      [
+        [
+          1,
+          0,
+          2
+        ]
+      ]
+    ],
+    "trace": [
+      {
+        "id": "train-0",
+        "order": [
+          0,
+          1,
+          2
+        ],
+        "actual": [
+          "甲",
+          "乙",
+          "书"
+        ],
+        "matches": true
+      },
+      {
+        "id": "train-0",
+        "order": [
+          0,
+          2,
+          1
+        ],
+        "actual": [
+          "甲",
+          "书",
+          "乙"
+        ],
+        "matches": false
+      },
+      {
+        "id": "train-0",
+        "order": [
+          1,
+          0,
+          2
+        ],
+        "actual": [
+          "乙",
+          "甲",
+          "书"
+        ],
+        "matches": false
+      },
+      {
+        "id": "train-0",
+        "order": [
+          1,
+          2,
+          0
+        ],
+        "actual": [
+          "乙",
+          "书",
+          "甲"
+        ],
+        "matches": false
+      },
+      {
+        "id": "train-0",
+        "order": [
+          2,
+          0,
+          1
+        ],
+        "actual": [
+          "书",
+          "甲",
+          "乙"
+        ],
+        "matches": false
+      },
+      {
+        "id": "train-0",
+        "order": [
+          2,
+          1,
+          0
+        ],
+        "actual": [
+          "书",
+          "乙",
+          "甲"
+        ],
+        "matches": false
+      },
+      {
+        "id": "train-1",
+        "order": [
+          0,
+          1,
+          2
+        ],
+        "actual": [
+          "甲",
+          "书",
+          "乙"
+        ],
+        "matches": false
+      },
+      {
+        "id": "train-1",
+        "order": [
+          0,
+          2,
+          1
+        ],
+        "actual": [
+          "甲",
+          "乙",
+          "书"
+        ],
+        "matches": true
+      },
+      {
+        "id": "train-1",
+        "order": [
+          1,
+          0,
+          2
+        ],
+        "actual": [
+          "书",
+          "甲",
+          "乙"
+        ],
+        "matches": false
+      },
+      {
+        "id": "train-1",
+        "order": [
+          1,
+          2,
+          0
+        ],
+        "actual": [
+          "书",
+          "乙",
+          "甲"
+        ],
+        "matches": false
+      },
+      {
+        "id": "train-1",
+        "order": [
+          2,
+          0,
+          1
+        ],
+        "actual": [
+          "乙",
+          "甲",
+          "书"
+        ],
+        "matches": false
+      },
+      {
+        "id": "train-1",
+        "order": [
+          2,
+          1,
+          0
+        ],
+        "actual": [
+          "乙",
+          "书",
+          "甲"
+        ],
+        "matches": false
+      },
+      {
+        "id": "train-2",
+        "order": [
+          0,
+          1,
+          2
+        ],
+        "actual": [
+          "乙",
+          "甲",
+          "书"
+        ],
+        "matches": false
+      },
+      {
+        "id": "train-2",
+        "order": [
+          0,
+          2,
+          1
+        ],
+        "actual": [
+          "乙",
+          "书",
+          "甲"
+        ],
+        "matches": false
+      },
+      {
+        "id": "train-2",
+        "order": [
+          1,
+          0,
+          2
+        ],
+        "actual": [
+          "甲",
+          "乙",
+          "书"
+        ],
+        "matches": true
+      },
+      {
+        "id": "train-2",
+        "order": [
+          1,
+          2,
+          0
+        ],
+        "actual": [
+          "甲",
+          "书",
+          "乙"
+        ],
+        "matches": false
+      },
+      {
+        "id": "train-2",
+        "order": [
+          2,
+          0,
+          1
+        ],
+        "actual": [
+          "书",
+          "乙",
+          "甲"
+        ],
+        "matches": false
+      },
+      {
+        "id": "train-2",
+        "order": [
+          2,
+          1,
+          0
+        ],
+        "actual": [
+          "书",
+          "甲",
+          "乙"
+        ],
+        "matches": false
+      }
+    ],
+    "checked": 18,
+    "reason": "unique-mappings"
+  }
+}
