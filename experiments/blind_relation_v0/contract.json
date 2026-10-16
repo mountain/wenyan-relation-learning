@@ -1,0 +1,62 @@
+{
+  "schema": "wenyan.blind-relation-preregistration.v0",
+  "status": "PreparationOnly",
+  "baseline": {
+    "repository": "mountain/wenyan-relation-learning",
+    "commit": "cba40627ca9ce49dcbd89527f1d904debad14009",
+    "git_blobs": {
+      "experiments/external_relation_v0/learner.py": "26e8167e9ef1bd2f92a6d4f369d8d516dc5dd112",
+      "experiments/postfreeze_relation_v0/worker.py": "340bfb674a74a49d4f968fac4ba5ac587f1a8352",
+      "experiments/postfreeze_relation_v0/strict_check.py": "b2e28de127adb9a0296ce65ea34e39809e896ee5",
+      "experiments/postfreeze_relation_v0/strict_selftest.py": "3416ad68132c602605eb0bdca0c2eb90f6aa1d82",
+      "experiments/postfreeze_relation_v0/contract.json": "043a6b77c238f62975863d5e9e4aace81b26dbfe"
+    }
+  },
+  "identity": {
+    "task": "three-controlled-transfer-constructions-v0",
+    "observer": "ordered-agent-recipient-theme-v0",
+    "learner_schema": "wenyan.external-role-inference.v0.1"
+  },
+  "blind_protocol": {
+    "supervisor_status": "Unselected",
+    "implementation_author_must_not_author_or_modify_labels": true,
+    "supervisor_must_not_see_predictions_before_label_commitment": true,
+    "prediction_digest_precedes_label_disclosure": true,
+    "learner_receives_training_and_unlabelled_queries_only": true,
+    "evaluation_process_must_not_access_labels_or_network": true,
+    "all_unknown_and_failures_retained": true,
+    "any_tuning_invalidates_cohort_for_final_evaluation": true
+  },
+  "cohort_plan": {
+    "in_profile_minimum": 36,
+    "in_profile_coverage": "new entities; all six role permutations across each of the three frozen constructions",
+    "paraphrase_or_boundary_minimum": 12,
+    "paraphrase_policy": "independently authored; score KnownFiniteGrammar, Unknown and false acceptance separately; no success assumed",
+    "cohort_files_present": false,
+    "labels_present": false,
+    "predictions_present": false
+  },
+  "metrics": [
+    "in_profile_role_accuracy",
+    "agent_patient_reversal_consistency",
+    "paraphrase_known_finite_grammar_count",
+    "paraphrase_unknown_count",
+    "boundary_unknown_rate",
+    "false_acceptance_count",
+    "execution_failure_count"
+  ],
+  "budget": {
+    "maximum_queries": 64,
+    "fuel": 18,
+    "wall_seconds": 5,
+    "memory_bytes": 134217728,
+    "input_output_bytes": 65536,
+    "automatic_retry": false
+  },
+  "authority": {
+    "documentary_receipt_only": true,
+    "native_admission": false,
+    "native_state_write": false
+  },
+  "next_gate": "Select an independent supervisor and commit cohort plus label digests without exposing labels to the implementation or prediction process."
+}
