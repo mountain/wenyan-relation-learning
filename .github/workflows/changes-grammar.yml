@@ -26,6 +26,7 @@ jobs:
       - run: node tools/relations/check-adva-interface-selection.mjs --selftest
       - run: python3 experiments/postfreeze_relation_v0/strict_selftest.py
       - run: python3 -O experiments/postfreeze_relation_v0/strict_selftest.py
+      - run: node tools/relations/check-blind-preregistration.mjs --selftest
       - run: node tools/knowledge/selftest.mjs
       - run: node tools/grammar/selftest.mjs
       - run: node tools/dialogue/selftest.mjs
