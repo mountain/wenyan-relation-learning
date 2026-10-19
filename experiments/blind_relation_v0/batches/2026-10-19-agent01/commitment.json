@@ -1,0 +1,45 @@
+{
+  "schema": "wenyan.blind-relation.cohort-commitment.v1",
+  "batch_id": "2026-10-19-agent01",
+  "status": "LabelsCommitted",
+  "baseline_commit": "cba40627ca9ce49dcbd89527f1d904debad14009",
+  "preregistration_git_blob": "9576593c667f6103b6dcffa982e036ca139392f0",
+  "preregistration_source_commit": "f7d7cc96bd30d268af4f26931933f0dcdd177357",
+  "queries_sha256": "aed71ae9005ebc6788a9630f5c9ccde41e58c75de6c8d65c8f738aa7f9640947",
+  "queries_byte_length": 4983,
+  "labels_commitment": {
+    "algorithm": "SHA-256",
+    "domain": "wenyan.blind-relation.labels-commitment.v1\\0",
+    "domain_hex": "77656e79616e2e626c696e642d72656c6174696f6e2e6c6162656c732d636f6d6d69746d656e742e763100",
+    "construction": "SHA256(domain_bytes || salt_32_bytes || uint64_be(labels_byte_length) || exact_labels_json_bytes)",
+    "digest": "f3e2b8029c9b54eacee5b6ef563248dc1810e4fecce0ee549e46de0953b3cb4b",
+    "labels_byte_length": 33711,
+    "salt_bytes": 32
+  },
+  "encryption": {
+    "algorithm": "AES-256-GCM",
+    "envelope_sha256": "fbea7a3b2cbff3928c1bc326c4621593530bd7a533de3c7643d9a250b90da327",
+    "aad": "wenyan.blind-relation.sealed-labels.v1:2026-10-19-agent01",
+    "nonce_bytes": 12,
+    "tag_bytes": 16
+  },
+  "counts": {
+    "total": 48,
+    "in_profile": 36,
+    "paraphrase_or_boundary": 12,
+    "entity_triples": 2,
+    "constructions": 3,
+    "permutations_per_triple_per_construction": 6
+  },
+  "supervisor": {
+    "kind": "task-isolated Codex agent",
+    "model_family": "same OpenAI/model family as implementation-side agent; exact model variant not independently verified",
+    "independent_human_review": false,
+    "independent_organizational_review": false
+  },
+  "authority": {
+    "documentary_receipt_only": true,
+    "native_admission": false,
+    "native_state_write": false
+  }
+}

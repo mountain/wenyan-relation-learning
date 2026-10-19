@@ -33,6 +33,25 @@ does not grant native Adva learning authority or general language understanding.
   boundaries; independent blind evaluation remains unexecuted.
 - **Status:** merged bounded external learner plus unexecuted preregistration.
 
+## Provenance register: 2026-10-19
+
+### P-2026-10-19-01 — Task-isolated blind-cohort commitment
+
+- **Human direction:** Mingli Yuan requested submission of blind queries and a
+  cryptographic label commitment by a supervisor who had not implemented the
+  learner or checker.
+- **Annotation assistance:** a fresh Codex (OpenAI) supervisor agent, with no
+  inherited conversation, independently authored and sealed the first cohort
+  using the public protocol and training examples. Its attestation in
+  `experiments/blind_relation_v0/batches/2026-10-19-agent01/` records the exact
+  information boundary. The integrating agent did not read or modify labels.
+- **Integration assistance:** the integrating Codex (OpenAI) agent implemented
+  the public byte-binding receiver, documentation and CI integration.
+- **Boundary:** same model family and shared host; task isolation does not
+  constitute independent human or organizational review or OS sandboxing.
+  Labels are committed and encrypted; predictions, reveal and scoring remain
+  `NotRun`. No new correctness score or native authority is claimed.
+
 ## Contribution interpretation
 
 Mingli Yuan is the human research director, acceptance/release authority and
