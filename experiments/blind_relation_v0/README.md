@@ -1,6 +1,15 @@
 # Independent-supervision relation evaluation v0
 
-Status: `PreparationOnly`. No cohort, label file, prediction, score, or independent-supervision claim exists in this change.
+Original preregistration snapshot (PR #9): `PreparationOnly`. Its contract remains
+byte-for-byte frozen. It records the preparation stage rather than the latest
+batch execution state.
+
+Current batch: [2026-10-19-agent01](batches/2026-10-19-agent01/README.md) records
+48 unlabelled queries and a sealed label commitment by a task-isolated AI
+supervisor. Predictions and scores remain `NotRun`. This is agent task
+separation, not independent human or organizational review. The original
+checker still validates the immutable preparation snapshot; the separate
+cohort checker validates the committed batch artifacts.
 
 This preregistration freezes the parts of the next experiment that do not require an independent supervisor. It binds the tested mainline at `cba40627ca9ce49dcbd89527f1d904debad14009`, the external learner, producer and strict receiver by Git blob; fixes task identity, budgets, metrics, ordering and failure retention; and keeps native authority false.
 
