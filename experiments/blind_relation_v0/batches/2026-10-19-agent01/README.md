@@ -1,6 +1,12 @@
 # First committed blind cohort: 2026-10-19-agent01
 
-Stage: `LabelsCommitted`; predictions and scoring: `NotRun`.
+Stage: `PredictionsCommitted`; scoring: `NotRun`.
+
+The reveal-free prediction output is locked separately under
+`experiments/blind_relation_v0/prediction-locks/2026-10-19-agent01/`. Its
+checker binds the exact request and output bytes without reading labels. This
+batch directory remains byte-stable for the public queries, commitment and
+encrypted envelope.
 
 The user requested a supervisor who did not implement the learner or checker.
 A fresh Codex agent, with no inherited conversation, authored the queries and
@@ -38,13 +44,16 @@ or adversarial sandbox claim. Shared model priors remain a limitation.
    training inputs and the unlabelled query file; no labels, opening bundle,
    decryption key, network access or additional data. Do not tune the baseline.
 3. Preserve every output, `Unknown`, error and failure, and commit the exact
-   prediction digest before retrieving the private opening package.
+   prediction digest before retrieving the private opening package. **Done in
+   the sibling prediction lock; no opening material was accessed.**
 4. Only then disclose and verify the salt/labels against the commitment and
    decrypt/reproduce the AES-GCM envelope. Score all rows with the registered
    metrics and retain ambiguous/boundary annotations and failure records.
 
-No prediction, decryption, scoring, native Adva admission or state write is
-performed by this change. CI replays only historical fixtures, not this cohort.
+The original cohort change performed no prediction, decryption or scoring. A
+later prediction-lock change ran the frozen producer and strict receiver but
+still performed no decryption or scoring. Native Adva admission and state write
+remain false.
 
 ## Receiving check
 

@@ -52,6 +52,27 @@ does not grant native Adva learning authority or general language understanding.
   Labels are committed and encrypted; predictions, reveal and scoring remain
   `NotRun`. No new correctness score or native authority is claimed.
 
+## Provenance register: 2026-11-13
+
+### P-2026-11-13-01 — Reveal-free blind prediction lock
+
+- **Human direction:** Mingli Yuan requested advancing the minimum action after
+  the committed blind cohort while preserving the prediction-before-reveal gate.
+- **Agent contribution:** Codex (OpenAI) identified a permitted user+mount+net
+  namespace path, built a tmpfs chroot containing the pinned baseline program,
+  approved training and unlabelled request only, executed the 48-query producer,
+  and added the strict prediction-lock receiver and CI step.
+- **Evidence:**
+  `experiments/blind_relation_v0/prediction-locks/2026-10-19-agent01/`
+  stores the exact request, prediction bytes, SHA-256 lock, isolation record and
+  both execution attempts. The producer digest is identical across the attempt
+  with a missing verifier dependency and the corrected-image attempt; the latter
+  passed the frozen strict receiver.
+- **Boundary:** no private opening bundle, plaintext label, salt or key was read;
+  semantic scoring remains `NotRun`. The public counts 36
+  `KnownFiniteGrammar`/12 `Unknown` are output-shape counts, not accuracy.
+  `native_admission=false` and `native_state_write=false` remain unchanged.
+
 ## Contribution interpretation
 
 Mingli Yuan is the human research director, acceptance/release authority and

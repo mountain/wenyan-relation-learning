@@ -1,0 +1,63 @@
+{
+  "schema": "wenyan.blind-relation.prediction-lock.v1",
+  "batch_id": "2026-10-19-agent01",
+  "status": "PredictionsCommitted",
+  "cohort_commit": "5c1af139129f56f9870bcdab769f8589f6cd65d5",
+  "tested_baseline_commit": "cba40627ca9ce49dcbd89527f1d904debad14009",
+  "queries_sha256": "aed71ae9005ebc6788a9630f5c9ccde41e58c75de6c8d65c8f738aa7f9640947",
+  "request_sha256": "8a23ae43b4a80e10e02ef159106ec6720d324b7b3df50ce59990af8d866e9b67",
+  "predictions_sha256": "c084a7072c4f91f6c8015eef499a07f7c62a98cf3b64bcc68d07150d6d7d5d74",
+  "counts_without_labels": {
+    "queries": 48,
+    "known_finite_grammar": 36,
+    "unknown": 12,
+    "execution_failures": 0
+  },
+  "runtime": {
+    "implementation": "CPython 3.13.5",
+    "path": "/usr/bin/python3",
+    "executable_sha256": "889c603f0d17cb54060951bcf4c4f9b8c9ebd9e52b392c70209bbb9755d797d9"
+  },
+  "isolation": {
+    "mechanism": "unshare -Urnm plus tmpfs chroot",
+    "namespaces": [
+      "user",
+      "mount",
+      "network"
+    ],
+    "visible_network_interfaces": [
+      "lo"
+    ],
+    "network_probe": "Blocked",
+    "program_mount": "ReadOnly",
+    "request_mount": "ReadOnly",
+    "output_mount": "WriteOnlyByConvention",
+    "wall_seconds": 5,
+    "cpu_seconds": 4,
+    "memory_bytes": 134217728,
+    "automatic_retry": false
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "producer": "Completed",
+      "predictions_sha256": "c084a7072c4f91f6c8015eef499a07f7c62a98cf3b64bcc68d07150d6d7d5d74",
+      "strict_receiving": "PackagingFailure",
+      "failure": "The clean image omitted the frozen external_relation_v0/verify.py dependency required by check.py; no labels or opening material were accessed."
+    },
+    {
+      "attempt": 2,
+      "producer": "Completed",
+      "predictions_sha256": "c084a7072c4f91f6c8015eef499a07f7c62a98cf3b64bcc68d07150d6d7d5d74",
+      "strict_receiving": "Accepted",
+      "change_from_attempt_1": "Added the exact frozen verify.py dependency to the read-only program image; request, learner, worker and query bytes were unchanged."
+    }
+  ],
+  "label_opening_accessed": false,
+  "labels_revealed": false,
+  "scores": "NotRun",
+  "authority": {
+    "native_admission": false,
+    "native_state_write": false
+  }
+}
