@@ -29,6 +29,8 @@ jobs:
       - run: node tools/relations/check-blind-preregistration.mjs --selftest
       - run: node tools/relations/check-blind-cohort.mjs --selftest
       - run: node tools/relations/check-blind-prediction-lock.mjs --selftest
+      - run: node tools/relations/score-blind-reveal.mjs > /tmp/blind-reveal-results.json
+      - run: diff experiments/blind_relation_v0/reveals/2026-10-19-agent01/results.json /tmp/blind-reveal-results.json
       - run: node tools/knowledge/selftest.mjs
       - run: node tools/grammar/selftest.mjs
       - run: node tools/dialogue/selftest.mjs

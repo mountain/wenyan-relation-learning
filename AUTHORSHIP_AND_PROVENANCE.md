@@ -73,6 +73,25 @@ does not grant native Adva learning authority or general language understanding.
   `KnownFiniteGrammar`/12 `Unknown` are output-shape counts, not accuracy.
   `native_admission=false` and `native_state_write=false` remain unchanged.
 
+## Provenance register: 2026-11-14
+
+### P-2026-11-14-01 — Authenticated blind reveal and scoring
+
+- **Human direction:** Mingli Yuan requested advancing the next minimum action
+  after the prediction lock had entered main.
+- **Agent contribution:** Codex (OpenAI) retrieved the custodian opening only
+  after commit `a75492d`, verified the salted SHA-256 commitment and AES-256-GCM
+  envelope against exact public bytes, implemented deterministic all-row
+  scoring, and recorded the reveal, results and CI replay.
+- **Result:** 36/36 in-profile ordered-role tuples and 18/18 registered
+  agent/theme reversal pairs were correct; all six paraphrases and all six
+  grammar-boundary rows returned `Unknown`; there were zero false acceptances
+  and zero execution failures.
+- **Boundary:** the paraphrase arm supplies no positive synonym-generalization
+  evidence. The experiment covers only the frozen three-construction external
+  profile, uses same-model-family task isolation rather than independent human
+  review, and grants no native admission or state-write authority.
+
 ## Contribution interpretation
 
 Mingli Yuan is the human research director, acceptance/release authority and

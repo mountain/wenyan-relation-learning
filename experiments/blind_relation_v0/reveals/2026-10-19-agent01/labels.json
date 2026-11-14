@@ -1,0 +1,1058 @@
+{
+  "schema": "wenyan.blind-relation.labels.v1",
+  "batch_id": "2026-10-19-agent01",
+  "queries_sha256": "aed71ae9005ebc6788a9630f5c9ccde41e58c75de6c8d65c8f738aa7f9640947",
+  "supervisor_kind": "task-isolated Codex agent; same OpenAI/model family",
+  "scoring": {
+    "role_order": [
+      "agent",
+      "recipient",
+      "theme"
+    ],
+    "Unknown_semantics": "Unknown is a parser-scope or execution result, never a natural-language correctness label. Clear paraphrases have intended semantic roles even though outside the frozen finite grammar. Boundary rows have no uniquely selected complete relation under this single-relation task.",
+    "KnownFiniteGrammar_semantics": "An accepted parse is compared with the exact intended ordered entity tuple; acceptance does not certify general language correctness or grant native authority.",
+    "in_profile_role_accuracy": "Numerator: in-profile rows returning KnownFiniteGrammar and the exact intended tuple; denominator: all 36 in-profile rows. Unknown, errors and missing rows stay in denominator.",
+    "agent_patient_reversal_consistency": "patient is operationally theme here. Use the 18 unique in-profile agent_theme pairs: success only when both accepted tuples equal their intended tuples and swap agent/theme while preserving recipient. Report numerator, denominator and rate. Extra agent_recipient/recipient_theme links are supplied separately and are not silently substituted.",
+    "paraphrase_known_finite_grammar_count": "Count all KnownFiniteGrammar returns among the six semantically unique paraphrase rows, and additionally disclose exact-tuple correctness among those accepted rows.",
+    "paraphrase_unknown_count": "Count Unknown returns among the six paraphrase rows; retain execution failures separately. This count measures scope behavior, not whether the text has a coherent meaning.",
+    "boundary_unknown_rate": "Numerator: Unknown returns among six boundary rows; denominator: all six boundary rows. Failures/missing rows remain denominator and are reported separately.",
+    "false_acceptance_count": "Across all 12 diagnostic rows, count each KnownFiniteGrammar return with no unique intended relation OR with a tuple differing from the intended tuple. Disclose paraphrase and boundary contributions separately. Correctly accepted paraphrases are not false acceptances.",
+    "execution_failure_count": "Count every execution error, timeout, malformed/partial record or missing result without retry or exclusion; additionally report breakdown by arm.",
+    "ordering": "Freeze public query bytes and labels commitment, then commit prediction bytes digest before any opening. Only after that may labels be disclosed and all 48 rows scored.",
+    "tuning": "Any post-result tuning of code, grammar, labels, thresholds or metrics makes this development data and requires a fresh final cohort."
+  },
+  "records": [
+    {
+      "id": "q-1d8a50680cb4e5dc",
+      "text": "「疏钟」获其所授「玉环」。",
+      "arm": "boundary",
+      "intended": null,
+      "reason": "Unresolved 其 leaves the donor unidentified.",
+      "unique_relation": false,
+      "parser_scope_expectation": "Unknown",
+      "reversal_links": {},
+      "same_relation_other_constructions": []
+    },
+    {
+      "id": "q-53ffc1ac7d41de6c",
+      "text": "「凝璧」获「栖岚」所授「照汀」。",
+      "arm": "in_profile",
+      "intended": {
+        "agent": "栖岚",
+        "recipient": "凝璧",
+        "theme": "照汀"
+      },
+      "reason": null,
+      "construction": 2,
+      "entity_group": 0,
+      "unique_relation": true,
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "reversal_links": {
+        "agent_theme": "q-7ad577f82bbe7ba7",
+        "agent_recipient": "q-c86087176d5437c9",
+        "recipient_theme": "q-5dadb92ac8478bfe"
+      },
+      "same_relation_other_constructions": [
+        "q-4b925a31c470df16",
+        "q-2abd094d1bfc98a9"
+      ]
+    },
+    {
+      "id": "q-5a072b2cfd8f2278",
+      "text": "「照汀」获「凝璧」所授「栖岚」。",
+      "arm": "in_profile",
+      "intended": {
+        "agent": "凝璧",
+        "recipient": "照汀",
+        "theme": "栖岚"
+      },
+      "reason": null,
+      "construction": 2,
+      "entity_group": 0,
+      "unique_relation": true,
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "reversal_links": {
+        "agent_theme": "q-5dadb92ac8478bfe",
+        "agent_recipient": "q-7ad577f82bbe7ba7",
+        "recipient_theme": "q-c86087176d5437c9"
+      },
+      "same_relation_other_constructions": [
+        "q-c0c23dc7b244a828",
+        "q-4da9dc7d2a919ce0"
+      ]
+    },
+    {
+      "id": "q-b49dfb42b72f7315",
+      "text": "「映雪」授「澄霄」「闻溪」。",
+      "arm": "in_profile",
+      "intended": {
+        "agent": "映雪",
+        "recipient": "澄霄",
+        "theme": "闻溪"
+      },
+      "reason": null,
+      "construction": 0,
+      "entity_group": 1,
+      "unique_relation": true,
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "reversal_links": {
+        "agent_theme": "q-86912562fd92ec2a",
+        "agent_recipient": "q-b846f09205ca89ce",
+        "recipient_theme": "q-9fd26471cf3c5697"
+      },
+      "same_relation_other_constructions": [
+        "q-1512b0a90cc10f33",
+        "q-96d5a4200485107b"
+      ]
+    },
+    {
+      "id": "q-e6377d79bcb74477",
+      "text": "「石泉」得「兰舟」所赠之「玉筹」。",
+      "arm": "paraphrase",
+      "intended": {
+        "agent": "兰舟",
+        "recipient": "石泉",
+        "theme": "玉筹"
+      },
+      "reason": "得 marks receipt; 所赠之 identifies donor and gift.",
+      "unique_relation": true,
+      "parser_scope_expectation": "Unknown",
+      "reversal_links": {
+        "agent_recipient": "q-b936b6f926f9e2ab"
+      },
+      "same_relation_other_constructions": []
+    },
+    {
+      "id": "q-3fc2286818cdd770",
+      "text": "「闻溪」获「映雪」所授「澄霄」。",
+      "arm": "in_profile",
+      "intended": {
+        "agent": "映雪",
+        "recipient": "闻溪",
+        "theme": "澄霄"
+      },
+      "reason": null,
+      "construction": 2,
+      "entity_group": 1,
+      "unique_relation": true,
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "reversal_links": {
+        "agent_theme": "q-ae2b3f1f26117a9d",
+        "agent_recipient": "q-85c0737acb667c94",
+        "recipient_theme": "q-96d5a4200485107b"
+      },
+      "same_relation_other_constructions": [
+        "q-9fd26471cf3c5697",
+        "q-82ec0e2b4ab7ea55"
+      ]
+    },
+    {
+      "id": "q-07c52b55a45f637b",
+      "text": "「澄霄」授「闻溪」「映雪」。",
+      "arm": "in_profile",
+      "intended": {
+        "agent": "澄霄",
+        "recipient": "闻溪",
+        "theme": "映雪"
+      },
+      "reason": null,
+      "construction": 0,
+      "entity_group": 1,
+      "unique_relation": true,
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "reversal_links": {
+        "agent_theme": "q-9fd26471cf3c5697",
+        "agent_recipient": "q-86912562fd92ec2a",
+        "recipient_theme": "q-b846f09205ca89ce"
+      },
+      "same_relation_other_constructions": [
+        "q-334e83380ee51d4a",
+        "q-ae2b3f1f26117a9d"
+      ]
+    },
+    {
+      "id": "q-3e7ba8937c9db2e2",
+      "text": "「闻溪」把「澄霄」交给「映雪」。",
+      "arm": "in_profile",
+      "intended": {
+        "agent": "闻溪",
+        "recipient": "映雪",
+        "theme": "澄霄"
+      },
+      "reason": null,
+      "construction": 1,
+      "entity_group": 1,
+      "unique_relation": true,
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "reversal_links": {
+        "agent_theme": "q-2e6cafb30c369943",
+        "agent_recipient": "q-82ec0e2b4ab7ea55",
+        "recipient_theme": "q-e546b1fac2e4d286"
+      },
+      "same_relation_other_constructions": [
+        "q-64beb96c171ecd84",
+        "q-85c0737acb667c94"
+      ]
+    },
+    {
+      "id": "q-b7d71879aae4a4d8",
+      "text": "「沧弦」付「银钥」于「墨川」。",
+      "arm": "paraphrase",
+      "intended": {
+        "agent": "沧弦",
+        "recipient": "墨川",
+        "theme": "银钥"
+      },
+      "reason": "付 is hand over; 于 marks the recipient.",
+      "unique_relation": true,
+      "parser_scope_expectation": "Unknown",
+      "reversal_links": {
+        "agent_recipient": "q-5ee209a427cf32fd"
+      },
+      "same_relation_other_constructions": []
+    },
+    {
+      "id": "q-334e83380ee51d4a",
+      "text": "「澄霄」把「映雪」交给「闻溪」。",
+      "arm": "in_profile",
+      "intended": {
+        "agent": "澄霄",
+        "recipient": "闻溪",
+        "theme": "映雪"
+      },
+      "reason": null,
+      "construction": 1,
+      "entity_group": 1,
+      "unique_relation": true,
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "reversal_links": {
+        "agent_theme": "q-82ec0e2b4ab7ea55",
+        "agent_recipient": "q-e546b1fac2e4d286",
+        "recipient_theme": "q-2e6cafb30c369943"
+      },
+      "same_relation_other_constructions": [
+        "q-07c52b55a45f637b",
+        "q-ae2b3f1f26117a9d"
+      ]
+    },
+    {
+      "id": "q-107c74a4a8ead036",
+      "text": "「云汀」赠「翠牌」于「岚客」，「岚客」又转赠「石符」于「云汀」。",
+      "arm": "boundary",
+      "intended": null,
+      "reason": "Two distinct transfer events with different themes; no distinguished single relation.",
+      "unique_relation": false,
+      "parser_scope_expectation": "Unknown",
+      "reversal_links": {},
+      "same_relation_other_constructions": []
+    },
+    {
+      "id": "q-c86087176d5437c9",
+      "text": "「栖岚」获「凝璧」所授「照汀」。",
+      "arm": "in_profile",
+      "intended": {
+        "agent": "凝璧",
+        "recipient": "栖岚",
+        "theme": "照汀"
+      },
+      "reason": null,
+      "construction": 2,
+      "entity_group": 0,
+      "unique_relation": true,
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "reversal_links": {
+        "agent_theme": "q-871b6697883c1f2e",
+        "agent_recipient": "q-53ffc1ac7d41de6c",
+        "recipient_theme": "q-5a072b2cfd8f2278"
+      },
+      "same_relation_other_constructions": [
+        "q-6003df1d0824d034",
+        "q-c419d7387cc516fa"
+      ]
+    },
+    {
+      "id": "q-b83b872c39f8abb1",
+      "text": "「栖岚」授「照汀」「凝璧」。",
+      "arm": "in_profile",
+      "intended": {
+        "agent": "栖岚",
+        "recipient": "照汀",
+        "theme": "凝璧"
+      },
+      "reason": null,
+      "construction": 0,
+      "entity_group": 0,
+      "unique_relation": true,
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "reversal_links": {
+        "agent_theme": "q-c0c23dc7b244a828",
+        "agent_recipient": "q-b66e6afb65e968bc",
+        "recipient_theme": "q-4b925a31c470df16"
+      },
+      "same_relation_other_constructions": [
+        "q-2eb8d0a317fc84c8",
+        "q-5dadb92ac8478bfe"
+      ]
+    },
+    {
+      "id": "q-b66e6afb65e968bc",
+      "text": "「照汀」授「栖岚」「凝璧」。",
+      "arm": "in_profile",
+      "intended": {
+        "agent": "照汀",
+        "recipient": "栖岚",
+        "theme": "凝璧"
+      },
+      "reason": null,
+      "construction": 0,
+      "entity_group": 0,
+      "unique_relation": true,
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "reversal_links": {
+        "agent_theme": "q-6003df1d0824d034",
+        "agent_recipient": "q-b83b872c39f8abb1",
+        "recipient_theme": "q-8538e6040e6de914"
+      },
+      "same_relation_other_constructions": [
+        "q-0b1e11a3a151977f",
+        "q-871b6697883c1f2e"
+      ]
+    },
+    {
+      "id": "q-85c0737acb667c94",
+      "text": "「映雪」获「闻溪」所授「澄霄」。",
+      "arm": "in_profile",
+      "intended": {
+        "agent": "闻溪",
+        "recipient": "映雪",
+        "theme": "澄霄"
+      },
+      "reason": null,
+      "construction": 2,
+      "entity_group": 1,
+      "unique_relation": true,
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "reversal_links": {
+        "agent_theme": "q-4b5ae357486d86f8",
+        "agent_recipient": "q-3fc2286818cdd770",
+        "recipient_theme": "q-de72cd07669e8a33"
+      },
+      "same_relation_other_constructions": [
+        "q-64beb96c171ecd84",
+        "q-3e7ba8937c9db2e2"
+      ]
+    },
+    {
+      "id": "q-326532c796b43b7b",
+      "text": "「岑渚」以「玄印」予「洛衡」。",
+      "arm": "paraphrase",
+      "intended": {
+        "agent": "岑渚",
+        "recipient": "洛衡",
+        "theme": "玄印"
+      },
+      "reason": "予 is give; 以 marks the transferred object.",
+      "unique_relation": true,
+      "parser_scope_expectation": "Unknown",
+      "reversal_links": {
+        "agent_recipient": "q-a3ce7b24278401dd"
+      },
+      "same_relation_other_constructions": []
+    },
+    {
+      "id": "q-1512b0a90cc10f33",
+      "text": "「映雪」把「闻溪」交给「澄霄」。",
+      "arm": "in_profile",
+      "intended": {
+        "agent": "映雪",
+        "recipient": "澄霄",
+        "theme": "闻溪"
+      },
+      "reason": null,
+      "construction": 1,
+      "entity_group": 1,
+      "unique_relation": true,
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "reversal_links": {
+        "agent_theme": "q-e546b1fac2e4d286",
+        "agent_recipient": "q-2e6cafb30c369943",
+        "recipient_theme": "q-82ec0e2b4ab7ea55"
+      },
+      "same_relation_other_constructions": [
+        "q-b49dfb42b72f7315",
+        "q-96d5a4200485107b"
+      ]
+    },
+    {
+      "id": "q-4da9dc7d2a919ce0",
+      "text": "「凝璧」把「栖岚」交给「照汀」。",
+      "arm": "in_profile",
+      "intended": {
+        "agent": "凝璧",
+        "recipient": "照汀",
+        "theme": "栖岚"
+      },
+      "reason": null,
+      "construction": 1,
+      "entity_group": 0,
+      "unique_relation": true,
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "reversal_links": {
+        "agent_theme": "q-2eb8d0a317fc84c8",
+        "agent_recipient": "q-30318270b53a2c59",
+        "recipient_theme": "q-c419d7387cc516fa"
+      },
+      "same_relation_other_constructions": [
+        "q-c0c23dc7b244a828",
+        "q-5a072b2cfd8f2278"
+      ]
+    },
+    {
+      "id": "q-4b925a31c470df16",
+      "text": "「栖岚」授「凝璧」「照汀」。",
+      "arm": "in_profile",
+      "intended": {
+        "agent": "栖岚",
+        "recipient": "凝璧",
+        "theme": "照汀"
+      },
+      "reason": null,
+      "construction": 0,
+      "entity_group": 0,
+      "unique_relation": true,
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "reversal_links": {
+        "agent_theme": "q-8538e6040e6de914",
+        "agent_recipient": "q-6003df1d0824d034",
+        "recipient_theme": "q-b83b872c39f8abb1"
+      },
+      "same_relation_other_constructions": [
+        "q-2abd094d1bfc98a9",
+        "q-53ffc1ac7d41de6c"
+      ]
+    },
+    {
+      "id": "q-6003df1d0824d034",
+      "text": "「凝璧」授「栖岚」「照汀」。",
+      "arm": "in_profile",
+      "intended": {
+        "agent": "凝璧",
+        "recipient": "栖岚",
+        "theme": "照汀"
+      },
+      "reason": null,
+      "construction": 0,
+      "entity_group": 0,
+      "unique_relation": true,
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "reversal_links": {
+        "agent_theme": "q-b66e6afb65e968bc",
+        "agent_recipient": "q-4b925a31c470df16",
+        "recipient_theme": "q-c0c23dc7b244a828"
+      },
+      "same_relation_other_constructions": [
+        "q-c419d7387cc516fa",
+        "q-c86087176d5437c9"
+      ]
+    },
+    {
+      "id": "q-de72cd07669e8a33",
+      "text": "「澄霄」获「闻溪」所授「映雪」。",
+      "arm": "in_profile",
+      "intended": {
+        "agent": "闻溪",
+        "recipient": "澄霄",
+        "theme": "映雪"
+      },
+      "reason": null,
+      "construction": 2,
+      "entity_group": 1,
+      "unique_relation": true,
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "reversal_links": {
+        "agent_theme": "q-96d5a4200485107b",
+        "agent_recipient": "q-ae2b3f1f26117a9d",
+        "recipient_theme": "q-85c0737acb667c94"
+      },
+      "same_relation_other_constructions": [
+        "q-86912562fd92ec2a",
+        "q-e546b1fac2e4d286"
+      ]
+    },
+    {
+      "id": "q-b936b6f926f9e2ab",
+      "text": "「兰舟」得「石泉」所赠之「玉筹」。",
+      "arm": "paraphrase",
+      "intended": {
+        "agent": "石泉",
+        "recipient": "兰舟",
+        "theme": "玉筹"
+      },
+      "reason": "得 marks receipt; 所赠之 identifies donor and gift.",
+      "unique_relation": true,
+      "parser_scope_expectation": "Unknown",
+      "reversal_links": {
+        "agent_recipient": "q-e6377d79bcb74477"
+      },
+      "same_relation_other_constructions": []
+    },
+    {
+      "id": "q-8538e6040e6de914",
+      "text": "「照汀」授「凝璧」「栖岚」。",
+      "arm": "in_profile",
+      "intended": {
+        "agent": "照汀",
+        "recipient": "凝璧",
+        "theme": "栖岚"
+      },
+      "reason": null,
+      "construction": 0,
+      "entity_group": 0,
+      "unique_relation": true,
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "reversal_links": {
+        "agent_theme": "q-4b925a31c470df16",
+        "agent_recipient": "q-c0c23dc7b244a828",
+        "recipient_theme": "q-b66e6afb65e968bc"
+      },
+      "same_relation_other_constructions": [
+        "q-30318270b53a2c59",
+        "q-7ad577f82bbe7ba7"
+      ]
+    },
+    {
+      "id": "q-9fd26471cf3c5697",
+      "text": "「映雪」授「闻溪」「澄霄」。",
+      "arm": "in_profile",
+      "intended": {
+        "agent": "映雪",
+        "recipient": "闻溪",
+        "theme": "澄霄"
+      },
+      "reason": null,
+      "construction": 0,
+      "entity_group": 1,
+      "unique_relation": true,
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "reversal_links": {
+        "agent_theme": "q-07c52b55a45f637b",
+        "agent_recipient": "q-64beb96c171ecd84",
+        "recipient_theme": "q-b49dfb42b72f7315"
+      },
+      "same_relation_other_constructions": [
+        "q-82ec0e2b4ab7ea55",
+        "q-3fc2286818cdd770"
+      ]
+    },
+    {
+      "id": "q-2e6cafb30c369943",
+      "text": "「澄霄」把「闻溪」交给「映雪」。",
+      "arm": "in_profile",
+      "intended": {
+        "agent": "澄霄",
+        "recipient": "映雪",
+        "theme": "闻溪"
+      },
+      "reason": null,
+      "construction": 1,
+      "entity_group": 1,
+      "unique_relation": true,
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "reversal_links": {
+        "agent_theme": "q-3e7ba8937c9db2e2",
+        "agent_recipient": "q-1512b0a90cc10f33",
+        "recipient_theme": "q-334e83380ee51d4a"
+      },
+      "same_relation_other_constructions": [
+        "q-b846f09205ca89ce",
+        "q-4b5ae357486d86f8"
+      ]
+    },
+    {
+      "id": "q-c419d7387cc516fa",
+      "text": "「凝璧」把「照汀」交给「栖岚」。",
+      "arm": "in_profile",
+      "intended": {
+        "agent": "凝璧",
+        "recipient": "栖岚",
+        "theme": "照汀"
+      },
+      "reason": null,
+      "construction": 1,
+      "entity_group": 0,
+      "unique_relation": true,
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "reversal_links": {
+        "agent_theme": "q-0b1e11a3a151977f",
+        "agent_recipient": "q-2abd094d1bfc98a9",
+        "recipient_theme": "q-4da9dc7d2a919ce0"
+      },
+      "same_relation_other_constructions": [
+        "q-6003df1d0824d034",
+        "q-c86087176d5437c9"
+      ]
+    },
+    {
+      "id": "q-ae2b3f1f26117a9d",
+      "text": "「闻溪」获「澄霄」所授「映雪」。",
+      "arm": "in_profile",
+      "intended": {
+        "agent": "澄霄",
+        "recipient": "闻溪",
+        "theme": "映雪"
+      },
+      "reason": null,
+      "construction": 2,
+      "entity_group": 1,
+      "unique_relation": true,
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "reversal_links": {
+        "agent_theme": "q-3fc2286818cdd770",
+        "agent_recipient": "q-de72cd07669e8a33",
+        "recipient_theme": "q-4b5ae357486d86f8"
+      },
+      "same_relation_other_constructions": [
+        "q-07c52b55a45f637b",
+        "q-334e83380ee51d4a"
+      ]
+    },
+    {
+      "id": "q-1edea097002e6280",
+      "text": "「汀兰」把「紫绶」交给谁？",
+      "arm": "boundary",
+      "intended": null,
+      "reason": "Interrogative recipient is unresolved; no unique full ordered triple.",
+      "unique_relation": false,
+      "parser_scope_expectation": "Unknown",
+      "reversal_links": {},
+      "same_relation_other_constructions": []
+    },
+    {
+      "id": "q-64beb96c171ecd84",
+      "text": "「闻溪」授「映雪」「澄霄」。",
+      "arm": "in_profile",
+      "intended": {
+        "agent": "闻溪",
+        "recipient": "映雪",
+        "theme": "澄霄"
+      },
+      "reason": null,
+      "construction": 0,
+      "entity_group": 1,
+      "unique_relation": true,
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "reversal_links": {
+        "agent_theme": "q-b846f09205ca89ce",
+        "agent_recipient": "q-9fd26471cf3c5697",
+        "recipient_theme": "q-86912562fd92ec2a"
+      },
+      "same_relation_other_constructions": [
+        "q-3e7ba8937c9db2e2",
+        "q-85c0737acb667c94"
+      ]
+    },
+    {
+      "id": "q-82ec0e2b4ab7ea55",
+      "text": "「映雪」把「澄霄」交给「闻溪」。",
+      "arm": "in_profile",
+      "intended": {
+        "agent": "映雪",
+        "recipient": "闻溪",
+        "theme": "澄霄"
+      },
+      "reason": null,
+      "construction": 1,
+      "entity_group": 1,
+      "unique_relation": true,
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "reversal_links": {
+        "agent_theme": "q-334e83380ee51d4a",
+        "agent_recipient": "q-3e7ba8937c9db2e2",
+        "recipient_theme": "q-1512b0a90cc10f33"
+      },
+      "same_relation_other_constructions": [
+        "q-9fd26471cf3c5697",
+        "q-3fc2286818cdd770"
+      ]
+    },
+    {
+      "id": "q-871b6697883c1f2e",
+      "text": "「栖岚」获「照汀」所授「凝璧」。",
+      "arm": "in_profile",
+      "intended": {
+        "agent": "照汀",
+        "recipient": "栖岚",
+        "theme": "凝璧"
+      },
+      "reason": null,
+      "construction": 2,
+      "entity_group": 0,
+      "unique_relation": true,
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "reversal_links": {
+        "agent_theme": "q-c86087176d5437c9",
+        "agent_recipient": "q-5dadb92ac8478bfe",
+        "recipient_theme": "q-7ad577f82bbe7ba7"
+      },
+      "same_relation_other_constructions": [
+        "q-b66e6afb65e968bc",
+        "q-0b1e11a3a151977f"
+      ]
+    },
+    {
+      "id": "q-86912562fd92ec2a",
+      "text": "「闻溪」授「澄霄」「映雪」。",
+      "arm": "in_profile",
+      "intended": {
+        "agent": "闻溪",
+        "recipient": "澄霄",
+        "theme": "映雪"
+      },
+      "reason": null,
+      "construction": 0,
+      "entity_group": 1,
+      "unique_relation": true,
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "reversal_links": {
+        "agent_theme": "q-b49dfb42b72f7315",
+        "agent_recipient": "q-07c52b55a45f637b",
+        "recipient_theme": "q-64beb96c171ecd84"
+      },
+      "same_relation_other_constructions": [
+        "q-e546b1fac2e4d286",
+        "q-de72cd07669e8a33"
+      ]
+    },
+    {
+      "id": "q-96d5a4200485107b",
+      "text": "「澄霄」获「映雪」所授「闻溪」。",
+      "arm": "in_profile",
+      "intended": {
+        "agent": "映雪",
+        "recipient": "澄霄",
+        "theme": "闻溪"
+      },
+      "reason": null,
+      "construction": 2,
+      "entity_group": 1,
+      "unique_relation": true,
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "reversal_links": {
+        "agent_theme": "q-de72cd07669e8a33",
+        "agent_recipient": "q-4b5ae357486d86f8",
+        "recipient_theme": "q-3fc2286818cdd770"
+      },
+      "same_relation_other_constructions": [
+        "q-b49dfb42b72f7315",
+        "q-1512b0a90cc10f33"
+      ]
+    },
+    {
+      "id": "q-44190d6ca74d5bb4",
+      "text": "「晴渡」把「银笺」交给「临波」或「远棠」。",
+      "arm": "boundary",
+      "intended": null,
+      "reason": "Two alternative recipient candidates; no unique recipient.",
+      "unique_relation": false,
+      "parser_scope_expectation": "Unknown",
+      "reversal_links": {},
+      "same_relation_other_constructions": []
+    },
+    {
+      "id": "q-e546b1fac2e4d286",
+      "text": "「闻溪」把「映雪」交给「澄霄」。",
+      "arm": "in_profile",
+      "intended": {
+        "agent": "闻溪",
+        "recipient": "澄霄",
+        "theme": "映雪"
+      },
+      "reason": null,
+      "construction": 1,
+      "entity_group": 1,
+      "unique_relation": true,
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "reversal_links": {
+        "agent_theme": "q-1512b0a90cc10f33",
+        "agent_recipient": "q-334e83380ee51d4a",
+        "recipient_theme": "q-3e7ba8937c9db2e2"
+      },
+      "same_relation_other_constructions": [
+        "q-86912562fd92ec2a",
+        "q-de72cd07669e8a33"
+      ]
+    },
+    {
+      "id": "q-2abd094d1bfc98a9",
+      "text": "「栖岚」把「照汀」交给「凝璧」。",
+      "arm": "in_profile",
+      "intended": {
+        "agent": "栖岚",
+        "recipient": "凝璧",
+        "theme": "照汀"
+      },
+      "reason": null,
+      "construction": 1,
+      "entity_group": 0,
+      "unique_relation": true,
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "reversal_links": {
+        "agent_theme": "q-30318270b53a2c59",
+        "agent_recipient": "q-c419d7387cc516fa",
+        "recipient_theme": "q-2eb8d0a317fc84c8"
+      },
+      "same_relation_other_constructions": [
+        "q-4b925a31c470df16",
+        "q-53ffc1ac7d41de6c"
+      ]
+    },
+    {
+      "id": "q-6a2470fb3e06853e",
+      "text": "「松砚」授「竹澜」。",
+      "arm": "boundary",
+      "intended": null,
+      "reason": "Only two named entities; the complete agent, recipient and theme triple is not uniquely supplied.",
+      "unique_relation": false,
+      "parser_scope_expectation": "Unknown",
+      "reversal_links": {},
+      "same_relation_other_constructions": []
+    },
+    {
+      "id": "q-c0c23dc7b244a828",
+      "text": "「凝璧」授「照汀」「栖岚」。",
+      "arm": "in_profile",
+      "intended": {
+        "agent": "凝璧",
+        "recipient": "照汀",
+        "theme": "栖岚"
+      },
+      "reason": null,
+      "construction": 0,
+      "entity_group": 0,
+      "unique_relation": true,
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "reversal_links": {
+        "agent_theme": "q-b83b872c39f8abb1",
+        "agent_recipient": "q-8538e6040e6de914",
+        "recipient_theme": "q-6003df1d0824d034"
+      },
+      "same_relation_other_constructions": [
+        "q-4da9dc7d2a919ce0",
+        "q-5a072b2cfd8f2278"
+      ]
+    },
+    {
+      "id": "q-2eb8d0a317fc84c8",
+      "text": "「栖岚」把「凝璧」交给「照汀」。",
+      "arm": "in_profile",
+      "intended": {
+        "agent": "栖岚",
+        "recipient": "照汀",
+        "theme": "凝璧"
+      },
+      "reason": null,
+      "construction": 1,
+      "entity_group": 0,
+      "unique_relation": true,
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "reversal_links": {
+        "agent_theme": "q-4da9dc7d2a919ce0",
+        "agent_recipient": "q-0b1e11a3a151977f",
+        "recipient_theme": "q-2abd094d1bfc98a9"
+      },
+      "same_relation_other_constructions": [
+        "q-b83b872c39f8abb1",
+        "q-5dadb92ac8478bfe"
+      ]
+    },
+    {
+      "id": "q-0b1e11a3a151977f",
+      "text": "「照汀」把「凝璧」交给「栖岚」。",
+      "arm": "in_profile",
+      "intended": {
+        "agent": "照汀",
+        "recipient": "栖岚",
+        "theme": "凝璧"
+      },
+      "reason": null,
+      "construction": 1,
+      "entity_group": 0,
+      "unique_relation": true,
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "reversal_links": {
+        "agent_theme": "q-c419d7387cc516fa",
+        "agent_recipient": "q-2eb8d0a317fc84c8",
+        "recipient_theme": "q-30318270b53a2c59"
+      },
+      "same_relation_other_constructions": [
+        "q-b66e6afb65e968bc",
+        "q-871b6697883c1f2e"
+      ]
+    },
+    {
+      "id": "q-4b5ae357486d86f8",
+      "text": "「映雪」获「澄霄」所授「闻溪」。",
+      "arm": "in_profile",
+      "intended": {
+        "agent": "澄霄",
+        "recipient": "映雪",
+        "theme": "闻溪"
+      },
+      "reason": null,
+      "construction": 2,
+      "entity_group": 1,
+      "unique_relation": true,
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "reversal_links": {
+        "agent_theme": "q-85c0737acb667c94",
+        "agent_recipient": "q-96d5a4200485107b",
+        "recipient_theme": "q-ae2b3f1f26117a9d"
+      },
+      "same_relation_other_constructions": [
+        "q-b846f09205ca89ce",
+        "q-2e6cafb30c369943"
+      ]
+    },
+    {
+      "id": "q-ec81597fe01ccc96",
+      "text": "「素川」授「丹峤」「墨札」，抑「丹峤」授「素川」「墨札」？",
+      "arm": "boundary",
+      "intended": null,
+      "reason": "Question explicitly presents alternative directions; no unique agent and recipient.",
+      "unique_relation": false,
+      "parser_scope_expectation": "Unknown",
+      "reversal_links": {},
+      "same_relation_other_constructions": []
+    },
+    {
+      "id": "q-a3ce7b24278401dd",
+      "text": "「洛衡」以「玄印」予「岑渚」。",
+      "arm": "paraphrase",
+      "intended": {
+        "agent": "洛衡",
+        "recipient": "岑渚",
+        "theme": "玄印"
+      },
+      "reason": "予 is give; 以 marks the transferred object.",
+      "unique_relation": true,
+      "parser_scope_expectation": "Unknown",
+      "reversal_links": {
+        "agent_recipient": "q-326532c796b43b7b"
+      },
+      "same_relation_other_constructions": []
+    },
+    {
+      "id": "q-30318270b53a2c59",
+      "text": "「照汀」把「栖岚」交给「凝璧」。",
+      "arm": "in_profile",
+      "intended": {
+        "agent": "照汀",
+        "recipient": "凝璧",
+        "theme": "栖岚"
+      },
+      "reason": null,
+      "construction": 1,
+      "entity_group": 0,
+      "unique_relation": true,
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "reversal_links": {
+        "agent_theme": "q-2abd094d1bfc98a9",
+        "agent_recipient": "q-4da9dc7d2a919ce0",
+        "recipient_theme": "q-0b1e11a3a151977f"
+      },
+      "same_relation_other_constructions": [
+        "q-8538e6040e6de914",
+        "q-7ad577f82bbe7ba7"
+      ]
+    },
+    {
+      "id": "q-b846f09205ca89ce",
+      "text": "「澄霄」授「映雪」「闻溪」。",
+      "arm": "in_profile",
+      "intended": {
+        "agent": "澄霄",
+        "recipient": "映雪",
+        "theme": "闻溪"
+      },
+      "reason": null,
+      "construction": 0,
+      "entity_group": 1,
+      "unique_relation": true,
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "reversal_links": {
+        "agent_theme": "q-64beb96c171ecd84",
+        "agent_recipient": "q-b49dfb42b72f7315",
+        "recipient_theme": "q-07c52b55a45f637b"
+      },
+      "same_relation_other_constructions": [
+        "q-2e6cafb30c369943",
+        "q-4b5ae357486d86f8"
+      ]
+    },
+    {
+      "id": "q-5ee209a427cf32fd",
+      "text": "「墨川」付「银钥」于「沧弦」。",
+      "arm": "paraphrase",
+      "intended": {
+        "agent": "墨川",
+        "recipient": "沧弦",
+        "theme": "银钥"
+      },
+      "reason": "付 is hand over; 于 marks the recipient.",
+      "unique_relation": true,
+      "parser_scope_expectation": "Unknown",
+      "reversal_links": {
+        "agent_recipient": "q-b7d71879aae4a4d8"
+      },
+      "same_relation_other_constructions": []
+    },
+    {
+      "id": "q-5dadb92ac8478bfe",
+      "text": "「照汀」获「栖岚」所授「凝璧」。",
+      "arm": "in_profile",
+      "intended": {
+        "agent": "栖岚",
+        "recipient": "照汀",
+        "theme": "凝璧"
+      },
+      "reason": null,
+      "construction": 2,
+      "entity_group": 0,
+      "unique_relation": true,
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "reversal_links": {
+        "agent_theme": "q-5a072b2cfd8f2278",
+        "agent_recipient": "q-871b6697883c1f2e",
+        "recipient_theme": "q-53ffc1ac7d41de6c"
+      },
+      "same_relation_other_constructions": [
+        "q-b83b872c39f8abb1",
+        "q-2eb8d0a317fc84c8"
+      ]
+    },
+    {
+      "id": "q-7ad577f82bbe7ba7",
+      "text": "「凝璧」获「照汀」所授「栖岚」。",
+      "arm": "in_profile",
+      "intended": {
+        "agent": "照汀",
+        "recipient": "凝璧",
+        "theme": "栖岚"
+      },
+      "reason": null,
+      "construction": 2,
+      "entity_group": 0,
+      "unique_relation": true,
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "reversal_links": {
+        "agent_theme": "q-53ffc1ac7d41de6c",
+        "agent_recipient": "q-5a072b2cfd8f2278",
+        "recipient_theme": "q-871b6697883c1f2e"
+      },
+      "same_relation_other_constructions": [
+        "q-8538e6040e6de914",
+        "q-30318270b53a2c59"
+      ]
+    }
+  ]
+}
