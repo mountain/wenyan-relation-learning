@@ -1,0 +1,22 @@
+{
+  "schema": "wenyan.blind-relation.supervisor-validation.v1",
+  "checks": {
+    "total_48_unique_ids_and_texts": true,
+    "in_profile_2_by_3_by_6": true,
+    "all_six_permutations_per_cell": true,
+    "all_quoted_entities_disjoint_from_training_entities": true,
+    "in_profile_formats_identical_to_train": true,
+    "reversal_links_symmetric_and_role_consistent": true,
+    "all_48_labels_match_public_query_ids_and_texts": true,
+    "clear_paraphrases_semantically_reviewed": true,
+    "boundary_nonuniqueness_reasons_reviewed": true,
+    "cryptographic_opening_and_decryption_roundtrip": true
+  },
+  "counts": {
+    "in_profile": 36,
+    "clear_paraphrase": 6,
+    "boundary": 6,
+    "agent_theme_in_profile_pairs": 18
+  },
+  "method": "Authored labels reviewed by task-isolated supervisor plus assertions; no learner, worker, checker implementation, existing test/holdout/evidence/results or predictions read; no prediction executed."
+}
