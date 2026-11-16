@@ -1,0 +1,1047 @@
+{
+  "schema": "wenyan.blind-relation.scored-result.v1",
+  "batch_id": "2026-10-19-agent01",
+  "status": "Scored",
+  "prediction_lock": {
+    "commit": "a75492d914d09524d8e8220ac80e196d8ad73ce7",
+    "sha256": "c084a7072c4f91f6c8015eef499a07f7c62a98cf3b64bcc68d07150d6d7d5d74"
+  },
+  "opening_verification": {
+    "public_query_bytes_match": true,
+    "salted_label_commitment_match": true,
+    "encrypted_envelope_sha256_match": true,
+    "aes_256_gcm_authenticated_decryption_match": true,
+    "row_id_and_text_correspondence_match": true
+  },
+  "metrics": {
+    "in_profile_role_accuracy": {
+      "numerator": 36,
+      "denominator": 36,
+      "rate": 1
+    },
+    "agent_patient_reversal_consistency": {
+      "operational_patient": "theme",
+      "numerator": 18,
+      "denominator": 18,
+      "rate": 1
+    },
+    "paraphrase_known_finite_grammar_count": 0,
+    "paraphrase_exact_tuple_among_accepted": {
+      "numerator": 0,
+      "denominator": 0,
+      "rate": null
+    },
+    "paraphrase_unknown_count": 6,
+    "boundary_unknown_rate": {
+      "numerator": 6,
+      "denominator": 6,
+      "rate": 1
+    },
+    "false_acceptance_count": {
+      "total": 0,
+      "paraphrase": 0,
+      "boundary": 0
+    },
+    "execution_failure_count": {
+      "total": 0,
+      "by_arm": {
+        "in_profile": 0,
+        "paraphrase": 0,
+        "boundary": 0
+      }
+    }
+  },
+  "boundaries": {
+    "finite_three_construction_external_profile_only": true,
+    "independent_human_review": false,
+    "native_admission": false,
+    "native_state_write": false,
+    "general_wenyan_understanding_claimed": false
+  },
+  "rows": [
+    {
+      "id": "q-1d8a50680cb4e5dc",
+      "arm": "boundary",
+      "parser_scope_expectation": "Unknown",
+      "unique_relation": false,
+      "intended_roles": null,
+      "prediction": {
+        "status": "Unknown",
+        "reason": "outside-profile"
+      },
+      "exact_role_match": false,
+      "false_acceptance": false,
+      "execution_failure": false
+    },
+    {
+      "id": "q-53ffc1ac7d41de6c",
+      "arm": "in_profile",
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "unique_relation": true,
+      "intended_roles": [
+        "栖岚",
+        "凝璧",
+        "照汀"
+      ],
+      "prediction": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "栖岚",
+          "凝璧",
+          "照汀"
+        ]
+      },
+      "exact_role_match": true,
+      "false_acceptance": false,
+      "execution_failure": false
+    },
+    {
+      "id": "q-5a072b2cfd8f2278",
+      "arm": "in_profile",
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "unique_relation": true,
+      "intended_roles": [
+        "凝璧",
+        "照汀",
+        "栖岚"
+      ],
+      "prediction": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "凝璧",
+          "照汀",
+          "栖岚"
+        ]
+      },
+      "exact_role_match": true,
+      "false_acceptance": false,
+      "execution_failure": false
+    },
+    {
+      "id": "q-b49dfb42b72f7315",
+      "arm": "in_profile",
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "unique_relation": true,
+      "intended_roles": [
+        "映雪",
+        "澄霄",
+        "闻溪"
+      ],
+      "prediction": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "映雪",
+          "澄霄",
+          "闻溪"
+        ]
+      },
+      "exact_role_match": true,
+      "false_acceptance": false,
+      "execution_failure": false
+    },
+    {
+      "id": "q-e6377d79bcb74477",
+      "arm": "paraphrase",
+      "parser_scope_expectation": "Unknown",
+      "unique_relation": true,
+      "intended_roles": [
+        "兰舟",
+        "石泉",
+        "玉筹"
+      ],
+      "prediction": {
+        "status": "Unknown",
+        "reason": "outside-profile"
+      },
+      "exact_role_match": false,
+      "false_acceptance": false,
+      "execution_failure": false
+    },
+    {
+      "id": "q-3fc2286818cdd770",
+      "arm": "in_profile",
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "unique_relation": true,
+      "intended_roles": [
+        "映雪",
+        "闻溪",
+        "澄霄"
+      ],
+      "prediction": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "映雪",
+          "闻溪",
+          "澄霄"
+        ]
+      },
+      "exact_role_match": true,
+      "false_acceptance": false,
+      "execution_failure": false
+    },
+    {
+      "id": "q-07c52b55a45f637b",
+      "arm": "in_profile",
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "unique_relation": true,
+      "intended_roles": [
+        "澄霄",
+        "闻溪",
+        "映雪"
+      ],
+      "prediction": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "澄霄",
+          "闻溪",
+          "映雪"
+        ]
+      },
+      "exact_role_match": true,
+      "false_acceptance": false,
+      "execution_failure": false
+    },
+    {
+      "id": "q-3e7ba8937c9db2e2",
+      "arm": "in_profile",
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "unique_relation": true,
+      "intended_roles": [
+        "闻溪",
+        "映雪",
+        "澄霄"
+      ],
+      "prediction": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "闻溪",
+          "映雪",
+          "澄霄"
+        ]
+      },
+      "exact_role_match": true,
+      "false_acceptance": false,
+      "execution_failure": false
+    },
+    {
+      "id": "q-b7d71879aae4a4d8",
+      "arm": "paraphrase",
+      "parser_scope_expectation": "Unknown",
+      "unique_relation": true,
+      "intended_roles": [
+        "沧弦",
+        "墨川",
+        "银钥"
+      ],
+      "prediction": {
+        "status": "Unknown",
+        "reason": "outside-profile"
+      },
+      "exact_role_match": false,
+      "false_acceptance": false,
+      "execution_failure": false
+    },
+    {
+      "id": "q-334e83380ee51d4a",
+      "arm": "in_profile",
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "unique_relation": true,
+      "intended_roles": [
+        "澄霄",
+        "闻溪",
+        "映雪"
+      ],
+      "prediction": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "澄霄",
+          "闻溪",
+          "映雪"
+        ]
+      },
+      "exact_role_match": true,
+      "false_acceptance": false,
+      "execution_failure": false
+    },
+    {
+      "id": "q-107c74a4a8ead036",
+      "arm": "boundary",
+      "parser_scope_expectation": "Unknown",
+      "unique_relation": false,
+      "intended_roles": null,
+      "prediction": {
+        "status": "Unknown",
+        "reason": "outside-profile"
+      },
+      "exact_role_match": false,
+      "false_acceptance": false,
+      "execution_failure": false
+    },
+    {
+      "id": "q-c86087176d5437c9",
+      "arm": "in_profile",
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "unique_relation": true,
+      "intended_roles": [
+        "凝璧",
+        "栖岚",
+        "照汀"
+      ],
+      "prediction": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "凝璧",
+          "栖岚",
+          "照汀"
+        ]
+      },
+      "exact_role_match": true,
+      "false_acceptance": false,
+      "execution_failure": false
+    },
+    {
+      "id": "q-b83b872c39f8abb1",
+      "arm": "in_profile",
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "unique_relation": true,
+      "intended_roles": [
+        "栖岚",
+        "照汀",
+        "凝璧"
+      ],
+      "prediction": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "栖岚",
+          "照汀",
+          "凝璧"
+        ]
+      },
+      "exact_role_match": true,
+      "false_acceptance": false,
+      "execution_failure": false
+    },
+    {
+      "id": "q-b66e6afb65e968bc",
+      "arm": "in_profile",
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "unique_relation": true,
+      "intended_roles": [
+        "照汀",
+        "栖岚",
+        "凝璧"
+      ],
+      "prediction": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "照汀",
+          "栖岚",
+          "凝璧"
+        ]
+      },
+      "exact_role_match": true,
+      "false_acceptance": false,
+      "execution_failure": false
+    },
+    {
+      "id": "q-85c0737acb667c94",
+      "arm": "in_profile",
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "unique_relation": true,
+      "intended_roles": [
+        "闻溪",
+        "映雪",
+        "澄霄"
+      ],
+      "prediction": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "闻溪",
+          "映雪",
+          "澄霄"
+        ]
+      },
+      "exact_role_match": true,
+      "false_acceptance": false,
+      "execution_failure": false
+    },
+    {
+      "id": "q-326532c796b43b7b",
+      "arm": "paraphrase",
+      "parser_scope_expectation": "Unknown",
+      "unique_relation": true,
+      "intended_roles": [
+        "岑渚",
+        "洛衡",
+        "玄印"
+      ],
+      "prediction": {
+        "status": "Unknown",
+        "reason": "outside-profile"
+      },
+      "exact_role_match": false,
+      "false_acceptance": false,
+      "execution_failure": false
+    },
+    {
+      "id": "q-1512b0a90cc10f33",
+      "arm": "in_profile",
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "unique_relation": true,
+      "intended_roles": [
+        "映雪",
+        "澄霄",
+        "闻溪"
+      ],
+      "prediction": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "映雪",
+          "澄霄",
+          "闻溪"
+        ]
+      },
+      "exact_role_match": true,
+      "false_acceptance": false,
+      "execution_failure": false
+    },
+    {
+      "id": "q-4da9dc7d2a919ce0",
+      "arm": "in_profile",
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "unique_relation": true,
+      "intended_roles": [
+        "凝璧",
+        "照汀",
+        "栖岚"
+      ],
+      "prediction": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "凝璧",
+          "照汀",
+          "栖岚"
+        ]
+      },
+      "exact_role_match": true,
+      "false_acceptance": false,
+      "execution_failure": false
+    },
+    {
+      "id": "q-4b925a31c470df16",
+      "arm": "in_profile",
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "unique_relation": true,
+      "intended_roles": [
+        "栖岚",
+        "凝璧",
+        "照汀"
+      ],
+      "prediction": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "栖岚",
+          "凝璧",
+          "照汀"
+        ]
+      },
+      "exact_role_match": true,
+      "false_acceptance": false,
+      "execution_failure": false
+    },
+    {
+      "id": "q-6003df1d0824d034",
+      "arm": "in_profile",
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "unique_relation": true,
+      "intended_roles": [
+        "凝璧",
+        "栖岚",
+        "照汀"
+      ],
+      "prediction": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "凝璧",
+          "栖岚",
+          "照汀"
+        ]
+      },
+      "exact_role_match": true,
+      "false_acceptance": false,
+      "execution_failure": false
+    },
+    {
+      "id": "q-de72cd07669e8a33",
+      "arm": "in_profile",
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "unique_relation": true,
+      "intended_roles": [
+        "闻溪",
+        "澄霄",
+        "映雪"
+      ],
+      "prediction": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "闻溪",
+          "澄霄",
+          "映雪"
+        ]
+      },
+      "exact_role_match": true,
+      "false_acceptance": false,
+      "execution_failure": false
+    },
+    {
+      "id": "q-b936b6f926f9e2ab",
+      "arm": "paraphrase",
+      "parser_scope_expectation": "Unknown",
+      "unique_relation": true,
+      "intended_roles": [
+        "石泉",
+        "兰舟",
+        "玉筹"
+      ],
+      "prediction": {
+        "status": "Unknown",
+        "reason": "outside-profile"
+      },
+      "exact_role_match": false,
+      "false_acceptance": false,
+      "execution_failure": false
+    },
+    {
+      "id": "q-8538e6040e6de914",
+      "arm": "in_profile",
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "unique_relation": true,
+      "intended_roles": [
+        "照汀",
+        "凝璧",
+        "栖岚"
+      ],
+      "prediction": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "照汀",
+          "凝璧",
+          "栖岚"
+        ]
+      },
+      "exact_role_match": true,
+      "false_acceptance": false,
+      "execution_failure": false
+    },
+    {
+      "id": "q-9fd26471cf3c5697",
+      "arm": "in_profile",
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "unique_relation": true,
+      "intended_roles": [
+        "映雪",
+        "闻溪",
+        "澄霄"
+      ],
+      "prediction": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "映雪",
+          "闻溪",
+          "澄霄"
+        ]
+      },
+      "exact_role_match": true,
+      "false_acceptance": false,
+      "execution_failure": false
+    },
+    {
+      "id": "q-2e6cafb30c369943",
+      "arm": "in_profile",
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "unique_relation": true,
+      "intended_roles": [
+        "澄霄",
+        "映雪",
+        "闻溪"
+      ],
+      "prediction": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "澄霄",
+          "映雪",
+          "闻溪"
+        ]
+      },
+      "exact_role_match": true,
+      "false_acceptance": false,
+      "execution_failure": false
+    },
+    {
+      "id": "q-c419d7387cc516fa",
+      "arm": "in_profile",
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "unique_relation": true,
+      "intended_roles": [
+        "凝璧",
+        "栖岚",
+        "照汀"
+      ],
+      "prediction": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "凝璧",
+          "栖岚",
+          "照汀"
+        ]
+      },
+      "exact_role_match": true,
+      "false_acceptance": false,
+      "execution_failure": false
+    },
+    {
+      "id": "q-ae2b3f1f26117a9d",
+      "arm": "in_profile",
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "unique_relation": true,
+      "intended_roles": [
+        "澄霄",
+        "闻溪",
+        "映雪"
+      ],
+      "prediction": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "澄霄",
+          "闻溪",
+          "映雪"
+        ]
+      },
+      "exact_role_match": true,
+      "false_acceptance": false,
+      "execution_failure": false
+    },
+    {
+      "id": "q-1edea097002e6280",
+      "arm": "boundary",
+      "parser_scope_expectation": "Unknown",
+      "unique_relation": false,
+      "intended_roles": null,
+      "prediction": {
+        "status": "Unknown",
+        "reason": "outside-profile"
+      },
+      "exact_role_match": false,
+      "false_acceptance": false,
+      "execution_failure": false
+    },
+    {
+      "id": "q-64beb96c171ecd84",
+      "arm": "in_profile",
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "unique_relation": true,
+      "intended_roles": [
+        "闻溪",
+        "映雪",
+        "澄霄"
+      ],
+      "prediction": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "闻溪",
+          "映雪",
+          "澄霄"
+        ]
+      },
+      "exact_role_match": true,
+      "false_acceptance": false,
+      "execution_failure": false
+    },
+    {
+      "id": "q-82ec0e2b4ab7ea55",
+      "arm": "in_profile",
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "unique_relation": true,
+      "intended_roles": [
+        "映雪",
+        "闻溪",
+        "澄霄"
+      ],
+      "prediction": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "映雪",
+          "闻溪",
+          "澄霄"
+        ]
+      },
+      "exact_role_match": true,
+      "false_acceptance": false,
+      "execution_failure": false
+    },
+    {
+      "id": "q-871b6697883c1f2e",
+      "arm": "in_profile",
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "unique_relation": true,
+      "intended_roles": [
+        "照汀",
+        "栖岚",
+        "凝璧"
+      ],
+      "prediction": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "照汀",
+          "栖岚",
+          "凝璧"
+        ]
+      },
+      "exact_role_match": true,
+      "false_acceptance": false,
+      "execution_failure": false
+    },
+    {
+      "id": "q-86912562fd92ec2a",
+      "arm": "in_profile",
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "unique_relation": true,
+      "intended_roles": [
+        "闻溪",
+        "澄霄",
+        "映雪"
+      ],
+      "prediction": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "闻溪",
+          "澄霄",
+          "映雪"
+        ]
+      },
+      "exact_role_match": true,
+      "false_acceptance": false,
+      "execution_failure": false
+    },
+    {
+      "id": "q-96d5a4200485107b",
+      "arm": "in_profile",
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "unique_relation": true,
+      "intended_roles": [
+        "映雪",
+        "澄霄",
+        "闻溪"
+      ],
+      "prediction": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "映雪",
+          "澄霄",
+          "闻溪"
+        ]
+      },
+      "exact_role_match": true,
+      "false_acceptance": false,
+      "execution_failure": false
+    },
+    {
+      "id": "q-44190d6ca74d5bb4",
+      "arm": "boundary",
+      "parser_scope_expectation": "Unknown",
+      "unique_relation": false,
+      "intended_roles": null,
+      "prediction": {
+        "status": "Unknown",
+        "reason": "outside-profile"
+      },
+      "exact_role_match": false,
+      "false_acceptance": false,
+      "execution_failure": false
+    },
+    {
+      "id": "q-e546b1fac2e4d286",
+      "arm": "in_profile",
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "unique_relation": true,
+      "intended_roles": [
+        "闻溪",
+        "澄霄",
+        "映雪"
+      ],
+      "prediction": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "闻溪",
+          "澄霄",
+          "映雪"
+        ]
+      },
+      "exact_role_match": true,
+      "false_acceptance": false,
+      "execution_failure": false
+    },
+    {
+      "id": "q-2abd094d1bfc98a9",
+      "arm": "in_profile",
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "unique_relation": true,
+      "intended_roles": [
+        "栖岚",
+        "凝璧",
+        "照汀"
+      ],
+      "prediction": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "栖岚",
+          "凝璧",
+          "照汀"
+        ]
+      },
+      "exact_role_match": true,
+      "false_acceptance": false,
+      "execution_failure": false
+    },
+    {
+      "id": "q-6a2470fb3e06853e",
+      "arm": "boundary",
+      "parser_scope_expectation": "Unknown",
+      "unique_relation": false,
+      "intended_roles": null,
+      "prediction": {
+        "status": "Unknown",
+        "reason": "outside-profile"
+      },
+      "exact_role_match": false,
+      "false_acceptance": false,
+      "execution_failure": false
+    },
+    {
+      "id": "q-c0c23dc7b244a828",
+      "arm": "in_profile",
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "unique_relation": true,
+      "intended_roles": [
+        "凝璧",
+        "照汀",
+        "栖岚"
+      ],
+      "prediction": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "凝璧",
+          "照汀",
+          "栖岚"
+        ]
+      },
+      "exact_role_match": true,
+      "false_acceptance": false,
+      "execution_failure": false
+    },
+    {
+      "id": "q-2eb8d0a317fc84c8",
+      "arm": "in_profile",
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "unique_relation": true,
+      "intended_roles": [
+        "栖岚",
+        "照汀",
+        "凝璧"
+      ],
+      "prediction": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "栖岚",
+          "照汀",
+          "凝璧"
+        ]
+      },
+      "exact_role_match": true,
+      "false_acceptance": false,
+      "execution_failure": false
+    },
+    {
+      "id": "q-0b1e11a3a151977f",
+      "arm": "in_profile",
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "unique_relation": true,
+      "intended_roles": [
+        "照汀",
+        "栖岚",
+        "凝璧"
+      ],
+      "prediction": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "照汀",
+          "栖岚",
+          "凝璧"
+        ]
+      },
+      "exact_role_match": true,
+      "false_acceptance": false,
+      "execution_failure": false
+    },
+    {
+      "id": "q-4b5ae357486d86f8",
+      "arm": "in_profile",
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "unique_relation": true,
+      "intended_roles": [
+        "澄霄",
+        "映雪",
+        "闻溪"
+      ],
+      "prediction": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "澄霄",
+          "映雪",
+          "闻溪"
+        ]
+      },
+      "exact_role_match": true,
+      "false_acceptance": false,
+      "execution_failure": false
+    },
+    {
+      "id": "q-ec81597fe01ccc96",
+      "arm": "boundary",
+      "parser_scope_expectation": "Unknown",
+      "unique_relation": false,
+      "intended_roles": null,
+      "prediction": {
+        "status": "Unknown",
+        "reason": "outside-profile"
+      },
+      "exact_role_match": false,
+      "false_acceptance": false,
+      "execution_failure": false
+    },
+    {
+      "id": "q-a3ce7b24278401dd",
+      "arm": "paraphrase",
+      "parser_scope_expectation": "Unknown",
+      "unique_relation": true,
+      "intended_roles": [
+        "洛衡",
+        "岑渚",
+        "玄印"
+      ],
+      "prediction": {
+        "status": "Unknown",
+        "reason": "outside-profile"
+      },
+      "exact_role_match": false,
+      "false_acceptance": false,
+      "execution_failure": false
+    },
+    {
+      "id": "q-30318270b53a2c59",
+      "arm": "in_profile",
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "unique_relation": true,
+      "intended_roles": [
+        "照汀",
+        "凝璧",
+        "栖岚"
+      ],
+      "prediction": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "照汀",
+          "凝璧",
+          "栖岚"
+        ]
+      },
+      "exact_role_match": true,
+      "false_acceptance": false,
+      "execution_failure": false
+    },
+    {
+      "id": "q-b846f09205ca89ce",
+      "arm": "in_profile",
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "unique_relation": true,
+      "intended_roles": [
+        "澄霄",
+        "映雪",
+        "闻溪"
+      ],
+      "prediction": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "澄霄",
+          "映雪",
+          "闻溪"
+        ]
+      },
+      "exact_role_match": true,
+      "false_acceptance": false,
+      "execution_failure": false
+    },
+    {
+      "id": "q-5ee209a427cf32fd",
+      "arm": "paraphrase",
+      "parser_scope_expectation": "Unknown",
+      "unique_relation": true,
+      "intended_roles": [
+        "墨川",
+        "沧弦",
+        "银钥"
+      ],
+      "prediction": {
+        "status": "Unknown",
+        "reason": "outside-profile"
+      },
+      "exact_role_match": false,
+      "false_acceptance": false,
+      "execution_failure": false
+    },
+    {
+      "id": "q-5dadb92ac8478bfe",
+      "arm": "in_profile",
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "unique_relation": true,
+      "intended_roles": [
+        "栖岚",
+        "照汀",
+        "凝璧"
+      ],
+      "prediction": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "栖岚",
+          "照汀",
+          "凝璧"
+        ]
+      },
+      "exact_role_match": true,
+      "false_acceptance": false,
+      "execution_failure": false
+    },
+    {
+      "id": "q-7ad577f82bbe7ba7",
+      "arm": "in_profile",
+      "parser_scope_expectation": "KnownFiniteGrammar",
+      "unique_relation": true,
+      "intended_roles": [
+        "照汀",
+        "凝璧",
+        "栖岚"
+      ],
+      "prediction": {
+        "status": "KnownFiniteGrammar",
+        "roles": [
+          "照汀",
+          "凝璧",
+          "栖岚"
+        ]
+      },
+      "exact_role_match": true,
+      "false_acceptance": false,
+      "execution_failure": false
+    }
+  ]
+}

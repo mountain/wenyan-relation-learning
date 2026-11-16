@@ -1,0 +1,1911 @@
+{
+  "published_replay": {
+    "prediction_sha256": "c084a7072c4f91f6c8015eef499a07f7c62a98cf3b64bcc68d07150d6d7d5d74",
+    "byte_identical": true,
+    "counts_by_arm": {
+      "boundary": {
+        "Unknown": 6
+      },
+      "in_profile": {
+        "KnownFiniteGrammar": 36
+      },
+      "paraphrase": {
+        "Unknown": 6
+      }
+    }
+  },
+  "training": {
+    "status": "Accepted",
+    "state": [
+      [
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      [
+        [
+          0,
+          2,
+          1
+        ]
+      ],
+      [
+        [
+          1,
+          0,
+          2
+        ]
+      ]
+    ],
+    "trace": [
+      {
+        "id": "train-0",
+        "order": [
+          0,
+          1,
+          2
+        ],
+        "actual": [
+          "甲",
+          "乙",
+          "书"
+        ],
+        "matches": true
+      },
+      {
+        "id": "train-0",
+        "order": [
+          0,
+          2,
+          1
+        ],
+        "actual": [
+          "甲",
+          "书",
+          "乙"
+        ],
+        "matches": false
+      },
+      {
+        "id": "train-0",
+        "order": [
+          1,
+          0,
+          2
+        ],
+        "actual": [
+          "乙",
+          "甲",
+          "书"
+        ],
+        "matches": false
+      },
+      {
+        "id": "train-0",
+        "order": [
+          1,
+          2,
+          0
+        ],
+        "actual": [
+          "乙",
+          "书",
+          "甲"
+        ],
+        "matches": false
+      },
+      {
+        "id": "train-0",
+        "order": [
+          2,
+          0,
+          1
+        ],
+        "actual": [
+          "书",
+          "甲",
+          "乙"
+        ],
+        "matches": false
+      },
+      {
+        "id": "train-0",
+        "order": [
+          2,
+          1,
+          0
+        ],
+        "actual": [
+          "书",
+          "乙",
+          "甲"
+        ],
+        "matches": false
+      },
+      {
+        "id": "train-1",
+        "order": [
+          0,
+          1,
+          2
+        ],
+        "actual": [
+          "甲",
+          "书",
+          "乙"
+        ],
+        "matches": false
+      },
+      {
+        "id": "train-1",
+        "order": [
+          0,
+          2,
+          1
+        ],
+        "actual": [
+          "甲",
+          "乙",
+          "书"
+        ],
+        "matches": true
+      },
+      {
+        "id": "train-1",
+        "order": [
+          1,
+          0,
+          2
+        ],
+        "actual": [
+          "书",
+          "甲",
+          "乙"
+        ],
+        "matches": false
+      },
+      {
+        "id": "train-1",
+        "order": [
+          1,
+          2,
+          0
+        ],
+        "actual": [
+          "书",
+          "乙",
+          "甲"
+        ],
+        "matches": false
+      },
+      {
+        "id": "train-1",
+        "order": [
+          2,
+          0,
+          1
+        ],
+        "actual": [
+          "乙",
+          "甲",
+          "书"
+        ],
+        "matches": false
+      },
+      {
+        "id": "train-1",
+        "order": [
+          2,
+          1,
+          0
+        ],
+        "actual": [
+          "乙",
+          "书",
+          "甲"
+        ],
+        "matches": false
+      },
+      {
+        "id": "train-2",
+        "order": [
+          0,
+          1,
+          2
+        ],
+        "actual": [
+          "乙",
+          "甲",
+          "书"
+        ],
+        "matches": false
+      },
+      {
+        "id": "train-2",
+        "order": [
+          0,
+          2,
+          1
+        ],
+        "actual": [
+          "乙",
+          "书",
+          "甲"
+        ],
+        "matches": false
+      },
+      {
+        "id": "train-2",
+        "order": [
+          1,
+          0,
+          2
+        ],
+        "actual": [
+          "甲",
+          "乙",
+          "书"
+        ],
+        "matches": true
+      },
+      {
+        "id": "train-2",
+        "order": [
+          1,
+          2,
+          0
+        ],
+        "actual": [
+          "甲",
+          "书",
+          "乙"
+        ],
+        "matches": false
+      },
+      {
+        "id": "train-2",
+        "order": [
+          2,
+          0,
+          1
+        ],
+        "actual": [
+          "书",
+          "乙",
+          "甲"
+        ],
+        "matches": false
+      },
+      {
+        "id": "train-2",
+        "order": [
+          2,
+          1,
+          0
+        ],
+        "actual": [
+          "书",
+          "甲",
+          "乙"
+        ],
+        "matches": false
+      }
+    ],
+    "checked": 18,
+    "reason": "unique-mappings"
+  },
+  "development": {
+    "counts": {
+      "neither": {
+        "KnownFiniteGrammar": 6
+      },
+      "syntax-only": {
+        "Unknown": 6
+      },
+      "one-receipt-verb": {
+        "Unknown": 4
+      },
+      "one-receipt-verb-plus-syntax": {
+        "Unknown": 4
+      },
+      "lexicon-only": {
+        "Unknown": 6
+      },
+      "both": {
+        "Unknown": 6
+      },
+      "role-order": {
+        "KnownFiniteGrammar": 18
+      },
+      "semantic-boundary": {
+        "Unknown": 9
+      },
+      "opaque-literal": {
+        "KnownFiniteGrammar": 2
+      }
+    },
+    "rows": [
+      {
+        "id": "receipt-forward-获授",
+        "group": "lexicon-syntax",
+        "text": "「石泉」获「兰舟」所授「玉筹」。",
+        "expected_roles": [
+          "兰舟",
+          "石泉",
+          "玉筹"
+        ],
+        "expected_frozen_answer": {
+          "status": "KnownFiniteGrammar",
+          "roles": [
+            "兰舟",
+            "石泉",
+            "玉筹"
+          ]
+        },
+        "family": "得/赠/之",
+        "direction": "forward",
+        "cell": "neither",
+        "verb_edits": [],
+        "syntax_edit": null,
+        "original_query_id": null,
+        "observed": {
+          "status": "KnownFiniteGrammar",
+          "roles": [
+            "兰舟",
+            "石泉",
+            "玉筹"
+          ]
+        }
+      },
+      {
+        "id": "receipt-forward-获授之",
+        "group": "lexicon-syntax",
+        "text": "「石泉」获「兰舟」所授之「玉筹」。",
+        "expected_roles": [
+          "兰舟",
+          "石泉",
+          "玉筹"
+        ],
+        "expected_frozen_answer": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        },
+        "family": "得/赠/之",
+        "direction": "forward",
+        "cell": "syntax-only",
+        "verb_edits": [],
+        "syntax_edit": "插入之",
+        "original_query_id": null,
+        "observed": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        }
+      },
+      {
+        "id": "receipt-forward-获赠",
+        "group": "lexicon-syntax",
+        "text": "「石泉」获「兰舟」所赠「玉筹」。",
+        "expected_roles": [
+          "兰舟",
+          "石泉",
+          "玉筹"
+        ],
+        "expected_frozen_answer": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        },
+        "family": "得/赠/之",
+        "direction": "forward",
+        "cell": "one-receipt-verb",
+        "verb_edits": [
+          "授→赠"
+        ],
+        "syntax_edit": null,
+        "original_query_id": null,
+        "observed": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        }
+      },
+      {
+        "id": "receipt-forward-获赠之",
+        "group": "lexicon-syntax",
+        "text": "「石泉」获「兰舟」所赠之「玉筹」。",
+        "expected_roles": [
+          "兰舟",
+          "石泉",
+          "玉筹"
+        ],
+        "expected_frozen_answer": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        },
+        "family": "得/赠/之",
+        "direction": "forward",
+        "cell": "one-receipt-verb-plus-syntax",
+        "verb_edits": [
+          "授→赠"
+        ],
+        "syntax_edit": "插入之",
+        "original_query_id": null,
+        "observed": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        }
+      },
+      {
+        "id": "receipt-forward-得授",
+        "group": "lexicon-syntax",
+        "text": "「石泉」得「兰舟」所授「玉筹」。",
+        "expected_roles": [
+          "兰舟",
+          "石泉",
+          "玉筹"
+        ],
+        "expected_frozen_answer": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        },
+        "family": "得/赠/之",
+        "direction": "forward",
+        "cell": "one-receipt-verb",
+        "verb_edits": [
+          "获→得"
+        ],
+        "syntax_edit": null,
+        "original_query_id": null,
+        "observed": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        }
+      },
+      {
+        "id": "receipt-forward-得授之",
+        "group": "lexicon-syntax",
+        "text": "「石泉」得「兰舟」所授之「玉筹」。",
+        "expected_roles": [
+          "兰舟",
+          "石泉",
+          "玉筹"
+        ],
+        "expected_frozen_answer": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        },
+        "family": "得/赠/之",
+        "direction": "forward",
+        "cell": "one-receipt-verb-plus-syntax",
+        "verb_edits": [
+          "获→得"
+        ],
+        "syntax_edit": "插入之",
+        "original_query_id": null,
+        "observed": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        }
+      },
+      {
+        "id": "receipt-forward-得赠",
+        "group": "lexicon-syntax",
+        "text": "「石泉」得「兰舟」所赠「玉筹」。",
+        "expected_roles": [
+          "兰舟",
+          "石泉",
+          "玉筹"
+        ],
+        "expected_frozen_answer": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        },
+        "family": "得/赠/之",
+        "direction": "forward",
+        "cell": "lexicon-only",
+        "verb_edits": [
+          "获→得",
+          "授→赠"
+        ],
+        "syntax_edit": null,
+        "original_query_id": null,
+        "observed": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        }
+      },
+      {
+        "id": "receipt-forward-得赠之",
+        "group": "lexicon-syntax",
+        "text": "「石泉」得「兰舟」所赠之「玉筹」。",
+        "expected_roles": [
+          "兰舟",
+          "石泉",
+          "玉筹"
+        ],
+        "expected_frozen_answer": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        },
+        "family": "得/赠/之",
+        "direction": "forward",
+        "cell": "both",
+        "verb_edits": [
+          "获→得",
+          "授→赠"
+        ],
+        "syntax_edit": "插入之",
+        "original_query_id": "q-e6377d79bcb74477",
+        "observed": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        }
+      },
+      {
+        "id": "receipt-reverse-获授",
+        "group": "lexicon-syntax",
+        "text": "「兰舟」获「石泉」所授「玉筹」。",
+        "expected_roles": [
+          "石泉",
+          "兰舟",
+          "玉筹"
+        ],
+        "expected_frozen_answer": {
+          "status": "KnownFiniteGrammar",
+          "roles": [
+            "石泉",
+            "兰舟",
+            "玉筹"
+          ]
+        },
+        "family": "得/赠/之",
+        "direction": "reverse",
+        "cell": "neither",
+        "verb_edits": [],
+        "syntax_edit": null,
+        "original_query_id": null,
+        "observed": {
+          "status": "KnownFiniteGrammar",
+          "roles": [
+            "石泉",
+            "兰舟",
+            "玉筹"
+          ]
+        }
+      },
+      {
+        "id": "receipt-reverse-获授之",
+        "group": "lexicon-syntax",
+        "text": "「兰舟」获「石泉」所授之「玉筹」。",
+        "expected_roles": [
+          "石泉",
+          "兰舟",
+          "玉筹"
+        ],
+        "expected_frozen_answer": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        },
+        "family": "得/赠/之",
+        "direction": "reverse",
+        "cell": "syntax-only",
+        "verb_edits": [],
+        "syntax_edit": "插入之",
+        "original_query_id": null,
+        "observed": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        }
+      },
+      {
+        "id": "receipt-reverse-获赠",
+        "group": "lexicon-syntax",
+        "text": "「兰舟」获「石泉」所赠「玉筹」。",
+        "expected_roles": [
+          "石泉",
+          "兰舟",
+          "玉筹"
+        ],
+        "expected_frozen_answer": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        },
+        "family": "得/赠/之",
+        "direction": "reverse",
+        "cell": "one-receipt-verb",
+        "verb_edits": [
+          "授→赠"
+        ],
+        "syntax_edit": null,
+        "original_query_id": null,
+        "observed": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        }
+      },
+      {
+        "id": "receipt-reverse-获赠之",
+        "group": "lexicon-syntax",
+        "text": "「兰舟」获「石泉」所赠之「玉筹」。",
+        "expected_roles": [
+          "石泉",
+          "兰舟",
+          "玉筹"
+        ],
+        "expected_frozen_answer": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        },
+        "family": "得/赠/之",
+        "direction": "reverse",
+        "cell": "one-receipt-verb-plus-syntax",
+        "verb_edits": [
+          "授→赠"
+        ],
+        "syntax_edit": "插入之",
+        "original_query_id": null,
+        "observed": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        }
+      },
+      {
+        "id": "receipt-reverse-得授",
+        "group": "lexicon-syntax",
+        "text": "「兰舟」得「石泉」所授「玉筹」。",
+        "expected_roles": [
+          "石泉",
+          "兰舟",
+          "玉筹"
+        ],
+        "expected_frozen_answer": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        },
+        "family": "得/赠/之",
+        "direction": "reverse",
+        "cell": "one-receipt-verb",
+        "verb_edits": [
+          "获→得"
+        ],
+        "syntax_edit": null,
+        "original_query_id": null,
+        "observed": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        }
+      },
+      {
+        "id": "receipt-reverse-得授之",
+        "group": "lexicon-syntax",
+        "text": "「兰舟」得「石泉」所授之「玉筹」。",
+        "expected_roles": [
+          "石泉",
+          "兰舟",
+          "玉筹"
+        ],
+        "expected_frozen_answer": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        },
+        "family": "得/赠/之",
+        "direction": "reverse",
+        "cell": "one-receipt-verb-plus-syntax",
+        "verb_edits": [
+          "获→得"
+        ],
+        "syntax_edit": "插入之",
+        "original_query_id": null,
+        "observed": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        }
+      },
+      {
+        "id": "receipt-reverse-得赠",
+        "group": "lexicon-syntax",
+        "text": "「兰舟」得「石泉」所赠「玉筹」。",
+        "expected_roles": [
+          "石泉",
+          "兰舟",
+          "玉筹"
+        ],
+        "expected_frozen_answer": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        },
+        "family": "得/赠/之",
+        "direction": "reverse",
+        "cell": "lexicon-only",
+        "verb_edits": [
+          "获→得",
+          "授→赠"
+        ],
+        "syntax_edit": null,
+        "original_query_id": null,
+        "observed": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        }
+      },
+      {
+        "id": "receipt-reverse-得赠之",
+        "group": "lexicon-syntax",
+        "text": "「兰舟」得「石泉」所赠之「玉筹」。",
+        "expected_roles": [
+          "石泉",
+          "兰舟",
+          "玉筹"
+        ],
+        "expected_frozen_answer": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        },
+        "family": "得/赠/之",
+        "direction": "reverse",
+        "cell": "both",
+        "verb_edits": [
+          "获→得",
+          "授→赠"
+        ],
+        "syntax_edit": "插入之",
+        "original_query_id": "q-b936b6f926f9e2ab",
+        "observed": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        }
+      },
+      {
+        "id": "deliver-forward-授",
+        "group": "lexicon-syntax",
+        "text": "「沧弦」授「墨川」「银钥」。",
+        "expected_roles": [
+          "沧弦",
+          "墨川",
+          "银钥"
+        ],
+        "expected_frozen_answer": {
+          "status": "KnownFiniteGrammar",
+          "roles": [
+            "沧弦",
+            "墨川",
+            "银钥"
+          ]
+        },
+        "family": "付/于",
+        "direction": "forward",
+        "cell": "neither",
+        "verb_edits": [],
+        "syntax_edit": null,
+        "original_query_id": null,
+        "observed": {
+          "status": "KnownFiniteGrammar",
+          "roles": [
+            "沧弦",
+            "墨川",
+            "银钥"
+          ]
+        }
+      },
+      {
+        "id": "deliver-forward-授于",
+        "group": "lexicon-syntax",
+        "text": "「沧弦」授「银钥」于「墨川」。",
+        "expected_roles": [
+          "沧弦",
+          "墨川",
+          "银钥"
+        ],
+        "expected_frozen_answer": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        },
+        "family": "付/于",
+        "direction": "forward",
+        "cell": "syntax-only",
+        "verb_edits": [],
+        "syntax_edit": "受领者移到转交物之后并加于",
+        "original_query_id": null,
+        "observed": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        }
+      },
+      {
+        "id": "deliver-forward-付",
+        "group": "lexicon-syntax",
+        "text": "「沧弦」付「墨川」「银钥」。",
+        "expected_roles": [
+          "沧弦",
+          "墨川",
+          "银钥"
+        ],
+        "expected_frozen_answer": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        },
+        "family": "付/于",
+        "direction": "forward",
+        "cell": "lexicon-only",
+        "verb_edits": [
+          "授→付"
+        ],
+        "syntax_edit": null,
+        "original_query_id": null,
+        "observed": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        }
+      },
+      {
+        "id": "deliver-forward-付于",
+        "group": "lexicon-syntax",
+        "text": "「沧弦」付「银钥」于「墨川」。",
+        "expected_roles": [
+          "沧弦",
+          "墨川",
+          "银钥"
+        ],
+        "expected_frozen_answer": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        },
+        "family": "付/于",
+        "direction": "forward",
+        "cell": "both",
+        "verb_edits": [
+          "授→付"
+        ],
+        "syntax_edit": "受领者移到转交物之后并加于",
+        "original_query_id": "q-b7d71879aae4a4d8",
+        "observed": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        }
+      },
+      {
+        "id": "deliver-reverse-授",
+        "group": "lexicon-syntax",
+        "text": "「墨川」授「沧弦」「银钥」。",
+        "expected_roles": [
+          "墨川",
+          "沧弦",
+          "银钥"
+        ],
+        "expected_frozen_answer": {
+          "status": "KnownFiniteGrammar",
+          "roles": [
+            "墨川",
+            "沧弦",
+            "银钥"
+          ]
+        },
+        "family": "付/于",
+        "direction": "reverse",
+        "cell": "neither",
+        "verb_edits": [],
+        "syntax_edit": null,
+        "original_query_id": null,
+        "observed": {
+          "status": "KnownFiniteGrammar",
+          "roles": [
+            "墨川",
+            "沧弦",
+            "银钥"
+          ]
+        }
+      },
+      {
+        "id": "deliver-reverse-授于",
+        "group": "lexicon-syntax",
+        "text": "「墨川」授「银钥」于「沧弦」。",
+        "expected_roles": [
+          "墨川",
+          "沧弦",
+          "银钥"
+        ],
+        "expected_frozen_answer": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        },
+        "family": "付/于",
+        "direction": "reverse",
+        "cell": "syntax-only",
+        "verb_edits": [],
+        "syntax_edit": "受领者移到转交物之后并加于",
+        "original_query_id": null,
+        "observed": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        }
+      },
+      {
+        "id": "deliver-reverse-付",
+        "group": "lexicon-syntax",
+        "text": "「墨川」付「沧弦」「银钥」。",
+        "expected_roles": [
+          "墨川",
+          "沧弦",
+          "银钥"
+        ],
+        "expected_frozen_answer": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        },
+        "family": "付/于",
+        "direction": "reverse",
+        "cell": "lexicon-only",
+        "verb_edits": [
+          "授→付"
+        ],
+        "syntax_edit": null,
+        "original_query_id": null,
+        "observed": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        }
+      },
+      {
+        "id": "deliver-reverse-付于",
+        "group": "lexicon-syntax",
+        "text": "「墨川」付「银钥」于「沧弦」。",
+        "expected_roles": [
+          "墨川",
+          "沧弦",
+          "银钥"
+        ],
+        "expected_frozen_answer": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        },
+        "family": "付/于",
+        "direction": "reverse",
+        "cell": "both",
+        "verb_edits": [
+          "授→付"
+        ],
+        "syntax_edit": "受领者移到转交物之后并加于",
+        "original_query_id": "q-5ee209a427cf32fd",
+        "observed": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        }
+      },
+      {
+        "id": "give-forward-授",
+        "group": "lexicon-syntax",
+        "text": "「岑渚」授「洛衡」「玄印」。",
+        "expected_roles": [
+          "岑渚",
+          "洛衡",
+          "玄印"
+        ],
+        "expected_frozen_answer": {
+          "status": "KnownFiniteGrammar",
+          "roles": [
+            "岑渚",
+            "洛衡",
+            "玄印"
+          ]
+        },
+        "family": "予/以",
+        "direction": "forward",
+        "cell": "neither",
+        "verb_edits": [],
+        "syntax_edit": null,
+        "original_query_id": null,
+        "observed": {
+          "status": "KnownFiniteGrammar",
+          "roles": [
+            "岑渚",
+            "洛衡",
+            "玄印"
+          ]
+        }
+      },
+      {
+        "id": "give-forward-授以",
+        "group": "lexicon-syntax",
+        "text": "「岑渚」以「玄印」授「洛衡」。",
+        "expected_roles": [
+          "岑渚",
+          "洛衡",
+          "玄印"
+        ],
+        "expected_frozen_answer": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        },
+        "family": "予/以",
+        "direction": "forward",
+        "cell": "syntax-only",
+        "verb_edits": [],
+        "syntax_edit": "以引出转交物并移至动词之前",
+        "original_query_id": null,
+        "observed": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        }
+      },
+      {
+        "id": "give-forward-予",
+        "group": "lexicon-syntax",
+        "text": "「岑渚」予「洛衡」「玄印」。",
+        "expected_roles": [
+          "岑渚",
+          "洛衡",
+          "玄印"
+        ],
+        "expected_frozen_answer": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        },
+        "family": "予/以",
+        "direction": "forward",
+        "cell": "lexicon-only",
+        "verb_edits": [
+          "授→予"
+        ],
+        "syntax_edit": null,
+        "original_query_id": null,
+        "observed": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        }
+      },
+      {
+        "id": "give-forward-予以",
+        "group": "lexicon-syntax",
+        "text": "「岑渚」以「玄印」予「洛衡」。",
+        "expected_roles": [
+          "岑渚",
+          "洛衡",
+          "玄印"
+        ],
+        "expected_frozen_answer": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        },
+        "family": "予/以",
+        "direction": "forward",
+        "cell": "both",
+        "verb_edits": [
+          "授→予"
+        ],
+        "syntax_edit": "以引出转交物并移至动词之前",
+        "original_query_id": "q-326532c796b43b7b",
+        "observed": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        }
+      },
+      {
+        "id": "give-reverse-授",
+        "group": "lexicon-syntax",
+        "text": "「洛衡」授「岑渚」「玄印」。",
+        "expected_roles": [
+          "洛衡",
+          "岑渚",
+          "玄印"
+        ],
+        "expected_frozen_answer": {
+          "status": "KnownFiniteGrammar",
+          "roles": [
+            "洛衡",
+            "岑渚",
+            "玄印"
+          ]
+        },
+        "family": "予/以",
+        "direction": "reverse",
+        "cell": "neither",
+        "verb_edits": [],
+        "syntax_edit": null,
+        "original_query_id": null,
+        "observed": {
+          "status": "KnownFiniteGrammar",
+          "roles": [
+            "洛衡",
+            "岑渚",
+            "玄印"
+          ]
+        }
+      },
+      {
+        "id": "give-reverse-授以",
+        "group": "lexicon-syntax",
+        "text": "「洛衡」以「玄印」授「岑渚」。",
+        "expected_roles": [
+          "洛衡",
+          "岑渚",
+          "玄印"
+        ],
+        "expected_frozen_answer": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        },
+        "family": "予/以",
+        "direction": "reverse",
+        "cell": "syntax-only",
+        "verb_edits": [],
+        "syntax_edit": "以引出转交物并移至动词之前",
+        "original_query_id": null,
+        "observed": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        }
+      },
+      {
+        "id": "give-reverse-予",
+        "group": "lexicon-syntax",
+        "text": "「洛衡」予「岑渚」「玄印」。",
+        "expected_roles": [
+          "洛衡",
+          "岑渚",
+          "玄印"
+        ],
+        "expected_frozen_answer": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        },
+        "family": "予/以",
+        "direction": "reverse",
+        "cell": "lexicon-only",
+        "verb_edits": [
+          "授→予"
+        ],
+        "syntax_edit": null,
+        "original_query_id": null,
+        "observed": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        }
+      },
+      {
+        "id": "give-reverse-予以",
+        "group": "lexicon-syntax",
+        "text": "「洛衡」以「玄印」予「岑渚」。",
+        "expected_roles": [
+          "洛衡",
+          "岑渚",
+          "玄印"
+        ],
+        "expected_frozen_answer": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        },
+        "family": "予/以",
+        "direction": "reverse",
+        "cell": "both",
+        "verb_edits": [
+          "授→予"
+        ],
+        "syntax_edit": "以引出转交物并移至动词之前",
+        "original_query_id": "q-a3ce7b24278401dd",
+        "observed": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        }
+      },
+      {
+        "id": "role-1-授",
+        "group": "role-order",
+        "text": "「青岫」授「澄浦」「白圭」。",
+        "expected_roles": [
+          "青岫",
+          "澄浦",
+          "白圭"
+        ],
+        "expected_frozen_answer": {
+          "status": "KnownFiniteGrammar",
+          "roles": [
+            "青岫",
+            "澄浦",
+            "白圭"
+          ]
+        },
+        "permutation": 1,
+        "construction": "授",
+        "observed": {
+          "status": "KnownFiniteGrammar",
+          "roles": [
+            "青岫",
+            "澄浦",
+            "白圭"
+          ]
+        }
+      },
+      {
+        "id": "role-1-把-交给",
+        "group": "role-order",
+        "text": "「青岫」把「白圭」交给「澄浦」。",
+        "expected_roles": [
+          "青岫",
+          "澄浦",
+          "白圭"
+        ],
+        "expected_frozen_answer": {
+          "status": "KnownFiniteGrammar",
+          "roles": [
+            "青岫",
+            "澄浦",
+            "白圭"
+          ]
+        },
+        "permutation": 1,
+        "construction": "把-交给",
+        "observed": {
+          "status": "KnownFiniteGrammar",
+          "roles": [
+            "青岫",
+            "澄浦",
+            "白圭"
+          ]
+        }
+      },
+      {
+        "id": "role-1-获-所授",
+        "group": "role-order",
+        "text": "「澄浦」获「青岫」所授「白圭」。",
+        "expected_roles": [
+          "青岫",
+          "澄浦",
+          "白圭"
+        ],
+        "expected_frozen_answer": {
+          "status": "KnownFiniteGrammar",
+          "roles": [
+            "青岫",
+            "澄浦",
+            "白圭"
+          ]
+        },
+        "permutation": 1,
+        "construction": "获-所授",
+        "observed": {
+          "status": "KnownFiniteGrammar",
+          "roles": [
+            "青岫",
+            "澄浦",
+            "白圭"
+          ]
+        }
+      },
+      {
+        "id": "role-2-授",
+        "group": "role-order",
+        "text": "「青岫」授「白圭」「澄浦」。",
+        "expected_roles": [
+          "青岫",
+          "白圭",
+          "澄浦"
+        ],
+        "expected_frozen_answer": {
+          "status": "KnownFiniteGrammar",
+          "roles": [
+            "青岫",
+            "白圭",
+            "澄浦"
+          ]
+        },
+        "permutation": 2,
+        "construction": "授",
+        "observed": {
+          "status": "KnownFiniteGrammar",
+          "roles": [
+            "青岫",
+            "白圭",
+            "澄浦"
+          ]
+        }
+      },
+      {
+        "id": "role-2-把-交给",
+        "group": "role-order",
+        "text": "「青岫」把「澄浦」交给「白圭」。",
+        "expected_roles": [
+          "青岫",
+          "白圭",
+          "澄浦"
+        ],
+        "expected_frozen_answer": {
+          "status": "KnownFiniteGrammar",
+          "roles": [
+            "青岫",
+            "白圭",
+            "澄浦"
+          ]
+        },
+        "permutation": 2,
+        "construction": "把-交给",
+        "observed": {
+          "status": "KnownFiniteGrammar",
+          "roles": [
+            "青岫",
+            "白圭",
+            "澄浦"
+          ]
+        }
+      },
+      {
+        "id": "role-2-获-所授",
+        "group": "role-order",
+        "text": "「白圭」获「青岫」所授「澄浦」。",
+        "expected_roles": [
+          "青岫",
+          "白圭",
+          "澄浦"
+        ],
+        "expected_frozen_answer": {
+          "status": "KnownFiniteGrammar",
+          "roles": [
+            "青岫",
+            "白圭",
+            "澄浦"
+          ]
+        },
+        "permutation": 2,
+        "construction": "获-所授",
+        "observed": {
+          "status": "KnownFiniteGrammar",
+          "roles": [
+            "青岫",
+            "白圭",
+            "澄浦"
+          ]
+        }
+      },
+      {
+        "id": "role-3-授",
+        "group": "role-order",
+        "text": "「澄浦」授「青岫」「白圭」。",
+        "expected_roles": [
+          "澄浦",
+          "青岫",
+          "白圭"
+        ],
+        "expected_frozen_answer": {
+          "status": "KnownFiniteGrammar",
+          "roles": [
+            "澄浦",
+            "青岫",
+            "白圭"
+          ]
+        },
+        "permutation": 3,
+        "construction": "授",
+        "observed": {
+          "status": "KnownFiniteGrammar",
+          "roles": [
+            "澄浦",
+            "青岫",
+            "白圭"
+          ]
+        }
+      },
+      {
+        "id": "role-3-把-交给",
+        "group": "role-order",
+        "text": "「澄浦」把「白圭」交给「青岫」。",
+        "expected_roles": [
+          "澄浦",
+          "青岫",
+          "白圭"
+        ],
+        "expected_frozen_answer": {
+          "status": "KnownFiniteGrammar",
+          "roles": [
+            "澄浦",
+            "青岫",
+            "白圭"
+          ]
+        },
+        "permutation": 3,
+        "construction": "把-交给",
+        "observed": {
+          "status": "KnownFiniteGrammar",
+          "roles": [
+            "澄浦",
+            "青岫",
+            "白圭"
+          ]
+        }
+      },
+      {
+        "id": "role-3-获-所授",
+        "group": "role-order",
+        "text": "「青岫」获「澄浦」所授「白圭」。",
+        "expected_roles": [
+          "澄浦",
+          "青岫",
+          "白圭"
+        ],
+        "expected_frozen_answer": {
+          "status": "KnownFiniteGrammar",
+          "roles": [
+            "澄浦",
+            "青岫",
+            "白圭"
+          ]
+        },
+        "permutation": 3,
+        "construction": "获-所授",
+        "observed": {
+          "status": "KnownFiniteGrammar",
+          "roles": [
+            "澄浦",
+            "青岫",
+            "白圭"
+          ]
+        }
+      },
+      {
+        "id": "role-4-授",
+        "group": "role-order",
+        "text": "「澄浦」授「白圭」「青岫」。",
+        "expected_roles": [
+          "澄浦",
+          "白圭",
+          "青岫"
+        ],
+        "expected_frozen_answer": {
+          "status": "KnownFiniteGrammar",
+          "roles": [
+            "澄浦",
+            "白圭",
+            "青岫"
+          ]
+        },
+        "permutation": 4,
+        "construction": "授",
+        "observed": {
+          "status": "KnownFiniteGrammar",
+          "roles": [
+            "澄浦",
+            "白圭",
+            "青岫"
+          ]
+        }
+      },
+      {
+        "id": "role-4-把-交给",
+        "group": "role-order",
+        "text": "「澄浦」把「青岫」交给「白圭」。",
+        "expected_roles": [
+          "澄浦",
+          "白圭",
+          "青岫"
+        ],
+        "expected_frozen_answer": {
+          "status": "KnownFiniteGrammar",
+          "roles": [
+            "澄浦",
+            "白圭",
+            "青岫"
+          ]
+        },
+        "permutation": 4,
+        "construction": "把-交给",
+        "observed": {
+          "status": "KnownFiniteGrammar",
+          "roles": [
+            "澄浦",
+            "白圭",
+            "青岫"
+          ]
+        }
+      },
+      {
+        "id": "role-4-获-所授",
+        "group": "role-order",
+        "text": "「白圭」获「澄浦」所授「青岫」。",
+        "expected_roles": [
+          "澄浦",
+          "白圭",
+          "青岫"
+        ],
+        "expected_frozen_answer": {
+          "status": "KnownFiniteGrammar",
+          "roles": [
+            "澄浦",
+            "白圭",
+            "青岫"
+          ]
+        },
+        "permutation": 4,
+        "construction": "获-所授",
+        "observed": {
+          "status": "KnownFiniteGrammar",
+          "roles": [
+            "澄浦",
+            "白圭",
+            "青岫"
+          ]
+        }
+      },
+      {
+        "id": "role-5-授",
+        "group": "role-order",
+        "text": "「白圭」授「青岫」「澄浦」。",
+        "expected_roles": [
+          "白圭",
+          "青岫",
+          "澄浦"
+        ],
+        "expected_frozen_answer": {
+          "status": "KnownFiniteGrammar",
+          "roles": [
+            "白圭",
+            "青岫",
+            "澄浦"
+          ]
+        },
+        "permutation": 5,
+        "construction": "授",
+        "observed": {
+          "status": "KnownFiniteGrammar",
+          "roles": [
+            "白圭",
+            "青岫",
+            "澄浦"
+          ]
+        }
+      },
+      {
+        "id": "role-5-把-交给",
+        "group": "role-order",
+        "text": "「白圭」把「澄浦」交给「青岫」。",
+        "expected_roles": [
+          "白圭",
+          "青岫",
+          "澄浦"
+        ],
+        "expected_frozen_answer": {
+          "status": "KnownFiniteGrammar",
+          "roles": [
+            "白圭",
+            "青岫",
+            "澄浦"
+          ]
+        },
+        "permutation": 5,
+        "construction": "把-交给",
+        "observed": {
+          "status": "KnownFiniteGrammar",
+          "roles": [
+            "白圭",
+            "青岫",
+            "澄浦"
+          ]
+        }
+      },
+      {
+        "id": "role-5-获-所授",
+        "group": "role-order",
+        "text": "「青岫」获「白圭」所授「澄浦」。",
+        "expected_roles": [
+          "白圭",
+          "青岫",
+          "澄浦"
+        ],
+        "expected_frozen_answer": {
+          "status": "KnownFiniteGrammar",
+          "roles": [
+            "白圭",
+            "青岫",
+            "澄浦"
+          ]
+        },
+        "permutation": 5,
+        "construction": "获-所授",
+        "observed": {
+          "status": "KnownFiniteGrammar",
+          "roles": [
+            "白圭",
+            "青岫",
+            "澄浦"
+          ]
+        }
+      },
+      {
+        "id": "role-6-授",
+        "group": "role-order",
+        "text": "「白圭」授「澄浦」「青岫」。",
+        "expected_roles": [
+          "白圭",
+          "澄浦",
+          "青岫"
+        ],
+        "expected_frozen_answer": {
+          "status": "KnownFiniteGrammar",
+          "roles": [
+            "白圭",
+            "澄浦",
+            "青岫"
+          ]
+        },
+        "permutation": 6,
+        "construction": "授",
+        "observed": {
+          "status": "KnownFiniteGrammar",
+          "roles": [
+            "白圭",
+            "澄浦",
+            "青岫"
+          ]
+        }
+      },
+      {
+        "id": "role-6-把-交给",
+        "group": "role-order",
+        "text": "「白圭」把「青岫」交给「澄浦」。",
+        "expected_roles": [
+          "白圭",
+          "澄浦",
+          "青岫"
+        ],
+        "expected_frozen_answer": {
+          "status": "KnownFiniteGrammar",
+          "roles": [
+            "白圭",
+            "澄浦",
+            "青岫"
+          ]
+        },
+        "permutation": 6,
+        "construction": "把-交给",
+        "observed": {
+          "status": "KnownFiniteGrammar",
+          "roles": [
+            "白圭",
+            "澄浦",
+            "青岫"
+          ]
+        }
+      },
+      {
+        "id": "role-6-获-所授",
+        "group": "role-order",
+        "text": "「澄浦」获「白圭」所授「青岫」。",
+        "expected_roles": [
+          "白圭",
+          "澄浦",
+          "青岫"
+        ],
+        "expected_frozen_answer": {
+          "status": "KnownFiniteGrammar",
+          "roles": [
+            "白圭",
+            "澄浦",
+            "青岫"
+          ]
+        },
+        "permutation": 6,
+        "construction": "获-所授",
+        "observed": {
+          "status": "KnownFiniteGrammar",
+          "roles": [
+            "白圭",
+            "澄浦",
+            "青岫"
+          ]
+        }
+      },
+      {
+        "id": "scope-negation",
+        "group": "semantic-boundary",
+        "text": "「岑渚」未授「洛衡」「玄印」。",
+        "expected_roles": null,
+        "expected_frozen_answer": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        },
+        "rationale": "否定该事件",
+        "observed": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        }
+      },
+      {
+        "id": "scope-intent",
+        "group": "semantic-boundary",
+        "text": "「岑渚」欲授「洛衡」「玄印」。",
+        "expected_roles": null,
+        "expected_frozen_answer": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        },
+        "rationale": "仅有意图",
+        "observed": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        }
+      },
+      {
+        "id": "scope-question",
+        "group": "semantic-boundary",
+        "text": "「岑渚」授「洛衡」「玄印」？",
+        "expected_roles": null,
+        "expected_frozen_answer": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        },
+        "rationale": "以问句提出该事件",
+        "observed": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        }
+      },
+      {
+        "id": "scope-pronoun",
+        "group": "semantic-boundary",
+        "text": "「岑渚」授其「玄印」。",
+        "expected_roles": null,
+        "expected_frozen_answer": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        },
+        "rationale": "缺少先行语境，受领者未定",
+        "observed": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        }
+      },
+      {
+        "id": "scope-alternatives",
+        "group": "semantic-boundary",
+        "text": "「岑渚」授「洛衡」或「疏钟」「玄印」。",
+        "expected_roles": null,
+        "expected_frozen_answer": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        },
+        "rationale": "两个候选受领者",
+        "observed": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        }
+      },
+      {
+        "id": "scope-two-events",
+        "group": "semantic-boundary",
+        "text": "「岑渚」授「洛衡」「玄印」，「洛衡」授「岑渚」「玄印」。",
+        "expected_roles": null,
+        "expected_frozen_answer": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        },
+        "rationale": "两个方向不同的事件",
+        "observed": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        }
+      },
+      {
+        "id": "scope-deliver-alternatives",
+        "group": "semantic-boundary",
+        "text": "「沧弦」付「银钥」于「墨川」或「疏钟」。",
+        "expected_roles": null,
+        "expected_frozen_answer": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        },
+        "rationale": "于结构有两个候选受领者",
+        "observed": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        }
+      },
+      {
+        "id": "scope-show",
+        "group": "semantic-boundary",
+        "text": "「岑渚」以「玄印」示「洛衡」。",
+        "expected_roles": null,
+        "expected_frozen_answer": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        },
+        "rationale": "展示不蕴含交付",
+        "observed": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        }
+      },
+      {
+        "id": "scope-receipt-negation",
+        "group": "semantic-boundary",
+        "text": "「石泉」未得「兰舟」所赠之「玉筹」。",
+        "expected_roles": null,
+        "expected_frozen_answer": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        },
+        "rationale": "否定收得",
+        "observed": {
+          "status": "Unknown",
+          "reason": "outside-profile"
+        }
+      },
+      {
+        "id": "literal-pronoun",
+        "group": "opaque-literal",
+        "text": "「岑渚」授「其」「玄印」。",
+        "expected_roles": [
+          "岑渚",
+          "其",
+          "玄印"
+        ],
+        "expected_frozen_answer": {
+          "status": "KnownFiniteGrammar",
+          "roles": [
+            "岑渚",
+            "其",
+            "玄印"
+          ]
+        },
+        "paired_boundary_case": "scope-pronoun",
+        "observed": {
+          "status": "KnownFiniteGrammar",
+          "roles": [
+            "岑渚",
+            "其",
+            "玄印"
+          ]
+        }
+      },
+      {
+        "id": "literal-alternatives",
+        "group": "opaque-literal",
+        "text": "「岑渚」授「洛衡或疏钟」「玄印」。",
+        "expected_roles": [
+          "岑渚",
+          "洛衡或疏钟",
+          "玄印"
+        ],
+        "expected_frozen_answer": {
+          "status": "KnownFiniteGrammar",
+          "roles": [
+            "岑渚",
+            "洛衡或疏钟",
+            "玄印"
+          ]
+        },
+        "paired_boundary_case": "scope-alternatives",
+        "observed": {
+          "status": "KnownFiniteGrammar",
+          "roles": [
+            "岑渚",
+            "洛衡或疏钟",
+            "玄印"
+          ]
+        }
+      }
+    ]
+  },
+  "training_interface_probes": {
+    "lexicon-only": {
+      "row": {
+        "id": "train-2",
+        "text": "「乙」得「甲」所授「书」。",
+        "roles": [
+          "甲",
+          "乙",
+          "书"
+        ]
+      },
+      "error": "ValueError: training outside profile"
+    },
+    "syntax-only": {
+      "row": {
+        "id": "train-2",
+        "text": "「乙」获「甲」所授之「书」。",
+        "roles": [
+          "甲",
+          "乙",
+          "书"
+        ]
+      },
+      "error": "ValueError: training outside profile"
+    }
+  }
+}

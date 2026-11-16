@@ -31,6 +31,10 @@ jobs:
       - run: node tools/relations/check-blind-prediction-lock.mjs --selftest
       - run: node tools/relations/score-blind-reveal.mjs > /tmp/blind-reveal-results.json
       - run: diff experiments/blind_relation_v0/reveals/2026-10-19-agent01/results.json /tmp/blind-reveal-results.json
+      - run: python3 experiments/blind_relation_v0/analyses/2026-11-16-generalization-boundary/replay.py > /tmp/blind-generalization-boundary.json
+      - run: diff experiments/blind_relation_v0/analyses/2026-11-16-generalization-boundary/outcome.json /tmp/blind-generalization-boundary.json
+      - run: python3 -O experiments/blind_relation_v0/analyses/2026-11-16-generalization-boundary/replay.py > /tmp/blind-generalization-boundary-O.json
+      - run: diff experiments/blind_relation_v0/analyses/2026-11-16-generalization-boundary/outcome.json /tmp/blind-generalization-boundary-O.json
       - run: node tools/knowledge/selftest.mjs
       - run: node tools/grammar/selftest.mjs
       - run: node tools/dialogue/selftest.mjs
