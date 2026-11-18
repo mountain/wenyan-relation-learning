@@ -1,0 +1,68 @@
+[
+  {
+    "path": "frozen/experiments/external_relation_v0/learner.py",
+    "url": "https://github.com/mountain/wenyan-relation-learning/blob/cba40627ca9ce49dcbd89527f1d904debad14009/experiments/external_relation_v0/learner.py",
+    "git_blob_sha1": "26e8167e9ef1bd2f92a6d4f369d8d516dc5dd112",
+    "sha256": "7c28827844f20972b136f47b00033f6b41f2da986410e37c4f4d4e96678b4086"
+  },
+  {
+    "path": "frozen/experiments/external_relation_v0/verify.py",
+    "url": "https://github.com/mountain/wenyan-relation-learning/blob/cba40627ca9ce49dcbd89527f1d904debad14009/experiments/external_relation_v0/verify.py",
+    "git_blob_sha1": "50faa18a75782ae14fcaea9b3a4b12a95219634e",
+    "sha256": "d6094dbdfce036ddbe00d3374ced8997ee3b6c6a451fefea3f6db760a44762af"
+  },
+  {
+    "path": "frozen/experiments/postfreeze_relation_v0/worker.py",
+    "url": "https://github.com/mountain/wenyan-relation-learning/blob/cba40627ca9ce49dcbd89527f1d904debad14009/experiments/postfreeze_relation_v0/worker.py",
+    "git_blob_sha1": "340bfb674a74a49d4f968fac4ba5ac587f1a8352",
+    "sha256": "3952553f0f8586f88e7507a2517f1c1289ebe95a32533b833084541289186e08"
+  },
+  {
+    "path": "frozen/experiments/postfreeze_relation_v0/check.py",
+    "url": "https://github.com/mountain/wenyan-relation-learning/blob/cba40627ca9ce49dcbd89527f1d904debad14009/experiments/postfreeze_relation_v0/check.py",
+    "git_blob_sha1": "0bcf99a0421a7419dd59a546f1e13d5005a4a903",
+    "sha256": "08a2709b320cfcd05dbac7dc2700122ff5b27d89a67f9c88affd48340b20b40d"
+  },
+  {
+    "path": "frozen/experiments/postfreeze_relation_v0/strict_check.py",
+    "url": "https://github.com/mountain/wenyan-relation-learning/blob/cba40627ca9ce49dcbd89527f1d904debad14009/experiments/postfreeze_relation_v0/strict_check.py",
+    "git_blob_sha1": "b2e28de127adb9a0296ce65ea34e39809e896ee5",
+    "sha256": "92c4f661f6bed8a2690e6d87dd57275ed72635827a1ed575c4c37215cceb1a2c"
+  },
+  {
+    "path": "frozen/LICENSE.upstream",
+    "url": "https://github.com/mountain/wenyan-relation-learning/blob/cba40627ca9ce49dcbd89527f1d904debad14009/LICENSE.upstream",
+    "git_blob_sha1": "075c24b39162e3998be8b113c5ae5059cda834ba",
+    "sha256": "bdab8e3d4eabed5ae61c7b56d194116360a896ac6f51df2b49c707b6e7770627"
+  },
+  {
+    "path": "published/queries.json",
+    "url": "https://github.com/mountain/wenyan-relation-learning/blob/016aeca493881fd55fbf7c347069fd8b69586659/experiments/blind_relation_v0/batches/2026-10-19-agent01/queries.json",
+    "git_blob_sha1": "a4959defb4c9c41018fa310e34b64dbf619126a4",
+    "sha256": "aed71ae9005ebc6788a9630f5c9ccde41e58c75de6c8d65c8f738aa7f9640947"
+  },
+  {
+    "path": "published/revealed-results.json",
+    "url": "https://github.com/mountain/wenyan-relation-learning/blob/016aeca493881fd55fbf7c347069fd8b69586659/experiments/blind_relation_v0/reveals/2026-10-19-agent01/results.json",
+    "git_blob_sha1": "532e704dcd4412f2572b334cdc9a4cba5e147784",
+    "sha256": "1ea7020a6b60496006f948c05896e04b684f3537f2a60499b6fdc9e7e970209c"
+  },
+  {
+    "path": "published/lock.json",
+    "url": "https://github.com/mountain/wenyan-relation-learning/blob/a75492d914d09524d8e8220ac80e196d8ad73ce7/experiments/blind_relation_v0/prediction-locks/2026-10-19-agent01/lock.json",
+    "git_blob_sha1": "a36edd33b8667f6fbc4787094bbf5f281080b438",
+    "sha256": "50c018d7c3faeeadbe31429dc3be2eff71c013120bf9fd7a06538934da438c63"
+  },
+  {
+    "path": "published/request.json",
+    "url": "https://github.com/mountain/wenyan-relation-learning/blob/a75492d914d09524d8e8220ac80e196d8ad73ce7/experiments/blind_relation_v0/prediction-locks/2026-10-19-agent01/request.json",
+    "git_blob_sha1": "355a4336afb8626149e6966a66a409133aa75dcd",
+    "sha256": "8a23ae43b4a80e10e02ef159106ec6720d324b7b3df50ce59990af8d866e9b67"
+  },
+  {
+    "path": "published/predictions.json",
+    "url": "https://github.com/mountain/wenyan-relation-learning/blob/a75492d914d09524d8e8220ac80e196d8ad73ce7/experiments/blind_relation_v0/prediction-locks/2026-10-19-agent01/predictions.json",
+    "git_blob_sha1": "c3835f7b1b4da9b6ff1a0301539aabdc98cee02c",
+    "sha256": "c084a7072c4f91f6c8015eef499a07f7c62a98cf3b64bcc68d07150d6d7d5d74"
+  }
+]
