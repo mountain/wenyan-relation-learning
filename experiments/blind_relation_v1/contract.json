@@ -1,0 +1,122 @@
+{
+  "schema": "wenyan.independent-blind-relation.v1",
+  "status": "PreparationOnly",
+  "purpose": "Test whether separately evidenced transfer lexicon and construction slot mappings support unseen lexical-syntactic combinations while preserving ordered roles, declared reversals, and semantic rejection boundaries.",
+  "historical_evidence": {
+    "baseline_commit": "cba40627ca9ce49dcbd89527f1d904debad14009",
+    "revealed_batch_commit": "016aeca493881fd55fbf7c347069fd8b69586659",
+    "boundary_analysis_commit": "207b553d04144f069b6a6d281910c39a3770a723"
+  },
+  "systems": [
+    {
+      "id": "historical-exact-match-baseline",
+      "kind": "pinned",
+      "commit": "cba40627ca9ce49dcbd89527f1d904debad14009"
+    },
+    {
+      "id": "explicit-development-coverage-control",
+      "kind": "must-freeze-before-supervisor-batch",
+      "rule": "May encode only the already revealed and development lexical and surface templates; it must not factor relation lexicon from construction slot mappings."
+    },
+    {
+      "id": "factorized-candidate",
+      "kind": "must-freeze-before-supervisor-batch",
+      "rule": "Must expose separate evidence for transfer-relation lexicon and construction slot mappings; no blind query, label, commitment opening, or near-duplicate may be used during implementation."
+    }
+  ],
+  "cohort": {
+    "total": 64,
+    "arms": [
+      {"id": "known-construction-new-entities", "count": 18, "positive": true},
+      {"id": "lexicon-only-holdout", "count": 12, "positive": true},
+      {"id": "syntax-only-holdout", "count": 12, "positive": true},
+      {"id": "combined-lexicon-syntax-holdout", "count": 12, "positive": true},
+      {"id": "semantic-negative-boundary", "count": 10, "positive": false}
+    ]
+  },
+  "roles": {
+    "ordered_tuple": ["agent", "recipient", "theme"],
+    "legacy_primary_reversal": {
+      "swap": ["agent", "theme"],
+      "fixed": "recipient",
+      "note": "For continuity with v0, patient is operationalized as theme. Agent-recipient swaps, if supplied, are diagnostic and must be reported separately."
+    }
+  },
+  "pairing": {
+    "positive_holdout_items_must_be_declared_pairs": true,
+    "combined_arm_minimum_distinct_lexicon_construction_families_with_complete_primary_reversal_pair": 2,
+    "pair_members_may_differ_only_by_the_declared_role_swap_and_required_surface_agreement": true
+  },
+  "novelty": {
+    "forbidden_sources": [
+      "experiments/blind_relation_v0/batches/2026-10-19-agent01/queries.json",
+      "experiments/blind_relation_v0/analyses/2026-11-16-generalization-boundary/outcome.json"
+    ],
+    "all_arms": [
+      "No exact sentence reuse from v0 or the boundary-development matrix.",
+      "No reuse of an old entity triple.",
+      "No duplicate normalized query within the new batch."
+    ],
+    "holdout_arms": [
+      "After replacing quoted entity literals by role-neutral placeholders, no full surface template may equal a previously revealed or development template.",
+      "A reversal mate is the only allowed within-family near duplicate."
+    ],
+    "known_arm_exception": "The known-construction arm intentionally reuses the three frozen construction skeletons, but must use fresh entity literals and fresh complete sentences."
+  },
+  "independence": {
+    "implementer": "Freezes all three systems, runtime, resource bounds, scoring code, and request schema before receiving the batch.",
+    "witness": "Records immutable digests for the frozen systems and evaluation resources.",
+    "supervisor": "Must not implement or inspect the baseline, control, candidate, receiver, or scorer; creates queries and labels only after SystemsFrozen; sees no predictions before label commitment.",
+    "runner": "Executes all systems in the same isolated no-network envelope and cannot access label openings.",
+    "scorer": "Receives predictions only after lock and scores offline only after authenticated reveal.",
+    "model_family_limit": "Task isolation within one model family is recorded as limited independence and is not described as independent human or organizational review."
+  },
+  "commitment": {
+    "query_digest": "SHA-256 over canonical UTF-8 query bytes",
+    "labels": "Per-row salted SHA-256 commitments plus one AES-256-GCM authenticated encrypted label envelope",
+    "opening_policy": "No salt, key, nonce opening, plaintext label, or scorer-visible role tuple before all prediction digests are locked."
+  },
+  "sequence": [
+    "PreparationOnly",
+    "SystemsFrozen",
+    "LabelsCommitted",
+    "PredictionsLocked",
+    "LabelsRevealed",
+    "Scored"
+  ],
+  "metrics": [
+    "ordered_role_exact_accuracy_by_arm",
+    "positive_rejection_rate_by_arm",
+    "coverage_by_arm",
+    "accepted_item_ordered_role_accuracy_by_arm",
+    "semantic_negative_false_acceptance_rate",
+    "declared_primary_reversal_consistency",
+    "execution_failure_rate"
+  ],
+  "success": {
+    "execution_failures": 0,
+    "semantic_negative_false_acceptances": 0,
+    "known_arm_candidate_exact_accuracy_must_be_at_least_historical_baseline": true,
+    "combined_arm_candidate_exact_accuracy_must_strictly_exceed_each_control": [
+      "historical-exact-match-baseline",
+      "explicit-development-coverage-control"
+    ],
+    "combined_arm_must_have_complete_primary_reversal_success_in_at_least_two_distinct_lexicon_construction_families": true,
+    "accepted_item_accuracy_is_undefined_when_coverage_is_zero": true
+  },
+  "budgets": {
+    "max_query_utf8_bytes": 65536,
+    "max_label_envelope_bytes": 65536,
+    "max_prediction_bytes_per_system": 65536,
+    "automatic_retries": 0,
+    "network": "disabled",
+    "resource_values": "must-freeze-at-SystemsFrozen"
+  },
+  "nonclaims": [
+    "general Wenyan understanding",
+    "historical interpretation",
+    "native Adva admission or state write",
+    "sixty-four hexagrams equal sixty-four tautologies",
+    "independent human review unless an actual independent human supervisor is registered"
+  ]
+}
